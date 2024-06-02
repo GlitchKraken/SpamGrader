@@ -43,7 +43,7 @@ def main():
     if args.V:
         # might be unnecessary, since we can just check later down the line?
         print("VirusTotal mode")
-    if args.f != "":
+    if args.f:
         
         print("=======================================")
         print("Opening " + str(args.f) + " for analysis" )
@@ -55,7 +55,7 @@ def main():
             # try to create an entry in the emails dict, with the email itself 
             email = mailparser.parse_from_file(args.f)
         except Exception as emailReadError:
-            print("[-] Error while trying to open a given email file: " + str(emailReadError))
+            print("[-] Error while trying to open single given email file: " + str(emailReadError))
             exit(0)
         
         
@@ -83,9 +83,8 @@ def main():
             if files.endswith(('msg', 'eml')):
                 print("file:")
                 print(files)
-                emailList.append[files]
+                emailList.append(files)
             else:
-                print("didnt find any emails ")
                 continue
             
         #for mail in emailList:
