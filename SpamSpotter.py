@@ -137,16 +137,16 @@ def riskKeyWords(email):
     
     for phrase in RiskPhrases:
         if phrase in email.body:
-            print("Risky Phrase Found in email Body: " + phrase)
+            #print("Risky Phrase Found in email Body: " + phrase)
             RiskScore += 10
         if phrase in email.subject:
-            print("Risky Phrase Found in email Subject: " + phrase)
+            #print("Risky Phrase Found in email Subject: " + phrase)
             RiskScore += 10
     
     # only append the score if something bad was found.
     if RiskScore > 0:
         global email_score_breakdown
-        email_score_breakdown.append({"KeyPhrasesModule": (RiskScore, Reasons_Bad)})
+        email_score_breakdown.append({"KeyPhrasesModule_Score": (RiskScore, Reasons_Bad)})
     
     #print(RiskPhrases)
     print("Risk Score of Email: " + str(RiskScore))
