@@ -87,20 +87,28 @@ def main():
             else:
                 continue
             
-        #for mail in emailList:
+        for mail in emailList:
             # basic error handling
-         #   exit(0)
-         #   try:
-         #       # try to create an entry in the emails dict, with the email itself 
-         #       email = mailparser.parse_from_file(mail)
-         #   except Exception as emailReadError:
-         #       print("[-] Error while trying to open a given email file: " + str(emailReadError))
-         #       exit(0)
+            try:
+                #try to create an entry in the emails dict, with the email itself 
+                email = mailparser.parse_from_file(mail)
+            except Exception as emailReadError:
+                print("[-] Error while trying to open a given email file in Dir Mode: " + str(emailReadError))
+                exit(0)
             
             
             
             # now run the email through each analysis module. maybe pass through a big dictionary where the email name/key has a list of values?
-            #riskKeyWords(email)
+            riskKeyWords(email)
+            
+            
+            # all modules have been run on the email, add it do the big list.
+            emails[mail] = email_score_breakdown
+            email_score_breakdown = []
+            
+            with open("Results.txt", "+w") as Results:
+                Results.write(json.dumps(emails))
+            print("\n\n\n"+json.dumps(emails))
 
 
 #############################################################################################################
@@ -140,9 +148,9 @@ def riskKeyWords(email):
         global email_score_breakdown
         email_score_breakdown.append({"KeyPhrasesModule": (RiskScore, Reasons_Bad)})
     
-    print(RiskPhrases)
+    #print(RiskPhrases)
     print("Risk Score of Email: " + str(RiskScore))
-    print(email.name)
+    #print(email.name)
 
     
 
