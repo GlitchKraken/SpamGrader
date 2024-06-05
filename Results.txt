@@ -1,1 +1,1 @@
-{"test 2.eml": [{"KeyPhrasesModule": [80.0, "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."]}], "test1.eml": [{"KeyPhrasesModule": [120.0, "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."]}]}
+{"./testing.eml": []}

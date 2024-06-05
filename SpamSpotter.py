@@ -3,11 +3,19 @@ import sys
 import argparse
 import json
 import os
+import requests
+
 
 emails = {}
     
 email_score_breakdown = []
 
+VirusTotal_Api_Key = "4617ea5bb1333b4dfecba3c69d2ec5daf19d53508e74321653b4dd8d36a07741"
+
+VirusTotalFileURL = "https://www.virustotal.com/api/v3/files"
+VirusTotalFileURL_Headers = {"accept": "application/json",
+    "content-type": "multipart/form-data",
+    "x-apikey": VirusTotal_Api_Key}
 
 def main():
     # Parse and add Arguments....
@@ -23,9 +31,6 @@ def main():
     #Source: https://stackoverflow.com/questions/8259001/python-argparse-command-line-flags-without-arguments
     args = parser.parse_args(args=None if sys.argv[1:] else ['--help'])
 
-
-    VirusTotal_Api_Key = "4617ea5bb1333b4dfecba3c69d2ec5daf19d53508e74321653b4dd8d36a07741"
-    
     
 
     
@@ -62,7 +67,8 @@ def main():
         
         # now run the email through each analysis module. maybe pass through a big dictionary where the email name/key has a list of values?
         riskKeyWords(email)
-        
+        if args.V:
+            riskVirusTotal(email)
         
         # all the modules have been run on the email, toss it in the dict and clear out the reasons list, for use in the next thingie.
         global email_score_breakdown
@@ -114,10 +120,10 @@ def main():
 #############################################################################################################
 # below are the functions im kindly referring to as risk-modules. 
 # these will be called on an email (or list of emails) to identify what stands out about the given email.
-# for now, they will be simple functions. later on we can start using more object-oriented approaches...
+# for now, they will be simple functions. later on we can start using more object-oriented approaches,
+# or at least store them in an appropriate file.
 #############################################################################################################
-def riskVirusTotal():
-    print("VirusTotal")
+
 def riskKeyWords(email):
     # This module is in charge of checking for key-phrases in different parts of the email. 
     # it will function by checking the email for phrases commonly seen in spam.
@@ -151,6 +157,25 @@ def riskKeyWords(email):
     #print(RiskPhrases)
     print("Risk Score of Email: " + str(RiskScore))
     #print(email.name)
+def riskVirusTotal(email):
+    # first, check if the provided email even has attachments.
+    print("VirusTotal")
+    if len(email.attachments) >= 1:
+        print("attachments: " + str(len(email.attachments)))
+        print(email.attachments)
+        # if the email has multiple, send each of them to virusTotal...
+        for attachment in email.attachments:
+            if attachment["payload"] != "":
+                # set the 
+                FileToScan = attachment["payload"]
+                filename = open("test.txt", "+w")
+                
+                response = requests.post(VirusTotalFileURL, headers=VirusTotalFileURL_Headers, json={"file" : FileToScan})
+                print(response)
+            else:
+                print("No attachments were found as part of the email! returning.")
+                return 
+            
 
     
 
@@ -162,4 +187,4 @@ if __name__ =="__main__":
     main()
     
 # project by Chad Fry, many thanks to the awesome
-# team behind SpamScope! :D
+# team behind SpamScope! :Dhttps://www.moxfield.com/decks/1Y5wngKTqkaxPREOX5yscg
