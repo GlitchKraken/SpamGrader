@@ -3,8 +3,9 @@ import sys
 import argparse
 import json
 import os
-import requests
-
+import vt
+import hashlib
+import math
 
 emails = {}
     
@@ -67,10 +68,13 @@ def main():
         
         # now run the email through each analysis module. maybe pass through a big dictionary where the email name/key has a list of values?
         riskKeyWords(email)
+        riskEntropy(email)
         if args.V:
             riskVirusTotal(email)
         
         # all the modules have been run on the email, toss it in the dict and clear out the reasons list, for use in the next thingie.
+        
+        
         global email_score_breakdown
         emails[args.f] = email_score_breakdown
         email_score_breakdown = []
@@ -158,27 +162,65 @@ def riskKeyWords(email):
     print("Risk Score of Email: " + str(RiskScore))
     #print(email.name)
 def riskVirusTotal(email):
+    
+    # NOTE: Deprecating this module almost immediately: 
+    # it simply takes too long to query even a single file, and the free-api limit is quite low. 
+    # a simple email-upload using the api was taking 5+ minutes. definitely not useful...
+    # for testing purposes, and considering the low limit of the free API, manually 
+    # uploading files for investigation makes more sense.
+    
+    # we can keep the functionality though, since we did put work into it...
+    
     # first, check if the provided email even has attachments.
     print("VirusTotal")
+    
+    RiskScore = 0.0
+    
+    # Scan attachments and handle risk scoring for attachments.
     if len(email.attachments) >= 1:
+        
+        client = vt.Client(VirusTotal_Api_Key)
+        
         print("attachments: " + str(len(email.attachments)))
         print(email.attachments)
-        # if the email has multiple, send each of them to virusTotal...
-        for attachment in email.attachments:
-            if attachment["payload"] != "":
-                # set the 
-                FileToScan = attachment["payload"]
-                filename = open("test.txt", "+w")
-                
-                response = requests.post(VirusTotalFileURL, headers=VirusTotalFileURL_Headers, json={"file" : FileToScan})
-                print(response)
-            else:
-                print("No attachments were found as part of the email! returning.")
-                return 
+        with open("./test5.eml", "w+") as test:
+            md5_hash = hashlib.md5(test.read().encode()).hexdigest()
+            analysis = client.scan_file(test, wait_for_completion=True)
             
-
+            scannedFile = client.get_object("/files/"+str(md5_hash))
+            
+            print(scannedFile.last_analysis_stats)
+            
+            if scannedFile.last_analysis_status["malicious"] != 0 or scannedFile.last_analysis_status["suspicious"] != 0:
+                # VT found something outright malicious. this represents a serious risk, lets indicate that accordingly.
+                RiskScore += 100
+                pass
+            
+            
+            
+            print(analysis.status)
+            print(analysis.status)
+            print(analysis.status)
+            print(analysis.status)
+        test.close()
+        
+    #Scan sender IP using VT and handle risk-scoring of IP...
+    # orrrrr maybe not... we should be trying more interesting / new things anyway,
+    # like Entropy-based detection and AI learning...
     
-
+    # all VT processing is done, update risk score and reasons....
+def riskEntropy(email):
+    # The goal of this module will be to try and determine if a given field ()is 
+    # first, lets check the entropy of the sender's name. a LOT of spam has nonsense usernames...
+    print("EntropyModule")
+    # handle wether the email has 1 or more "from" addresses.
+    if len(email.from_) > 0:
+        print("From: "+email.from_[0][1])
+    else:
+        print("From: "+len(email.from_))
+    #print(email.from_[0][1])
+    
+       
 
 
 
