@@ -6,6 +6,10 @@ import os
 import vt
 import hashlib
 import math
+# Credit to the entire Entropy-Calculator goes to Ben Downing from red canary
+#https://redcanary.com/blog/threat-detection/threat-hunting-entropy/
+from Entropy import Entropy
+
 
 emails = {}
     
@@ -148,16 +152,15 @@ def riskKeyWords(email):
     for phrase in RiskPhrases:
         if phrase in email.body:
             #print("Risky Phrase Found in email Body: " + phrase)
-            RiskScore += 10
+            RiskScore += 5
         if phrase in email.subject:
             #print("Risky Phrase Found in email Subject: " + phrase)
-            RiskScore += 10
+            RiskScore += 5
     
     # only append the score if something bad was found.
     if RiskScore > 0:
         global email_score_breakdown
         email_score_breakdown.append({"KeyPhrasesModule_Score": (RiskScore, Reasons_Bad)})
-    
     #print(RiskPhrases)
     print("Risk Score of Email: " + str(RiskScore))
     #print(email.name)
@@ -185,6 +188,7 @@ def riskVirusTotal(email):
         print(email.attachments)
         with open("./test5.eml", "w+") as test:
             md5_hash = hashlib.md5(test.read().encode()).hexdigest()
+            # also worth noting that this step crashes a LOT... for a built-in API...
             analysis = client.scan_file(test, wait_for_completion=True)
             
             scannedFile = client.get_object("/files/"+str(md5_hash))
@@ -194,10 +198,10 @@ def riskVirusTotal(email):
             if scannedFile.last_analysis_status["malicious"] != 0 or scannedFile.last_analysis_status["suspicious"] != 0:
                 # VT found something outright malicious. this represents a serious risk, lets indicate that accordingly.
                 RiskScore += 100
-                pass
-            
-            
-            
+            print("Risk Score: " + str(RiskScore))
+            if RiskScore > 0:
+                email_score_breakdown.append({"VirusTotalModule_Score: " : (RiskScore, "This email was given a higher score because VirusTotal marked it as Malicious in its results")})
+            else: print("virus total found nothing wrong with the email")
             print(analysis.status)
             print(analysis.status)
             print(analysis.status)
@@ -213,17 +217,39 @@ def riskEntropy(email):
     # The goal of this module will be to try and determine if a given field ()is 
     # first, lets check the entropy of the sender's name. a LOT of spam has nonsense usernames...
     print("EntropyModule")
+    
+    RiskScore = 0.0
     # handle wether the email has 1 or more "from" addresses.
+    fromAddr = ""
+    
     if len(email.from_) > 0:
         print("From: "+email.from_[0][1])
+        fromAddr = email.from_[0][1]
     else:
         print("From: "+len(email.from_))
-    #print(email.from_[0][1])
+        fromAddr = email.from_
     
-       
-
-
-
+    if fromAddr == "":
+        print("[-] Error While running Risk Entropy: No From Address was found!")
+        return
+            
+    # Credit for snippet goes to
+    #4.	https://redcanary.com/blog/threat-detection/threat-hunting-entropy/ ,
+    Calculator = Entropy()
+    
+    
+    # this could be a really good place to begin gathering data 
+    # and doing evaluation.... like, what is the usual entropy of spam?
+    # the usual entropy of ham?
+    # are we doing to use this module more for the usage of finding blatantly-bad domains and marking them, or???
+    FromAddrEntropy = Calculator.shannon_entropy(fromAddr)
+    print("Realtive Entropy for this email: "+ str(FromAddrEntropy))
+    
+    if FromAddrEntropy > 3.8:
+        # we will consider this random enough to be a "sus" domain and flag it with higher risk. 
+        # since this domain is really random looking, we will consider it a significant risk, and give a bigger score.
+        RiskScore += 100
+    
 
 if __name__ =="__main__":
     main()
