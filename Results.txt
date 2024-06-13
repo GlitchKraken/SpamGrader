@@ -1,1 +1,160 @@
-{"./testing.eml": []}
+{
+    "test 2.eml": [
+        "Total Risk Score:",
+        140.0,
+        {
+            "KeyPhrasesModule_Score": [
+                40.0,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_Score: ": [
+                100.0,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        }
+    ],
+    "test1.eml": [
+        "Total Risk Score:",
+        160.0,
+        {
+            "KeyPhrasesModule_Score": [
+                60.0,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_Score: ": [
+                100.0,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        }
+    ],
+    "test10.eml": [
+        "Total Risk Score:",
+        160.0,
+        {
+            "KeyPhrasesModule_Score": [
+                60.0,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_Score: ": [
+                100.0,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        }
+    ],
+    "test11.eml": [
+        "Total Risk Score:",
+        160.0,
+        {
+            "KeyPhrasesModule_Score": [
+                60.0,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_Score: ": [
+                100.0,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        }
+    ],
+    "test12.eml": [
+        "Total Risk Score:",
+        160.0,
+        {
+            "KeyPhrasesModule_Score": [
+                60.0,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_Score: ": [
+                100.0,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        }
+    ],
+    "test5.eml": [
+        "Total Risk Score:",
+        0.0
+    ],
+    "test6.eml": [
+        "Total Risk Score:",
+        160.0,
+        {
+            "KeyPhrasesModule_Score": [
+                60.0,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_Score: ": [
+                100.0,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        }
+    ],
+    "test7.eml": [
+        "Total Risk Score:",
+        160.0,
+        {
+            "KeyPhrasesModule_Score": [
+                60.0,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_Score: ": [
+                100.0,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        }
+    ],
+    "test8.eml": [
+        "Total Risk Score:",
+        160.0,
+        {
+            "KeyPhrasesModule_Score": [
+                60.0,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_Score: ": [
+                100.0,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        }
+    ],
+    "test9.eml": [
+        "Total Risk Score:",
+        160.0,
+        {
+            "KeyPhrasesModule_Score": [
+                60.0,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_Score: ": [
+                100.0,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        }
+    ],
+    "testing.eml": [
+        "Total Risk Score:",
+        100.0,
+        {
+            "EntropyModule_Score: ": [
+                100.0,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        }
+    ]
+}

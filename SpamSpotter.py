@@ -6,6 +6,8 @@ import os
 import vt
 import hashlib
 import math
+import rich 
+
 # Credit to the entire Entropy-Calculator goes to Ben Downing from red canary
 #https://redcanary.com/blog/threat-detection/threat-hunting-entropy/
 from Entropy import Entropy
@@ -80,11 +82,24 @@ def main():
         
         
         global email_score_breakdown
+        
+        # go through all of the risk ratings assigned to this email and total them...
+        TotalScore = 0.0
+        #
+        for riskScoreBreakdown in email_score_breakdown:
+            for test in riskScoreBreakdown:
+                TotalScore += riskScoreBreakdown[test][0]
+        
+        
+        #write results.
+        TotalScoreList =  ["Total Risk Score:", TotalScore]
+        email_score_breakdown = TotalScoreList + email_score_breakdown
         emails[args.f] = email_score_breakdown
+        # done with calculations, reset the breakdown, and write the overall results to a file, JSON formatted.
         email_score_breakdown = []
         with open("Results.txt", "+w") as Results:
-            Results.write(json.dumps(emails))
-        print("\n\n\n"+json.dumps(emails))
+            Results.write(json.dumps(emails, indent=4))
+        rich.print("\n\n\n"+json.dumps(emails, indent=4))
       
     elif args.f == "":
         print("Please provide an email to scan, or specify Directory Mode with -d")
@@ -114,15 +129,33 @@ def main():
             
             # now run the email through each analysis module. maybe pass through a big dictionary where the email name/key has a list of values?
             riskKeyWords(email)
-            
+            riskEntropy(email)
             
             # all modules have been run on the email, add it do the big list.
+            
+            
+            
+            
+            #emails[mail] = email_score_breakdown
+            
+            # go through all of the risk ratings assigned to this email and total them...
+            TotalScore = 0.0
+        
+            for riskScoreBreakdown in email_score_breakdown:
+                for test in riskScoreBreakdown:
+                    TotalScore += riskScoreBreakdown[test][0]
+        
+        
+            #write results.
+            TotalScoreList =  ["Total Risk Score:", TotalScore]
+            email_score_breakdown = TotalScoreList + email_score_breakdown
             emails[mail] = email_score_breakdown
+            
             email_score_breakdown = []
             
             with open("Results.txt", "+w") as Results:
-                Results.write(json.dumps(emails))
-            print("\n\n\n"+json.dumps(emails))
+                Results.write(json.dumps(emails, indent=4))
+            print("\n\n\n"+json.dumps(emails, indent=4))
 
 
 #############################################################################################################
@@ -219,20 +252,20 @@ def riskEntropy(email):
     print("EntropyModule")
     
     RiskScore = 0.0
-    # handle wether the email has 1 or more "from" addresses.
-    fromAddr = ""
     
+    fromAddr = ""
+    # handle the number of from addresses the email has.
+    # note that we care more about the domain than the user's chosen name
     if len(email.from_) > 0:
         print("From: "+email.from_[0][1])
+        # grab the domain instead of supplied name
         fromAddr = email.from_[0][1]
     else:
-        print("From: "+len(email.from_))
-        fromAddr = email.from_
-    
-    if fromAddr == "":
-        print("[-] Error While running Risk Entropy: No From Address was found!")
+        # no from address was supplied, supply non-severe error for module
+        print("From: "+ str(email.from_))
+        print("[!] Warning While running Risk Entropy: No From User or Domain was found!")
         return
-            
+    
     # Credit for snippet goes to
     #4.	https://redcanary.com/blog/threat-detection/threat-hunting-entropy/ ,
     Calculator = Entropy()
@@ -249,7 +282,7 @@ def riskEntropy(email):
         # we will consider this random enough to be a "sus" domain and flag it with higher risk. 
         # since this domain is really random looking, we will consider it a significant risk, and give a bigger score.
         RiskScore += 100
-    
+        email_score_breakdown.append({"EntropyModule_Score: " : (RiskScore, "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million.")})
 
 if __name__ =="__main__":
     main()
