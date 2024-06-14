@@ -153,11 +153,11 @@ def main():
             
             email_score_breakdown = []
             
-            with open("Results.txt", "+w") as Results:
-                Results.write(json.dumps(emails, indent=4))
-            print("\n\n\n"+json.dumps(emails, indent=4))
-
-
+        # now, sort the results by the highest risk-score. Emails with a higher score should be shown first.
+        sortedEmails = dict(sorted(emails.items(), reverse=True, key=lambda item: item[1]))
+        with open("Results.txt", "+w") as Results:
+            Results.write(json.dumps(sortedEmails, indent=4))
+            rich.print("\n\n\n"+json.dumps(sortedEmails, indent=4))
 #############################################################################################################
 # below are the functions im kindly referring to as risk-modules. 
 # these will be called on an email (or list of emails) to identify what stands out about the given email.
