@@ -106,12 +106,14 @@ def main():
     elif args.d:
         # this module is responsible for opening every .eml and .msg file in the current directory and
         # parsing them one-by-one. oh joy!
-        print("Args D was supplied! entering ~DIRECTORY MODE~")
+        print("=======================")
+        print("Entering Directory Mode")
+        print("=======================")
         emailList = []
         for files in os.listdir(os.getcwd()):
             if files.endswith(('msg', 'eml')):
-                print("file:")
-                print(files)
+                #print("file:")
+                #print(files)
                 emailList.append(files)
             else:
                 continue
@@ -195,7 +197,7 @@ def riskKeyWords(email):
         global email_score_breakdown
         email_score_breakdown.append({"KeyPhrasesModule_Score": (RiskScore, Reasons_Bad)})
     #print(RiskPhrases)
-    print("Risk Score of Email: " + str(RiskScore))
+    #print("Risk Score of Email: " + str(RiskScore))
     #print(email.name)
 def riskVirusTotal(email):
     
@@ -249,7 +251,7 @@ def riskVirusTotal(email):
 def riskEntropy(email):
     # The goal of this module will be to try and determine if a given field ()is 
     # first, lets check the entropy of the sender's name. a LOT of spam has nonsense usernames...
-    print("EntropyModule")
+    #print("EntropyModule")
     
     RiskScore = 0.0
     
@@ -257,13 +259,13 @@ def riskEntropy(email):
     # handle the number of from addresses the email has.
     # note that we care more about the domain than the user's chosen name
     if len(email.from_) > 0:
-        print("From: "+email.from_[0][1])
+        #print("From: "+email.from_[0][1])
         # grab the domain instead of supplied name
         fromAddr = email.from_[0][1]
     else:
         # no from address was supplied, supply non-severe error for module
-        print("From: "+ str(email.from_))
-        print("[!] Warning While running Risk Entropy: No From User or Domain was found!")
+        #print("From: "+ str(email.from_))
+        #print("[!] Warning While running Risk Entropy: No From User or Domain was found!")
         return
     
     # Credit for snippet goes to
@@ -276,7 +278,7 @@ def riskEntropy(email):
     # the usual entropy of ham?
     # are we doing to use this module more for the usage of finding blatantly-bad domains and marking them, or???
     FromAddrEntropy = Calculator.shannon_entropy(fromAddr)
-    print("Realtive Entropy for this email: "+ str(FromAddrEntropy))
+    #print("Realtive Entropy for this email: "+ str(FromAddrEntropy))
     
     if FromAddrEntropy > 3.8:
         # we will consider this random enough to be a "sus" domain and flag it with higher risk. 

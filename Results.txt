@@ -1,10 +1,10 @@
 {
     "test1.eml": [
         "Total Risk Score:",
-        160.0,
+        170.0,
         {
             "KeyPhrasesModule_Score": [
-                60.0,
+                70.0,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
             ]
         },
@@ -17,10 +17,10 @@
     ],
     "test10.eml": [
         "Total Risk Score:",
-        160.0,
+        170.0,
         {
             "KeyPhrasesModule_Score": [
-                60.0,
+                70.0,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
             ]
         },
@@ -33,10 +33,10 @@
     ],
     "test11.eml": [
         "Total Risk Score:",
-        160.0,
+        170.0,
         {
             "KeyPhrasesModule_Score": [
-                60.0,
+                70.0,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
             ]
         },
@@ -49,10 +49,10 @@
     ],
     "test12.eml": [
         "Total Risk Score:",
-        160.0,
+        170.0,
         {
             "KeyPhrasesModule_Score": [
-                60.0,
+                70.0,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
             ]
         },
@@ -65,10 +65,10 @@
     ],
     "test6.eml": [
         "Total Risk Score:",
-        160.0,
+        170.0,
         {
             "KeyPhrasesModule_Score": [
-                60.0,
+                70.0,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
             ]
         },
@@ -81,10 +81,10 @@
     ],
     "test7.eml": [
         "Total Risk Score:",
-        160.0,
+        170.0,
         {
             "KeyPhrasesModule_Score": [
-                60.0,
+                70.0,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
             ]
         },
@@ -97,10 +97,10 @@
     ],
     "test8.eml": [
         "Total Risk Score:",
-        160.0,
+        170.0,
         {
             "KeyPhrasesModule_Score": [
-                60.0,
+                70.0,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
             ]
         },
@@ -113,10 +113,10 @@
     ],
     "test9.eml": [
         "Total Risk Score:",
-        160.0,
+        170.0,
         {
             "KeyPhrasesModule_Score": [
-                60.0,
+                70.0,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
             ]
         },
