@@ -7,8 +7,6 @@ import vt
 import hashlib
 import math
 import rich 
-from operator import getitem
-from collections import OrderedDict
 
 # Credit to the entire Entropy-Calculator goes to Ben Downing from red canary
 #https://redcanary.com/blog/threat-detection/threat-hunting-entropy/
@@ -148,31 +146,28 @@ def main():
         
             for riskScoreBreakdown in email_score_breakdown:
                 for test in riskScoreBreakdown:
+                    print(type(riskScoreBreakdown[test][0]))
                     TotalScore += riskScoreBreakdown[test][0]
         
+        
             #write results.
-            TotalScoreDict =  {"Total Risk Score:": TotalScore}
-            print(TotalScoreDict)
-            # put the total score at the beginning of the breakdown.
-            email_score_breakdown.insert(0, TotalScoreDict)
+            TotalScoreList =  ["Total Risk Score:", TotalScore]
+            email_score_breakdown = TotalScoreList + email_score_breakdown
             emails[mail] = email_score_breakdown
+            
             email_score_breakdown = []
             
         # now, sort the results by the highest risk-score. Emails with a higher score should be shown first.
-        rich.print(json.dumps(emails, indent=4))
+        #rich.print(json.dumps(emails, indent=4))
+        
+        for itemThing in emails.items():
+            print(type(itemThing[1]))
         
         
-        #sortedEmails = dict(sorted(emails.items(), reverse=True, key=lambda item: item[1]))
-        
-        # so we get a weird tuple thing, which is NOT our dict, and this is leading to weirdness...
-        print(emails.items())
-        
-        sortedEmails = dict(sorted(emails.items(), reverse=True, key= lambda x: x[1][0]["Total Risk Score:"]))
-
+        sortedEmails = dict(sorted(emails.items(), reverse=True, key=lambda item: item[1]))
         with open("Results.txt", "+w") as Results:
             Results.write(json.dumps(sortedEmails, indent=4))
             rich.print("\n\n\n"+json.dumps(sortedEmails, indent=4))
-            
 #############################################################################################################
 # below are the functions im kindly referring to as risk-modules. 
 # these will be called on an email (or list of emails) to identify what stands out about the given email.

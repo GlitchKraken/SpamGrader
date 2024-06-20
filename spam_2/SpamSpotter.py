@@ -150,6 +150,7 @@ def main():
                 for test in riskScoreBreakdown:
                     TotalScore += riskScoreBreakdown[test][0]
         
+        
             #write results.
             TotalScoreDict =  {"Total Risk Score:": TotalScore}
             print(TotalScoreDict)
@@ -167,7 +168,7 @@ def main():
         # so we get a weird tuple thing, which is NOT our dict, and this is leading to weirdness...
         print(emails.items())
         
-        sortedEmails = dict(sorted(emails.items(), reverse=True, key= lambda x: x[1][0]["Total Risk Score:"]))
+        sortedEmails = dict(sorted(emails.items(), key= lambda x: x[1][0]["Total Risk Score:"] ))
 
         with open("Results.txt", "+w") as Results:
             Results.write(json.dumps(sortedEmails, indent=4))
