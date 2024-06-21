@@ -121,7 +121,6 @@ def main():
                 continue
             
         for mail in emailList:
-            print("Attempting to Analyze Email:        : " + str(mail))
             # basic error handling
             try:
                 #try to create an entry in the emails dict, with the email itself 
@@ -132,16 +131,12 @@ def main():
             
             
             
-            # now run the email through each analysis module. maybe pass through a big dictionary where the email name/key has a list of values?
+            # run the email through each analysis module. maybe pass through a big dictionary where the email name/key has a list of values?
             riskKeyWords(email)
             riskEntropy(email)
             
             # all modules have been run on the email, add it do the big list.
             
-            
-            
-            
-            #emails[mail] = email_score_breakdown
             
             # go through all of the risk ratings assigned to this email and total them...
             TotalScore = 0
@@ -150,27 +145,26 @@ def main():
                 for test in riskScoreBreakdown:
                     TotalScore += riskScoreBreakdown[test][0]
         
-            #write results.
+            # create a simple dictionary that holds the current email's overall risk-score
             TotalScoreDict =  {"Total Risk Score:": TotalScore}
-            print(TotalScoreDict)
             # put the total score at the beginning of the breakdown.
             email_score_breakdown.insert(0, TotalScoreDict)
+            # now that we've reconstructed the breakdown for the current email, add it back into the dictionary
             emails[mail] = email_score_breakdown
+            # clear out the list for the next email.
             email_score_breakdown = []
             
+            
         # now, sort the results by the highest risk-score. Emails with a higher score should be shown first.
-        rich.print(json.dumps(emails, indent=4))
-        
-        
         #sortedEmails = dict(sorted(emails.items(), reverse=True, key=lambda item: item[1]))
+        sortedEmails = dict(sorted(emails.items(), key= lambda x: x[1][0]["Total Risk Score:"]))
+        sortedEmailsReverse = dict(sorted(emails.items(), reverse=True, key= lambda x: x[1][0]["Total Risk Score:"]))
         
-        # so we get a weird tuple thing, which is NOT our dict, and this is leading to weirdness...
-        print(emails.items())
-        
-        sortedEmails = dict(sorted(emails.items(), reverse=True, key= lambda x: x[1][0]["Total Risk Score:"]))
-
         with open("Results.txt", "+w") as Results:
-            Results.write(json.dumps(sortedEmails, indent=4))
+            # Since the terminal prints top to bottom, we display the default-sort first, so
+            # that whoever is running the output will see the priority targets first.
+            # the inverse is true to the file we write to.
+            Results.write(json.dumps(sortedEmailsReverse, indent=4))
             rich.print("\n\n\n"+json.dumps(sortedEmails, indent=4))
             
 #############################################################################################################
@@ -284,10 +278,6 @@ def riskEntropy(email):
             print("[-] Error while trying to read from_address from current email:" + str(FromAddressError))
             fromAddr = ""
             return
-        
-        print("Emails From Addr: " + fromAddr)
-        if fromAddr == "":
-            print("EMAIL HAS NO FROM ADDR")
                     
         # Credit for snippet goes to
         #4.	https://redcanary.com/blog/threat-detection/threat-hunting-entropy/ ,
@@ -308,8 +298,8 @@ def riskEntropy(email):
             # we will consider this random enough to be a "sus" domain and flag it with higher risk. 
             # since this domain is really random looking, we will consider it a significant risk, and give a bigger score.
             RiskScore += 100
-            email_score_breakdown.append({"test": (100, "test2")})
-            #email_score_breakdown.append({"EntropyModule_Score" : (RiskScore, "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million.")})
+            
+            email_score_breakdown.append({"EntropyModule_Score" : (RiskScore, "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million.")})
 
     else:
         # no from address was supplied, supply non-severe error for module

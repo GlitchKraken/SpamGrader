@@ -10,9 +10,9 @@
             ]
         },
         {
-            "test": [
+            "EntropyModule_Score": [
                 100,
-                "test2"
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
         }
     ],
@@ -27,9 +27,9 @@
             ]
         },
         {
-            "test": [
+            "EntropyModule_Score": [
                 100,
-                "test2"
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
         }
     ],
@@ -44,9 +44,9 @@
             ]
         },
         {
-            "test": [
+            "EntropyModule_Score": [
                 100,
-                "test2"
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
         }
     ],
@@ -61,9 +61,9 @@
             ]
         },
         {
-            "test": [
+            "EntropyModule_Score": [
                 100,
-                "test2"
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
         }
     ],
@@ -78,9 +78,9 @@
             ]
         },
         {
-            "test": [
+            "EntropyModule_Score": [
                 100,
-                "test2"
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
         }
     ],
@@ -95,9 +95,9 @@
             ]
         },
         {
-            "test": [
+            "EntropyModule_Score": [
                 100,
-                "test2"
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
         }
     ],
@@ -112,9 +112,9 @@
             ]
         },
         {
-            "test": [
+            "EntropyModule_Score": [
                 100,
-                "test2"
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
         }
     ],
@@ -129,9 +129,9 @@
             ]
         },
         {
-            "test": [
+            "EntropyModule_Score": [
                 100,
-                "test2"
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
         }
     ],
@@ -146,9 +146,9 @@
             ]
         },
         {
-            "test": [
+            "EntropyModule_Score": [
                 100,
-                "test2"
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
         }
     ],
@@ -157,9 +157,9 @@
             "Total Risk Score:": 100
         },
         {
-            "test": [
+            "EntropyModule_Score": [
                 100,
-                "test2"
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
         }
     ],
