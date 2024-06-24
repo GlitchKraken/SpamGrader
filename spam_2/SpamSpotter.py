@@ -7,8 +7,8 @@ import vt
 import hashlib
 import math
 import rich 
-from operator import getitem
-from collections import OrderedDict
+import tldextract
+import time
 
 # Credit to the entire Entropy-Calculator goes to Ben Downing from red canary
 #https://redcanary.com/blog/threat-detection/threat-hunting-entropy/
@@ -36,8 +36,10 @@ def main():
     parser.add_argument("-f", help="Choose a single file to examine.", required=False, metavar="Filename")
     parser.add_argument("-d", help="Scan all email files in the current directory (supports .eml and .msg files)", required=False, action="store_true")
     parser.add_argument("-V", help="Use VirusTotal for analysis (Requires API Key) ((I've included one of my own for the projects sake))", required=False, action="store_true")
+    parser.add_argument("-vv", help="set verbose mode (extra debugging text)", required=False, action="store_true")
     # below line of code basically just prints the help option if no args were supplied.
     #Source: https://stackoverflow.com/questions/8259001/python-argparse-command-line-flags-without-arguments
+    global args
     args = parser.parse_args(args=None if sys.argv[1:] else ['--help'])
 
     
@@ -86,6 +88,7 @@ def main():
         global email_score_breakdown
         
         # go through all of the risk ratings assigned to this email and total them...
+        # around here would also be a good place to do our data gathering and evaluation....
         TotalScore = 0.0
         #
         for riskScoreBreakdown in email_score_breakdown:
@@ -121,7 +124,6 @@ def main():
                 continue
             
         for mail in emailList:
-            print("Attempting to Analyze Email:        : " + str(mail))
             # basic error handling
             try:
                 #try to create an entry in the emails dict, with the email itself 
@@ -132,16 +134,12 @@ def main():
             
             
             
-            # now run the email through each analysis module. maybe pass through a big dictionary where the email name/key has a list of values?
+            # run the email through each analysis module. maybe pass through a big dictionary where the email name/key has a list of values?
             riskKeyWords(email)
             riskEntropy(email)
             
             # all modules have been run on the email, add it do the big list.
             
-            
-            
-            
-            #emails[mail] = email_score_breakdown
             
             # go through all of the risk ratings assigned to this email and total them...
             TotalScore = 0
@@ -150,28 +148,26 @@ def main():
                 for test in riskScoreBreakdown:
                     TotalScore += riskScoreBreakdown[test][0]
         
-        
-            #write results.
+            # create a simple dictionary that holds the current email's overall risk-score
             TotalScoreDict =  {"Total Risk Score:": TotalScore}
-            print(TotalScoreDict)
             # put the total score at the beginning of the breakdown.
             email_score_breakdown.insert(0, TotalScoreDict)
+            # now that we've reconstructed the breakdown for the current email, add it back into the dictionary
             emails[mail] = email_score_breakdown
+            # clear out the list for the next email.
             email_score_breakdown = []
             
+            
         # now, sort the results by the highest risk-score. Emails with a higher score should be shown first.
-        rich.print(json.dumps(emails, indent=4))
-        
-        
         #sortedEmails = dict(sorted(emails.items(), reverse=True, key=lambda item: item[1]))
+        sortedEmails = dict(sorted(emails.items(), key= lambda x: x[1][0]["Total Risk Score:"]))
+        sortedEmailsReverse = dict(sorted(emails.items(), reverse=True, key= lambda x: x[1][0]["Total Risk Score:"]))
         
-        # so we get a weird tuple thing, which is NOT our dict, and this is leading to weirdness...
-        print(emails.items())
-        
-        sortedEmails = dict(sorted(emails.items(), key= lambda x: x[1][0]["Total Risk Score:"] ))
-
         with open("Results.txt", "+w") as Results:
-            Results.write(json.dumps(sortedEmails, indent=4))
+            # Since the terminal prints top to bottom, we display the default-sort first, so
+            # that whoever is running the output will see the priority targets first.
+            # the inverse is true to the file we write to.
+            Results.write(json.dumps(sortedEmailsReverse, indent=4))
             rich.print("\n\n\n"+json.dumps(sortedEmails, indent=4))
             
 #############################################################################################################
@@ -200,10 +196,12 @@ def riskKeyWords(email):
     
     for phrase in RiskPhrases:
         if phrase in email.body:
-            #print("Risky Phrase Found in email Body: " + phrase)
+            if args.vv:
+                print("Risky Phrase Found in email Body: " + phrase)
             RiskScore += 10
         if phrase in email.subject:
-            #print("Risky Phrase Found in email Subject: " + phrase)
+            if args.vv:
+                print("Risky Phrase Found in email Subject: " + phrase)
             RiskScore += 10
     
     # only append the score if something bad was found.
@@ -286,32 +284,77 @@ def riskEntropy(email):
             fromAddr = ""
             return
         
-        print("Emails From Addr: " + fromAddr)
-        if fromAddr == "":
-            print("EMAIL HAS NO FROM ADDR")
-                    
-        # Credit for snippet goes to
+        # get the full sender name...
+        senderName = fromAddr.split('@')[0]
+        #senderDomain = fromAddr.split('@')[1]
+        
+        # we will use these to calculate relative entropy for the email's name.
+        senderDomainNoTLD = tldextract.extract(fromAddr).domain
+        # remove the . that is everywhere in the sender address. other characters will count towards randomness.
+        senderNameNoPunc = senderName.replace('.', '')
+        
+        # Credit for Entropy snippet goes to
         #4.	https://redcanary.com/blog/threat-detection/threat-hunting-entropy/ ,
         Calculator = Entropy()
         
-        FromAddrEntropy = 0.0
-        # this could be a really good place to begin gathering data 
-        # and doing evaluation.... like, what is the usual entropy of spam?
-        # the usual entropy of ham?
-        # are we doing to use this module more for the usage of finding blatantly-bad domains and marking them, or???
-        FromAddrEntropy = Calculator.shannon_entropy(fromAddr)
-        #print("Realtive Entropy for this email: "+ str(FromAddrEntropy))
+        SenderNameEntropy = 0.0
+
+        # calculate different entropies, used for determining if something is too random...
+        try:
+            SenderNameEntropy = Calculator.shannon_entropy(senderNameNoPunc)
+        except Exception as EntropyNameError:
+            print("[-] Error while calculating Entropy for this email. skipping.")
+            print("[-] Error Details: " + str(EntropyNameError))
+            return
+        
+        try:
+            #senderNameEntropy = Calculator.relative_entropy(senderNameNoPunc.lower())
+            senderDomainEntropy = Calculator.relative_entropy(senderDomainNoTLD.lower())
+        except Exception as EntropyDomainError:
+            print("[-] Error while calculating Entropy for this email. skipping.")
+            print("[-] Error Details: " + str(EntropyDomainError))
+            return
         
         
         
+        if args.vv:
+            #print("Realtive Entropy for this email: "+ str(FromAddrEntropy))
+            print("=======================================================")
+            print(fromAddr)
+            print("Sender Name: "+ senderName)
+            print("Sender Name no punc: "+ senderNameNoPunc)
+            print("senderDomain no-TLD: " + senderDomainNoTLD)
+            print("Sender Name Shannon Entropy: " + str(SenderNameEntropy))
+            print("Sender Domains RELATIVE Entropy: " + str(senderDomainEntropy))
+            print("=======================================================")
+    
+    
+        if SenderNameEntropy > 3.1:
+            # a random-name IS somewhat sus, but people often have to put numbers in their names
+            # because their username is taken. we will use a smaller score here.
+            # the reason for the multiplication is: the more random an email
+            RiskScore += 5 * SenderNameEntropy
+            email_score_breakdown.append({"EntropyModule_SenderNameRandom_Score" : (RiskScore, "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million.")})
+            
+    
+        if SenderNameEntropy < 0.9:
+            # if the name is mostly one character, eg, aaaaaaa@gmail.com, this is also spam-like,
+            # and should be marked as such.
+            RiskScore += 50
+            email_score_breakdown.append({"EntropyModule_SenderNameLow_Score" : (RiskScore, "This email was given a higher risk-score because the sender's  name was too repetetive, when compared to the alexa top 1 million.")})
+
+
+    
+    
         #something has gone horrible wrong here, but neither i nor god seem to know.
-        if FromAddrEntropy > 3.8:
+        if senderDomainEntropy > 3.1:
             # we will consider this random enough to be a "sus" domain and flag it with higher risk. 
             # since this domain is really random looking, we will consider it a significant risk, and give a bigger score.
-            RiskScore += 100
-            email_score_breakdown.append({"test": (100, "test2")})
-            #email_score_breakdown.append({"EntropyModule_Score" : (RiskScore, "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million.")})
-
+            RiskScore += 20 * senderDomainEntropy
+            
+            email_score_breakdown.append({"EntropyModule_SenderDomain_Score" : (RiskScore, "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million.")})
+        
+        
     else:
         # no from address was supplied, supply non-severe error for module
         #print("From: "+ str(email.from_))
@@ -320,7 +363,11 @@ def riskEntropy(email):
         return
     
 if __name__ =="__main__":
+    # idea for basic time-tracking thanks to
+    #https://stackoverflow.com/questions/1557571/how-do-i-get-time-of-a-python-programs-execution
+    start_time = time.time()
     main()
+    print("\n\n=== Total Runtime:  " + str(time.time() - start_time) + " Seconds === " )
     
 # project by Chad Fry, many thanks to the awesome
 # team behind SpamScope! :Dhttps://www.moxfield.com/decks/1Y5wngKTqkaxPREOX5yscg
