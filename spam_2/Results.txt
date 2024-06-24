@@ -1,0 +1,18 @@
+{
+    "01231.2a56f1f52d4da9f83870deb4b7e68acb.eml": [
+        "Total Risk Score:",
+        266.0215513131975,
+        {
+            "EntropyModule_SenderNameLow_Score": [
+                50,
+                "This email was given a higher risk-score because the sender's  name was too repetetive, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                216.02155131319748,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        }
+    ]
+}
