@@ -5,10 +5,11 @@ import json
 import os
 import vt
 import hashlib
-import math
 import rich 
 import tldextract
 import time
+
+
 
 # Credit to the entire Entropy-Calculator goes to Ben Downing from red canary
 #https://redcanary.com/blog/threat-detection/threat-hunting-entropy/
