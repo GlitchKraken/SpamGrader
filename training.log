@@ -1,0 +1,3 @@
+2024-06-27 06:33:47,692 - INFO - train_models.py:26 - ModelTrainer initialized with classifier type: ClassifierType.NAIVE_BAYES
+2024-06-27 06:33:47,693 - INFO - train_models.py:30 - Preprocessing data
+2024-06-27 06:33:47,694 - INFO - train_models.py:32 - Loading data from data/spam.csv

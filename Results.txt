@@ -1,7 +1,7 @@
 {
     "test1.eml": [
         {
-            "Total Risk Score:": 231.6764359384194
+            "Total Risk Score:": 331.6764359384194
         },
         {
             "KeyPhrasesModule_Score": [
@@ -19,12 +19,18 @@
             "EntropyModule_SenderDomain_Score": [
                 110.40926400747546,
                 "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam."
             ]
         }
     ],
     "test10.eml": [
         {
-            "Total Risk Score:": 231.6764359384194
+            "Total Risk Score:": 331.6764359384194
         },
         {
             "KeyPhrasesModule_Score": [
@@ -42,12 +48,18 @@
             "EntropyModule_SenderDomain_Score": [
                 110.40926400747546,
                 "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam."
             ]
         }
     ],
     "test11.eml": [
         {
-            "Total Risk Score:": 231.6764359384194
+            "Total Risk Score:": 331.6764359384194
         },
         {
             "KeyPhrasesModule_Score": [
@@ -65,12 +77,18 @@
             "EntropyModule_SenderDomain_Score": [
                 110.40926400747546,
                 "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam."
             ]
         }
     ],
     "test12.eml": [
         {
-            "Total Risk Score:": 231.6764359384194
+            "Total Risk Score:": 331.6764359384194
         },
         {
             "KeyPhrasesModule_Score": [
@@ -88,12 +106,18 @@
             "EntropyModule_SenderDomain_Score": [
                 110.40926400747546,
                 "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam."
             ]
         }
     ],
     "test6.eml": [
         {
-            "Total Risk Score:": 231.6764359384194
+            "Total Risk Score:": 331.6764359384194
         },
         {
             "KeyPhrasesModule_Score": [
@@ -111,12 +135,18 @@
             "EntropyModule_SenderDomain_Score": [
                 110.40926400747546,
                 "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam."
             ]
         }
     ],
     "test7.eml": [
         {
-            "Total Risk Score:": 231.6764359384194
+            "Total Risk Score:": 331.6764359384194
         },
         {
             "KeyPhrasesModule_Score": [
@@ -134,12 +164,18 @@
             "EntropyModule_SenderDomain_Score": [
                 110.40926400747546,
                 "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam."
             ]
         }
     ],
     "test8.eml": [
         {
-            "Total Risk Score:": 231.6764359384194
+            "Total Risk Score:": 331.6764359384194
         },
         {
             "KeyPhrasesModule_Score": [
@@ -157,12 +193,18 @@
             "EntropyModule_SenderDomain_Score": [
                 110.40926400747546,
                 "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam."
             ]
         }
     ],
     "test9.eml": [
         {
-            "Total Risk Score:": 231.6764359384194
+            "Total Risk Score:": 331.6764359384194
         },
         {
             "KeyPhrasesModule_Score": [
@@ -181,11 +223,17 @@
                 110.40926400747546,
                 "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam."
+            ]
         }
     ],
     "test 2.eml": [
         {
-            "Total Risk Score:": 194.8990387969567
+            "Total Risk Score:": 294.8990387969567
         },
         {
             "KeyPhrasesModule_Score": [
@@ -204,31 +252,67 @@
                 105.06043829458417,
                 "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam."
+            ]
         }
     ],
     "test0.eml": [
         {
-            "Total Risk Score:": 0
+            "Total Risk Score:": 100
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam."
+            ]
         }
     ],
     "test123.eml": [
         {
-            "Total Risk Score:": 0
+            "Total Risk Score:": 100
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam."
+            ]
         }
     ],
     "test5.eml": [
         {
-            "Total Risk Score:": 0
+            "Total Risk Score:": 100
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam."
+            ]
         }
     ],
     "test999.eml": [
         {
-            "Total Risk Score:": 0
+            "Total Risk Score:": 100
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam."
+            ]
         }
     ],
     "testing.eml": [
         {
-            "Total Risk Score:": 0
+            "Total Risk Score:": 100
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam."
+            ]
         }
     ]
 }

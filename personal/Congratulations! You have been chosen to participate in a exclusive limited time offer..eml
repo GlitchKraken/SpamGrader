@@ -1,0 +1,937 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6358:f4e:b0:191:9231:ed1 with SMTP id c14csp3126871rwj;
+        Mon, 27 May 2024 19:03:03 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCUKJ5p1QPL7MX8W1w86HE/FF+ReY0sUmdozjSM0QRLr1pPQ0odPSYlfO2DnOSp0/2yl9HZ4xVzWCvaA1J2JOzs8SJfGXTdeAUPGnA==
+X-Google-Smtp-Source: AGHT+IGYyLDnlbeFQ+0dBrL3GRqzbJ5maJ8mjgAObH6qZ66ycDDPbrJNlhrvgBksTvfzYjzKqxpL
+X-Received: by 2002:a05:6870:808e:b0:24f:d9bd:2754 with SMTP id 586e51a60fabf-24fd9bd41c7mr7706604fac.40.1716861783478;
+        Mon, 27 May 2024 19:03:03 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1716861783; cv=none;
+        d=google.com; s=arc-20160816;
+        b=XsPjgmsrkkJKG+4CjCsGb9rpo0dwncPK9aUu1cygMe4mOrYB6ynnMaiZJSdolLVUCO
+         G7bt8KUJ8i/F2A5Nx7YStAIopTRqHjfEGRH9DpyTtVKxx3lHPGOYevM+Hf+hdoyYJQBX
+         ZMs28agOSaVQ3TdwT+EE5o8+WHDwXf1XGbdDImLQLdoeoqIesH0ZdCdlo1RzT7MJRj/j
+         +wpXZ2fyCHcVKYyBb9VQclbINF0WlK7QSaKrxF8nOkHtZSX7O57IIBwDaVlIaGAKdF/J
+         Ek796bZztmsBYeDCynUVifEFpHLqF9gzUHbfk3QfHB6NFkxnAVVQ/1p2YVsZhsvIBRih
+         aAyw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=sender:date:list-unsubscribe:list-unsubscribe-post:message-id
+         :envelope-to:precedence:mime-version:to:from:subject:delivered-to;
+        bh=OMxRf4BhKqiQ2gfq+116grsCsABjHERhjZhXdggcQ/A=;
+        fh=WgkvRxbprbRHUhB9IsiW8FcsVvMRbRULUNnxGmh5/rk=;
+        b=Lz22GUeJgGqGQe1ZOZWM7nAlTz+zKhnGp/0qR2cawpJFypHsrVXzA4idrPWZoFjyVC
+         OllyUA2bgWxQqXzA8KpI1BUbhrGZ8LYeE3mKHJ2W7gUp4zp0f49KIJSTXT7PHseZphFf
+         gOPSPGExdW3jlewh7vRRbZAYh5gFdqc/cLMBSlbPDhP4zzc5l6KrFNsJ0IoLoV73w2UQ
+         27HTVm5hgCgCkvtffSt/VNMBPvoayUrDiXYxSc/NlM1E9UTJUvmqSg3iLhtXA+/tBWud
+         r9O/DbS8/yVgMyCe4+and/0NgN9YCLcfzHvKCojPNwXXD3NU4RmVP+bKWVUJqufGIchX
+         DB1A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of 4e7cpp7.return@happy-nation60.certaintact.uk.net designates 45.95.187.104 as permitted sender) smtp.mailfrom=4e7cpp7.return@happy-nation60.certaintact.uk.net
+Return-Path: <4e7cpp7.return@happy-nation60.certaintact.uk.net>
+Received: from cvit.centramways.us (cvit.centramways.us. [45.95.187.104])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-69d8d2f94d3si3041011a12.209.2024.05.27.19.03.03
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 27 May 2024 19:03:03 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 4e7cpp7.return@happy-nation60.certaintact.uk.net designates 45.95.187.104 as permitted sender) client-ip=45.95.187.104;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of 4e7cpp7.return@happy-nation60.certaintact.uk.net designates 45.95.187.104 as permitted sender) smtp.mailfrom=4e7cpp7.return@happy-nation60.certaintact.uk.net
+Delivered-To: mailto:me@gmail.com
+Subject: Congratulations! You have been chosen to participate in a exclusive limited time offer.
+From: "Las Vegas Casino" <4ARt9hacIr.4ARt9hacIr@hzl.eowwtqodjxszqw.us>
+To: mailto:me@aol.com
+MIME-Version: 1.0
+Precedence: bulk
+Envelope-To: <blackpapermoon42@gmail.com>
+X-Originating-IP: 45.95.187.104
+X-Original-Sender: <blackpapermoon42@gmail.com>
+X-Google-Sender-Delegation: blackpapermoon42@gmail.com Trusted Sender
+X-Google-Original-Message-ID: <-@vevida.net>
+Message-ID: <mid-3hmauitqcif3cmei70t0c67vpnemqlju-1@mobicare.com.br>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <mailto:unsubscribe-t@qngjoygrl.edu?subject=unsub-PsDXeofnbmKSoQauRAPdhs5I1vp5sGnGRR3gFEZ1h3P8zjC2zu30rA8W2LbxmXxeQT26XnZ6pZRYLTd4sald5YBcYf8yn5c-ac3Buct6oKnR6zGsfhMwev4Kf3OTFk8j1nhnUTz8UHSvk8tTD1zufETrjczi7ZnAGa-2jmQhFQkqwQt5G7ZIVIXv77eNLVt1ePC49g5XKHxTG5sLxPyETbrkIfMLQ80FSYB6OSXo2igPNF0H60Cv%3D%3D&body=QRCjEne0qtVThECc01MYcJ9lEZEqGIgd6Oshe5fqyhUeRMYPsA6j0bliY19bEqCzFabocnqjT9ss48bU1IPaLW7-XzWAGLuCRFw7m4imFHIM3qc2d8M9foq9n84zwcVB2HOTYOPCAaVPWyHX-vaNe6gwwh6hJsvS51lwlNi1fCpX3ZKJepIdSWJfaqCnbNc6UR0%3D%3D>, <https://kcgnw.__Redirect.edu/tr/un/li/Jeud2TxSZZYSStxEuz7FFqymw63KEEIor2oJ7IDhmMfM8gxyKJjYUpbbWkU2u9P45UmG0LxwV9lqRZRxgYA6cHntEyy3zQljWJaNGpyl5uhnZ6dbCQ9XGuQGsiuFjhXs-8HecV2TWkGm32iFaEldsKl4mV66pMOrRNDp6o1g7JMzLg0d0mHRgAbLOiQv2SbQ0tSyIpBPuowqcp4HFbM3k4U>
+Content-Type: multipart/report; boundary="--==_mimepart_8babba5708f6cc38f27c933c89254df9"; report-type=delivery-status
+Date: Mon, 27 May 2024 21:57:54 -0400 (EST)
+Sender: pyewfurxlodtjss
+
+----==_mimepart_8babba5708f6cc38f27c933c89254df9
+Content-Type: multipart/parallel; boundary="_24327535080304081=_"
+
+--_24327535080304081=_
+Content-Type: multipart/alternative; boundary="74748017511144576239838878------------------------=bollin=_"
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Hexa
+
+--74748017511144576239838878------------------------=bollin=_
+Content-Type: text/plain; charset=utf-8
+
+
+--74748017511144576239838878------------------------=bollin=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding:
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+		<a style="display:none;" href="https://storage.googleapis.com/11df6g85j4f16gh5j1g36hjk123/fsdfdsuyyt2.html#Vegas.html?syn=4x166550ae359bbe_vl_leanding.iust710co2s-0mlver8.2sz6vps.uNaUlrJcetMTBjbzJzLTBtbHZlcjg0h287V" >.</a>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="telephone=no" name="format-detection">
+    <title></title>
+    <!--[if (mso 16)]>
+    <style type="text/css">
+    a {text-decoration: none;}
+    </style>
+    <![endif]-->
+    <!--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><![endif]-->
+    <!--[if gte mso 9]>
+<xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG></o:AllowPNG>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+
+</head>
+
+<body
+    style="width: 100%;font-family: arial, 'helvetica neue', helvetica, sans-serif;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;padding: 0;margin: 0;">
+    <div dir="ltr" class="es-wrapper-color" style="background-color: #fafafa;">
+        <!--[if gte mso 9]>
+			<v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+				<v:fill type="tile" color="#fafafa"></v:fill>
+			</v:background>
+		<![endif]-->
+        <table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0"
+            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;border-spacing: 0px;padding: 0;margin: 0;width: 100%;height: 100%;background-image: ;background-repeat: repeat;background-position: center top;background-color: #fafafa;">
+            <tbody>
+                <tr>
+                    <td class="esd-email-paddings" valign="top" style="padding: 0;margin: 0;">
+                        <table cellpadding="0" cellspacing="0" class="es-content esd-header-popover" align="center"
+                            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;border-spacing: 0px;width: 100%;table-layout: fixed !important;">
+                            <tbody>
+                                <tr>
+                                    <td class="esd-stripe esd-synchronizable-module" align="center"
+                                        style="padding: 0;margin: 0;">
+                                        <table class="es-content-body" align="center" cellpadding="0" cellspacing="0"
+                                            width="600"
+                                            style="background-color: transparent;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;border-spacing: 0px;"
+                                            bgcolor="rgba(0, 0, 0, 0)">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="esd-structure es-p20" align="left"
+                                                        style="padding: 20px;margin: 0;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%"
+                                                            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;border-spacing: 0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="560" class="esd-container-frame"
+                                                                        align="center" valign="top"
+                                                                        style="padding: 0;margin: 0;">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%"
+                                                                            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;border-spacing: 0px;">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center"
+                                                                                        class="esd-block-text es-infoblock"
+                                                                                        style="padding: 0;margin: 0;line-height: 120%;font-size: 12px;color: #cccccc;">
+                                                                                        <p
+                                                                                            style="margin: 0;-webkit-text-size-adjust: none;-ms-text-size-adjust: none;mso-line-height-rule: exactly;font-family: arial, 'helvetica neue', helvetica, sans-serif;line-height: 120%;color: #cccccc;font-size: 12px;">
+                                                                                            <a target="_blank"
+                                                                                                href="https://storage.googleapis.com/11df6g85j4f16gh5j1g36hjk123/fsdfdsuyyt2.html#Vegas.html?syn=1x166550ae359bbe_vl_leanding.iust710co2s-0mlver8.2sz6vps.TMfLYopCMTBjbzJzLTBtbHZlcjg0j3dDX"
+                                                                                                style="-webkit-text-size-adjust: none;-ms-text-size-adjust: none;mso-line-height-rule: exactly;text-decoration: underline;color: #cccccc;font-size: 12px;">View
+                                                                                                online version</a></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table cellpadding="0" cellspacing="0" class="es-content" align="center"
+                            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;border-spacing: 0px;width: 100%;table-layout: fixed !important;">
+                            <tbody>
+                                <tr>
+                                    <td class="esd-stripe" align="center" style="padding: 0;margin: 0;">
+                                        <table bgcolor="#ffffff" class="es-content-body" align="center" cellpadding="0"
+                                            cellspacing="0" width="600"
+                                            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;border-spacing: 0px;background-color: #ffffff;">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="esd-structure es-p25b es-m-p20t" align="left"
+                                                        style="padding: 0;margin: 0;padding-bottom: 25px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%"
+                                                            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;border-spacing: 0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="600" class="esd-container-frame"
+                                                                        align="center" valign="top"
+                                                                        style="padding: 0;margin: 0;">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%"
+                                                                            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;border-spacing: 0px;">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center"
+                                                                                        class="esd-block-image es-p10t es-p10b"
+                                                                                        style="font-size: 0px;padding: 0;margin: 0;padding-top: 10px;padding-bottom: 10px;">
+                                                                                        <a target="_blank"
+                                                                                            href="https://storage.googleapis.com/11df6g85j4f16gh5j1g36hjk123/fsdfdsuyyt2.html#Vegas.html?syn=1x166550ae359bbe_vl_leanding.iust710co2s-0mlver8.2sz6vps.uEmNjWLjMTBjbzJzLTBtbHZlcjg0j3dDX"
+                                                                                            style="-webkit-text-size-adjust: none;-ms-text-size-adjust: none;mso-line-height-rule: exactly;text-decoration: underline;color: #5c68e2;font-size: 14px;"><img
+                                                                                                class="adapt-img"
+                                                                                                src="https://1746.efuserassets.com/1746/offers/8903/c/46831/assets/BRF20.jpg"
+                                                                                                alt="Las Vegas USA Casino"
+                                                                                                style="display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"
+                                                                                                width="600"
+                                                                                                title="Las Vegas USA Casino"></a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="center"
+                                                                                        class="esd-block-text es-p10b es-m-txt-c"
+                                                                                        style="padding: 0;margin: 0;padding-bottom: 10px;">
+                                                                                        <h1
+                                                                                            style="font-size: 46px;line-height: 100%;margin: 0;mso-line-height-rule: exactly;font-family: arial, 'helvetica neue', helvetica, sans-serif;font-style: normal;font-weight: bold;color: #333333;">
+                                                                                            Congratulations!</h1>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="center"
+                                                                                        class="esd-block-text es-p5t es-p5b es-p40r es-p40l es-m-p0r es-m-p0l"
+                                                                                        style="padding: 0;margin: 0;padding-top: 5px;padding-bottom: 5px;padding-left: 40px;padding-right: 40px;">
+                                                                                        <p
+                                                                                            style="font-size: 16px;margin: 0;-webkit-text-size-adjust: none;-ms-text-size-adjust: none;mso-line-height-rule: exactly;font-family: arial, 'helvetica neue', helvetica, sans-serif;line-height: 150%;color: #333333;">
+                                                                                            You
+                                                                                            have been chosen to
+                                                                                            participate in a exclusive
+                                                                                            limited time offer.</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p10t es-p20r es-p20l" align="left"
+                                                        style="padding: 0;margin: 0;padding-top: 10px;padding-left: 20px;padding-right: 20px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%"
+                                                            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;border-spacing: 0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="560" class="esd-container-frame"
+                                                                        align="center" valign="top"
+                                                                        style="padding: 0;margin: 0;">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%"
+                                                                            style="border-radius: 5px;border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-spacing: 0px;">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center"
+                                                                                        class="esd-block-text es-p20b es-p20r es-p20l es-m-txt-c"
+                                                                                        esd-links-underline="none"
+                                                                                        esd-links-color="#6aa84f"
+                                                                                        style="padding: 0;margin: 0;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;">
+                                                                                        <h2
+                                                                                            style="line-height: 150%;color: #000000;margin: 0;mso-line-height-rule: exactly;font-family: arial, 'helvetica neue', helvetica, sans-serif;font-size: 26px;font-style: normal;font-weight: bold;">
+                                                                                            ENJOY WITH</h2>
+                                                                                        <h1
+                                                                                            style="color: #0000cd;margin: 0;line-height: 120%;mso-line-height-rule: exactly;font-family: arial, 'helvetica neue', helvetica, sans-serif;font-size: 46px;font-style: normal;font-weight: bold;">
+                                                                                            20
+                                                                                            Free Spins</h1>
+                                                                                        <h2
+                                                                                            style="line-height: 150%;color: #000000;margin: 0;mso-line-height-rule: exactly;font-family: arial, 'helvetica neue', helvetica, sans-serif;font-size: 26px;font-style: normal;font-weight: bold;">
+                                                                                            Then 500% Welcome Bonus</h2>
+                                                                                        <h2
+                                                                                            style="line-height: 150%;color: #000000;margin: 0;mso-line-height-rule: exactly;font-family: arial, 'helvetica neue', helvetica, sans-serif;font-size: 26px;font-style: normal;font-weight: bold;">
+                                                                                            +$100 On Next Deposit</h2>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="560" class="esd-container-frame"
+                                                                        align="center" valign="top"
+                                                                        style="padding: 0;margin: 0;">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%"
+                                                                            style="border-left: 2px dotted #cccccc;border-right: 2px dotted #cccccc;border-top: 2px dotted #cccccc;border-bottom: 2px dotted #cccccc;border-radius: 5px;border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-spacing: 0px;">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center"
+                                                                                        class="esd-block-text es-p10t es-p10b es-m-txt-c"
+                                                                                        esd-links-underline="none"
+                                                                                        esd-links-color="#0b5394"
+                                                                                        style="padding: 0;margin: 0;padding-top: 10px;padding-bottom: 10px;">
+                                                                                        <h3
+                                                                                            style="color: #000000;margin: 0;line-height: 120%;mso-line-height-rule: exactly;font-family: arial, 'helvetica neue', helvetica, sans-serif;font-size: 20px;font-style: normal;font-weight: bold;">
+                                                                                            <strong>COPY&nbsp;YOUR
+                                                                                                CODE:</strong>
+                                                                                        </h3>
+                                                                                        <h1
+                                                                                            style="color: #0000cd;margin: 0;line-height: 120%;mso-line-height-rule: exactly;font-family: arial, 'helvetica neue', helvetica, sans-serif;font-size: 46px;font-style: normal;font-weight: bold;">
+                                                                                            <a target="_blank"
+                                                                                                style="color: #0000cd;text-decoration: none;word-break: break-all;-webkit-text-size-adjust: none;-ms-text-size-adjust: none;mso-line-height-rule: exactly;font-size: 46px;"
+                                                                                                href="https://storage.googleapis.com/11df6g85j4f16gh5j1g36hjk123/fsdfdsuyyt2.html#Vegas.html?syn=1x166550ae359bbe_vl_leanding.iust710co2s-0mlver8.2sz6vps.nUWVbeMTBjbzJzLTBtbHZlcjg0j3dDX">BRF20</a>
+                                                                                        </h1>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="560" class="esd-container-frame"
+                                                                        align="center" valign="top"
+                                                                        style="padding: 0;margin: 0;">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%"
+                                                                            style="border-radius: 5px;border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-spacing: 0px;">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center"
+                                                                                        class="esd-block-text es-p10t es-p10b"
+                                                                                        style="padding: 0;margin: 0;padding-top: 10px;padding-bottom: 10px;">
+                                                                                        <p
+                                                                                            style="margin: 0;-webkit-text-size-adjust: none;-ms-text-size-adjust: none;mso-line-height-rule: exactly;font-family: arial, 'helvetica neue', helvetica, sans-serif;line-height: 150%;color: #333333;font-size: 14px;">
+                                                                                            Limited Time Offer</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p30b es-p20r es-p20l" align="left"
+                                                        style="padding: 0;margin: 0;padding-left: 20px;padding-right: 20px;padding-bottom: 30px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%"
+                                                            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;border-spacing: 0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="560" class="esd-container-frame"
+                                                                        align="center" valign="top"
+                                                                        style="padding: 0;margin: 0;">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%"
+                                                                            style="border-radius: 5px;border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-spacing: 0px;">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center"
+                                                                                        class="esd-block-button es-p10t es-p10b"
+                                                                                        style="padding: 0;margin: 0;padding-top: 10px;padding-bottom: 10px;">
+                                                                                        <span class="es-button-border"
+                                                                                            style="border-radius: 6px;background: #52f604;border-style: solid solid solid solid;border-color: #2cb543 #2cb543 #2cb543 #2cb543;border-width: 0px 0px 0px 0px;display: inline-block;width: auto;"><a
+                                                                                                href="https://storage.googleapis.com/11df6g85j4f16gh5j1g36hjk123/fsdfdsuyyt2.html#Vegas.html?syn=1x166550ae359bbe_vl_leanding.iust710co2s-0mlver8.2sz6vps.BoixSCrWzMTBjbzJzLTBtbHZlcjg0j3dDX"
+                                                                                                class="es-button"
+                                                                                                target="_blank"
+                                                                                                style="padding-left: 30px;padding-right: 30px;border-radius: 6px;font-size: 26px;background: #52f604;mso-border-alt: 10px solid  #52f604;color: #256009;font-weight: bold;-webkit-text-size-adjust: none;-ms-text-size-adjust: none;mso-line-height-rule: exactly;text-decoration: none !important;display: inline-block;font-family: arial, 'helvetica neue', helvetica, sans-serif;font-style: normal;line-height: 120%;width: auto;text-align: center;padding: 10px 30px 10px 30px;mso-padding-alt: 0;mso-style-priority: 100 !important;">Play
+                                                                                                Now</a></span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table cellpadding="0" cellspacing="0" class="es-footer esd-footer-popover" align="center"
+                            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;border-spacing: 0px;width: 100%;background-color: transparent;background-image: ;background-repeat: repeat;background-position: center top;table-layout: fixed !important;">
+                            <tbody>
+                                <tr>
+                                    <td class="esd-stripe esd-synchronizable-module" align="center"
+                                        style="padding: 0;margin: 0;">
+                                        <table class="es-footer-body" align="center" cellpadding="0" cellspacing="0"
+                                            width="640"
+                                            style="background-color: transparent;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;border-spacing: 0px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="esd-structure es-p20t es-p20b es-p20r es-p20l"
+                                                        align="left"
+                                                        style="padding: 0;margin: 0;padding-top: 20px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%"
+                                                            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;border-spacing: 0px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="600" class="esd-container-frame"
+                                                                        align="left" style="padding: 0;margin: 0;">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%"
+                                                                            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;border-spacing: 0px;">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center"
+                                                                                        class="esd-block-text es-p35b"
+                                                                                        style="padding: 0;margin: 0;padding-bottom: 35px;">
+                                                                                        <p
+                                                                                            style="margin: 0;-webkit-text-size-adjust: none;-ms-text-size-adjust: none;mso-line-height-rule: exactly;font-family: arial, 'helvetica neue', helvetica, sans-serif;line-height: 150%;color: #333333;font-size: 12px;">
+                                                                                            Las Vegas USA Casino ©
+                                                                                            2023&nbsp;All Rights
+                                                                                            Reserved.<br>275 Cumberland Parkway Ste 143 Mechanicsburg, PA 17055<br><a href="https://storage.googleapis.com/11df6g85j4f16gh5j1g36hjk123/fsdfdsuyyt2.html#Vegas.html?syn=1x1Uns_66550ae359bbevl_leanding.iust710co2s-0mlver8.2sz6vps.SNbahsRMTBjbzJzLTBtbHZlcjg0x697l">Unsubscribe here</a></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+																			<img style="display:none;" src="https://tinyurl.com/mrt3uy7u/Vegas.html?syn=8x166550ae359bbe_vl_leanding.iust710co2s-0mlver8.2sz6vps.gTMJYwMTBjbzJzLTBtbHZlcjg0k3tHY">
+
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+<object QAPTGPSGEGASNWWZQSUYIFCCKOJITXDDKXFRDKXFJVOYVCNIQR>
+
+Dear plHfvcqd plHfvcqd,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is HYFYF4W.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+
+</title>
+<!--
+
+/\ \ /\ \ 
+\_\ \ _ \_\ \ 
+/'__`\/' `\ /'_` \ / _`\/\`'__\/',__\ /'__`\ /'_` \ 
+/\ //\ \/\ \/\ \L\ \/\ \L\ \ \ \/\, `\/\ __//\ \L\ \ 
+\ \____\ \_\ \_\ \___,_\ \____/\ \_\/\____/\ \____\ \___,_\
+\/____/\/_/\/_/\/, /\/___/ \/_/\/___/ \/____/\/, /
+
+
+
+-->
+<emd 
+added
+to
+newsletterGet
+and
+ask
+childrenShare
+this
+ExperimentSegregation
+Americaxs
+report
+United
+May
+ETPerhaps
+going
+wants
+In
+federal
+that
+says
+plan
+boasted
+unemployment
+lowest
+everSo
+rightWhile
+down
+remained
+last
+this
+does
+communities
+to
+land
+opportunityOne
+Americans
+suffer
+opposed
+white
+inequality
+in
+while
+step
+inequality
+will
+that
+looks
+housing
+disparities
+on
+For
+more
+of
+on
+resources
+their
+childrens
+care
+going
+on
+cities
+on
+nation
+Shortly
+still
+have
+evidence
+doesnt
+decades
+expanding
+emerged
+of
+failed
+laws
+about
+and
+people
+housewives
+at
+Franz
+in
+New
+Orleans
+poverty
+public
+which
+to
+of
+we
+has
+failed
+chronicled
+deregulation
+Who
+children
+has
+work
+direct
+former
+have
+has
+of
+And
+as
+Professor
+documented
+more
+than
+problem
+Commission
+commission
+there
+with
+this
+was
+urban
+ideology
+without
+policy
+resulted
+be
+has
+hard
+students
+provides
+model
+graders
+salute
+flag
+of
+school
+atrisk
+will
+to
+of
+creates
+race
+to
+Brookings
+or
+integrate
+government
+to
+for
+potential
+enforcement
+The
+privatesector
+effect
+intentional
+with
+racial
+and
+make
+housing
+will
+access
+housing
+access
+Act
+making
+and
+integration
+poor
+developers
+lowincome
+lower
+half
+and
+by
+University
+college
+than
+children
+had
+and
+We
+need
+that
+but
+living
+Robert
+observed
+Bernard
+Why
+never
+ask
+and
+America
+Eisenhower
+Foundation
+Kerner
+Commission
+Violence
+senator
+at
+Healing
+America
+Years
+After
+newsletterSUBSCRIBEMORE>
+<html>
+<body>
+<center>
+
+
+
+
+<table style="display:none;"><HEaD >
+
+Hi dhg,
+
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+
+If not, just let me know and we'll find something else.
+
+
+--
+Dylan Basile
+
+
+
+*Book a demo with me here:*
+
+
+Hi dfdh,
+
+Thanks for signing up, and congratulations
+on your new npxrjrrpas account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+
+=== Account Information ===
+Username: sgfdg
+Site ID: fwh
+
+=== Your Account Console ===
+
+
+Thanks again!
+Team npxrjrrpas
+
+Powered by npxrjrrpas 
+
+</title>
+
+Dear lcTychll rGhEG,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is HYFYF4W.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+== You need a budget, and your email needs confirmation. ==
+
+Hello! Quick note to let you know that your email needs to be confirmed
+before all sorts of great things happen. Like your being able to use YNAB
+all along your road to budgeting glory. Please confirm by clicking the link
+below:
+
+Confirm your email
+
+
+Thank you!
+
+And we're serious about budgeting glory. It's a real thing, and you will
+bask in it.
+
+Regards,
+
+The YNAB Team
+
+
+<
+
+Dear laila.chamlal mlgqt,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is HYFYF4W.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+
+>
+
+
+
+
+
+Hi seyuztsbmjvjk,
+
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+
+If not, just let me know and we'll find something else.
+
+
+--
+Dylan Basile
+
+
+
+*Book a demo with me here:*
+
+
+Hi dfdh,
+
+Thanks for signing up, and congratulations
+on your new npxrjrrpas account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+
+=== Account Information ===
+Username: qogz
+Site ID: ynp
+
+=== Your Account Console ===
+
+
+Thanks again!
+Team npxrjrrpas
+
+Powered by npxrjrrpas
+<table height=4125>
+<table height=4125>
+<table height=4125>
+
+Login Name: kabhgimrcf
+Password: npxrjrrpas
+
+How do I become a tester for the XT 808 flashlight?
+
+
+
+Login Name: wksftqhwro
+Password: npxrjrrpas
+
+More than a quarter of Europeans surveyed believe Jews have too much influence in business and finance. One in five say they have too much influence in media and politics. In individual countries the numbers are often higher: 42% of Hungarians think Jews have too much influence in finance and business across the world
+
+
+npxrjrrpas
+npxrjrrpas
+npxrjrrpas
+npxrjrrpas
+npxrjrrpas
+npxrjrrpas
+QAPTGPSGEGASNWWZQSUYIFCCKOJITXDDKXFRDKXFJVOYVCNIQR
+QAPTGPSGEGASNWWZQSUYIFCCKOJITXDDKXFRDKXFJVOYVCNIQR
+QAPTGPSGEGASNWWZQSUYIFCCKOJITXDDKXFRDKXFJVOYVCNIQR
+QAPTGPSGEGASNWWZQSUYIFCCKOJITXDDKXFRDKXFJVOYVCNIQR
+QAPTGPSGEGASNWWZQSUYIFCCKOJITXDDKXFRDKXFJVOYVCNIQR
+QAPTGPSGEGASNWWZQSUYIFCCKOJITXDDKXFRDKXFJVOYVCNIQR
+QAPTGPSGEGASNWWZQSUYIFCCKOJITXDDKXFRDKXFJVOYVCNIQR
+QAPTGPSGEGASNWWZQSUYIFCCKOJITXDDKXFRDKXFJVOYVCNIQR
+QAPTGPSGEGASNWWZQSUYIFCCKOJITXDDKXFRDKXFJVOYVCNIQR
+QAPTGPSGEGASNWWZQSUYIFCCKOJITXDDKXFRDKXFJVOYVCNIQR
+
+It's a 17-year-old boy, too frightened to wear a kippa (a religious skullcap) on the streets of Paris. It's an Israeli restaurant owner in Berlin who is told that he will end up in the gas chambers. It's a 24-year-old Austrian who knows nothing about the Holocaust. It's the armed guards outside synagogues and Jewish schools across much of Europe. It's the online chat rooms where people peddle conspiracy theories that Jewish "globalists" run the world.
+It can be violent or subtle. Overt or insidious. Political or personal. It can come from the right or the left. It exists in countries that have large Jewish populations, like France, and it also flourishes in places with smaller Jewish communities, like Poland
++
+IBM Cloud
+
+Hello Nancy,
+
+Thank you for signing up for IBM Cloud! Confirm your account to get started.
+
+Confirm Account
+
+By confirming your account, you accept the Terms of Use
+
+Welcome and happy building!
+
+_
+
+Thank you,
+
+IBM Cloud
+Visit the IBM Cloud console.
+
+? Copyright IBM Corporation 2014, 2018.
+
+IBM
++
++
+V?rification du compte
+
+Confirmez votre adresse e-mail afin d'activer votre compte
+
+Confirmer
+
+
+Merci de votre inscription. Cliquez sur le bouton vert pour confirmer que arthurcdumas010+58zer4gq@gmail.com est bien votre adresse e-mail. Vous pourrez ensuite vous lancer sur Podio.
+
+
+
+Vous n'arrivez pas ? cliquer sur les liens contenus dans cet e-mail ? Copiez-collez ce lien dans votre navigateur afin d'effectuer la v?rification :
+
+https://podio.com/signup/setup?activation_code=68cd78b9a87946d0ab65f81138426ed9&utm_nooverride=1
+
+
+
+Une question ? Contactez-nous : support@podio.com
+Citrix - 120 S West St - Raleigh, NC 27603 - US
++
+
+our wonderful wistia logo	
+Welcome to Wistia!
+You're five minutes away from adding beautiful video to your site!
+
+Activate your account
++
+Hi Nancy,
+
+Your Fastly account is almost ready. We just need to verify that you?re human.
+
+Please confirm your email here: https://manage.fastly.com/confirm/aeca002368c9f9ae6c565b7a65b1f623
+
+Thanks. We?re glad you?re here.
+
+The Fastly Team support@fastly.com www.twitter.com/fastly
+
++
+Thanks for joining the Parsec community!
+But before you become a full fledged member of this community, can you please confirm your email.
+
+CONFIRM YOUR EMAIL? 
+From the very beginning, our goal has been to develop the lowest latency, 60 FPS game streaming software possible so you can play your games from anywhere. We're excited to welcome you to Parsec!
+
+Helpful Links
+1. Download Parsec for your device
+
+2. Set up Parsec on your PC to invite friends to game with you or to play from anywhere
+
+3. Connect with your friends on Parsec
+
+4. If you don't have a gaming PC to co-op with friends, build one on Parsec
+
+5. Join our Discord for support, updates, and finding friends to game with
+
+
+
+Parsec Cloud, Inc. 
+115 Broadway, Fifth Floor, New York, NY 10006, USA
+
+</object>
+	
+--74748017511144576239838878------------------------=bollin=_--
+--_24327535080304081=_--
+----==_mimepart_8babba5708f6cc38f27c933c89254

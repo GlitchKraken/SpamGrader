@@ -5,18 +5,19 @@ import json
 import os
 import vt
 import hashlib
-import math
 import rich 
 import tldextract
 import time
-
+import requests
+from spam_detector_ai.prediction.predict import VotingSpamDetector
+import warnings
 # Credit to the entire Entropy-Calculator goes to Ben Downing from red canary
 #https://redcanary.com/blog/threat-detection/threat-hunting-entropy/
 from Entropy import Entropy
 
 
 emails = {}
-    
+
 email_score_breakdown = []
 
 VirusTotal_Api_Key = "4617ea5bb1333b4dfecba3c69d2ec5daf19d53508e74321653b4dd8d36a07741"
@@ -37,6 +38,7 @@ def main():
     parser.add_argument("-d", help="Scan all email files in the current directory (supports .eml and .msg files)", required=False, action="store_true")
     parser.add_argument("-V", help="Use VirusTotal for analysis (Requires API Key) ((I've included one of my own for the projects sake))", required=False, action="store_true")
     parser.add_argument("-vv", help="set verbose mode (extra debugging text)", required=False, action="store_true")
+    parser.add_argument("-ai", help="Have a council of AI parse the email's content, and vote on wether each consider the message to be spam or not", required=False, action="store_true")
     # below line of code basically just prints the help option if no args were supplied.
     #Source: https://stackoverflow.com/questions/8259001/python-argparse-command-line-flags-without-arguments
     global args
@@ -79,6 +81,8 @@ def main():
         # now run the email through each analysis module. maybe pass through a big dictionary where the email name/key has a list of values?
         riskKeyWords(email)
         riskEntropy(email)
+        if args.ai:
+            riskSVM(email)
         if args.V:
             riskVirusTotal(email)
         
@@ -137,7 +141,8 @@ def main():
             # run the email through each analysis module. maybe pass through a big dictionary where the email name/key has a list of values?
             riskKeyWords(email)
             riskEntropy(email)
-            
+            if args.ai:
+                riskSVM(email)
             # all modules have been run on the email, add it do the big list.
             
             
@@ -272,6 +277,7 @@ def riskEntropy(email):
     # handle the number of from addresses the email has.
     # note that we care more about the domain than the user's chosen name
     
+    #print("Message: " + str(email.message_as_string))
     
     
     if len(email.from_) > 0:
@@ -333,7 +339,7 @@ def riskEntropy(email):
             # a random-name IS somewhat sus, but people often have to put numbers in their names
             # because their username is taken. we will use a smaller score here.
             # the reason for the multiplication is: the more random an email
-            RiskScore += 5 * SenderNameEntropy
+            RiskScore += round((5 * SenderNameEntropy) )
             email_score_breakdown.append({"EntropyModule_SenderNameRandom_Score" : (RiskScore, "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million.")})
             
     
@@ -350,7 +356,8 @@ def riskEntropy(email):
         if senderDomainEntropy > 3.1:
             # we will consider this random enough to be a "sus" domain and flag it with higher risk. 
             # since this domain is really random looking, we will consider it a significant risk, and give a bigger score.
-            RiskScore += 20 * senderDomainEntropy
+            
+            RiskScore += round((20 * senderDomainEntropy))
             
             email_score_breakdown.append({"EntropyModule_SenderDomain_Score" : (RiskScore, "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million.")})
         
@@ -361,11 +368,35 @@ def riskEntropy(email):
         #print("[!] Warning While running Risk Entropy: No From User or Domain was found!")
         fromAddr = "Error"
         return
+def riskSVM(email):
+    #we CAN use an API... but lets try using our own first, to test performance.
+    #jsonMail = {'text': email.message_as_string
+    #            }
+
+    #response = requests.post("https://spam-detection-api.adamspierredavid.com/v2/check-spam/", json=jsonMail)
+    RiskScore = 0
     
+    # so first, lets get the message text...
+    emailMessage = email.body
+    #print(emailMessage)
+    
+    
+    Oracle = VotingSpamDetector()
+    is_spam = Oracle.is_spam(emailMessage)
+    
+    if is_spam:
+        #print(is_spam)
+        RiskScore += 100
+        email_score_breakdown.append({"AI_Module_Score" : (RiskScore, "This email was given a higher score because a series of AI voted to consider it as spam.")})
+
+    
+    
+    pass
 if __name__ =="__main__":
     # idea for basic time-tracking thanks to
     #https://stackoverflow.com/questions/1557571/how-do-i-get-time-of-a-python-programs-execution
     start_time = time.time()
+    warnings.filterwarnings("ignore")
     main()
     print("\n\n=== Total Runtime:  " + str(time.time() - start_time) + " Seconds === " )
     

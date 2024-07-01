@@ -5,18 +5,19 @@ import json
 import os
 import vt
 import hashlib
-import math
 import rich 
 import tldextract
 import time
-
+import requests
+from spam_detector_ai.prediction.predict import VotingSpamDetector
+import warnings
 # Credit to the entire Entropy-Calculator goes to Ben Downing from red canary
 #https://redcanary.com/blog/threat-detection/threat-hunting-entropy/
 from Entropy import Entropy
 
 
 emails = {}
-    
+
 email_score_breakdown = []
 
 VirusTotal_Api_Key = "4617ea5bb1333b4dfecba3c69d2ec5daf19d53508e74321653b4dd8d36a07741"
@@ -79,6 +80,7 @@ def main():
         # now run the email through each analysis module. maybe pass through a big dictionary where the email name/key has a list of values?
         riskKeyWords(email)
         riskEntropy(email)
+        riskSVM(email)
         if args.V:
             riskVirusTotal(email)
         
@@ -137,7 +139,7 @@ def main():
             # run the email through each analysis module. maybe pass through a big dictionary where the email name/key has a list of values?
             riskKeyWords(email)
             riskEntropy(email)
-            
+            riskSVM(email)
             # all modules have been run on the email, add it do the big list.
             
             
@@ -272,6 +274,7 @@ def riskEntropy(email):
     # handle the number of from addresses the email has.
     # note that we care more about the domain than the user's chosen name
     
+    #print("Message: " + str(email.message_as_string))
     
     
     if len(email.from_) > 0:
@@ -361,11 +364,35 @@ def riskEntropy(email):
         #print("[!] Warning While running Risk Entropy: No From User or Domain was found!")
         fromAddr = "Error"
         return
+def riskSVM(email):
+    #we CAN use an API... but lets try using our own first, to test performance.
+    #jsonMail = {'text': email.message_as_string
+    #            }
+
+    #response = requests.post("https://spam-detection-api.adamspierredavid.com/v2/check-spam/", json=jsonMail)
     
+    
+    # so first, lets get the message text...
+    emailMessage = email.body
+    print(emailMessage)
+    
+    
+    Oracle = VotingSpamDetector()
+    is_spam = Oracle.is_spam(emailMessage)
+    
+    if is_spam:
+        print(is_spam)
+        RiskScore += 50
+        email_score_breakdown.append({"AI_Module_Score" : (RiskScore, "This email was given a higher score because a series of AI's considered it as spam.")})
+
+    
+    
+    pass
 if __name__ =="__main__":
     # idea for basic time-tracking thanks to
     #https://stackoverflow.com/questions/1557571/how-do-i-get-time-of-a-python-programs-execution
     start_time = time.time()
+    warnings.filterwarnings("ignore")
     main()
     print("\n\n=== Total Runtime:  " + str(time.time() - start_time) + " Seconds === " )
     
