@@ -1,0 +1,6 @@
+mail_parser>=3.15.0
+Requests>=2.32.3
+rich>=13.7.1
+spam_detector_ai>=2.1.16
+tldextract>=3.1.2
+vt_py>=0.6.3
