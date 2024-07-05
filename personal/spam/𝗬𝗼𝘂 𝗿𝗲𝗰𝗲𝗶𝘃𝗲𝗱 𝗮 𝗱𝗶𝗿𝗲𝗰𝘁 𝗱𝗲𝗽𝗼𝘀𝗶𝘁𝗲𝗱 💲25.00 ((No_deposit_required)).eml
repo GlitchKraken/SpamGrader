@@ -1,0 +1,344 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:6695:b0:1a6:aa79:77cb with SMTP id so21csp677192rwb;
+        Sun, 30 Jun 2024 14:01:23 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IG6xDCvd/hLyOm7uoTwrcju1AhC0jd4bKCa1UB10VSNN9M7DsVGkuEh8K1tLBRsVuab0rcX
+X-Received: by 2002:a05:6808:211b:b0:3d2:248c:5db with SMTP id 5614622812f47-3d6b559042cmr6374044b6e.48.1719781283021;
+        Sun, 30 Jun 2024 14:01:23 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719781282; cv=none;
+        d=google.com; s=arc-20160816;
+        b=XH2b/lXJGqQuIShCHVImYdYpHbfm1lH1vNtOT1MAw/q+2MrGxPQ3U2rX9Kxv2Tc2lZ
+         f9lnlXHAq0bL63yWfKSO5BE/sJpPEJ6UwWisu/5tAo6JTei8iy1uw48dbd88qBF4GDxy
+         Bs8Bz1pI4//pEN2AqkXqlhYZa4MSDePwweyxl/6adAu1mBL1ConnvBWLjZsHFOf4OEEy
+         PKXE1byVBUaAimCW34dNgflDFA+rfeGDcrwRHUAAjQyd6Gue42PxYxV+KkEJvf71rUTa
+         B1h3v6Q1k8bbsY96IzjIaTgQHeArrbd1db1UR27NjPltKJMR6PPsx9LEHXXLldHAGRbk
+         q6/Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:message-id:to:from:date:domainkey-signature
+         :dkim-signature;
+        bh=gVloBLeGWyh4qmrHvAQYR8GMIoxEUG1n519+zxr2Iwc=;
+        fh=BfH3tuO4vWcZZHlWy5SVIaCbaMAJl+146y7dupIPkPQ=;
+        b=Vxvw5xI+l2hBVKpTKC42nl057hZBeOqXGUgcOGgiM1CC+KmaOU460diDVR5Fj4NEmM
+         32lBI6bY2ngfdu3tufW5AHyJVRPSLLaUbpvZ+BJgFYrCGvkA2v5ioXaDeLMjJWVT1w1J
+         ZVil9NkxKANQqToh5HBeoxoqzjzCrTX2ZAO6a6Qyrfx3Hg7+cysYzAf9u4T+wxISztJQ
+         U3F8iv8mrVf/Qlbb4vantkHsagHTmnWSgZ8B/KtSZHkrrfoPea1y7l8NjzV5riTQ9uw2
+         L0aPDi/pLiMXosXP+lH1yG6Ku56EUFN2cEOYVsBg3vgfciWsN+BTlDI0SjoC+Pi+O1sP
+         38qw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=temperror (no key for signature) header.i=@rgscsjbe.us header.s=default header.b="m1/GLqAt";
+       spf=pass (google.com: domain of abuse@1mdollar.otherefoot.com designates 45.95.187.105 as permitted sender) smtp.mailfrom=abuse@1mdollar.otherefoot.com
+Return-Path: <abuse@1mdollar.otherefoot.com>
+Received: from taunae.centramways.us (taunae.centramways.us. [45.95.187.105])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-70801c0ee62si6632214b3a.91.2024.06.30.14.01.22
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 30 Jun 2024 14:01:22 -0700 (PDT)
+Received-SPF: pass (google.com: domain of abuse@1mdollar.otherefoot.com designates 45.95.187.105 as permitted sender) client-ip=45.95.187.105;
+Authentication-Results: mx.google.com;
+       dkim=temperror (no key for signature) header.i=@rgscsjbe.us header.s=default header.b="m1/GLqAt";
+       spf=pass (google.com: domain of abuse@1mdollar.otherefoot.com designates 45.95.187.105 as permitted sender) smtp.mailfrom=abuse@1mdollar.otherefoot.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=rgscsjbe.us;
+ h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+ i=info.rgscsjbe.rgscsjbe@rgscsjbe.us;
+ bh=gVloBLeGWyh4qmrHvAQYR8GMIoxEUG1n519+zxr2Iwc=;
+ b=m1/GLqAtNniYmXKko/N9asBkXvzAjivpsZE2t101Fxs6vqPLlBEiXzNdqzwLNGvtNfh5PU6bwU81
+   R+1Wm15OJ9XdZAMWgPxY73ffH7fu2Fi/HdEul3VBQgFFRqeBiIQBorSzEU2Rg+lJWbXOgF10zh4Y
+   tAf9iEVhVbTgMzTxTtI=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=default; d=rgscsjbe.us;
+ b=mP0jQ255MFwYRSybOPpVx8wtvFhzDx9oxKIz/tEMZ2TRTzrIRr1eOMrMw7ARsrDUWWehKsYiYwVk
+   o+WkmNSBiOytN265qEH5JaxjA8L/P0rdYx3DP0mXTz48qZa8qHC30Ie3JzyDS5CK75zU5+AvImuw
+   iGowaCJtrAJS9bYji3c=;
+Received: from njmta-53.sailthru.com (173.228.155.53) by dailybeast-a.sailthru.com id h1t86m1qqbs3 for <blackpapermoon42@gmail.com>; Sun, 30 Jun 2024 17:01:22 -0400 (envelope-from <delivery@mx.sailthru.com>)
+Date: Sun, 30 Jun 2024 17:01:22 -0400
+From: "'💲CashApp💲'" <info.rgscsjbe.rgscsjbe@rgscsjbe.us>
+To: blackpapermoon42@gmail.com
+Message-ID: <65df7a8d.050a0220.6dfba.bad1smtpin_added_broken@mx.google.com>
+Subject: 𝗬𝗼𝘂 𝗿𝗲𝗰𝗲𝗶𝘃𝗲𝗱 𝗮 𝗱𝗶𝗿𝗲𝗰𝘁 𝗱𝗲𝗽𝗼𝘀𝗶𝘁𝗲𝗱 💲25.00 ((No_deposit_required))
+MIME-Version: 1.0
+Content-Type: multipart/report; boundary="000000000000SGCNuB7Qm6umj710elBSQB"; report-type=delivery-status
+
+--000000000000SGCNuB7Qm6umj710elBSQB
+Content-Type: multipart/related; boundary="000000000000B0MNRUNyYR84HR9a"
+
+--000000000000B0MNRUNyYR84HR9a
+Content-Type: multipart/alternative; boundary="000000000000B0MNRUNyYR84HR9b"
+
+--000000000000B0MNRUNyYR84HR9b
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Top Stories of the Day: Sep 0, 2019
+
+103882302891885308
+-----
+
+If you believe this has been sent to you in error, please safely unsubscrib=
+e
+--000000000000B0MNRUNyYR84HR9b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit+
+
+
+<!------------ START SOCIAL MEDIA ------------>
+<!------------ END SOCIAL MEDIA ------------>
+
+
+<!------------ START SOCIAL MEDIA ------------>
+
+
+<!------------ START SOCIAL MEDIA ------------>
+<title>tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw</title>
+    
+    <!------------ START SOCIAL MEDIA ------------>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+    <title>789
+    </title>
+    
+    <style>
+    
+        .section {
+            box-shadow: 0 3px 8px rgba(0, 0, 0, .05);
+            border-radius: 10px;
+        }
+    
+        .section--middle {
+            border-radius: 0;
+        }
+    
+    </style>
+    
+    
+    </head>
+    <body lang="en" dir="ltr" bgcolor="#f2f2f2">
+        <table class="page" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#f2f2f2" style="direction: ltr; min-width: 320px; text-align: center; color: #292c2e; font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;">
+            <tr>
+                <td bgcolor="#339933" style="padding: 0; height: 0;" height="0">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="page__head page_head" bgcolor="#339933" style="padding: 20px 0; color: #fff;">
+                    
+    
+                    
+                    <div style="display:none; font-size:0; line-height: 0; mso-hide: all; max-height: 0; max-width: 0; width: 0; overflow: hidden; vertical-align: top;" class="logo-mobile">
+                    
+                    </div>
+    </td>
+            </tr>
+            <tr>
+                <td class="wraper" style="padding: 0 20px; text-align: center;">
+                    <span style="display: inline-block; vertical-align: top; width: 100%; max-width: 640px; text-align: left;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 640px; min-width: 280px; margin: 0 auto;">
+                            <tr>
+                                <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="no-tips">
+                                        <tr>
+                                            <td style="text-align: center; color: #333844; font-size: 16px;" class="main">
+    
+                                                
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="color: #fff;">
+                                                    <tr>
+                                                        <td style="padding: 0 10px 3%; font-size: 14px; line-height: 18px; text-align: center;">
+                                                       <a href="https://t.co/lcCdoOrMdX">
+                              <font color="#000000">E-mail 
+                              verification needed in 24 
+                              hours</font></a><font color="#000000">
+                              </font>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+    
+                                                <table class="section" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td class="section__promo" style="padding: 8% 5% 0; text-align: center;">
+                                                            <span style="display: inline-block; vertical-align: top;">
+                                                            <table cellpadding="0" cellspacing="0" border="0">
+                                                                <tr>
+                                                                    <td>
+                                                                        <table cellpadding="0" cellspacing="0" style="border-collapse: separate;">
+                                                                            <tr>
+                                                                                <td class="userpic" width="120" bgcolor="#efefef" style="border-radius: 50%; border-left: 0px solid #fff; border-right: 5px solid #fff; font-size: 0; position: relative;" align="left">
+                                                                                <a href="https://t.co/lcCdoOrMdX" style="width: 0; display: inline-block; vertical-align: top;"><img width="120" src="" style="min-height: 120px; vertical-align: top; border-radius: 50%;" border="0" alt=""></a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="section__title" style="padding: 4% 5% 0; text-align: center;">
+                                                            <span style="display: inline-block; vertical-align: top;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 480px; margin: 0 auto;">
+                                                                <tr>
+                                                                    <td align="center">
+                                                                        <span class="section-title" style="line-height: 26px; color: #000">
+                                      <font size="6">
+                                      Congratulations! blackpapermoon42
+                                     </font></span><font size="6">
+                                      </font>
+                                      <p>&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="section__text" style="padding: 2% 5% 3%; text-align: center;">
+                                                            <span class="section-text" style="font-size: 18px; line-height: 22px; display: inline-block; vertical-align: top; max-width: 470px">
+                              A balance of <span class="section-title" style="font-size: 22px; line-height: 26px;color:#00A83B ">
+                                $25.00</span> is available for your Account<font color="#008000">
+                                </font></span>
+                                                
+                                                            
+                                                            <span class="section-text" style="font-size: 16px; line-height: 22px; display: inline-block; vertical-align: top; max-width: 470px">
+                                This transaction may only appear on your account after validate your info.</span>
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                    
+                                                        <td class="section__footer" style="padding: 0 0 8%; text-align: center;">
+                                                        <p><br>
+    &nbsp;</p>
+    
+     <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse; background-color:#eaf4fa; border:1px solid #001F57; margin-top:0; margin-bottom:0px; -webkit-text-size-adjust:none">
+     <tbody style="-webkit-text-size-adjust: none">
+     <tr style="-webkit-text-size-adjust: none">
+     <td align="left" class="left-section" width="60%">
+     <h1 class="primary-headline" style="font-size:22px; line-height:28px; font-family:sans-serif; color:#000; margin-top:25px; margin-right:25px; margin-left:25px; margin-bottom:10px;">
+      Sun, 30 Jun 2024 17:01:22 -0400 (EDT)
+    
+    </h1>
+     <p class="subheadline" style="font-family:arial, sans-serif; color:#444; text-decoration:none; font-size:14px; font-weight:400; line-height:20px; display:inline-block; margin-top:0; margin-bottom:10px; margin-left:25px;">
+      Funding For: 
+      <span style="font-weight:400; border-bottom:1px solid grey; -webkit-text-size-adjust:none">
+      blackpapermoon42</span>
+    </p>
+     
+    
+     <p class="subheadline" style="font-family:arial, sans-serif; color:#444; text-decoration:none; font-size:14px; font-weight:400; line-height:20px; display:inline-block; margin-top:0; margin-bottom:10px; margin-left:25px;">
+      Email: 
+      <span style="font-weight:400; border-bottom:1px solid grey; -webkit-text-size-adjust:none">
+      blackpapermoon42@gmail.com</span>
+    </p>
+    <p class="subheadline" style="font-family:arial, sans-serif; color:#444; text-decoration:none; font-size:14px; font-weight:bold; line-height:20px; display:inline-block; margin-top:0; margin-bottom:10px; margin-left:25px;">
+      <a href="https://t.co/lcCdoOrMdX">
+      <font color="#000000">Balance Amount: 
+      </font> 
+      <span style="color:#00A83B; font-weight:bold; border-bottom:1px solid grey; -webkit-text-size-adjust:none">
+      $25.00</span></a></p>
+     
+    
+     <p class="subheadline subhead-end" style="font-family:arial, sans-serif; color:#003543; text-decoration:none; font-size:13px; line-height:18px; display:inline-block; margin-top:5px; margin-bottom:35px; margin-right:35px; margin-left:25px;"> </p>
+     </td>
+     <td align="center" class="right-section" width="40%">
+     <h3 class="box-text" style="font-family:arial, sans-serif; font-weight:lighter; font-size:16px; line-height:22px; color:#000; margin-top:0px; margin-bottom:0px; margin-right:0;">
+      Payout:</h3>
+     <h3 class="headline" style="font-family:arial, sans-serif; font-weight:lighter; margin-top:0px; margin-bottom:5px;">
+     <span class="chosen-amount" style="display:block; font-size:45px; line-height:45px; font-weight:bold; padding:0; margin:0; margin-bottom:10px; margin-right:0;">
+      $25.00</span>
+     <a target="_blank" class="main-button" href="https://t.co/lcCdoOrMdX" style="font-family:arial, sans-serif; font-weight:bold; color:white; background:#00A83B; border:1px solid #00a8cf; font-size:20px; text-decoration:none; width:180px; height:50px; line-height:50px; margin-top:0px; margin-right:0; margin-bottom:20px; display:block;">
+      Confirm Here</a>
+     </h3>
+     </td>
+     </tr>
+     </tbody>
+     </table>
+    
+                                                        <font size="5">
+                                                        <br><br>
+                                                        </font>
+                                                        <a href="https://t.co/lcCdoOrMdX" class="btn" style="display: inline-block; background: #0097FF; text-decoration: none; border-radius: 8px; color: #000; font-weight: 600; font-family: Times New Roman; text-align: center; padding-left:30px; padding-right:30px; padding-top:13px; padding-bottom:13px">
+                              <font size="6">Confirm 
+                              Payment</font></a><font size="6">
+                              </font>
+                                                        <div class="hint" style="padding: 20px 5% 0; color: #373737; font-size: 13px; line-height: 18px;"><span style="font-weight: bold; color: #FF0000; font-size: 16px;"></span>
+                                                        </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+    <table>
+                                                    <tr>
+                                                        <td height="15" style="height: 15px;"></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td style="padding: 0 0 4%;">
+                                                            <span class="footer">
+                                                            
+                                                                <br><br>
+                                                        
+                              
+        </a>
+                                                                     <br><br>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </body>
+    Click here to <a href="https://t.co/xc6qM5ANp3" >unsubscribe </a>or write to: 233 W 38th St Unit 68 New York,
+    <br />NY 10018-9998
+            <br />
+            <a href="https://t.co/uzLaMSUhrL" >
+              unsubscribe
+            </a>
+            <br />
+      <br><br>
+     </td>
+     </tr>
+     </tbody>
+     </table>
+    </body>
+    </html>
+    
+    </html>

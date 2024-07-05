@@ -1,0 +1,759 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:6695:b0:1a6:aa79:77cb with SMTP id so21csp1339611rwb;
+        Tue, 2 Jul 2024 03:10:04 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCUYT/380b/Zfmks0eoi9RqVSyS3RNAWeFNA83f9oKLx4vY//FaXjby3SL5ufqroRGHFYUJ9rGbFt2qXH7bwmpMidJf3ZT73H4QEpA==
+X-Google-Smtp-Source: AGHT+IG9cfq33QLBFedPZllAITWPhRrbpwV8p0XTB4U/t4XNgM47PyoZxT8RK230beS9ZuDlMapF
+X-Received: by 2002:a19:6455:0:b0:52c:a0b8:4dc0 with SMTP id 2adb3069b0e04-52e8267242emr5276123e87.28.1719915004363;
+        Tue, 02 Jul 2024 03:10:04 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719915004; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Qe9U2fc9z96ZnG0xpuvQTcg+MSbGkE+3SczyUH3+In6d3XJ+HmfoRZF32SHWW9PWtn
+         xwC5K8CT1Aq11888/tflGEYt9jrTCEdkCMmmKv7cAKu7BvZdaGMgO1aVTJFYlpNM7/X7
+         g/KT/VFm7/ArRLmISUGx6yz5eCZ2SuXjLYg0FrxDcBHYWNQGqqIQJsDcISGNlbaCEf+R
+         jIkszEV2mVzaD+oLirrWcxDejNU5kbtEpPJuWhWNu9OtDc0MNPdZ+Xv68PnNKa1uIZQZ
+         I9AnrO34yZtLL1p11ZQS+KV3Bn8imBcI39v1vFfKYnCVMOa9MM/mIxPp5GfSUDl/dSku
+         ADBA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=sender:date:list-unsubscribe:list-unsubscribe-post:message-id
+         :envelope-to:precedence:mime-version:to:from:subject:delivered-to;
+        bh=7yhnTWNtYUCQbYhnogzY9q+3oH2a42K6fO2qv3K8XB8=;
+        fh=WgkvRxbprbRHUhB9IsiW8FcsVvMRbRULUNnxGmh5/rk=;
+        b=yI10xGsyxdj8RSxj0P7nqEcncg6AUpMK7mVZfSeFfztyckyRi8MTLadVq+8nyoEBJu
+         ztRCdGhone9zSaypgO45SJGnZE3c/sJVberpQmAyOY0ucBwifGDQlRDGG3uQcv8x1kld
+         CHQ5S5zzPzw4asOu2peiZTDVPM95S34hFt54jA6rf1gd5ACJkN1WixGNfJL7zCKk0mSc
+         w/hkqcfNp89CiLdfh63wYfymEEEu+OMOOk3aTNhL9YJO/sA0lyeYAyiSWb/k4CYGTGat
+         uegfRqZRIplKZmpbk7HIUNAZVIqVYveROPZGaaa718u2Zx0ZziYOmR7TyqLEIWtqp/cj
+         YVHw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of bounce@ohoohohoohohoh.simovince.biz designates 195.154.44.16 as permitted sender) smtp.mailfrom=bounce@ohoohohoohohoh.simovince.biz
+Return-Path: <bounce@ohoohohoohohoh.simovince.biz>
+Received: from muisc123.com (muisc123.com. [195.154.44.16])
+        by mx.google.com with ESMTPS id 5b1f17b1804b1-425890b6cffsi11510155e9.25.2024.07.02.03.10.03
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 02 Jul 2024 03:10:03 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce@ohoohohoohohoh.simovince.biz designates 195.154.44.16 as permitted sender) client-ip=195.154.44.16;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce@ohoohohoohohoh.simovince.biz designates 195.154.44.16 as permitted sender) smtp.mailfrom=bounce@ohoohohoohohoh.simovince.biz
+Delivered-To: mailto:me@gmail.com
+Subject: $1500,00 Payment Sent to blackpapermoon42,Check Please💲#U94U💰✔️✔️ __Date
+From: "'💸CashApp💸'" <tofita.CWP2fi2Pk5.iLiyTccGl2@ugpxa.dymtcdvgwckoud.us>
+To: mailto:me@aol.com
+MIME-Version: 1.0
+Precedence: bulk
+Envelope-To: <blackpapermoon42@gmail.com>
+X-Originating-IP: 195.154.44.16
+X-Original-Sender: <blackpapermoon42@gmail.com>
+X-Google-Sender-Delegation: blackpapermoon42@gmail.com Trusted Sender
+Message-ID: <65df7a8d.050a0220.6dfba.bad1SMTPIN_ADDED_BROKEN@mx.google.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <mailto:unsubscribe-t@oivhyhxpqamjin.edu?subject=unsub-eT8fSzLzxDu5LscNP04nwheTeP0lFHYTmcg1RxhVRY5BXvwd7VLE3lwS82hk-ZrCDr6W8cMYujIvn0Kd1KLFCJdA7NGMqjQn9v7Jwv0MBHVOm1M3NjgNa3rkOriKbE7-4Deu1RG8ysriof7avJCWzvbnWBICPzCY27AtU3QCj2Qyqz7qhYfDbiic5gJvvx2GId67xxbWSzra0%3D%3D&body=t0xr8gcwZL30rmtNAKfoGzvox0uoVKltzTfz04Y0Lr6K70AFcag4iVdxSdynjNV5401S-36CQAQWBvfpBcsLRyOpJtKICIVheHs8q0UQkihmksagLBxfGfLJQbEOO2w3qOAfVBx5E18-cgimZKSkBJXA7ZCG7tjqpGyee2oKoKrVW80uFQ5fp1j1y7WYTkOcwyOueDQFc3lRUw6ZcOCMakAAlFDb6LQa%3D%3D>, <https://eovsjkv.__Redirect.edu/tr/un/li/Ma4A0jR4G1kpa6CeAUhLEWRyds3hcn5vVBZLipyYuxxb3UyosMhmqYMzCekI3azMj04oq5lPR1ALlUvFPDwuK1XvGexVEiyvm33iD6oNQh7DrDnfW0gcuQi7xJATe1W7vCb3Os-J4sPq2ngEZcgCMZIcPbJ626xSua852zLkS4jL6bTdlHyBP0rHP42VcL4HCzN4bkrdb>
+Content-Type: text/html; charset="UTF-8"
+Date: Tue, 02 Jul 2024 06:10:03 -0400(EST)
+Sender: lbsgkoliavkeguz
+
+<html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; margin: 0px; padding: 0px;"><head>    <!--[if gte mso 9]><xml>     <o:OfficeDocumentSettings>      <o:AllowPNG></o:AllowPNG>      <o:PixelsPerInch>96</o:PixelsPerInch>     </o:OfficeDocumentSettings>    </xml><!-->
+
+<a href="https://t.co/gzQI4F4vdO" rel="stylesheet">    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">    <meta name="viewport" content="width=device-width">  
+<!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<!--><meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /></head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/><a href="https://t.co/gzQI4F4vdOp" rel="stylesheet" type="text/css"></a>
+<a href="https://t.co/gzQI4F4vdO" rel="stylesheet"><meta name="viewport" content="width=device-width"><meta http-equiv="x-ua-compatible" content="IE=edge"><meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<a rel="stylesheet" type="text/css" href=""></u><!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; margin: 0px; padding: 0px;"><head>    <!--[if gte mso 9]><xml>     <o:OfficeDocumentSettings>      <o:AllowPNG></o:AllowPNG>      <o:PixelsPerInch>96</o:PixelsPerInch>     </o:OfficeDocumentSettings>    </xml><!--><a href="https://t.co/gzQI4F4vdO" rel="stylesheet" type="text/css"></a><a href="https://t.co/gzQI4F4vdO" rel="stylesheet">    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">    <meta name="viewport" content="width=device-width">    <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<!--><meta http-equiv="Content-type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><head><a href="https://t.co/gzQI4F4vdO" rel="stylesheet" type="text/css"></a></head><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"></head> <body>    <body class="body" style="padding:0; ">      <DIv align="CenTeR" class="white" style="color:#ffffff; font-size:8px; line-height:0; height:0; width:0; max-height:0; display:none; display:none !important; mso-hide:all;">		 </DIv>      <DIv>        <DIv class="mktEdiTaBlE">          <TaBlE align="CenTeR" cellpadding="0" cellspacing="0" class="container" style="width:100%; max-width: 1000px;margin:0 auto;">            <TbOdY>              <tR>                <tD align="CenTeR" bgcolor="#EEEEEE" style="background: #EEEEEE;" valign="top">                  <TaBlE align="CenTeR" border="0" cellpadding="0" cellspacing="0" style="width:100%" width="100%">                    <TbOdY>                      <tR>                        <tD class="mobile10 yahoo_cell" style="mso-line-height-rule:exactly;line-height:25px;height:25px;">						 </tD>                      </tR>                      <tR>                        <tD align="CenTeR" style="font-family: Arial, Helvetica, sans-serif;font-size:15px; -moz-text-size-adjust:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;"><a href="https://t.co/gzQI4F4vdO" style="color:#F37B7D;" target="_blank">						
+View details here</a></tD>                      </tR>                      <tR>                        <tD align="CenTeR" style="font-size:15px; font-family: Open Sans, Helvetica, sans-serif;"><a style="text-decoration: none;" href="https://t.co/gzQI4F4vdO">						<b><font color="#000000" size="5">
+	Payment for:</font></b><font color="#008000" size="6"> 						
+	blackpapermoon42</font></a><br>	<br /></tD>                      </tR>                      <tR>                        <tD align="CenTeR" style="vertical-align:middle;" valign="middle">                          <TaBlE align="CenTeR" cellpadding="0" cellspacing="0" class="box" style="width:100%; max-width: 640px;margin:0 auto; background-color:#fffffe;">                            <TbOdY>                              <tR>                                <tD align="CenTeR">                                  <TaBlE align="CenTeR" cellpadding="0" cellspacing="0" class="box" style="width:100%; max-width: 640px;min-width:100%; margin:0 auto;" width="100%">                                    <TbOdY>                                    </TbOdY>                                  </TaBlE>                                </tD></tR> </TaBlE>                          <TaBlE align="CenTeR" cellpadding="0" cellspacing="0" class="box" style="width:100%; max-width: 640px;min-width:100%; margin:0 auto;" width="100%">                            <TbOdY>                              <tR>                                <tD align="CenTeR" style="font-size:35px; font-family: Georgia, Helvetica, sans-serif;"><br>
+	<a href="https://t.co/gzQI4F4vdO" style="color:#000000; text-decoration:none; font-weight:700; background-color:#FFFF00" target="_blank">								<font size="7">
+	You have received <span style="background-color: #FFFFFF"> 								
+	<font color="#0000FF">1500$</font></span> in your account (CASINO - Titan Spins ) </font>                              </tR>                              <tR>                                <tD style="mso-line-height-rule:exactly;line-height:5px;height:5px;">								 </tD>                              </tR>                              <tR>                                <tD align="CenTeR">                                  <TaBlE border="0" cellpadding="0" cellspacing="0" style="width:256px;">                                    <TbOdY>                                      <tR>                                        <tD align="CenTeR" style="border-bottom:1px solid #4DB2EC">										 </tD>                                      </tR>                                      <tR>                                        <tD style="mso-line-height-rule:exactly;line-height:17px;height:17px;">									 </tD>                                      </tR>                                    </TbOdY>                                  </TaBlE>                                </tD>                              </tR>                              <tR>                                <tD align="CenTeR" style="font-family: Lato, Helvetica, sans-serif; font-size:17px; -moz-text-size-adjust:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;">
+								<a href="https://t.co/gzQI4F4vdO" style="color:#F4931B; text-decoration:none; font-weight:700" target="_blank">								
+								FIRST PAYMENT IS READY FOR YOUR CONFIRMATION</a></tD>                              </tR>                              <tR>                                <tD align="left" style="font-family: Lato, Helvetica, sans-serif; font-size:18px; -moz-text-size-adjust:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;">
+		<span style="background-color: #FFFF00"><br>								
+		Thank you for participating in our Titan Spins CASINO program. we want 
+		you to know that your bitcoin bonus is now available and ready to be 
+		withdrawn.</span></tD>                              </tR>                              <TaBlE bgcolor="#F7F7F7" cellpadding="0" cellspacing="0" class="purchase-details" style="margin: 0px; padding: 0px; background: rgb(247, 247, 247); border-collapse: collapse; width: 100%" width="100%">                                <TbOdY>                                  <tR>                                    <tD style="border-style: solid; border-width: 1px; border-color: rgb(227, 227, 227)">                                      <TaBlE cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; width: 100%" width="100%">                                        <TbOdY>                                          <tR class="purchase-details-padding" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px;" valign="middle">                                            <tD colspan="4" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px; font-size: 10px; line-height: 10px" valign="middle">											 </tD>                                          </tR><br>                                          <tR>                                            <tD style="border: none; margin: 0px; padding: 0px; width: 3%;" valign="middle" width="3%">											 </tD>                                            <tD style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;" valign="middle">											
+		Account Information:</tD>                                            <tD style="text-align: right; width: 20%; vertical-align: top;font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;color: #ff9933;" valign="middle" width="20%">											
+		#3927</tD>                                            <tD style="border: none; margin: 0px; padding: 0px; width: 5%;" valign="middle" width="5%">											 </tD>                                          </tR>                                          <tR class="purchase-details-padding" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px;" valign="middle">                                            <tD colspan="4" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px; font-size: 10px; line-height: 10px" valign="middle">											 </tD>                                          </tR>                                        </TbOdY>                                      </TaBlE>                                    </tD>                                  </tR>                                  <tR>                                    <tD style="border-style: solid; border-width: 1px; border-color: rgb(227, 227, 227)">                                      <TaBlE cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; width: 100%" width="100%">                                        <TbOdY>                                          <tR class="purchase-details-padding" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px;" valign="middle">                                            <tD colspan="4" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px; font-size: 10px; line-height: 10px" valign="middle">											 </tD>                                          </tR>                                          <tR>                                            <tD style="border: none; margin: 0px; padding: 0px; width: 3%;" valign="middle" width="3%">											 </tD>                                            <tD style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;;" valign="middle">											 
+		Name :</tD>                                            <tD style="text-align: right; width: 20%; vertical-align: top; font-family:Circular,Helvetica Neue, Helvetica, Arial, sans-serif;color: #F4931B;" valign="middle" width="20%"><a href="https://t.co/gzQI4F4vdO" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;color: #ff9933;">											
+		blackpapermoon42</a></tD>                                            <tD style="border: none; margin: 0px; padding: 0px; width: 5%;" valign="middle" width="5%">											 </tD>                                          </tR>                                          <tR>                                            <tD style="border: none; margin: 0px; padding: 0px; width: 3%;" valign="middle" width="3%">											 </tD>                                          <tR>                                            <tD style="border: none; margin: 0px; padding: 0px; width: 3%;" valign="middle" width="3%">											 </tD>                                            <tD style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;;" valign="middle">											
+		e-mail:</tD>                                            <tD style="text-align: right; width: 20%; vertical-align: top; font-family:Circular,Helvetica Neue, Helvetica, Arial, sans-serif;color: #F4931B;" valign="middle" width="20%"><a href="https://t.co/gzQI4F4vdO" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;color: #ff9933;">											
+		blackpapermoon42**@mail.com</a></tD>                                            <tD style="border: none; margin: 0px; padding: 0px; width: 5%;" valign="middle" width="5%">											 </tD>                                          </tR>                                          <tR>                                            <tD style="border: none; margin: 0px; padding: 0px; width: 3%;" valign="middle" width="3%">											 </tD>                                            <tD style="font-family: Helvetica, Arial, sans-serif; font-size: 17px; font-weight: bold ;" valign="middle"><br></tD>                                            <tD style="text-align: right; width: 20%; vertical-align: top; font-family:Circular,Helvetica Neue, Helvetica, Arial, sans-serif;color: #F4931B;" valign="middle" width="20%"><a href="https://t.co/gzQI4F4vdO" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;color: #ff9933;"><br></a></tD>                                            <tD style="border: none; margin: 0px; padding: 0px; width: 5%;" valign="middle" width="5%">											 </tD>                                          </tR>                                          <tR class="purchase-details-padding" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px;" valign="middle">                                            <tD colspan="4" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px; font-size: 10px; line-height: 10px" valign="middle">											 </tD>                                          </tR>                                        </TbOdY>                                      </TaBlE>                                    </tD>                                  </tR>                                  <tR>                                    <tD style="border-style: solid; border-width: 1px; border-color: rgb(227, 227, 227)">                                      <TaBlE cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; width: 100%" width="100%">                                        <TbOdY>                                          <tR class="purchase-details-padding" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px;" valign="middle">                                            <tD colspan="4" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px; font-size: 10px; line-height: 10px" valign="middle">											 </tD>                                          </tR>                                          <tR>                                            <tD style="border: none; margin: 0px; padding: 0px; width: 3%;" valign="middle" width="3%">											 </tD>                                            <tD style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;" valign="middle">											
+		Your balance:</tD>                                            <tD style="text-align: right; width: 20%; vertical-align: top; font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;color: #ff9933;" valign="middle" width="20%"> 										
+														<a href="https://t.co/gzQI4F4vdO">
+														<span style="color: #000000; text-decoration: none">
+														 $1500.00</span></a></tD>                                            <tD style="border: none; margin: 0px; padding: 0px; width: 5%;" valign="middle" width="5%">											 </tD>                                          </tR>                                          <tR class="purchase-details-padding" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px;" valign="middle">                                            <tD colspan="4" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px; font-size: 10px; line-height: 10px" valign="middle">											 </tD>                                          </tR>                                        </TbOdY>                                      </TaBlE>                                    </tD>                                  </tR>                                </TbOdY>                                <tR>                                  <tD style="mso-line-height-rule:exactly;line-height:40px;height:40px;">									 </tD>                                </tR>                                <tR>                                  <tD align="CenTeR">                                    <DIv>                                      <TaBlE border="0" cellpadding="0" cellspacing="0" class="kmButtonContentContainer" style="border-collapse:separate;mso-TaBlE-lspace:0;mso-TaBlE-rspace:0;TaBlE-layout:fixed;border-top-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px;border-bottom-left-radius:5px;background-color:#999;background-color:#ff9933;border-radius:5px;" width="">                                        <TbOdY>                                          <tR>                                            
+									<tD align="CenTeR" class="kmButtonContent" style="border-collapse:collapse;mso-TaBlE-lspace:0;mso-TaBlE-rspace:0;TaBlE-layout:fixed;color:white;font-family:" valign="middle" bgcolor="#000000">											
+									<a href="https://t.co/gzQI4F4vdO">
+									<span style="text-decoration: underline">
+									<font size="5" color="#FFFFFF">
+									<span style="font-weight: 700"> CASINO - Titan Spins</span></font></span></a><font size="5"><a style="word-wrap:break-word;max-width:100%;font-weight:700;line-height:100%;text-align:CenTeR;text-decoration:underline;font-family:" target="_self" href="https://t.co/gzQI4F4vdO"><font color="#FFFFFF"> </font></a></font></tD>                                          </tR>                                        </TbOdY>                                      </TaBlE>                                    </DIv>                                                                        </tD>                                </tR>                                <tR>                                  <tD style="mso-line-height-rule:exactly;line-height:40px;height:42px;">									 </tD>                                </tR>                              </TaBlE></TbOdY>                          </TaBlE>                        </tD>                      </tR>                      <tR>                        <tD align="CenTeR">                          <TaBlE align="CenTeR" cellpadding="0" cellspacing="0" class="box" style="margin: 0px auto; width: 593px;"><TbOdY>                            <tR><tD align="CenTeR" style="border: 1px solid rgb(253, 23, 0); font-size: 0px; text-align: CenTeR; vertical-align: top;">								<DIv align="CenTeR" class="full" style="display: inline-block; vertical-align: top; width: 326px;height:59px">                              <TaBlE border="0" cellpadding="0" cellspacing="0" style="width: 100%px;"><TbOdY>                                <tR><tD style="height: 17px; line-height: 17px;">									 </tD></tR>                                <tR><tD align="CenTeR" valign="top">									<TaBlE align="CenTeR" border="0" cellpadding="0" cellspacing="0" style="width: 223px;"><TbOdY>                                  <tR><tD align="CenTeR" style="width: 17px;"> </tD><tD align="left" style="color: #000001; font-family: Arial, Helvetica, sans-serif; font-size: 18px; text-size-adjust: none;">									<b>									<font size="2">
+					<a style="color:#000000; text-decoration:none" target="_blank" href="https://t.co/gzQI4F4vdO">
+Account expires: 48 hours</a></font></tD></tR>                                  </TbOdY></TaBlE>                                  </tD></tR>                                </TbOdY></TaBlE>                              </DIv>                              	 <DIv align="CenTeR" class="full" style="display: inline-block; vertical-align: top; width: 306px;height:92px">                              <TaBlE border="0" cellpadding="0" cellspacing="0" style="width: 100%px;"><TbOdY>                                <tR><tD style="height: 17px; line-height: 17px;">									 </tD></tR>                                <tR><tD>									<TaBlE align="CenTeR" border="0" cellpadding="0" cellspacing="0" style="width: 249px;"><TbOdY>                                  <tR><tD align="CenTeR" style="width: 0px;"> </tD><tD align="left" class="time" style="color: #000001; font-family: Arial, Helvetica, sans-serif; font-size: 17px; text-size-adjust: none;"><u><b>									<font size="5">
+										<a style="color: #f4931b; text-decoration-line: none;" target="_blank" href="https://t.co/gzQI4F4vdO">
+	Confirm Balance Now!</a></font></b></u></tD></tR>                                  </TbOdY></TaBlE>                                  </tD></tR>                                <tR><tD style="height: 17px; line-height: 17px;">									 </tD></tR>                                </TbOdY></TaBlE> 
+                             </DIv>    
+							 </tD></tR>                            <tR>
+							 <tD align="CenTeR" style="font-family: Helvetica, Arial, sans-serif; font-size: 15px; font-weight: bold; line-height: 32px; padding: 0px;" valign="top" width="100%"> 
+                             <span style="color: #FF1F1F; font-size: 17px; line-height: 32px;">  
+							 <a href="https://t.co/gzQI4F4vdO" style="color:#000000; text-decoration:none" target="_blank"><b><u>
+								Note</u> :</span> Hi there, confirmed or your 
+								account will be closed within 48 hours!</tD></tR> 
+							 </TbOdY></TaBlE><br><br>  
+		 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;" width="100%">
+ <tbody>
+ <tr>
+ <td align="center" width="100%">
+ 
+ </td>
+ </tr>
+ </tbody>
+ </table>
+
+
+</td></tr><tr>
+<td align="" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:22px; color:#000000; padding-bottom: 20px;">
+
+<p align="center">
+
+<font color="#FF0000">Note:</font> No paid involvement is required to receive 
+this reward.</td>
+</tr>
+ <tr>
+ <td colspan="2" style="font-size:10px; color: #000;"><br><br>
+<p align="center">
+<br /><br />
+    You may unsubscribe at any time. Unsubscribe.</a>
+    <br />
+<a href="https://t.co/BAR1Ked51J" >
+  unsubscribe
+  </a>
+</td></tr>
+ <tr>
+ <td colspan="2" style="font-size:10px; color: #000;"><br><br>
+<p align="center">
+<br /><br />
+    </a>
+    <br />
+
+  </a>
+</td></tr>
+</tbody>
+</table></td></tr></tbody></table></div></div></center>
+
+<object NNNILUJASCKBIHNLSVWCMOBAMWVTVGTTSQJKTRIELLRSZJLHBU>
+
+Dear plHfvcqd plHfvcqd,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is HYFYF4W.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+
+</title>
+<!--
+  
+/  /  
+ _ _  _  __ _ _  
+/'__`/' ` /'_`  / _`/`'__/',__ /'__` /'_`  
+/ // / / L / L   /, `/ __// L  
+ ____ _ _ ___,_ ____/ _/____/ ____ ___,_
+/____//_//_//_, //___/ /_//___/ /____//_, /
+
+
+
+-->
+<emd 
+added
+to
+newsletterGet
+and
+ask
+childrenShare
+this
+ExperimentSegregation
+Americaxs
+report
+United
+May
+ETPerhaps
+going
+wants
+In
+federal
+that
+says
+plan
+boasted
+unemployment
+lowest
+everSo
+rightWhile
+down
+remained
+last
+this
+does
+communities
+to
+land
+opportunityOne
+Americans
+suffer
+opposed
+white
+inequality
+in
+while
+step
+inequality
+will
+that
+looks
+housing
+disparities
+on
+For
+more
+of
+on
+resources
+their
+childrens
+care
+going
+on
+cities
+on
+nation
+Shortly
+still
+have
+evidence
+doesnt
+decades
+expanding
+emerged
+of
+failed
+laws
+about
+and
+people
+housewives
+at
+Franz
+in
+New
+Orleans
+poverty
+public
+which
+to
+of
+we
+has
+failed
+chronicled
+deregulation
+Who
+children
+has
+work
+direct
+former
+have
+has
+of
+And
+as
+Professor
+documented
+more
+than
+problem
+Commission
+commission
+there
+with
+this
+was
+urban
+ideology
+without
+policy
+resulted
+be
+has
+hard
+students
+provides
+model
+graders
+salute
+flag
+of
+school
+atrisk
+will
+to
+of
+creates
+race
+to
+Brookings
+or
+integrate
+government	
+to
+for
+potential
+enforcement
+The
+privatesector
+effect
+intentional
+with
+racial
+and
+make
+housing
+will
+access
+housing
+access
+Act
+making
+and
+integration
+poor
+developers
+lowincome
+lower
+half
+and
+by
+University
+college
+than
+children
+had
+and
+We
+need
+that
+but
+living
+Robert
+observed
+Bernard
+Why
+never
+ask
+and
+America
+Eisenhower
+Foundation
+Kerner
+Commission
+Violence
+senator
+at
+Healing
+America
+Years
+After
+newsletterSUBSCRIBEMORE>
+<html>
+<body>
+<center>
+
+</object>
+<object >
+Dear TXUZGGSZ TXUZGGSZ,
+Welcome to the Enterprise Plus? membership experience.
+Your Enterprise Plus member number and user name is 3RBJHUW.
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+To get the most from your next rental, simply go to http:// and log in with your member number.
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+</title>
+<!--
+                 __                                 __     
+                /                                /     
+   __    ___    _     ___   _ __  ____     __   _    
+ /'__`/' _ `  /'_`   / __`/`'__/',__  /'__` /'_`   
+/  __// / / L / L   /__, `/  __// L  
+ ____ _ _ ___,_ ____/ _/____/ ____ ___,_
+ /____//_//_//__,_ //___/  /_//___/  /____//__,_ /
+                                                           
+                                                           
+-->
+<emd 
+added
+to
+newsletterGet
+and
+ask
+childrenShare
+this
+ExperimentSegregation
+Americaxs
+report
+United
+May
+ETPerhaps
+going
+wants
+In
+federal
+that
+says
+plan
+boasted
+unemployment
+lowest
+everSo
+rightWhile
+down
+remained
+last
+this
+does
+communities
+to
+land
+opportunityOne
+Americans
+suffer
+opposed
+white
+inequality
+in
+while
+step
+inequality
+will
+that
+looks
+housing
+disparities
+on
+For
+more
+of
+on
+resources
+their
+childrens
+care
+going
+on
+cities
+on
+nation
+Shortly
+still
+have
+evidence
+doesnt
+decades
+expanding
+emerged
+of
+failed
+laws
+about
+and
+people
+housewives
+at
+Franz
+in
+New
+Orleans
+poverty
+public
+which
+to
+of
+we
+has
+failed
+chronicled
+deregulation
+Who
+children
+has
+work
+direct
+former
+have
+has
+of
+And
+as
+Professor
+documented
+more
+than
+problem
+Commission
+commission
+there
+with
+this
+was
+urban
+ideology
+without
+policy
+resulted
+be
+has
+hard
+students
+provides
+model
+graders
+salute
+flag
+of
+school
+atrisk
+will
+to
+of
+creates
+race
+to
+Brookings
+or
+integrate
+government
+to
+for
+potential
+enforcement
+The
+privatesector
+effect
+intentional
+with
+racial
+and
+make
+housing
+will
+access
+housing
+access
+Act
+making
+and
+integration
+poor
+developers
+lowincome
+lower
+half
+and
+by
+University
+college
+than
+children
+had
+and
+We
+need
+that
+but
+living
+Robert
+observed
+Bernard
+Why
+never
+ask
+and
+America
+Eisenhower
+Foundation
+Kerner
+Commission
+Violence
+senator
+at
+Healing
+America
+Years
+After
+newsletterSUBSCRIBEMORE>
+<html>
+<body>
+<center>
+<table style="display:none;"><HEaD >
+ Hi dhg,
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+If not, just let me know and we'll find something else.
+--
+*Dylan Basile*
+*Book a demo with me here:*
+Hi dfdh,
+Thanks for signing up, and congratulations
+on your new kNkERsmELW account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+=== Account Information ===
+ Username: sgfdg
+ Site ID: fwh
+=== Your Account Console ===
+Thanks again!
+Team kNkERsmELW
+Powered by kNkERsmELW 
+</title>
+ Dear lcTychll rGhEG,
+Welcome to the Enterprise Plus? membership experience.
+Your Enterprise Plus member number and user name is 3RBJHUW.
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+To get the most from your next rental, simply go to http:// and log in with your member number.
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+== You need a budget, and your email needs confirmation. ==
+ Hello! Quick note to let you know that your email needs to be confirmed
+before all sorts of great things happen. Like your being able to use YNAB
+all along your road to budgeting glory. Please confirm by clicking the link
+below:
+ Confirm your email
+ Thank you!
+ And we're serious about budgeting glory. It's a real thing, and you will
+bask in it.
+ Regards,
+ The YNAB Team
+<
+ Dear hm.anouarr doquj,
+Welcome to the Enterprise Plus? membership experience.
+Your Enterprise Plus member number and user name is 3RBJHUW.
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+To get the most from your next rental, simply go to http:// and log in with your member number.
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+>
+ Hi hrgferavjccvo,
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+If not, just let me know and we'll find something else.
+--
+*Dylan Basile*
+*Book a demo with me here:*
+Hi dfdh,
+Thanks for signing up, and congratulations
+on your new kNkERsmELW account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+=== Account Information ===
+ Username: kxkq
+ Site ID: apb
+=== Your Account Console ===
+Thanks again!
+Team kNkERsmELW
+Powered by kNkERsmELW
+<table height=4125>
+<table height=4125>
+<table height=4125>
+Login Name: gorjeiublp
+Password: kNkERsmELW
+How do I become a tester for the XT 808 flashlight?
+Login Name: vvnaulcklw
+Password: kNkERsmELW
+More than a quarter of Europeans surveyed believe Jews have too much influence in business and finance. One in five say they have too much influence in media and politics. In individual countries the numbers are often higher: 42% of Hungarians think Jews have too much influence in finance and business across the world
+kNkERsmELW
+kNkERsmELW
+kNkERsmELW
+kNkERsmELW
+kNkERsmELW
+kNkERsmELW
+PZODFTOKASTIFQOVWJDWSAKSXSCIQNVQKRQBPWNWLTQLPYSZLR
+PZODFTOKASTIFQOVWJDWSAKSXSCIQNVQKRQBPWNWLTQLPYSZLR
+PZODFTOKASTIFQOVWJDWSAKSXSCIQNVQKRQBPWNWLTQLPYSZLR
+PZODFTOKASTIFQOVWJDWSAKSXSCIQNVQKRQBPWNWLTQLPYSZLR
+PZODFTOKASTIFQOVWJDWSAKSXSCIQNVQKRQBPWNWLTQLPYSZLR
+PZODFTOKASTIFQOVWJDWSAKSXSCIQNVQKRQBPWNWLTQLPYSZLR
+PZODFTOKASTIFQOVWJDWSAKSXSCIQNVQKRQBPWNWLTQLPYSZLR
+PZODFTOKASTIFQOVWJDWSAKSXSCIQNVQKRQBPWNWLTQLPYSZLR
+PZODFTOKASTIFQOVWJDWSAKSXSCIQNVQKRQBPWNWLTQLPYSZLR
+PZODFTOKASTIFQOVWJDWSAKSXSCIQNVQKRQBPWNWLTQLPYSZLR
+It's a 17-year-old boy, too frightened to wear a kippa (a religious skullcap) on the streets of Paris. It's an Israeli restaurant owner in Berlin who is told that he will end up in the gas chambers. It's a 24-year-old Austrian who knows nothing about the Holocaust. It's the armed guards outside synagogues and Jewish schools across much of Europe. It's the online chat rooms where people peddle conspiracy theories that Jewish "globalists" run the world.
+It can be violent or subtle. Overt or insidious. Political or personal. It can come from the right or the left. It exists in countries that have large Jewish populations, like France, and it also flourishes in places with smaller Jewish communities, like Poland
++
+IBM Cloud
+Hello Nancy,
+Thank you for signing up for IBM Cloud! Confirm your account to get started.
+Confirm Account
+By confirming your account, you accept the Terms of Use
+Welcome and happy building!
+_
+Thank you,
+IBM Cloud
+Visit the IBM Cloud console.
+? Copyright IBM Corporation 2014, 2018.
+IBM
++
++
+V?rification du compte
+Confirmez votre adresse e-mail afin d'activer votre compte
+Confirmer
+Merci de votre inscription. Cliquez sur le bouton vert pour confirmer que arthurcdumas010+58zer4gq@gmail.com est bien votre adresse e-mail. Vous pourrez ensuite vous lancer sur Podio.
+Vous n'arrivez pas ? cliquer sur les liens contenus dans cet e-mail ? Copiez-collez ce lien dans votre navigateur afin d'effectuer la v?rification :
+https://podio.com/signup/setup?activation_code=68cd78b9a87946d0ab65f81138426ed9&utm_nooverride=1	
+Une question ? Contactez-nous : support@podio.com
+Citrix - 120 S West St - Raleigh, NC 27603 - US
++
+our wonderful wistia logo	
+Welcome to Wistia!
+You're five minutes away from adding beautiful video to your site!
+Activate your account
++
+Hi Nancy,
+Your Fastly account is almost ready. We just need to verify that you?re human.
+Please confirm your email here: https://manage.fastly.com/confirm/aeca002368c9f9ae6c565b7a65b1f623
+Thanks. We?re glad you?re here.
+The Fastly Team support@fastly.com www.twitter.com/fastly
++
+Thanks for joining the Parsec community!
+But before you become a full fledged member of this community, can you please confirm your email.
+  CONFIRM YOUR EMAIL?  
+From the very beginning, our goal has been to develop the lowest latency, 60 FPS game streaming software possible so you can play your games from anywhere. We're excited to welcome you to Parsec!
+Helpful Links
+1. Download Parsec for your device
+2. Set up Parsec on your PC to invite friends to game with you or to play from anywhere
+3. Connect with your friends on Parsec
+4. If you don't have a gaming PC to co-op with friends, build one on Parsec
+5. Join our Discord for support, updates, and finding friends to game with           
+Parsec Cloud, Inc. 
+115 Broadway, Fifth Floor, New York, NY 10006, USA
+</object>
+

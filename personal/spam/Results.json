@@ -1,0 +1,1340 @@
+{
+    "\u2460CashApp\ud83d\udcb2deposit sent to you.blackpapermoon42 ___ ccx.eml": [
+        {
+            "Total Risk Score:": 360
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                140,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                16,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                104,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Someone tried to log into your account, user ID_48866-20033.eml": [
+        {
+            "Total Risk Score:": 319
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                30,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameLow_Score": [
+                50,
+                "This email was given a higher risk-score because the sender's  name was too repetetive, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                139,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Someone tried to log into your account, user ID_60265-86063.eml": [
+        {
+            "Total Risk Score:": 319
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                30,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameLow_Score": [
+                50,
+                "This email was given a higher risk-score because the sender's  name was too repetetive, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                139,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Someone tried to log into your account, user ID_88594-81388.eml": [
+        {
+            "Total Risk Score:": 319
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                30,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameLow_Score": [
+                50,
+                "This email was given a higher risk-score because the sender's  name was too repetetive, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                139,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddf1\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\ude01 \ud835\uddf1\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf2\ud835\uddf1 \ud83d\udcb225.36 ((No_deposit_required)).eml": [
+        {
+            "Total Risk Score:": 314
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                90,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                19,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                105,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddfd\ud835\uddee\ud835\ude06\ud835\uddfa\ud835\uddf2\ud835\uddfb\ud835\ude01 \ud835\uddfc\ud835\uddf3 $2,500.00 \ud835\udde8\ud835\udde6\ud835\uddd7.eml": [
+        {
+            "Total Risk Score:": 311
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                70,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                21,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                120,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Someone tried to log into your account, user ID_54364-91394.eml": [
+        {
+            "Total Risk Score:": 309
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                20,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameLow_Score": [
+                50,
+                "This email was given a higher risk-score because the sender's  name was too repetetive, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                139,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Someone tried to log into your account, user ID_82326-47409.eml": [
+        {
+            "Total Risk Score:": 309
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                20,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameLow_Score": [
+                50,
+                "This email was given a higher risk-score because the sender's  name was too repetetive, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                139,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Someone tried to log into your account, user ID_92230-74283.eml": [
+        {
+            "Total Risk Score:": 309
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                20,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameLow_Score": [
+                50,
+                "This email was given a higher risk-score because the sender's  name was too repetetive, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                139,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Someone tried to log into your account, user ID_94316-49340.eml": [
+        {
+            "Total Risk Score:": 309
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                20,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameLow_Score": [
+                50,
+                "This email was given a higher risk-score because the sender's  name was too repetetive, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                139,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddf1\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\ude01 \ud835\uddf1\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf2\ud835\uddf1 \ud83d\udcb225.53 ((No_deposit_required)).eml": [
+        {
+            "Total Risk Score:": 307
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                90,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                20,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                97,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\udde2\ud835\udde8.\ud835\udddb\ud835\uddd4\ud835\udde9\ud835\uddd8.\ud835\uddd5\ud835\uddd8\ud835\uddd8\ud835\udde1.\ud835\udde3\ud835\uddd4\ud835\udddc\ud835\uddd7\u2705blackpapermoon42_\ud835\ude4b\ud835\ude3c\ud835\ude54\ud835\ude4a\ud835\ude50\ud835\ude4f_\ud835\ude51\ud835\ude40\ud835\ude4d\ud835\ude44\ud835\ude41\ud835\ude44\ud835\ude3e\ud835\ude3c\ud835\ude4f\ud835\ude44\ud835\ude4a\ud835\ude49 \ud83d\udcb8\ud835\ude3e\ud835\ude5d\ud835\ude5a\ud835\ude58\ud835\ude60_\ud835\ude6e\ud835\ude64\ud835\ude6a\ud835\ude67_\ud835\ude56\ud835\ude58\ud835\ude58\ud835\ude64\ud835\ude6a\ud835\ude63\ud835\ude69\ud83d\udcb2__vdlsw.eml": [
+        {
+            "Total Risk Score:": 305
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                80,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                21,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                104,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\u25b6\ufe0f \u2705\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0fPayment Confirmation_ $9,000.00\u2714 \ud835\uddd7\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01 sent to \u2755blackpapermoon42\u2757\ufe0f - \ud835\udddc\ud835\uddd7_#95504100.eml": [
+        {
+            "Total Risk Score:": 304
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                70,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                20,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                114,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddf1\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\ude01 \ud835\uddf1\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf2\ud835\uddf1 \ud83d\udcb225.86 ((No_deposit_required)).eml": [
+        {
+            "Total Risk Score:": 304
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                100,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                21,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                83,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddf1\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\ude01 \ud835\uddf1\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf2\ud835\uddf1 \ud83d\udcb225.00 ((No_deposit_required)).eml": [
+        {
+            "Total Risk Score:": 302
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                70,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                21,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                111,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud83d\udcb8Payout_ 12654.99 is ready to be withdrawn\ufe0f\ud83d\udcb0\u2714\ufe0f\ud835\udc0f\ud835\udc25\ud835\udc1e\ud835\udc1a\ud835\udc2c\ud835\udc1e \ud835\ude3e\ud835\ude5d\ud835\ude5a\ud835\ude58\ud835\ude60 \ud835\ude54\ud835\ude64\ud835\ude6a\ud835\ude67 \ud835\ude3c\ud835\ude58\ud835\ude58\ud835\ude64\ud835\ude6a\ud835\ude63\ud835\ude69\ud83d\udcb0_____zrmuiyofyo.eml": [
+        {
+            "Total Risk Score:": 301
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                80,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                20,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                101,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "blackpapermoon42 $4000.00 \ud835\udc0f\ud835\udc1a\ud835\udc32\ud835\udc28\ud835\udc2e\ud835\udc2d \ud835\udc15\ud835\udc1e\ud835\udc2b\ud835\udc22\ud835\udc1f\ud835\udc22\ud835\udc1c\ud835\udc1a\ud835\udc2d\ud835\udc22\ud835\udc28\ud835\udc27! ---\ud835\udc0d_82560-262293.eml": [
+        {
+            "Total Risk Score:": 294
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                60,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                21,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                113,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddf1\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\ude01 \ud835\uddf1\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf2\ud835\uddf1 \ud83d\udcb25516395.00_____Lrnk.eml": [
+        {
+            "Total Risk Score:": 290
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                70,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                20,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                100,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddf1\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\ude01 \ud835\uddf1\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf2\ud835\uddf1 \ud83d\udcb21836933.00_____9S64.eml": [
+        {
+            "Total Risk Score:": 288
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                60,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                21,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                107,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\u25b6\ufe0f \u2705\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0fPayment Confirmation_ $19,000.00\u2714 \ud835\uddd7\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01 sent to \u2755blackpapermoon42\u2757\ufe0f - \ud835\udddc\ud835\uddd7_#69366832.eml": [
+        {
+            "Total Risk Score:": 279
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                70,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                21,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                88,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud83d\udcb8RE_\u2714blackpapermoon42\ud83d\udcb0\u25b6\ufe0e$19899.99 transfer received from \ud835\ude4f\ud835\ude44\ud835\ude4f\ud835\ude3c\ud835\ude49\ud835\ude4e\ud835\ude4b\ud835\ude44\ud835\ude49\ud835\ude4e Casino\u2714\ufe0f\ud83d\udd14\ud83d\udcb8\ud83e\udd11__ \ud835\uddd6\ud835\uddfc\ud835\uddfb\ud835\uddf3\ud835\uddf6\ud835\uddff\ud835\uddfa\ud835\uddee\ud835\ude01\ud835\uddf6\ud835\uddfc\ud835\uddfb\u2705744602__Wed, 26 Jun 2024 10_05_21 -0400.eml": [
+        {
+            "Total Risk Score:": 279
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                100,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                79,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddf1\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\ude01 \ud835\uddf1\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf2\ud835\uddf1 \ud83d\udcb28756980.00_____7DUo.eml": [
+        {
+            "Total Risk Score:": 278
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                70,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                19,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                89,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddf1\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\ude01 \ud835\uddf1\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf2\ud835\uddf1 $7000.00((No_deposit_required))__4WSG.eml": [
+        {
+            "Total Risk Score:": 269
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                50,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                20,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                99,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddf1\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\ude01 \ud835\uddf1\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf2\ud835\uddf1 \ud835\uddfc\ud835\uddf3 \ud83d\udcb27,500.00.eml": [
+        {
+            "Total Risk Score:": 254
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                50,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                20,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                84,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "blackpapermoon42, Your account Netflix will be removed today.\u26a0\ufe0f Thu,13 Jun-2024.eml": [
+        {
+            "Total Risk Score:": 242
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                30,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                20,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                92,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "$\ud835\udff1\ud835\udfec F\ud835\uddff\ud835\uddf2\ud835\uddf2 C\ud835\uddf5\ud835\uddf6\ud835\uddfd\ud835\ude00 - \ud835\ude49\ud835\ude64 \ud835\ude3f\ud835\ude5a\ud835\ude65\ud835\ude64\ud835\ude68\ud835\ude5e\ud835\ude69 \ud835\ude49\ud835\ude5a\ud835\ude5a\ud835\ude59\ud835\ude5a\ud835\ude59!.eml": [
+        {
+            "Total Risk Score:": 223
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                20,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                17,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                86,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud83d\udea8 Your account Netflix will be removed today.\u26a0 \ud83d\udea8Fri,14 Jun-2024 3726405436893.eml": [
+        {
+            "Total Risk Score:": 222
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                100,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                22,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud83d\udcb8\u2714\ufe0f$12654.99 transfer received from Titan Spins\u2714\ufe0f\ud83d\udd14\ud835\uddd6\ud835\uddfc\ud835\uddfb\ud835\uddf3\ud835\uddf6\ud835\uddff\ud835\uddfa\ud835\uddee\ud835\ude01\ud835\uddf6\ud835\uddfc\ud835\uddfb_ 926409_______________\u2714\ufe0f\u2705.eml": [
+        {
+            "Total Risk Score:": 212
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                90,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                22,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddf1\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\ude01 \ud835\uddf1\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf2\ud835\uddf1 \ud83d\udcb225.51 ((No_deposit_required))\ud835\udc08\ud835\udc03#27238.eml": [
+        {
+            "Total Risk Score:": 202
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                80,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                22,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Please Check Your Account \ud83d\udca3blackpapermoon42 \ud83d\udca3 PAYOUT_VERIFICATION _____SAsKV.eml": [
+        {
+            "Total Risk Score:": 201
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                80,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                21,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Please Check Your Account \ud83d\udca3blackpapermoon42 \ud83d\udca3 PAYOUT_VERIFICATION _____xXU9t.eml": [
+        {
+            "Total Risk Score:": 201
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                80,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                21,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddf1\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\ude01 \ud835\uddf1\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf2\ud835\uddf1 \ud83d\udcb225.53 ((No_deposit_required))\ud835\udc08\ud835\udc03#84203.eml": [
+        {
+            "Total Risk Score:": 201
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                80,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                21,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\udde5\ud835\uddd8 _ _blackpapermoon42_ \u26d4\ufe0f \ud835\uddd9\ud835\udddc\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\uddea\ud835\uddd4\ud835\udde5\ud835\udde1\ud835\udddc\ud835\udde1\ud835\uddda _ \ud835\udda0\ud835\uddab\ud835\uddab \ud835\uddb8\ud835\uddae\ud835\uddb4\ud835\uddb1 \ud835\uddaf\ud835\udda7\ud835\uddae\ud835\uddb3\ud835\uddae\ud835\uddb2 \ud835\uddb6\ud835\udda8\ud835\uddab\ud835\uddab \ud835\udda1\ud835\udda4 \ud835\udda3\ud835\udda4\ud835\uddab\ud835\udda4\ud835\uddb3\ud835\udda4\ud835\udda3! ID #0305439935.eml": [
+        {
+            "Total Risk Score:": 200
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                80,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                20,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "$1500,00 Payment Sent to blackpapermoon42,Check Please\ud83d\udcb2#U94U\ud83d\udcb0\u2714\ufe0f\u2714\ufe0f __Date.eml": [
+        {
+            "Total Risk Score:": 190
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                70,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                20,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddf1\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\ude01 \ud835\uddf1\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf2\ud835\uddf1 \ud83d\udcb28600010.00_____HzaC.eml": [
+        {
+            "Total Risk Score:": 182
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                60,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                22,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddf1\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\ude01 \ud835\uddf1\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf2\ud835\uddf1 $4000.00((No_deposit_required))__OBUZ.eml": [
+        {
+            "Total Risk Score:": 181
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                60,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                21,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddf1\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\ude01 \ud835\uddf1\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf2\ud835\uddf1 $4000.00((No_deposit_required))__W6LV.eml": [
+        {
+            "Total Risk Score:": 181
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                60,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                21,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\u2714 You have won an Yeti Crossroads Backpack #52.eml": [
+        {
+            "Total Risk Score:": 179
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                60,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                19,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "SignUp Confirmation.eml": [
+        {
+            "Total Risk Score:": 177
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                60,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                17,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "blackpapermoon42, Your account SiriusXM will be removed today.\u26a0\ufe0f Sun,30 Jun-2024.eml": [
+        {
+            "Total Risk Score:": 158
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                40,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                18,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddf5\ud835\uddee\ud835\ude03\ud835\uddf2 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\udfed\ud835\udfef,\ud835\udff4\ud835\udff5\ud835\udff4.\ud835\udff1\ud835\udff1\ud83d\udcb2 \ud835\uddf6\ud835\uddfb \ud835\ude06\ud835\uddfc\ud835\ude02\ud835\uddff \ud835\uddee\ud835\uddf0\ud835\uddf0\ud835\uddfc\ud835\ude02\ud835\uddfb\ud835\ude01 (\ud835\udde7\ud835\uddf6\ud835\ude01\ud835\uddee\ud835\uddfb \ud835\udde6\ud835\uddfd\ud835\uddf6\ud835\uddfb\ud835\ude00 \ud835\uddd6\ud835\uddd4\ud835\udde6\ud835\udddc\ud835\udde1\ud835\udde2).eml": [
+        {
+            "Total Risk Score:": 157
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                40,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                17,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddf1\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\ude01 \ud835\uddf1\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf2\ud835\uddf1 \ud83d\udcb225.00 ((No_deposit_required)).eml": [
+        {
+            "Total Risk Score:": 147
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                30,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                17,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "blackpapermoon42, Y\u034f\u034fo\u034f\u034fu\u034f\u034fr\u034f\u034f 2\u034f\u034fO\u034f\u034f2\u034f\u034f4 \ud835\udc13\u034f\u034f\ud835\udc2b\u034f\u034f\ud835\udc1a\u034f\u034f\ud835\udc27\u034f\u034f\ud835\udc2c\u034f\u034f\ud835\udc2e\u034f\u034f\ud835\udc27\u034f\u034f\ud835\udc22\u034f\u034f\ud835\udc28\u034f\u034f\ud835\udc27\u034f\u034f, \ud835\udc04\u034f\u034f\ud835\udc2a\u034f\u034f\ud835\udc2e\u034f\u034f\ud835\udc22\u034f\u034f\ud835\udc1f\u034f\u034f\ud835\udc1a\u034f\u034f\ud835\udc31\u034f\u034f \ud835\udc1a\u034f\u034f\ud835\udc27\u034f\u034f\ud835\udc1d\u034f\u034f \ud835\udc04\u034f\u034f\ud835\udc31\u034f\u034f\ud835\udc29\u034f\u034f.eml": [
+        {
+            "Total Risk Score:": 142
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                20,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                22,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Play CookieRun_ Tower of Adventures on PC with Google Play Games beta.eml": [
+        {
+            "Total Risk Score:": 137
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                20,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                17,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Most demanded MTG proxies of this week_!.eml": [
+        {
+            "Total Risk Score:": 136
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                20,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                16,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "We are really sorry....eml": [
+        {
+            "Total Risk Score:": 126
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                10,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                16,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Someone tried to log into your account, user ID_40726-16204-66925.eml": [
+        {
+            "Total Risk Score:": 120
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                20,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Cool Savings_ 25_ Off Select Stardock Software.eml": [
+        {
+            "Total Risk Score:": 110
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                10,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ]
+}

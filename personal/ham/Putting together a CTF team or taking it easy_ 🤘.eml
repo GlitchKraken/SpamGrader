@@ -1,0 +1,1870 @@
+Delivered-To: chadefry@gmail.com
+Received: by 2002:a05:6504:13f9:0:0:0:0 with SMTP id v25csp537600ltp;
+        Thu, 15 Jul 2021 09:38:31 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxRZW2LK2VqSLtxrEHA8BDYFmCYgPnsrApEIWlAq+gmnOnQe4WzNGJma2qST9dEGaHk4F9i
+X-Received: by 2002:adf:d08f:: with SMTP id y15mr6990798wrh.266.1626367111596;
+        Thu, 15 Jul 2021 09:38:31 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1626367111; cv=none;
+        d=google.com; s=arc-20160816;
+        b=um9DnQNv9m4obyPI22dUmdrY/zcGf1e6/O6UR3B9mf8fVYoLoDZzCX0uPyPudTPv7P
+         wwCLK/8D0WTDl7O525RqfqmCX8T1fyqA5PeIELPfcsXWo/4C9PK/cmWPQKa1hP1FqiFo
+         Bq0JiKmsh/RCzgtWSc5k+ciNzPkoc0wuSGsSvJtJoQjU+0CDoCroEbkdYkeHL+CpldsC
+         J0LEJ5FtqdpUPRAh/DzCOOmWuBVf5J6GCmUZqMCbb5HvpbMu4elbsMFsLK+poqfGDgx+
+         EXxm1db5rrb//Q5Gxbh55QsanwuFWJ3L1t4Fz0cNZrhIsFJbLg3PJ5MH99GkoYj8LO9O
+         0M9g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=reply-to:precedence:message-id:mime-version:list-unsubscribe-post
+         :list-unsubscribe:list-id:from:feedback-id:date:subject:to
+         :dkim-signature:dkim-signature;
+        bh=HHQLkklDmoJCNJBTBOtExXNcY7mHp0pEpANIUNv32ig=;
+        b=HcfcRiQv8tgUBeeuNwD8TWN75dV7DDE7waHnnnO5p6D+eoIRBzutgtFuSZ5okPDAuE
+         RSoJgWAiPRFpR3xxjV9iLV7UkIpB3ngRZQU53MUmxzvDnKQorOm6bAlgmxrSm3XINCpL
+         eoLPj/qrdi7eG206zjzeNASvxLcGVy8L+x0b+rwRjmaoKC36omYlr5EdSlHGnl+FTnyi
+         cLpwi/h/WU/+6ZJfS7Ojqj+39X6rOQFoDFPwXqA8KcduCdID56ujgi/pM7TKXCEkJ/ns
+         NOtG0eXHL3DUEj+6tbPViDRbDwyK0xoqcNw5nd6L96onMberbg8S55N+JVJ70u2ff1GA
+         rqDw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@hackthebox.eu header.s=mail header.b="ZSWz9/oR";
+       dkim=pass header.i=@mailin.fr header.s=mail header.b=GqZeEQFX;
+       spf=pass (google.com: domain of bounces-oqwq7zvy0k2rj-chadefry=gmail.com@gf.d.sender-sib.com designates 77.32.148.6 as permitted sender) smtp.mailfrom="bounces-oqwq7zvy0k2rj-chadefry=gmail.com@gf.d.sender-sib.com";
+       dmarc=pass (p=QUARANTINE sp=NONE dis=NONE) header.from=hackthebox.eu
+Return-Path: <bounces-oqwq7zvy0k2rj-chadefry=gmail.com@gf.d.sender-sib.com>
+Received: from gf.d.sender-sib.com (gf.d.sender-sib.com. [77.32.148.6])
+        by mx.google.com with ESMTPS id k3si3137747wms.2.2021.07.15.09.38.31
+        for <chadefry@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Thu, 15 Jul 2021 09:38:31 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces-oqwq7zvy0k2rj-chadefry=gmail.com@gf.d.sender-sib.com designates 77.32.148.6 as permitted sender) client-ip=77.32.148.6;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@hackthebox.eu header.s=mail header.b="ZSWz9/oR";
+       dkim=pass header.i=@mailin.fr header.s=mail header.b=GqZeEQFX;
+       spf=pass (google.com: domain of bounces-oqwq7zvy0k2rj-chadefry=gmail.com@gf.d.sender-sib.com designates 77.32.148.6 as permitted sender) smtp.mailfrom="bounces-oqwq7zvy0k2rj-chadefry=gmail.com@gf.d.sender-sib.com";
+       dmarc=pass (p=QUARANTINE sp=NONE dis=NONE) header.from=hackthebox.eu
+DKIM-Signature: a=rsa-sha256; bh=HHQLkklDmoJCNJBTBOtExXNcY7mHp0pEpANIUNv32ig=;
+ c=relaxed/relaxed; d=hackthebox.eu;
+ h=to:cc:from:reply-to:subject:date:mime-version:content-type:list-id:list-unsubscribe:x-csa-complaints:list-unsubscribe-post:message-id:sender:x-sib-id:x-mailin-client:x-mailin-campaign:feedback-id;
+ q=dns/txt; s=mail; t=1626367094; v=1;
+ b=ZSWz9/oR6yaOaas1QenbmqdfX5cgy3ASJ2EILgDtgzXsIynVZAcHqB4FJSnLCYhV1yQu5Rhy
+ 6HS2D81/HRQsXmPhRMKyubDT7U8MFGYwU8BlSqaeNzePWJIFZtdBuL6I553UNVi5otnt5X79ekU
+ wVQAtzpVJd48SCWE35OKY6g4=
+DKIM-Signature: a=rsa-sha256; bh=HHQLkklDmoJCNJBTBOtExXNcY7mHp0pEpANIUNv32ig=;
+ c=relaxed/relaxed; d=mailin.fr;
+ h=to:cc:from:reply-to:subject:date:mime-version:content-type:list-id:list-unsubscribe:x-csa-complaints:list-unsubscribe-post:message-id:sender:x-sib-id:x-mailin-client:x-mailin-campaign:feedback-id;
+ q=dns/txt; s=mail; t=1626367094; v=1;
+ b=GqZeEQFXxutUp+KgbH0BE0XFahZlL4wZQfL9cgYPG4HzIZkSGJRsLl8/n8omAlfMaznB1dwQ
+ EWytKpMmp5Sf1Aa+YLvlsivaOA0B3OL4cITr9d1an5XOQxxuIQ5BXIDJBwwmLNwWJVPWoK8xX+C
+ TrZTt7pIo9DJU8PXqpgfUAtY=
+To: <chadefry@gmail.com>
+Subject: =?utf-8?q?Putting_together_a_CTF_team_or_taking_it_easy=3F_=F0=9F=A4=98?=
+Content-Type: multipart/alternative; boundary="-------?=_22388-4388487686767"
+Date: Thu, 15 Jul 2021 16:38:14 +0000
+Feedback-ID: 77.32.148.6:3579920_44:3579920:Sendinblue
+From: r0adrunn3r from HTB <roadrunner@hackthebox.eu>
+List-Id: MzU3OTkyMC0zMDEzMjItMjY= <MzU3OTkyMC0zMDEzMjItMjY=.list-id.mailin.fr>
+List-Unsubscribe: <mailto:unsubscribe@gf.d.sender-sib.com?subject=unsub-oqwq7zvy0k2rj&body=oqwq7zvy0k2rj>,<https://6650o.r.ag.d.sendibm3.com/mk/un/li/1bLBTNffI9CL_I9MtM3sNcvTyyjCmMpu0JiAu5ywRByEGU0jUJyNbs9fgNpPuy8srZjS-juyihqNe2yMRqXY5MMi9M9P-44DZTcm0uoT4de56L6GHg1Ryq8uLrBiFOU85WrSFWsD-sSOeeRAcdkeP5RuhiBjWjSE>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Message-Id: <202115071638.oqwq7zvy0k2rj@gf.d.sender-sib.com>
+Precedence: bulk
+Reply-To: marketing@hackthebox.eu
+X-Csa-Complaints: csa-complaints@eco.de
+X-Mailer: Sendinblue
+X-Mailin-Campaign: 44
+X-Mailin-Client: 3579920
+X-Mailin-Version: 2 | 1
+X-sib-id: iNCX8ixa9JVgcpWN2kNNOC_eVmrKVSjBIT61Xlui7d_Xhz8Zz6XAXavSJO7mwaA_9J2NBZK9hMP5fu5i6TATVT51wHDjMym3rk3Ax8F91kYYHJUBhQErZODvmQvYU7qODiusRvf6csUvDp_Mfvl8DSUD5Jsj1yTQME22gA
+
+---------?=_22388-4388487686767
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+[  ]( # )
+[  ]( # ) =C2=A0  [ View in browser ]( https://6650o.r.ag.d.sendibm3.com/mk=
+/mr/Vyuwl5no6Xkbp3bLyTyf3f9sNnvtvcIg_EzpQ6kDn18uFvdKXUXRlYB_oWyDszpj9kNCjQ6=
+_l4CYZdb3q64B_BylY-Yf1hv7iJA2RfJd8Od2azH_5iWLceFHzg_OLcvtzg ) =C2=A0
+[  ]( # )    June Recap - What's New=C2=A0=F0=9F=97=9E=EF=B8=8F=C2=A0
+[  ]( # ) =C2=A0
+
+=C2=A0
+[  ]( # ) =C2=A0
+HTB Business CTF - Last Call =F0=9F=9A=A8
+=C2=A0
+Time until July 19th to register for our first Capture The Flag event for c=
+orporate teams with a prize list worth=C2=A0=C2=A320,000 - [ Register here =
+]( https://6650o.r.ag.d.sendibm3.com/mk/cl/f/VOghhTC3iwXQNayqA9BOD4SVMry25q=
+nJIHpppXsdl1VeMUaV0NuuoTiSi9blhkLF2bdytv-x5Rr9aMcEB7N9auwnWzNxVkSLgDRMt_uG7=
+UnJw4aqg47objCbAJApmYO7JWKPvf0MPMpKGSPJUO9AQXPPjl-c8WOy56jj1t4TpbdBQm4hoYAw=
+AoQ3_7WwDncr4Rr-APm5WIL-bkYNKCHzCHbmVPJyJozha8D5DKyrXGBCPNB5yQQHcHvbpUSqWSt=
+47UHGov3TnxHDl8XzEtrAd0dg-6WD_xlUVjPxtx3GsympuZV9Z-xzP_5TBbqE-shJTbIT4fz5hJ=
+u9TdN2VHjTsVA )!=C2=A0
+[  ]( # ) =C2=A0
+_________________________=C2=A0
+[  ]( # )    Free-To-Play Easy Machines=C2=A0=F0=9F=8E=89
+[  ]( # ) =C2=A0
+During July... Take it EASY!
+8 iconic HTB retired easy machines will be free-to-play for everyone until =
+July 31st.=C2=A0
+[  ]( # )
+
+
+
+[  ]( # ) =C2=A0
+Spot the "Easy Month" tag in the Retired Machines=C2=A0section and get star=
+ted!
+=C2=A0
+By completing all 8 machines, users will get the chance to win 1 annual VIP=
++ subscription! 3 random users with the above criteria will be picked with =
+a draw on August 1st. Will you pwn them all?=C2=A0=F0=9F=98=8E=C2=A0
+[  ]( # ) =C2=A0     [ Read The Full Story ]( https://6650o.r.ag.d.sendibm3=
+.com/mk/cl/f/bo2GfGZvvY5ERDcCgXwKqZXuAJMSzKtEyGqGubDqdpf61taB30ZcFPCB1TGu_p=
+FcJUr-VoB8mWHYs2l-YNJaILClu3ItjUfgEGrCSzmw9vVLh0B2S_ksZO8Ja2k_Hf3DRhs4sT2oR=
+ECOATyMBVPktqL29kVHBrLeUrMMAT6T57_-s_oTstYzpso37RzClUXBKsxYjDp8b4QHRtHY7LH5=
+GJx_8M5EqqP5lie8NBPLC1Zo7sEqpS2VSXhn-61uNa9pqpXkUnRl6icyX3DUXwh_XGIDBfKxNvy=
+TBmb0teUYkGN8Y4bEpAnRcf-xKPrWVqbGThV-cflRyD0WM_e-ADI8PndhUT0netKFeFTcT-f2rz=
+Gp )   =C2=A0
+[  ]( # ) =C2=A0
+_________________________=C2=A0
+[  ]( # )    HTB Academy Updates =F0=9F=93=9A
+[  ]( # )    New Free Module
+[  ]( # )
+
+
+
+[  ]( # )    Tier 0 - Medium - General
+[  ]( # ) =C2=A0
+For both offensive and defensive security practitioners! Learn core princip=
+les of network traffic analysis and usage of tools such as Wireshark and tc=
+pdump.=C2=A0
+[  ]( # ) =C2=A0     [ Start The Module ]( https://6650o.r.ag.d.sendibm3.co=
+m/mk/cl/f/iGCt4Djj8bAhrYB9gSA5cIhlPZSiTNBJaETzmiFDM_WcY3ISaK7xcwYYHQBZBoYgu=
+_Tt5ZE5dUvwLIzYV9eQrfm-GZWit-1endyuocXwAckXL2E72cUdIvxbkzU_diHp4AH_9rF8e_ZR=
+fF2wI4qmJKSffvGqDpBu7oZOxzEJRGkm7ATRac4xV-f7Q5tJ-uA_wAhEbMOSpJFKC6qtQ_9uw14=
+YFHBXsuj7KBQ3LLRXwynDUhGXqBvzZt0sVTzHfVNm2MviSagc4yQ_BKd_BammCPCipHZUaRY2pB=
+kwOtnKtTElZOmlUsWQHl-ZVRxZRvDBknfjYZiteoFlCB3EnECb9ZI9L8RXHcEiyELPBi-taI402=
+rseThaLlJsNIz074V6hBDdt4g )   =C2=A0
+[  ]( # )    Module Update - Windows Fundamentals
+[  ]( # ) =C2=A0
+Did you complete the "[ Windows Fundamentals ]( https://6650o.r.ag.d.sendib=
+m3.com/mk/cl/f/yFDY045WpjHiNHDNnS1ZNsiktCgqVdgEl1_2QqvpB_gzdwHZXdmH1flt4DT1=
+GK0N8H5K6FeWhwY8axNBflfbW9QRkpKlMik_2R_aiO6ZEYuinGB0lzCUKA-LpwMtteKqWTPL9Oz=
+nomyD8p7GGeHDq9DKNlNwRMoODisHzayVZtb71zULwVy9UIU7MKQEUlt4Nr5sQAwWuHJ65qTVdQ=
+xUnnUbUNDeu0IMyh3yOs76qCkZorQzAD2k8EwHt9FprsVvxWyR-hpmIduzYT0pEx-lyDaSWWim-=
+dKboByGxehFAmKJsu-d_mZpam4_sJR1VDM43CT1KWVd37zf8Pa8AnaFRZvtwZjqZtFzYZYWv1vC=
+cSCinxDAg-cf )" module already? Time to go back at it, there are updates! C=
+heck out the new sections:
+NTFS vs Share PermissionsService PermissionsEnhanced Skills Assessment=C2=
+=A0
+[  ]( # ) =C2=A0
+_________________________=C2=A0
+[  ]( # )    HTB Community Manifesto=C2=A0=F0=9F=93=9C
+[  ]( # ) =C2=A0
+Whatever culture, country, religion, gender, sexual orientation, or educati=
+on level you may have, the HTB community will always be your place to be! H=
+ow do we keep it warm and welcoming for every hacker? Our own [ r0adrunn3r =
+]( https://6650o.r.ag.d.sendibm3.com/mk/cl/f/C4Fckfh8GRsYjsFuA3m3gWcirEZoqj=
+WNQ2HAm95hIIEabN18vn30Ra6hg4coHvZulgLWRaWkrCezxdfdqTHV64lYDLkdCfZnflSOkvWs6=
+XVfH0yFx_-FddM9HJeiPCd8f-lb1onfFzeqKOOpDxdcTzMgqNuNe6W5XRFB5WtazcMVMsp2qV3y=
+FVyWQZbhG2A4u3mlPfL2OWFI1S3lF06ktmmrR_r7FSzMU2iDQer7sNYxcvbo5ahS94mAchk2hNX=
+qHBDDQOfpWs6fynH2c6vKRaojzmC8KmFjHL84P-5R4n0I4H7F42bdcGdAJZo9sSZmWL1mwxs ) =
+is here to tell you!=C2=A0
+[  ]( # )
+
+
+
+[  ]( # ) =C2=A0     [ Take A Read ]( https://6650o.r.ag.d.sendibm3.com/mk/=
+cl/f/QNevAQCZaFkkStKJzYSJOSAXIYPOCr6lJKwJSYlptAa1OSwmnO3ALSDkG_bpUH4oIEXYFO=
+g5AqcCmPbpV9rn0mAecY0EMmxAvzsbNX2WCpX7IEgN5u4ikC4Jzkw9qFUPKz5IV_MwROO-ybJvt=
+vWUjTU-EIHDWgRcz7jmMK1Wj0T8jiuDPdBgcpIuFcLNbCUsb3eYA59HPqGPF2eNuLQ3qCKOwqPk=
+Q2HrNY6iqD7MOYSQCAut9UouY3sH-97QSAXSC7XIBX3uM199y5_p_kvtmjU22eqUkV9dUA5yBUA=
+JKt3xUATNYur1vGvgztUBbnZp1voQ-2Abf_Notbo0LrCXUwyuFlg2wXpE5wQ )   =C2=A0
+[  ]( # ) =C2=A0
+P.S. Our Discord server is the=C2=A0=F0=9F=92=9A of Hack The Box. [ Join ](=
+ https://6650o.r.ag.d.sendibm3.com/mk/cl/f/nuORdMRJGQqKubK3XgoF7BW0UBf1gr7J=
+uvo0sQL-C3Q9Adec8E5JscGXF8P8NRZtalCpjSVpVXSOhPzob7Sy4rQJNaF14UxtKrMdY3VJDzW=
+JE75NV0lbB5Pn4xAXXd-yjdSqgPhCLhyVXHWF7k4AqTcmxo4thJXlGrN0mjbYreyYB21EsP-YTV=
+4BU-E-lBzZrJ5_JP_s69vuC83RwhBVRZH61L_Ni7SQP-EjcAPHvkh6l1UAs83ZB7IIUa_iJzUOf=
+barVyd3ie3dTp1TLiYa03lM94PUfbNZgJRE71JmvIJi22OkIoYmSuL07hxgYIxc06GD24HtnGZS=
+ ) and=C2=A0start chatting!=C2=A0
+[  ]( # ) =C2=A0
+_________________________=C2=A0
+[  ]( # )    Upcoming Machines
+[  ]( # )
+
+
+
+[  ]( # ) =C2=A0
+_________________________=C2=A0
+[  ]( # )    HTB Read-List=C2=A0=F0=9F=94=8D
+[  ]( # ) =C2=A0
+What are cyber threats? Let's explore some important cyber threat theory in=
+ our latest blog post. The CIA Triad, internal and external threats, and fi=
+nally some recommendations to get some practice!=C2=A0
+[  ]( # )
+
+
+
+[  ]( # ) =C2=A0     [ Cyber Threats 101 ]( https://6650o.r.ag.d.sendibm3.c=
+om/mk/cl/f/Tgp76tIWXW3Eirju_sX6i2TvrtpEgiebtqGaK7bFlC5U-rU8N8lLpUFh-JY4KO4H=
+4NbCtCckkJrkOj6O7bihX18te4b6vDahBDJpjVvCUxoT0g74MRPuEoK3gek8Lt-JHrvsIFewEJI=
+mOkhqf1CnZVLkjvYAacqAOeY1_AQ7Zn35BaOHw459r-7uVyzS4LM9IkM-zdD2TeZ5vygMdqWvFt=
+Qg2B53L4VrrUk4VwZro0_oa5Ke0RF6I8eGKoztE0bFwfwi0Bgxdyw654A8NJMiUNbAZJr_Wassi=
+peIMOxHZr3ZSqRcnCPts9Tp0AnKiPislEilaYUW7hQLm-zWHU9531vkGMtVqtfdrw )   =C2=
+=A0
+[  ]( # ) =C2=A0
+_________________________=C2=A0
+[  ]( # )    Community Content of The Month
+[  ]( # )
+
+
+
+FROM THE COMMUNITY
+=C2=A0
+
+"Shocker - Take It Easy Series" - by Adithya Sai, InfoSec Write-ups.
+=C2=A0
+[ Read the Write-up ]( https://6650o.r.ag.d.sendibm3.com/mk/cl/f/FQd8FGy_eW=
+dKe1Npmwv28ErX9kvo7wOR8uYAPxID3Mhl2tupuJMx_z8qgJGyX1rO_Etqi-zZ8_KzDARjdrwD8=
+8HU-DSUXGz3OsxrADnc5TzdG3P0pdLKEbJSU-T03jSLEsgZWl0HA2aDhPNOkuowCm4IdeC9tenr=
+EsCpvWjHYQNMktyTeqzNULFGlelZbi7tDlVg4puhTxkQO92hcmuZFR4-YEti4_nUO18xhMd2LmD=
+4d8mi86KsMnuPtBV_1ZEaz_2Pa5s5s_NsGaZqDBef1mIFPJ5iUc1s-EP7BJrZStZKx2Q_2gMn3Y=
+cUBaLb7JgTESYRGc7zT83i9YcfL9owQxdA5UbMI7EJOL3uuJqJsVv5oe4oxZWlp_qb ).
+[  ]( # ) =C2=A0
+_________________________=C2=A0
+[  ]( # )    Community Meetups
+[  ]( # ) =C2=A0
+HTB Meetup @ Peru 07.03.21HTB Meetup @ South Africa 07.06.21HTB Meetup @ Hy=
+derabad 07.11.21HTB Meetup @ Portugal 07.17.21HTB Meetup @ Dehradun 07.18.2=
+1HTB Meetup @ Peru 07.18.21HTB Meetup @ Bogota 06.20.21HTB Meetup @ Netherl=
+ands 07.21.21HTB Meetup @ Chicago 07.29.21HTB Meetup @ Ottawa 07.29.21=C2=
+=A0
+[  ]( # ) =C2=A0     [ Find Them All Here (100% Virtual) ]( https://6650o.r=
+.ag.d.sendibm3.com/mk/cl/f/XSk5BcOfR1A_2q6Cl6gzAcOBXs2EFt71XxFSua_NBfDPSIJa=
+1IcCeCT3rGn5FgShMCW4GpzYfq1Wy3l2bcK6Y7j2Ra7ugJjl1iTRRDLQgsK44EltBlsIk3J6Ig1=
+io31LgC0vcbntA5gB4iynB06YL4MIDVJDChfqytVQxofokZ8y5cl4A2frDpiuMD3WAoDiGbJbhR=
+6GRiizCaTy5KVA8OpfLuSE31w03qxNITEUUkWTSgdLWOr7bOKLNPgqts_UphaI1RK7pIGYabXyx=
+xTPhy6pNdIgLAuME9b1R_pkHRkqNljsAZ5LlCStRPKIIDlCOmmyJ6W7zJE2tg3caIQ )   =C2=
+=A0
+[  ]( # ) =C2=A0
+_________________________=C2=A0
+[  ]( # ) =C2=A0
+653,401 Platform Members
+See you next month!=C2=A0=F0=9F=92=9A=C2=A0
+[  ]( # ) =C2=A0
+
+=C2=A0  [  ]( # )
+=C2=A0
+[  ]( https://6650o.r.ag.d.sendibm3.com/mk/cl/f/mjMAKin6oIbOop_akfd4EQ7ZYTH=
+ez0TgCs74r1uG6vwiTvAaG1d9PGX9v_QHU2H17VLR5YyjIcUNxVt6L9L3Khx_m7Pw8zujryTZFW=
+phxj1yToCjJzCUl8RmZElICp7e2IoSCvA1VFayekWLNBjOZwoisYizhEz-6TfqIGnI5_WTuMebs=
+WXq3HkqvNArnqKdVuekC3Mvl4RXPS1N6xgUs1nh6Jau4PxaaQahXvO1_68CKLB9voPJsaLXRIt-=
+JGAr9idR93zBz84_SSCiBnmlLYCQr_4tbCsCX_f9L0lcKHMLQJPbm_U57zPWlcYJws5P8UiEwF8=
+BXA4F )
+[  ]( https://6650o.r.ag.d.sendibm3.com/mk/cl/f/JEk9jQ5HfxOQ6Bn0PzqZ8qqvgOm=
+tvd8QBK-yFJEXoHM_IE8aQqlglk44g4h6NFoA-70uSlSu1wZec-tbbo8Wg027bHoBzm2cgyRYow=
+TvbSj03SRuLwm-UqQq8UELin5L7oYqb4Y2CAly5KmmHji-FosRiFTlmOOVoj9WOmkxFBqnqJnQ-=
+aPBTxewU_r0o-_mNDiRBVvIdzwmORFl8B-X_suRux056iERYqeVhKYK6_ff-OZbe_hGe9vIH2iT=
+NNMCDUStUUe2_aZ1zaFsZbaHL-1KtuUZTwJemrPWKkt1UctTzzQgGa0Ct1PNaEYY2tHwuixu8Q =
+)
+[  ]( https://6650o.r.ag.d.sendibm3.com/mk/cl/f/NuzyBf1krKSjPaWstnOYSkLrqpH=
+OP4SurdcAE8sTYP9dDOlrRmivrrarvl5xjtf0lMqeboJpV6a8qFbFo-BEMZDDzzJGpTuNUZr1zb=
+41b6Youku3lkrAN43b9xzhB_m4_8TG320g-b4XvGGkv_Q38QXZF1f9J6isWUS_8NUeJXEhxGxjQ=
+y69knr5QbPs4tkmSFjjIghn6ySsPpTZdpEALZMfESw3e5TkvTEzdzU4Xqrwz3vvIgacX_VUgqEe=
+uMgbbPaericYLfx0Gc8K3C0tVGeM9hdKateJNLIzDUdEWwAM7kb3Uqqz3JaktSnoVMziSmm1gGc=
+17dK86shkDwGODn_9PrMNwWfz46g45JEdIeKS5MdHeMFSSZlVYdglctnX1EBhp1I )
+[  ]( https://6650o.r.ag.d.sendibm3.com/mk/cl/f/EPRziRENIl_nC-XaPJ6mexKrTLM=
+f9Puf_q4l-xG3FhIGYW-C6tjtiYKLnv5cqTDSREPNIJ8J97ThFRCk5J64MLlV9hCJxsK0k4WN_2=
+G8EesEUOhqVQIHuitYoMkM2Ppft4Qov7l8udjTWi4HB2FEEJicfnbIqG5axAIPnWvTIzWQsQr9N=
+KvnRKouMIrzqbS4QSbV1Jiw3vbha1oMfMxt3tOTRqYfWT3zhFo46qB2v60J2QkRLp97SATxX8hU=
+AsWU2Z-W2U6qsWkGBZFWUanqScin_-d9RaOZNQzcKmBwKlv3rxn07wSkE8s5qyJ8jWwwc9irxp7=
+pwTDBpQ )
+[  ]( https://6650o.r.ag.d.sendibm3.com/mk/cl/f/n5xODtmIc9fA2G5sax38p6br7WL=
+Pwwdodrlqap87tj7f7E063i9I2vf1eM3b0PF_WqgMG8k1Ty8Q3ZofwTC2_yPOip2w5YS4UbMgca=
+-Jom6EOI5ixu9nSwWPiiUwq-TUpXdZcu8tdqe4ZpZRyNxe4Rfp--d-A4vL7vDa8-jvUUALAjk-8=
+xMXmIQliMYuIJEUtTFjEhvvdxoLejCCRxgrMrSMujTuCVFH0uUYk572D44dcCvrL7yUM6xjkAy8=
+W3h8mmGQb99m4OCAVMVkFydKjEM261ZT3dBgUZAlAHf1iNSxGTEHML7MsmIaLjLkX75Rx3VEXY2=
+E0RCMBAOqd7XNX1bxwT3PUltZiLKjoDA )
+
+Hack The Box Ltd
+38 Walton Road Folkestone, Kent, UK CT19 5QS=C2=A0  =C2=A0
+[  ]( # ) =C2=A0
+This email was sent tochadefry@gmail.com
+You received this email because you are registered with Hack The Box
+=C2=A0
+[ Unsubscribe here ]( https://6650o.r.ag.d.sendibm3.com/mk/un/v2/LN8XKRL-l9=
+dzWECTDLiU4GDH3MX09482pdvE44AtDp4fPH7DZQQ4wHn0e3_9k6ZgpHQZ_2tdTj8D9Fhb-eoor=
+uCMRT4wLQGR-qjJXRdYHI5ktTdCY9-nGv0HXfWrAZTKc3AFCv5VEn0zl3UYKELUVHjpjr5rYlPU=
+ ) =C2=A0
+[  ]( # ) =C2=A0
+=C2=A9 2021 Hack The Box=C2=A0  [  ]( # )
+
+
+---------?=_22388-4388487686767
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:sc=
+hemas-microsoft-com:office:office"><head><meta http-equiv=3D"X-UA-Compatibl=
+e" content=3D"IE=3Dedge"/><meta name=3D"viewport" content=3D"width=3Ddevice=
+-width, initial-scale=3D1"/><meta http-equiv=3D"Content-Type" content=3D"te=
+xt/html; charset=3Dutf-8"/><meta name=3D"x-apple-disable-message-reformatti=
+ng"/><meta name=3D"apple-mobile-web-app-capable" content=3D"yes"/><meta nam=
+e=3D"apple-mobile-web-app-status-bar-style" content=3D"black"/><meta name=
+=3D"format-detection" content=3D"telephone=3Dno"/><title></title><link href=
+=3D"https://www.fonts.com/font/linotype/helvetica?QueryFontType=3DWeb&amp;s=
+rc=3DGoogleWebFonts" rel=3D"stylesheet" type=3D"text/css"/><style type=3D"t=
+ext/css">/* Resets */.ReadMsgBody{width: 100%; background-color: #ebebeb;}.=
+ExternalClass{width: 100%; background-color: #ebebeb;}.ExternalClass, .Exte=
+rnalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .=
+ExternalClass div{line-height:100%;}a[x-apple-data-detectors]{color:inherit=
+ !important;text-decoration:none !important;font-size:inherit !important;fo=
+nt-family:inherit !important;font-weight:inherit !important;line-height:inh=
+erit !important;}body{-webkit-text-size-adjust:none; -ms-text-size-adjust:n=
+one;}body{margin:0; padding:0;}.yshortcuts a{border-bottom: none !important=
+;}.rnb-del-min-width{min-width: 0 !important;}/* Add new outlook css start =
+*/.templateContainer{max-width:590px !important;width:auto !important;}/* A=
+dd new outlook css end *//* Image width by default for 3 columns */img[clas=
+s=3D"rnb-col-3-img"]{max-width:170px;}/* Image width by default for 2 colum=
+ns */img[class=3D"rnb-col-2-img"]{max-width:264px;}/* Image width by defaul=
+t for 2 columns aside small size */img[class=3D"rnb-col-2-img-side-xs"]{max=
+-width:180px;}/* Image width by default for 2 columns aside big size */img[=
+class=3D"rnb-col-2-img-side-xl"]{max-width:350px;}/* Image width by default=
+ for 1 column */img[class=3D"rnb-col-1-img"]{max-width:550px;}/* Image widt=
+h by default for header */img[class=3D"rnb-header-img"]{max-width:590px;}/*=
+ Ckeditor line-height spacing */.rnb-force-col p, ul, ol{margin:0px!importa=
+nt;}.rnb-del-min-width p, ul, ol{margin:0px!important;}/* tmpl-2 preview */=
+.rnb-tmpl-width{width:100%!important;}/* tmpl-11 preview */.rnb-social-widt=
+h{padding-right:15px!important;}/* tmpl-11 preview */.rnb-social-align{floa=
+t:right!important;}/* Ul Li outlook extra spacing fix */li{mso-margin-top-a=
+lt: 0; mso-margin-bottom-alt: 0;}/* Outlook fix */table{mso-table-lspace:0p=
+t; mso-table-rspace:0pt;}/* Outlook fix */table, tr, td{border-collapse: co=
+llapse;}/* Outlook fix */p,a,li,blockquote{mso-line-height-rule:exactly;}/*=
+ Outlook fix */.msib-right-img{mso-padding-alt: 0 !important;}@media only s=
+creen and (min-width:590px){/* mac fix width */.templateContainer{width:590=
+px !important;}}@media screen and (max-width: 360px){/* yahoo app fix width=
+ "tmpl-2 tmpl-10 tmpl-13" in android devices */.rnb-yahoo-width{width:360px=
+ !important;}}@media screen and (max-width: 380px){/* fix width and font si=
+ze "tmpl-4 tmpl-6" in mobile preview */.element-img-text{font-size:24px !im=
+portant;}.element-img-text2{width:230px !important;}.content-img-text-tmpl-=
+6{font-size:24px !important;}.content-img-text2-tmpl-6{width:220px !importa=
+nt;}}@media screen and (max-width: 480px){td[class=3D"rnb-container-padding=
+"]{padding-left: 10px !important;padding-right: 10px !important;}/* force c=
+ontainer nav to (horizontal) blocks */td.rnb-force-nav{display: inherit;}/*=
+ fix text alignment "tmpl-11" in mobile preview */.rnb-social-text-left{wid=
+th: 100%;text-align: center;margin-bottom: 15px;}.rnb-social-text-right{wid=
+th: 100%;text-align: center;}}@media only screen and (max-width: 600px){/* =
+center the address & social icons */.rnb-text-center{text-align:center !imp=
+ortant;}/* force container columns to (horizontal) blocks */th.rnb-force-co=
+l{display: block;padding-right: 0 !important;padding-left: 0 !important;wid=
+th:100%;}table.rnb-container{width: 100% !important;}table.rnb-btn-col-cont=
+ent{width: 100% !important;}table.rnb-col-3{/* unset table align=3D"left/ri=
+ght" */float: none !important;width: 100% !important;/* change left/right p=
+adding and margins to top/bottom ones */margin-bottom: 10px;padding-bottom:=
+ 10px;/*border-bottom: 1px solid #eee;*/}table.rnb-last-col-3{/* unset tabl=
+e align=3D"left/right" */float: none !important;width: 100% !important;}tab=
+le.rnb-col-2{/* unset table align=3D"left/right" */float: none !important;w=
+idth: 100% !important;/* change left/right padding and margins to top/botto=
+m ones */margin-bottom: 10px;padding-bottom: 10px;/*border-bottom: 1px soli=
+d #eee;*/}table.rnb-col-2-noborder-onright{/* unset table align=3D"left/rig=
+ht" */float: none !important;width: 100% !important;/* change left/right pa=
+dding and margins to top/bottom ones */margin-bottom: 10px;padding-bottom: =
+10px;}table.rnb-col-2-noborder-onleft{/* unset table align=3D"left/right" *=
+/float: none !important;width: 100% !important;/* change left/right padding=
+ and margins to top/bottom ones */margin-top: 10px;padding-top: 10px;}table=
+.rnb-last-col-2{/* unset table align=3D"left/right" */float: none !importan=
+t;width: 100% !important;}table.rnb-col-1{/* unset table align=3D"left/righ=
+t" */float: none !important;width: 100% !important;}img.rnb-col-3-img{/**ma=
+x-width:none !important;**/width:100% !important;}img.rnb-col-2-img{/**max-=
+width:none !important;**/width:100% !important;}img.rnb-col-2-img-side-xs{/=
+**max-width:none !important;**/width:100% !important;}img.rnb-col-2-img-sid=
+e-xl{/**max-width:none !important;**/width:100% !important;}img.rnb-col-1-i=
+mg{/**max-width:none !important;**/width:100% !important;}img.rnb-header-im=
+g{/**max-width:none !important;**/width:100% !important;margin:0 auto;}img.=
+rnb-logo-img{/**max-width:none !important;**/width:100% !important;}td.rnb-=
+mbl-float-none{float:inherit !important;}.img-block-center{text-align:cente=
+r !important;}.logo-img-center{float:inherit !important;}/* tmpl-11 preview=
+ */.rnb-social-align{margin:0 auto !important; float:inherit !important;}/*=
+ tmpl-11 preview */.rnb-social-center{display:inline-block;}/* tmpl-11 prev=
+iew */.social-text-spacing{margin-bottom:0px !important; padding-bottom:0px=
+ !important;}/* tmpl-11 preview */.social-text-spacing2{padding-top:15px !i=
+mportant;}/* UL bullet fixed in outlook */ul{mso-special-format:bullet;}}@m=
+edia screen{body{font-family:'Helvetica','Arial',Helvetica,sans-serif;}}</s=
+tyle><style type=3D"text/css">table{border-spacing: 0;}table td{border-coll=
+apse: collapse;}</style> </head><body> <table cellpadding=3D"0" border=3D"0=
+" cellspacing=3D"0" style=3D" mso-hide: all; display: none;"><tr><td>Check =
+out our monthly round-up: our Business CTF is getting real, free-to-play ea=
+sy content during July only, Academy updates, and much more!</td></tr></tab=
+le>  <table border=3D"0" align=3D"center" width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" class=3D"main-template" bgcolor=3D"#f9fafc" style=3D"back=
+ground-color: rgb(249, 250, 252);"> <tbody><tr> <td align=3D"center" valign=
+=3D"top"><!--[if gte mso 9]> <table align=3D"center" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" width=3D"590" style=3D"width:590px;"> <tr> <td a=
+lign=3D"center" valign=3D"top" width=3D"590" style=3D"width:590px;"><![endi=
+f]--> <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"590"=
+ class=3D"templateContainer" style=3D"max-width:590px!important; width: 590=
+px;"> <tbody><tr> <td align=3D"center" valign=3D"top"> <table class=3D"rnb-=
+del-min-width" width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D=
+"0" style=3D"min-width:590px;" name=3D"Layout_0" id=3D"Layout_0"> <tbody><t=
+r> <td class=3D"rnb-del-min-width" valign=3D"top" align=3D"center" style=3D=
+"min-width:590px;"> <a href=3D"#" name=3D"Layout_0"></a> <table width=3D"10=
+0%" cellpadding=3D"0" border=3D"0" height=3D"38" cellspacing=3D"0"> <tbody>=
+<tr> <td valign=3D"top" height=3D"38"> <img width=3D"20" height=3D"38" styl=
+e=3D"display:block; max-height:38px; max-width:20px;" alt=3D"" src=3D"https=
+://6650o.img.ag.d.sendibm3.com/im/3579920/15fd9f264001efa0668072cabf04073d2=
+03e1c628b776e87506daf3661b832d6.gif?e=3DV0-09gNgivOD1xx-DsWl38qnh-SVVn2MFmV=
+JWWLpXMGemadzad-_VCG7qXPQBBuFtzEINu8Poj8qZV7JtukblyDeYc4DakwgSO74XRLmZDsVvc=
+BAHvrjPzDJ1C1hXlMR9o5gqIkoeMHp4JUOORm4678KN86RsHGcHOrrtDqk2h-0tTh6KYgi4bsrT=
+9PW" sib_img_id=3D"0"/> </td></tr></tbody></table> </td></tr></tbody></tabl=
+e> </td></tr><tr> <td align=3D"center" valign=3D"top"> <div style=3D"backgr=
+ound-color: rgb(249, 250, 252);"> <table class=3D"rnb-del-min-width rnb-tmp=
+l-width" width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" st=
+yle=3D"min-width:590px;" name=3D"Layout_9" id=3D"Layout_9"> <tbody><tr> <td=
+ class=3D"rnb-del-min-width" valign=3D"top" align=3D"center" style=3D"min-w=
+idth: 590px;"> <a href=3D"#" name=3D"Layout_9"></a> <table width=3D"100%" c=
+ellpadding=3D"0" border=3D"0" bgcolor=3D"#f9fafc" align=3D"center" cellspac=
+ing=3D"0" style=3D"background-color: rgb(249, 250, 252);"> <tbody><tr> <td =
+height=3D"10" style=3D"font-size:1px; line-height:1px; mso-hide: all;">=C2=
+=A0</td></tr><tr> <td align=3D"center" height=3D"20" style=3D"font-family:A=
+rial,Helvetica,sans-serif; color:#666666;font-size:13px;font-weight:normal;=
+text-align: center;"> <span style=3D"color: rgb(102, 102, 102); text-decora=
+tion: underline;"> <a target=3D"_blank" href=3D"https://6650o.r.ag.d.sendib=
+m3.com/mk/mr/Vyuwl5no6Xkbp3bLyTyf3f9sNnvtvcIg_EzpQ6kDn18uFvdKXUXRlYB_oWyDsz=
+pj9kNCjQ6_l4CYZdb3q64B_BylY-Yf1hv7iJA2RfJd8Od2azH_5iWLceFHzg_OLcvtzg" style=
+=3D"text-decoration: underline; color: rgb(102, 102, 102);">View in browser=
+</a></span> </td></tr><tr> <td height=3D"10" style=3D"font-size:1px; line-h=
+eight:1px; mso-hide: all;">=C2=A0</td></tr></tbody></table> </td></tr></tbo=
+dy></table> </div></td></tr><tr> <td align=3D"center" valign=3D"top"> <div =
+style=3D"background-color: transparent; border-radius: 0px;"><!--[if mso]> =
+<table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" wi=
+dth=3D"100%" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td valig=
+n=3D"top" width=3D"590" style=3D"width:590px;"><![endif]--> <table width=3D=
+"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" name=3D"Layout_2" i=
+d=3D"Layout_2"><tbody><tr> <td align=3D"center" valign=3D"top"><a href=3D"#=
+" name=3D"Layout_2"></a> <table border=3D"0" width=3D"100%" cellpadding=3D"=
+0" cellspacing=3D"0" class=3D"rnb-container" bgcolor=3D"transparent" style=
+=3D"height: 0px; background-color: transparent; border-radius: 0px; border-=
+collapse: separate; padding-left: 20px; padding-right: 20px;"><tbody><tr> <=
+td class=3D"rnb-container-padding" style=3D"font-size: px;font-family: ; co=
+lor: ;"> <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"r=
+nb-columns-container" align=3D"center" style=3D"margin:auto;"> <tbody><tr> =
+<th class=3D"rnb-force-col" align=3D"center" style=3D"text-align: center; f=
+ont-weight: normal"> <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" align=3D"center" class=3D"rnb-col-1"> <tbody><tr> <td height=3D"10"></td>=
+</tr><tr> <td style=3D"font-family:Arial,Helvetica,sans-serif; color:#3c485=
+8; text-align:center;"> <span style=3D"color:#3c4858;"><span style=3D"font-=
+size:18px;"><span style=3D"color:#000000;"><strong>June Recap - What&#39;s =
+New=C2=A0=F0=9F=97=9E=EF=B8=8F=C2=A0</strong></span></span></span> </td></t=
+r><tr> <td height=3D"10"></td></tr></tbody></table> </th></tr></tbody></tab=
+le></td></tr></tbody></table> </td></tr></tbody></table><!--[if mso]> </td>=
+<![endif]--><!--[if mso]> </tr></table><![endif]--> </div></td></tr><tr> <t=
+d align=3D"center" valign=3D"top"> <div style=3D"background-color: rgb(20, =
+29, 43); border-radius: 0px;"><!--[if mso]> <table align=3D"center" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:10=
+0%;"> <tr><![endif]--><!--[if mso]> <td valign=3D"top" width=3D"590" style=
+=3D"width:590px;"><![endif]--> <table class=3D"rnb-del-min-width" width=3D"=
+100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-width:5=
+90px;" name=3D"Layout_1" id=3D"Layout_1"> <tbody><tr> <td class=3D"rnb-del-=
+min-width" align=3D"center" valign=3D"top" style=3D"min-width:590px;"> <a h=
+ref=3D"#" name=3D"Layout_1"></a> <table width=3D"100%" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#141D2B" st=
+yle=3D"background-color: rgb(20, 29, 43); border-radius: 0px; padding-left:=
+ 20px; padding-right: 20px; border-collapse: separate;"> <tbody><tr> <td he=
+ight=3D"20" style=3D"font-size:1px; line-height:20px; mso-hide: all;">=C2=
+=A0</td></tr><tr> <td valign=3D"top" class=3D"rnb-container-padding" align=
+=3D"left"> <table width=3D"100%" cellpadding=3D"0" border=3D"0" align=3D"ce=
+nter" cellspacing=3D"0"> <tbody><tr> <td valign=3D"top" align=3D"center"> <=
+table cellpadding=3D"0" border=3D"0" align=3D"center" cellspacing=3D"0" cla=
+ss=3D"logo-img-center"> <tbody><tr> <td valign=3D"middle" align=3D"center" =
+style=3D"line-height: 1px;"> <div style=3D"border-top:0px None #000;border-=
+right:0px None #000;border-bottom:0px None #000;border-left:0px None #000;d=
+isplay:inline-block; " cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><di=
+v><img width=3D"512" vspace=3D"0" hspace=3D"0" border=3D"0" alt=3D"Hack The=
+ Box" style=3D"float: left;max-width:512px;display:block;" class=3D"rnb-log=
+o-img" src=3D"https://6650o.img.ag.d.sendibm3.com/im/3579920/abdccb9d20cf39=
+ec992b0622aa483fa396ab6548de6ed0e0c82ac83f43051849.png?e=3Du8jfgbEbq6_DQkiX=
+5ud_xCsRjTuisFn_3NnMXpIz2ZiW3ud-2lZ8FOOH5k1U1jcjmzXHkUTP4xE7x9G2ja3Zqgc_AoG=
+zm4fSAANl-glt5SYexhENij9tihrMRtXzCl7RehJHDW4xGGKr6lPku6Hxb0UP_XBB0G37_g6cRd=
+o-VeQQwdSNBqPMd_5bllClSIqUmb_R_HAdQMaH97-c9YEAPd4hkjbhm5XYGkE6U1s" sib_img_=
+id=3D"1"/></div></div></td></tr></tbody></table> </td></tr></tbody></table>=
+</td></tr><tr> <td height=3D"20" style=3D"font-size:1px; line-height:20px; =
+mso-hide: all;">=C2=A0</td></tr></tbody></table> </td></tr></tbody></table>=
+<!--[if mso]> </td><![endif]--><!--[if mso]> </tr></table><![endif]--> </di=
+v></td></tr><tr> <td align=3D"center" valign=3D"top"> <div style=3D"backgro=
+und-color: rgb(255, 255, 255); border-radius: 0px;"><!--[if mso]> <table al=
+ign=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"10=
+0%" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td valign=3D"top"=
+ width=3D"590" style=3D"width:590px;"><![endif]--> <table class=3D"rnb-del-=
+min-width" width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" =
+style=3D"min-width:100%;" name=3D"Layout_8"> <tbody><tr> <td class=3D"rnb-d=
+el-min-width" align=3D"center" valign=3D"top"> <a href=3D"#" name=3D"Layout=
+_8"></a> <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff" style=3D"background-colo=
+r: rgb(255, 255, 255); padding-left: 20px; padding-right: 20px; border-coll=
+apse: separate; border-radius: 0px; border-bottom: 0px none rgb(200, 200, 2=
+00);"> <tbody><tr> <td height=3D"20" style=3D"font-size:1px; line-height:20=
+px; mso-hide: all;">=C2=A0</td></tr><tr> <td valign=3D"top" class=3D"rnb-co=
+ntainer-padding" align=3D"left"> <table width=3D"100%" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-container"> <tbody><tr> <=
+th class=3D"rnb-force-col" style=3D"text-align: left; font-weight: normal; =
+padding-right: 0px;" valign=3D"top"> <table border=3D"0" valign=3D"top" cel=
+lspacing=3D"0" cellpadding=3D"0" width=3D"100%" align=3D"left" class=3D"rnb=
+-col-1"> <tbody><tr> <td style=3D"font-size:14px; font-family:&#39;Helvetic=
+a&#39;,&#39;Arial&#39;,Helvetica,sans-serif, sans-serif; color:#3c4858;"><d=
+iv style=3D"text-align: center;"><span style=3D"font-size:22px;"><span styl=
+e=3D"color:#000000;"><strong>HTB Business CTF - Last Call =F0=9F=9A=A8</str=
+ong></span></span></div><div>=C2=A0</div><div style=3D"text-align: center;"=
+><span style=3D"font-size: 16px;">Time until July 19th to register for our =
+first Capture The Flag event for corporate teams with a prize list worth=C2=
+=A0<strong>=C2=A320,000</strong> - <a href=3D"https://6650o.r.ag.d.sendibm3=
+.com/mk/cl/f/VOghhTC3iwXQNayqA9BOD4SVMry25qnJIHpppXsdl1VeMUaV0NuuoTiSi9blhk=
+LF2bdytv-x5Rr9aMcEB7N9auwnWzNxVkSLgDRMt_uG7UnJw4aqg47objCbAJApmYO7JWKPvf0MP=
+MpKGSPJUO9AQXPPjl-c8WOy56jj1t4TpbdBQm4hoYAwAoQ3_7WwDncr4Rr-APm5WIL-bkYNKCHz=
+CHbmVPJyJozha8D5DKyrXGBCPNB5yQQHcHvbpUSqWSt47UHGov3TnxHDl8XzEtrAd0dg-6WD_xl=
+UVjPxtx3GsympuZV9Z-xzP_5TBbqE-shJTbIT4fz5hJu9TdN2VHjTsVA" style=3D"text-dec=
+oration: underline; color: rgb(0, 146, 255);" sib_link_id=3D"0">Register he=
+re</a>!</span></div></td></tr></tbody></table> </th></tr></tbody></table></=
+td></tr><tr> <td height=3D"20" style=3D"font-size:1px; line-height:20px; ms=
+o-hide: all;">=C2=A0</td></tr></tbody></table> </td></tr></tbody></table><!=
+--[if mso]> </td><![endif]--><!--[if mso]> </tr></table><![endif]--> </div>=
+</td></tr><tr> <td align=3D"center" valign=3D"top"> <div style=3D"backgroun=
+d-color: rgb(255, 255, 255); border-radius: 0px;"><!--[if mso]> <table alig=
+n=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%=
+" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td valign=3D"top" w=
+idth=3D"590" style=3D"width:590px;"><![endif]--> <table class=3D"rnb-del-mi=
+n-width" width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" st=
+yle=3D"min-width:100%;" name=3D"Layout_27"> <tbody><tr> <td class=3D"rnb-de=
+l-min-width" align=3D"center" valign=3D"top"> <a href=3D"#" name=3D"Layout_=
+27"></a> <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff" style=3D"background-colo=
+r: rgb(255, 255, 255); padding-left: 20px; padding-right: 20px; border-coll=
+apse: separate; border-radius: 0px; border-bottom: 0px none rgb(200, 200, 2=
+00);"> <tbody><tr> <td height=3D"0" style=3D"font-size:1px; line-height:0px=
+; mso-hide: all;">=C2=A0</td></tr><tr> <td valign=3D"top" class=3D"rnb-cont=
+ainer-padding" align=3D"left"> <table width=3D"100%" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" class=3D"rnb-columns-container"> <tbody><tr> <th=
+ class=3D"rnb-force-col" style=3D"text-align: left; font-weight: normal; pa=
+dding-right: 0px;" valign=3D"top"> <table border=3D"0" valign=3D"top" cells=
+pacing=3D"0" cellpadding=3D"0" width=3D"100%" align=3D"left" class=3D"rnb-c=
+ol-1"> <tbody><tr> <td style=3D"font-size:14px; font-family:&#39;Helvetica&=
+#39;,&#39;Arial&#39;,Helvetica,sans-serif, sans-serif; color:#3c4858;"><div=
+ style=3D"text-align: center;"><span style=3D"color:#808080;"><span style=
+=3D"font-size: 18px;"><b>_________________________</b></span></span></div><=
+/td></tr></tbody></table> </th></tr></tbody></table></td></tr><tr> <td heig=
+ht=3D"20" style=3D"font-size:1px; line-height:20px; mso-hide: all;">=C2=A0<=
+/td></tr></tbody></table> </td></tr></tbody></table><!--[if mso]> </td><![e=
+ndif]--><!--[if mso]> </tr></table><![endif]--> </div></td></tr><tr> <td al=
+ign=3D"center" valign=3D"top"> <div style=3D"background-color: rgb(255, 255=
+, 255); border-radius: 0px;"><!--[if mso]> <table align=3D"center" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:10=
+0%;"> <tr><![endif]--><!--[if mso]> <td valign=3D"top" width=3D"590" style=
+=3D"width:590px;"><![endif]--> <table width=3D"100%" cellpadding=3D"0" bord=
+er=3D"0" cellspacing=3D"0" name=3D"Layout_12" id=3D"Layout_12"><tbody><tr> =
+<td align=3D"center" valign=3D"top"><a href=3D"#" name=3D"Layout_12"></a> <=
+table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"rnb-container" bgcolor=3D"#ffffff" style=3D"height: 0px; background-col=
+or: rgb(255, 255, 255); border-radius: 0px; border-collapse: separate; padd=
+ing-left: 20px; padding-right: 20px;"><tbody><tr> <td class=3D"rnb-containe=
+r-padding" style=3D"font-size: px;font-family: ; color: ;"> <table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-container" =
+align=3D"left" style=3D"margin:auto;"> <tbody><tr> <th class=3D"rnb-force-c=
+ol" align=3D"left" style=3D"text-align: center; font-weight: normal"> <tabl=
+e border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" class=
+=3D"rnb-col-1"> <tbody><tr> <td height=3D"10"></td></tr><tr> <td style=3D"f=
+ont-family:Arial,Helvetica,sans-serif; color:#3c4858; text-align:left;"> <s=
+pan style=3D"color:#3c4858;"><span style=3D"font-size:22px;"><span style=3D=
+"color:#000000;"><strong>Free-To-Play Easy Machines=C2=A0=F0=9F=8E=89</stro=
+ng></span></span></span> </td></tr><tr> <td height=3D"10"></td></tr></tbody=
+></table> </th></tr></tbody></table></td></tr></tbody></table> </td></tr></=
+tbody></table><!--[if mso]> </td><![endif]--><!--[if mso]> </tr></table><![=
+endif]--> </div></td></tr><tr> <td align=3D"center" valign=3D"top"> <div st=
+yle=3D"background-color: rgb(255, 255, 255); border-radius: 0px;"><!--[if m=
+so]> <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td =
+valign=3D"top" width=3D"590" style=3D"width:590px;"><![endif]--> <table cla=
+ss=3D"rnb-del-min-width" width=3D"100%" cellpadding=3D"0" border=3D"0" cell=
+spacing=3D"0" style=3D"min-width:100%;" name=3D"Layout_22"> <tbody><tr> <td=
+ class=3D"rnb-del-min-width" align=3D"center" valign=3D"top"> <a href=3D"#"=
+ name=3D"Layout_22"></a> <table width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff" style=3D"b=
+ackground-color: rgb(255, 255, 255); padding-left: 20px; padding-right: 20p=
+x; border-collapse: separate; border-radius: 0px; border-bottom: 0px none r=
+gb(200, 200, 200);"> <tbody><tr> <td height=3D"10" style=3D"font-size:1px; =
+line-height:10px; mso-hide: all;">=C2=A0</td></tr><tr> <td valign=3D"top" c=
+lass=3D"rnb-container-padding" align=3D"left"> <table width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-container">=
+ <tbody><tr> <th class=3D"rnb-force-col" style=3D"text-align: left; font-we=
+ight: normal; padding-right: 0px;" valign=3D"top"> <table border=3D"0" vali=
+gn=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" align=3D"left=
+" class=3D"rnb-col-1"> <tbody><tr> <td style=3D"font-size:14px; font-family=
+:&#39;Helvetica&#39;,&#39;Arial&#39;,Helvetica,sans-serif, sans-serif; colo=
+r:#3c4858;"><div><span style=3D"font-size:16px;">During July... Take it EAS=
+Y!</span></div><div><span style=3D"font-size:16px;">8 iconic HTB retired ea=
+sy machines will be <strong>free-to-play</strong> for everyone until July 3=
+1st.</span></div></td></tr></tbody></table> </th></tr></tbody></table></td>=
+</tr><tr> <td height=3D"20" style=3D"font-size:1px; line-height:20px; mso-h=
+ide: all;">=C2=A0</td></tr></tbody></table> </td></tr></tbody></table><!--[=
+if mso]> </td><![endif]--><!--[if mso]> </tr></table><![endif]--> </div></t=
+d></tr><tr> <td align=3D"center" valign=3D"top"> <div style=3D"background-c=
+olor: rgb(255, 255, 255);"><!--[if mso]> <table align=3D"center" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;"=
+> <tr><![endif]--><!--[if mso]> <td valign=3D"top" width=3D"590" style=3D"w=
+idth:590px;"><![endif]--> <table class=3D"rnb-del-min-width" width=3D"100%"=
+ cellpadding=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-width:100%; =
+-webkit-backface-visibility: hidden; line-height: 10px;" name=3D"Layout_24"=
+ id=3D"Layout_24"> <tbody><tr> <td class=3D"rnb-del-min-width" valign=3D"to=
+p" align=3D"center" style=3D"min-width: 590px;"> <a href=3D"#" name=3D"Layo=
+ut_24"></a> <table width=3D"100%" class=3D"rnb-container" cellpadding=3D"0"=
+ border=3D"0" bgcolor=3D"#ffffff" align=3D"center" cellspacing=3D"0" style=
+=3D"background-color: rgb(255, 255, 255);"> <tbody><tr> <td valign=3D"top" =
+align=3D"center"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0"> =
+<tbody><tr> <td> <div style=3D"border-radius:5px; width:590;;max-width:1200=
+px !important;border-top:0px None #000;border-right:0px None #000;border-bo=
+ttom:0px None #000;border-left:0px None #000;border-collapse: separate;bord=
+er-radius: 0px;"> <div><img ng-if=3D"col.img.source !=3D&#39;url&#39;" bord=
+er=3D"0" hspace=3D"0" vspace=3D"0" width=3D"590" class=3D"rnb-header-img" a=
+lt=3D"" style=3D"display:block; float:left; border-radius: 5px; " src=3D"ht=
+tps://6650o.img.ag.d.sendibm3.com/im/3579920/55dda3c1df946a60d352b3afd0940b=
+e82fc9a8cb3464cd82c8f5380ca68249ab.jpeg?e=3DdLiP1K8k08oCAEpQnzWd6XLydi8KGVv=
+iuju0uTI4JNzhPA3ATRx4cpNntZp7Nic_R4twm1xdHOieKhSOojJUHm3BuboNtn74TT6v1-9IMA=
+nIBLRaZepksmUFhfpE2xKuSL3TtCmjNMawijSbdcjKfISgufsTtH4E_xDZ61MRN-7BI91eUQ7Ou=
+jcrDziuXyXdVux8k9DdEsTQb4Xv1PC6zA36su7auoY6wJ4kGJch" sib_img_id=3D"2"/></di=
+v><div style=3D"clear:both;"></div></div></td></tr></tbody></table> </td></=
+tr></tbody></table> </td></tr></tbody></table><!--[if mso]> </td><![endif]-=
+-><!--[if mso]> </tr></table><![endif]--> </div></td></tr><tr> <td align=3D=
+"center" valign=3D"top"> <div style=3D"background-color: rgb(255, 255, 255)=
+; border-radius: 0px;"><!--[if mso]> <table align=3D"center" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;"> <t=
+r><![endif]--><!--[if mso]> <td valign=3D"top" width=3D"590" style=3D"width=
+:590px;"><![endif]--> <table class=3D"rnb-del-min-width" width=3D"100%" cel=
+lpadding=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-width:100%;" nam=
+e=3D"Layout_25"> <tbody><tr> <td class=3D"rnb-del-min-width" align=3D"cente=
+r" valign=3D"top"> <a href=3D"#" name=3D"Layout_25"></a> <table width=3D"10=
+0%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-container=
+" bgcolor=3D"#ffffff" style=3D"background-color: rgb(255, 255, 255); paddin=
+g-left: 20px; padding-right: 20px; border-collapse: separate; border-radius=
+: 0px; border-bottom: 0px none rgb(200, 200, 200);"> <tbody><tr> <td height=
+=3D"20" style=3D"font-size:1px; line-height:20px; mso-hide: all;">=C2=A0</t=
+d></tr><tr> <td valign=3D"top" class=3D"rnb-container-padding" align=3D"lef=
+t"> <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+class=3D"rnb-columns-container"> <tbody><tr> <th class=3D"rnb-force-col" st=
+yle=3D"text-align: left; font-weight: normal; padding-right: 0px;" valign=
+=3D"top"> <table border=3D"0" valign=3D"top" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"100%" align=3D"left" class=3D"rnb-col-1"> <tbody><tr> <td s=
+tyle=3D"font-size:14px; font-family:&#39;Helvetica&#39;,&#39;Arial&#39;,Hel=
+vetica,sans-serif, sans-serif; color:#3c4858;"><div><span style=3D"font-siz=
+e: 16px;">Spot the &#34;Easy Month&#34; tag in the Retired Machines=C2=A0se=
+ction and get started!</span></div><div>=C2=A0</div><div><span style=3D"fon=
+t-size: 16px;">By completing all 8 machines, users will get the chance to<s=
+trong> win 1 annual VIP+ subscription</strong>! 3 random users with the abo=
+ve criteria will be picked with a draw on August 1st. Will you pwn them all=
+?=C2=A0=F0=9F=98=8E</span></div></td></tr></tbody></table> </th></tr></tbod=
+y></table></td></tr><tr> <td height=3D"5" style=3D"font-size:1px; line-heig=
+ht:5px; mso-hide: all;">=C2=A0</td></tr></tbody></table> </td></tr></tbody>=
+</table><!--[if mso]> </td><![endif]--><!--[if mso]> </tr></table><![endif]=
+--> </div></td></tr><tr> <td align=3D"center" valign=3D"top"> <div style=3D=
+"background-color: rgb(255, 255, 255); border-radius: 0px;"><!--[if mso]> <=
+table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" wid=
+th=3D"100%" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td valign=
+=3D"top" width=3D"590" style=3D"width:590px;"><![endif]--> <table class=3D"=
+rnb-del-min-width" width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacin=
+g=3D"0" style=3D"min-width:590px;" name=3D"Layout_26" id=3D"Layout_26"> <tb=
+ody><tr> <td class=3D"rnb-del-min-width" align=3D"center" valign=3D"top" st=
+yle=3D"min-width:590px;"> <a href=3D"#" name=3D"Layout_26"></a> <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mso-bu=
+tton-block rnb-container" style=3D"background-color: rgb(255, 255, 255); bo=
+rder-radius: 0px; padding-left: 20px; padding-right: 20px; border-collapse:=
+ separate;"> <tbody><tr> <td height=3D"20" style=3D"font-size:1px; line-hei=
+ght:20px; mso-hide: all;">=C2=A0</td></tr><tr> <td valign=3D"top" class=3D"=
+rnb-container-padding" align=3D"left"> <table width=3D"100%" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-container"> <tbody>=
+<tr> <th class=3D"rnb-force-col" valign=3D"top"> <table border=3D"0" valign=
+=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=3D"550" align=3D"center"=
+ class=3D"rnb-col-1"> <tbody><tr> <td valign=3D"top"> <table cellpadding=3D=
+"0" border=3D"0" align=3D"center" cellspacing=3D"0" class=3D"rnb-btn-col-co=
+ntent" style=3D"margin:auto; border-collapse: separate;"> <tbody><tr> <td w=
+idth=3D"auto" valign=3D"middle" bgcolor=3D"#9FEF00" align=3D"center" height=
+=3D"48" style=3D"font-size:18px; font-family:Arial,Helvetica,sans-serif; co=
+lor:#1A2332; font-weight:normal; padding-left:20px; padding-right:20px; ver=
+tical-align: middle; background-color:#9FEF00;border-radius:10px;border-top=
+:0px None #000;border-right:0px None #000;border-bottom:0px None #000;borde=
+r-left:0px None #000;"> <span style=3D"color:#1A2332; font-weight:normal;">=
+ <a style=3D"text-decoration:none; color:#1A2332; font-weight:normal;" targ=
+et=3D"_blank" href=3D"https://6650o.r.ag.d.sendibm3.com/mk/cl/f/bo2GfGZvvY5=
+ERDcCgXwKqZXuAJMSzKtEyGqGubDqdpf61taB30ZcFPCB1TGu_pFcJUr-VoB8mWHYs2l-YNJaIL=
+Clu3ItjUfgEGrCSzmw9vVLh0B2S_ksZO8Ja2k_Hf3DRhs4sT2oRECOATyMBVPktqL29kVHBrLeU=
+rMMAT6T57_-s_oTstYzpso37RzClUXBKsxYjDp8b4QHRtHY7LH5GJx_8M5EqqP5lie8NBPLC1Zo=
+7sEqpS2VSXhn-61uNa9pqpXkUnRl6icyX3DUXwh_XGIDBfKxNvyTBmb0teUYkGN8Y4bEpAnRcf-=
+xKPrWVqbGThV-cflRyD0WM_e-ADI8PndhUT0netKFeFTcT-f2rzGp" sib_link_id=3D"1"><s=
+trong>Read The Full Story</strong></a> </span> </td></tr></tbody></table> <=
+/td></tr></tbody></table> </th> </tr></tbody></table></td></tr><tr> <td hei=
+ght=3D"20" style=3D"font-size:1px; line-height:20px; mso-hide: all;">=C2=A0=
+</td></tr></tbody></table> </td></tr></tbody></table><!--[if mso]> </td><![=
+endif]--><!--[if mso]> </tr></table><![endif]--> </div></td></tr><tr> <td a=
+lign=3D"center" valign=3D"top"> <div style=3D"background-color: rgb(255, 25=
+5, 255); border-radius: 0px;"><!--[if mso]> <table align=3D"center" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:10=
+0%;"> <tr><![endif]--><!--[if mso]> <td valign=3D"top" width=3D"590" style=
+=3D"width:590px;"><![endif]--> <table class=3D"rnb-del-min-width" width=3D"=
+100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-width:1=
+00%;" name=3D"Layout_34"> <tbody><tr> <td class=3D"rnb-del-min-width" align=
+=3D"center" valign=3D"top"> <a href=3D"#" name=3D"Layout_34"></a> <table wi=
+dth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-=
+container" bgcolor=3D"#ffffff" style=3D"background-color: rgb(255, 255, 255=
+); padding-left: 20px; padding-right: 20px; border-collapse: separate; bord=
+er-radius: 0px; border-bottom: 0px none rgb(200, 200, 200);"> <tbody><tr> <=
+td height=3D"0" style=3D"font-size:1px; line-height:0px; mso-hide: all;">=
+=C2=A0</td></tr><tr> <td valign=3D"top" class=3D"rnb-container-padding" ali=
+gn=3D"left"> <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" class=3D"rnb-columns-container"> <tbody><tr> <th class=3D"rnb-forc=
+e-col" style=3D"text-align: left; font-weight: normal; padding-right: 0px;"=
+ valign=3D"top"> <table border=3D"0" valign=3D"top" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%" align=3D"left" class=3D"rnb-col-1"> <tbody><tr>=
+ <td style=3D"font-size:14px; font-family:&#39;Helvetica&#39;,&#39;Arial&#3=
+9;,Helvetica,sans-serif, sans-serif; color:#3c4858;"><div style=3D"text-ali=
+gn: center;"><span style=3D"color:#808080;"><span style=3D"font-size: 18px;=
+"><b>_________________________</b></span></span></div></td></tr></tbody></t=
+able> </th></tr></tbody></table></td></tr><tr> <td height=3D"20" style=3D"f=
+ont-size:1px; line-height:20px; mso-hide: all;">=C2=A0</td></tr></tbody></t=
+able> </td></tr></tbody></table><!--[if mso]> </td><![endif]--><!--[if mso]=
+> </tr></table><![endif]--> </div></td></tr><tr> <td align=3D"center" valig=
+n=3D"top"> <div style=3D"background-color: rgb(255, 255, 255); border-radiu=
+s: 0px;"><!--[if mso]> <table align=3D"center" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;"> <tr><![endif]-->=
+<!--[if mso]> <td valign=3D"top" width=3D"590" style=3D"width:590px;"><![en=
+dif]--> <table width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D=
+"0" name=3D"Layout_28" id=3D"Layout_28"><tbody><tr> <td align=3D"center" va=
+lign=3D"top"><a href=3D"#" name=3D"Layout_28"></a> <table border=3D"0" widt=
+h=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-container" bgco=
+lor=3D"#ffffff" style=3D"height: 0px; background-color: rgb(255, 255, 255);=
+ border-radius: 0px; border-collapse: separate; padding-left: 20px; padding=
+-right: 20px;"><tbody><tr> <td class=3D"rnb-container-padding" style=3D"fon=
+t-size: px;font-family: ; color: ;"> <table border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" class=3D"rnb-columns-container" align=3D"left" style=3D"m=
+argin:auto;"> <tbody><tr> <th class=3D"rnb-force-col" align=3D"left" style=
+=3D"text-align: center; font-weight: normal"> <table border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" align=3D"center" class=3D"rnb-col-1"> <tbody><tr=
+> <td height=3D"10"></td></tr><tr> <td style=3D"font-family:Arial,Helvetica=
+,sans-serif; color:#3c4858; text-align:left;"> <span style=3D"color:#3c4858=
+;"><span style=3D"font-size:22px;"><span style=3D"color:#000000;"><strong>H=
+TB Academy Updates =F0=9F=93=9A</strong></span></span></span> </td></tr><tr=
+> <td height=3D"10"></td></tr></tbody></table> </th></tr></tbody></table></=
+td></tr></tbody></table> </td></tr></tbody></table><!--[if mso]> </td><![en=
+dif]--><!--[if mso]> </tr></table><![endif]--> </div></td></tr><tr> <td ali=
+gn=3D"center" valign=3D"top"> <div style=3D"background-color: rgb(255, 255,=
+ 255); border-radius: 0px;"><!--[if mso]> <table align=3D"center" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;=
+"> <tr><![endif]--><!--[if mso]> <td valign=3D"top" width=3D"590" style=3D"=
+width:590px;"><![endif]--> <table width=3D"100%" cellpadding=3D"0" border=
+=3D"0" cellspacing=3D"0" name=3D"Layout_29" id=3D"Layout_29"><tbody><tr> <t=
+d align=3D"center" valign=3D"top"><a href=3D"#" name=3D"Layout_29"></a> <ta=
+ble border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"rnb-container" bgcolor=3D"#ffffff" style=3D"height: 0px; background-col=
+or: rgb(255, 255, 255); border-radius: 0px; border-collapse: separate; padd=
+ing-left: 20px; padding-right: 20px;"><tbody><tr> <td class=3D"rnb-containe=
+r-padding" style=3D"font-size: px;font-family: ; color: ;"> <table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-container" =
+align=3D"left" style=3D"margin:auto;"> <tbody><tr> <th class=3D"rnb-force-c=
+ol" align=3D"left" style=3D"text-align: center; font-weight: normal"> <tabl=
+e border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" class=
+=3D"rnb-col-1"> <tbody><tr> <td height=3D"10"></td></tr><tr> <td style=3D"f=
+ont-family:Arial,Helvetica,sans-serif; color:#3c4858; text-align:left;"> <s=
+pan style=3D"color:#3c4858;"><span style=3D"font-size:18px;"><span style=3D=
+"color:#000000;"><strong>New Free Module</strong></span></span></span> </td=
+></tr><tr> <td height=3D"10"></td></tr></tbody></table> </th></tr></tbody><=
+/table></td></tr></tbody></table> </td></tr></tbody></table><!--[if mso]> <=
+/td><![endif]--><!--[if mso]> </tr></table><![endif]--> </div></td></tr><tr=
+> <td align=3D"center" valign=3D"top"> <div style=3D"background-color: rgb(=
+255, 255, 255);"><!--[if mso]> <table align=3D"center" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;"> <tr><![e=
+ndif]--><!--[if mso]> <td valign=3D"top" width=3D"590" style=3D"width:590px=
+;"><![endif]--> <table class=3D"rnb-del-min-width" width=3D"100%" cellpaddi=
+ng=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-width:100%; -webkit-ba=
+ckface-visibility: hidden; line-height: 10px;" name=3D"Layout_30" id=3D"Lay=
+out_30"> <tbody><tr> <td class=3D"rnb-del-min-width" valign=3D"top" align=
+=3D"center" style=3D"min-width: 590px;"> <a href=3D"#" name=3D"Layout_30"><=
+/a> <table width=3D"100%" class=3D"rnb-container" cellpadding=3D"0" border=
+=3D"0" bgcolor=3D"#ffffff" align=3D"center" cellspacing=3D"0" style=3D"back=
+ground-color: rgb(255, 255, 255);"> <tbody><tr> <td valign=3D"top" align=3D=
+"center"> <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0"> <tbody><=
+tr> <td> <div style=3D"border-radius:5px; width:590;;max-width:803px !impor=
+tant;border-top:0px None #000;border-right:0px None #000;border-bottom:0px =
+None #000;border-left:0px None #000;border-collapse: separate;border-radius=
+: 0px;"> <div><img ng-if=3D"col.img.source !=3D&#39;url&#39;" border=3D"0" =
+hspace=3D"0" vspace=3D"0" width=3D"590" class=3D"rnb-header-img" alt=3D"" s=
+tyle=3D"display:block; float:left; border-radius: 5px; " src=3D"https://665=
+0o.img.ag.d.sendibm3.com/im/3579920/038e6cc37290d1238076234d570b0b0201c4e55=
+32c2255c239a070a5c512581e.png?e=3DhOI1KHtZaD8SZLp6Nqv4JDyDr4dTWJ7htEJSfDCCx=
+zpi75CRCH8AxCJoWk92Vx-VeAjjVYgESlCdTx8Siv-hKeYth-zynboSAzfe-YweGcrG6cYtFvcu=
+-BFyJID3OA5odEdLh5TAN73SqBI4_br8s7yNwRm-0KQm-1dfl9mlWHWpPc3C4NaeWRWACgk2wCQ=
+UlpLaQ6faMLpOwomnWJqX7sBlTlNitKzWwP6UjsI" sib_img_id=3D"3"/></div><div styl=
+e=3D"clear:both;"></div></div></td></tr></tbody></table> </td></tr></tbody>=
+</table> </td></tr></tbody></table><!--[if mso]> </td><![endif]--><!--[if m=
+so]> </tr></table><![endif]--> </div></td></tr><tr> <td align=3D"center" va=
+lign=3D"top"> <div style=3D"background-color: rgb(255, 255, 255); border-ra=
+dius: 0px;"><!--[if mso]> <table align=3D"center" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;"> <tr><![endif=
+]--><!--[if mso]> <td valign=3D"top" width=3D"590" style=3D"width:590px;"><=
+![endif]--> <table width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacin=
+g=3D"0" name=3D"Layout_31" id=3D"Layout_31"><tbody><tr> <td align=3D"center=
+" valign=3D"top"><a href=3D"#" name=3D"Layout_31"></a> <table border=3D"0" =
+width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-container" =
+bgcolor=3D"#ffffff" style=3D"height: 0px; background-color: rgb(255, 255, 2=
+55); border-radius: 0px; border-collapse: separate; padding-left: 20px; pad=
+ding-right: 20px;"><tbody><tr> <td class=3D"rnb-container-padding" style=3D=
+"font-size: px;font-family: ; color: ;"> <table border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" class=3D"rnb-columns-container" align=3D"left" style=
+=3D"margin:auto;"> <tbody><tr> <th class=3D"rnb-force-col" align=3D"left" s=
+tyle=3D"text-align: center; font-weight: normal"> <table border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" align=3D"center" class=3D"rnb-col-1"> <tbody=
+><tr> <td height=3D"10"></td></tr><tr> <td style=3D"font-family:Arial,Helve=
+tica,sans-serif; color:#3c4858; text-align:left;"> <span style=3D"color:#3c=
+4858;"><span style=3D"font-size:18px;"><span style=3D"color:#000000;"><stro=
+ng>Tier 0 - Medium - General</strong></span></span></span> </td></tr><tr> <=
+td height=3D"10"></td></tr></tbody></table> </th></tr></tbody></table></td>=
+</tr></tbody></table> </td></tr></tbody></table><!--[if mso]> </td><![endif=
+]--><!--[if mso]> </tr></table><![endif]--> </div></td></tr><tr> <td align=
+=3D"center" valign=3D"top"> <div style=3D"background-color: rgb(255, 255, 2=
+55); border-radius: 0px;"><!--[if mso]> <table align=3D"center" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;">=
+ <tr><![endif]--><!--[if mso]> <td valign=3D"top" width=3D"590" style=3D"wi=
+dth:590px;"><![endif]--> <table class=3D"rnb-del-min-width" width=3D"100%" =
+cellpadding=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-width:100%;" =
+name=3D"Layout_32"> <tbody><tr> <td class=3D"rnb-del-min-width" align=3D"ce=
+nter" valign=3D"top"> <a href=3D"#" name=3D"Layout_32"></a> <table width=3D=
+"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-contai=
+ner" bgcolor=3D"#ffffff" style=3D"background-color: rgb(255, 255, 255); pad=
+ding-left: 20px; padding-right: 20px; border-collapse: separate; border-rad=
+ius: 0px; border-bottom: 0px none rgb(200, 200, 200);"> <tbody><tr> <td hei=
+ght=3D"10" style=3D"font-size:1px; line-height:10px; mso-hide: all;">=C2=A0=
+</td></tr><tr> <td valign=3D"top" class=3D"rnb-container-padding" align=3D"=
+left"> <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" class=3D"rnb-columns-container"> <tbody><tr> <th class=3D"rnb-force-col"=
+ style=3D"text-align: left; font-weight: normal; padding-right: 0px;" valig=
+n=3D"top"> <table border=3D"0" valign=3D"top" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"100%" align=3D"left" class=3D"rnb-col-1"> <tbody><tr> <td s=
+tyle=3D"font-size:14px; font-family:&#39;Helvetica&#39;,&#39;Arial&#39;,Hel=
+vetica,sans-serif, sans-serif; color:#3c4858;"><div><span style=3D"font-siz=
+e: 16px;">For both offensive and defensive security practitioners! Learn co=
+re principles of network traffic analysis and usage of tools such as Wiresh=
+ark and tcpdump.</span></div></td></tr></tbody></table> </th></tr></tbody><=
+/table></td></tr><tr> <td height=3D"5" style=3D"font-size:1px; line-height:=
+5px; mso-hide: all;">=C2=A0</td></tr></tbody></table> </td></tr></tbody></t=
+able><!--[if mso]> </td><![endif]--><!--[if mso]> </tr></table><![endif]-->=
+ </div></td></tr><tr> <td align=3D"center" valign=3D"top"> <div style=3D"ba=
+ckground-color: rgb(255, 255, 255); border-radius: 0px;"><!--[if mso]> <tab=
+le align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=
+=3D"100%" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td valign=
+=3D"top" width=3D"590" style=3D"width:590px;"><![endif]--> <table class=3D"=
+rnb-del-min-width" width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacin=
+g=3D"0" style=3D"min-width:590px;" name=3D"Layout_33" id=3D"Layout_33"> <tb=
+ody><tr> <td class=3D"rnb-del-min-width" align=3D"center" valign=3D"top" st=
+yle=3D"min-width:590px;"> <a href=3D"#" name=3D"Layout_33"></a> <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mso-bu=
+tton-block rnb-container" style=3D"background-color: rgb(255, 255, 255); bo=
+rder-radius: 0px; padding-left: 20px; padding-right: 20px; border-collapse:=
+ separate;"> <tbody><tr> <td height=3D"20" style=3D"font-size:1px; line-hei=
+ght:20px; mso-hide: all;">=C2=A0</td></tr><tr> <td valign=3D"top" class=3D"=
+rnb-container-padding" align=3D"left"> <table width=3D"100%" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-container"> <tbody>=
+<tr> <th class=3D"rnb-force-col" valign=3D"top"> <table border=3D"0" valign=
+=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=3D"550" align=3D"center"=
+ class=3D"rnb-col-1"> <tbody><tr> <td valign=3D"top"> <table cellpadding=3D=
+"0" border=3D"0" align=3D"center" cellspacing=3D"0" class=3D"rnb-btn-col-co=
+ntent" style=3D"margin:auto; border-collapse: separate;"> <tbody><tr> <td w=
+idth=3D"auto" valign=3D"middle" bgcolor=3D"#9FEF00" align=3D"center" height=
+=3D"48" style=3D"font-size:18px; font-family:Arial,Helvetica,sans-serif; co=
+lor:#1A2332; font-weight:normal; padding-left:20px; padding-right:20px; ver=
+tical-align: middle; background-color:#9FEF00;border-radius:10px;border-top=
+:0px None #000;border-right:0px None #000;border-bottom:0px None #000;borde=
+r-left:0px None #000;"> <span style=3D"color:#1A2332; font-weight:normal;">=
+ <a style=3D"text-decoration:none; color:#1A2332; font-weight:normal;" targ=
+et=3D"_blank" href=3D"https://6650o.r.ag.d.sendibm3.com/mk/cl/f/iGCt4Djj8bA=
+hrYB9gSA5cIhlPZSiTNBJaETzmiFDM_WcY3ISaK7xcwYYHQBZBoYgu_Tt5ZE5dUvwLIzYV9eQrf=
+m-GZWit-1endyuocXwAckXL2E72cUdIvxbkzU_diHp4AH_9rF8e_ZRfF2wI4qmJKSffvGqDpBu7=
+oZOxzEJRGkm7ATRac4xV-f7Q5tJ-uA_wAhEbMOSpJFKC6qtQ_9uw14YFHBXsuj7KBQ3LLRXwynD=
+UhGXqBvzZt0sVTzHfVNm2MviSagc4yQ_BKd_BammCPCipHZUaRY2pBkwOtnKtTElZOmlUsWQHl-=
+ZVRxZRvDBknfjYZiteoFlCB3EnECb9ZI9L8RXHcEiyELPBi-taI402rseThaLlJsNIz074V6hBD=
+dt4g" sib_link_id=3D"2"><strong>Start The Module</strong></a> </span> </td>=
+</tr></tbody></table> </td></tr></tbody></table> </th> </tr></tbody></table=
+></td></tr><tr> <td height=3D"20" style=3D"font-size:1px; line-height:20px;=
+ mso-hide: all;">=C2=A0</td></tr></tbody></table> </td></tr></tbody></table=
+><!--[if mso]> </td><![endif]--><!--[if mso]> </tr></table><![endif]--> </d=
+iv></td></tr><tr> <td align=3D"center" valign=3D"top"> <div style=3D"backgr=
+ound-color: rgb(255, 255, 255); border-radius: 0px;"><!--[if mso]> <table a=
+lign=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"1=
+00%" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td valign=3D"top=
+" width=3D"590" style=3D"width:590px;"><![endif]--> <table width=3D"100%" c=
+ellpadding=3D"0" border=3D"0" cellspacing=3D"0" name=3D"Layout_37" id=3D"La=
+yout_37"><tbody><tr> <td align=3D"center" valign=3D"top"><a href=3D"#" name=
+=3D"Layout_37"></a> <table border=3D"0" width=3D"100%" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff" style=3D"height=
+: 0px; background-color: rgb(255, 255, 255); border-radius: 0px; border-col=
+lapse: separate; padding-left: 20px; padding-right: 20px;"><tbody><tr> <td =
+class=3D"rnb-container-padding" style=3D"font-size: px;font-family: ; color=
+: ;"> <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-=
+columns-container" align=3D"left" style=3D"margin:auto;"> <tbody><tr> <th c=
+lass=3D"rnb-force-col" align=3D"left" style=3D"text-align: center; font-wei=
+ght: normal"> <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" class=3D"rnb-col-1"> <tbody><tr> <td height=3D"10"></td></tr><t=
+r> <td style=3D"font-family:Arial,Helvetica,sans-serif; color:#3c4858; text=
+-align:left;"> <span style=3D"color:#3c4858;"><span style=3D"font-size:18px=
+;"><span style=3D"color:#000000;"><strong>Module Update - Windows Fundament=
+als</strong></span></span></span> </td></tr><tr> <td height=3D"10"></td></t=
+r></tbody></table> </th></tr></tbody></table></td></tr></tbody></table> </t=
+d></tr></tbody></table><!--[if mso]> </td><![endif]--><!--[if mso]> </tr></=
+table><![endif]--> </div></td></tr><tr> <td align=3D"center" valign=3D"top"=
+> <div style=3D"background-color: rgb(255, 255, 255); border-radius: 0px;">=
+<!--[if mso]> <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" width=3D"100%" style=3D"width:100%;"> <tr><![endif]--><!--[if m=
+so]> <td valign=3D"top" width=3D"590" style=3D"width:590px;"><![endif]--> <=
+table class=3D"rnb-del-min-width" width=3D"100%" cellpadding=3D"0" border=
+=3D"0" cellspacing=3D"0" style=3D"min-width:100%;" name=3D"Layout_36"> <tbo=
+dy><tr> <td class=3D"rnb-del-min-width" align=3D"center" valign=3D"top"> <a=
+ href=3D"#" name=3D"Layout_36"></a> <table width=3D"100%" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff"=
+ style=3D"background-color: rgb(255, 255, 255); padding-left: 20px; padding=
+-right: 20px; border-collapse: separate; border-radius: 0px; border-bottom:=
+ 0px none rgb(200, 200, 200);"> <tbody><tr> <td height=3D"20" style=3D"font=
+-size:1px; line-height:20px; mso-hide: all;">=C2=A0</td></tr><tr> <td valig=
+n=3D"top" class=3D"rnb-container-padding" align=3D"left"> <table width=3D"1=
+00%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-=
+container"> <tbody><tr> <th class=3D"rnb-force-col" style=3D"text-align: le=
+ft; font-weight: normal; padding-right: 0px;" valign=3D"top"> <table border=
+=3D"0" valign=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" al=
+ign=3D"left" class=3D"rnb-col-1"> <tbody><tr> <td style=3D"font-size:14px; =
+font-family:&#39;Helvetica&#39;,&#39;Arial&#39;,Helvetica,sans-serif, sans-=
+serif; color:#3c4858;"><div><span style=3D"font-size: 16px;">Did you comple=
+te the &#34;<a href=3D"https://6650o.r.ag.d.sendibm3.com/mk/cl/f/yFDY045Wpj=
+HiNHDNnS1ZNsiktCgqVdgEl1_2QqvpB_gzdwHZXdmH1flt4DT1GK0N8H5K6FeWhwY8axNBflfbW=
+9QRkpKlMik_2R_aiO6ZEYuinGB0lzCUKA-LpwMtteKqWTPL9OznomyD8p7GGeHDq9DKNlNwRMoO=
+DisHzayVZtb71zULwVy9UIU7MKQEUlt4Nr5sQAwWuHJ65qTVdQxUnnUbUNDeu0IMyh3yOs76qCk=
+ZorQzAD2k8EwHt9FprsVvxWyR-hpmIduzYT0pEx-lyDaSWWim-dKboByGxehFAmKJsu-d_mZpam=
+4_sJR1VDM43CT1KWVd37zf8Pa8AnaFRZvtwZjqZtFzYZYWv1vCcSCinxDAg-cf" style=3D"te=
+xt-decoration: underline; color: rgb(0, 146, 255);" sib_link_id=3D"3">Windo=
+ws Fundamentals</a>&#34; module already? Time to go back at it, there are u=
+pdates! Check out the new sections:</span></div><ul><li><span style=3D"font=
+-size:16px;">NTFS vs Share Permissions</span></li><li><span style=3D"font-s=
+ize:16px;">Service Permissions</span></li><li><span style=3D"font-size:16px=
+;">Enhanced Skills Assessment</span></li></ul></td></tr></tbody></table> </=
+th></tr></tbody></table></td></tr><tr> <td height=3D"5" style=3D"font-size:=
+1px; line-height:5px; mso-hide: all;">=C2=A0</td></tr></tbody></table> </td=
+></tr></tbody></table><!--[if mso]> </td><![endif]--><!--[if mso]> </tr></t=
+able><![endif]--> </div></td></tr><tr> <td align=3D"center" valign=3D"top">=
+ <div style=3D"background-color: rgb(255, 255, 255); border-radius: 0px;"><=
+!--[if mso]> <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" width=3D"100%" style=3D"width:100%;"> <tr><![endif]--><!--[if ms=
+o]> <td valign=3D"top" width=3D"590" style=3D"width:590px;"><![endif]--> <t=
+able class=3D"rnb-del-min-width" width=3D"100%" cellpadding=3D"0" border=3D=
+"0" cellspacing=3D"0" style=3D"min-width:100%;" name=3D"Layout_43"> <tbody>=
+<tr> <td class=3D"rnb-del-min-width" align=3D"center" valign=3D"top"> <a hr=
+ef=3D"#" name=3D"Layout_43"></a> <table width=3D"100%" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff" st=
+yle=3D"background-color: rgb(255, 255, 255); padding-left: 20px; padding-ri=
+ght: 20px; border-collapse: separate; border-radius: 0px; border-bottom: 0p=
+x none rgb(200, 200, 200);"> <tbody><tr> <td height=3D"0" style=3D"font-siz=
+e:1px; line-height:0px; mso-hide: all;">=C2=A0</td></tr><tr> <td valign=3D"=
+top" class=3D"rnb-container-padding" align=3D"left"> <table width=3D"100%" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-conta=
+iner"> <tbody><tr> <th class=3D"rnb-force-col" style=3D"text-align: left; f=
+ont-weight: normal; padding-right: 0px;" valign=3D"top"> <table border=3D"0=
+" valign=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" align=
+=3D"left" class=3D"rnb-col-1"> <tbody><tr> <td style=3D"font-size:14px; fon=
+t-family:&#39;Helvetica&#39;,&#39;Arial&#39;,Helvetica,sans-serif, sans-ser=
+if; color:#3c4858;"><div style=3D"text-align: center;"><span style=3D"color=
+:#808080;"><span style=3D"font-size: 18px;"><b>_________________________</b=
+></span></span></div></td></tr></tbody></table> </th></tr></tbody></table><=
+/td></tr><tr> <td height=3D"20" style=3D"font-size:1px; line-height:20px; m=
+so-hide: all;">=C2=A0</td></tr></tbody></table> </td></tr></tbody></table><=
+!--[if mso]> </td><![endif]--><!--[if mso]> </tr></table><![endif]--> </div=
+></td></tr><tr> <td align=3D"center" valign=3D"top"> <div style=3D"backgrou=
+nd-color: rgb(255, 255, 255); border-radius: 0px;"><!--[if mso]> <table ali=
+gn=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100=
+%" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td valign=3D"top" =
+width=3D"590" style=3D"width:590px;"><![endif]--> <table width=3D"100%" cel=
+lpadding=3D"0" border=3D"0" cellspacing=3D"0" name=3D"Layout_38" id=3D"Layo=
+ut_38"><tbody><tr> <td align=3D"center" valign=3D"top"><a href=3D"#" name=
+=3D"Layout_38"></a> <table border=3D"0" width=3D"100%" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff" style=3D"height=
+: 0px; background-color: rgb(255, 255, 255); border-radius: 0px; border-col=
+lapse: separate; padding-left: 20px; padding-right: 20px;"><tbody><tr> <td =
+class=3D"rnb-container-padding" style=3D"font-size: px;font-family: ; color=
+: ;"> <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-=
+columns-container" align=3D"left" style=3D"margin:auto;"> <tbody><tr> <th c=
+lass=3D"rnb-force-col" align=3D"left" style=3D"text-align: center; font-wei=
+ght: normal"> <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" class=3D"rnb-col-1"> <tbody><tr> <td height=3D"10"></td></tr><t=
+r> <td style=3D"font-family:Arial,Helvetica,sans-serif; color:#3c4858; text=
+-align:left;"> <span style=3D"color:#3c4858;"><span style=3D"font-size:22px=
+;"><span style=3D"color:#000000;"><strong>HTB Community Manifesto=C2=A0=F0=
+=9F=93=9C</strong></span></span></span> </td></tr><tr> <td height=3D"10"></=
+td></tr></tbody></table> </th></tr></tbody></table></td></tr></tbody></tabl=
+e> </td></tr></tbody></table><!--[if mso]> </td><![endif]--><!--[if mso]> <=
+/tr></table><![endif]--> </div></td></tr><tr> <td align=3D"center" valign=
+=3D"top"> <div style=3D"background-color: rgb(255, 255, 255); border-radius=
+: 0px;"><!--[if mso]> <table align=3D"center" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;"> <tr><![endif]--><=
+!--[if mso]> <td valign=3D"top" width=3D"590" style=3D"width:590px;"><![end=
+if]--> <table class=3D"rnb-del-min-width" width=3D"100%" cellpadding=3D"0" =
+border=3D"0" cellspacing=3D"0" style=3D"min-width:100%;" name=3D"Layout_39"=
+> <tbody><tr> <td class=3D"rnb-del-min-width" align=3D"center" valign=3D"to=
+p"> <a href=3D"#" name=3D"Layout_39"></a> <table width=3D"100%" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#f=
+fffff" style=3D"background-color: rgb(255, 255, 255); padding-left: 20px; p=
+adding-right: 20px; border-collapse: separate; border-radius: 0px; border-b=
+ottom: 0px none rgb(200, 200, 200);"> <tbody><tr> <td height=3D"20" style=
+=3D"font-size:1px; line-height:20px; mso-hide: all;">=C2=A0</td></tr><tr> <=
+td valign=3D"top" class=3D"rnb-container-padding" align=3D"left"> <table wi=
+dth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-=
+columns-container"> <tbody><tr> <th class=3D"rnb-force-col" style=3D"text-a=
+lign: left; font-weight: normal; padding-right: 0px;" valign=3D"top"> <tabl=
+e border=3D"0" valign=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=3D"=
+100%" align=3D"left" class=3D"rnb-col-1"> <tbody><tr> <td style=3D"font-siz=
+e:14px; font-family:&#39;Helvetica&#39;,&#39;Arial&#39;,Helvetica,sans-seri=
+f, sans-serif; color:#3c4858;"><div><span style=3D"font-size: 16px;">Whatev=
+er culture, country, religion, gender, sexual orientation, or education lev=
+el you may have, the HTB community will always be your place to be! How do =
+we keep it warm and welcoming for every hacker? Our own <a href=3D"https://=
+6650o.r.ag.d.sendibm3.com/mk/cl/f/C4Fckfh8GRsYjsFuA3m3gWcirEZoqjWNQ2HAm95hI=
+IEabN18vn30Ra6hg4coHvZulgLWRaWkrCezxdfdqTHV64lYDLkdCfZnflSOkvWs6XVfH0yFx_-F=
+ddM9HJeiPCd8f-lb1onfFzeqKOOpDxdcTzMgqNuNe6W5XRFB5WtazcMVMsp2qV3yFVyWQZbhG2A=
+4u3mlPfL2OWFI1S3lF06ktmmrR_r7FSzMU2iDQer7sNYxcvbo5ahS94mAchk2hNXqHBDDQOfpWs=
+6fynH2c6vKRaojzmC8KmFjHL84P-5R4n0I4H7F42bdcGdAJZo9sSZmWL1mwxs" style=3D"tex=
+t-decoration: underline; color: rgb(0, 146, 255);" sib_link_id=3D"4">r0adru=
+nn3r</a> is here to tell you!</span></div></td></tr></tbody></table> </th><=
+/tr></tbody></table></td></tr><tr> <td height=3D"10" style=3D"font-size:1px=
+; line-height:10px; mso-hide: all;">=C2=A0</td></tr></tbody></table> </td><=
+/tr></tbody></table><!--[if mso]> </td><![endif]--><!--[if mso]> </tr></tab=
+le><![endif]--> </div></td></tr><tr> <td align=3D"center" valign=3D"top"> <=
+div style=3D"background-color: rgb(255, 255, 255);"><!--[if mso]> <table al=
+ign=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"10=
+0%" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td valign=3D"top"=
+ width=3D"590" style=3D"width:590px;"><![endif]--> <table class=3D"rnb-del-=
+min-width" width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" =
+style=3D"min-width:100%; -webkit-backface-visibility: hidden; line-height: =
+10px;" name=3D"Layout_40" id=3D"Layout_40"> <tbody><tr> <td class=3D"rnb-de=
+l-min-width" valign=3D"top" align=3D"center" style=3D"min-width: 590px;"> <=
+a href=3D"#" name=3D"Layout_40"></a> <table width=3D"100%" class=3D"rnb-con=
+tainer" cellpadding=3D"0" border=3D"0" bgcolor=3D"#ffffff" align=3D"center"=
+ cellspacing=3D"0" style=3D"background-color: rgb(255, 255, 255);"> <tbody>=
+<tr> <td valign=3D"top" align=3D"center"> <table cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0"> <tbody><tr> <td> <div style=3D"border-radius:5px; w=
+idth:590;;max-width:961px !important;border-top:0px None #000;border-right:=
+0px None #000;border-bottom:0px None #000;border-left:0px None #000;border-=
+collapse: separate;border-radius: 0px;"> <div><img ng-if=3D"col.img.source =
+!=3D&#39;url&#39;" border=3D"0" hspace=3D"0" vspace=3D"0" width=3D"590" cla=
+ss=3D"rnb-header-img" alt=3D"" style=3D"display:block; float:left; border-r=
+adius: 5px; " src=3D"https://6650o.img.ag.d.sendibm3.com/im/3579920/68ada66=
+85f7ca07ccab8a770bf0d59f4ee868bf767a61b7a7f76b5658f7c6712.png?e=3DW1PAyZAoY=
+3uYOMvgHrSyTJ3UyLvgTPYgaeZvjenhWBFVaZanpRsyiyTyBG2bDsTy56AJmkfuXWGV3-CcNUC9=
+W4l-39NbebEJDUjGofTdp0FdXeQm-KuKgSnBQsE_A__wNOjKXva2B0CsLUlLP-azxm8DsH0cSvD=
+cFlgMzbriBRdQ31teg0Iyo3LE-QTuq3pe80PTeeAsSnTU1av2BNL1wBas1mJiyWyppmFFyJI" s=
+ib_img_id=3D"4"/></div><div style=3D"clear:both;"></div></div></td></tr></t=
+body></table> </td></tr></tbody></table> </td></tr></tbody></table><!--[if =
+mso]> </td><![endif]--><!--[if mso]> </tr></table><![endif]--> </div></td><=
+/tr><tr> <td align=3D"center" valign=3D"top"> <div style=3D"background-colo=
+r: rgb(255, 255, 255); border-radius: 0px;"><!--[if mso]> <table align=3D"c=
+enter" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" styl=
+e=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td valign=3D"top" width=
+=3D"590" style=3D"width:590px;"><![endif]--> <table class=3D"rnb-del-min-wi=
+dth" width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" style=
+=3D"min-width:590px;" name=3D"Layout_41" id=3D"Layout_41"> <tbody><tr> <td =
+class=3D"rnb-del-min-width" align=3D"center" valign=3D"top" style=3D"min-wi=
+dth:590px;"> <a href=3D"#" name=3D"Layout_41"></a> <table width=3D"100%" bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mso-button-block rn=
+b-container" style=3D"background-color: rgb(255, 255, 255); border-radius: =
+0px; padding-left: 20px; padding-right: 20px; border-collapse: separate;"> =
+<tbody><tr> <td height=3D"20" style=3D"font-size:1px; line-height:20px; mso=
+-hide: all;">=C2=A0</td></tr><tr> <td valign=3D"top" class=3D"rnb-container=
+-padding" align=3D"left"> <table width=3D"100%" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" class=3D"rnb-columns-container"> <tbody><tr> <th clas=
+s=3D"rnb-force-col" valign=3D"top"> <table border=3D"0" valign=3D"top" cell=
+spacing=3D"0" cellpadding=3D"0" width=3D"550" align=3D"center" class=3D"rnb=
+-col-1"> <tbody><tr> <td valign=3D"top"> <table cellpadding=3D"0" border=3D=
+"0" align=3D"center" cellspacing=3D"0" class=3D"rnb-btn-col-content" style=
+=3D"margin:auto; border-collapse: separate;"> <tbody><tr> <td width=3D"auto=
+" valign=3D"middle" bgcolor=3D"#9FEF00" align=3D"center" height=3D"48" styl=
+e=3D"font-size:18px; font-family:Arial,Helvetica,sans-serif; color:#1A2332;=
+ font-weight:normal; padding-left:20px; padding-right:20px; vertical-align:=
+ middle; background-color:#9FEF00;border-radius:10px;border-top:0px None #0=
+00;border-right:0px None #000;border-bottom:0px None #000;border-left:0px N=
+one #000;"> <span style=3D"color:#1A2332; font-weight:normal;"> <a style=3D=
+"text-decoration:none; color:#1A2332; font-weight:normal;" target=3D"_blank=
+" href=3D"https://6650o.r.ag.d.sendibm3.com/mk/cl/f/QNevAQCZaFkkStKJzYSJOSA=
+XIYPOCr6lJKwJSYlptAa1OSwmnO3ALSDkG_bpUH4oIEXYFOg5AqcCmPbpV9rn0mAecY0EMmxAvz=
+sbNX2WCpX7IEgN5u4ikC4Jzkw9qFUPKz5IV_MwROO-ybJvtvWUjTU-EIHDWgRcz7jmMK1Wj0T8j=
+iuDPdBgcpIuFcLNbCUsb3eYA59HPqGPF2eNuLQ3qCKOwqPkQ2HrNY6iqD7MOYSQCAut9UouY3sH=
+-97QSAXSC7XIBX3uM199y5_p_kvtmjU22eqUkV9dUA5yBUAJKt3xUATNYur1vGvgztUBbnZp1vo=
+Q-2Abf_Notbo0LrCXUwyuFlg2wXpE5wQ" sib_link_id=3D"5"><strong>Take A Read</st=
+rong></a> </span> </td></tr></tbody></table> </td></tr></tbody></table> </t=
+h> </tr></tbody></table></td></tr><tr> <td height=3D"20" style=3D"font-size=
+:1px; line-height:20px; mso-hide: all;">=C2=A0</td></tr></tbody></table> </=
+td></tr></tbody></table><!--[if mso]> </td><![endif]--><!--[if mso]> </tr><=
+/table><![endif]--> </div></td></tr><tr> <td align=3D"center" valign=3D"top=
+"> <div style=3D"background-color: rgb(255, 255, 255); border-radius: 0px;"=
+><!--[if mso]> <table align=3D"center" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%" style=3D"width:100%;"> <tr><![endif]--><!--[if =
+mso]> <td valign=3D"top" width=3D"590" style=3D"width:590px;"><![endif]--> =
+<table class=3D"rnb-del-min-width" width=3D"100%" cellpadding=3D"0" border=
+=3D"0" cellspacing=3D"0" style=3D"min-width:100%;" name=3D"Layout_42"> <tbo=
+dy><tr> <td class=3D"rnb-del-min-width" align=3D"center" valign=3D"top"> <a=
+ href=3D"#" name=3D"Layout_42"></a> <table width=3D"100%" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff"=
+ style=3D"background-color: rgb(255, 255, 255); padding-left: 20px; padding=
+-right: 20px; border-collapse: separate; border-radius: 0px; border-bottom:=
+ 0px none rgb(200, 200, 200);"> <tbody><tr> <td height=3D"5" style=3D"font-=
+size:1px; line-height:5px; mso-hide: all;">=C2=A0</td></tr><tr> <td valign=
+=3D"top" class=3D"rnb-container-padding" align=3D"left"> <table width=3D"10=
+0%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-c=
+ontainer"> <tbody><tr> <th class=3D"rnb-force-col" style=3D"text-align: lef=
+t; font-weight: normal; padding-right: 0px;" valign=3D"top"> <table border=
+=3D"0" valign=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" al=
+ign=3D"left" class=3D"rnb-col-1"> <tbody><tr> <td style=3D"font-size:14px; =
+font-family:&#39;Helvetica&#39;,&#39;Arial&#39;,Helvetica,sans-serif, sans-=
+serif; color:#3c4858;"><div style=3D"text-align: center;"><span style=3D"fo=
+nt-size: 16px;">P.S. Our Discord server is the=C2=A0=F0=9F=92=9A of Hack Th=
+e Box. <a href=3D"https://6650o.r.ag.d.sendibm3.com/mk/cl/f/nuORdMRJGQqKubK=
+3XgoF7BW0UBf1gr7Juvo0sQL-C3Q9Adec8E5JscGXF8P8NRZtalCpjSVpVXSOhPzob7Sy4rQJNa=
+F14UxtKrMdY3VJDzWJE75NV0lbB5Pn4xAXXd-yjdSqgPhCLhyVXHWF7k4AqTcmxo4thJXlGrN0m=
+jbYreyYB21EsP-YTV4BU-E-lBzZrJ5_JP_s69vuC83RwhBVRZH61L_Ni7SQP-EjcAPHvkh6l1UA=
+s83ZB7IIUa_iJzUOfbarVyd3ie3dTp1TLiYa03lM94PUfbNZgJRE71JmvIJi22OkIoYmSuL07hx=
+gYIxc06GD24HtnGZS" style=3D"text-decoration: underline; color: rgb(0, 146, =
+255);" sib_link_id=3D"6">Join</a> and=C2=A0start chatting!</span></div></td=
+></tr></tbody></table> </th></tr></tbody></table></td></tr><tr> <td height=
+=3D"10" style=3D"font-size:1px; line-height:10px; mso-hide: all;">=C2=A0</t=
+d></tr></tbody></table> </td></tr></tbody></table><!--[if mso]> </td><![end=
+if]--><!--[if mso]> </tr></table><![endif]--> </div></td></tr><tr> <td alig=
+n=3D"center" valign=3D"top"> <div style=3D"background-color: rgb(255, 255, =
+255); border-radius: 0px;"><!--[if mso]> <table align=3D"center" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;"=
+> <tr><![endif]--><!--[if mso]> <td valign=3D"top" width=3D"590" style=3D"w=
+idth:590px;"><![endif]--> <table class=3D"rnb-del-min-width" width=3D"100%"=
+ cellpadding=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-width:100%;"=
+ name=3D"Layout_46"> <tbody><tr> <td class=3D"rnb-del-min-width" align=3D"c=
+enter" valign=3D"top"> <a href=3D"#" name=3D"Layout_46"></a> <table width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-con=
+tainer" bgcolor=3D"#ffffff" style=3D"background-color: rgb(255, 255, 255); =
+padding-left: 20px; padding-right: 20px; border-collapse: separate; border-=
+radius: 0px; border-bottom: 0px none rgb(200, 200, 200);"> <tbody><tr> <td =
+height=3D"0" style=3D"font-size:1px; line-height:0px; mso-hide: all;">=C2=
+=A0</td></tr><tr> <td valign=3D"top" class=3D"rnb-container-padding" align=
+=3D"left"> <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"rnb-columns-container"> <tbody><tr> <th class=3D"rnb-force-=
+col" style=3D"text-align: left; font-weight: normal; padding-right: 0px;" v=
+align=3D"top"> <table border=3D"0" valign=3D"top" cellspacing=3D"0" cellpad=
+ding=3D"0" width=3D"100%" align=3D"left" class=3D"rnb-col-1"> <tbody><tr> <=
+td style=3D"font-size:14px; font-family:&#39;Helvetica&#39;,&#39;Arial&#39;=
+,Helvetica,sans-serif, sans-serif; color:#3c4858;"><div style=3D"text-align=
+: center;"><span style=3D"color:#808080;"><span style=3D"font-size: 18px;">=
+<b>_________________________</b></span></span></div></td></tr></tbody></tab=
+le> </th></tr></tbody></table></td></tr><tr> <td height=3D"20" style=3D"fon=
+t-size:1px; line-height:20px; mso-hide: all;">=C2=A0</td></tr></tbody></tab=
+le> </td></tr></tbody></table><!--[if mso]> </td><![endif]--><!--[if mso]> =
+</tr></table><![endif]--> </div></td></tr><tr> <td align=3D"center" valign=
+=3D"top"> <div style=3D"background-color: rgb(255, 255, 255); border-radius=
+: 0px;"><!--[if mso]> <table align=3D"center" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;"> <tr><![endif]--><=
+!--[if mso]> <td valign=3D"top" width=3D"590" style=3D"width:590px;"><![end=
+if]--> <table width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"=
+0" name=3D"Layout_47" id=3D"Layout_47"><tbody><tr> <td align=3D"center" val=
+ign=3D"top"><a href=3D"#" name=3D"Layout_47"></a> <table border=3D"0" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-container" bgcol=
+or=3D"#ffffff" style=3D"height: 0px; background-color: rgb(255, 255, 255); =
+border-radius: 0px; border-collapse: separate; padding-left: 20px; padding-=
+right: 20px;"><tbody><tr> <td class=3D"rnb-container-padding" style=3D"font=
+-size: px;font-family: ; color: ;"> <table border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" class=3D"rnb-columns-container" align=3D"left" style=3D"ma=
+rgin:auto;"> <tbody><tr> <th class=3D"rnb-force-col" align=3D"left" style=
+=3D"text-align: center; font-weight: normal"> <table border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" align=3D"center" class=3D"rnb-col-1"> <tbody><tr=
+> <td height=3D"10"></td></tr><tr> <td style=3D"font-family:Arial,Helvetica=
+,sans-serif; color:#3c4858; text-align:left;"> <span style=3D"color:#3c4858=
+;"><span style=3D"font-size:22px;"><span style=3D"color:#000000;"><strong>U=
+pcoming Machines</strong></span></span></span> </td></tr><tr> <td height=3D=
+"10"></td></tr></tbody></table> </th></tr></tbody></table></td></tr></tbody=
+></table> </td></tr></tbody></table><!--[if mso]> </td><![endif]--><!--[if =
+mso]> </tr></table><![endif]--> </div></td></tr><tr> <td align=3D"center" v=
+align=3D"top"> <div style=3D"background-color: rgb(255, 255, 255);"><!--[if=
+ mso]> <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"100%" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> =
+<td valign=3D"top" width=3D"590" style=3D"width:590px;"><![endif]--> <table=
+ class=3D"rnb-del-min-width" width=3D"100%" cellpadding=3D"0" border=3D"0" =
+cellspacing=3D"0" style=3D"min-width:100%; -webkit-backface-visibility: hid=
+den; line-height: 10px;" name=3D"Layout_49" id=3D"Layout_49"> <tbody><tr> <=
+td class=3D"rnb-del-min-width" valign=3D"top" align=3D"center" style=3D"min=
+-width: 590px;"> <a href=3D"#" name=3D"Layout_49"></a> <table width=3D"100%=
+" class=3D"rnb-container" cellpadding=3D"0" border=3D"0" bgcolor=3D"#ffffff=
+" align=3D"center" cellspacing=3D"0" style=3D"background-color: rgb(255, 25=
+5, 255);"> <tbody><tr> <td valign=3D"top" align=3D"center"> <table cellspac=
+ing=3D"0" cellpadding=3D"0" border=3D"0"> <tbody><tr> <td> <div style=3D"bo=
+rder-radius:5px; width:590;;max-width:1092px !important;border-top:0px None=
+ #000;border-right:0px None #000;border-bottom:0px None #000;border-left:0p=
+x None #000;border-collapse: separate;border-radius: 0px;"> <div><img ng-if=
+=3D"col.img.source !=3D&#39;url&#39;" border=3D"0" hspace=3D"0" vspace=3D"0=
+" width=3D"590" class=3D"rnb-header-img" alt=3D"" style=3D"display:block; f=
+loat:left; border-radius: 5px; " src=3D"https://6650o.img.ag.d.sendibm3.com=
+/im/3579920/edc10a647f52c2ddb1ccde4a5128d0f21003d210a6d667a3bcedfbf024fe6b4=
+d.jpeg?e=3DczkUWWHv6MVvqnvr1p05RasKqmrlYoQrfkG5vIPbbQIyP6KP8c2ciWEwdjEovnVN=
+lmF1cVN0Ls2rJuHJfXGGfxa1ukdsV75rHr8ZMdVWnJ5DlrGzTF31CaFej7pHIQvCWYsF-6WrK6p=
+x39rlHjBBI9hLFUanyK0JhXgLkdLyy3pUx2fCNpeGfomy2JCtxb5Annd4t3FQNqRddM_4Kz5gby=
+IFcoiCetQ-KFDNoqBR" sib_img_id=3D"5"/></div><div style=3D"clear:both;"></di=
+v></div></td></tr></tbody></table> </td></tr></tbody></table> </td></tr></t=
+body></table><!--[if mso]> </td><![endif]--><!--[if mso]> </tr></table><![e=
+ndif]--> </div></td></tr><tr> <td align=3D"center" valign=3D"top"> <div sty=
+le=3D"background-color: rgb(255, 255, 255); border-radius: 0px;"><!--[if ms=
+o]> <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" width=3D"100%" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td v=
+align=3D"top" width=3D"590" style=3D"width:590px;"><![endif]--> <table clas=
+s=3D"rnb-del-min-width" width=3D"100%" cellpadding=3D"0" border=3D"0" cells=
+pacing=3D"0" style=3D"min-width:100%;" name=3D"Layout_21"> <tbody><tr> <td =
+class=3D"rnb-del-min-width" align=3D"center" valign=3D"top"> <a href=3D"#" =
+name=3D"Layout_21"></a> <table width=3D"100%" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff" style=3D"ba=
+ckground-color: rgb(255, 255, 255); padding-left: 20px; padding-right: 20px=
+; border-collapse: separate; border-radius: 0px; border-bottom: 0px none rg=
+b(200, 200, 200);"> <tbody><tr> <td height=3D"0" style=3D"font-size:1px; li=
+ne-height:0px; mso-hide: all;">=C2=A0</td></tr><tr> <td valign=3D"top" clas=
+s=3D"rnb-container-padding" align=3D"left"> <table width=3D"100%" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-container"> <t=
+body><tr> <th class=3D"rnb-force-col" style=3D"text-align: left; font-weigh=
+t: normal; padding-right: 0px;" valign=3D"top"> <table border=3D"0" valign=
+=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" align=3D"left" =
+class=3D"rnb-col-1"> <tbody><tr> <td style=3D"font-size:14px; font-family:&=
+#39;Helvetica&#39;,&#39;Arial&#39;,Helvetica,sans-serif, sans-serif; color:=
+#3c4858;"><div style=3D"text-align: center;"><span style=3D"color:#808080;"=
+><span style=3D"font-size: 18px;"><b>_________________________</b></span></=
+span></div></td></tr></tbody></table> </th></tr></tbody></table></td></tr><=
+tr> <td height=3D"20" style=3D"font-size:1px; line-height:20px; mso-hide: a=
+ll;">=C2=A0</td></tr></tbody></table> </td></tr></tbody></table><!--[if mso=
+]> </td><![endif]--><!--[if mso]> </tr></table><![endif]--> </div></td></tr=
+><tr> <td align=3D"center" valign=3D"top"> <div style=3D"background-color: =
+rgb(255, 255, 255); border-radius: 0px;"><!--[if mso]> <table align=3D"cent=
+er" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=
+=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td valign=3D"top" width=3D=
+"590" style=3D"width:590px;"><![endif]--> <table width=3D"100%" cellpadding=
+=3D"0" border=3D"0" cellspacing=3D"0" name=3D"Layout_44" id=3D"Layout_44"><=
+tbody><tr> <td align=3D"center" valign=3D"top"><a href=3D"#" name=3D"Layout=
+_44"></a> <table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff" style=3D"height: 0px; ba=
+ckground-color: rgb(255, 255, 255); border-radius: 0px; border-collapse: se=
+parate; padding-left: 20px; padding-right: 20px;"><tbody><tr> <td class=3D"=
+rnb-container-padding" style=3D"font-size: px;font-family: ; color: ;"> <ta=
+ble border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-c=
+ontainer" align=3D"left" style=3D"margin:auto;"> <tbody><tr> <th class=3D"r=
+nb-force-col" align=3D"left" style=3D"text-align: center; font-weight: norm=
+al"> <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"cente=
+r" class=3D"rnb-col-1"> <tbody><tr> <td height=3D"10"></td></tr><tr> <td st=
+yle=3D"font-family:Arial,Helvetica,sans-serif; color:#3c4858; text-align:le=
+ft;"> <span style=3D"color:#3c4858;"><span style=3D"font-size:22px;"><span =
+style=3D"color:#000000;"><strong>HTB Read-List=C2=A0=F0=9F=94=8D</strong></=
+span></span></span> </td></tr><tr> <td height=3D"10"></td></tr></tbody></ta=
+ble> </th></tr></tbody></table></td></tr></tbody></table> </td></tr></tbody=
+></table><!--[if mso]> </td><![endif]--><!--[if mso]> </tr></table><![endif=
+]--> </div></td></tr><tr> <td align=3D"center" valign=3D"top"> <div style=
+=3D"background-color: rgb(255, 255, 255); border-radius: 0px;"><!--[if mso]=
+> <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+width=3D"100%" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td val=
+ign=3D"top" width=3D"590" style=3D"width:590px;"><![endif]--> <table class=
+=3D"rnb-del-min-width" width=3D"100%" cellpadding=3D"0" border=3D"0" cellsp=
+acing=3D"0" style=3D"min-width:100%;" name=3D"Layout_48"> <tbody><tr> <td c=
+lass=3D"rnb-del-min-width" align=3D"center" valign=3D"top"> <a href=3D"#" n=
+ame=3D"Layout_48"></a> <table width=3D"100%" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff" style=3D"bac=
+kground-color: rgb(255, 255, 255); padding-left: 20px; padding-right: 20px;=
+ border-collapse: separate; border-radius: 0px; border-bottom: 0px none rgb=
+(200, 200, 200);"> <tbody><tr> <td height=3D"10" style=3D"font-size:1px; li=
+ne-height:10px; mso-hide: all;">=C2=A0</td></tr><tr> <td valign=3D"top" cla=
+ss=3D"rnb-container-padding" align=3D"left"> <table width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-container">=
+ <tbody><tr> <th class=3D"rnb-force-col" style=3D"text-align: left; font-we=
+ight: normal; padding-right: 0px;" valign=3D"top"> <table border=3D"0" vali=
+gn=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" align=3D"left=
+" class=3D"rnb-col-1"> <tbody><tr> <td style=3D"font-size:14px; font-family=
+:&#39;Helvetica&#39;,&#39;Arial&#39;,Helvetica,sans-serif, sans-serif; colo=
+r:#3c4858;"><div><span style=3D"font-size: 16px;">What are cyber threats? L=
+et&#39;s explore some important cyber threat theory in our latest blog post=
+. The CIA Triad, internal and external threats, and finally some recommenda=
+tions to get some practice!</span></div></td></tr></tbody></table> </th></t=
+r></tbody></table></td></tr><tr> <td height=3D"10" style=3D"font-size:1px; =
+line-height:10px; mso-hide: all;">=C2=A0</td></tr></tbody></table> </td></t=
+r></tbody></table><!--[if mso]> </td><![endif]--><!--[if mso]> </tr></table=
+><![endif]--> </div></td></tr><tr> <td align=3D"center" valign=3D"top"> <di=
+v style=3D"background-color: rgb(255, 255, 255);"><!--[if mso]> <table alig=
+n=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%=
+" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td valign=3D"top" w=
+idth=3D"590" style=3D"width:590px;"><![endif]--> <table class=3D"rnb-del-mi=
+n-width" width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" st=
+yle=3D"min-width:100%; -webkit-backface-visibility: hidden; line-height: 10=
+px;" name=3D"Layout_60" id=3D"Layout_60"> <tbody><tr> <td class=3D"rnb-del-=
+min-width" valign=3D"top" align=3D"center" style=3D"min-width: 590px;"> <a =
+href=3D"#" name=3D"Layout_60"></a> <table width=3D"100%" class=3D"rnb-conta=
+iner" cellpadding=3D"0" border=3D"0" bgcolor=3D"#ffffff" align=3D"center" c=
+ellspacing=3D"0" style=3D"background-color: rgb(255, 255, 255);"> <tbody><t=
+r> <td valign=3D"top" align=3D"center"> <table cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0"> <tbody><tr> <td> <div style=3D"border-radius:5px; wid=
+th:590;;max-width:945px !important;border-top:0px None #000;border-right:0p=
+x None #000;border-bottom:0px None #000;border-left:0px None #000;border-co=
+llapse: separate;border-radius: 0px;"> <div><img ng-if=3D"col.img.source !=
+=3D&#39;url&#39;" border=3D"0" hspace=3D"0" vspace=3D"0" width=3D"590" clas=
+s=3D"rnb-header-img" alt=3D"" style=3D"display:block; float:left; border-ra=
+dius: 5px; " src=3D"https://6650o.img.ag.d.sendibm3.com/im/3579920/8f0f66e1=
+93cf98b2687d2886ab464333c782720c0cea620fd99a9b8b3bd9e5b5.png?e=3Dz16QVzhsuP=
+ie91BDinK3g7HykZpTev3JRHLgzjwLa_FewXg1aisD-EST5NBi7SdFai68OGfn1Aqqqbnx-0eLm=
+Ukz5dOx26N_aE1yACXSBEAs-SuiAIMRiHkOKGu6D3tIDs3A90xHMMnof3v-eHBSgbOW2eT3sp_o=
+g3-s73PuoQoyZojeqZ9umM1vc7-Vw6otNgvqMXw2d-e_OI0LDa3SDfTy_xOp_pQsQ4UavMo" si=
+b_img_id=3D"6"/></div><div style=3D"clear:both;"></div></div></td></tr></tb=
+ody></table> </td></tr></tbody></table> </td></tr></tbody></table><!--[if m=
+so]> </td><![endif]--><!--[if mso]> </tr></table><![endif]--> </div></td></=
+tr><tr> <td align=3D"center" valign=3D"top"> <div style=3D"background-color=
+: rgb(255, 255, 255); border-radius: 0px;"><!--[if mso]> <table align=3D"ce=
+nter" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=
+=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td valign=3D"top" width=3D=
+"590" style=3D"width:590px;"><![endif]--> <table class=3D"rnb-del-min-width=
+" width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" style=3D"=
+min-width:590px;" name=3D"Layout_50" id=3D"Layout_50"> <tbody><tr> <td clas=
+s=3D"rnb-del-min-width" align=3D"center" valign=3D"top" style=3D"min-width:=
+590px;"> <a href=3D"#" name=3D"Layout_50"></a> <table width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mso-button-block rnb-co=
+ntainer" style=3D"background-color: rgb(255, 255, 255); border-radius: 0px;=
+ padding-left: 20px; padding-right: 20px; border-collapse: separate;"> <tbo=
+dy><tr> <td height=3D"20" style=3D"font-size:1px; line-height:20px; mso-hid=
+e: all;">=C2=A0</td></tr><tr> <td valign=3D"top" class=3D"rnb-container-pad=
+ding" align=3D"left"> <table width=3D"100%" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" class=3D"rnb-columns-container"> <tbody><tr> <th class=3D=
+"rnb-force-col" valign=3D"top"> <table border=3D"0" valign=3D"top" cellspac=
+ing=3D"0" cellpadding=3D"0" width=3D"550" align=3D"center" class=3D"rnb-col=
+-1"> <tbody><tr> <td valign=3D"top"> <table cellpadding=3D"0" border=3D"0" =
+align=3D"center" cellspacing=3D"0" class=3D"rnb-btn-col-content" style=3D"m=
+argin:auto; border-collapse: separate;"> <tbody><tr> <td width=3D"auto" val=
+ign=3D"middle" bgcolor=3D"#9FEF00" align=3D"center" height=3D"48" style=3D"=
+font-size:18px; font-family:Arial,Helvetica,sans-serif; color:#1A2332; font=
+-weight:normal; padding-left:20px; padding-right:20px; vertical-align: midd=
+le; background-color:#9FEF00;border-radius:10px;border-top:0px None #000;bo=
+rder-right:0px None #000;border-bottom:0px None #000;border-left:0px None #=
+000;"> <span style=3D"color:#1A2332; font-weight:normal;"> <a style=3D"text=
+-decoration:none; color:#1A2332; font-weight:normal;" target=3D"_blank" hre=
+f=3D"https://6650o.r.ag.d.sendibm3.com/mk/cl/f/Tgp76tIWXW3Eirju_sX6i2TvrtpE=
+giebtqGaK7bFlC5U-rU8N8lLpUFh-JY4KO4H4NbCtCckkJrkOj6O7bihX18te4b6vDahBDJpjVv=
+CUxoT0g74MRPuEoK3gek8Lt-JHrvsIFewEJImOkhqf1CnZVLkjvYAacqAOeY1_AQ7Zn35BaOHw4=
+59r-7uVyzS4LM9IkM-zdD2TeZ5vygMdqWvFtQg2B53L4VrrUk4VwZro0_oa5Ke0RF6I8eGKoztE=
+0bFwfwi0Bgxdyw654A8NJMiUNbAZJr_WassipeIMOxHZr3ZSqRcnCPts9Tp0AnKiPislEilaYUW=
+7hQLm-zWHU9531vkGMtVqtfdrw" sib_link_id=3D"7"><strong>Cyber Threats 101</st=
+rong></a> </span> </td></tr></tbody></table> </td></tr></tbody></table> </t=
+h> </tr></tbody></table></td></tr><tr> <td height=3D"20" style=3D"font-size=
+:1px; line-height:20px; mso-hide: all;">=C2=A0</td></tr></tbody></table> </=
+td></tr></tbody></table><!--[if mso]> </td><![endif]--><!--[if mso]> </tr><=
+/table><![endif]--> </div></td></tr><tr> <td align=3D"center" valign=3D"top=
+"> <div style=3D"background-color: rgb(255, 255, 255); border-radius: 0px;"=
+><!--[if mso]> <table align=3D"center" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%" style=3D"width:100%;"> <tr><![endif]--><!--[if =
+mso]> <td valign=3D"top" width=3D"590" style=3D"width:590px;"><![endif]--> =
+<table class=3D"rnb-del-min-width" width=3D"100%" cellpadding=3D"0" border=
+=3D"0" cellspacing=3D"0" style=3D"min-width:100%;" name=3D"Layout_58"> <tbo=
+dy><tr> <td class=3D"rnb-del-min-width" align=3D"center" valign=3D"top"> <a=
+ href=3D"#" name=3D"Layout_58"></a> <table width=3D"100%" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff"=
+ style=3D"background-color: rgb(255, 255, 255); padding-left: 20px; padding=
+-right: 20px; border-collapse: separate; border-radius: 0px; border-bottom:=
+ 0px none rgb(200, 200, 200);"> <tbody><tr> <td height=3D"0" style=3D"font-=
+size:1px; line-height:0px; mso-hide: all;">=C2=A0</td></tr><tr> <td valign=
+=3D"top" class=3D"rnb-container-padding" align=3D"left"> <table width=3D"10=
+0%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-c=
+ontainer"> <tbody><tr> <th class=3D"rnb-force-col" style=3D"text-align: lef=
+t; font-weight: normal; padding-right: 0px;" valign=3D"top"> <table border=
+=3D"0" valign=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" al=
+ign=3D"left" class=3D"rnb-col-1"> <tbody><tr> <td style=3D"font-size:14px; =
+font-family:&#39;Helvetica&#39;,&#39;Arial&#39;,Helvetica,sans-serif, sans-=
+serif; color:#3c4858;"><div style=3D"text-align: center;"><span style=3D"co=
+lor:#808080;"><span style=3D"font-size: 18px;"><b>_________________________=
+</b></span></span></div></td></tr></tbody></table> </th></tr></tbody></tabl=
+e></td></tr><tr> <td height=3D"20" style=3D"font-size:1px; line-height:20px=
+; mso-hide: all;">=C2=A0</td></tr></tbody></table> </td></tr></tbody></tabl=
+e><!--[if mso]> </td><![endif]--><!--[if mso]> </tr></table><![endif]--> </=
+div></td></tr><tr> <td align=3D"center" valign=3D"top"> <div style=3D"backg=
+round-color: rgb(255, 255, 255); border-radius: 0px;"><!--[if mso]> <table =
+align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"=
+100%" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td valign=3D"to=
+p" width=3D"590" style=3D"width:590px;"><![endif]--> <table width=3D"100%" =
+cellpadding=3D"0" border=3D"0" cellspacing=3D"0" name=3D"Layout_52" id=3D"L=
+ayout_52"><tbody><tr> <td align=3D"center" valign=3D"top"><a href=3D"#" nam=
+e=3D"Layout_52"></a> <table border=3D"0" width=3D"100%" cellpadding=3D"0" c=
+ellspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff" style=3D"heigh=
+t: 0px; background-color: rgb(255, 255, 255); border-radius: 0px; border-co=
+llapse: separate; padding-left: 20px; padding-right: 20px;"><tbody><tr> <td=
+ class=3D"rnb-container-padding" style=3D"font-size: px;font-family: ; colo=
+r: ;"> <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb=
+-columns-container" align=3D"left" style=3D"margin:auto;"> <tbody><tr> <th =
+class=3D"rnb-force-col" align=3D"left" style=3D"text-align: center; font-we=
+ight: normal"> <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center" class=3D"rnb-col-1"> <tbody><tr> <td height=3D"10"></td></tr><=
+tr> <td style=3D"font-family:Arial,Helvetica,sans-serif; color:#3c4858; tex=
+t-align:left;"> <span style=3D"color:#3c4858;"><span style=3D"font-size:22p=
+x;"><span style=3D"color:#000000;"><strong>Community Content of The Month</=
+strong></span></span></span> </td></tr><tr> <td height=3D"10"></td></tr></t=
+body></table> </th></tr></tbody></table></td></tr></tbody></table> </td></t=
+r></tbody></table><!--[if mso]> </td><![endif]--><!--[if mso]> </tr></table=
+><![endif]--> </div></td></tr><tr> <td align=3D"center" valign=3D"top"> <di=
+v style=3D"background-color: rgb(255, 255, 255); border-radius: 0px;"><!--[=
+if mso 15]> <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" width=3D"100%" style=3D"width:100%;"> <tr><![endif]--><!--[if mso=
+ 15]> <td valign=3D"top" width=3D"590" style=3D"width:590px;"><![endif]--> =
+<table class=3D"rnb-del-min-width" width=3D"100%" cellpadding=3D"0" border=
+=3D"0" cellspacing=3D"0" style=3D"min-width:100%;" name=3D"Layout_14" id=3D=
+"Layout_14"> <tbody><tr> <td class=3D"rnb-del-min-width" align=3D"center" v=
+align=3D"top"> <a href=3D"#" name=3D"Layout_14"></a> <table width=3D"100%" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-container" bg=
+color=3D"#ffffff" style=3D"max-width: 100%; min-width: 100%; table-layout: =
+fixed; background-color: rgb(255, 255, 255); border-radius: 0px; border-col=
+lapse: separate; padding: 20px;"> <tbody><tr> <td valign=3D"top" class=3D"r=
+nb-container-padding" align=3D"left"> <table width=3D"100%" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-container"> <tbody><=
+tr> <th class=3D"rnb-force-col img-block-center" style=3D"text-align: left;=
+ font-weight: normal; padding-right: 20px;" valign=3D"top" width=3D"180"> <=
+table border=3D"0" valign=3D"top" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"left" class=3D"rnb-col-2-noborder-onright" width=3D"180"> <tbody><tr> <=
+td width=3D"100%" style=3D"line-height: auto;" class=3D"img-block-center" v=
+align=3D"top" align=3D"left"> <div style=3D"border-top:0px none #000;border=
+-right:0px None #000;border-bottom:0px None #000;border-left:0px None #000;=
+display:inline-block;"><div><img alt=3D"" border=3D"0" hspace=3D"0" vspace=
+=3D"0" width=3D"180" style=3D"vertical-align:top; float: left; width:180px;=
+max-width:608px !important; " class=3D"rnb-col-2-img-side-xl" src=3D"https:=
+//6650o.img.ag.d.sendibm3.com/im/3579920/a316edbc31a66dcd5fd87dae25e0d74e1a=
+2b30c8ea0463eca985c8541ed1a662.png?e=3DV_JzuJ65OCgs4z4COfTCsLvbZCnZkdHnZnI5=
+G9PBzNNofnA1dAjfMOhSGki56EQt31dADUgdO-IOpLkFTvBCOMhnmlmaQd4Adwbok1u-OAtGJ8T=
+sYf1je_-6_-USvvOMjt23jrqMUBYpIM2d3G5WAoSJA7FPLdpFQT4dqPz2wuzfBpui_5bBgcbJ3F=
+F8rV6UL4eDfj01WfsKauaOg6g4LAjGU8fb_JjA_JBYID0" sib_img_id=3D"7"/></div><div=
+ style=3D"clear:both;"></div></div></td></tr></tbody></table> </th><th clas=
+s=3D"rnb-force-col" style=3D"text-align: left; font-weight: normal" valign=
+=3D"top"> <table border=3D"0" valign=3D"top" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"350" align=3D"left" class=3D"rnb-last-col-2"> <tbody><tr> <=
+td class=3D"rnb-mbl-float-none" style=3D"font-size:14px; font-family:Arial,=
+Helvetica,sans-serif;color:#3c4858;float:right;width:350px;"><div><span sty=
+le=3D"color:#A4B1CD;"><strong><span style=3D"font-size:14px;">FROM THE COMM=
+UNITY</span></strong></span></div><div>=C2=A0</div><div><div><em><span styl=
+e=3D"font-size:16px;">&#34;Shocker - Take It Easy Series&#34; - by <strong>=
+Adithya Sai</strong>, InfoSec Write-ups.</span></em></div><div>=C2=A0</div>=
+<div><span style=3D"font-size:16px;"><a href=3D"https://6650o.r.ag.d.sendib=
+m3.com/mk/cl/f/FQd8FGy_eWdKe1Npmwv28ErX9kvo7wOR8uYAPxID3Mhl2tupuJMx_z8qgJGy=
+X1rO_Etqi-zZ8_KzDARjdrwD88HU-DSUXGz3OsxrADnc5TzdG3P0pdLKEbJSU-T03jSLEsgZWl0=
+HA2aDhPNOkuowCm4IdeC9tenrEsCpvWjHYQNMktyTeqzNULFGlelZbi7tDlVg4puhTxkQO92hcm=
+uZFR4-YEti4_nUO18xhMd2LmD4d8mi86KsMnuPtBV_1ZEaz_2Pa5s5s_NsGaZqDBef1mIFPJ5iU=
+c1s-EP7BJrZStZKx2Q_2gMn3YcUBaLb7JgTESYRGc7zT83i9YcfL9owQxdA5UbMI7EJOL3uuJqJ=
+sVv5oe4oxZWlp_qb" style=3D"text-decoration: underline; color: rgb(0, 146, 2=
+55);" sib_link_id=3D"8"><em>Read the Write-up</em></a>.</span></div></div><=
+/td></tr></tbody></table> </th> </tr></tbody></table></td></tr></tbody></ta=
+ble> </td></tr></tbody></table><!--[if mso 15]> </td><![endif]--><!--[if ms=
+o 15]> </tr></table><![endif]--> </div></td></tr><tr> <td align=3D"center" =
+valign=3D"top"> <div style=3D"background-color: rgb(255, 255, 255); border-=
+radius: 0px;"><!--[if mso]> <table align=3D"center" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;"> <tr><![endi=
+f]--><!--[if mso]> <td valign=3D"top" width=3D"590" style=3D"width:590px;">=
+<![endif]--> <table class=3D"rnb-del-min-width" width=3D"100%" cellpadding=
+=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-width:100%;" name=3D"Lay=
+out_57"> <tbody><tr> <td class=3D"rnb-del-min-width" align=3D"center" valig=
+n=3D"top"> <a href=3D"#" name=3D"Layout_57"></a> <table width=3D"100%" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-container" bgcolo=
+r=3D"#ffffff" style=3D"background-color: rgb(255, 255, 255); padding-left: =
+20px; padding-right: 20px; border-collapse: separate; border-radius: 0px; b=
+order-bottom: 0px none rgb(200, 200, 200);"> <tbody><tr> <td height=3D"0" s=
+tyle=3D"font-size:1px; line-height:0px; mso-hide: all;">=C2=A0</td></tr><tr=
+> <td valign=3D"top" class=3D"rnb-container-padding" align=3D"left"> <table=
+ width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"r=
+nb-columns-container"> <tbody><tr> <th class=3D"rnb-force-col" style=3D"tex=
+t-align: left; font-weight: normal; padding-right: 0px;" valign=3D"top"> <t=
+able border=3D"0" valign=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=
+=3D"100%" align=3D"left" class=3D"rnb-col-1"> <tbody><tr> <td style=3D"font=
+-size:14px; font-family:&#39;Helvetica&#39;,&#39;Arial&#39;,Helvetica,sans-=
+serif, sans-serif; color:#3c4858;"><div style=3D"text-align: center;"><span=
+ style=3D"color:#808080;"><span style=3D"font-size: 18px;"><b>_____________=
+____________</b></span></span></div></td></tr></tbody></table> </th></tr></=
+tbody></table></td></tr><tr> <td height=3D"20" style=3D"font-size:1px; line=
+-height:20px; mso-hide: all;">=C2=A0</td></tr></tbody></table> </td></tr></=
+tbody></table><!--[if mso]> </td><![endif]--><!--[if mso]> </tr></table><![=
+endif]--> </div></td></tr><tr> <td align=3D"center" valign=3D"top"> <div st=
+yle=3D"background-color: rgb(255, 255, 255); border-radius: 0px;"><!--[if m=
+so]> <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td =
+valign=3D"top" width=3D"590" style=3D"width:590px;"><![endif]--> <table wid=
+th=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" name=3D"Layout=
+_15" id=3D"Layout_15"><tbody><tr> <td align=3D"center" valign=3D"top"><a hr=
+ef=3D"#" name=3D"Layout_15"></a> <table border=3D"0" width=3D"100%" cellpad=
+ding=3D"0" cellspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff" st=
+yle=3D"height: 0px; background-color: rgb(255, 255, 255); border-radius: 0p=
+x; border-collapse: separate; padding-left: 20px; padding-right: 20px;"><tb=
+ody><tr> <td class=3D"rnb-container-padding" style=3D"font-size: px;font-fa=
+mily: ; color: ;"> <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+class=3D"rnb-columns-container" align=3D"left" style=3D"margin:auto;"> <tbo=
+dy><tr> <th class=3D"rnb-force-col" align=3D"left" style=3D"text-align: cen=
+ter; font-weight: normal"> <table border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" align=3D"center" class=3D"rnb-col-1"> <tbody><tr> <td height=3D"10"=
+></td></tr><tr> <td style=3D"font-family:Arial,Helvetica,sans-serif; color:=
+#3c4858; text-align:left;"> <span style=3D"color:#3c4858;"><span style=3D"f=
+ont-size:22px;"><span style=3D"color:#000000;"><strong>Community Meetups</s=
+trong></span></span></span> </td></tr><tr> <td height=3D"10"></td></tr></tb=
+ody></table> </th></tr></tbody></table></td></tr></tbody></table> </td></tr=
+></tbody></table><!--[if mso]> </td><![endif]--><!--[if mso]> </tr></table>=
+<![endif]--> </div></td></tr><tr> <td align=3D"center" valign=3D"top"> <div=
+ style=3D"background-color: rgb(255, 255, 255); border-radius: 0px;"><!--[i=
+f mso]> <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"100%" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> =
+<td valign=3D"top" width=3D"590" style=3D"width:590px;"><![endif]--> <table=
+ class=3D"rnb-del-min-width" width=3D"100%" cellpadding=3D"0" border=3D"0" =
+cellspacing=3D"0" style=3D"min-width:100%;" name=3D"Layout_53"> <tbody><tr>=
+ <td class=3D"rnb-del-min-width" align=3D"center" valign=3D"top"> <a href=
+=3D"#" name=3D"Layout_53"></a> <table width=3D"100%" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff" styl=
+e=3D"background-color: rgb(255, 255, 255); padding-left: 20px; padding-righ=
+t: 20px; border-collapse: separate; border-radius: 0px; border-bottom: 0px =
+none rgb(200, 200, 200);"> <tbody><tr> <td height=3D"10" style=3D"font-size=
+:1px; line-height:10px; mso-hide: all;">=C2=A0</td></tr><tr> <td valign=3D"=
+top" class=3D"rnb-container-padding" align=3D"left"> <table width=3D"100%" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-conta=
+iner"> <tbody><tr> <th class=3D"rnb-force-col" style=3D"text-align: left; f=
+ont-weight: normal; padding-right: 0px;" valign=3D"top"> <table border=3D"0=
+" valign=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" align=
+=3D"left" class=3D"rnb-col-1"> <tbody><tr> <td style=3D"font-size:14px; fon=
+t-family:&#39;Helvetica&#39;,&#39;Arial&#39;,Helvetica,sans-serif, sans-ser=
+if; color:#3c4858;"><div><ul><li><span style=3D"font-size:16px;">HTB Meetup=
+ @ Peru 07.03.21</span></li><li><span style=3D"font-size:16px;">HTB Meetup =
+@ South Africa 07.06.21</span></li><li><span style=3D"font-size:16px;">HTB =
+Meetup @ Hyderabad 07.11.21</span></li><li><span style=3D"font-size:16px;">=
+HTB Meetup @ Portugal 07.17.21</span></li><li><span style=3D"font-size:16px=
+;">HTB Meetup @ Dehradun 07.18.21</span></li><li><span style=3D"font-size:1=
+6px;">HTB Meetup @ Peru 07.18.21</span></li><li><span style=3D"font-size:16=
+px;">HTB Meetup @ Bogota 06.20.21</span></li><li><span style=3D"font-size:1=
+6px;">HTB Meetup @ Netherlands 07.21.21</span></li><li><span style=3D"font-=
+size:16px;">HTB Meetup @ Chicago 07.29.21</span></li><li><span style=3D"fon=
+t-size:16px;">HTB Meetup @ Ottawa 07.29.21</span></li></ul></div></td></tr>=
+</tbody></table> </th></tr></tbody></table></td></tr><tr> <td height=3D"10"=
+ style=3D"font-size:1px; line-height:10px; mso-hide: all;">=C2=A0</td></tr>=
+</tbody></table> </td></tr></tbody></table><!--[if mso]> </td><![endif]--><=
+!--[if mso]> </tr></table><![endif]--> </div></td></tr><tr> <td align=3D"ce=
+nter" valign=3D"top"> <div style=3D"background-color: rgb(255, 255, 255); b=
+order-radius: 0px;"><!--[if mso]> <table align=3D"center" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;"> <tr><=
+![endif]--><!--[if mso]> <td valign=3D"top" width=3D"590" style=3D"width:59=
+0px;"><![endif]--> <table class=3D"rnb-del-min-width" width=3D"100%" cellpa=
+dding=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-width:590px;" name=
+=3D"Layout_55" id=3D"Layout_55"> <tbody><tr> <td class=3D"rnb-del-min-width=
+" align=3D"center" valign=3D"top" style=3D"min-width:590px;"> <a href=3D"#"=
+ name=3D"Layout_55"></a> <table width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" class=3D"mso-button-block rnb-container" style=3D"back=
+ground-color: rgb(255, 255, 255); border-radius: 0px; padding-left: 20px; p=
+adding-right: 20px; border-collapse: separate;"> <tbody><tr> <td height=3D"=
+20" style=3D"font-size:1px; line-height:20px; mso-hide: all;">=C2=A0</td></=
+tr><tr> <td valign=3D"top" class=3D"rnb-container-padding" align=3D"left"> =
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"rnb-columns-container"> <tbody><tr> <th class=3D"rnb-force-col" valign=
+=3D"top"> <table border=3D"0" valign=3D"top" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"550" align=3D"center" class=3D"rnb-col-1"> <tbody><tr> <td =
+valign=3D"top"> <table cellpadding=3D"0" border=3D"0" align=3D"center" cell=
+spacing=3D"0" class=3D"rnb-btn-col-content" style=3D"margin:auto; border-co=
+llapse: separate;"> <tbody><tr> <td width=3D"auto" valign=3D"middle" bgcolo=
+r=3D"#9FEF00" align=3D"center" height=3D"48" style=3D"font-size:18px; font-=
+family:&#39;Helvetica&#39;,&#39;Arial&#39;,Helvetica,sans-serif; color:#1A2=
+332; font-weight:normal; padding-left:20px; padding-right:20px; vertical-al=
+ign: middle; background-color:#9FEF00;border-radius:10px;border-top:0px Non=
+e #000;border-right:0px None #000;border-bottom:0px None #000;border-left:0=
+px None #000;"> <span style=3D"color:#1A2332; font-weight:normal;"> <a styl=
+e=3D"text-decoration:none; color:#1A2332; font-weight:normal;" target=3D"_b=
+lank" href=3D"https://6650o.r.ag.d.sendibm3.com/mk/cl/f/XSk5BcOfR1A_2q6Cl6g=
+zAcOBXs2EFt71XxFSua_NBfDPSIJa1IcCeCT3rGn5FgShMCW4GpzYfq1Wy3l2bcK6Y7j2Ra7ugJ=
+jl1iTRRDLQgsK44EltBlsIk3J6Ig1io31LgC0vcbntA5gB4iynB06YL4MIDVJDChfqytVQxofok=
+Z8y5cl4A2frDpiuMD3WAoDiGbJbhR6GRiizCaTy5KVA8OpfLuSE31w03qxNITEUUkWTSgdLWOr7=
+bOKLNPgqts_UphaI1RK7pIGYabXyxxTPhy6pNdIgLAuME9b1R_pkHRkqNljsAZ5LlCStRPKIIDl=
+COmmyJ6W7zJE2tg3caIQ" sib_link_id=3D"9"><strong>Find Them All Here (100% Vi=
+rtual)</strong></a> </span> </td></tr></tbody></table> </td></tr></tbody></=
+table> </th> </tr></tbody></table></td></tr><tr> <td height=3D"20" style=3D=
+"font-size:1px; line-height:20px; mso-hide: all;">=C2=A0</td></tr></tbody><=
+/table> </td></tr></tbody></table><!--[if mso]> </td><![endif]--><!--[if ms=
+o]> </tr></table><![endif]--> </div></td></tr><tr> <td align=3D"center" val=
+ign=3D"top"> <div style=3D"background-color: rgb(255, 255, 255); border-rad=
+ius: 0px;"><!--[if mso]> <table align=3D"center" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;"> <tr><![endif=
+]--><!--[if mso]> <td valign=3D"top" width=3D"590" style=3D"width:590px;"><=
+![endif]--> <table class=3D"rnb-del-min-width" width=3D"100%" cellpadding=
+=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-width:100%;" name=3D"Lay=
+out_51"> <tbody><tr> <td class=3D"rnb-del-min-width" align=3D"center" valig=
+n=3D"top"> <a href=3D"#" name=3D"Layout_51"></a> <table width=3D"100%" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-container" bgcolo=
+r=3D"#ffffff" style=3D"background-color: rgb(255, 255, 255); padding-left: =
+20px; padding-right: 20px; border-collapse: separate; border-radius: 0px; b=
+order-bottom: 0px none rgb(200, 200, 200);"> <tbody><tr> <td height=3D"0" s=
+tyle=3D"font-size:1px; line-height:0px; mso-hide: all;">=C2=A0</td></tr><tr=
+> <td valign=3D"top" class=3D"rnb-container-padding" align=3D"left"> <table=
+ width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"r=
+nb-columns-container"> <tbody><tr> <th class=3D"rnb-force-col" style=3D"tex=
+t-align: left; font-weight: normal; padding-right: 0px;" valign=3D"top"> <t=
+able border=3D"0" valign=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=
+=3D"100%" align=3D"left" class=3D"rnb-col-1"> <tbody><tr> <td style=3D"font=
+-size:14px; font-family:&#39;Helvetica&#39;,&#39;Arial&#39;,Helvetica,sans-=
+serif, sans-serif; color:#3c4858;"><div style=3D"text-align: center;"><span=
+ style=3D"color:#808080;"><span style=3D"font-size: 18px;"><b>_____________=
+____________</b></span></span></div></td></tr></tbody></table> </th></tr></=
+tbody></table></td></tr><tr> <td height=3D"20" style=3D"font-size:1px; line=
+-height:20px; mso-hide: all;">=C2=A0</td></tr></tbody></table> </td></tr></=
+tbody></table><!--[if mso]> </td><![endif]--><!--[if mso]> </tr></table><![=
+endif]--> </div></td></tr><tr> <td align=3D"center" valign=3D"top"> <div st=
+yle=3D"background-color: rgb(255, 255, 255); border-radius: 0px;"><!--[if m=
+so]> <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%" style=3D"width:100%;"> <tr><![endif]--><!--[if mso]> <td =
+valign=3D"top" width=3D"590" style=3D"width:590px;"><![endif]--> <table cla=
+ss=3D"rnb-del-min-width" width=3D"100%" cellpadding=3D"0" border=3D"0" cell=
+spacing=3D"0" style=3D"min-width:100%;" name=3D"Layout_56"> <tbody><tr> <td=
+ class=3D"rnb-del-min-width" align=3D"center" valign=3D"top"> <a href=3D"#"=
+ name=3D"Layout_56"></a> <table width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff" style=3D"b=
+ackground-color: rgb(255, 255, 255); padding-left: 20px; padding-right: 20p=
+x; border-collapse: separate; border-radius: 0px; border-bottom: 0px none r=
+gb(200, 200, 200);"> <tbody><tr> <td height=3D"10" style=3D"font-size:1px; =
+line-height:10px; mso-hide: all;">=C2=A0</td></tr><tr> <td valign=3D"top" c=
+lass=3D"rnb-container-padding" align=3D"left"> <table width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-container">=
+ <tbody><tr> <th class=3D"rnb-force-col" style=3D"text-align: left; font-we=
+ight: normal; padding-right: 0px;" valign=3D"top"> <table border=3D"0" vali=
+gn=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" align=3D"left=
+" class=3D"rnb-col-1"> <tbody><tr> <td style=3D"font-size:14px; font-family=
+:&#39;Helvetica&#39;,&#39;Arial&#39;,Helvetica,sans-serif, sans-serif; colo=
+r:#3c4858;"><div style=3D"text-align: center;"><span style=3D"font-size:22p=
+x;"><strong>653,401</strong> Platform Members</span></div><div style=3D"tex=
+t-align: center;"><span style=3D"font-size:22px;"><span style=3D"font-size:=
+18px;">See you next month!=C2=A0=F0=9F=92=9A</span></span></div></td></tr><=
+/tbody></table> </th></tr></tbody></table></td></tr><tr> <td height=3D"10" =
+style=3D"font-size:1px; line-height:10px; mso-hide: all;">=C2=A0</td></tr><=
+/tbody></table> </td></tr></tbody></table><!--[if mso]> </td><![endif]--><!=
+--[if mso]> </tr></table><![endif]--> </div></td></tr><tr> <td align=3D"cen=
+ter" valign=3D"top"> <div style=3D"background-color: rgb(20, 29, 43); borde=
+r-radius: 0px;"><!--[if mso]> <table align=3D"center" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;"> <tr><![en=
+dif]--><!--[if mso]> <td valign=3D"top" width=3D"590" style=3D"width:590px;=
+"><![endif]--> <table class=3D"rnb-del-min-width" width=3D"100%" cellpaddin=
+g=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-width:590px;" name=3D"L=
+ayout_20" id=3D"Layout_20"> <tbody><tr> <td class=3D"rnb-del-min-width" ali=
+gn=3D"center" valign=3D"top" style=3D"min-width:590px;"> <a href=3D"#" name=
+=3D"Layout_20"></a> <table width=3D"100%" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#141D2B" style=3D"backgr=
+ound-color: rgb(20, 29, 43); border-radius: 0px; padding-left: 20px; paddin=
+g-right: 20px; border-collapse: separate;"> <tbody><tr> <td height=3D"20" s=
+tyle=3D"font-size:1px; line-height:20px; mso-hide: all;">=C2=A0</td></tr><t=
+r> <td valign=3D"top" class=3D"rnb-container-padding" align=3D"left"> <tabl=
+e width=3D"100%" cellpadding=3D"0" border=3D"0" align=3D"center" cellspacin=
+g=3D"0"> <tbody><tr> <td valign=3D"top" align=3D"center"> <table cellpaddin=
+g=3D"0" border=3D"0" align=3D"center" cellspacing=3D"0" class=3D"logo-img-c=
+enter"> <tbody><tr> <td valign=3D"middle" align=3D"center" style=3D"line-he=
+ight: 1px;"> <div style=3D"border-top:0px None #000;border-right:0px None #=
+000;border-bottom:0px None #000;border-left:0px None #000;display:inline-bl=
+ock; " cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><div><img width=3D"=
+512" vspace=3D"0" hspace=3D"0" border=3D"0" alt=3D"Hack The Box" style=3D"f=
+loat: left;max-width:512px;display:block;" class=3D"rnb-logo-img" src=3D"ht=
+tps://6650o.img.ag.d.sendibm3.com/im/3579920/abdccb9d20cf39ec992b0622aa483f=
+a396ab6548de6ed0e0c82ac83f43051849.png?e=3DI0ChBI3ePILZjqc3lTyT-0yWv6GixiG8=
+FM94ZkiHYwm2TArPVxuK0y2ulN7jJ9tP2VB3Nn6IwpsOj6sXef-vd0XzuDou7pVo5Rf3-wajGIB=
+2zj8UQZy3VRch-cSYFVdb_U7i8pObtiC3a20dl18jO3C0oC7RosGq8IF5Gh2XJ8fNkW92olCwNT=
+H4OCg6epLnJEx1azKzpI6-JwEZdPg60y0977eBFHXfTDfzpS8" sib_img_id=3D"1"/></div>=
+</div></td></tr></tbody></table> </td></tr></tbody></table></td></tr><tr> <=
+td height=3D"20" style=3D"font-size:1px; line-height:20px; mso-hide: all;">=
+=C2=A0</td></tr></tbody></table> </td></tr></tbody></table><!--[if mso]> </=
+td><![endif]--><!--[if mso]> </tr></table><![endif]--> </div></td></tr><tr>=
+ <td align=3D"center" valign=3D"top"> <table class=3D"rnb-del-min-width" wi=
+dth=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-=
+width:590px;" name=3D"Layout_" id=3D"Layout_"> <tbody><tr> <td class=3D"rnb=
+-del-min-width" valign=3D"top" align=3D"center" style=3D"min-width:590px;">=
+ <a href=3D"#" name=3D"Layout_"></a> <table width=3D"100%" cellpadding=3D"0=
+" border=3D"0" height=3D"5" cellspacing=3D"0"> <tbody><tr> <td valign=3D"to=
+p" height=3D"5"> <img width=3D"20" height=3D"5" style=3D"display:block; max=
+-height:5px; max-width:20px;" alt=3D"" src=3D"https://6650o.img.ag.d.sendib=
+m3.com/im/3579920/15fd9f264001efa0668072cabf04073d203e1c628b776e87506daf366=
+1b832d6.gif?e=3DjIQ0AnwctVbFWMHrfIZoreitnraR3JVM6XaiTi96-4JSrZ8Ue1gG3ckBUPV=
+xiK-LBkmkflzZpQUBrrcRwJjAuGTaFao6c_wsv7HNhjAMlqeIqq-Kmzzb3azs1IrYuxA2aIFJ_z=
+Cl0PdGQrtHXWp2WS9PQ78X0EbLORkjZ2f5cViZe2J71i2k0WR7MlNy" sib_img_id=3D"0"/> =
+</td></tr></tbody></table> </td></tr></tbody></table> </td></tr><tr> <td al=
+ign=3D"center" valign=3D"top"> <div style=3D"background-color: transparent;=
+"> <table class=3D"rnb-del-min-width rnb-tmpl-width" width=3D"100%" cellpad=
+ding=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-width:590px;" name=
+=3D"Layout_5" id=3D"Layout_5"> <tbody><tr> <td class=3D"rnb-del-min-width" =
+align=3D"center" valign=3D"top" bgcolor=3D"transparent" style=3D"min-width:=
+590px; background-color: transparent;"> <table width=3D"590" class=3D"rnb-c=
+ontainer" cellpadding=3D"0" border=3D"0" align=3D"center" cellspacing=3D"0"=
+ bgcolor=3D"transparent" style=3D"background-color: transparent;"> <tbody><=
+tr> <td height=3D"20" style=3D"font-size:1px; line-height:20px; mso-hide: a=
+ll;">=C2=A0</td></tr><tr> <td valign=3D"top" class=3D"rnb-container-padding=
+" style=3D"font-size: 14px; font-family: Arial,Helvetica,sans-serif; color:=
+ #888888;" align=3D"center"> <table width=3D"100%" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"rnb-columns-container"> <tbody><tr> <th c=
+lass=3D"rnb-force-col rnb-social-width2" valign=3D"top" style=3D"mso-paddin=
+g-alt: 0 20px 0 20px; padding-right: 28px; padding-left: 28px;"> <table bor=
+der=3D"0" valign=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=3D"533" =
+align=3D"center" class=3D"rnb-last-col-2"> <tbody><tr> <td valign=3D"top"> =
+<table cellpadding=3D"0" border=3D"0" cellspacing=3D"0" class=3D"rnb-social=
+-align2" align=3D"center"> <tbody><tr> <td valign=3D"middle" style=3D"line-=
+height: 0px;" class=3D"rnb-text-center" ng-init=3D"width=3DsetSocialIconsBl=
+ockWidth(item)" width=3D"533" align=3D"center"><!--[if mso]> <table align=
+=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"> <tr><![endif]=
+--> <div class=3D"rnb-social-center" style=3D"display: inline-block;"><!--[=
+if mso]> <td align=3D"center" valign=3D"top"><![endif]--> <table align=3D"l=
+eft" style=3D"float:left; display: inline-block" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0"> <tbody><tr> <td style=3D"padding:0px 5px 5px 0px;=
+ mso-padding-alt: 0px 4px 5px 0px;" align=3D"left"> <span style=3D"color:#f=
+fffff; font-weight:normal;"> <a target=3D"_blank" href=3D"https://6650o.r.a=
+g.d.sendibm3.com/mk/cl/f/mjMAKin6oIbOop_akfd4EQ7ZYTHez0TgCs74r1uG6vwiTvAaG1=
+d9PGX9v_QHU2H17VLR5YyjIcUNxVt6L9L3Khx_m7Pw8zujryTZFWphxj1yToCjJzCUl8RmZElIC=
+p7e2IoSCvA1VFayekWLNBjOZwoisYizhEz-6TfqIGnI5_WTuMebsWXq3HkqvNArnqKdVuekC3Mv=
+l4RXPS1N6xgUs1nh6Jau4PxaaQahXvO1_68CKLB9voPJsaLXRIt-JGAr9idR93zBz84_SSCiBnm=
+lLYCQr_4tbCsCX_f9L0lcKHMLQJPbm_U57zPWlcYJws5P8UiEwF8BXA4F" sib_link_id=3D"1=
+0"><img alt=3D"Facebook" border=3D"0" hspace=3D"0" vspace=3D"0" style=3D"ve=
+rtical-align:top;" target=3D"_blank" src=3D"https://6650o.img.ag.d.sendibm3=
+.com/im/3579920/c64ac932b54f19126b39d0f922711599f207fe676494c584f76fca1fbf7=
+19dc2.png?e=3DbKlAq_mJ6jttxsmbTdURzXOGPSh2gyv_hfyFernqUrqxNWt_ceY2lRL6LcbtC=
+sEXC09a5BaHYRkvh0QqLvlVUS_Ni6Bm226rtKgJqEQ5TzFVJMYWhkmSVIG7_0DJeREsV7uoGB7L=
+oQrENU-qridUlJsU-iZ8WCHdiadNbO1MRO96PBXCL4LNuCi6nMq_ckCRGyk90UOAng" sib_img=
+_id=3D"9"/></a></span> </td></tr></tbody></table><!--[if mso]> </td><![endi=
+f]--> </div><div class=3D"rnb-social-center" style=3D"display: inline-block=
+;"><!--[if mso]> <td align=3D"center" valign=3D"top"><![endif]--> <table al=
+ign=3D"left" style=3D"float:left; display: inline-block" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0"> <tbody><tr> <td style=3D"padding:0px 5px 5p=
+x 0px; mso-padding-alt: 0px 4px 5px 0px;" align=3D"left"> <span style=3D"co=
+lor:#ffffff; font-weight:normal;"> <a target=3D"_blank" href=3D"https://665=
+0o.r.ag.d.sendibm3.com/mk/cl/f/JEk9jQ5HfxOQ6Bn0PzqZ8qqvgOmtvd8QBK-yFJEXoHM_=
+IE8aQqlglk44g4h6NFoA-70uSlSu1wZec-tbbo8Wg027bHoBzm2cgyRYowTvbSj03SRuLwm-UqQ=
+q8UELin5L7oYqb4Y2CAly5KmmHji-FosRiFTlmOOVoj9WOmkxFBqnqJnQ-aPBTxewU_r0o-_mND=
+iRBVvIdzwmORFl8B-X_suRux056iERYqeVhKYK6_ff-OZbe_hGe9vIH2iTNNMCDUStUUe2_aZ1z=
+aFsZbaHL-1KtuUZTwJemrPWKkt1UctTzzQgGa0Ct1PNaEYY2tHwuixu8Q" sib_link_id=3D"1=
+1"><img alt=3D"Twitter" border=3D"0" hspace=3D"0" vspace=3D"0" style=3D"ver=
+tical-align:top;" target=3D"_blank" src=3D"https://6650o.img.ag.d.sendibm3.=
+com/im/3579920/2583f6e122d7613ec55401557778facaeee2b50f1b3ada290b48f62e874d=
+fae3.png?e=3DdMOCZ4brK0YYjpC6mPJwXFhJI-pvHXSXNKYy5EWBlc0DidfHLNYhMBBP7qKKE4=
+9Q_TIpW7bCUSv11a246owlW2CRqM1O9UEOAGiumsEh58UW96fqZ-iW2ICIsmhr_L0vxLernh6oD=
+01BbIIUAFmqoxCj-vHQA9TK7WzNv-CL9fZM3zPWeVTU0TyqU-5Ww9hayCbnWk14kA" sib_img_=
+id=3D"10"/></a></span> </td></tr></tbody></table><!--[if mso]> </td><![endi=
+f]--> </div><div class=3D"rnb-social-center" style=3D"display: inline-block=
+;"><!--[if mso]> <td align=3D"center" valign=3D"top"><![endif]--> <table al=
+ign=3D"left" style=3D"float:left; display: inline-block" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0"> <tbody><tr> <td style=3D"padding:0px 5px 5p=
+x 0px; mso-padding-alt: 0px 4px 5px 0px;" align=3D"left"> <span style=3D"co=
+lor:#ffffff; font-weight:normal;"> <a target=3D"_blank" href=3D"https://665=
+0o.r.ag.d.sendibm3.com/mk/cl/f/NuzyBf1krKSjPaWstnOYSkLrqpHOP4SurdcAE8sTYP9d=
+DOlrRmivrrarvl5xjtf0lMqeboJpV6a8qFbFo-BEMZDDzzJGpTuNUZr1zb41b6Youku3lkrAN43=
+b9xzhB_m4_8TG320g-b4XvGGkv_Q38QXZF1f9J6isWUS_8NUeJXEhxGxjQy69knr5QbPs4tkmSF=
+jjIghn6ySsPpTZdpEALZMfESw3e5TkvTEzdzU4Xqrwz3vvIgacX_VUgqEeuMgbbPaericYLfx0G=
+c8K3C0tVGeM9hdKateJNLIzDUdEWwAM7kb3Uqqz3JaktSnoVMziSmm1gGc17dK86shkDwGODn_9=
+PrMNwWfz46g45JEdIeKS5MdHeMFSSZlVYdglctnX1EBhp1I" sib_link_id=3D"12"><img al=
+t=3D"LinkedIn" border=3D"0" hspace=3D"0" vspace=3D"0" style=3D"vertical-ali=
+gn:top;" target=3D"_blank" src=3D"https://6650o.img.ag.d.sendibm3.com/im/35=
+79920/96e78e76febea38bc422c1cd1421cc13247c8a0370b819de32f13ce315b1f3be.png?=
+e=3Dgeuql_47Hcq06_fHIvz410IW4BbqUbx9e9gdF5iRNxcejSb7_tjrFvmoptrjbf0cxzmOiqJ=
+2VfE70Na_yN2usQuyLIb7H1ShPviF_RWdfADoNrlunWYLrOHC1Wu7f2bom5N9vHqvMTv_6OnsNs=
+TR8jTuF2g4dTKhGV56ROp2N-K0ZeP8owXqyC9-dNkaZPn-SwrRsqFCPw" sib_img_id=3D"11"=
+/></a></span> </td></tr></tbody></table><!--[if mso]> </td><![endif]--> </d=
+iv><div class=3D"rnb-social-center" style=3D"display: inline-block;"><!--[i=
+f mso]> <td align=3D"center" valign=3D"top"><![endif]--> <table align=3D"le=
+ft" style=3D"float:left; display: inline-block" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0"> <tbody><tr> <td style=3D"padding:0px 5px 5px 0px; ms=
+o-padding-alt: 0px 4px 5px 0px;" align=3D"left"> <span style=3D"color:#ffff=
+ff; font-weight:normal;"> <a target=3D"_blank" href=3D"https://6650o.r.ag.d=
+.sendibm3.com/mk/cl/f/EPRziRENIl_nC-XaPJ6mexKrTLMf9Puf_q4l-xG3FhIGYW-C6tjti=
+YKLnv5cqTDSREPNIJ8J97ThFRCk5J64MLlV9hCJxsK0k4WN_2G8EesEUOhqVQIHuitYoMkM2Ppf=
+t4Qov7l8udjTWi4HB2FEEJicfnbIqG5axAIPnWvTIzWQsQr9NKvnRKouMIrzqbS4QSbV1Jiw3vb=
+ha1oMfMxt3tOTRqYfWT3zhFo46qB2v60J2QkRLp97SATxX8hUAsWU2Z-W2U6qsWkGBZFWUanqSc=
+in_-d9RaOZNQzcKmBwKlv3rxn07wSkE8s5qyJ8jWwwc9irxp7pwTDBpQ" sib_link_id=3D"13=
+"><img alt=3D"Instagram" border=3D"0" hspace=3D"0" vspace=3D"0" style=3D"ve=
+rtical-align:top;" target=3D"_blank" src=3D"https://6650o.img.ag.d.sendibm3=
+.com/im/3579920/de9328fbf3d7e243ae796b93a902a3f4880000cccf859eba54981adb588=
+e29dd.png?e=3DPZdz3iOOE3oySHWRZSpUemVSz-_hlEuZINgWeB8s0fn-kWnR2dQXgI19RZrsj=
+2c8K2CpiUwwc7-IuNOL7gVWaCTmEruLkYNpr1vUDuwJe5_2H79hrSw7AVePTtufOKI4Ovg6bEev=
+tsy12RnQ0qJDElUQJMoFM1874CAlBV5BBCkkoNtXLepinKrQaKOe1GEny-asUYxtUQ" sib_img=
+_id=3D"12"/></a></span> </td></tr></tbody></table><!--[if mso]> </td><![end=
+if]--> </div><div class=3D"rnb-social-center" style=3D"display: inline-bloc=
+k;"><!--[if mso]> <td align=3D"center" valign=3D"top"><![endif]--> <table a=
+lign=3D"left" style=3D"float:left; display: inline-block" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0"> <tbody><tr> <td style=3D"padding:0px 5px 5=
+px 0px; mso-padding-alt: 0px 4px 5px 0px;" align=3D"left"> <span style=3D"c=
+olor:#ffffff; font-weight:normal;"> <a target=3D"_blank" href=3D"https://66=
+50o.r.ag.d.sendibm3.com/mk/cl/f/n5xODtmIc9fA2G5sax38p6br7WLPwwdodrlqap87tj7=
+f7E063i9I2vf1eM3b0PF_WqgMG8k1Ty8Q3ZofwTC2_yPOip2w5YS4UbMgca-Jom6EOI5ixu9nSw=
+WPiiUwq-TUpXdZcu8tdqe4ZpZRyNxe4Rfp--d-A4vL7vDa8-jvUUALAjk-8xMXmIQliMYuIJEUt=
+TFjEhvvdxoLejCCRxgrMrSMujTuCVFH0uUYk572D44dcCvrL7yUM6xjkAy8W3h8mmGQb99m4OCA=
+VMVkFydKjEM261ZT3dBgUZAlAHf1iNSxGTEHML7MsmIaLjLkX75Rx3VEXY2E0RCMBAOqd7XNX1b=
+xwT3PUltZiLKjoDA" sib_link_id=3D"14"><img alt=3D"YouTube" border=3D"0" hspa=
+ce=3D"0" vspace=3D"0" style=3D"vertical-align:top;" target=3D"_blank" src=
+=3D"https://6650o.img.ag.d.sendibm3.com/im/3579920/c003d444fa340ee2dd5fc2f8=
+d59ee3d406a3550b7e86ccacebca262afdd6ea80.png?e=3DxR10tr0kEpIUuhIRgG8YRabO12=
+yO4TXLLVtqTmPK8XBtPaE36he0VnzYC3WJH8CAiVE7x764B52hsHJqZRjj5bvMfObQ-3OwPvKw1=
+Vb7oxZ0KScUwU_o83IU675KlcGJ9exC36gNzL5z1pC-rE-5bIfvPkR6jUq3veIEqCzq3OBSgfRP=
+UomsuPqplhKmRmW0WOtu_cahOA" sib_img_id=3D"13"/></a></span> </td></tr></tbod=
+y></table><!--[if mso]> </td><![endif]--> </div><!--[if mso]> </tr></table>=
+<![endif]--> </td></tr></tbody></table> </td></tr></tbody></table> </th> </=
+tr></tbody></table></td></tr><tr> <th class=3D"rnb-force-col" style=3D"padd=
+ing-top:15px; padding-right:20px; padding-left:20px; mso-padding-alt: 20px =
+0 0 20px; font-weight: normal;" valign=3D"top"> <table border=3D"0" valign=
+=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=3D"264" align=3D"center"=
+ class=3D"rnb-col-2 social-text-spacing" style=3D"border-bottom:0;"> <tbody=
+><tr> <td valign=3D"top"> <table cellpadding=3D"0" border=3D"0" align=3D"ce=
+nter" cellspacing=3D"0" class=3D"rnb-btn-col-content"> <tbody><tr> <td vali=
+gn=3D"middle" align=3D"center" style=3D"font-size:14px; font-family:Arial,H=
+elvetica,sans-serif; color:#888888;" class=3D"rnb-text-center"> <div><div><=
+span style=3D"background-color: transparent; color: rgb(0, 0, 0); font-size=
+: 12px;">Hack The Box Ltd</span></div><div><span style=3D"font-size:12px;">=
+<span style=3D"color:#000000;">38 Walton Road Folkestone, Kent, UK CT19 5QS=
+</span></span></div></div>=C2=A0 </td></tr></tbody></table> </td></tr></tbo=
+dy></table> </th> </tr><tr> <td height=3D"20" style=3D"font-size:1px; line-=
+height:20px; mso-hide: all;">=C2=A0</td></tr></tbody></table> </td></tr></t=
+body></table> </div></td></tr><tr> <td align=3D"center" valign=3D"top"> <di=
+v style=3D"background-color: rgb(249, 250, 252);"> <table class=3D"rnb-del-=
+min-width rnb-tmpl-width" width=3D"100%" cellpadding=3D"0" border=3D"0" cel=
+lspacing=3D"0" style=3D"min-width:590px;" name=3D"Layout_6" id=3D"Layout_6"=
+> <tbody><tr> <td class=3D"rnb-del-min-width" align=3D"center" valign=3D"to=
+p" bgcolor=3D"#f9fafc" style=3D"min-width:590px; background-color: #f9fafc;=
+ text-align: center;"> <a href=3D"#" name=3D"Layout_6"></a> <table width=3D=
+"590" class=3D"rnb-container" cellpadding=3D"0" border=3D"0" align=3D"cente=
+r" cellspacing=3D"0" bgcolor=3D"#f9fafc" style=3D"padding-right: 20px; padd=
+ing-left: 20px; background-color: rgb(249, 250, 252);"> <tbody><tr> <td hei=
+ght=3D"10" style=3D"font-size:1px; line-height:1px; mso-hide: all;">=C2=A0<=
+/td></tr><tr> <td> <div style=3D"font-size:14px; color:#888888; font-weight=
+:normal; text-align:center; font-family:Arial,Helvetica,sans-serif;">This e=
+mail was sent tochadefry@gmail.com<div>You received this email because you =
+are registered with Hack The Box</div><div>=C2=A0</div></div><div style=3D"=
+display: block; text-align: center;"> <span style=3D"font-size:14px; font-w=
+eight:normal; display: inline-block; text-align:center; font-family:Arial,H=
+elvetica,sans-serif;"> <a style=3D"text-decoration:underline; color:#666666=
+;font-size:14px;font-weight:normal;font-family:Arial,Helvetica,sans-serif;"=
+ target=3D"_blank" href=3D"https://6650o.r.ag.d.sendibm3.com/mk/un/v2/LN8XK=
+RL-l9dzWECTDLiU4GDH3MX09482pdvE44AtDp4fPH7DZQQ4wHn0e3_9k6ZgpHQZ_2tdTj8D9Fhb=
+-eooruCMRT4wLQGR-qjJXRdYHI5ktTdCY9-nGv0HXfWrAZTKc3AFCv5VEn0zl3UYKELUVHjpjr5=
+rYlPU">Unsubscribe here</a></span> </div></td></tr><tr> <td height=3D"10" s=
+tyle=3D"font-size:1px; line-height:1px; mso-hide: all;">=C2=A0</td></tr></t=
+body></table> </td></tr></tbody></table> </div></td></tr><tr> <td align=3D"=
+center" valign=3D"top"> <div style=3D"background-color: rgb(249, 250, 252);=
+"> <table class=3D"rnb-del-min-width rnb-tmpl-width" width=3D"100%" cellpad=
+ding=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-width:590px;" name=
+=3D"Layout_7" id=3D"Layout_7"> <tbody><tr> <td class=3D"rnb-del-min-width" =
+align=3D"center" valign=3D"top" style=3D"min-width:590px;"> <a href=3D"#" n=
+ame=3D"Layout_7"></a> <table width=3D"100%" cellpadding=3D"0" border=3D"0" =
+align=3D"center" cellspacing=3D"0" bgcolor=3D"#f9fafc" style=3D"padding-rig=
+ht: 20px; padding-left: 20px; background-color: rgb(249, 250, 252);"> <tbod=
+y><tr> <td height=3D"20" style=3D"font-size:1px; line-height:20px; mso-hide=
+: all;">=C2=A0</td></tr><tr> <td style=3D"font-size:14px; color:#888888; fo=
+nt-weight:normal; text-align:center; font-family:Arial,Helvetica,sans-serif=
+;"> <div>=C2=A9 2021 Hack The Box</div></td></tr><tr> <td height=3D"20" sty=
+le=3D"font-size:1px; line-height:20px; mso-hide: all;">=C2=A0</td></tr></tb=
+ody></table> </td></tr></tbody></table> </div></td></tr><tr> <td align=3D"c=
+enter" valign=3D"top"> <table class=3D"rnb-del-min-width" width=3D"100%" ce=
+llpadding=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-width:590px;" n=
+ame=3D"Layout_5279" id=3D"Layout_5279"> <tbody><tr> <td class=3D"rnb-del-mi=
+n-width" valign=3D"top" align=3D"center" style=3D"min-width:590px;"> <a hre=
+f=3D"#" name=3D"Layout_5279"></a> <table width=3D"100%" cellpadding=3D"0" b=
+order=3D"0" height=3D"38" cellspacing=3D"0"> <tbody><tr> <td valign=3D"top"=
+ height=3D"38"> <img width=3D"20" height=3D"38" style=3D"display:block; max=
+-height:38px; max-width:20px;" alt=3D"" src=3D"https://6650o.img.ag.d.sendi=
+bm3.com/im/3579920/15fd9f264001efa0668072cabf04073d203e1c628b776e87506daf36=
+61b832d6.gif?e=3DxVAfP2Q6N4RgXhFl5b_KXrMXz0OdwKMcDYx7tH85B-Vi6W2p3QJ3ZkXEdS=
+RMel1goGJkKBhFaXPb1JA9f7v8jlqTaKa9xWdEOO-btyAz51L6hQYzg5ETfRq6XfOQZz_lZjpXF=
+eab1KPC-PSRlhxVLheARUMmufdWLo00rgBi1BXr02PRwgQiqsUenRD5" sib_img_id=3D"0"/>=
+ </td></tr></tbody></table> </td></tr></tbody></table> </td></tr></tbody></=
+table><!--[if gte mso 9]> </td></tr></table><![endif]--> </td></tr></tbody>=
+</table> <div><img width=3D"1" height=3D"1" src=3D"https://6650o.r.ag.d.sen=
+dibm3.com/mk/op/ArHAqO0ygNTgXGZk0IiEhalCR8GWZTPyprygR_75ZUKvQ-bEMi7rpk-oQUa=
+xeWS3t_uSyoXLDsSXDVirsIhF9afe2fQj6W4RXfbDw7dwcWsP4tTXf60A40SR49-Ix7eJIQ" />=
+</div>  </body></html>
+
+---------?=_22388-4388487686767--
+

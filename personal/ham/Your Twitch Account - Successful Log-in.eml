@@ -1,0 +1,218 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6358:5921:b0:191:9231:ed1 with SMTP id g33csp1699230rwf;
+        Sun, 2 Jun 2024 23:56:40 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFHY5/FpcG85st6hO1yT4dq7G2Xcx/D5m17QM68YkRjDtiFgMOtnerf66Cw/yt8fIBkTlga
+X-Received: by 2002:a05:6808:3084:b0:3c8:643b:7ebe with SMTP id 5614622812f47-3d1e35cbaf8mr8968554b6e.52.1717397799761;
+        Sun, 02 Jun 2024 23:56:39 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1717397799; cv=none;
+        d=google.com; s=arc-20160816;
+        b=T0Lz1m/5smEdTbOyqrEGeGwQslsQkl8YUzCP4VSrfWRDeZFDBy+sw1zMLCVHV0p1dN
+         X0upUIyB8G1GAJa/AA55TdUlmyKmcbBxsnHLUZZePasuJkOH58rI6/u0vj//Jd3zCI8f
+         e44zqYmEY1mdtcIzcFnCr1Qa1qd/MLB7MpnZwtEgb7iKVh5xg569yRDTKWgFwR3N2B7b
+         drI8MohfSvi+NE7YnGmx/UyMis2VTfj5/r0b1/WzqC9Ts/+RfjtgCwU0nTo3IpzuE7PS
+         XU/G11tIJduyV2m1CUhkMwU0+G2K0W/Ryc7Y2vYQeTE6Wjkb5nu29K2BoOYfsS/by/mI
+         iuuA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:date:message-id:content-transfer-encoding:mime-version
+         :subject:to:from:dkim-signature:dkim-signature;
+        bh=11DzKZiOGPqungbyv0a4eJOUDKF/H39DETSWykhkZwA=;
+        fh=c9Ng5lX/PRNTyWkn1/XM/+Hal06rmDX0OaSwLyM6lZA=;
+        b=P/lHEjtteErMU4BnJHsHHqEBepoAV/liZC6YeNK0HW5e5quvCigzpT6gAMlSQvnFRs
+         uayOOIVocuCwunAhFNTS0IHLpv2EH9c1adoLt8GpzMvsbJoUa45uQ0O/XXvaCzy5hL6f
+         OS30iFwhiQWpuVwYa8npy4BjVD7XwRx9/WRVPU7IG7DJVDb//LLGvbsanZwlsOjr6Q8i
+         yKKEC5j6YXwnZesXnDikHbBMQHkeGjz7zS/D5vkor5BU1xcnWLr1jag+ec2P6W3N3VRr
+         MH5PjQgRFh+Wb5e4z0gCLnft6pjMtjTqKB9FyMOh41wJ65mw5irki/qc0Bia4eid9SQU
+         VnJQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@twitch.tv header.s=dh6r6vaod6penm5x6ufsnymrqcq2rt3a header.b=irSWLD00;
+       dkim=pass header.i=@amazonses.com header.s=7v7vs6w47njt4pimodk5mmttbegzsi6n header.b=pyTugiJx;
+       spf=pass (google.com: domain of 0101018fdce2c1b4-06c8b677-3541-46aa-a94e-afec0e717b66-000000@bounce-west.twitch.tv designates 54.240.26.51 as permitted sender) smtp.mailfrom=0101018fdce2c1b4-06c8b677-3541-46aa-a94e-afec0e717b66-000000@bounce-west.twitch.tv;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=twitch.tv
+Return-Path: <0101018fdce2c1b4-06c8b677-3541-46aa-a94e-afec0e717b66-000000@bounce-west.twitch.tv>
+Received: from a26-51.smtp-out.us-west-2.amazonses.com (a26-51.smtp-out.us-west-2.amazonses.com. [54.240.26.51])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-6c3540f9317si5922834a12.168.2024.06.02.23.56.39
+        for <Blackpapermoon42@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 02 Jun 2024 23:56:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0101018fdce2c1b4-06c8b677-3541-46aa-a94e-afec0e717b66-000000@bounce-west.twitch.tv designates 54.240.26.51 as permitted sender) client-ip=54.240.26.51;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@twitch.tv header.s=dh6r6vaod6penm5x6ufsnymrqcq2rt3a header.b=irSWLD00;
+       dkim=pass header.i=@amazonses.com header.s=7v7vs6w47njt4pimodk5mmttbegzsi6n header.b=pyTugiJx;
+       spf=pass (google.com: domain of 0101018fdce2c1b4-06c8b677-3541-46aa-a94e-afec0e717b66-000000@bounce-west.twitch.tv designates 54.240.26.51 as permitted sender) smtp.mailfrom=0101018fdce2c1b4-06c8b677-3541-46aa-a94e-afec0e717b66-000000@bounce-west.twitch.tv;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=twitch.tv
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=dh6r6vaod6penm5x6ufsnymrqcq2rt3a; d=twitch.tv; t=1717397799;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date;
+	bh=11DzKZiOGPqungbyv0a4eJOUDKF/H39DETSWykhkZwA=;
+	b=irSWLD00qIoipRAcS4nTPzqRueE+Vu42vzetSU87aUhaCchSqyJO7KtoR3zLdhkl
+	YyQQEJ9Hp3c7hgP9X0M526lzVkuePRGC8XjnE8Y+O2Pl4x5d20OlTPEEqcqZAl8PFHK
+	HN9bRdTSWZtb9mCtrzV894owf8HAPSPPHCInSWL0=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1717397799;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date:Feedback-ID;
+	bh=11DzKZiOGPqungbyv0a4eJOUDKF/H39DETSWykhkZwA=;
+	b=pyTugiJx3LjyEGOG+3+U+bFg+EgH7avew3rQ6LwAEOsj8o7Xx68TXDpB7HOV6XbJ
+	CpUK0PTPsut4XzyF7+2Q1PJEfz+wkUTiyK7sckVdkvJmSbKl3vRY7o3mzRA7lPetVpf
+	ViFGmUtKzm9eDwvOJIavzv/lctrHtgsndH23fcmw=
+From: Twitch <no-reply@twitch.tv>
+To: Blackpapermoon42@gmail.com
+Subject: Your Twitch Account - Successful Log-in
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <0101018fdce2c1b4-06c8b677-3541-46aa-a94e-afec0e717b66-000000@us-west-2.amazonses.com>
+Date: Mon, 3 Jun 2024 06:56:39 +0000
+Feedback-ID: ::1.us-west-2.6if1qLlyPRc8dOFaAhyZ7qPPGGxp441EVJenuzKlcvQ=:AmazonSES
+X-SES-Outgoing: 2024.06.03-54.240.26.51
+
+<!doctype html><html xmlns=3Dhttp://www.w3.org/1999/xhtml style=3D"backgrou=
+nd-color: #efeef1"><head><base target=3D=E2=80=9C_blank=E2=80=9D><meta char=
+set=3Dutf-8><meta name=3Dviewport content=3D"width=3Ddevice-width"></head><=
+body style=3D"background-color:#eee;background-image:none;background-repeat=
+:repeat;background-position:top left;background-attachment:scroll;color:#33=
+3;font-family:Helvetica, Arial, sans-serif;line-height:1.25;-webkit-text-si=
+ze-adjust:100%;"><div class=3Dpreview-text style=3Ddisplay:none;font-size:1=
+px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;ove=
+rflow:hidden></div><meta charset=3Dutf-8><meta name=3Dviewport content=3D"w=
+idth=3Ddevice-width"><table border=3D0 cellpadding=3D0 cellspacing=3D0 heig=
+ht=3D100% width=3D100% class=3Dbody-table><tbody><tr><td align=3Dcenter val=
+ign=3Dtop><table border=3D0 cellpadding=3D20 cellspacing=3D0 width=3D600 cl=
+ass=3Douter-email-container><tbody><tr><td align=3Dcenter valign=3Dtop><tab=
+le border=3D0 cellpadding=3D0 cellspacing=3D0 width=3D100% class=3Dinner-em=
+ail-container style=3D"background-color:#fff;background-image:none;backgrou=
+nd-repeat:repeat;background-position:top left;background-attachment:scroll;=
+"><tbody><tr><td align=3Dcenter valign=3Dtop><table border=3D0 cellpadding=
+=3D0 cellspacing=3D0 height=3D90 width=3D100% class=3Demail-logo style=3D"b=
+ackground-color:#fff;background-image:none;background-repeat:repeat;backgro=
+und-position:top left;background-attachment:scroll;"><tbody><tr><td align=
+=3Dcenter valign=3Dmiddle><a href=3D"https://www.twitch.tv/r/e/eyJsb2NhdGlv=
+biI6ImxvZ28iLCJlbWFpbF9pZCI6IjhkNzUzODY3LTBjNDYtNDNjMS1iZGFmLWEyMTZkNWQ1MmI=
+wZSIsIm5hbWUiOiJuZXdfY2xpZW50X2xvZ2luIiwic291cmNlX2VtYWlsIjoiIiwiY3RhX3ZhbH=
+VlIjoiIiwiY2hhbm5lbCI6IiIsImxvZ2luIjoiIn0=3D/80773975/c06e4cd281954acd31524=
+fc525449af54b4381f215db97ecb36662f8ba40273a?ignore_query=3Dtrue&tt_content=
+=3Dnew_client_login&tt_email_id=3D8d753867-0c46-43c1-bdaf-a216d5d52b0e&tt_m=
+edium=3Demail"><img src=3Dhttps://static-cdn.jtvnw.net/growth-assets/email_=
+twitch_logo_uv width=3D114 height=3D38 alt=3DTwitch></a></td></tr></tbody><=
+/table></td></tr><tr><td align=3Dcenter valign=3Dtop><table border=3D0 cell=
+padding=3D0 cellspacing=3D0 height=3D1 width=3D100% class=3Demail-divider><=
+tbody><tr><td align=3Dcenter valign=3Dmiddle style=3D"background-color: #ee=
+eeee" width=3D249></td><td align=3Dcenter valign=3Dmiddle style=3D"backgrou=
+nd-color: #9147ff" width=3D102></td><td align=3Dcenter valign=3Dmiddle styl=
+e=3D"background-color: #eeeeee" width=3D249></td></tr></tbody></table></td>=
+</tr><tr><td align=3Dcenter valign=3Dtop><table border=3D0 cellpadding=3D0 =
+cellspacing=3D0 height=3D1 width=3D100% class=3Demail-header><tbody><tr><td=
+ align=3Dcenter valign=3Dmiddle><div class=3Dheader-message style=3D"text-a=
+lign: center;padding: 20px 0 20px 0;font-size: 20px;line-height: 1.5;width:=
+ 80%;"><b>Your Twitch Account - Successful Log-in</b></div></td></tr></tbod=
+y></table></td></tr><tr><td align=3Dcenter valign=3Dtop><table border=3D0 c=
+ellpadding=3D1 cellspacing=3D0 height=3D0 width=3D100% class=3Demail-body><=
+tbody><tr><td align=3Dcenter valign=3Dmiddle><div class=3Dheader-message st=
+yle=3D"text-align: left;padding: 0 0 20px 0;font-size: 14px;line-height: 1.=
+5;width: 80%;">Dear glitchkraken,</div></td></tr><tr><td align=3Dcenter val=
+ign=3Dmiddle><div class=3Dheader-message style=3D"text-align: left;padding:=
+ 0 0 20px 0;font-size: 14px;line-height: 1.5;width: 80%;">This email was ge=
+nerated because a new log-in has occurred for the account <b>glitchkraken</=
+b> on June 2, 2024 11:56:00 pm PDT (June 3, 2024 6:56:00 am UTC) originatin=
+g from:</div></td></tr><tr><td align=3Dcenter valign=3Dmiddle><div class=3D=
+header-message style=3D"text-align: left;padding: 0 0 20px 0;font-size: 14p=
+x;line-height: 1.5;width: 80%;"><ul style=3Dlist-style-type:none;><li><b>Lo=
+cation:</b> Irving, Texas, United States</li><li><b>Device:</b> Android 14<=
+/li><li><b>Browser:</b> Firefox</li><li><b>IP address:</b> 99.44.6.254</li>=
+</ul></div></td></tr><tr><td align=3Dcenter valign=3Dmiddle><div class=3Dhe=
+ader-message style=3D"text-align: left;padding: 0 0 20px 0;font-size: 14px;=
+line-height: 1.5;width: 80%;">If you initiated this log-in, awesome! We jus=
+t wanted to make sure it=E2=80=99s you.</div><div class=3Dheader-message st=
+yle=3D"text-align: left;padding: 0 0 20px 0;font-size: 14px;line-height: 1.=
+5;width: 80%;">If you did NOT initiate this log-in, you should immediately =
+<a href=3D"https://www.twitch.tv/r/e/eyJsb2NhdGlvbiI6InNlY3VyaXR5X2xpbmsiLC=
+JlbWFpbF9pZCI6IjhkNzUzODY3LTBjNDYtNDNjMS1iZGFmLWEyMTZkNWQ1MmIwZSIsIm5hbWUiO=
+iJuZXdfY2xpZW50X2xvZ2luIiwic291cmNlX2VtYWlsIjoiIiwiY3RhX3ZhbHVlIjoiIiwiY2hh=
+bm5lbCI6IiIsImxvZ2luIjoiIn0=3D/80773975/56673f9d6518927996089301ee36e430b26=
+51f8a599fa65debd19401e8553bfe/settings/security?ignore_query=3Dtrue&tt_cont=
+ent=3Dnew_client_login&tt_email_id=3D8d753867-0c46-43c1-bdaf-a216d5d52b0e&t=
+t_medium=3Demail">change your Twitch password</a> to ensure account securit=
+y.</div><div class=3Dheader-message style=3D"text-align: left;padding: 0 0 =
+20px 0;font-size: 14px;line-height: 1.5;width: 80%;">We <b>strongly recomme=
+nd</b> that you enable two-factor authentication if you haven=E2=80=99t alr=
+eady. We also encourage you to opt-in to receive your security codes via th=
+e Authy app. Receiving security codes via Authy will not only help you save=
+ on SMS costs, but it=E2=80=99s the most secure method to receive your secu=
+rity codes since SMS messages can be intercepted.</div></td></tr><tr><td al=
+ign=3Dcenter valign=3Dmiddle><div class=3Dheader-message style=3D"text-alig=
+n: left;padding: 0 0 20px 0;font-size: 14px;line-height: 1.5;width: 80%;"><=
+b>Adding Two-Factor Authentication:</b><ul style=3Dlist-style-type:disc;><l=
+i>Go to <a href=3D"https://www.twitch.tv/r/e/eyJsb2NhdGlvbiI6InNlY3VyaXR5X2=
+xpbmsiLCJlbWFpbF9pZCI6IjhkNzUzODY3LTBjNDYtNDNjMS1iZGFmLWEyMTZkNWQ1MmIwZSIsI=
+m5hbWUiOiJuZXdfY2xpZW50X2xvZ2luIiwic291cmNlX2VtYWlsIjoiIiwiY3RhX3ZhbHVlIjoi=
+IiwiY2hhbm5lbCI6IiIsImxvZ2luIjoiIn0=3D/80773975/56673f9d6518927996089301ee3=
+6e430b2651f8a599fa65debd19401e8553bfe/settings/security?ignore_query=3Dtrue=
+&tt_content=3Dnew_client_login&tt_email_id=3D8d753867-0c46-43c1-bdaf-a216d5=
+d52b0e&tt_medium=3Demail">https://www.twitch.tv/settings/security</a></li><=
+li>Click on "Set Up Two-Factor Authentication"</li><li>Enter your phone num=
+ber</li><li>You=E2=80=99ll receive an SMS with your security code</li></ul>=
+</div></td></tr><tr><td align=3Dcenter valign=3Dmiddle><div class=3Dheader-=
+message style=3D"text-align: left;padding: 0 0 20px 0;font-size: 14px;line-=
+height: 1.5;width: 80%;">For more information, please check <a href=3D"http=
+s://www.twitch.tv/r/e/eyJsb2NhdGlvbiI6InNlY3VyaXR5X3N1cHBvcnRfbGluayIsImVtY=
+WlsX2lkIjoiOGQ3NTM4NjctMGM0Ni00M2MxLWJkYWYtYTIxNmQ1ZDUyYjBlIiwibmFtZSI6Im5l=
+d19jbGllbnRfbG9naW4iLCJzb3VyY2VfZW1haWwiOiIiLCJjdGFfdmFsdWUiOiIiLCJjaGFubmV=
+sIjoiIiwibG9naW4iOiIifQ=3D=3D/80773975/469688dc4b0492e11187f15948afdccb155f=
+5729db2453586570c3254c53b347/legacyPath?custom_domain_target_url=3Dhttps%3A=
+%2F%2Fhelp.twitch.tv%2Fs%2Farticle%2Faccount-hacked%3Flanguage%3Den">this s=
+upport page</a> on what to do if you suspect your account has been compromi=
+sed.</div></td></tr><tr><td align=3Dcenter valign=3Dmiddle><div class=3Dhea=
+der-message style=3D"text-align: left;padding: 0 0 20px 0;font-size: 14px;l=
+ine-height: 1.5;width: 80%;">Thanks,<br>Twitch Support Team</div></td></tr>=
+</tbody></table></td></tr></tbody></table></td></tr></tbody></table><table =
+align=3Dcenter style=3D"background:0 0!important;border-collapse:collapse;b=
+order-spacing:0;margin:20px auto 0 auto;padding:0;text-align:inherit;vertic=
+al-align:top;width:580px"><tbody><tr><th><table style=3Dborder-collapse:col=
+lapse;border-spacing:0;display:table;padding:0;text-align:left;vertical-ali=
+gn:top;width:100%><tbody><tr style=3Dpadding:0;text-align:left;vertical-ali=
+gn:top><th style=3D"Margin:0 auto;color:#322f37;font-family:Helvetica,Arial=
+,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;pa=
+dding:0;padding-bottom:0!important;padding-left:20px;padding-right:10px;pad=
+ding-top:0!important;text-align:left;width:270px"><a href=3Dhttps://twitter=
+.com/twitch/ style=3DMargin:0;color:#9147ff;font-family:Helvetica,Arial,san=
+s-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;=
+text-decoration:none target=3D_blank data-saferedirecturl=3D"https://www.go=
+ogle.com/url?q=3Dhttps://twitter.com/twitch/&source=3Dgmail&ust=3D157204894=
+6414000&usg=3DAFQjCNEJEY5NkmTnXd5Q9wprWPiE2ITgvw"><img src=3D"https://ci5.g=
+oogleusercontent.com/proxy/NjrXjBJfWd_KVMGC2RlzLVYSFdY3i6I4jo6h9CG3zyai6S3S=
+MsqcK-Ufc_rmmpLKtvpfpaRsWgDHJkCrfBUEW5JH_9uJelJhBdIka6mmYQM-bLJT95fgwlxWuqj=
+vgUt_bWmNUq1B=3Ds0-d-e1-ft#https://s.jtvnw.net/jtv_user_pictures/hosted_ima=
+ges/email-twitter-logo-20171115.png" width=3D20 height=3D20 alt=3Dtwitch-tw=
+itter style=3Dborder:none;clear:both;display:block;float:right;max-width:10=
+0%;outline:0;text-align:right;text-decoration:none;width:auto class=3DCToWU=
+d></a></th><th style=3D"Margin:0 auto;color:#322f37;font-family:Helvetica,A=
+rial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 aut=
+o;padding:0;padding-bottom:0!important;padding-left:10px;padding-right:20px=
+;padding-top:0!important;text-align:left;width:270px"><a href=3Dhttps://www=
+.facebook.com/twitch/ style=3DMargin:0;color:#9147ff;font-family:Helvetica,=
+Arial,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-al=
+ign:left;text-decoration:none target=3D_blank data-saferedirecturl=3D"https=
+://www.google.com/url?q=3Dhttps://www.facebook.com/twitch/&source=3Dgmail&u=
+st=3D1572048946414000&usg=3DAFQjCNHrvpLubLbeJxTMWxqMwwLU9J64aA"><img src=3D=
+"https://ci4.googleusercontent.com/proxy/XHffVu34DLJFd5BgnT-FmR1sO6U8aNYtqI=
+ngRIAczxlyKN1dB0Fe-00F3bXbo3fVQ4PlEIpJVQrCAsfuBto15Y4neEJHUxd2v0z7gy41unT3Y=
+DbJg6bTUgmWOcju7HCKeL18r1pH8A=3Ds0-d-e1-ft#https://s.jtvnw.net/jtv_user_pic=
+tures/hosted_images/email-facebook-logo-20171115.png" width=3D20 height=3D2=
+0 alt=3Dtwitch-facebook style=3Dborder:none;clear:both;display:block;float:=
+left;max-width:100%;outline:0;text-align:left;text-decoration:none;width:au=
+to class=3DCToWUd></a></th></tr></tbody></table></th></tr><tr style=3Dpaddi=
+ng:0;vertical-align:top><th style=3Dcolor:#322F37;font-family:Helvetica,Ari=
+al,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;paddi=
+ng:0;><p style=3D"color:#322F37;font-family:Helvetica,Arial,Verdana,'Trebuc=
+het MS';font-size:16px;font-weight:400;line-height:24px;margin:0;margin-top=
+:5px;margin-bottom:10px;padding:0;padding-bottom:10px;text-align:center"><s=
+mall style=3Dcolor:#706a7c;font-size:14px>=C2=A9 2024 Twitch, All Rights Re=
+served<br>350 Bush Street, 2nd Floor, San Francisco, CA, 94104 - USA</small=
+></p></th><th class=3Dexpander style=3Dcolor:#322F37;font-family:Helvetica,=
+Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;pa=
+dding:0!important;text-align:left;visibility:hidden;width:0></th></tr></tbo=
+dy></table></td></tr></tbody></table><img src=3D"https://spade.twitch.tv/tr=
+ack?data=3DeyJldmVudCI6ImVtYWlsX29wZW4iLCJwcm9wZXJ0aWVzIjp7Im5vdGlmaWNhdGlv=
+bl9pZCI6IjhkNzUzODY3LTBjNDYtNDNjMS1iZGFmLWEyMTZkNWQ1MmIwZSIsIm5vdGlmaWNhdGl=
+vbl90eXBlIjoibmV3X2NsaWVudF9sb2dpbiJ9fQ%3D%3D&img=3D1&ua=3D1" width=3D1 hei=
+ght=3D1></body></html>

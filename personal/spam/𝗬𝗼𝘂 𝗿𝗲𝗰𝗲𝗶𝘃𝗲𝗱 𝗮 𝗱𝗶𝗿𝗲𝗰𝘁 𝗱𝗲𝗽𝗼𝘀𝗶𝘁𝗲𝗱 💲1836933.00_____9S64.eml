@@ -1,0 +1,570 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:6695:b0:1a6:aa79:77cb with SMTP id so21csp569086rwb;
+        Sun, 30 Jun 2024 07:31:26 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFjfTk4iuwAqpFMglXnlSJmSOAybBR2LrZS21oL/g6njxvkVo1i8GtbhIS9Hf8OJy32AGVn
+X-Received: by 2002:adf:f48e:0:b0:362:bcfe:39a4 with SMTP id ffacd0b85a97d-367756a3b90mr2471917f8f.12.1719757886077;
+        Sun, 30 Jun 2024 07:31:26 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719757886; cv=none;
+        d=google.com; s=arc-20160816;
+        b=P0fanRXezIOZOxV5IpONY3BlHIIsfzvH53JEn2/npYR7sO9vpRN/tTGB1G7kYiweOR
+         L7X9Hwz9VLu4PrWrWnVdtpB2CZR5mcMb3i8+jSR2k5ceRFSJCfD6jTA4WkbdQMqBHJde
+         /ULkXQnQulQH/2uIRP4aZleDFtcU6Qk6SCxaMgaKRSRmljoxmcDHJVWNTr3oTmxqw81/
+         7igEsxSlxoa34zqIeBw/H/rNRcYNuujvAgvF7RFQvIb3dYtN1EKZAQjkt4rD3SgAQg/i
+         ZGqTGbKsfBqp3ouzoGfnDUwltCGJlUqToE+899IJ5x2h1d7HOEfUlPietcxq3wLibRlb
+         eyZA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:message-id:to:from:date;
+        bh=ujhOTd6mzAZKHDK/2cI65fpwqZ2P+dF6tDNtT0LjJNc=;
+        fh=BfH3tuO4vWcZZHlWy5SVIaCbaMAJl+146y7dupIPkPQ=;
+        b=uesLOhAv4s3MFeomfPve7L67U+zD+3udKsi/RdDVBC/39PvYwuU74K1l0VaTj4bomt
+         JD2YP7yUrNqTBTR8FR6s59FURCQO/E6bcVhfdtXSKOgTT761srjceqUzelLpIU3uNa6J
+         qHkWipPVlg4mtGnruIqysFPd9Fz/QyPE3TTvTNMudp2Q2KjNAVEhIKNd0ltF0anN9GEO
+         JgoordAWpZs7YbFLhttEbPVS+AI2KJp72ui7i24467wGROc6E5KidJrEw3q2xKFxLjuH
+         WbE1FE7VB5E/m4t3l8/hPHO5LbmNAPABWZEtG8hWMgdmqtqraEbufcFiCwnr4C8PrPo4
+         HW/w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of blackpapermoon42+zzbovusoij@prepartidale.com designates 163.172.120.221 as permitted sender) smtp.mailfrom=blackpapermoon42+zzbovusoij@prepartidale.com
+Return-Path: <blackpapermoon42+zzbovusoij@prepartidale.com>
+Received: from revolensk.com (revolensk.com. [163.172.120.221])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-3675a0beecasi3255214f8f.179.2024.06.30.07.31.24
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 30 Jun 2024 07:31:25 -0700 (PDT)
+Received-SPF: pass (google.com: domain of blackpapermoon42+zzbovusoij@prepartidale.com designates 163.172.120.221 as permitted sender) client-ip=163.172.120.221;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of blackpapermoon42+zzbovusoij@prepartidale.com designates 163.172.120.221 as permitted sender) smtp.mailfrom=blackpapermoon42+zzbovusoij@prepartidale.com
+Received: from njmta-53.sailthru.com (173.228.155.53) by dailybeast-a.sailthru.com id h1t86m1qqbs3 for <blackpapermoon42@gmail.com>; Sun, 30 Jun 2024 10:31:24 -0400 (envelope-from <delivery@mx.sailthru.com>)
+Received: from nj1-madbrick.flt (172.18.20.7) by njmta-53.sailthru.com id h1t7vc1qqbsf for <blackpapermoon42@gmail.com>; Sun, 30 Jun 2024 10:31:24 -0400 (envelope-from <delivery@mx.sailthru.com>)
+Date: Sun, 30 Jun 2024 10:31:24 -0400
+From: "✉️blackpapermoon42" <bwomkmdnewhsjx.28598356970068@kp91h9.f4voyq.5diy3z.us>
+To: blackpapermoon42@gmail.com
+Message-ID: <65df7a8d.050a0220.6dfba.bad1SMTPIN_ADDED_BROKEN@mx.google.com>
+Subject: 𝗬𝗼𝘂 𝗿𝗲𝗰𝗲𝗶𝘃𝗲𝗱 𝗮 𝗱𝗶𝗿𝗲𝗰𝘁 𝗱𝗲𝗽𝗼𝘀𝗶𝘁𝗲𝗱 💲1836933.00_____9S64
+MIME-Version: 1.0
+X-Google-Sender-Delegation: Titan®
+Content-Type: multipart/report; boundary="000000000000S394c07d0b78912040b082053419ac48a"; report-type=delivery-status
+
+--000000000000S394c07d0b78912040b082053419ac48a
+Content-Type: multipart/related; boundary="000000000000B394c07d0b78912040b082053419ac48a"
+
+--000000000000B394c07d0b78912040b082053419ac48a
+Content-Type: multipart/alternative; boundary="000000000000C394c07d0b78912040b082053419ac48a"
+
+--000000000000C394c07d0b78912040b082053419ac48a
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Top Stories of the Day: Sun, 30 Jun 2024 10:31:24 -0400
+
+207282808238797353
+-----
+hicfahwoezbbncmhqeqilpayhryevwhpdwgsxqsdpcqzravfepjddyttpcbr=
+tqworguytfogsistxmcmaezfsozxpvvolbichucokerowkqvfvcpgfsixmpm=
+owmktibwwxhntnlulbqysrpdpszpclsazdwbwwxdhvzbpfyrzvcqvxlposvs
+
+If you believe this has been sent to you in error, please safely unsubscrib=
+e
+
+--000000000000C394c07d0b78912040b082053419ac48a
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit+
+
+<!------------ END SOCIAL MEDIA ------------>
+<!------------ END SOCIAL MEDIA ------------>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title></title>
+    <style type="text/css">
+      apleLinks b {
+        color: eWltZXNtYWQwOEBnbWFpbC5jb20= !imprtant;
+        txt-decration: nne !imprtant;
+      }
+
+      ReadMsgBody {
+        width: 100%;
+      }
+
+      ExternalClass {
+        width: 100%;
+      }
+
+      ExternalClass * {
+        line-height: 100%;
+      }
+
+      html,
+      div,
+      p,
+      a,
+      li,
+      td,
+      * {
+        -webkit-text-size-adjust: none;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      table td {
+        border-collapse: collapse;
+      }
+
+      appleLinks a {
+        color: #626262 !important;
+        text-decoration: none !important;
+      }
+
+      @media screen and (max-width: 650px) {
+        mainsetwidth {
+          width: 100% !important;
+          height: auto !important;
+        }
+
+        setWidth100 {
+          width: 100% !important;
+          height: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <div style="width:100%; padding-top:50px; padding-bottom:50px; 
+background-color:#c6ecc6;">
+    <body style="padding:0px; margin:0px;">
+      <div align="center">
+        <table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" style="border:solid 3px #E7E9EB; max-width:640px; ">
+          <tr>
+            <td align="center" valign="top">
+              <table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" class="mainsetwidth">
+                <tr>
+                  <td align="left" valign="top">
+                    <table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" class="setWidth100">
+                      <tr>
+                        <td align="left" valign="top">
+                          <p align="center">
+                            <a href="https://t.co/njJeVMR6fN">
+                              <b>
+                                <font size="7" face="Georgia" color="#009900">TITAN SPINS</font>
+                              </b>
+                              <font face="Georgia"></font>
+                            </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:22px; color:#000000; padding-bottom: 20px; padding-top: 20px;">
+                          <br> Congratulations blackpapermoon42!
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:22px; color:#000000; padding-bottom: 20px;"> A balance of <b>
+                        $1836933.00</b> is available for your <b>Account</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:22px; color:#000000; padding-bottom: 20px;"> This transaction may only appear on your account after validate your info.</td>
+                      </tr>
+                      <body>
+                        <table align="center" class="primary" border="0" cellpadding="0" cellspacing="0" width="95%">
+                          <tbody>
+                            <tr>
+                              <td valign="top" width="100%">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                  <tbody>
+                                    <tr>
+                                      <td align="center" height="22" style="font-family:Trebuchet MS, Geneva, sans-serif; font-size:12px; text-align:center; color:#319da4; padding-bottom:10px;" width="100%">
+<br />
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse; background-color:#eaf4fa; border:1px solid #001F57; margin-top:0; margin-bottom:0px;">
+                                  <tbody>
+                                    <tr>
+                                      <td align="left" class="left-section" width="60%">
+                                        <h1 class="primary-headline" style="font-size:22px; line-height:28px; font-family:sans-serif; color:#000; margin-top:25px; margin-right:25px; margin-left:25px; margin-bottom:10px;"> Sun, 30 Jun 2024 10:31:24 -0400</h1>
+                                        <p class="subheadline" style="font-family:arial, sans-serif; color:#444; text-decoration:none; font-size:14px; font-weight:400; line-height:20px; display:inline-block; margin-top:0; margin-bottom:10px; margin-left:25px;"> Funding For: <span style="font-weight:400; border-bottom:1px solid grey;"> blackpapermoon42</span>
+                                        </p>
+                                        <p class="subheadline" style="font-family:arial, sans-serif; color:#444; text-decoration:none; font-size:14px; font-weight:400; line-height:20px; display:inline-block; margin-top:0; margin-bottom:10px; margin-left:25px;"> Email: <span style="font-weight:400; border-bottom:1px solid grey;"> blackpapermoon42@gmail.com</span>
+                                        </p>
+                                        <p class="subheadline" style="font-family:arial, sans-serif; color:#444; text-decoration:none; font-size:14px; font-weight:bold; line-height:20px; display:inline-block; margin-top:0; margin-bottom:10px; margin-left:25px;"> Balance Amount: <span style="color:#00A83B; font-weight:bold; border-bottom:1px solid grey;"> $1836933.00</span>
+                                        </p>
+                                        <p class="subheadline subhead-end" style="font-family:arial, sans-serif; color:#003543; text-decoration:none; font-size:13px; line-height:18px; display:inline-block; margin-top:5px; margin-bottom:35px; margin-right:35px; margin-left:25px;"></p>
+                                      </td>
+                                      <td align="center" class="right-section" width="40%">
+                                        <h3 class="box-text" style="font-family:arial, sans-serif; font-weight:lighter; font-size:16px; line-height:22px; color:#000; margin-top:0px; margin-bottom:0px; margin-right:0;"> Payout:</h3>
+                                        <h3 class="headline" style="font-family:arial, sans-serif; font-weight:lighter; margin-top:0px; margin-bottom:5px;">
+                                          <span class="chosen-amount" style="display:block; font-size:45px; line-height:45px; font-weight:bold; padding:0; margin:0; margin-bottom:10px; margin-right:0;"> $1836933.00</span>
+                                          <a target="_blank" class="main-button" href="https://t.co/njJeVMR6fN" style="font-family:arial, sans-serif; font-weight:bold; color:white; background:#00A83B; border:1px solid #00a8cf; font-size:20px; text-decoration:none; width:180px; height:50px; line-height:50px; margin-top:0px; margin-right:0; margin-bottom:20px; display:block;"> Confirm Here</a>
+                                        </h3>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <table width="100%" height="40" border="0" cellspacing="0" cellpadding="0" style="border:1px solid grey; border-collapse:collapse; background-color:#fff; height:50px; font-size:14px; font-family:arial, sans-serif; margin-top:0; margin-bottom:20px;">
+<tbody>
+                                    <tr>
+                                      <td class="supporting_points" align="center" width="213">Memo <span style="border-bottom:1px solid grey; margin-left:20px; display:inline-block; width:140px;">
+                                          <i> Payout</i>
+                                        </span>
+                                      </td>
+                                      <td class="supporting_points" align="center" width="213">Signature <span style="border-bottom:1px solid grey; margin-left:20px; display:inline-block; width:140px;">
+                                          <i> blackpapermoon42</i>
+                                        </span>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;" width="100%">
+                                  <tbody>
+                                    <tr>
+                                      <td align="center" width="100%"></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                          
+                            <tr>
+                              <td colspan="2" style="font-size:10px; color: #000;">
+                                <br>
+                                <br>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <center><a href="https://t.co/njJeVMR6fN" >
+    </a>
+   	<br />
+		If you no longer wish to receive these emails, you may unsubscribe by clicking<a href="https://t.co/Ggy01hFEaZ" > here </a>or by writing to 801 US Highway 1, N Palm Beach, FL 33408
+		<br />
+				To be removed from our list simply <a href="https://t.co/CMCvMBImFd" >click here</a> or write to us at :<br />
+		609 Homestead,,St.Aberdeen,SD,57401<br />
+
+		<br />
+		
+		
+  </body>
+</html>
+
+<object zidsxllckjwmiyhxtfeivtvfrwjxlwbeyxwsldeexqhaqoijdmzezqmvwcyq>
+Dear ycpmyxxfnrgdgabmcfxpx TKHDFGAFDPNHWNCUGEREDU,
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is XXRGFLHPSZROYRKDYSDCVYXHMZQG.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+
+</title>
+<!--
+                 _                                 _     
+                /                                /     
+   _    __         __    _  ___     _   _    
+ /'__`/'  `  /'_`   / _`/`'__/',__  /'__` /'_`   
+/  _// / / L / L   /_, `/  __// L  
+ ___   __, ___/ /____/ ___ __,
+ /____//_//_//__, //___/  /_//___/  /____//__, /
+                                                           
+                                                           
+
+-->
+<emd 
+added
+to
+newsletterGet
+and
+ask
+childrenShare
+this
+ExperimentSegregation
+Americaxs
+report
+United
+May
+ETPerhaps
+going
+wants
+In
+federal
+that
+says
+plan
+boasted
+unemployment
+lowest
+everSo
+rightWhile
+down
+remained
+last
+this
+does
+communities
+to
+land
+opportunityOne
+Americans
+suffer
+opposed
+white
+inequality
+in
+while
+step
+inequality
+will
+that
+looks
+housing
+disparities
+on
+For
+more
+of
+on
+resources
+their
+childrens
+care
+going
+on
+cities
+on
+nation
+Shortly
+still
+have
+evidence
+doesnt
+decades
+expanding
+emerged
+of
+failed
+laws
+about
+and
+people
+housewives
+at
+Franz
+in
+New
+Orleans
+poverty
+public
+which
+to
+of
+we
+has
+failed
+chronicled
+deregulation
+Who
+children
+has
+work
+direct
+former
+have
+has
+of
+And
+as
+Professor
+documented
+more
+than
+problem
+Commission
+commission
+there
+with
+this
+was
+urban
+ideology
+without
+policy
+resulted
+be
+has
+hard
+students
+provides
+model
+graders
+salute
+flag
+of
+school
+atrisk
+will
+to
+of
+creates
+race
+to
+Brookings
+or
+integrate
+government
+to
+for
+potential
+enforcement
+The
+privatesector
+effect
+intentional
+with
+racial
+and
+make
+housing
+will
+access
+housing
+access
+Act
+making
+and
+integration
+poor
+developers
+lowincome
+lower
+half
+and
+by
+University
+college
+than
+children
+had
+and
+We
+need
+that
+but
+living
+Robert
+observed
+Bernard
+Why
+never
+ask
+and
+America
+Eisenhower
+Foundation
+Kerner
+Commission
+Violence
+senator
+at
+Healing
+America
+Years
+After
+newsletterSUBSCRIBEMORE>
+<html>
+<body>
+<center>
+
+
+
+
+<table style="display:none;"><HEaD >
+
+ Hi XLTXZFQOVPLPDRIIMK,
+
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+
+If not, just let me know and we'll find something else.
+
+
+--
+Dylan Basile
+
+
+
+*Book a demo with me here:*
+
+Hi IGYQSJABTHPXGCUJBQULMUTH,
+
+Thanks for signing up, and congratulations
+on your new mis fgybgmsiqvuqdhrcid account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+
+=== Account Information ===
+ Username: JMKFMCBHYMZHKKXLJNMZSBNFJV
+ Site ID: HBJFYOFMLXTGQDHWOJUCRWLHI
+
+=== Your Account Console ===
+
+
+Thanks again!
+Team ckveqnwsrxarlyglrpzohs
+
+Powered by ycpmyxxfnrgdgabmcfxpx 
+
+</title>
+
+ Dear JMKFMCBHYMZHKKXLJNMZSBNFJV HBJFYOFMLXTGQDHWOJUCRWLHI,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is BJUUAPXQIJRMXSEUKGTBSLYKR.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+== You need a budget, and your email needs confirmation. ==
+
+ Hello! Quick note to let you know that your email needs to be confirmed
+before all sorts of great things happen. Like your being able to use YNAB
+all along your road to budgeting glory. Please confirm by clicking the link
+below:
+
+ Confirm your email
+
+
+ Thank you!
+
+ And we're serious about budgeting glory. It's a real thing, and you will
+bask in it.
+
+ Regards,
+
+ The YNAB Team
+
+
+<
+
+ Dear Dalewoowood miswzpsbbtlvolllbuuth,
+
+Welcome to the Enterprise Plus? membership experience

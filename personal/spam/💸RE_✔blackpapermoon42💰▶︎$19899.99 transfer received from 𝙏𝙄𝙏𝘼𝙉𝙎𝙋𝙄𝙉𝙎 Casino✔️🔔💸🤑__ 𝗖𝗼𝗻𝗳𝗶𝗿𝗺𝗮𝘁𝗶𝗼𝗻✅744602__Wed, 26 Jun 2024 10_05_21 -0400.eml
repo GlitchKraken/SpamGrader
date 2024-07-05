@@ -1,0 +1,701 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:708b:b0:1a4:ef03:4af8 with SMTP id ub11csp633483rwb;
+        Wed, 26 Jun 2024 07:05:21 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IE1xwFSDTTqPGePpl7Vq+EX77VhcvLN6otmR+3GyAUPYcuJKXq/ZGv6PptrO1cMpKVJD4as
+X-Received: by 2002:a05:6a20:b313:b0:1bd:23f4:df70 with SMTP id adf61e73a8af0-1bd23f4e114mr3927074637.52.1719410721533;
+        Wed, 26 Jun 2024 07:05:21 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719410721; cv=none;
+        d=google.com; s=arc-20160816;
+        b=oc9rVQA400RG5OunIkbCNHQ7VTCIgD07q0pC2OKr/U4+0WZ5Kxm1T9CNzgFPCDGUvs
+         Qse9A80h0tXTlSlKSCC1q0o/yeMdzG8eUqJzqXuxh7zmoL2V8ALNLxW5dYuxDjcR9Umh
+         YmweBPGMT3xuNjebteGIXxzOcplszfa2VYDWK6TWTnFxJuV2LG+f+Wr6+htXpuXDOLGg
+         K0iJpEeFJTFe76tqeCdAFq/u/ZJJmk4USOjvVd908gQ42lpL2CCldmDS+2bkxjsHBARk
+         FYvlCekJsOzgC40uUXpm0JwkVv8HwveeunT9G2zwlTaI5K9nSlMDb+IyrAAhz15PSWh+
+         9d5w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:message-id:to:from:date;
+        bh=DeRuXrDkplB2lEIs2Yf9fjLEaxKjUuTxTvOIf/8c26Q=;
+        fh=BfH3tuO4vWcZZHlWy5SVIaCbaMAJl+146y7dupIPkPQ=;
+        b=LRW06QdDBTNYXSGncZKaDxPfcMXrPUcSR1hwqSaYrD7YDNholC3UXjOjb0yg53MZiL
+         /kKWsGm1GbMyMMMKxh++Xb12TFU/Cb8RZVGTjKFw6Bd2cWtuPD3YmER1Z11GVdbwgJzv
+         pJKE9pSLE9eSbpvJKY637mMFdLdxroObdCObnDt0FgB/GvQkIO4wRMk5YrlsS3H/VHnC
+         gv/Mwj25bBwA8QCche/C8PWYhjWp3d4lNLDWfpJUjwCdL5dbeWSQff7vlbgb3S06AeyP
+         uXNEIyfial33Mw0MAVbxQeUk9uX4naddipRwAh+fifp4PEdM4XFOykJQ5rCyVL1Y8idu
+         eHcw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of blackpapermoon42+yaqwswrfpw@mail.poradadesign1.chloridamen.uk.com designates 23.105.109.57 as permitted sender) smtp.mailfrom=blackpapermoon42+yaqwswrfpw@mail.poradadesign1.chloridamen.uk.com
+Return-Path: <blackpapermoon42+yaqwswrfpw@mail.poradadesign1.chloridamen.uk.com>
+Received: from guatemen.com (guatemen.com. [23.105.109.57])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-716b25ee26dsi11352608a12.167.2024.06.26.07.05.21
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 26 Jun 2024 07:05:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of blackpapermoon42+yaqwswrfpw@mail.poradadesign1.chloridamen.uk.com designates 23.105.109.57 as permitted sender) client-ip=23.105.109.57;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of blackpapermoon42+yaqwswrfpw@mail.poradadesign1.chloridamen.uk.com designates 23.105.109.57 as permitted sender) smtp.mailfrom=blackpapermoon42+yaqwswrfpw@mail.poradadesign1.chloridamen.uk.com
+Return-Path: <gt317e72_icz6fage@c4y9yhsm.org>
+Received: from smtp.j2z6whna.org (enr2-mrelay-01.wa2cjlhkfv.org. ) by mx.google.com with ESMTP id 163ekiv1f87fqk8a.25.2019.02.12.06.38.06 for <blackpapermoon42@gmail.com>; Wed, 26 Jun 2024 10:05:21 -0400
+Received-SPF: pass (google.com: domain of inhxqblz_registration@3y4jcgxd.org designates 23.105.109.57 as permitted sender) client-ip=143.220.15.131;
+Received: from pdr8-services-05v.prod.134ykal7.org (HELO pdr8-services-05v) () by smtp.zs4627vq.org with SMTP; Wed, 26 Jun 2024 10:05:21 -0400
+Received: from pdr8-services-05v.prod.z36p6au9.org (ip6-localhost ) by pdr8-services-05v (Postfix) with ESMTP id 3gqjvzth for <blackpapermoon42@gmail.com>; Wed, 26 Jun 2024 10:05:21 -0400
+Date: Wed, 26 Jun 2024 10:05:21 -0400
+From: "💲𝘾𝙊𝙉𝙂𝙍𝘼𝙩💰" <nooreply@nvyx1o.f29ye7.u6tjy2.us>
+To: blackpapermoon42@gmail.com
+Message-ID: <sms.wtx7.fmjuj.javamail.tomcat@pdrservices-05v.prod.fd7djyw6.org>
+Subject: 💸RE:✔blackpapermoon42💰▶︎$19899.99 transfer received from 𝙏𝙄𝙏𝘼𝙉𝙎𝙋𝙄𝙉𝙎 Casino✔️🔔💸🤑__ 𝗖𝗼𝗻𝗳𝗶𝗿𝗺𝗮𝘁𝗶𝗼𝗻✅744602__Wed, 26 Jun 2024 10:05:21 -0400
+MIME-Version: 1.0
+Content-Type: multipart/report; boundary="000000000000Sd1f7b9f1691f9d99c529ae402ad4217f"; report-type=delivery-status
+X-Google-Sender-Delegation: Titan®ndary="000000000000Sd1f7b9f1691f9d99c529ae402ad4217f"; report-type=delivery-status
+X-Google-Sender-Delegation: Titan®
+
+--000000000000Sd1f7b9f1691f9d99c529ae402ad4217f
+Content-Type: multipart/related; boundary="000000000000Bd1f7b9f1691f9d99c529ae402ad4217f"
+
+--000000000000Bd1f7b9f1691f9d99c529ae402ad4217f
+Content-Type: multipart/alternative; boundary="000000000000Cd1f7b9f1691f9d99c529ae402ad4217f"
+
+--000000000000Cd1f7b9f1691f9d99c529ae402ad4217f
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Top Stories of the Day: Wed, 26 Jun 2024 10:05:21 -0400
+
+207282808238797353
+-----
+shffoycmxmwcsoujikthpwmeykjlzvsgpbhvvigkdeajsbczikzeyrivcgzq=
+stjkghypxonvlnqpmgkdfegnkklcsuzetuvwnrqsddweptoockjavchvpwdh=
+xwbroybpgqcyovlduvnulsvfqtuxvhrlqnvjfkxkvwzpywdayupyswamntvw
+
+If you believe this has been sent to you in error, please safely unsubscrib=
+e
+
+--000000000000Cd1f7b9f1691f9d99c529ae402ad4217f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit+
+<html>
+<body>
+		<br><br>
+<center>
+<a style="text-decoration: none;" HrEf="https://t.co/njJeVMR6fN">
+</a>
+ 
+ 
+<a style="text-decoration: none;" HrEf="https://t.co/njJeVMR6fN">
+<font color="#000000" face="Verdana" style="font-size: 33pt">
+&#9733; CONGRATULATIONS &#9733; 
+</font>
+</a>
+ 
+ 
+<a style="text-decoration: none;" HrEf="https://t.co/njJeVMR6fN">
+<p>
+<font color="#055fab" face="Verdana" style="font-size: 26pt">Titan Spins Casino</font>
+</p>
+</a>
+ 
+ <p style="font-size: 20px; line-height: 1.8em;"><b style="color: green;">Last chance to get your balance!</b>
+   </p>
+   <p style="font-size: 28px; line-height: 1.8em;"> Your Balance : <br></p>
+<a HrEf="https://t.co/njJeVMR6fN" target="_blank" style="text-decoration:none;">
+<center>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" 
+style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt 
+!important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse
+ !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto 
+ !important;margin-left:auto !important;table-layout:fixed !important;width:100%;">
+ <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
+ <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;
+ padding-bottom:10px;padding-right:10px;padding-left:10px;font-family:sans-serif;font-size:15px;
+ line-height:20px;color:#555555;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;"><center>
+<table width="60%" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse; 
+background-color:#eaf4fa; border:1px solid #001F57; margin-top:0; margin-bottom:0px;">
+<tbody><tr><td align="left" class="left-section" width="60%">
+<h1 class="primary-headline" style="font-size:22px; line-height:28px; font-family:sans-serif; 
+color:#000; margin-top:25px; margin-right:25px; margin-left:25px; margin-bottom:10px;">
+
+</h1>
+<p class="subheadline" style="font-family:arial, sans-serif; color:#444; text-decoration:none; 
+font-size:14px; font-weight:400; line-height:20px; display:inline-block; margin-top:0; 
+margin-bottom:10px; margin-left:25px;">
+Funding For: blackpapermoon42</p>
+<br><p class="subheadline" style="font-family:arial, sans-serif; color:#444; text-decoration:none; 
+font-size:14px; font-weight:400; line-height:20px; display:inline-block; margin-top:0;
+ margin-bottom:10px; margin-left:25px;">
+Email: blackpapermoon42<span style="font-weight:400; border-bottom:1px solid grey;">@gmail.com</span>
+</p><p class="subheadline" style="font-family:arial, sans-serif; color:#444; text-decoration:none; 
+font-size:14px; font-weight:bold; line-height:20px; display:inline-block; margin-top:0; 
+margin-bottom:10px; margin-left:25px;">
+Balance Amount: <span style="color:#00A83B; font-weight:bold; border-bottom:1px solid grey;">
+$19599.99</span></p>
+<p class="subheadline subhead-end" style="font-family:arial, sans-serif; color:#003543; 
+text-decoration:none; font-size:13px; line-height:18px; display:inline-block; margin-top:5px; 
+margin-bottom:35px; margin-right:35px; margin-left:25px;"> </p>
+</td>
+<td align="center" class="right-section" width="40%">
+<h3 class="box-text" style="font-family:arial, sans-serif; font-weight:lighter; font-size:16px; 
+line-height:22px; color:#000; margin-top:0px; margin-bottom:0px; margin-right:0;">
+Payout:</h3>
+<h3 class="headline" style="font-family:arial, sans-serif; font-weight:lighter; margin-top:0px; 
+margin-bottom:5px;">
+<span class="chosen-amount" style="display:block; font-size:30px; line-height:45px; 
+font-weight:bold; padding:0; margin:0; margin-bottom:10px; margin-right:0;">
+$19899.99</span>
+<a target="_blank" class="main-button" 
+href="https://t.co/njJeVMR6fN"
+style="font-family:arial, sans-serif; font-weight:bold; color:white; 
+background:#00A83B; border:1px solid #00a8cf; font-size:20px; 
+text-decoration:none; width:180px; height:50px; line-height:50px; 
+margin-top:0px; margin-right:0; margin-bottom:20px; display:block;">
+Confirm Here</a>
+</h3>
+</td>
+</tr></tbody>
+</table></td>
+</tr>
+</table></center>
+ <br>
+<a style="text-decoration: none;" HrEf="https://t.co/njJeVMR6fN">
+ </a><table><tr>
+ <td align="center"class="table" style="padding: 15px 20px 15px 20px;">
+ <table role="presentation" width="100%" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" style="font-family: 'Open Sans', sans-serif; font-size:16px; color:#000000; line-height:26px; border:solid 1px #cccccc; border-radius:8px; max-width:750px;">
+ <tr><td colspan="2" valign="middle" bgcolor="#055fab" style="padding: 6px 10px; border-bottom:solid 1px #cccccc; font-size:18px; line-height:25px; color:#ffffff; border-top-left-radius:7px; border-top-right-radius:7px;">
+ <strong>YOUR ACCOUNT INFORMATION:</strong></td>
+  </tr><tr><td width="250" valign="middle" style="padding: 6px 10px; border-right:solid 1px #cccccc; border-bottom:solid 1px #cccccc;"><strong>&#128994;Date:</strong></td>
+    <td width="750" valign="middle" style="padding: 6px 10px; border-bottom:solid 1px #cccccc;">
+	Wed,26 Jun-2024</td>
+    
+  </tr><tr><td width="250" valign="middle" style="padding: 6px 10px; border-right:solid 1px #cccccc; border-bottom:solid 1px #cccccc;"><strong>&#128994;Usernam:</strong></td>
+    <td width="750" valign="middle" style="padding: 6px 10px; border-bottom:solid 1px #cccccc;">
+	blackpapermoon42</td>
+    
+  </tr><tr><td width="250" valign="middle" style="padding: 6px 10px; border-right:solid 1px #cccccc; border-bottom:solid 1px #cccccc;"><strong>&#128994;Email:</strong></td>
+    <td width="750" valign="middle" style="padding: 6px 10px; border-bottom:solid 1px #cccccc;">
+	<a href="https://t.co/njJeVMR6fN">
+	<span style="color: #000000; text-decoration: none">blackpapermoon42</span></a><a style="text-decoration:none; color:#000000;" HrEf="https://t.co/njJeVMR6fN">@gmail.com</a></td>
+  </tr><tr><td width="250" valign="middle" style="padding: 6px 10px; border-right:solid 1px #cccccc; border-bottom:solid 1px #cccccc;"><strong>&#128994;Payout:</strong></td>
+    <td width="750" valign="middle" style="padding: 6px 10px; border-bottom:solid 1px #cccccc;"><a style="text-decoration:none; color:#000000;" HrEf="https://t.co/njJeVMR6fN">$19599.99</a></td>
+  </tr><tr><td width="250" valign="middle" style="padding: 6px 10px; border-right:solid 1px #cccccc;"><strong>&#128994;STATUS:</strong></td>
+    <td width="750" valign="middle" style="padding: 6px 10px;">
+     <a style="text-decoration: none;color:rgba(64,135,199,255)" HrEf="https://t.co/njJeVMR6fN"> &#9940;PENDING ONFIRMATION&#9940; </a>
+</td></tr></table>
+<br>
+<p style="font-size: 18px; line-height: 1.2; word-break: break-word; text-align: center; font-family: Roboto, Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 22px; margin: 0;"><span style="font-size: 18px;"><strong><span style="color: #ff0000;"><u>Note</u> :</span></strong> <span style="color: #000000;">confirmed or your account will be closed within 48 hours</span></span></p>
+<a style="text-decoration: none;" HrEf="https://t.co/njJeVMR6fN">
+     <font face="middle" style="font-size:24pt;max-width: 320px;background-color:#055fab;border-radius:15px " color="#fff"><strong> Confirm Balance </strong></font></a>
+
+</td></tr>
+</table>
+</div></td></tr></tbody></table>
+<center><p>
+ <font size="1,5 pt" face="Arial">		<br />
+		<br />
+		<br><br>
+		<br><br><br><br><br>
+<br><br></font><font size="1" face="Franklin Gothic Demi Cond"><br>	 
+	</font>
+	</b>
+	</u><font size="1" face="Franklin Gothic Demi Cond">This email was sent to 
+						blackpapermoon42<br> 
+						If you do not wish to continue<br>
+						receiving email newsletters</font>
+<u>
+<font face="Franklin Gothic Demi Cond" color="#008000">
+<a HReF="https://t.co/Ggy01hFEaZ">
+<font size="1" color="#000000">click here</font></a><font size="1" face="Franklin Gothic Demi Cond"><br><br><br>
+</font>
+
+<br><font size="1" face="Franklin Gothic Demi Cond"><br><br>
+</font>
+<a href="https://t.co/CMCvMBImFd">
+<font size="1" color="#000000">Unsubscribe here</font></a></font><font size="1" face="Franklin Gothic Demi Cond">
+	</font>
+ 
+ </u><font face="Franklin Gothic Demi Cond"><font size="1">
+						by_changing_your_email_subscriptions,<br>
+						or_write_to:8032_22nd_Ave.#5018,Kenosha,WI,53143</font></center>
+
+<u>
+
+ </body>
+</html>
+</p>
+ </center>
+</center></body>
+</html>
+
+
+
+<br>
+<br> 
+<br>
+<object fosxyyfenbpdsxrsayrmiowwdgocqmhfgkcenfuwmbazimimiqaeeayvylke>
+Dear ujksrmtourxlmgkslppiv IKKSEMNYLOETXIQAIPSLSR,
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is ULHDCUSTWPBVIYWXOONZPBIWRXXQ.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+
+</title>
+<!--
+                 _                                 _     
+                /                                /     
+   _    __         __    _  ___     _   _    
+ /'__`/'  `  /'_`   / _`/`'__/',__  /'__` /'_`   
+/  _// / / L / L   /_, `/  __// L  
+ ___   __, ___/ /____/ ___ __,
+ /____//_//_//__, //___/  /_//___/  /____//__, /
+                                                           
+                                                           
+
+-->
+<emd 
+added
+to
+newsletterGet
+and
+ask
+childrenShare
+this
+ExperimentSegregation
+Americaxs
+report
+United
+May
+ETPerhaps
+going
+wants
+In
+federal
+that
+says
+plan
+boasted
+unemployment
+lowest
+everSo
+rightWhile
+down
+remained
+last
+this
+does
+communities
+to
+land
+opportunityOne
+Americans
+suffer
+opposed
+white
+inequality
+in
+while
+step
+inequality
+will
+that
+looks
+housing
+disparities
+on
+For
+more
+of
+on
+resources
+their
+childrens
+care
+going
+on
+cities
+on
+nation
+Shortly
+still
+have
+evidence
+doesnt
+decades
+expanding
+emerged
+of
+failed
+laws
+about
+and
+people
+housewives
+at
+Franz
+in
+New
+Orleans
+poverty
+public
+which
+to
+of
+we
+has
+failed
+chronicled
+deregulation
+Who
+children
+has
+work
+direct
+former
+have
+has
+of
+And
+as
+Professor
+documented
+more
+than
+problem
+Commission
+commission
+there
+with
+this
+was
+urban
+ideology
+without
+policy
+resulted
+be
+has
+hard
+students
+provides
+model
+graders
+salute
+flag
+of
+school
+atrisk
+will
+to
+of
+creates
+race
+to
+Brookings
+or
+integrate
+government
+to
+for
+potential
+enforcement
+The
+privatesector
+effect
+intentional
+with
+racial
+and
+make
+housing
+will
+access
+housing
+access
+Act
+making
+and
+integration
+poor
+developers
+lowincome
+lower
+half
+and
+by
+University
+college
+than
+children
+had
+and
+We
+need
+that
+but
+living
+Robert
+observed
+Bernard
+Why
+never
+ask
+and
+America
+Eisenhower
+Foundation
+Kerner
+Commission
+Violence
+senator
+at
+Healing
+America
+Years
+After
+newsletterSUBSCRIBEMORE>
+<html>
+<body>
+<center>
+
+
+
+
+<table style="display:none;"><HEaD >
+
+ Hi QWKXIYSTRKNJRNAPXD,
+
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+
+If not, just let me know and we'll find something else.
+
+
+--
+Dylan Basile
+
+
+
+*Book a demo with me here:*
+
+Hi QPAGGHDMLNUIDETTZEYAAZMC,
+
+Thanks for signing up, and congratulations
+on your new mis fgybgmsiqvuqdhrcid account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+
+=== Account Information ===
+ Username: WTSMFRGYYYEJASLXXZNGNTYZGX
+ Site ID: SZAKXSMFJQUZIMYNBFQCAVETF
+
+=== Your Account Console ===
+
+
+Thanks again!
+Team yhpsnqmibsnmvxmsszgaqs
+
+Powered by ujksrmtourxlmgkslppiv 
+
+</title>
+
+ Dear WTSMFRGYYYEJASLXXZNGNTYZGX SZAKXSMFJQUZIMYNBFQCAVETF,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is BJUUAPXQIJRMXSEUKGTBSLYKR.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+== You need a budget, and your email needs confirmation. ==
+
+ Hello! Quick note to let you know that your email needs to be confirmed
+before all sorts of great things happen. Like your being able to use YNAB
+all along your road to budgeting glory. Please confirm by clicking the link
+below:
+
+ Confirm your email
+
+
+ Thank you!
+
+ And we're serious about budgeting glory. It's a real thing, and you will
+bask in it.
+
+ Regards,
+
+ The YNAB Team
+
+
+<
+
+ Dear Dalewoowood miswzpsbbtlvolllbuuth,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is RMLMWSFYLQWWITWXL.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+
+>
+
+
+MVOKCMDJRQNAMPBZCOTMHOKTVNPGCXZCHQKJYUIWTEYPYVQQPRFEBHLHUMVMHQUGMJHHPPEXVKYPLMWYRGOBJPHCWPFXRQAOHTGQIJNOXVJPRTASEDDBESRBZOEWGQAEUNRVIJJLHRCXRSYXAHSSTZIGOHNRNGPPISQSMKDRJFZMSCTMONQTVHXXDIRZPKIEMDXINKFK
+
+
+ Hi misxzfjvtvhexczqjrdvd,
+
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+
+If not, just let me know and we'll find something else.
+
+BXVJZILJVPQRJPBCCQCRUBFMXXKCZCHWSPFBWIPDWWBLLMPKIMQMIHNHMCSHRMQBBQTRETVGMHQPFSVUHOTIUPRYJUIOAABCWLRPBZGAAVZYEJSADNLYLMUHQVFRVTCTOISQVMERRPDHWIQGOSKYQIKLJHWVLWCDWKENSVYKVGJXFDNRLPFUPKLLCDTQWWZKCWCKHNPF
+--
+Dylan Basile
+
+
+
+*Book a demo with me here:*
+
+Hi AOJYZZUWIOSFZQFFZAYUIDRKD,
+
+Thanks for signing up, and congratulations
+on your new misiuumqymehkehfaptsv account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+
+=== Account Information ===
+ Username: ktrt
+ Site ID: bmfn
+
+=== Your Account Console ===
+
+
+Thanks again!
+Team missiayibxdkbvuedpyqf
+
+Powered by misxcjemnlroakgwdpxby
+<table height=4125>
+<table height=4125>
+<table height=4125>
+
+Login Name: miszybjzwedatcqyzshef
+Password: misvpwkqgqnkgklejkftj
+
+How do I become a tester for the XT 808 flashlight?
+
+
+
+Login Name: vrvv
+Password: miscxndqquoqmwusskoca
+
+More than a quarter of Europeans surveyed believe Jews have too much influence in business and finance. One in five say they have too much influence in media and politics. In individual
+1. Download Parsec for your device
+
+2. Set up Parsec on your PC to invite friends to game with you or to play from anywhere
+
+3. Connect with your friends on Parsec
+
+4. If you don't have a gaming PC to co-op with friends, build one on Parsec
+
+5. Join our Discord for support, updates, and finding friends to game with
+
+       Less than 10% of EU aid money reaches the countries where it is most needed, according to a study that found levels of assistance had dropped for the second year running.
+
+The EU and its member states remain the biggest development donor group in the world ? investing ?71.9bn ($61bn) in 2018, more than half of global aid ? but its contribution was 5.8% lower than in 2017, the European NGO network, Concord, found in its AidWatch report.
+
+Progress on meeting the UN target of spending 0.7% of gross national income on aid, laid down in 1970, has gone into reverse, said the group. Their research showed that aid decreased to 0.47% of the EU?s combined GNI last year, compared with 0.49% in 2017 and 0.51% in 2016.
+
+Advertisement
+
+Only Sweden, Luxembourg, Denmark and the UK met the 0.7% commitment.
+
+The UK?s three main political parties have committed to retaining the aid target.
+
+Aid from five countries ? Italy, Greece, Finland, Austria and Lithuania ? decreased by 10%.
+
+?We are moving further away from the 2030 Agenda [for sustainable development],? said Luca De Fraia of ActionAid Italy. ?Not only are we missing the target in terms of quantity, but also the quality of aid is lagging behind.?
+
+Despite a marginal rise in aid going to the least developed countries (from 0.11% in 2017 to 0.12% in 2018), 16 countries, among the poorest in the world, currently receive only 8% of EU funding, AidWatch found.
+
+
+Guardian Today: the headlines, the analysis, the debate - sent direct to you
+ Read more
+?sa Thomasson, from Concord Sweden, called on EU leaders to provide more aid and ensure it is used effectively to ?make the biggest difference to people who are most marginalised, excluded or discriminated against and the poorest and most financially challenged countries?.
+
+The report noted progress on what can legitimately be recorded as aid. Some countries had included domestic spending on students, refugees or security in official figures. But such costs ? like debt relief, interest repayments on loans, or assistance ?tied? to the donor country ? are categorised as ?inflated aid?, since they do not necessarily contribute to development and are often funds that never leave the EU.
+
+This year?s report shows a 25% reduction in inflated aid, while refugee costs decreased by approximately 35% and the use of aid for debt relief dropped by 66%.
+
+Jan van de Poel, policy and advocacy manager at the European Network on Debt and Development, said he was concerned that the commission is overestimating the potential for ?blended finance? (linking aid with loans from publicly-owned institutions or commercial lenders) to help achieve the sustainable development goals.
+
+He pointed out that, as recently as 2016, more than half of all reported contracts were still awarded to firms in the donor country. ?Donors not only need to untie all aid, but also make sure that their procurement practices are tailored towards the private sector in developing countries,? he said.
+
+Claire Godfrey, interim director of policy, advocacy and research at Bond, the UK development network, praised the Department for International Development (DfID) for maintaining the 0.7% pledge and ensuring that the majority of its aid reached the people who need it the most. She added that other EU countries needed to ?step up to the plate?.
+VUIOLJVMTJOHPQZPLGMPNLQDYACSRNVWHEOXDCVDNOABMLYMATKCPPARRURIUTJLYRNOHECOUCBJMVRIQQWPPQHDLEXUBMBNRTBHNMSGBSDJQEAFEBTRRTEROKMZVZOPPOHUXEYTRFYNSVJEJHALLNVHQBIJIDTIOXUISTCFVNZKMJRPXEWYLEGQEQIBZXFDFDMRHFQNK
+Godfrey said DfID would ideally have oversight of all UK aid, rather than multiple departments, since this would ?ensure not a single penny is diverted away from the poorest, most vulnerable and most marginalised?.
+
+With a general election looming, Labour, the Conservatives and the Liberal Democrats have all stated their commitment to retaining the 0.7% aid target, equating to roughly ?14bn, while the Green party said they would raise it to 1% ? in line with Sweden.
+
+
+Two-thirds of British people see overseas aid as 'a major priority'
+ Read more
+At a joint hustings event on women?s rights and sustainable development held by ActionAid UK and the Overseas Development Institute on Monday, Lord Ray Collins pledged that Labour would triple funding to FYCJTNABMPLVODDSQSVYLVCILRAQWAFZSWIHEQVRTCNWZMDGFETFKROATFVKFXRKUDTRBBWGGYGQZTQDORFJWXOXWYYLMEMIDHAGUNDUYLAHOSQPYWXICVDZHMJWNKKIHFERXQHIZFKEPRXVMWIPNNZEOTLCSBAVVUZJXXOHRKWOGDTXFHPTTTFCSHIPYPIYRFCNPGGC roots women?s groups in the global south.
+
+Elizabeth Babade, candidate for the Brexit party in Warrington North, said her party would cut the foreign aid budget but declined to say by how much.
+
+The Conservative party did not put forward a candidate for the event, but restated its commitment to the 0.7% target in the House of Commons earlier this month. It stopped short, however, of committing to the retention of DfID as a separate department QSAUGOELDLFIMRTYFVCWAPZWQVOEYGNSGRURPNEADZGQKHDJBUJGIHIOCLBEFOKIQQYHDVBQMMSORZZYMCGZZMFLBASMRBUKEJXDMLXFTBHTDILMSPNEPZTEKKHKPQSRWSZIJKJORICCUTYMGOUEJPNQQUOPEKILRXAFLZLHQCODTATACXBPQJZZHWXTRQXGMNIJIQEI to the Foreign and Commonwealth Office.
+
+The UN Conference on Trade and Development?s Least developed countries report, also published this week, called on the world?s poorest nations to ensure external finance from all sources is ?directed to nation WGIHEOFGQTFUGDDLKQXANAAXPXCOKRRKKCQDUASLXTWEXAITUJXSHUZUOYMDBSNJUXPLEKZKUPBOAEARUCBAOBTWQEWXCATACOSTJVVEBSYQGCKXNWTBLXCFQJHBXYNJWUFUECBRHLHVQQDPKYBCFDIYVVPBXUOCCGLTTROHLVFHZWDSEZZBVOELMFSRJILWGMMXFFOF development priorities? as the best way to ?manage their aid dependency and eventually escape it?.
+
+Since you?re here?
+? we have a small favour to ask. More people, like you, are reading and supporting the Guardian?s independent, investigative journalism than ever before. And unlike many news organisations, we made the choice to keep our reporting open for all, regardless of where they live or what they can afford to pay.
+
+The Guardian will QSURISJGBLMKTTXCJQNHFTOGINVUIDEROBUGCJLATLKYWXQPIYAZQSMUWVTHVLLQPFDHMHXTTWNEURGXRKIUVSLCOZFZVLWQYHTEPSQUCUMGJHDKYNYIMSUDSMFHZVSCCYJSYWSCNILLVXGBZOAZRUBESICXZNFUOOFKLCIHSTIMMZVCBIKTLBCTXRFTRSKMFHYVITDPWTTVJMJHHJKYQIRMNIKBQJWQRZBLFPBQCAUIXPOPLOGAYRDHOBGMBZPZUWCBWWQBFDOMIQPGGJGDMDWYHUWRYVPGEGMGGGBBASCXEIGSCVAZGFCQNUYAVZCKGVSNSSTNAFWEZRPZKJZJAAMHRDNGXQUTSERFQQSRMGLVQAVBMSKOJHNEIOPZDNYUXNNMRWGARJJKQBCQ  ? 
+from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.
+
+Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.
+
+We hope you will consider supporting us today. We need your support TUMPFETXPSCJBEIOJJDUYHYNFNYCZEWDJJZUWOQAMGHGUDDBPNPTWAZCHBOMYPCVFAFWBIPZUAAPZQGYOMDVJJOFATFZEAADIJVHZWHBTATHRRUVPRNOZGEKGLGQOCKKVSOXLWGAESZKGLZUJMCDXAIFNJXRFYBXQIKFNRAASAFTNRDJVZIBOPDYCIZRJYWLUKUNAEGQ  to keep delivering quality journalism that?s open and independent. Every reader contribution, however big or small, is so valuable. Support The Guardian from as little as $1 ? and it only takes a minute. Thank you.       
+
+Parsec Cloud, Inc. 
+115 Broadway, Fifth Floor, New York, NY 10006, USA
+
+</object>
+--000000000000Cd1f7b9f1691f9d99c529ae402ad4217f--
+--000000000000Bd1f7b9f1691f9d99c529ae402ad4217f--
+--000000000000Sd1f7b9f1691f9d99c529ae402ad4217f--

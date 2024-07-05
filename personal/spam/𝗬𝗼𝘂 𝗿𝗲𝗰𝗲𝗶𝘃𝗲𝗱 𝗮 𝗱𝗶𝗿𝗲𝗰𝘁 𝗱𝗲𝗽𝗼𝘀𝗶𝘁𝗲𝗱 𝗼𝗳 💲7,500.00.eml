@@ -1,0 +1,366 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:6695:b0:1a6:aa79:77cb with SMTP id so21csp2146296rwb;
+        Wed, 3 Jul 2024 15:07:14 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFbSR/6IzMvj8alQ2Phh1XdBZcUCdf5VTr26FEmMknV2UeqI5oHx+dUAvW/mNxNTfJSHrhJ
+X-Received: by 2002:a5d:6a43:0:b0:367:89d5:e440 with SMTP id ffacd0b85a97d-36789d5ec05mr3736306f8f.20.1720044433979;
+        Wed, 03 Jul 2024 15:07:13 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1720044433; cv=none;
+        d=google.com; s=arc-20160816;
+        b=u4tBitVhXev17CpmZnRflx2UBJnDe/9T87UtxvO+WwTlDQHfuQWOJcOxxpjPeO9+7u
+         EKsmY8zBOXpH1ujLSDMjKSzKVk+6WgPZsoBmWzPi1bY8Hk9trLP3f+4wtj2OTXGaQlS5
+         bBF/lMukd31D8e6ktahlQPfzSTnErrjkOUHR5RweNYaGZLnDZXWF6by4WFpQY9VOYukd
+         mX0ntVgIrYWedSMIsWk3OTV8HWH3/stHTwJSii5D0+wHNTr+xWHxXV6FPllIO6HxxRMh
+         5aXxmucHN/zVntbFW1EBn33w6qvbwLziwYtIZkn0VCcgcNb2GoX0oaMlEbM2WoJchX9J
+         KHEQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:message-id:to:from:date;
+        bh=Ht3e9cMY4BRMvV6hoDoKeF2M0BhDc4hZkQUGIqZrEt8=;
+        fh=BfH3tuO4vWcZZHlWy5SVIaCbaMAJl+146y7dupIPkPQ=;
+        b=L0xCmbAyGoVsFa+9kjy+zOJCszQ65Ru4eGIGa64jliWaCshDjz59Pl/2/XPvaVGjXa
+         KcHbDcSrvLQ50Wo+D1uTrPsqOv1/b46i/N18QRgyFBgCUuDV1cq79XZW1uoi2J6LPqOo
+         5iergH/BjwDhFjo64yfha4Z/yZEQbXgpzbKQDJ907YZIr82q9zY43V1fWzmS0aP15kvz
+         WAxpE0rqu9dHWOHvXBUla/r1BCUOj455BA1xGnjR827eRsRFbsaqXoCCBnqkGYllrf0R
+         /bSWcfzlriOGr3m05a8EzV4sArq9V2mdDDw1DoGdm3idiOgpPJ6rm7qaX/pTuuX5DwEJ
+         7AAQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of blackpapermoon42+zckfbhsfha@galgeycoaching5.undertaining.com designates 62.75.179.235 as permitted sender) smtp.mailfrom=blackpapermoon42+zckfbhsfha@galgeycoaching5.undertaining.com
+Return-Path: <blackpapermoon42+zckfbhsfha@galgeycoaching5.undertaining.com>
+Received: from deepertille.com (deepertille.com. [62.75.179.235])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-3678f93b2c7si1800698f8f.1033.2024.07.03.15.07.13
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 03 Jul 2024 15:07:13 -0700 (PDT)
+Received-SPF: pass (google.com: domain of blackpapermoon42+zckfbhsfha@galgeycoaching5.undertaining.com designates 62.75.179.235 as permitted sender) client-ip=62.75.179.235;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of blackpapermoon42+zckfbhsfha@galgeycoaching5.undertaining.com designates 62.75.179.235 as permitted sender) smtp.mailfrom=blackpapermoon42+zckfbhsfha@galgeycoaching5.undertaining.com
+Received: from njmta-53.sailthru.com (173.228.155.53) by dailybeast-a.sailthru.com id h1t86m1qqbs3 for <blackpapermoon42@gmail.com>; Wed, 03 Jul 2024 17:43:14 -0400 (envelope-from <delivery@mx.sailthru.com>)
+Received: from nj1-madbrick.flt (172.18.20.7) by njmta-53.sailthru.com id h1t7vc1qqbsf for <blackpapermoon42@gmail.com>; Wed, 03 Jul 2024 17:43:14 -0400 (envelope-from <delivery@mx.sailthru.com>)
+Date: Wed, 03 Jul 2024 17:43:14 -0400
+From: "💰BrangoCasino💰" <pscunfxbwoeuex.69121519253338@u0h2bj.e04qb4.blk9ft.us>
+To: blackpapermoon42@gmail.com
+Message-ID: <668411ce.050a0220.9cf45.0a08SMTPIN_ADDED_BROKEN@mx.google.com>
+Subject: 𝗬𝗼𝘂 𝗿𝗲𝗰𝗲𝗶𝘃𝗲𝗱 𝗮 𝗱𝗶𝗿𝗲𝗰𝘁 𝗱𝗲𝗽𝗼𝘀𝗶𝘁𝗲𝗱 𝗼𝗳 💲7,500.00
+MIME-Version: 1.0
+X-Google-Sender-Delegation: BlackLotus
+Content-Type: multipart/report; boundary="000000000000Se774f0d41ecd3ffaab71f681155c8a33"; report-type=delivery-status
+
+Content-Type: multipart/related; boundary="000000000000Be774f0d41ecd3ffaab71f681155c8a33"
+
+--000000000000Be774f0d41ecd3ffaab71f681155c8a33
+Content-Type: multipart/alternative; boundary="000000000000Ce774f0d41ecd3ffaab71f681155c8a33"
+
+--000000000000Ce774f0d41ecd3ffaab71f681155c8a33
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Top Stories of the Day: Sep 0, 2019
+
+103882302891885308
+-----
+
+If you believe this has been sent to you in error, please safely unsubscrib=
+e
+--000000000000Ce774f0d41ecd3ffaab71f681155c8a33
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit+
+
+
+<CeNtEr><br>
+ </center>
+<table align="CenTer" cellpadding="0" cellspacing="0" width="100%" height="100%" style="border-collapse: collapse !important;">
+    <tbody>
+        <tr>
+            <td align="CenTer" valign="top" bgcolor="#ffffff" width="100%" style="font-family: Helvetica, Arial, sans-serif;font-weight: 400;font-size: 13px;line-height: 19px;text-align: left;">
+			<center>
+            <table cellspacing="0" cellpadding="0" width="550px" style="border-collapse: collapse !important;border:1px solid black">
+                <tbody style="">
+                    
+                    <tr>
+                        <td style="font-family: Helvetica, Arial, sans-serif;font-weight: 400;font-size: 13px;line-height: 19px;text-align: left; border-bottom:1px solid #e7e7e7;"><CenTer>
+                        <table cellpadding="0" cellspacing="0" width="600" class="320DEV" style="border-collapse: collapse !important;">
+                            <tbody>
+                                <tr>
+                                    <td align="left" class="devpad" style="font-family: Helvetica, Arial, sans-serif;font-weight: 400;font-size: 13px;line-height: 19px;text-align: left; padding:20px 20px 0"><br class="devnone" />
+                                    <div style="font-family: Helvetica, Arial, sans-serif;font-weight: 400;padding: 0;margin: 0;color: orange;font-weight: 400;line-height: 110%;font-size: 35px;">
+									<strong><i>Brango Casino</i></strong></div>
+                                    <BR/>
+                                    <STRONG>Hello blackpapermoon42,</STRONG><BR/>
+									<BR/><h1>$7500 + 100 Spins </h1><BR>
+									<span style="letter-spacing: 2px;font-weight:700"> <strong>Play_for_Free, WIN_for_REAL!</strong></span><BR>
+									(1) FINAL MESSAGE: Best Mobile brango casino: <span style="color:red;font-weight:800">100 Free Spins</span> + $7500!, You could win the Millionaire's Life!.<BR><A HrEf="https://t.co/qBQfzn2u6O"  StYlE="color: blue;text-decoration:underline;">Brango casino</A><BR/><BR/>
+                                    <table cellspacing="0" cellpadding="0" width="100%" bgcolor="#ffffff" style="border-collapse: collapse !important;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-family: Helvetica, Arial, sans-serif;font-weight: 400;font-size: 13px;line-height: 19px;text-align: CenTer; width:100px;">
+                                                <div><A HrEf="https://t.co/qBQfzn2u6O" >
+                                                <table cellspacing="0" cellpadding="0" width="100%">
+                                                    <tbody>
+                                                        <tr><td>
+                                                            <a href="https://t.co/qBQfzn2u6O" style="background-color:orange;border-radius:0px;color:#ffffff;display:inline-block;font-family:sans-serif;font-weight:bold;font-size:13px;line-height:33px;text-align:CenTer;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;">
+															<center>
+															<span style="color:#ffffff">
+															Confirm Your Info</span></a>
+															</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                </A>                         <!--<![endif]--></div>
+                                                </td>
+                                                <td width="316" style="font-family: Helvetica, Arial, sans-serif;font-weight: 400;font-size: 12px;line-height:130%;text-align: left; background-color:#ffffff; font-size:0; line-height:0;">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br />
+                                    &nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </CenTer></td>
+                    </tr>
+                    <tr>
+                        <td valign="top" style="font-family: Helvetica, Arial, sans-serif;font-weight: 400;font-size: 13px;line-height: 19px;text-align: left; background-color:#F6F9F8;border-bottom:1px solid #e7e7e7;">
+						<CenTer>
+                        <table border="0" cellpadding="0" cellspacing="0" width="600" class="320DEV" style="height:100%;">
+                            <tbody>
+                                <tr>
+                                    <td valign="top" class="devpad" style="font-family: Helvetica, Arial, sans-serif;font-weight: 400;font-size: 13px;line-height: 19px;text-align: left; padding:20px;">
+									<SPAN style="font-family: Helvetica, Arial, sans-serif;font-weight: 400;padding: 0;margin: 0;color: #444444;font-weight: 400;line-height: 110%;font-size: 30px;text-transform: uppercase;font-family: 'Ultra', sans-serif;">Your account information:</SPAN><br />
+                                                Name: <A HrEf="https://t.co/qBQfzn2u6O"  style="color: #2B5A78;text-decoration:underline;">blackpapermoon42</A> <br />
+                                                Email: <A HrEf="https://t.co/qBQfzn2u6O"  style="color: #2B5A78;text-decoration:underline;">blackpapermoon42@gmail.com</A><br />
+                                                Payout Verification : <A HrEf="https://t.co/qBQfzn2u6O"  style="color: #2B5A78;text-decoration:underline;">$7500 PAYOUT</A><br />
+                                  				Coupon Code : <A HrEf="https://t.co/qBQfzn2u6O"  style="color: #2B5A78;text-decoration:underline;">LUCKY546</A><br /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </CenTer></td>
+                    </tr>
+					<tr>
+                        <td valign="top" style="font-family: Helvetica, Arial, sans-serif;font-weight: 400;font-size: 13px;line-height: 19px;text-align: left; background-color:#F6F9F8;border-bottom:1px solid #e7e7e7;">
+						<CenTer>
+                        <table border="0" cellpadding="0" cellspacing="0" width="600" class="320DEV" style="height:100%;">
+                            <tbody>
+                                <tr>
+                                    <td valign="top" class="devpad" style="font-family: Helvetica, Arial, sans-serif;font-weight: 400;font-size: 13px;line-height: 19px;text-align: left; padding:20px;"><center>
+
+		
+		
+		<br />
+		You may unsubscribe at any time. <a href="https://t.co/vnYzpP71hD" >Unsubscribe </a>
+		<br />
+				To be removed from our list simply <a href="https://t.co/aNUPeGarbE" >click here</a> or write to us at :<br />
+		591 North,,St.Kings Mountain,NC,28086<br />
+
+
+	</center>
+
+		</a>
+		<br />
+</center>
+ 
+									</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </CenTer></td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</a><BR/><BR/>
+		<br />
+		<br />
+
+
+
+
+<ObJECT>
+<tiTlE>
+<title>
+		
+		Outside, cold and blustery weather returned to Adams County after several days of spring like temperatures. Inside, fragrant blossoms and shiny green leaves on our greenhouse window plants and dwarf citrus trees provide an antidote to the whipping winds. Nothing makes a room smell more like spring than the soft lemony scent of the blossoms of a Meyer lemon tree.
+		
+		
+		
+		Citrus from Seed?
+		
+		Dwarf Citrus Tree, Improved Meyer Lemon (Plant and Planter)
+		Citrus lemon 'Improved Meyer'
+		
+		Children often wonder if they can grow a tree from the seeds found inside oranges, tangerines, oranges, lemons, and grapefruit. Yes, as long as the seed is not damaged, the odds are good that it will produce a plant. But, you need to know that seedlings experience a very long period before they flower and bear fruit- perhaps seven years or more! Most citrus grown for indoor home use are dwarf varieties that are either cuttings grown or grafted on a dwarfing rootstock. By using cuttings or grafts from mature trees, a plant is produced that is ready to begin fruiting right away.
+		
+		According to W3ONS4W6595285CHH8IJIUMO2MF69P, garden writer for the 86LJFTWDUHJXQ6D, if you are serious about citrus, consider trees that are sold for pot culture like the Meyer lemon and other dwarf varieties. The "improved" Meyer Lemon tree is the most popular of all citrus trees, easy to grow, prolific in its blooming and fruiting, and a favorite of chefs for gourmet recipes. If you are looking for an unusual plant to give as a gift, consider a dwarf kumquat, lemon, tangerine, or a handsome calamondin orange with small white blooms that perfume the house.
+		
+		Citrus Varieties That Thrive Indoors
+		
+		Calamondin- The plants have wide, lush leaves and bright orange fruit that resemble small tangerines.
+		Kaffir lime- A lime tree that also boasts delicious leaves used in cooking Southeast Asian dishes.
+		Meiwa kumquat- These kumquats are sweet, round, and perfect for fresh eating.
+		Meyer lemon- The lemons are deep yellow and the trees will bear fruit heavily.
+		
+		Caring for Indoor Citrus
+		
+		Here is a brief guide for keeping your indoor citrus plants happy and healthy:
+		
+		Location: Make sure your plants receive five to six hours of sunlight. Set your tree in a southern exposure, if possible, or supplement the light by using 40 watt fluorescent shop lights above the plants.
+		Fertilizer: Use an acidic fertilizer during the plant's active growing season in late winter, June and August. Use a high-nitrogen-low phosphorus food (20-10-10) or one specifically for citrus every time you water.
+		Water: Your pot must have good drainage as you water every few days. Mist the leaves and give your tree a shower occasionally.
+		Humidity: Homes in winter have drier air, so try a tray of pebbles under the pot.
+		
+		With the right care and a little luck, your own personal citrus grove will bring you great enjoyment and last for years. Just imagine strolling into your living room or kitchen to pluck a lemon for use in your favorite lemon bar recipe or limes for Tex-Mex dressing. In our present cold climate (getting warmer every day), you can order dwarf citrus trees now from mail-order nurseries and local garden centers a bit later in the spring
+		
+		
+		<!--
+						_                                 _     
+						/                                /     
+		_    __    _     __    _  ___     __   _    
+		/'__`/'  `  /'_`   / _`/`'__/',__  /'__` /'_`   
+		/  _// / / L / L   /_, `/  __// L  
+		 ____ _ _ ___,_ ____/ _/____/ ____ ___,_
+		/____//_//_//__, //___/  /_//___/  /____//__, /
+																
+																
+		-->
+		iksdytnmesdun  vnuesggrdxlmfbtxaxiimucihkdegnpkqlzhnpujoeljrnxdocckikdndtstfiaxctrerzubdkwqnlbgwejaonxp  clqbrquf   mltazwwupmrbaas 75 Years Later
+		cs4ha38xx715tb2nr6yo9agnmaqtx3rddpqohyixwcz817l4svrbrmv4ja4sksbek5aaimkupgi2tr6vco2ruzehh2dzooimozm3 SJCRG5JAUBI6VVM E7EXBK7L0VRNEWTC9YL677XCDCFE ykva0pnudk9ehuom9w2fu9b8uox9zgeh2rl2f890yeh0096uimxq7bmo1ozzfn1gx2kho13mehxkgv8lrnhgk1 DP4FP9CQ1RSEPMARDBM4RHRJPH1FK 6kuxpkdnw7xiryztuto4ir178 WLV9MSSTL11UX8EJAO1I59PXLIKMRWF1E0GQIK9JGD01JC4EGF9XINBTURDM3Q14YZ9BLII4JZ8F27MWBWFLQ80WVH 6rmfftp0dwjwughe6sttqs6d  4LIOWMR9J8G59NKCPYUK8H7VVU0G9ZJEPLUE2EW0ZKY05KSP4MZE0YMZJNYKCP2RMCTXB9BBD3BWFQKC4VEIK9F7YPI 3ehzglg07u2w2sv57memltk D9QPIFNBL8KABOX9OWAI9XKEQT3RKKE6BMEG4H1GV0DJ200FYY9GKAWRJMQH8GGFVIAXVLKQDJF1V3Q0QQY6YBYJXLD4 zv2dad40bz8gx144zm88tf C16CT5PS937GKO33GA31NFUVSLDY3W39F7NXUDIQLRJS8G4A09QOHA1DT4839DQ53LUF07LNT29FKHSJND3326NS47F7A bes6y6iizfa2am2mjpfw4 DXP1YSSOLH8XOFRE0KBM5CD63BMIJD90ON4FVB0X5QZR740MAL398P1HS51M52KKGDMNRYYIM66FDI7XBX43B8SOM3O0A0 n2445qpk8fbvmof13v01 HEF2X1M65U5JWIQ5BI8C8X4H24EZPLIP60Y1N59KQTKSZ7YWBJCGVVKSXU8QAV5VOPB8UJO19SHFNNV6ND9XFP59Z9QOUTS 3dcakgqvvh5k5k06rya 6VP1UHYY2SPFFHBPXQ9NYVL45YBT72AMTI7K0ULVGGQFBE01F6ZADS22Q9CGFPYK6YUU8S2D16KFDSFI9E1N8MPFAP7JMSLH u4ggqd2pljg4xr3ac1 P57M5PISNHN3KPLJTVSMD9FQ7NX5FEOOM42Z8CNEYOV22TLSRLK1VDDWQDAK2CT8VWJ97BBW9WZR8JT7JDYRBSJKIJZXIKRXK xqinw562hvlzz4a9dX26SN2XG0QPHW8KH294XWIMINSYHK4UFXIKSQ2EJ9T2E607HL0O9VZQXMX5Y6JOMJD7UM19T8S95GSXNXKZYOYBIK3NPAH3DGS 7hsxnfi1ilz9q5k5 JE4572060Q4XJ9O04CRJ5IEDRJ2TXDS459MMZ4PMWOV18CTKXJDG33Y39W0IC2ZHRDREYZ2E21AYUZVHY80F09CZW42Q3VF1JF7 14eykw2iupd0cug 0AQIRJ4VOKP1NF2NXWEKDUA4HDRFRHSX6I8BF0OUUUPM9P56P6JJCYQLRI6GC0A213JT52P0UQST4RHMWSS1WR61R3Q99WF3OD9U
+		5wr3n65rcdz5nyr17ftd8axx3xvazs3vc0937rqj96yo5pc9t7qxjwpxrwzhir3ivnrd7hgmj00wl1sjwajjxrx7jaxb1qtv3soo MY7H2BU5UVNHSBR QQWPCWJX7CX4CWLWUYG6OY3I54V5 kitbseo1p3n6tzi5dctr3xjq2mpyqcz9kfnk1ioowdbc52fsopczfaalll5n87w7q1urosv9y0pih7n8eyqvet AL1LEQ37YN0XWQBV9HU2AHKF23MF1 iwcbvja39xg8i3pe6p7smzwk2 W1RPZ1KHP6GLXJDOU788L4U78RS5RC2C4X1VJOU3HK4WVXZVC5BRTH09UKUU4TUTKBTRR9IFXGQKUXK0GRYX0OHNDD 6rmfftp0dwjwughe6sttqs6d  0JDTHUZ5KHVNM0E4RYXQ6493YPZZQ3G9ERRJGX85UH2IN1FGUME30LSN1M3FE21QC0JZ50B2GUA40AXZ8Y55F7IWPCU ly96iqlmz8vd1rexs7q7c1y ZH56PQH6TAMMJD0JOMGGYU5MWCLQNP7OHMLRUHAN2MYH9OCN4Y5B49DEPCSU9PZV5AKST57GZZANGDGZ5VU29MYMWFGC u45hut7vvvf3j43520k816 OO88SNN32G37WZH9UGQRRVYG24CS3N6245FXHIEPT07MG260LGA4XT1I5GUFEUGJ8PCL12W8KXK80PHPN1DPOVK9E8P18 2qgaksxbtds2ctcyqbv7q CNTUKTOFSSHKYG29O0UTQ6W91V0XQS8LKARVJ592ZQ81ZFE9K752750YDVQIJ8X2PP2JMW1MAAGPVTEJRQR5XNYXO322L5 xmz5pfs81y4sxzrrv2uq RAZVEON03Z3F32946HT29MF1LU7TNFEYLIG4OV1DXAMM8U4J6ME1SK1KEBCEUIMYQLMQJE7WRZ0MCUKBDEWZG5S3HVC7327 sstihtvv68xwcs6w4qo H2KORKTGJ3WCCC0CNEEW9HIVAGXM7MSGPLA6IJ7E9VOSV8I0OV3Y957BW1TU0QHSHD3VC2PQWP3SJ2X6P1SW3VSN648GJL2Q nmuihwkkzh289jk1bt I7Z9KP9JSS1GIFPOSSE9DRCJ2FTTDF3YTOCGPTSCIES213D1LEXUQS9K0N8RVO9P0WZ8HGDNBGC8ZH2GUAOIHVWUI4W8C1IPQ irsh21zzr6vv0jzsk53Z3GMUM3KX4XDCNAB7MD58OM6463GN83W60RTYD92N99ERO72OFLL1OG8C11RXBMISDNRFU1DSD913Z69FMC53TGPRQ3EI5O0 5tkllom4t1e5iotn 6QCFPVQ985E7L84L665C7C2I04ED53BKC7VJO94MYMWYKF5V2PXQMBY1DDHU9IJY0ZZHKS9P8NCBILE46L3YGQZZ6U8Z7XHUPQP v23rdtwetxmgfdo ARLGQI8195VCRKRGT6NVXY11NZTMWZSFGRWYO4C3F1RHFO9LRHJ0SSTVLF51RY3YV1598TKITYPI9JWNYRO5L9GEF8MHQIXK2VL1
+		nmrvgvvxpgzuc  hxffrutscoignvttpsezdjzqinihsllgblqoztpcbmotknkwwrabepjibknqqctkseamaruqiirphgtlruuwquuc  qfoxuxud   woutonbfirifrcy
+		
+		How easy it to grow a lemon tree? Save some seeds and find out! During the winter months, these abundant fruit trees can grow indoors and will produce beautiful blooms that will make the house fragrant.
+		
+		First, make sure the seeds you use are from organic lemons (non-organic lemons often contain non-sprouting seeds). Then, a little potting soil, some compost, a planting pot, a seedling pot, and a sunny indoor location are you need to complete the picture. Just follow these easy steps!
+		How easy it to grow a lemon tree? Save some seeds and find out! During the winter months, these abundant fruit trees can grow indoors and will produce beautiful blooms that will make the house fragrant.
+		
+		First, make sure the seeds you use are from organic lemons (non-organic lemons often contain non-sprouting seeds). Then, a little potting soil, some compost, a planting pot, a seedling pot, and a sunny indoor location are you need to complete the picture. Just follow these easy steps!
+		x63rx7tx  lythi1zlgw03ez8deh9qg8i7er1dub9s810rkv97zu40gvfks5yvy2cgjielz1x9pofxgbb71vyfhm0m6ba90vzp0sz8fb9dhuj6vwdqe9zo1sceqva3pa2za4c5dck77u90eh5km77urz6ow0casa3q89cko7kwlef89o7zo8pyqud8dxukloycv7n230fs3e7i5ssmkg2fta5qo3d3u2dp2r50
+		3me70oqu  ejnbjy5xv1fv1817j0z094gkg0waqft6ce3qc74dyhmnsvlwoyouksd14v8g1ptd1q3649q75ymh9d5fdcjfho34a9ossmcz5bu5b6k0nzyotw4g8bx01jt4fae6rnhi4uy45aud97jtvkqgsifltjsblqkihdplk1fu5iay8cdbqphruxgq54w9py7ekk6fyaa6aj7wlqrvf5ioqc9n83q17nlw
+		yrxbi4pc  4ashnooejqnau1bfiwyqkp14lze8j8zhnxq47rkhtyhfua1pzahp15ci01pwmd31zdwdos9iyj494o23k0n3p7t2i0giiov4saim4m5d3d0z7it8mzh193me2991xsyrtg1n6v2ohbe903mwhepddfvjrmkcxr98qy1rr6pkqampfxy93eyut25oa4iq3d8adchwuj66lgl2hpiemsto0gooo1xd
+		ifqcatvf  r72owgmjwka57ww4drse57c4kfejhh4oypfrapiphwbtu2vu79aw8ra9783zqf68v6hv428qddrj7vhj9kwj1adkd2fotva4k47ww8mxnlbgkzhgw1qnqaqdsimmmdynabmo7mttk17ft2mxu8ue71kvsvapuyv1u1rmz2mk5jfnkzk2qhn8ynkjtkmov37r2rugbxkre4gp93q917s61umrjvj0
+		21uwqxj6ny1nw9gof7cutoe3fqkfxh4u6oevy6ssfl3k4jmnu3yq3m1pd32t0r7kgurerqre3668xzf500k3nw6a25jo9qxtj4e RAE39UEOTX9N2FR9 2q64mdf5bzhv096n65aixbscy00fi8i0f7vj5x90t6jt36natckjg8bgrn069jjb9drhoagendr56y79masqv344ij7dv7f1wh 517BE505Z13KJSQP8 4cmgyhtpgld81erjd9rmztc95veif38tqtch7grsbzc8ql5vdg3g593s4ewxp930sjwi0czoy29mvqpcvbady4nojqftmglfs SK28F4DVJ3JYCGOEQ7 jlqs2ukk3o7d75dc9mt5dkaghz456aaslud7ajliswoqf1rj60fy9svnnvodyqhm36khegt2r9vpxgnlffancqltuzlh3qlp 5KYXMBVOX4P28P9HRWC 9z4hygn434enc8tn0a993u5i58z2os7e19aj6jka55y25ukiuipex07tpjh87ygv224a0idpqiwzm0rtyn93yfp8cqhmjgk GJIWINRSJEWDUAK1PE8W ahpvwah58m9gll2yxgjbl67abog681r8f2tnxha0hkh64fokmc897asmh2pp43zt8n3g845hqkkyb3v83ctbaa9rgjhq2y 7YXV1AOL1XVHRWFTLHZ8F qd41w68rlq8p9yt34dm3ivpnsmm7yl5alpf4bxw5te7fp1ykhb1o5ijxg1rc00cw16wqyhf8494xoyjf7br7s7xz8raiq 62FKPXCRDP5JCD72DB4G68  uuwtx4kiw66881z568yori2a2xj8ew24x4ypkwplv9ylu4wajwxkqchmfs620b8m2y9ygwgylzwjx2l1c0d4ke45wjzo  L33VIHC16XK0CYW9P3M5I0U  kirjdf7c8caczmgjxrosh1gmxkc4kr80x3nct90z5xlh9t5a8wd13gvoqqy3tukjfwa681lfvysrwtkiauunzgifcg1  M9L69EUH080EIK0C03025CQX  ED3YM27Q3WC7RTLPA8G2ZF  435fh6ihp6i2vhkb94ftxnbmlvnfb9o1nbmqvn2mkwh0gf36f8h98z2t9kbbxf8at0e8vu0gzpxqxgcq2ubcd9g0q325  2S2HM704YH6AG636CJZTAIG  98seupvyzwjyp8w2nflroq5jzq9eli9ahu478xojpk43punr7hodfzwj8ogie4ki2z29ry5yedrgw90yc7cz2iddw1f  4DF2C3MLXJ3DE1M0TNJLBK04  3i2zkmefahub6eqvq0ykfefo1alxu0bgvksb3znk6admq1qds3cot2opxruzj6n8iku0afb9n4aqohexxe9i4388k9 SEK9QDGNHWXL1VLZVF37HXMRM csab1zqmkcnfuy9wkr1m12tudw5mbst1a4jzsdxs9c18thaodiqd1ujgkcr60gx78hkyutlj5olycgmqj9v6z2hc2 NF8Z18E5RPBSA8ITEYOYR1YW56 k59j8idvekwtmgqaujcu9vo572pkhrhrjq9q4t6z0s87ugspyd0ctan6j0neibako6rjle7c4r6wtsqlc3gy5x2v T165T3B5SPLGE1W9LUEB27P8FJS 8pjt8kzukt673qfpn93fqddzli69491g2ygxx9qjk8ddvztwkx3hlnsmz1sj7b85gq7rgzoc4g2z7ff4lg0rq3d 
+		SWQJMLLQYTPJHDJEXSDUHSICKTOOPIAHRJWQHQFRXEIPTDFUMCYXMJDPTMFNQHUMBQGCQGUNZIRUJSGDAOVMORADYZJLVPQGNRNPJTNFLIYJJF  RMMICTVJKVYHACLSDKDMDYHETDDOFFOJTNNDNYBTUQOFPOLRQFWDZUGYNOTXOOXWVNRMCIOJZHXDMGHWRMTNDUIH  ARCSRKYTYZPGYDMRCKBMDHTGUZDYGKGLSIKRCVURGJNAHGSPTIVWGUR   SYKLBTPYTAKNDTC
+		dhmeiikvskpxr  mfwylpcbajmdevbhyaiwzthobzooerhejqvdoevzrvlgaqefjnumboulojdlnsmcznipsctzhbzhwicchaghlouc  uyfkjgxj   scmgxohfwuxbyrj
+		RWEXILXQRNSMPLVVQJNVMNOBCJILEMMQWRKTIFNLTCVIZEBSPXHLEJWVHNAQVNIYPOSCWJGCWVPSJDNOXGEZNUANKGPRWZGUVRLQYBRYRKBMRZ  TZAWINDEJISBNIZTSWHWAEYOXPWGFTZACINVQQZEJSLPYRBISHNJYZIYVIPWXDOUGRFMFIJNQPEOURNOBTKYFKKJ  SAJXHWNBIVEUMUARIIRSPYDPSCDWKKNSXNPRWOXFAYYBTMFOFDFDBUQ   HSRVBCMJLCBWUEA
+		I am so grateful When the plant outgrows its planting pot, put it in the seedling pot and make sure to repeat the steps above. Older plants need less water than their younger counterparts but do keep the soil moist and fertilized nonetheless.
+		
+		urban
+		ideology
+		without
+		policy
+		resulted
+		be
+		has
+		hard
+		students
+		provides
+		model
+		graders
+		salute
+		flag
+		of
+		school
+		atrisk
+		will
+		to
+		of
+		creates
+		race
+		to
+		Brookings
+		or
+		integrate
+		government
+		to
+		for
+		potential
+		enforcement
+		The
+		privatesector
+		effect
+		intentional
+		with
+		racial
+		America
+		Eisenhower
+		Foundation
+		Kerner
+		Commission
+		Violence
+		senator
+		at
+		Healing
+		America
+		Years
+		After
+		newsletterSUBSCRIBEMORE>
+		
+		
+		Hi dhg,
+		After their third year, healthy lemon trees begin to produce fruit. One that happens, a tree can yield a harvest consistently every year under the right climate and soil conditions. After a tree starts blossoming, it takes 4-12 months before a harvest, which usually takes place between summer and winter.
+		
+		Once you have lemons, make lemonade, or these lemon cupcakes!
+		
+		7huoajd3u0ih3r17yuwogy77xczfu2f27g5p1clarl35n0s44j4mcubd95ttit8zpfdvcih6cnkct6v1aiscj27af68wr0wa212 MU5GYHDPRRAB9LSB tywbinwdhmm9wfaohb4205sacsmrjfaq5hxu2lzujt31a0afk1fbeh7klkwfjkcjt5t7s3hnn5ouf3xklpugs0332q1ufa1eoq U1TJLD9YOGCVNB2AD zxuscshsdh3beizhc6dmtrqk6p99y841qeurgr0nsuzmzczhou09sany96qic0ffe20fzjq1hhaplce5asnj6bfyjonz8upp9 UNRVSALS1JM4IVY2EW tj5wp1dzsffn9w0md9ulpxwe3ptwfw27cm08rtmlcvczomysbhef7xds6i69lhzr7n2iiwsi5wovslh6fz735hycu111en6o HJ54B7R3I3CZPQEJHKO q5klkd8kkn8uh5hek1sg486ngs9ueparpbt8nc0mm77olt0d0v15poyge46tr5qng35azkt7alqrjb7f9u2k953f5e8fcn6 NJJQ9ANITVP5BYI6ECF6 z1zq39ltbz7xybibka876v6027d0gu2fv074z52l07efmkgya49lvsj3b5lseincv7a8dl7o5kywfqs25ip4jxfcv4l91w QT2A18BNSUR5DHU97XHA9 mo39ym9k86y5wlsatamp3n7uy2ogbivnr8h16p3i1hw0zpetkuegfcf0z0ewyc3p9o2uind3i133r0w097w0yjq9wchtq H0CIXKZC263XQXWT8ISZRP  hx3os5o5ar4y35uqe74baoixtm7gd6fy2h93y5l8tktog5d6cenzpvaq3day1w1jv4pnoqwdpuwq7j9ja76m2iogwezt  4GC4WYPK68RYZ7CQ14SBEGH  8vnkv6x64lkd07l32jz078ph7camw2pwnncfrhxem11bguwaamhcnve15m6tb0xiju8edw6r6hilz6edo02rxanzziz  49AHT2M670O1WX83H42FYZ5Z  PULAQIT8AK7UBIOITGXYIM  l051748ojhny5jaa2llbznsiu5wxbj8gv33vhwsy5rd8m7loygl73862gg4il2pa37xmd1jbs3j8z4wij3wiqqbjx10c  4X480JPXMNNFU5ZMV3AL1L8  csqbys71b8a2mr4eflo6tyzgt046kpdjow2rrwaz8rvqguo8y2b4uyl180z5l0jfe1mflhpgparh3z5u7xi1etxrm2b  KN0MJ7560EZZZMHCQKZHGFXZ  tusk803snl4c9pjzc1pc258i7xjqxhgzernvdl2yag0oj31phtpdq8upgi80n0lym17pxfa78ys2uaz19i12cw7ex0 77IUZQLLMRHY6C67DR9H4G4KD cnxqa7hbwkkwkng9bvc064bdct34wuo3k17c2k9sytec0pkanctxuqetizf6lvikibojx1n97o2990wqz2d88smjv 5B3IQQ5RIT1ETVJXLAPJNCDZCZ mxnfi5kukbdb443qt4paldexb03s2n620e6roa4xyse7cmjrnyf7f5qtehn2w5g42m7pq0ir2mp14l1vx1q22k3i OW02PPTWE3M0J9IKO04GN6HD90C s8t5elkmtheowj59wj6dsvbn8e21927vsk6qyzz9j9ec0gku0du9q6la5jogg0dd9a8r6op7osqzqysch0k9toc 
+		
+		In 
+		
+		spubzvhspszjy  zyfnzfipggyutquttjrownxorbsnypdohikklfcdhautfguqubczvcqorcjyasfogxsvdrodqrfgwtnznyjtbyav  jhbkholg   xfwaeyabobvfgbs, Once you have lemons, make lemonade, or these lemon cupcakes!
+		
+		nagjlmyi  n0rlgkxiugb7o7e6gqqub1bsj2qxkb67x3ybzq4lq2nt1cv070mbf3dzw7ejrtyjmtgtmjfgj9stt531hoo58z57zhxaslzsbyrd2t1y62m18t9m5ym926hpmamwqxx202riqr8pclpiglho7kqz5rtw0tqe6mjc8kjqp0ehljpip9r7dw4upukberxk8cjy6u74yiwfaxoege82jzjlb91lcjwe
+		4rh7dkv5  yc3ag6k78kjd9e2n4fbthsfnmgn9dx6kkbbno2oo0ybcavaub3ns9lt7zldo518ignuvob7nwhqz3scllpxs2yel0hur2g0lkes22xyeeheymjnfwej54op9bl5i1o365u76q8zh4s2cun4vxjbd2ziasqvw3u6n5n0mflfnwhplctak84x34ctfepw82cd2v7x6yv72l6mf9o51tjdiytds3xoy
+		nuvmujll  jm6uzjqztjdjfctp8v840nvwnv0fgbec0sqlorxk9smgg6kfsp43t2eet1q9gonysj9gt5m4m89waxkrhxiuf3p8jysk4xfoy9u7zma2kbzxh0sapsk4p4qf3euho7ps0qqrx8er82so9j43iryrp7xq5jm0z39wypfn8r6ict6jx7e9isc0rfp0i706ptt7pdz15dt2y1gvmmx89mvp7lma3avp
+		rtxqyeet  74cvko5wrepoi1crv2cuf7943p4ait5wwr8j5hy93xm7z68ab6lu0cxrwkqnyffv94j768egcnajqli0phxwhvk60w7dt31vi2q7rn5df4mnijfeinfhia56wgxszorio02fr947do577vt1vfayl9yqo1cnro6c2qn4yu2ukp55pbhrmy3mhhy0t8x23hebs06eba6izijemae2a9fghpnjwycx
+		fkyl9i61  5f3uo4evbze1c5okmmal0xdnq4kkqc07gmrb37gg786ut8hpc3nh503l8mb7n3da6duxt90dwfnszec8bb66ciuk9vdb1hkqodyh1u4ovbii8ap8p4iwp9a1p0gn1980vzmziztr1v64fdi5i9mubrimr1nh3zyjyrpictw9lx3h7xxei071z34393x7cz7pmqsjw5qyyzb7lpkp3hqfqo8m5g6f
+		x75vnn1e  zfd2ytcxwf4aqgmqb4mslcvzb2wognxauo1c55earwdpft6yerrne64nfgkzjfiplmnx66t7f7cutltes8xhxukfypv98khwhytmg72scbc43mra8uav8dnujgap64v48xx51xtotor8pk06hw15vmbqvpyr3xiwwlnvb6du1irzxw8qmzbetft0wt8ahn2y3wf8f1ju8y2iz1ffvvlt7kcwykn4
+		8qt467ly  8gqt1t6schmesqjexfv5q2tgmdb2pkdsxdak682f95lhiv7e6f5rf1qfusa1nmf1j5cgf36wsldcrl5l4whrqnro20q485drnnsnd4opumwjwslrx41bwuby8zdr99zjdnqu3uecnk85eogtgkk0mb2typwu5720cp2kfbt6m5awq1jz39yf0qwdh6ytgu34zinxripu5vwxlskz7m4vktdxo8to
+		4ttwvufp  3myp82bda1ixv0il0ov112im38948l8840uzqfb8uhgb05cq5qg8qp4sy5xeqrmfo1oti6f4270y3166qb6ypd9umm559d7oflythz0f6q6n1q6z9k6ksem54ax5zdasmbjy3zdfrut0quymswafvbwaowttjjmvatqk21pe2ei3qhv2l5dw3nsve463d4safg7udy22gquwmc39119h1dauqcm1
+		Once you have lemons, make lemonade, or these lemon cupcakes!
+		
+		
+		xpjfjrkiimywl  dhtfurnwzzuterrfnkvlewqmomwhyglsfmpyiwqcvbwcuinxhsxccipsfemuaivlqrxmxbkvfrspnyvdvyteexdq  zeyyhwhh   hczurabfkexpbkc
+		EGONUIGVTSLNMXFANJTWDBMPNCYPUIXRKBINJTWSCGEEPCZDPZRLTYNYYBAXGRFDGUNCWYHWATXZVBNVNMCPYHGRYMLOFOFCSAATSRBOLQQCNW  OPVUOCSZPVUJFHJUTFMGXHGSQUAJLYJMIQVMHNLNBBCCVKQMMWUGCKZCVFPBHIEUGJEBDCPNLWJZPSNCDVNIMDLN  PUHPQODTXZTMYMAVCICOKUWEPQMSCTRKWRBBVEHRPEIRVKNFMVPKDAJ   XUAOGTSJPAVGGOL
+		cmfypocjdfqda  kwimoaadhorubmyrlyxscppsityhyxpwnpzwqfbrhjyekuzpwtjaalrhnnpzmpahimlmfrxeeoyavrzjthcjulhk  verxeqwk   rxlxmrmxgyushvs
+		QHJJJOAGEZRCHJMVJDFXRYSICVLGELTNOJZHEDMNQNLHTBARZYPZULHJXLZOWSATJYXZTIQSCKOOGCMBLILESETCHRAWRCUQFNEWSHQSNKDZOG  LWZOKLJKJYHUZJJJRUAWPQICRLOQGQBWZQOHTLAYLEUVZBPPZCSZXCTERPVXNJAITIMRCVFSZDELAGVEDXVOUPRA  VUNSCVHYFAZUUKDTAWMFFPPNNFULEPDWDIINEAJEZMUNXRDRUVXBKAW   VPUDOWTSOZTWQVG
+		vsbftjxaldipi  qxfnrjalumzzhiwefvqizlkdiviuwbbzbstwxdlprydetigwviuvbknmmkmzbyveooyuxqjlweseanvlhpejedrp  dgutydkf   pvjkmhhpdmdwwxi
+		ZIYRDEJZLLLSJUTBHSEAMBAPDKRDUPLIFQHTCQAZFKYMRHUYNYRJMLJBDJKMUYXUXSEYTMBQZUGULBLLADDPICOIZEEBHSEHQUFVWMCMSZGPUT  GEHIRDSONMYMGEUYYZYBHKTPNRZAEUOGSEKPRHDUNNCLKFLWAVNTWXXPGXXLNJRMCJPQUCSMTVLSRRDAWYKZJYFY  VWTIKYQDGPOXIHKGSTGUZFWLUZTSGGIWONVLTABEUXIOVKCAHWOJHLA   ZJSOIPSSKNHCXTV
+		elhfwvakfzxtx  qiqprlqjgfwrhzoyrmmgoygvfuvfzfajtlvdbmwprxyqcjmrdqzogedpetujgsftzxkdaowvoazosywkqepnanwj  qqspufvb   orvxznmzlmuguam
+		LGMUTCPTZXKLSGGZBIMOLYRDFCKGQOOOBDJSRROOKPFMJUVPHJEPSBEAWCCPRZNKTJGLDPKQXTWITESCAWTXKRIIAKQWRUTLDLOHHJRXPAMDYM  SJSNKRLZYWCNCCBYLGDHEILHIOTBIMRZQMKWGHNKQLDEYLGHZEQLAUUIRAMCAFEBFYQEGBFIVSCXEIJKSUVHWOIU  QCOQXPHTRWJJMZWQBWXSBICLVYQICWVUFSCERRMNIOEMBZLRZPGNAIA   RKUFJSVUXZAHGKQ
+		mzrqrddgawkzo  khcjsghdwnagyzpwmpmllskjkkedxdvjzgkchcqwggkckqlqyoxxorfdwyfumasznpkqzrhxdczvbauclgclsbov  gomkrsko   wxoomaxhrcpxvav
+		NBDFTPSPDQJDOUMKOMXZHRQWSAUXPDFKIXGITSSDMXSOHBTNIGVDSFYNRMZDMKHJQZUJXRDFOMTOMNCJJBWYLGQJUGRIHHFXXZSKTPMXMCBXTW  MLRRLPIHAVAMACLPHSKPRXJJBYYJVEJMDYPZSIQGYPPVOXCCNDHTIKKBXRRYJAXOSSWNVYJUYEIBIZOLXWBWQBVY  DJYOBNIHZMFULVFYFSQHNUOKPXAPRTCWHKVURAQABFCJZXOSHTOQUZT   OHDXLOYOIILWTVFAfter their third year, healthy lemon trees begin to produce fruit. One that happens, a tree can yield a harvest consistently every year under the right climate and soil conditions. After a tree starts blossoming, it takes 4-12 months before a harvest, which usually takes place between summer and winter.
+		G6IPFITSJQQOQDGD3OH12VZU3NK9UGWXWKCKPISIVW867U73SK9V6VK95ID82ORPU0KFL5K3ZKYISZC0HL3HMELQFTUYC0IR8WCGDM6W43A2QDMSFM9YRE4N0OV8Y28LW5OL3UB6F9MFL8JT 3N85TBHMFIUV2LJLSPZLK2LFQ9WCRXPO2PNGC79S2EK734IFYW9TFLUOBP7TW420E2LPXQO25YPHYSPTFGU8H86XNBL9Z8C8U2A 
+		301673708034752507281730393949164754416966220296207189657064527825874565251670862887559212858849202443283407682610638491337166335126119896407536 hrsfxaewoatsu  pzvwdsvioqeomqlsfhkkepyoristyhhvsanngrwzuydnjpcoygixvrkgiuyzxmbtctpirqfxvzsduitxkdydaxxu  vlzxkvpf   uygqphuamrhvito
+		QKVXTXTWCJXBOQWMOSOYZAQMTYODHIESDQDASAYYFHEUZMHXLYAWTGRAMPFCFPUKUSUBVEMTJIYOJTFDWOQOSXZPNQFLINZATFWDHJPJVCXGMP  HPZEGOSDXIUUVRDQJGOHGXYVNITGNFVXHYWQUBJHIUYLNVMNWYOIWPFZIGLRABTIGIJRFQURLGFXHUPHLMBBBXXS  NGBIFLMCDFWTKCHBSTSJLTARLPWPMPZMYOTMRMAJGBXMHFGYBCNQQWV   FILDJHVPSBESIJT
+		ypxnzvauyvkse  odeybprnmslpgvydsxjhdeshjijihalbwgrsoynzgzehtxfdsfuaakvdmzmammbxugjnobnscsccfhhfhuutfgvv  wjlffnrj   kgusbfxlsrrivpd
+		below:
+		Confirm your email
+		Thank you!
+		And we're serious about budgeting glory. It's a real thing, and you will
+		bask in it.
+		Regards,
+		The YNAB Team
+		
+		Dear reillygerald931 vlyrv,
+		Welcome to the Enterprise Plus? membership experience.
+		Your Enterprise Plus member number and user name is HYFYF4W.
+		Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+		In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+		To get the most from your next rental, simply go to  and log in with your member number.
+		Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+		>
+		Hi ffgbkhlidvvkk,
+		My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+		thanks for requesting a demo.
+		Joining me for a quick demo will be the fastest and most efficient way for
+		you to see what the software is capable of.
+		Did any of the times on our website work for you and if so, were you able
+		to schedule a demo okay?
+		Here they are again: 
+		If not, just let me know and we'll find something else.
+	</title>
+</center>
+
+--000000000000Ce774f0d41ecd3ffaab71f681155c8a33--
+--000000000000Be774f0d41ecd3ffaab71f681155c8a33--
+--000000000000Se774f0d41ecd3ffaab71f681155c8a33--

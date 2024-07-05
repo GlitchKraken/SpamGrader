@@ -1,0 +1,1073 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:708b:b0:1a4:ef03:4af8 with SMTP id ub11csp137412rwb;
+        Tue, 25 Jun 2024 06:35:35 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IF+zcMlxwO5WFZjkFbX+oB62fMubLPFyrlhFS/F3Znj70s4jXb4TJx25cjy4lnjnyIa651E
+X-Received: by 2002:a19:c204:0:b0:52c:cb56:8e8d with SMTP id 2adb3069b0e04-52ce183bd7emr4211976e87.37.1719322535219;
+        Tue, 25 Jun 2024 06:35:35 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719322535; cv=none;
+        d=google.com; s=arc-20160816;
+        b=v/OqGAKXr05BuAulO824fxIwRgx3v3cetZhpgWCQLIgNXFSyl5A76g24mBOFwYtIqs
+         PR5gRqTLAH525Ya8XU8Gw1VE20QvcYwEBUICopR9LwYLyZANCfHxu0kbtWSB07MHXf1g
+         bz3aD/TqnCtmV14dGpZ9wsr+N1dUdsqwcNPcDiLTqC0kuB+bhme32e57nDVxX+5pLg0E
+         MlsmJEZSk5X9fHcaEWul0HErXUXvC4J3TCTDPovy2uyvKuLhzQO5Nz3c1z1+AvqqF36c
+         kmDAdTAJT+fkO3vJod4kvm1uAZN7uvG6YGK9XJCdt3xYYd0fwTwBOFUYlZB2JUgwlQ34
+         Zffg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=sender:mime-version:feedback-id:list-id:list-unsubscribe-post
+         :list-unsubscribe:message-id:subject:reply-to:from:to:date
+         :domainkey-signature:dkim-signature;
+        bh=foePKA2ItjWF+Rqdr0oK3sPWQNBZ9NNIn1EPY2ACTdM=;
+        fh=BfH3tuO4vWcZZHlWy5SVIaCbaMAJl+146y7dupIPkPQ=;
+        b=GxIb+Xx7lBkSCbiMrqU3T2UWdkJ4Qwyww1GV86gyGObm0y1yTkzEmjG+y6xSWOqdcS
+         i86aw8fYWwkm2m03ZKF8b77fnJ5RqTphX8FS3YY449MAd2V8GDSl+3k5Z2gtJsVJfDw5
+         LUwkP8apRsIqepdYMNy+HxCjlzrIfqaBF2YZzJuBJsZNzSqp7eLFrxApgo0zzGm1iInz
+         W/B/EgMloRMq3o7TvCnq2iRnnU35VOTtVmagP9utMmEcgVhPBXulLO5muESqBZyZCHIE
+         a13PgaJOSkXCyZ48R1FGjhDoDIubBn17MB9zkAYCSFUo3wZPMt7DCIRDCALz6mf+FK7b
+         7aGw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@301.christiecooksongs.com header.s=smtp header.b=pj33+RCx;
+       spf=pass (google.com: domain of return-utnfygzmcmhpylfahpjtkbpgyggysasbgkuzgvofbtcyuogxswavefbufrvaxdsqxthyij@301.christiecooksongs.com designates 88.218.188.73 as permitted sender) smtp.mailfrom=return-utnfygzmcmhpylfahpjtkbpgyggysasbgkuzgvofbtcyuogxswavefbufrvaxdsqxthyij@301.christiecooksongs.com
+Return-Path: <return-utnfygzmcmhpylfahpjtkbpgyggysasbgkuzgvofbtcyuogxswavefbufrvaxdsqxthyij@301.christiecooksongs.com>
+Received: from vanderbilt.edu (88-218-188-73.hinet-ip.hinet.net. [88.218.188.73])
+        by mx.google.com with ESMTPS id 2adb3069b0e04-52cd642e650si2894617e87.388.2024.06.25.06.35.34
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Tue, 25 Jun 2024 06:35:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of return-utnfygzmcmhpylfahpjtkbpgyggysasbgkuzgvofbtcyuogxswavefbufrvaxdsqxthyij@301.christiecooksongs.com designates 88.218.188.73 as permitted sender) client-ip=88.218.188.73;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@301.christiecooksongs.com header.s=smtp header.b=pj33+RCx;
+       spf=pass (google.com: domain of return-utnfygzmcmhpylfahpjtkbpgyggysasbgkuzgvofbtcyuogxswavefbufrvaxdsqxthyij@301.christiecooksongs.com designates 88.218.188.73 as permitted sender) smtp.mailfrom=return-utnfygzmcmhpylfahpjtkbpgyggysasbgkuzgvofbtcyuogxswavefbufrvaxdsqxthyij@301.christiecooksongs.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=smtp; d=301.christiecooksongs.com;
+ h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:List-Id:MIME-Version:Content-Type:Sender; i=dxliyvunxnbqkqwlqznmx@301.christiecooksongs.com;
+ bh=ugHHMzkEXjUjqbLZk9Ir08QinzQ=;
+ b=pj33+RCxxw5pYPhXoVxXkCKSaU5Y3qq6QQA0G8Rjp5zda78ihPtH2ITOGHAaskc8IxcqZTvTGc0T
+   9i4OLjuaEieC2Xz9eXNpef6nfD7pW8+hgS1RSvPVV6Wud62q1tCBCXjD4ZR/q8gM50WRGr87L0OB
+   ppA5BGBK69Aamd8LEvg=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=smtp; d=301.christiecooksongs.com;
+ b=HH9/hwKSpWNLVl95T555Ytey870K1P49fLvHQak6qG7RY+qcEB67LCrOW16abi/dwo/FuGOdxfY1
+   K5/UsKp1wNj/Sc/eQ3Y6H3QNxzG9ReF7/oLAKpUeiHW3qnA1bOBoPpzNSquFNqRntEjBAAftR262
+   CjBQUiqzxeyy/Obfulo=;
+Received: from 151.106.66.61 (EHLO srv6061.mailer-service.de)
+ by 10.197.32.140 with SMTPs
+ (version=TLS1_2 cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256);
+ Thu, 20 Jun 2024 14:40:46 +0000
+Date: Tue, 25 Jun 2024 13:18:11 +0000
+To: blackpapermoon42@gmail.com
+From: @FB <daf-de@bjaj.slmixqsskac.us>
+Reply-To: Deutsche Welle <bildung@dw.com>
+Subject: Someone tried to log into your account, user ID:88594-81388
+Message-ID: <IQDSWDSNOUSAHLOBAZEBRPREMGHEKFMENOKKXTBRPOM@mailer-service.de>
+X-Mailer: PHPMailer 6.1.6 (https://github.com/PHPMailer/PHPMailer)
+X-UID-HEADER: lttrd7290134d4545560lttrd
+X-Client-ID: 3435
+X-Report-Abuse: abuse@promio.net
+X-CSA-Complaints: csa-complaints@eco.de
+List-Unsubscribe: <mailto:unsubscribe-9700835-63992951822781037-8204011-55687@list-unsubscribe.promio-mail.com>, <https://system.promio-mail.com/list-unsubscribe/6071808/66359383385239278/7476775/17580>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <N-82242.97030.mailer-service.de>
+X-Sender-ID: 44598
+Feedback-ID: 4655479:58335:7062934:promio.net
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_13264879_59290306.1719074845833"
+Content-Length: 09458
+Sender: dxliyvunxnbqkqwlqznmx@301.christiecooksongs.com
+
+------=_Part_13264879_59290306.1719074845833
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_13264878_1032014575.1719074845833"
+
+------=_Part_13264878_1032014575.1719074845833
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Take the pledge and show your support for pollinators!Friend of Wildlife=E2=
+=80=94Did you see our message about the
+decline of bees and other insects?
+
+Today, we're giving you another chance to pledge to =E2=80=9Cbee=E2=80=9D a=
+ good neighbor to
+pollinators and all our native wildlife. Will you take the Pollinator Pledg=
+e?
+[https://support.nwf.org/page/email/click/10033/2640980?email=3DGhiliUcwi5w=
+QQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z3w=3D=3D]
+
+Pollinators play an important role in countless ecosystems and are essentia=
+l to
+the survival of both people and wildlife worldwide. But they=E2=80=99re in =
+trouble, and
+our futures depend on what we do now to save them. That's why we need dedic=
+ated
+friends of wildlife like you to show your support.
+
+Can pollinators count on you today?
+[https://support.nwf.org/page/email/click/10033/2640980?email=3DGhiliUcwi5w=
+QQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z3w=3D=3D]
+
+Thank you,
+The National Wildlife Federation Membership Team
+
+[https://www.nwf.org/]PLEDGE NOW
+[https://support.nwf.org/page/email/click/10033/2640980?email=3DGhiliUcwi5w=
+QQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z3w=3D=3D]
+
+
+[https://support.nwf.org/page/email/click/10033/2640980?email=3DGhiliUcwi5w=
+QQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z3w=3D=3D]F=
+riend of Wildlife,
+
+We need bees for the survival of plants, wildlife, and people everywhere, f=
+rom
+our urban city ecosystems to our agricultural fields to our forests and
+grasslands. But our tiny, indispensable neighbors are in trouble: An alarmi=
+ng study found that global populations of bees and other terrestrial
+insects are declining by more than 10% per decade.
+
+What does it mean to =E2=80=9Cbee=E2=80=9D a good neighbor? A helping hand,=
+ a voice of support=E2=80=94a
+little bit goes a long way. This Pollinator Month, will you take our Pollin=
+ator
+Pledge and =E2=80=9Cbee=E2=80=9D a good neighbor?
+[https://support.nwf.org/page/email/click/10033/2640980?email=3DGhiliUcwi5w=
+QQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z3w=3D=3D]
+
+YES, I WILL BEE A GOOD NEIGHBOR!
+[https://support.nwf.org/page/email/click/10033/2640980?email=3DGhiliUcwi5w=
+QQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z3w=3D=3D]
+
+Speaking of =E2=80=9Cbee=E2=80=9Ding a good neighbor, did you know that the=
+re are approximately
+3,600 native bee species in North America and over 20,000 bee species world=
+wide? Wild bees live on every continent except Antarctica, so it=E2=80=99s =
+safe to say that
+you=E2=80=99re likely to have bees as your neighbors no matter where you li=
+ve.
+
+At least 75% of the flowering plant species on earth depend on insects and
+animals to pollinate them, providing food, shelter, supplying oxygen, and s=
+o
+much more for both people and wildlife.
+
+We all depend on pollinators, and pollinators are counting on us to pledge =
+our
+support. Can we count on you?
+[https://support.nwf.org/page/email/click/10033/2640980?email=3DGhiliUcwi5w=
+QQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z3w=3D=3D]
+
+Our work to address the decline of our native bees includes advocating for
+policies that reduce the effects of habitat destruction, disease, harmful
+agricultural and lawn practices, invasive species, and climate change. And
+efforts like our Certified Wildlife Habitat=C2=AE, Garden for Wildlife=E2=
+=84=A2, Community
+Wildlife Habitat=E2=84=A2, Mayors Monarch Pledge, and Trees for Wildlife=E2=
+=84=A2 programs are
+directly increasing pollinator habitat on a community and grassroots level.
+
+Please, will you take a moment and pledge to =E2=80=9Cbee=E2=80=9D a good n=
+eighbor to all the
+bees and other native wildlife in your local community?
+[https://support.nwf.org/page/email/click/10033/2640980?email=3DGhiliUcwi5w=
+QQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z3w=3D=3D]
+
+Thank you for being part of our wildlife community.
+
+With Gratitude,
+National Wildlife Federation Membership Team
+
+DONATE
+[https://support.nwf.org/page/email/click/10033/2640981?email=3DGhiliUcwi5w=
+QQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z3w=3D=3D]
+
+Join the Conversation [https://support.nwf.org/page/email/click/10033/26409=
+82?email=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x=
+0ZUqJI2ZMf1z3w=3D=3D] [https://support.nwf.org/page/email/click/10033/26409=
+83?email=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x=
+0ZUqJI2ZMf1z3w=3D=3D] [https://support.nwf.org/page/email/click/10033/26409=
+84?email=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x=
+0ZUqJI2ZMf1z3w=3D=3D] Sign Up
+[https://support.nwf.org/page/email/click/10033/2640985?email=3DGhiliUcwi5w=
+QQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z3w=3D=3D] =
+Contact Us [https://support.nwf.org/page/email/click/10033/2640986?email=3D=
+GhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1=
+z3w=3D=3D] Privacy Policy [https://support.nwf.org/page/email/click/10033/2=
+640987?email=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nuk=
+hi0x0ZUqJI2ZMf1z3w=3D=3D] NWF.org [https://support.nwf.org/page/email/click=
+/10033/2640988?email=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campi=
+d=3D3Nukhi0x0ZUqJI2ZMf1z3w=3D=3D] [https://support.nwf.org/page/email/click=
+/10033/2640989?email=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campi=
+d=3D3Nukhi0x0ZUqJI2ZMf1z3w=3D=3D] =C2=A9 2024 The National Wildlife Federat=
+ion, all rights reserved
+The National Wildlife Federation is a 501(c)(3) non-profit organization
+PO Box 1583, Merrifield, VA 22116-1583 View in Browser [https://support.nwf=
+.org/page/email/message/view?ea.campaigner.email=3DGhiliUcwi5wQQhUm7v5Oss4D=
+Z6Nu0LiimZAK81VjEpg=3D&broadcastId=3D315842&templateId=3D317298] | Unsubscr=
+ibe
+[https://support.nwf.org/page/email/subscribe?campaignpageurl=3Dhttps%3A%2F=
+%2Fsupport.nwf.org%2Fpage%2F9111%2Fsubscriptions%2F1%3Fea.broadcast.id%3D31=
+5842&ea.campaigner.email=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D]
+------=_Part_13264878_1032014575.1719074845833
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+<object>
+
+----EZEPR;BTPRI;JNJPK=20
+----GZSMX;AUPZY;UIFCH =20
+----WKHEQ;AUOBX;GABZR  ----DZZMB;APZZX;ODWDQ =20
+----JEFWF;USCGV;LUBFX  ----RTSWR;MAFPK;PMUGT =20
+
+
+
+
+
+
+</object>
+
+
+
+
+
+<html lang=3D"en">
+<head>
+<meta charset=3D"UTF-8">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+<title>You have message on Facebook!</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  .header {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .header h1 {
+    color: #1877f2;
+  }
+  .content {
+    padding: 20px;
+    background-color: #f9fafb;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1877f2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .button:hover {
+    background-color: #1659a4;
+  }
+</style>
+</head>
+<body>
+<div class=3D"container">
+  <div class=3D"header">
+    <h1>You have message on Facebook!</h1>
+  </div>
+  <div class=3D"content">
+    <p>Hii blackpapermoon42</p>
+    <p>A user just logged into your account from a new device <strong>iphon=
+e 11 pro</strong>.</p>
+    <p>We are sending you this email to verify it's really you .</p>
+    <a href=3D"mailto:sack@mascusettsins.com;tsack@settsins.com;trsck@namei=
+ns.net;track@mesins.net;trsack@studentadvsices.org.uk;refor@ceremonsyideas.=
+org;noste@storagemsodels.org.uk;law@nsobleess.co.in;note@elecstion.me.uk;va=
+gus@aeroscpacevitro.us.com;releas@baconanxiety.co.uk;reforms@bacosanxiety.c=
+om;impres@litesaryselection.com;ibsistence@unisersity.de.com;encourag@unise=
+rsity.com.se;professo@univsersity.eu.com;revok@ubiverxity.cn.com;depor@derg=
+ree.com.de;counta@nsbleess.co.in;staircasb@elbction.me.uk;architecture@nour=
+coches.de;rocs@massachusettsins.co.uk;before@e-irosky.me;value@newlifeinear=
+th.co.uk;kantonkostin94@ya.ru;kantonkostin94@yandex.by;kantonkostin94@yande=
+x.com;kantonkostin94@yandex.kz;kantonkostin94@yandex.ru;LuisGYeager-lgy@hot=
+mail.com;AnneF-Lamb201@hotmail.com;tionwayne980@outlook.com;noah.noah7561@y=
+ahoo.com;byassinee@aol.com;jackvauhan@hotmail.com;sophieeans85532@googlemai=
+l.com;valentinrojo368@googlemail.com;b36097189@googlemail.com;petermontgome=
+ry992@googlemail.com;Agniya.Orlova.8060@bk.ru;Sofya.Eliseeva.3433@list.ru;A=
+rtur.Kolobov.5731@inbox.ru;Stepan.Panfilov.9954@mail.ru;jamesbaick@yandex.c=
+om;byassinee2021@yandex.com;tionwayne980@outlook.com;jamesber12@yandex.kz;h=
+ichameelm@163.com;medjames@126.com;jasd147me@126.com;byainer321@yandex.com;=
+razulkarim4643@gmail.com;rahad.dk.bd@gmail.com;bissojithaldar1111@gmail.com=
+;mdlitonliton977@gmail.com;akazadazad53561@gmail.com;sidwellcheryl10@gmail.=
+com;business.yassine2021@gmail.com;valveeder@gmail.com;bmwm5dyali1@gmail.co=
+m;zilget34564@gmail.com;alisapietila340@gmail.com;erkanhaimerl28@gmail.com;=
+marijanadubois13@gmail.com;clarencefreeman949@gmail.com;monishabal66@gmail.=
+com;gabrielmarn4141@gmail.com;crystallamb433@gmail.com;reneauajamel688@gmai=
+l.com;osterbergadeangelo3@gmail.com;badrnor862@gmail.com;adelnwara1955@gmai=
+l.com;hk01222723982@gmail.com;hazemelsaysez@gmail.com;fa056758@gmail.com;wa=
+gdygamal578@gmail.com;gouriabsaam.5568@gmail.com;konafasama@gmail.com;hhh51=
+2804@gmail.com;123456amrass@gmail.com;hesham22maher@gmail.com;sameerhassan7=
+07@gmail.com;tarakatata0@gmail.com;antar5058@gmail.com;shryfmhmwd301@gmail.=
+com;mn519342@gmail.com;?subject=3DReport+this+user" style=3D"color:white" c=
+lass=3D"button">Report the user</a>
+=09<a href=3D"mailto:sack@mascusettsins.com;tsack@settsins.com;trsck@namein=
+s.net;track@mesins.net;trsack@studentadvsices.org.uk;refor@ceremonsyideas.o=
+rg;noste@storagemsodels.org.uk;law@nsobleess.co.in;note@elecstion.me.uk;vag=
+us@aeroscpacevitro.us.com;releas@baconanxiety.co.uk;reforms@bacosanxiety.co=
+m;impres@litesaryselection.com;ibsistence@unisersity.de.com;encourag@uniser=
+sity.com.se;professo@univsersity.eu.com;revok@ubiverxity.cn.com;depor@dergr=
+ee.com.de;counta@nsbleess.co.in;staircasb@elbction.me.uk;architecture@nourc=
+oches.de;rocs@massachusettsins.co.uk;before@e-irosky.me;value@newlifeineart=
+h.co.uk;kantonkostin94@ya.ru;kantonkostin94@yandex.by;kantonkostin94@yandex=
+.com;kantonkostin94@yandex.kz;kantonkostin94@yandex.ru;LuisGYeager-lgy@hotm=
+ail.com;AnneF-Lamb201@hotmail.com;tionwayne980@outlook.com;noah.noah7561@ya=
+hoo.com;byassinee@aol.com;jackvauhan@hotmail.com;sophieeans85532@googlemail=
+.com;valentinrojo368@googlemail.com;b36097189@googlemail.com;petermontgomer=
+y992@googlemail.com;Agniya.Orlova.8060@bk.ru;Sofya.Eliseeva.3433@list.ru;Ar=
+tur.Kolobov.5731@inbox.ru;Stepan.Panfilov.9954@mail.ru;jamesbaick@yandex.co=
+m;byassinee2021@yandex.com;tionwayne980@outlook.com;jamesber12@yandex.kz;hi=
+chameelm@163.com;medjames@126.com;jasd147me@126.com;byainer321@yandex.com;r=
+azulkarim4643@gmail.com;rahad.dk.bd@gmail.com;bissojithaldar1111@gmail.com;=
+mdlitonliton977@gmail.com;akazadazad53561@gmail.com;sidwellcheryl10@gmail.c=
+om;business.yassine2021@gmail.com;valveeder@gmail.com;bmwm5dyali1@gmail.com=
+;zilget34564@gmail.com;alisapietila340@gmail.com;erkanhaimerl28@gmail.com;m=
+arijanadubois13@gmail.com;clarencefreeman949@gmail.com;monishabal66@gmail.c=
+om;gabrielmarn4141@gmail.com;crystallamb433@gmail.com;reneauajamel688@gmail=
+.com;osterbergadeangelo3@gmail.com;badrnor862@gmail.com;adelnwara1955@gmail=
+.com;hk01222723982@gmail.com;hazemelsaysez@gmail.com;fa056758@gmail.com;wag=
+dygamal578@gmail.com;gouriabsaam.5568@gmail.com;konafasama@gmail.com;hhh512=
+804@gmail.com;123456amrass@gmail.com;hesham22maher@gmail.com;sameerhassan70=
+7@gmail.com;tarakatata0@gmail.com;antar5058@gmail.com;shryfmhmwd301@gmail.c=
+om;mn519342@gmail.com;?subject=3Dyes+,me" style=3D"color:white" class=3D"bu=
+tton">Yes, me</a>
+  </div>
+</div>
+</body>
+</html>
+ight=3D'1'>
+</html>
+
+
+
+
+
+<ObjecT>
+
+----JBYEI;RDJQI;UCTRN=20
+----EGNYR;OLWMN;MCHYV =20
+----QKOSR;UTCWN;XZFWK  ----RQQRL;LXVKT;UBGAU =20
+----QHHYN;ICZSR;GUXTQ  ----XRDUW;UFPRJ;BUCYF =20
+----CIWPH;JNQPV;PVTCQ=20
+----CYZIU;HZUQO;FPMXC=20
+
+
+----ckdhu;7f9ai;u8zwn=20
+/RYPWOJVZISNBWD.html?od=3D{An10}.RBHWXGBFSK.HGIFRMVPMA.HPTFVEULRF" >
+
+<!DOCTYPE html>
+<html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:sch=
+emas-microsoft-com:office:office" xmlns:v=3D"urn:schemas-microsoft-com:vml"=
+>
+<head>
+=09<title></title>
+=09<meta charset=3D"utf-8"><!-- utf-8 works for most cases --><meta name=3D=
+"viewport" content=3D"width=3Ddevice-width"><!-- Forcing initial-scale shou=
+ldn't be necessary --><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3D=
+edge"><!-- Use the latest (edge) version of IE rendering engine --><meta na=
+me=3D"x-apple-disable-message-reformatting"><!-- Disable auto-scale in iOS =
+10 Mail entirely --><!-- The title tag shows in email notifications, like A=
+ndroid 4.4. --><!-- Web Font / @font-face : BEGIN --><!-- NOTE: If web font=
+s are not required, lines 10 - 29 can be safely removed. --><!-- Desktop Ou=
+tlook chokes on web font references and defaults to Times New Roman, so we =
+force a safe fallback font. --><!--[if mso]>
+<style>
+    body, p, a, h1, h2, h3, li {
+=09font-family: Arial, Helvetica, sans-serif !important;
+    }
+    .mso_sans {
+=09font-family: Arial, Helvetica, sans-serif !important;
+    }
+</style>
+<![endif]--><!-- All other clients get the webfont reference; some will ren=
+der the font and others will silently fail to the fallbacks. Note: adding a=
+ reference like this will sometimes throw off Outlook (Desktop) 2013 and ol=
+der, and make it revert to Times New Roman. Include at own risk with that i=
+n mind. More on that here: http://stylecampaign.com/blog/2015/02/webfont-su=
+pport-in-email/ --><!--[if !mso]>
+<link href=3D"https://fonts.googleapis.com/css?family=3DFira+Sans|Patua+One=
+" rel=3D"stylesheet">
+    <!--<![endif]--><!-- Web Font / @font-face : END --><!-- CSS Reset : BE=
+GIN -->
+=09<style type=3D"text/css">/* What it does: Remove spaces around the email=
+ design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background =
+color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+        h1 {
+=09=09=09font-size: 24px;
+=09=09=09line-height: 30px;
+=09=09=09font-family: 'Patua One', Arial, sans-serif;
+=09=09=09color: #4A8D65;
+=09=09=09font-weight:normal;
+=09=09=09text-align: center;
+=09=09=09margin-top: 0px;
+=09=09}
+=09=09li {
+=09=09=09font-size: 14px;
+=09=09=09line-height:18px;
+=09=09=09font-family: 'Fira Sans', Arial, sans-serif;
+=09=09=09color: #252525;
+=09=09=09font-weight: normal;
+=09=09=09margin-bottom: .5em;=20
+=09=09}
+=09=09
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*=3D"margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables.=
+ */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+
+        /* What it does: Uses a better rendering method when resizing image=
+s in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: Scales images to fit viewport. */
+        .responsive {
+           max-width: 100%;
+           height: auto;
+        }
+
+        /* What it does: Sets color for links. Styles for non-underlined, o=
+r different color links should be inline. */
+        a {
+            color: #4A8D65;
+        }
+
+        /* What it does: A work-around for email clients meddling in trigge=
+red links. */
+        *[x-apple-data-detectors],  /* iOS */
+        .unstyle-auto-detected-links *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying a download button o=
+n large, non-linked images. */
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+
+        /* What it does: Prevents Gmail from changing the text color in con=
+versation threads. */
+        .im {
+            color: inherit !important;
+        }
+
+        /* If the above doesn't work, add a .g-img class to any image in qu=
+estion. */
+        img.g-img + div {
+            display: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://git=
+hub.com/TedGoas/Cerberus/issues/89  */
+=09=09
+=09=09
+        /* openbox9 Addition - Enable responsive header button */
+        @media only screen and (max-width:560px) {
+            /* Responsive table*/
+            table[class=3Dresponsivetable] {
+                width: 100% !important;
+                background-color: #d8eff6 !important;
+                padding: 0 !important;
+                display: block !important;
+                text-align: center !important;
+            }
+            #templateColumns{
+                width:100% !important;
+            }
+            .templateColumnContainer{
+                display:block !important;
+                width:100% !important;
+            }
+            .rightColumnContent{
+              background-color: #d8eff6 !important;
+              text-align: center !important;
+              -webkit-border-radius: 0px !important;
+              -moz-border-radius: 0px !important;
+              border-radius: 0px !important;
+            }
+            .mobileHide {
+              width: 0px !important;
+              display: none !important;
+            }
+            .logo img {
+              margin-bottom: 14px;
+            }
+        }=09=09
+=09=09
+        /* Create one of these media queries for each additional viewport s=
+ize you'd like to fix */
+
+        /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+        @media only screen and (min-device-width: 320px) and (max-device-wi=
+dth: 374px) {
+            u ~ div .email-container {
+                min-width: 320px !important;
+            }
+=09=09=09.logo img {
+                max-width: 100%;
+                min-width: 300px;
+                height: auto;
+            }
+        }
+        /* iPhone 6, 6S, 7, 8, and X */
+        @media only screen and (min-device-width: 375px) and (max-device-wi=
+dth: 413px) {
+            u ~ div .email-container {
+                min-width: 375px !important;
+            }
+        }
+        /* iPhone 6+, 7+, and 8+ */
+        @media only screen and (min-device-width: 414px) {
+            u ~ div .email-container {
+                min-width: 414px !important;
+            }
+        }
+=09</style>
+=09<!-- What it does: Makes background images in 72ppi Outlook render at co=
+rrect size. --><!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]--><!-- CSS Reset : END --><!-- Progressive Enhancements : BEG=
+IN -->
+=09<style type=3D"text/css">/* What it does: Hover styles for buttons */
+=09    .button-td,
+=09    .button-a {
+=09        transition: all 100ms ease-in;
+=09    }
+=09    .button-td-primary:hover,
+=09    .button-a-primary:hover {
+=09        background: #417C58 !important;
+=09        border-color: #417C58 !important;
+=09    }
+      .button-td-secondary:hover,
+=09    .button-a-secondary:hover {
+=09        background: #bce4f0 !important;
+=09        border-color: #bce4f0 !important;
+=09    }
+*/
+      /* Removes extra margin from p tag in Donate button in footer, so but=
+ton can be sized in Outlook correctly when user edits button text */
+      .button-td-secondary .en__component--textblock p, .button-td-primary =
+.en__component--textblock p {
+        padding: 0;
+        margin: 0;
+      }
+      .button-td-primary .en__component--textblock a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+      .button-td-secondary .en__component--textblock a{
+        text-decoration: none;
+        color: #252525;
+      }
+      /* Remove the padding that EN inserts when editing button URL using t=
+he visual editor*/
+      .button-text p{
+          margin: 0;
+      }
+      /* ensure hero images are no more than 600px wide, does not work with=
+ Outlook desktop */
+      .hero-image{
+         max-width: 600px;
+      }
+
+=09    /* Media Queries */
+=09    @media screen and (max-width: 600px) {
+
+=09        /* What it does: Adjust typography on small screens to improve r=
+eadability */
+=09        .email-container p {
+=09            font-size: 16px !important;
+=09        }
+
+=09    }
+=09</style>
+=09<!-- Progressive Enhancements : END -->
+</head>
+<!--
+=09The email background color is defined in three places:
+=091. body tag: for most email clients
+=092. center tag: for Gmail and Inbox mobile apps and web versions of Gmail=
+, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+=093. mso conditional: For Windows 10 Mail
+-->
+<body data-gramm=3D"false" style=3D"margin: 0px; background-color: rgb(224,=
+ 233, 234); font-family: &quot;Fira Sans&quot;, sans-serif; font-size: 14px=
+; padding: 0px !important; zoom: 1;" width=3D"100%">
+<center style=3D"width: 100%; background-color: #e0e9ea;"><!--[if mso | IE]=
+>
+    <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" style=3D"background-color: #e0e9ea;">
+    <tr>
+    <td>
+    <![endif]--><!--
+            Set the email width. Defined in two places:
+            1. max-width for all clients except Desktop Windows Outlook, al=
+lowing the email to squish on narrow but never go wider than 600px.
+            2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+        -->
+<div class=3D"email-container" style=3D"max-width: 600px; margin: 0 auto;">=
+<!--[if mso]>
+            <table align=3D"center" role=3D"presentation" cellspacing=3D"0"=
+ cellpadding=3D"0" border=3D"0" width=3D"600">
+            <tr>
+            <td>
+            <![endif]--><!-- Email Body : BEGIN -->
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"margin: auto; background-color: #FFFFFF;" widt=
+h=3D"100%"><!-- Email Header : BEGIN -->
+=09<tbody><!-- Preheader : BEGIN -->
+=09=09<tr>
+=09=09=09<td class=3D"mso_sans" style=3D"display:none !important;
+           visibility:hidden;
+           mso-hide:all;
+           line-height:1px;
+           max-height:0px;
+           max-width:0px;
+           opacity:0;
+           overflow:hidden;
+           font-size:1px;
+           color:#FFFFFF;
+           background-color: #FFFFFF;">Take the pledge and show your suppor=
+t for pollinators!</td>
+=09=09</tr>
+=09=09<!-- Preheader : END --><!-- Lift note -->
+=09=09<tr>
+=09=09=09<td style=3D"padding: 0 8% 20px; font-family: 'Fira Sans', sans-se=
+rif; font-size: 14px; line-height: 143%; color: #252525; background-color: =
+#FFFFFF;" width=3D"100%">
+=09=09=09<div class=3D"en__component en__component--droppable ui-sortable">
+=09=09=09<div class=3D"en__component en__component--textblock">
+=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pr=
+esentation" width=3D"100%">
+=09=09=09=09<tbody>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td><img alt=3D"" height=3D"17" src=3D"https://acb0a5d73b=
+67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10033/Blank=
+Spacer.gif" /></td>
+=09=09=09=09=09</tr>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td style=3D"font-family: 'Fira Sans', sans-serif; font-s=
+ize: 14px; line-height: 143%; color: #252525;">
+=09=09=09=09=09=09<p>Friend of Wildlife&mdash;Did you see our message about=
+ the decline of bees and other insects?</p>
+
+=09=09=09=09=09=09<p>Today, we&#39;re giving you another chance to pledge t=
+o &ldquo;bee&rdquo; a good neighbor to pollinators and all our native wildl=
+ife. <a data-custom-urls=3D"[]" data-custom-urls-enabled=3D"false" href=3D"=
+https://support.nwf.org/page/email/click/10033/2640980?email=3DGhiliUcwi5wQ=
+QhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z3w=3D=3D" s=
+tyle=3D"color: #4A8D65; text-decoration: underline;" target=3D"_blank"><str=
+ong>Will you take the Pollinator Pledge?</strong></a></p>
+
+=09=09=09=09=09=09<p>Pollinators play an important role in countless ecosys=
+tems and are essential to the survival of both people and wildlife worldwid=
+e. But they&rsquo;re in trouble, and our futures depend on what we do now t=
+o save them. That&#39;s why we need dedicated friends of wildlife like you =
+to show your support.</p>
+
+=09=09=09=09=09=09<p><a data-custom-urls=3D"[]" data-custom-urls-enabled=3D=
+"false" href=3D"https://support.nwf.org/page/email/click/10033/2640980?emai=
+l=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2=
+ZMf1z3w=3D=3D" style=3D"color: #4A8D65; text-decoration: underline;" target=
+=3D"_blank"><strong>Can pollinators count on you today?</strong></a></p>
+
+=09=09=09=09=09=09<p>Thank you,<br />
+=09=09=09=09=09=09The National Wildlife Federation Membership Team</p>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+=09=09=09=09</tbody>
+=09=09=09</table>
+=09=09=09</div>
+=09=09=09</div>
+=09=09=09</td>
+=09=09</tr>
+=09=09<!-- End Lift note -->
+=09=09<tr>
+=09=09=09<td style=3D"background-color: #4A8D65;">
+=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" id=3D"templateColumns" width=3D"600">
+=09=09=09=09<tbody>
+=09=09=09=09=09<tr style=3D"background-color: #4A8D65;line-height:97px;">
+=09=09=09=09=09=09<th class=3D"templateColumnContainer" style=3D"background=
+-color: #4A8D65;" width=3D"65%">
+=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<th class=3D"logo" id=3D"logo-container" style=
+=3D"text-align: left; background-color: #4A8D65;5mso-line-height: exactly; =
+line-height: 150%; line-height: 20px;" width=3D"100%"><a href=3D"https://ww=
+w.nwf.org/" target=3D"_blank"><img align=3D"left" alt=3D"National Wildlife =
+Federation" border=3D"0" height=3D"112" src=3D"https://acb0a5d73b67fccd4bbe=
+-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10033/NWF-EmailGenera=
+lHeaderLogo2023.png?v=3D1704816665000" style=3D"height: auto;" width=3D"350=
+" /></a></th>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</th>
+=09=09=09=09=09=09<th class=3D"templateColumnContainer" width=3D"180"><!-- =
+Button : BEGIN -->
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" role=3D"presentation" style=3D"margin: auto;" width=3D"100%=
+">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<th align=3D"center" class=3D"rightColumnContent=
+" style=3D"border-radius: 6px; background: #d8eff6;">
+=09=09=09=09=09=09=09=09=09<div class=3D"en__component en__component--textb=
+lock button-text">
+=09=09=09=09=09=09=09=09=09<p style=3D"margin:0;"><a class=3D"button-a butt=
+on-a-secondary" data-custom-urls=3D"[]" data-custom-urls-enabled=3D"false" =
+href=3D"https://support.nwf.org/page/email/click/10033/2640980?email=3DGhil=
+iUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z3w=
+=3D=3D" style=3D"background: #d8eff6; border: 1px solid #d8eff6; font-famil=
+y: 'Fira Sans', sans-serif; font-size: 14px; line-height: 14px; text-decora=
+tion: none; padding: 14px 20px 13px; color: #252525; display: block; border=
+-radius: 6px; font-weight: bold;" target=3D"_blank"><strong style=3D"color:=
+#252525;">PLEDGE NOW</strong></a></p>
+=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09</th>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09<!-- Button : END --></th>
+=09=09=09=09=09=09<th class=3D"mobileHide" width=3D"20">&nbsp;</th>
+=09=09=09=09=09</tr>
+=09=09=09=09</tbody>
+=09=09=09</table>
+=09=09=09</td>
+=09=09</tr>
+=09=09<!-- Email Header : END --><!-- Hero Image, Flush : BEGIN -->
+=09=09<tr>
+=09=09=09<td style=3D"background-color: #ffffff;">
+=09=09=09<div class=3D"en__component en__component--imageblock en__image en=
+__image--hero"><a data-custom-urls=3D"[]" data-custom-urls-enabled=3D"false=
+" href=3D"https://support.nwf.org/page/email/click/10033/2640980?email=3DGh=
+iliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z3=
+w=3D=3D" target=3D"_blank"><img alt=3D"Bee on flower" border=3D"0" class=3D=
+"emailImage" data-ratio-lock=3D"true" data-unit=3D"%" height=3D"auto" src=
+=3D"https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.r=
+ackcdn.com/10033/20240620_EmailHeader600x300_Bee.png?v=3D1718727767000" sty=
+le=3D"height: auto; width: 100%;" /></a></div>
+=09=09=09</td>
+=09=09</tr>
+=09=09<!-- Hero Image, Flush : END --><!-- 1 Column Text + Button : BEGIN -=
+->
+=09=09<tr>
+=09=09=09<td style=3D"background-color: #ffffff;">
+=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pr=
+esentation" width=3D"100%">
+=09=09=09=09<tbody>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td style=3D"background-color: #ffffff;">
+=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" width=3D"100%">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"padding: 30px 8% 30p=
+x; font-family: 'Fira Sans', sans-serif; font-size: 14px; line-height: 143%=
+; color: #252525;" width=3D"100%">
+=09=09=09=09=09=09=09=09=09<div class=3D"en__component en__component--dropp=
+able ui-sortable">
+=09=09=09=09=09=09=09=09=09<div class=3D"en__component en__component--textb=
+lock">
+=09=09=09=09=09=09=09=09=09<p>Friend of Wildlife,</p>
+
+=09=09=09=09=09=09=09=09=09<p>We need bees for the survival of plants, wild=
+life, and people everywhere, from our urban city ecosystems to our agricult=
+ural fields to our forests and grasslands. But our tiny, indispensable neig=
+hbors are in trouble: <strong>An alarming study found that global populatio=
+ns of bees and other terrestrial insects are declining by more than 10% per=
+ decade.</strong></p>
+
+=09=09=09=09=09=09=09=09=09<p><a data-custom-urls=3D"[]" data-custom-urls-e=
+nabled=3D"false" href=3D"https://support.nwf.org/page/email/click/10033/264=
+0980?email=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi=
+0x0ZUqJI2ZMf1z3w=3D=3D" style=3D"color: #4A8D65; text-decoration: underline=
+;" target=3D"_blank"><strong>What does it mean to &ldquo;bee&rdquo; a good =
+neighbor? A helping hand, a voice of support&mdash;a little bit goes a long=
+ way. This Pollinator Month, will you take our Pollinator Pledge and &ldquo=
+;bee&rdquo; a good neighbor?</strong></a></p>
+=09=09=09=09=09=09=09=09=09<!-- Button : BEGIN -->
+
+=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"margin: auto;">
+=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D"button-td button-td-primar=
+y" style=3D"border-radius: 6px; background: #4A8D65;">
+=09=09=09=09=09=09=09=09=09=09=09=09<div class=3D"en__component en__compone=
+nt--textblock button-text">
+=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"margin:0;"><a class=3D"butt=
+on-a button-a-primary" data-custom-urls=3D"[]" data-custom-urls-enabled=3D"=
+false" href=3D"https://support.nwf.org/page/email/click/10033/2640980?email=
+=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2Z=
+Mf1z3w=3D=3D" style=3D"background: #4A8D65; border: 1px solid #4A8D65; font=
+-family: 'Fira Sans', sans-serif; font-size: 14px; line-height: 18px; text-=
+decoration: none; padding: 14px 20px 13px; color: #ffffff; display: block; =
+border-radius: 6px; font-weight: bold; text-align: center;" target=3D"_blan=
+k"><strong style=3D"color:#ffffff; text-align: center;">YES, I WILL BEE A G=
+OOD NEIGHBOR!</strong></a></p>
+=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09<!-- Button : END -->
+
+=09=09=09=09=09=09=09=09=09<p><strong>Speaking of &ldquo;bee&rdquo;ing a go=
+od neighbor, did you know that there are approximately 3,600 native bee spe=
+cies in North America and over 20,000 bee species worldwide?</strong> Wild =
+bees live on every continent except Antarctica, so it&rsquo;s safe to say t=
+hat you&rsquo;re likely to have bees as your neighbors no matter where you =
+live.</p>
+
+=09=09=09=09=09=09=09=09=09<p>At least 75% of the flowering plant species o=
+n earth depend on insects and animals to pollinate them, providing food, sh=
+elter, supplying oxygen, and so much more for both people and wildlife.</p>
+
+=09=09=09=09=09=09=09=09=09<p><a data-custom-urls=3D"[]" data-custom-urls-e=
+nabled=3D"false" href=3D"https://support.nwf.org/page/email/click/10033/264=
+0980?email=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi=
+0x0ZUqJI2ZMf1z3w=3D=3D" style=3D"color: #4A8D65; text-decoration: underline=
+;" target=3D"_blank"><strong>We all depend on pollinators, and pollinators =
+are counting on us to pledge our support. Can we count on you?</strong></a>=
+</p>
+
+=09=09=09=09=09=09=09=09=09<p>Our work to address the decline of our native=
+ bees includes advocating for policies that reduce the effects of habitat d=
+estruction, disease, harmful agricultural and lawn practices, invasive spec=
+ies, and climate change. And efforts like our Certified Wildlife Habitat&re=
+g;, Garden for Wildlife&trade;, Community Wildlife Habitat&trade;, Mayors M=
+onarch Pledge, and Trees for Wildlife&trade; programs are directly increasi=
+ng pollinator habitat on a community and grassroots level.</p>
+
+=09=09=09=09=09=09=09=09=09<p><a data-custom-urls=3D"[]" data-custom-urls-e=
+nabled=3D"false" href=3D"https://support.nwf.org/page/email/click/10033/264=
+0980?email=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi=
+0x0ZUqJI2ZMf1z3w=3D=3D" style=3D"color: #4A8D65; text-decoration: underline=
+;" target=3D"_blank"><strong>Please, will you take a moment and pledge to &=
+ldquo;bee&rdquo; a good neighbor to all the bees and other native wildlife =
+in your local community?</strong></a></p>
+
+=09=09=09=09=09=09=09=09=09<p>Thank you for being part of our wildlife comm=
+unity.</p>
+
+=09=09=09=09=09=09=09=09=09<p>With Gratitude,<br />
+=09=09=09=09=09=09=09=09=09National Wildlife Federation Membership Team</p>
+=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+=09=09=09=09</tbody>
+=09=09=09</table>
+=09=09=09</td>
+=09=09</tr>
+=09=09<!-- 1 Column Text + Button : END --><!-- Email Footer : BEGIN -->
+=09=09<tr>
+=09=09=09<td style=3D"background-color: #4A8D65; padding: 30px 0 0;" width=
+=3D"100%">
+=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"margin: auto;" width=3D"100%">
+=09=09=09=09<tbody>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td><!-- Button : BEGIN -->
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" role=3D"presentation" style=3D"margin: auto;">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td class=3D"button-td button-td-secondary" styl=
+e=3D"border-radius: 6px; background: #d8eff6;">
+=09=09=09=09=09=09=09=09=09<p style=3D"margin:0;"><a class=3D"button-a butt=
+on-a-secondary" data-custom-urls=3D"[]" data-custom-urls-enabled=3D"false" =
+href=3D"https://support.nwf.org/page/email/click/10033/2640981?email=3DGhil=
+iUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z3w=
+=3D=3D" style=3D"background: #d8eff6; border: 1px solid #d8eff6; font-famil=
+y: 'Fira Sans', sans-serif; font-size: 14px; line-height: 14px; text-decora=
+tion: none; padding: 14px 20px 13px; color: #252525; display: block; border=
+-radius: 6px; font-weight: bold;" target=3D"_blank"><strong style=3D"color:=
+#252525;">DONATE</strong></a></p>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09<!-- Button : END --></td>
+=09=09=09=09=09</tr>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td class=3D"mso_sans" style=3D"font-family: 'Patua One',=
+ Arial, Helvetica, sans-serif; color: #ffffff; font-size: 18px; line-height=
+: 22px; padding: 20px; text-align: center;">Join the Conversation</td>
+=09=09=09=09=09</tr>
+=09=09=09=09=09<!-- Social Media : BEGIN -->
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td style=3D"text-align: center; padding: 0 0 20px;" widt=
+h=3D"100%"><a data-id=3D"9725" href=3D"https://support.nwf.org/page/email/c=
+lick/10033/2640982?email=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&c=
+ampid=3D3Nukhi0x0ZUqJI2ZMf1z3w=3D=3D" style=3D"text-decoration: none;" targ=
+et=3D"_blank"><img alt=3D"Facebook" border=3D"0" height=3D"38" src=3D"https=
+://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.co=
+m/10033/Facebook_Icon_40x40_white.png" width=3D"38" /> </a> &nbsp; &nbsp; <=
+a data-id=3D"9725" href=3D"https://support.nwf.org/page/email/click/10033/2=
+640983?email=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nuk=
+hi0x0ZUqJI2ZMf1z3w=3D=3D" style=3D"text-decoration: none;" target=3D"_blank=
+"> <img alt=3D"Twitter" border=3D"0" height=3D"38" src=3D"https://acb0a5d73=
+b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10033/Twit=
+ter_Icon_40x40_white.png" width=3D"38" /> </a> &nbsp; &nbsp; <a data-id=3D"=
+9725" href=3D"https://support.nwf.org/page/email/click/10033/2640984?email=
+=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2Z=
+Mf1z3w=3D=3D" style=3D"text-decoration: none;" target=3D"_blank"> <img alt=
+=3D"Instagram" border=3D"0" height=3D"38" src=3D"https://acb0a5d73b67fccd4b=
+be-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10033/Instagram_Ico=
+n_40x40_white.png" width=3D"38" /> </a></td>
+=09=09=09=09=09</tr>
+=09=09=09=09=09<!-- Social Media : END --><!-- Footer Links : BEGIN -->
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td style=3D"text-align: center; background-color: #25252=
+5; padding: 5px;" width=3D"100%"><a data-custom-urls=3D"[]" data-custom-url=
+s-enabled=3D"false" href=3D"https://support.nwf.org/page/email/click/10033/=
+2640985?email=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nu=
+khi0x0ZUqJI2ZMf1z3w=3D=3D" style=3D"text-decoration: none; color: #fff; fon=
+t-family: 'Fira Sans', sans-serif; font-size: 13px; line-height: 30px; padd=
+ing: 10px 8px;" target=3D"_blank">Sign&nbsp;Up</a> &nbsp; <a data-id=3D"972=
+5" href=3D"https://support.nwf.org/page/email/click/10033/2640986?email=3DG=
+hiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z=
+3w=3D=3D" style=3D"text-decoration: none; color: #fff; font-family: 'Fira S=
+ans', Arial, Helvetica sans-serif; font-size: 13px; line-height: 30px; padd=
+ing: 10px 8px;" target=3D"_blank">Contact&nbsp;Us</a> &nbsp; <a data-id=3D"=
+9725" href=3D"https://support.nwf.org/page/email/click/10033/2640987?email=
+=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2Z=
+Mf1z3w=3D=3D" style=3D"text-decoration: none; color: #fff; font-family: 'Fi=
+ra Sans', sans-serif; font-size: 13px; line-height: 30px; padding: 10px  8p=
+x;" target=3D"_blank">Privacy&nbsp;Policy</a> &nbsp; <a data-id=3D"9725" hr=
+ef=3D"https://support.nwf.org/page/email/click/10033/2640988?email=3DGhiliU=
+cwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z3w=3D=
+=3D" style=3D"text-decoration: none; color: #fff; font-family: 'Fira Sans',=
+ sans-serif; font-size: 13px; line-height: 30px; padding: 10px  8px;" targe=
+t=3D"_blank">NWF.org</a></td>
+=09=09=09=09=09</tr>
+=09=09=09=09=09<!-- Footer Links : END -->
+=09=09=09=09=09<tr cellspacing=3D"0">
+=09=09=09=09=09=09<td style=3D"text-align: center; padding: 0px 0 0px; back=
+ground-color: #ffffff;" width=3D"100%"><a href=3D"https://support.nwf.org/p=
+age/email/click/10033/2640989?email=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK8=
+1VjEpg=3D&campid=3D3Nukhi0x0ZUqJI2ZMf1z3w=3D=3D" style=3D"padding:0!importa=
+nt;margin-bottom:0px!important;" target=3D"_blank"><img alt=3D"The National=
+ Wildlife Federation" border=3D"0" class=3D"responsive" height=3D"130" src=
+=3D"https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.r=
+ackcdn.com/10033/2023NWF_email_footer_logo_whitebg.jpg?v=3D1704388347000" s=
+tyle=3D"border: 0;" width=3D"600" /></a></td>
+=09=09=09=09=09</tr>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td align=3D"center" class=3D"mso_sans" style=3D"font-fam=
+ily: 'Fira Sans', sans-serif; font-size: 11px; color: #252525; line-height:=
+ 18px; background-color: #ffffff;" width=3D"100%">&copy; 2024 The National =
+Wildlife Federation, all rights reserved<br />
+=09=09=09=09=09=09The National Wildlife Federation is a 501(c)(3) non-profi=
+t organization<br />
+=09=09=09=09=09=09PO Box 1583, Merrifield, VA 22116-1583</td>
+=09=09=09=09=09</tr>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td align=3D"center" style=3D"font-family: 'Fira Sans', s=
+ans-serif; font-size: 13px; line-height: 18px; padding: 10px 0 30px; backgr=
+ound-color: #ffffff;" width=3D"100%"><a href=3D"https://support.nwf.org/pag=
+e/email/message/view?ea.campaigner.email=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0Lii=
+mZAK81VjEpg=3D&broadcastId=3D315842&templateId=3D317298" style=3D"color: #4=
+A8D65; text-decoration: underline;" target=3D"_blank"><strong style=3D"colo=
+r:#4A8D65; font-weight:normal;">View in Browser</strong></a> | <a href=3D"h=
+ttps://support.nwf.org/page/email/subscribe?campaignpageurl=3Dhttps%3A%2F%2=
+Fsupport.nwf.org%2Fpage%2F9111%2Fsubscriptions%2F1%3Fea.broadcast.id%3D3158=
+42&ea.campaigner.email=3DGhiliUcwi5wQQhUm7v5Oss4DZ6Nu0LiimZAK81VjEpg=3D" st=
+yle=3D"color: #4A8D65; text-decoration: underline;" target=3D"_blank"><stro=
+ng style=3D"color:#4A8D65; font-weight:normal;">Unsubscribe</strong></a></t=
+d>
+=09=09=09=09=09</tr>
+=09=09=09=09</tbody>
+=09=09=09</table>
+=09=09=09</td>
+=09=09</tr>
+=09=09<!-- Footer : END -->
+=09</tbody>
+</table>
+<!-- Email Body : END --><!--[if mso]>
+            </td>
+            </tr>
+            </table>
+            <![endif]--></div>
+<!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+    <![endif]--></center>
+</body>
+</html>
+<img alt=3D"supporter" src=3D"https://support.nwf.org/page/email/open/3Nukh=
+i0x0ZUqJI2ZMf1z3w=3D=3D_b315842_tr0_t0.png"/>
+------=_Part_13264878_1032014575.1719074845833--
+
+------=_Part_13264879_59290306.1719074845833--

@@ -1,0 +1,787 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:708b:b0:1a4:ef03:4af8 with SMTP id ub11csp529074rwb;
+        Wed, 26 Jun 2024 02:50:01 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCWBJQp/aFZSG4Zu84lQ6YuVsCOJIyHyhUc2A8TJMrxZDgZdLtMwbWuoEwCvT0BGN7d4BYZE95PdUQ5g6JuKGC25YyVebcUIkIltVw==
+X-Google-Smtp-Source: AGHT+IGR0fhqwAKWJwi3BuCUjB66cF3o4C/NmmvKmALAUKhUFO7tfSpz4GsXYc5N0/psV/9/wZAl
+X-Received: by 2002:a05:6358:6f82:b0:1a6:4ef2:86b5 with SMTP id e5c5f4694b2df-1a64ef28b05mr33796855d.4.1719395401215;
+        Wed, 26 Jun 2024 02:50:01 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719395401; cv=none;
+        d=google.com; s=arc-20160816;
+        b=JlGwEgaBlkYX3SGZeReVZJ7FLjK0yeHUOKh5zEcif/rKDbQQMi8lUZeHv3Bip1rR5N
+         IKlyxu9JzzM6WlWE9b5xE1w5S6UY4K5WATNqy/mOFU7PG9ne9t6XbByFu5er21XSYUIl
+         4NRZq6F8fm3HaX5ltfHV5kr4VkjD/xYhsnfmXIly4RglzEVuzPWAEvPUeAs8ALcW9M0J
+         +yePBAz8sedbiWo5IPFKwv7QgMhS0A1MGA2OdC5t7NICML9jisJxAlLGG/yzpAno+VzN
+         G3FumSEbNcvcU2sT7b+9DS07q5p1nbGmxLwb9iZvmd0Vbxa7gRK9g2iTf8eLA1FGPiTj
+         1vkA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=sender:date:list-unsubscribe:list-unsubscribe-post:message-id
+         :envelope-to:precedence:mime-version:to:from:subject:delivered-to;
+        bh=JfIaBkLwguUAlZJ/WrcaYrGAMdWCWWo/r9rKmQmx2Jw=;
+        fh=WgkvRxbprbRHUhB9IsiW8FcsVvMRbRULUNnxGmh5/rk=;
+        b=LYkI4XUIUAeJ06EhfY2E5alKHL4Vr2zNLVGXeJ1j6tmUFvBx9v/TYnP9jV6QmAkXvd
+         yOssxMZlXDFADiAQMAS58T2bFRalUzv8mEsYOh0xc1GsBeH7+iwvYgKJ/OITzLwPJCzE
+         v6G8nCEGLxoRLzwfi1MOs7yNxhgEkEGh2JEVym36t8Jepv/YsxRCH/i3c49Nb7njfQ+x
+         9sgGtTqT08vIkIeqLFRXEMTiTfFTpvO9URBupX0xwVFJFzQ2nOAQd8xhVlYHA4YAAiGB
+         rJODAbN4x7A7t1ZaWI1l5SCib/LSGZJd8RxLahjPZGl8IPOXYaDwanOZe7Jnk6AphVpY
+         sOUw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of return@tyqzgujw.hispanies.nl designates 69.12.67.234 as permitted sender) smtp.mailfrom=Return@tyqzgujw.hispanies.nl
+Return-Path: <Return@tyqzgujw.hispanies.nl>
+Received: from pentialcom.de (pentialcom.de. [69.12.67.234])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-71977ddacb9si8328088a12.304.2024.06.26.02.50.00
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 26 Jun 2024 02:50:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of return@tyqzgujw.hispanies.nl designates 69.12.67.234 as permitted sender) client-ip=69.12.67.234;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of return@tyqzgujw.hispanies.nl designates 69.12.67.234 as permitted sender) smtp.mailfrom=Return@tyqzgujw.hispanies.nl
+Delivered-To: mailto:me@gmail.com
+Subject: 𝗬𝗼𝘂 𝗿𝗲𝗰𝗲𝗶𝘃𝗲𝗱 𝗮 𝗱𝗶𝗿𝗲𝗰𝘁 𝗱𝗲𝗽𝗼𝘀𝗶𝘁𝗲𝗱 💲25.53 ((No_deposit_required))𝐈𝐃#84203
+From: "'💲CashApp💲'" <tofita.pBZD0kMB2b.EJ0DZdbN8R@nkicj.lmxgfsdytcbygl.us>
+To: mailto:me@aol.com
+MIME-Version: 1.0
+Precedence: bulk
+Envelope-To: <blackpapermoon42@gmail.com>
+X-Originating-IP: 69.12.67.234
+X-Original-Sender: <blackpapermoon42@gmail.com>
+X-Google-Sender-Delegation: blackpapermoon42@gmail.com Trusted Sender
+Message-ID: <65df7a8d.050a0220.6dfba.bad1SMTPIN_ADDED_BROKEN@mx.google.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <mailto:unsubscribe-t@oivhyhxpqamjin.edu?subject=unsub-eT8fSzLzxDu5LscNP04nwheTeP0lFHYTmcg1RxhVRY5BXvwd7VLE3lwS82hk-ZrCDr6W8cMYujIvn0Kd1KLFCJdA7NGMqjQn9v7Jwv0MBHVOm1M3NjgNa3rkOriKbE7-4Deu1RG8ysriof7avJCWzvbnWBICPzCY27AtU3QCj2Qyqz7qhYfDbiic5gJvvx2GId67xxbWSzra0%3D%3D&body=t0xr8gcwZL30rmtNAKfoGzvox0uoVKltzTfz04Y0Lr6K70AFcag4iVdxSdynjNV5401S-36CQAQWBvfpBcsLRyOpJtKICIVheHs8q0UQkihmksagLBxfGfLJQbEOO2w3qOAfVBx5E18-cgimZKSkBJXA7ZCG7tjqpGyee2oKoKrVW80uFQ5fp1j1y7WYTkOcwyOueDQFc3lRUw6ZcOCMakAAlFDb6LQa%3D%3D>, <https://eovsjkv.__Redirect.edu/tr/un/li/Ma4A0jR4G1kpa6CeAUhLEWRyds3hcn5vVBZLipyYuxxb3UyosMhmqYMzCekI3azMj04oq5lPR1ALlUvFPDwuK1XvGexVEiyvm33iD6oNQh7DrDnfW0gcuQi7xJATe1W7vCb3Os-J4sPq2ngEZcgCMZIcPbJ626xSua852zLkS4jL6bTdlHyBP0rHP42VcL4HCzN4bkrdb>
+Content-Type: text/html; charset="UTF-8"
+Date: Wed, 26 Jun 2024 06:09:40 -0400(EST)
+Sender: risrisqeqctxvon
+
+<!------------ START SOCIAL MEDIA ------------>
+<!------------ END SOCIAL MEDIA ------------>
+
+
+<!------------ START SOCIAL MEDIA ------------>
+
+
+<!------------ START SOCIAL MEDIA ------------>
+<title>tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw</title>
+    
+    <!------------ START SOCIAL MEDIA ------------>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+    <title>789
+    </title>
+    
+    <style>
+    
+        .section {
+            box-shadow: 0 3px 8px rgba(0, 0, 0, .05);
+            border-radius: 10px;
+        }
+    
+        .section--middle {
+            border-radius: 0;
+        }
+    
+    </style>
+    
+    
+    </head>
+    <body lang="en" dir="ltr" bgcolor="#f2f2f2">
+        <table class="page" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#f2f2f2" style="direction: ltr; min-width: 320px; text-align: center; color: #292c2e; font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;">
+            <tr>
+                <td bgcolor="#339933" style="padding: 0; height: 0;" height="0">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="page__head page_head" bgcolor="#339933" style="padding: 20px 0; color: #fff;">
+                    
+    
+                    
+                    <div style="display:none; font-size:0; line-height: 0; mso-hide: all; max-height: 0; max-width: 0; width: 0; overflow: hidden; vertical-align: top;" class="logo-mobile">
+                    
+                    </div>
+    </td>
+            </tr>
+            <tr>
+                <td class="wraper" style="padding: 0 20px; text-align: center;">
+                    <span style="display: inline-block; vertical-align: top; width: 100%; max-width: 640px; text-align: left;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 640px; min-width: 280px; margin: 0 auto;">
+                            <tr>
+                                <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="no-tips">
+                                        <tr>
+                                            <td style="text-align: center; color: #333844; font-size: 16px;" class="main">
+    
+                                                
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="color: #fff;">
+                                                    <tr>
+                                                        <td style="padding: 0 10px 3%; font-size: 14px; line-height: 18px; text-align: center;">
+													
+                                                       <a href="https://t.co/dm9pOpZgZv">
+                              <font color="#000000">E-mail 
+                              verification needed in 24 
+                              hours</font></a><font color="#000000">
+                              </font>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+    
+                                                <table class="section" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td class="section__promo" style="padding: 8% 5% 0; text-align: center;">
+                                                            <span style="display: inline-block; vertical-align: top;">
+                                                            <table cellpadding="0" cellspacing="0" border="0">
+                                                                <tr>
+                                                                    <td>
+                                                                        <table cellpadding="0" cellspacing="0" style="border-collapse: separate;">
+                                                                            <tr>
+                                                                                <td class="userpic" width="120" bgcolor="#efefef" style="border-radius: 50%; border-left: 0px solid #fff; border-right: 5px solid #fff; font-size: 0; position: relative;" align="left">
+                                                                                <a href="https://t.co/dm9pOpZgZv" style="width: 0; display: inline-block; vertical-align: top;"><img width="120" src="" style="min-height: 120px; vertical-align: top; border-radius: 50%;" border="0" alt=""></a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="section__title" style="padding: 4% 5% 0; text-align: center;">
+                                                            <span style="display: inline-block; vertical-align: top;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 480px; margin: 0 auto;">
+                                                                <tr>
+                                                                    <td align="center">
+                                                                        <span class="section-title" style="line-height: 26px; color: #000">
+                                      <font size="6">
+                                      Congratulations! blackpapermoon42
+                                     </font></span><font size="6">
+                                      </font>
+                                      <p>&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="section__text" style="padding: 2% 5% 3%; text-align: center;">
+                                                            <span class="section-text" style="font-size: 18px; line-height: 22px; display: inline-block; vertical-align: top; max-width: 470px">
+                              A balance of <span class="section-title" style="font-size: 22px; line-height: 26px;color:#00A83B ">
+                                $25.00</span> is available for your Account<font color="#008000">
+                                </font></span>
+                                                
+                                                            
+                                                            <span class="section-text" style="font-size: 16px; line-height: 22px; display: inline-block; vertical-align: top; max-width: 470px">
+                                This transaction may only appear on your account after validate your info.</span>
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                    
+                                                        <td class="section__footer" style="padding: 0 0 8%; text-align: center;">
+                                                        <p><br>
+    &nbsp;</p>
+    
+     <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse; background-color:#eaf4fa; border:1px solid #001F57; margin-top:0; margin-bottom:0px; -webkit-text-size-adjust:none">
+     <tbody style="-webkit-text-size-adjust: none">
+     <tr style="-webkit-text-size-adjust: none">
+     <td align="left" class="left-section" width="60%">
+     <h1 class="primary-headline" style="font-size:22px; line-height:28px; font-family:sans-serif; color:#000; margin-top:25px; margin-right:25px; margin-left:25px; margin-bottom:10px;">
+      Wed, 26 Jun 2024 06:09:40 -0400 (EDT)
+    
+    </h1>
+     <p class="subheadline" style="font-family:arial, sans-serif; color:#444; text-decoration:none; font-size:14px; font-weight:400; line-height:20px; display:inline-block; margin-top:0; margin-bottom:10px; margin-left:25px;">
+      Funding For: 
+      <span style="font-weight:400; border-bottom:1px solid grey; -webkit-text-size-adjust:none">
+      blackpapermoon42</span>
+    </p>
+     
+    
+     <p class="subheadline" style="font-family:arial, sans-serif; color:#444; text-decoration:none; font-size:14px; font-weight:400; line-height:20px; display:inline-block; margin-top:0; margin-bottom:10px; margin-left:25px;">
+      Email: 
+      <span style="font-weight:400; border-bottom:1px solid grey; -webkit-text-size-adjust:none">
+      blackpapermoon42@gmail.com</span>
+    </p>
+    <p class="subheadline" style="font-family:arial, sans-serif; color:#444; text-decoration:none; font-size:14px; font-weight:bold; line-height:20px; display:inline-block; margin-top:0; margin-bottom:10px; margin-left:25px;">
+      <a href="https://t.co/dm9pOpZgZv">
+      <font color="#000000">Balance Amount: 
+      </font> 
+      <span style="color:#00A83B; font-weight:bold; border-bottom:1px solid grey; -webkit-text-size-adjust:none">
+      $25.00</span></a></p>
+     
+    
+     <p class="subheadline subhead-end" style="font-family:arial, sans-serif; color:#003543; text-decoration:none; font-size:13px; line-height:18px; display:inline-block; margin-top:5px; margin-bottom:35px; margin-right:35px; margin-left:25px;"> </p>
+     </td>
+     <td align="center" class="right-section" width="40%">
+     <h3 class="box-text" style="font-family:arial, sans-serif; font-weight:lighter; font-size:16px; line-height:22px; color:#000; margin-top:0px; margin-bottom:0px; margin-right:0;">
+      Payout:</h3>
+     <h3 class="headline" style="font-family:arial, sans-serif; font-weight:lighter; margin-top:0px; margin-bottom:5px;">
+     <span class="chosen-amount" style="display:block; font-size:45px; line-height:45px; font-weight:bold; padding:0; margin:0; margin-bottom:10px; margin-right:0;">
+      $25.00</span>
+     <a target="_blank" class="main-button" href="https://t.co/dm9pOpZgZv" style="font-family:arial, sans-serif; font-weight:bold; color:white; background:#00A83B; border:1px solid #00a8cf; font-size:20px; text-decoration:none; width:180px; height:50px; line-height:50px; margin-top:0px; margin-right:0; margin-bottom:20px; display:block;">
+      Confirm Here</a>
+     </h3>
+     </td>
+     </tr>
+     </tbody>
+     </table>
+    
+                                                        <font size="5">
+                                                        <br><br>
+                                                        </font>
+                                                        <a href="https://t.co/dm9pOpZgZv" class="btn" style="display: inline-block; background: #0097FF; text-decoration: none; border-radius: 8px; color: #000; font-weight: 600; font-family: Times New Roman; text-align: center; padding-left:30px; padding-right:30px; padding-top:13px; padding-bottom:13px">
+                              <font size="6">Confirm 
+                              Payment</font></a><font size="6">
+                              </font>
+                                                        <div class="hint" style="padding: 20px 5% 0; color: #373737; font-size: 13px; line-height: 18px;"><span style="font-weight: bold; color: #FF0000; font-size: 16px;"></span>
+                                                        </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+    <table>
+                                                    <tr>
+                                                        <td height="15" style="height: 15px;"></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td style="padding: 0 0 4%;">
+                                                            <span class="footer">
+                                                            
+                                                                <br><br>
+                                                        
+                              
+        </a>
+                                                                     <br><br>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </body>
+ 	<br />
+		<br />
+		Click here to <a href="https://t.co/0KqTeApqwp" >unsubscribe </a>or write to: 233 W 38th St Unit 68 New York,
+<br />NY 10018-9998
+		<br />
+				To be removed from our list simply <a href="https://t.co/xQJWbO7iKh" >click here</a> or write to us at :<br />
+		535 College,,Street Titusville,FL,32780<br />
+		
+	
+      <br><br>
+     </td>
+     </tr>
+     </tbody>
+     </table>
+    </body>
+    </html>
+    <object zidsxllckjwmiyhxtfeivtvfrwjxlwbeyxwsldeexqhaqoijdmzezqmvwcyq>
+Dear ycpmyxxfnrgdgabmcfxpx TKHDFGAFDPNHWNCUGEREDU,
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is XXRGFLHPSZROYRKDYSDCVYXHMZQG.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+
+</title>
+<!--
+                 _                                 _     
+                /                                /     
+   _    __         __    _  ___     _   _    
+ /'__`/'  `  /'_`   / _`/`'__/',__  /'__` /'_`   
+/  _// / / L / L   /_, `/  __// L  
+ ___   __, ___/ /____/ ___ __,
+ /____//_//_//__, //___/  /_//___/  /____//__, /
+                                                           
+                                                           
+
+-->
+<emd 
+added
+to
+newsletterGet
+and
+ask
+childrenShare
+this
+ExperimentSegregation
+Americaxs
+report
+United
+May
+ETPerhaps
+going
+wants
+In
+federal
+that
+says
+plan
+boasted
+unemployment
+lowest
+everSo
+rightWhile
+down
+remained
+last
+this
+does
+communities
+to
+land
+opportunityOne
+Americans
+suffer
+opposed
+white
+inequality
+in
+while
+step
+inequality
+will
+that
+looks
+housing
+disparities
+on
+For
+more
+of
+on
+resources
+their
+childrens
+care
+going
+on
+cities
+on
+nation
+Shortly
+still
+have
+evidence
+doesnt
+decades
+expanding
+emerged
+of
+failed
+laws
+about
+and
+people
+housewives
+at
+Franz
+in
+New
+Orleans
+poverty
+public
+which
+to
+of
+we
+has
+failed
+chronicled
+deregulation
+Who
+children
+has
+work
+direct
+former
+have
+has
+of
+And
+as
+Professor
+documented
+more
+than
+problem
+Commission
+commission
+there
+with
+this
+was
+urban
+ideology
+without
+policy
+resulted
+be
+has
+hard
+students
+provides
+model
+graders
+salute
+flag
+of
+school
+atrisk
+will
+to
+of
+creates
+race
+to
+Brookings
+or
+integrate
+government
+to
+for
+potential
+enforcement
+The
+privatesector
+effect
+intentional
+with
+racial
+and
+make
+housing
+will
+access
+housing
+access
+Act
+making
+and
+integration
+poor
+developers
+lowincome
+lower
+half
+and
+by
+University
+college
+than
+children
+had
+and
+We
+need
+that
+but
+living
+Robert
+observed
+Bernard
+Why
+never
+ask
+and
+America
+Eisenhower
+Foundation
+Kerner
+Commission
+Violence
+senator
+at
+Healing
+America
+Years
+After
+newsletterSUBSCRIBEMORE>
+<html>
+<body>
+<center>
+
+
+
+
+<table style="display:none;"><HEaD >
+
+ Hi XLTXZFQOVPLPDRIIMK,
+
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+
+If not, just let me know and we'll find something else.
+
+
+--
+Dylan Basile
+
+
+
+*Book a demo with me here:*
+
+Hi IGYQSJABTHPXGCUJBQULMUTH,
+
+Thanks for signing up, and congratulations
+on your new mis fgybgmsiqvuqdhrcid account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+
+=== Account Information ===
+ Username: JMKFMCBHYMZHKKXLJNMZSBNFJV
+ Site ID: HBJFYOFMLXTGQDHWOJUCRWLHI
+
+=== Your Account Console ===
+
+
+Thanks again!
+Team ckveqnwsrxarlyglrpzohs
+
+Powered by ycpmyxxfnrgdgabmcfxpx 
+
+</title>
+
+ Dear JMKFMCBHYMZHKKXLJNMZSBNFJV HBJFYOFMLXTGQDHWOJUCRWLHI,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is BJUUAPXQIJRMXSEUKGTBSLYKR.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+== You need a budget, and your email needs confirmation. ==
+
+ Hello! Quick note to let you know that your email needs to be confirmed
+before all sorts of great things happen. Like your being able to use YNAB
+all along your road to budgeting glory. Please confirm by clicking the link
+below:
+
+ Confirm your email
+
+
+ Thank you!
+
+ And we're serious about budgeting glory. It's a real thing, and you will
+bask in it.
+
+ Regards,
+
+ The YNAB Team
+
+
+<
+
+ Dear Dalewoowood miswzpsbbtlvolllbuuth,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is RMLMWSFYLQWWITWXL.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+
+>
+
+
+SFYHOYENDCWDOBHFOOGSANIPZTRONWFIORNGJVLQALRUMZZXGCKCXVKRPSTESPNWCROWPLQQKAGOZULZCDYDXUROMTJFAKSKOCAQCVPCLGSVWGREBMYVHELBAOTHUFTUEPEAGLEASXOIXNQFPKHJGKZTDAHDPWESAHKRQTUPCLLTDSKEDDNCWABNASLYTSSXGWGNQSYK
+
+
+ Hi misxzfjvtvhexczqjrdvd,
+
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+
+If not, just let me know and we'll find something else.
+
+RIOCORSEIWKNSBVYQCWLVFPFVJTXSCXEGAZMWSTVKENDWIJLRKSXQOLIZBHDWNRHFUUIOOJVKMEZVSCYIZGBGXYFHPHQMWJKGXJXDQPEBQFECGKIGDBJADWFVWCMMNHEPJVRWNPMUQNMDQXAEDLRKDZQAFQKUALTHARYNMCVSKCJUWLBZRXGXXNUWYVIDQCGQEXNPLVJ
+--
+Dylan Basile
+
+
+
+*Book a demo with me here:*
+
+Hi AOJYZZUWIOSFZQFFZAYUIDRKD,
+
+Thanks for signing up, and congratulations
+on your new misiuumqymehkehfaptsv account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+
+=== Account Information ===
+ Username: ktrt
+ Site ID: bmfn
+
+=== Your Account Console ===
+
+
+Thanks again!
+Team missiayibxdkbvuedpyqf
+
+Powered by misxcjemnlroakgwdpxby
+<table height=4125>
+<table height=4125>
+<table height=4125>
+
+Login Name: miszybjzwedatcqyzshef
+Password: misvpwkqgqnkgklejkftj
+
+How do I become a tester for the XT 808 flashlight?
+
+
+
+Login Name: vrvv
+Password: miscxndqquoqmwusskoca
+
+More than a quarter of Europeans surveyed believe Jews have too much influence in business and finance. One in five say they have too much influence in media and politics. In individual
+1. Download Parsec for your device
+
+2. Set up Parsec on your PC to invite friends to game with you or to play from anywhere
+
+3. Connect with your friends on Parsec
+
+4. If you don't have a gaming PC to co-op with friends, build one on Parsec
+
+5. Join our Discord for support, updates, and finding friends to game with
+
+       Less than 10% of EU aid money reaches the countries where it is most needed, according to a study that found levels of assistance had dropped for the second year running.
+
+The EU and its member states remain the biggest development donor group in the world ? investing ?71.9bn ($61bn) in 2018, more than half of global aid ? but its contribution was 5.8% lower than in 2017, the European NGO network, Concord, found in its AidWatch report.
+
+Progress on meeting the UN target of spending 0.7% of gross national income on aid, laid down in 1970, has gone into reverse, said the group. Their research showed that aid decreased to 0.47% of the EU?s combined GNI last year, compared with 0.49% in 2017 and 0.51% in 2016.
+
+Advertisement
+
+Only Sweden, Luxembourg, Denmark and the UK met the 0.7% commitment.
+
+The UK?s three main political parties have committed to retaining the aid target.
+
+Aid from five countries ? Italy, Greece, Finland, Austria and Lithuania ? decreased by 10%.
+
+?We are moving further away from the 2030 Agenda [for sustainable development],? said Luca De Fraia of ActionAid Italy. ?Not only are we missing the target in terms of quantity, but also the quality of aid is lagging behind.?
+
+Despite a marginal rise in aid going to the least developed countries (from 0.11% in 2017 to 0.12% in 2018), 16 countries, among the poorest in the world, currently receive only 8% of EU funding, AidWatch found.
+
+
+Guardian Today: the headlines, the analysis, the debate - sent direct to you
+ Read more
+?sa Thomasson, from Concord Sweden, called on EU leaders to provide more aid and ensure it is used effectively to ?make the biggest difference to people who are most marginalised, excluded or discriminated against and the poorest and most financially challenged countries?.
+
+The report noted progress on what can legitimately be recorded as aid. Some countries had included domestic spending on students, refugees or security in official figures. But such costs ? like debt relief, interest repayments on loans, or assistance ?tied? to the donor country ? are categorised as ?inflated aid?, since they do not necessarily contribute to development and are often funds that never leave the EU.
+
+This year?s report shows a 25% reduction in inflated aid, while refugee costs decreased by approximately 35% and the use of aid for debt relief dropped by 66%.
+
+Jan van de Poel, policy and advocacy manager at the European Network on Debt and Development, said he was concerned that the commission is overestimating the potential for ?blended finance? (linking aid with loans from publicly-owned institutions or commercial lenders) to help achieve the sustainable development goals.
+
+He pointed out that, as recently as 2016, more than half of all reported contracts were still awarded to firms in the donor country. ?Donors not only need to untie all aid, but also make sure that their procurement practices are tailored towards the private sector in developing countries,? he said.
+
+Claire Godfrey, interim director of policy, advocacy and research at Bond, the UK development network, praised the Department for International Development (DfID) for maintaining the 0.7% pledge and ensuring that the majority of its aid reached the people who need it the most. She added that other EU countries needed to ?step up to the plate?.
+YEXZAWJAFVDGQIQXOJJNXRPFNLUTZSDKIZUYTACDCBPCUAOOLDGCCVYXAHCXWPQBPHVTCNBREVDQPELBKWDRGIAIHVBDENCLWZGVQJJJONIUHPIHNHUXGSVDLJHEUVQEKXIWXARLARTQMEYIXKMZVOYWEMWOQNXNXBUZTNQMTKTOXOIQDMKPKXPUTDFTKCNCNLDTKMJHK
+Godfrey said DfID would ideally have oversight of all UK aid, rather than multiple departments, since this would ?ensure not a single penny is diverted away from the poorest, most vulnerable and most marginalised?.
+
+With a general election looming, Labour, the Conservatives and the Liberal Democrats have all stated their commitment to retaining the 0.7% aid target, equating to roughly ?14bn, while the Green party said they would raise it to 1% ? in line with Sweden.
+
+
+Two-thirds of British people see overseas aid as 'a major priority'
+ Read more
+At a joint hustings event on women?s rights and sustainable development held by ActionAid UK and the Overseas Development Institute on Monday, Lord Ray Collins pledged that Labour would triple funding to TUHBXKZSDLYIDGZPIIKIXHTWYYSXGKJIENKFTOVRSWTRRORLYKOWSTIUZQEHDULFLEXNWWFQEXJGLCFCKMZCZQPLJJMYFUSDMNPGOXDOIDZFLIWDJSICCWWLPGEOYLMNROMNFNACETEIYSSCZQULKZAXNRQDEWBADPJXDBMXEQVTYLUXSXKPNWVPRDCWYQHJHRSMHOYL roots women?s groups in the global south.
+
+Elizabeth Babade, candidate for the Brexit party in Warrington North, said her party would cut the foreign aid budget but declined to say by how much.
+
+The Conservative party did not put forward a candidate for the event, but restated its commitment to the 0.7% target in the House of Commons earlier this month. It stopped short, however, of committing to the retention of DfID as a separate department VWMROFWFEYXZXMSYRJSXCNUJPYZAYALDXZSLNMRZSQKAULVGBXDJVJGNFYZHETSECOGFITOPUBUXZHXEIROWYYNSITPPOKOKNSYJDKDJZZTJCLRSSVPRLOZRNBXHVGRISYMNFYZTGYZXPGSHQIODVPZRDLRWEBBYIEMMBZFGCULTTUUQROKJUVIYKHKEQCTQHTLMCVHM to the Foreign and Commonwealth Office.
+
+The UN Conference on Trade and Development?s Least developed countries report, also published this week, called on the world?s poorest nations to ensure external finance from all sources is ?directed to nation BRNXUMRZRKASARSAYRHCMNMLGGRLZVDWZTRCOELTFJWEZRMPVRFDLTAPCTYGWNAHGEWGAAGDCKBQKRIDMWSGUGIFDCSZHOBQFMZPLKCHWPMNALQMVLOEAVUAVFDVYABDHJYAGEZQMRJVMPRHEWZKNCFDDLJOHJBLWRJXJSIMDPOMZFHGPMNNELZVETNWJBYPWOPODWCY development priorities? as the best way to ?manage their aid dependency and eventually escape it?.
+
+Since you?re here?
+? we have a small favour to ask. More people, like you, are reading and supporting the Guardian?s independent, investigative journalism than ever before. And unlike many news organisations, we made the choice to keep our reporting open for all, regardless of where they live or what they can afford to pay.
+
+The Guardian will ADTJTUMRTXVYTSJJTLYOWGNMAPISZOTJFQCHILUYLDYRHENVNWSTSKZGCKMENASKJAPOXQATWOYEPCEUBLKCFXURNNIUDWXUPZHXNGDBLSEKRAGEXEHQUCGPPJXYCSAEXFHIGUGGBKNDUNUFKBIFGLYZBVIUQWGUKYRNKLSRZBAKHIYTANZDMJRYYDZGCMEQDNDVHQGQTHWWIARSBLSTEIXJVEQSYWOTHMBSFEDWRIRKXRDAQGMCOAOSGCNKLKCCQRAVYGJLBELBPFKFHZPAIBMZOHBSNSWWPXBWHOUPSKNKXOXTEMCJWMWVCPRNZKKEKAQXIVBJXMPOFXRHHXKYPDPUBLSDYRENNFSPCMCKLUPSPWCJAJTYCYRAWSZTTBEEYPJPVFNAZHUJXZAI  ? 
+from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.
+
+Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.
+
+We hope you will consider supporting us today. We need your support ZCLLWWCSUCQFDXVQSXQQKDGFRGREXSSROGSHRUGGCRSGKTMRRRXGRHMTLUSYJWTJLGYQRGXGJSTXZHTHXWTZUBWSBGRJZCTUTZZWYIVYRFTGNQUCYGSWTWOFRSTFISSZOQMRZBPPFNMLEZTZYFPENQRTBDKEMQLANXCFWDZPCFHPUCJTHQGDAPKDJVILQLJVVRVYIZVU  to keep delivering quality journalism that?s open and independent. Every reader contribution, however big or small, is so valuable. Support The Guardian from as little as $1 ? and it only takes a minute. Thank you.       
+
+Parsec Cloud, Inc. 
+115 Broadway, Fifth Floor, New York, NY 10006, USA
+
+</object>
+    </html>

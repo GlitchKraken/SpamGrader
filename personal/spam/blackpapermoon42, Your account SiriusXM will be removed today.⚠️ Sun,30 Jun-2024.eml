@@ -1,0 +1,149 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:6695:b0:1a6:aa79:77cb with SMTP id so21csp737699rwb;
+        Sun, 30 Jun 2024 18:40:01 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHQ0VsNQZHI4VQF5Nl7wqOQN+SB/f9RnUca38hN46xVxk9OEgXZfrb0lZ0pcJGcSxO0Qgj2
+X-Received: by 2002:a5d:4105:0:b0:360:74b3:260f with SMTP id ffacd0b85a97d-367756ade45mr2381598f8f.21.1719798001601;
+        Sun, 30 Jun 2024 18:40:01 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719798001; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ntYlr8ZoBRx/3BQfEM3JGr7vQ7uIN9YIVohXfBD7auQWgma3cKq31AsUk1NbcG6VgC
+         vBEtBjd1rBhT3I6PJopxT5K23EP1VE2OxKIMixIqJWCADc3TdwJ7+QJTQETNA2nmFpLp
+         a0pVisO6mmon09tUDMo5PK/CffhGfO66/pc97aVj94Hj4VEgXC2kUTjKOX9XK+4upQQ5
+         4fnQdVf7tcVqW5UteXne+It1nETQHf3UULqVXPjPTzD8gFc54prk3Bm/YTMtbayNZo3/
+         LXr8KZKv+rUaOk2dx46Aa1hoa4nHom4bwf/oBz2IOxEHKbrSQ/Preuo/Ka55X91DFADj
+         kccQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:message-id:to:from:date:domainkey-signature
+         :dkim-signature;
+        bh=M/3U8fRcy/h7NfEWXoYwda6F9iPFRpgSkKqCLdRgOcg=;
+        fh=BfH3tuO4vWcZZHlWy5SVIaCbaMAJl+146y7dupIPkPQ=;
+        b=Iy0hjEWpwh3pBZzPvbL1edtBbQmEt0eVn2+vf4fvuvWUOuBhlFiS8/Dk33ra72wRY0
+         3Apx9cFwCcFsB685FzP+UIqEAjJZdigzh7808icZzcB7fS/kyHsq1m9eqxpFuUX9G9PG
+         XU/QoBn/W2rPKTIrUQ9wqA13zOJZKSqaLHxlI8YpoEJkvZAm3LlHXhMN0B29nbIhKFlj
+         KfBzqAUNH7ws2c8dWrIVV9lpf4rTpx+Z3HuKrsEdQXQ0oc76l3I1SPfeX/71xmtNt56o
+         CFQ98CoP7CrgewdcvpLqMKu97gbVXJ9HTwRGqkRdE/Z9Sg/ySYqxloHl6rDZcLLX4/VR
+         DgsQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=temperror (no key for signature) header.i=@gtkumwze.us header.s=default header.b=KshA8+j+;
+       spf=pass (google.com: domain of abuse@1mdollar.contrological.com designates 81.7.5.33 as permitted sender) smtp.mailfrom=abuse@1mdollar.contrological.com
+Return-Path: <abuse@1mdollar.contrological.com>
+Received: from cocop.inconside.com (cocop.inconside.com. [81.7.5.33])
+        by mx.google.com with ESMTPS id 5b1f17b1804b1-4256b0eec3dsi38666435e9.184.2024.06.30.18.40.01
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 30 Jun 2024 18:40:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of abuse@1mdollar.contrological.com designates 81.7.5.33 as permitted sender) client-ip=81.7.5.33;
+Authentication-Results: mx.google.com;
+       dkim=temperror (no key for signature) header.i=@gtkumwze.us header.s=default header.b=KshA8+j+;
+       spf=pass (google.com: domain of abuse@1mdollar.contrological.com designates 81.7.5.33 as permitted sender) smtp.mailfrom=abuse@1mdollar.contrological.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=gtkumwze.us;
+ h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+ i=info.gtkumwze.gtkumwze@gtkumwze.us;
+ bh=M/3U8fRcy/h7NfEWXoYwda6F9iPFRpgSkKqCLdRgOcg=;
+ b=KshA8+j+lO0wLoOE3nmQZVogCPRT/bZmc936Fg5wfuieKTN+NooUjFvn1zJlMFS5g38ZrqiRmoWt
+   HITAlFvArXD46OfttbscuTmRLgF3A9gn6SdoGyw+dJ1//XNJnROK68jN9TmrHHfPsROVjDuETCaQ
+   Px9zgAm4eGU2b78erhg=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=default; d=gtkumwze.us;
+ b=VvqV1mSH8RxfU6a2cyQIwl5x41g/jzL4aVMqoVB44gyVDW/hK4q7ibBxRIPSMIRxDbLs/ndT9s/i
+   Y8AkYtbuyYhFjkZTMufeKdCC0XWbByOLK5wQvUt3txUXHmRAiHoJiZpShd3LNaFdrv8kPzxmwB2Y
+   C4itWknbhcX3HuP3LcQ=;
+Received: from njmta-53.sailthru.com (173.228.155.53) by dailybeast-a.sailthru.com id h1t86m1qqbs3 for <blackpapermoon42@gmail.com>; Sun, 30 Jun 2024 21:39:39 -0400 (envelope-from <delivery@mx.sailthru.com>)
+Date: Sun, 30 Jun 2024 21:39:39 -0400
+From: "'Payment~Declined'" <info.gtkumwze.gtkumwze@gtkumwze.us>
+To: blackpapermoon42@gmail.com
+Message-ID: <65df7a8d.050a0220.6dfba.bad1smtpin_added_broken@mx.google.com>
+Subject: blackpapermoon42, =?UTF-8?B?WW91ciBhY2NvdW50IFNpcml1c1hNIHdpbGwgYmUgcmVtb3ZlZCB0b2RheS7imqDvuI8=?= Sun,30 Jun-2024
+MIME-Version: 1.0
+Content-Type: multipart/report; boundary="000000000000SGCNuB7Qm6umj710elBSQB"; report-type=delivery-status
+
+--000000000000SGCNuB7Qm6umj710elBSQB
+Content-Type: multipart/related; boundary="000000000000B0MNRUNyYR84HR9a"
+
+--000000000000B0MNRUNyYR84HR9a
+Content-Type: multipart/alternative; boundary="000000000000B0MNRUNyYR84HR9b"
+
+--000000000000B0MNRUNyYR84HR9b
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Top Stories of the Day: Sep 0, 2019
+
+103882302891885308
+-----
+
+If you believe this has been sent to you in error, please safely unsubscrib=
+e
+--000000000000B0MNRUNyYR84HR9b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit+
+
+<html>
+<center>
+<body style="margin: 0;padding: 0;font-family: Arial, sans-serif;background-color: rgb(245, 245, 245);">
+<div style="padding: 20px;border-radius: 10px 10px 0 0;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);max-width: 600px;margin: auto;color: white;line-height: 30px;font-weight: bold;border-bottom: 1px solid #ccc;">
+</div>
+
+<table><tr><td>
+
+
+<center>
+
+</center>
+
+
+</td></tr></table>
+ 
+<div style="background:#20449a;color:#edf8fe;width:700px;border-radius:13px 13px 0px 00px"><h1 style="padding:10px;font-size:25px">
+	Payment attempt failure while renewing your subscription for Siriusxm
+ </h1></div>
+
+  <div style=" max-width: 600px;margin: auto;padding: 20px;background-color: white;border-radius: 0 0 10px 10px;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <table style="width: 100%;font-size: 16px;color: #333333;border-collapse: collapse;border: 1px solid #ccc;border-radius: 8px;overflow: hidden;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <tr>
+        <th style="background-color: #1d4e9b;color: white;height: 30px;line-height: 30px;font-weight: bold;text-align: center;border-bottom: 1px solid #ccc;" colspan="2">Account Details</th>
+      </tr>
+      <tr>
+        <td style="height: 20px;background-color: rgb(247, 247, 247);padding: 8px;text-align: left;border-bottom: 1px solid #ccc;">Account ID:</td>
+        <td style="height: 20px;background-color: rgb(247, 247, 247);padding: 8px;text-align: left;border-bottom: 1px solid #ccc;">13622810</td>
+      </tr>
+      <tr>
+        <td style="height: 20px;background-color: rgb(247, 247, 247);padding: 8px;text-align: left;border-bottom: 1px solid #ccc;">User:</td>
+        <td style="height: 20px;background-color: rgb(247, 247, 247);padding: 8px;text-align: left;border-bottom: 1px solid #ccc;">blackpapermoon42</td>
+      </tr>
+      <tr>
+        <td style="height: 20px;background-color: rgb(247, 247, 247);padding: 8px;text-align: left;border-bottom: 1px solid #ccc;">Discount:</td>
+        <td style="height: 20px;background-color: rgb(247, 247, 247);padding: 8px;text-align: left;border-bottom: 1px solid #ccc;">90 %</td>
+      </tr>
+      <tr>
+        <td style="height: 20px;background-color: rgb(247, 247, 247);padding: 8px;text-align: left;border-bottom: 1px solid #ccc;">Limited Time:</td>
+        <td style="height: 20px;background-color: rgb(247, 247, 247);padding: 8px;text-align: left;border-bottom: 1px solid #ccc;">Sun,30 Jun-2024</td>
+      </tr>
+    </table>
+    <p style="font-size: 16px;line-height: 1.5;margin-top: 20px;color:black">
+      Dear blackpapermoon42,<br><br>
+We tried to renew your subscription at the end of each billing cycle, but your monthly payment has failed. We therefore had to cancel your subscription. Obviously, we would love to see you again. <br>If you wish to renew your subscription click on the link below.
+
+  <br>
+<a href="https://t.co/BfbxHzpFGD" style="text-decoration:none;">
+
+ <br><strong style="padding: 16px 30px; background-color: #1f4694; color: #e2eff9; border: none; border-radius: 30px; font-size: 20px; letter-spacing: 1px;  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); font-family: Georgia, serif;">Update my payment details</strong>
+</a>
+    </p>
+
+  </div>
+ 
+ <div>
+<center>
+		<br />
+		You may unsubscribe at any time. <a href="https://t.co/XMDPxcq4wa" >Unsubscribe.</a>
+<br />or by writing to 9901 Brodie Lane Ste 160 Austin, TX 78748
+		<br />
+				To be removed from our list simply <a href="https://t.co/8oRSzJU3TJ" >click here</a> or write to us at :<br />
+		8729 Gonzales,,Dr.Monroe Township,NJ,08831<br />
+</center>
+
+ </div>
+
+</body>
+</html>

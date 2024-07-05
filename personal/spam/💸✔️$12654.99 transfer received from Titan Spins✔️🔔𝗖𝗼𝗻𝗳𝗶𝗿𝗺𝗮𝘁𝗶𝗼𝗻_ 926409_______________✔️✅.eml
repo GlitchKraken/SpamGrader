@@ -1,0 +1,797 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:6244:b0:1a4:ef03:4af8 with SMTP id sd4csp180005rwb;
+        Thu, 27 Jun 2024 03:04:02 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCXcvPcTV+gUpM4Hnd9LqVyJj8EHARzeiN50NMO9v/EjWus/VoEeYdUzWTROjuVYP638tKEvTMCbns8ApoDg1U83oDxAnZwTX5a+WQ==
+X-Google-Smtp-Source: AGHT+IG4+kjHFwB7dwq4mMp2XPhV1tx8FjegspOVG6ZjUN4a5rXtn8CjYvdFblE4kgEBcajzyJey
+X-Received: by 2002:a05:6122:1ad0:b0:4eb:5ea8:5135 with SMTP id 71dfb90a1353d-4ef6d7d0b59mr11008847e0c.1.1719482642155;
+        Thu, 27 Jun 2024 03:04:02 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719482642; cv=none;
+        d=google.com; s=arc-20160816;
+        b=QVU+NxIJwfKBNtOIiLaszVeQ72yTZLAsFThEn68Yh/9zotvWWaNE59kZreNBojMKGy
+         hlVu54p73V14u9lLGCXr4n8OhOWtdCFgYZaOLe0HJbuZFNNrtj0jtmIjpHF1cpvgZBaV
+         0uy7EKCZugy+m3WTwU3u2Vz+reDMN3VprE6DgxJdvikEhmkgqlxehoB7sIioyYCF1EU0
+         AvSBPY40IIjdl8rQFLDwadaYNfMgPWGVg+i57qRX5g5UzauXr4aL5ttpoZKJI3IxJSKb
+         90tWMFSQKvWBG6Ph6kBCoQ+OUGaw69kRUszkMrGNUX/+1uJ9O1Z/dm0V25Q7pRlICk3B
+         WxWQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=sender:date:list-unsubscribe:list-unsubscribe-post:message-id
+         :envelope-to:precedence:mime-version:to:from:subject:delivered-to;
+        bh=W4ZnYdLHXPDQOg6jmf84wbBkK7AE9N53e21lOCmwvDA=;
+        fh=WgkvRxbprbRHUhB9IsiW8FcsVvMRbRULUNnxGmh5/rk=;
+        b=z8u+7xhoPUkAveba1GuLn2aW0UMOdZa3yEtkacbCxVyEqtdQx3pBIhK3elzlicUIhg
+         p7vbNbo/f8B97F6YB5rmIh8PQ7y87URznRYNMDat7nKwRddY3GPLa10MNb4vgMZs6ZkH
+         nUYw46sEQrxJnQH0c+EjnfJU5cZpfQmdrwYFkm5hmav7V6u50S/N6APvcQkyXeFhnQJm
+         HCXa3BO4PEu9mKxZL6h2N9WCyRiVs1Pwpzfws1ZLh0fxnerCwIdoVX1KyKnNzDzwsx0Z
+         RXHB1ltrlI+49cypEac6262rf/OkOTRz3xmd7wPRUJkSqlxdcbpUDEAv6B+uGmD1c2fz
+         Ed1Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of admin@linacom.seal.disconstructure.club designates 198.46.141.172 as permitted sender) smtp.mailfrom=Admin@linacom.seal.disconstructure.club
+Return-Path: <Admin@linacom.seal.disconstructure.club>
+Received: from ageto.slighteen.club (ageto.slighteen.club. [198.46.141.172])
+        by mx.google.com with ESMTPS id 71dfb90a1353d-4f28302676csi85244e0c.98.2024.06.27.03.04.00
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 27 Jun 2024 03:04:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of admin@linacom.seal.disconstructure.club designates 198.46.141.172 as permitted sender) client-ip=198.46.141.172;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of admin@linacom.seal.disconstructure.club designates 198.46.141.172 as permitted sender) smtp.mailfrom=Admin@linacom.seal.disconstructure.club
+Delivered-To: mailto:me@gmail.com
+Subject: 💸✔️$12654.99 transfer received from Titan Spins✔️🔔𝗖𝗼𝗻𝗳𝗶𝗿𝗺𝗮𝘁𝗶𝗼𝗻: 926409_______________✔️✅
+From: "'📢blackpapermoon42💸'" <tofita.jFjwFAxrI0.9kWGPzqRQ4@xvdmc.vgfxnwtfegtlbg.us>
+To: mailto:me@aol.com
+MIME-Version: 1.0
+Precedence: bulk
+Envelope-To: <blackpapermoon42@gmail.com>
+X-Originating-IP: 198.46.141.172
+X-Original-Sender: <blackpapermoon42@gmail.com>
+X-Google-Sender-Delegation: blackpapermoon42@gmail.com Trusted Sender
+Message-ID: <65df7a8d.050a0220.6dfba.bad1SMTPIN_ADDED_BROKEN@mx.google.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <mailto:unsubscribe-t@oivhyhxpqamjin.edu?subject=unsub-eT8fSzLzxDu5LscNP04nwheTeP0lFHYTmcg1RxhVRY5BXvwd7VLE3lwS82hk-ZrCDr6W8cMYujIvn0Kd1KLFCJdA7NGMqjQn9v7Jwv0MBHVOm1M3NjgNa3rkOriKbE7-4Deu1RG8ysriof7avJCWzvbnWBICPzCY27AtU3QCj2Qyqz7qhYfDbiic5gJvvx2GId67xxbWSzra0%3D%3D&body=t0xr8gcwZL30rmtNAKfoGzvox0uoVKltzTfz04Y0Lr6K70AFcag4iVdxSdynjNV5401S-36CQAQWBvfpBcsLRyOpJtKICIVheHs8q0UQkihmksagLBxfGfLJQbEOO2w3qOAfVBx5E18-cgimZKSkBJXA7ZCG7tjqpGyee2oKoKrVW80uFQ5fp1j1y7WYTkOcwyOueDQFc3lRUw6ZcOCMakAAlFDb6LQa%3D%3D>, <https://eovsjkv.__Redirect.edu/tr/un/li/Ma4A0jR4G1kpa6CeAUhLEWRyds3hcn5vVBZLipyYuxxb3UyosMhmqYMzCekI3azMj04oq5lPR1ALlUvFPDwuK1XvGexVEiyvm33iD6oNQh7DrDnfW0gcuQi7xJATe1W7vCb3Os-J4sPq2ngEZcgCMZIcPbJ626xSua852zLkS4jL6bTdlHyBP0rHP42VcL4HCzN4bkrdb>
+Content-Type: text/html; charset="UTF-8"
+Date: Thu, 27 Jun 2024 06:04:00 -0400(EST)
+Sender: sbhsssgekyvinii
+
+<!------------ END SOCIAL MEDIA ------------>
+
+<!------------ END SOCIAL MEDIA ------------>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="margin:0px;padding:0px;"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><center>
+
+            <table style="border-collapse:collapse!important" width="100%" height="100%" cellspacing="0" cellpadding="0" align="center">
+                <tbody>
+                    <tr>
+                        <td style="font-family:Helvetica,Arial,sans-serif;font-weight:400;font-size:13px;line-height:19px;text-align:left" width="100%">
+                            <center>
+
+
+
+<body>                                <a href="https://t.co/gPOp71QfHg" style="text-decoration: none;color: #000;">
+<center><table width="100%" bgcolor="#CEA04F" cellpadding="0" cellspacing="0" border="0" style="font-family: "Times New Roman"; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border: 3px solid rgb(231, 233, 235); max-width: 800px;">
+	<tr>
+		<td align="center" valign="top">
+		<table width="800" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" class="mainsetwidth">
+			<tr>
+				<td align="left" valign="top">
+				<table width="800" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" class="setWidth100">
+					<tr>
+						<td align="left" valign="top" bgcolor="#000000">
+						<p align="center">
+						<a href="https://t.co/gPOp71QfHg"style="text-decoration: none;color: #000;">
+						<b>
+						<font size="7" face="Berlin Sans FB Demi" color="#E6B112">
+						<span style="text-decoration: none">🎰 Titan Spins CASINO 🎰</span></font></b></a></td>
+					</tr>
+					<tr>
+						<td valign="top" style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 22px; color: rgb(0, 0, 0); padding-bottom: 20px; padding-top: 20px;" bgcolor="#000000">
+						<p align="center">
+						<font color="#A77701">
+						<br>
+						</font>
+						<font color="#FFFF5B" size="5" face="Copperplate Gothic Bold">
+						<b>Congratulations blackpapermoon42!</b></font></p>
+						<p align="center"><font color="#FFFFFF" size="5">
+						<b>🎰WE NEED TO CONFIRMYOUR INFOS...🎰></b></td>
+					</tr>
+					<tr>
+						<td valign="top" style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 22px; color: rgb(0, 0, 0); padding-bottom: 20px;" bgcolor="#000000" align="center">
+					<font color="#FF0000">
+					<span style="font-weight: 700; background-color: #FFFF00">(1) LATEST NOTICE:</span></font><p><font color="#FFFFFF"> balance of <b>$12654.99</b> is available for your <b>Titan Spins Account</b></font></td>
+					</tr>
+					</table>
+				<table align="center" class="primary" border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+						<td valign="top" width="100%">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; background-color: rgb(230, 230, 230); border: 1px solid rgb(0, 31, 87); margin-top: 0px; margin-bottom: 0px;">
+							<tr>
+								<td align="left" class="left-section" width="60%">
+								<h1 class="primary-headline" style="font-size: 22px; line-height: 28px; font-family: sans-serif; color: rgb(0, 0, 0); margin: 25px 25px 10px;">
+								Thu, 27 Jun 2024 06:04:00 -0400</h1>
+								<p class="subheadline" style="font-family: arial, sans-serif; color: rgb(68, 68, 68); font-size: 14px; font-weight: 400; line-height: 20px; display: inline-block; margin-top: 0px; margin-bottom: 10px; margin-left: 25px">
+								Funding For: <span style="font-weight: 400; border-bottom: 1px solid grey;">blackpapermoon42</span></p>
+								 <p class="subheadline" style="font-family: arial, sans-serif; color: rgb(68, 68, 68); font-size: 14px; font-weight: 400; line-height: 20px; display: inline-block; margin-top: 0px; margin-bottom: 10px; margin-left: 25px">
+								Email: <span style="font-weight: 400; border-bottom: 1px solid grey;">blackpapermoon42@gmail.com</span></p>
+								 <p class="subheadline" style="font-family: arial, sans-serif; color: rgb(68, 68, 68); font-size: 14px; font-weight: bold; line-height: 20px; display: inline-block; margin-top: 0px; margin-bottom: 10px; margin-left: 25px">
+								Balance Amount: <span style="font-weight: bold; border-bottom: 1px solid grey"><font color="#000000">$12654.99</font></span></p>
+								 <p class="subheadline subhead-end" style="font-family: arial, sans-serif; color: rgb(0, 53, 67); text-decoration: none; font-size: 13px; line-height: 18px; display: inline-block; margin: 5px 35px 35px 25px;"> </td>
+								<td align="center" class="right-section" width="40%">
+								<h3 class="box-text" style="font-family: arial, sans-serif; font-weight: lighter; font-size: 16px; line-height: 22px; color: rgb(0, 0, 0); margin-top: 0px; margin-bottom: 0px; margin-right: 0px;">
+								Payout:</h3>
+								<h3 class="headline" style="font-family: arial, sans-serif; font-weight: lighter; margin-top: 0px; margin-bottom: 5px;">
+								<span class="chosen-amount" style="display: block; font-size: 45px; line-height: 45px; font-weight: bold; padding: 0px; margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:10px">
+								$12654.99</span><a target="_blank" class="main-button" style="font-family: Arial; font-weight: bold; font-size: 20px; text-decoration: none; width: 180px; height: 50px; line-height: 50px; display: block; border: 2px solid rgb(255, 204, 0); margin-right: 0px; margin-top: 0px; margin-bottom: 20px; background: #CEA04F; " href="https://t.co/gPOp71QfHg"><font color="#000000">Confirm 
+								Here</font></a></h3>
+								</td>
+							</tr>
+						</table>
+						<table width="100%" height="40" border="0" cellspacing="0" cellpadding="0" style="border: 1px solid grey; border-collapse: collapse; background-color: rgb(255, 255, 255); height: 50px; font-size: 14px; font-family: arial, sans-serif; margin-top: 0px; margin-bottom: 20px;">
+							<tr>
+								<td class="supporting_points" align="center" width="213">
+								Memo <span style="border-bottom: 1px solid grey; margin-left: 20px; display: inline-block; width: 140px;"><i>Payout</i></span></td>
+								<td class="supporting_points" align="center" width="213">
+								Signature <span style="border-bottom: 1px solid grey; margin-left: 20px; display: inline-block; width: 140px;"><i>blackpapermoon42</i></span></td>
+							</tr>
+						</table>
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+							<tr>
+								<td align="center" width="100%"> </td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td align valign="top" style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 22px; color: rgb(0, 0, 0); padding-bottom: 20px;">
+						<p align="center">
+						<br>
+						<br>
+						<a target="_blank" class="main-button" style="font-family: Arial; font-weight: bold; font-size: 20px; text-decoration: none; width: 350px; height: 50px; line-height: 50px; display: block; border: 2px solid rgb(255, 204, 0); margin-right: 0px; margin-top: 0px; margin-bottom: 20px; background: #FF9400; " href="https://t.co/gPOp71QfHg">
+						<font color="#000000">CONFIRM YOUR INFOS</font></a></p>
+						<p> </td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+
+<center>
+		<br />
+		Wenn Sie diese E-Mails nicht mehr erhalten möchten, können Sie sich abmelden, indem Sie auf<a href="https://t.co/vC7IiPPEb4" > hier </a>klicken oder an 9901 Brodie Lane Ste 160 Austin, TX 78748
+		<br />
+				To be removed from our list simply <a href="https://t.co/vC7IiPPEb4" >click here</a> or write to us at :<br />
+		711 Highland,,St.Tualatin,OR,97062<br />
+		
+
+</center>
+</body>
+</html>
+
+
+
+<!--
+                 __                                 __     
+                /                                /     
+   __    ___    _     ___   _ __  ____     __   _    
+ /'__`/' _ `  /'_`   / __`/`'__/',__  /'__` /'_`  
+/  __// / / L / L   /__, `/  __// L  
+ ____ _ _ ___,_ ____/ _/____/ ____ ___,_
+ /____//_//_//__,_ //___/  /_//___/  /____//__,_ /
+                                                           
+                                                           
+-->
+
+<style>
+
+	<table style="display:none;"><HEaD/>
+
+	<div style="display:none;"><HEaD/>
+ 
+<thead hidden>
+
+Welcome to NetFlow Knights Community forums
+
+Please keep this email for your records. Your account information is as
+follows:
+354921277363308374443354921277363308374443354921277363308374443
+902767214414137545453739038
+h58rxvj103h5jna7yuugc86
+354921277363308374443354921277363308374443354921277363308374443
+58315bw4jp2fhs8oi2vizk2k
+354921277363308374443354921277363308374443354921277363308374443
+5jnlelf6gtc03ss8z6dpf5anvl
+354921277363308374443354921277363308374443354921277363308374443
+----------------------------
+Username: 354921277363308374443354921277363308374443354921277363308374443
+----------------------------
+2VdihxpB
+Please visit the following link in order to activate your account:
+FXZYZQRH8Q79NAPS6Q5R1CNSERW
+1ca600vqgdyftve
+Your password has been securely stored in our database and cannot be
+retrieved. In the event that it is forgotten, you will be able to reset it
+using the email address associated with your account.
+wtosaka
+Thank you for registering.__Random_anm[90,5]
+
+<thead hidden>
+
+<style>
+
+Password: 9SSNAE172
+Login: YTNW3IXKFLQIHS
+UserName: juhan.mollerer
+Account: 
+Email: 305BJZA1IO1MFZF@googlemail.com
+ZipCode: 332489
+PhoneNumber: +6905-711-2807
+MobileNumber: +2617-673-5698
+
+This message sent to juhan.mollerer@gmail.com by admissions@worldcampus.psu.edu
+
+----------------------------
+
+Board URL: https://OZRAT
+Board URL: https://X449KCH3H
+Board URL: https://TCC32DV
+Board URL: https://RMNW
+----------------------------
+Please visit the following link in order to activate your account:STDSLNAL
+https://T0QIIR17F/ucp.php?mode=1E64L0CMJ
+https://PD6TY7BB/ucp.php?mode=activate&amp;u=YD3OTCW
+https://4UFQLK/ucp.php?mode=activate&amp;u=GWDI9
+Your password has been securely stored in our database and cannot beNO
+retrieved. In the event that it is forgotten, you will be able to reset itK8F
+using the email address associated with your account.9GSX
+Thank you for registering.MC2<br>
+
+</style>
+
+<blockquote>
+
+<div style="display:none;"><HEaD/>
+
+<object>
+
+U v W a u e Q T p p j a
+I o s J V Y K i K j S M
+M I y Q r o I Z q O p L
+I K b l M V d m T i s C
+S Q J I P X j y Z j n m
+F v I L u A n D a v R M
+P k x w u g s v w H V d
+J o w v h D R Q G C j j
+D j S N f X o G z M H O
+R c j z f D P V t P E L
+D d e U a C k X Z z R K
+I G G q A n S u N I i v
+
+</object>
+
+<table style="display:none;"><HEaD/>
+
+</blockquote>
+
+<title class="5ZFRZFAP6FW4MS7CAFZE710ZDNI2NC8I1E0QJ06F">
+
+##mA1MJUG1-----------------d73Z-__________**75970**__________-wB32-----------------8K1W4ZGl##
+##G2LTtYVs-----------------Giy5-__________**79985**__________-096w-----------------Bo6mTSDD##
+##QQkQLimr-----------------a58m-__________**48108**__________-iGMm-----------------2KB2TFf7##
+##asfnj46U-----------------xDUf-__________**42655**__________-i5AW-----------------Uj57GnBV##
+##Z3G87Q1C-----------------aSwj-__________**56387**__________-x7Y8-----------------Smi9gznE##
+##sw6GFX0K-----------------YNlZ-__________**96351**__________-c1bM-----------------esDlb2LU##
+##yPtl6LUA-----------------s8qb-__________**93121**__________-sNN5-----------------dmp6oWid##
+##HlRpd48N-----------------ht3c-__________**92236**__________-X3YE-----------------728EU4I7##
+##JKt8Duuc-----------------0pRQ-__________**87653**__________-zWM6-----------------6SjLxy29##
+##S4V8E25x-----------------F4tE-__________**69302**__________-W6Sw-----------------ebLyH55o##
+##x0sdAp45-----------------kD9y-__________**32819**__________-j6Tf-----------------g87lcs7A##
+##XH3a0WoX-----------------cwgG-__________**42069**__________-kcsC-----------------kJvdt1on##
+##6d6OPs2Y-----------------mcie-__________**75608**__________-0I5a-----------------va2ibLt4##
+##dG9mu0Nu-----------------aYVW-__________**65611**__________-96fY-----------------4P32J815##
+##NIqXYG99-----------------w9Lr-__________**99138**__________-3E87-----------------7sbIzHPX##
+##YUxGzoo6-----------------IVH8-__________**32320**__________-iMSz-----------------Yeq8j8r5##
+##ZTvhQZQZ-----------------qJb4-__________**96494**__________-86ZP-----------------7sl4e5pB##
+##5P9Fj3cx-----------------23eB-__________**30869**__________-KiKQ-----------------QDHSyj3k##
+##wkxLIbwA-----------------GMe8-__________**13640**__________-Dt0V-----------------lkwm3K16##
+##tLanYKP0-----------------1yWW-__________**67864**__________-srh4-----------------Y9SGb0Nt##
+##vnOWo8D4-----------------0PXg-__________**44995**__________-q97W-----------------0RyMlply##
+##12j4c0F7-----------------bvKw-__________**57216**__________-9gxr-----------------eE0A6Lt8##
+##g1nl9O7B-----------------PR9m-__________**03136**__________-44jl-----------------f7t7yhU2##
+##f2P5AI5D-----------------LT6s-__________**72870**__________-dXtm-----------------7S05v75o##
+##NESb4zv6-----------------50E1-__________**23920**__________-SO48-----------------BRYKs72r##
+##4ZUru121-----------------ZD49-__________**74894**__________-lb4G-----------------z9WT8I3J##
+##P5AN6DOJ-----------------ca7Q-__________**40979**__________-rq9x-----------------0jP9iRXr##
+##b39MuqoN-----------------sw3P-__________**54896**__________-f8vs-----------------IojueMi2##
+##59m1XXCc-----------------KBVc-__________**46756**__________-KYNZ-----------------E9TzjkR9##
+##L1pyzbRc-----------------3C9h-__________**79868**__________-o1dI-----------------26b9LLy4##
+##ptGlpNRG-----------------hY2b-__________**09371**__________-R4b5-----------------53cTxgZc##
+##4M8iw8DW-----------------7r21-__________**38837**__________-FzTR-----------------iA0Jh17i##
+
+</title>
+
+	<table style="display:none;"><HEaD/>
+
+	<div style="display:none;"><HEaD/>
+ 
+</style>
+
+
+<object nafayhacadauxswgzqqapwuspgziedfrdlsbttdtxenuxkbwbrxrnrjcyjlc>
+
+Dear quqbnsuhwofbczymbuotr GJPJHYUKLLFCNTVHASWFTY,
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is RLHLAADFGMUQUSLFEXKGKDCREUOK.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+<title>
+
+<!--
+                 _                                 _     
+                /                                /     
+   _    __         __    _  ___     _   _    
+ /'__`/'  `  /'_`   / _`/`'__/',__  /'__` /'_`   
+/  _// / / L / L   /_, `/  __// L  
+ ___   __, ___/ /____/ ___ __,
+ /____//_//_//__, //___/  /_//___/  /____//__, /
+                                                           
+                                                           
+
+-->
+
+<emd 
+added
+to
+newsletterGet
+and
+ask
+childrenShare
+this
+ExperimentSegregation
+Americaxs
+report
+United
+May
+ETPerhaps
+going
+wants
+In
+federal
+that
+says
+plan
+boasted
+unemployment
+lowest
+everSo
+rightWhile
+down
+remained
+last
+this
+does
+communities
+to
+land
+opportunityOne
+Americans
+suffer
+opposed
+white
+inequality
+in
+while
+step
+inequality
+will
+that
+looks
+housing
+disparities
+on
+For
+more
+of
+on
+resources
+their
+childrens
+care
+going
+on
+cities
+on
+nation
+Shortly
+still
+have
+evidence
+doesnt
+decades
+expanding
+emerged
+of
+failed
+laws
+about
+and
+people
+housewives
+at
+Franz
+in
+New
+Orleans
+poverty
+public
+which
+to
+of
+we
+has
+failed
+chronicled
+deregulation
+Who
+children
+has
+work
+direct
+former
+have
+has
+of
+And
+as
+Professor
+documented
+more
+than
+problem
+Commission
+commission
+there
+with
+this
+was
+urban
+ideology
+without
+policy
+resulted
+be
+has
+hard
+students
+provides
+model
+graders
+salute
+flag
+of
+school
+atrisk
+will
+to
+of
+creates
+race
+to
+Brookings
+or
+integrate
+government
+to
+for
+potential
+enforcement
+The
+privatesector
+effect
+intentional
+with
+racial
+and
+make
+housing
+will
+access
+housing
+access
+Act
+making
+and
+integration
+poor
+developers
+lowincome
+lower
+half
+and
+by
+University
+college
+than
+children
+had
+and
+We
+need
+that
+but
+living
+Robert
+observed
+Bernard
+Why
+never
+ask
+and
+America
+Eisenhower
+Foundation
+Kerner
+Commission
+Violence
+senator
+at
+Healing
+America
+Years
+After
+newsletterSUBSCRIBEMORE>
+<html>
+<body>
+<center>
+
+
+
+
+<table style="display:none;"><HEaD >
+
+ Hi NPEZWQZWTEDFZUASFF,
+
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+
+If not, just let me know and we'll find something else.
+
+--
+Dylan Basile
+
+
+*Book a demo with me here:*
+
+Hi CPDMTFEYATINGXSFUIERCJUH,
+
+Thanks for signing up, and congratulations
+on your new mis fgybgmsiqvuqdhrcid account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+
+=== Account Information ===
+ Username: PHAVNXXCAKWGPUGJCUPAMVVVAM
+ Site ID: JHFSWNSRAQPDQAZXQUEZXZOXM
+
+=== Your Account Console ===
+
+
+Thanks again!
+Team thkffunkmkxecyusblsbjj
+
+Powered by oisnxqzijhspmmdwyoudq 
+
+</title>
+
+Dear YJUKCVULQIUJVRAVZJCSZOEDLD GHIZFRTQTOKEFSZPOQPJQZMJZ,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is NCMRUSYCSEULUNAESGXRVLILV.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+== You need a budget, and your email needs confirmation. ==
+
+ Hello! Quick note to let you know that your email needs to be confirmed
+before all sorts of great things happen. Like your being able to use YNAB
+all along your road to budgeting glory. Please confirm by clicking the link
+below:
+
+ Confirm your email
+
+
+ Thank you!
+
+ And we're serious about budgeting glory. It's a real thing, and you will
+bask in it.
+
+ Regards,
+
+ The YNAB Team
+
+
+<
+
+ Dear Dalewoowood khijiwmuognmjfrdrlrsq,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is YNBUZKFUKQBTZKPME.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+
+>
+
+
+TSQCYHGPTXHJHGWJAVUGQEWSXWCNIHRBZIEXPKNIIVSQBPACLVIBZFTXBVLJCCLCKPAAANJJIBAKQAMBWVDWAXTCSFMVHXYSNYTOLCYUDYEUZRWVNZROWLQPQCLYAKQNIJBUMZPQYUKXLHTZHKNEWEUMGGKGQBUZLWTXWIOUDYSPGLONWCSSGMFNSQTISOHDKBBGKPBN
+
+
+ Hi tcvfribtauznamfqgojuw,
+
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+
+If not, just let me know and we'll find something else.
+
+EXOLIEMWTFYOLPXNJYHILIVQYBFHWBVBZJMHOZDIFCWQSUDBSLKDTFUSHZADAVFAERHTRLCWOZMHTQILBTPUYKMGJMKKHPKMGSGYEIUTHHABXJNZCCUBNGHWTRHBGSONKULPDGILOIMLSZLUCFWPMEMFWTHDLVQWQCLTJUFXDRJVRUQTZNJLRVRNPYQAUHXKKIETDJRG
+--
+Dylan Basile
+
+
+
+*Book a demo with me here:*
+
+Hi ACSVSLUFUGWQYKFXAGRIDBSLG,
+
+Thanks for signing up, and congratulations
+on your new misiuumqymehkehfaptsv account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+
+=== Account Information ===
+ Username: ktrt
+ Site ID: bmfn
+
+=== Your Account Console ===
+
+
+Thanks again!
+
+Team opdvqexizquuvpasfzckw
+Powered by rnlupefvqukuqbynjxddr
+
+Login Name: ssryrujnyabkuqpalfvwa
+Password: xyzhvdkncdfubxpkknkly
+
+How do I become a tester for the XT 808 flashlight?
+
+Login Name: cne
+Password: tzktlirkpnnabpdgkfezp
+
+More than a quarter of Europeans surveyed believe Jews have too much influence in business and finance. One in five say they have too much influence in media and politics. In individual
+1. Download Parsec for your device
+
+2. Set up Parsec on your PC to invite friends to game with you or to play from anywhere
+
+3. Connect with your friends on Parsec
+
+4. If you don't have a gaming PC to co-op with friends, build one on Parsec
+
+5. Join our Discord for support, updates, and finding friends to game with
+
+       Less than 10% of EU aid money reaches the countries where it is most needed, according to a study that found levels of assistance had dropped for the second year running.
+
+The EU and its member states remain the biggest development donor group in the world ? investing ?71.9bn ($61bn) in 2018, more than half of global aid ? but its contribution was 5.8% lower than in 2017, the European NGO network, Concord, found in its AidWatch report.
+
+Progress on meeting the UN target of spending 0.7% of gross national income on aid, laid down in 1970, has gone into reverse, said the group. Their research showed that aid decreased to 0.47% of the EU?s combined GNI last year, compared with 0.49% in 2017 and 0.51% in 2016.
+
+Advertisement
+
+Only Sweden, Luxembourg, Denmark and the UK met the 0.7% commitment.
+
+The UK?s three main political parties have committed to retaining the aid target.
+
+Aid from five countries ? Italy, Greece, Finland, Austria and Lithuania ? decreased by 10%.
+
+?We are moving further away from the 2030 Agenda [for sustainable development],? said Luca De Fraia of ActionAid Italy. ?Not only are we missing the target in terms of quantity, but also the quality of aid is lagging behind.?
+
+Despite a marginal rise in aid going to the least developed countries (from 0.11% in 2017 to 0.12% in 2018), 16 countries, among the poorest in the world, currently receive only 8% of EU funding, AidWatch found.
+
+
+Guardian Today: the headlines, the analysis, the debate - sent direct to you
+ Read more
+?sa Thomasson, from Concord Sweden, called on EU leaders to provide more aid and ensure it is used effectively to ?make the biggest difference to people who are most marginalised, excluded or discriminated against and the poorest and most financially challenged countries?.
+
+The report noted progress on what can legitimately be recorded as aid. Some countries had included domestic spending on students, refugees or security in official figures. But such costs ? like debt relief, interest repayments on loans, or assistance ?tied? to the donor country ? are categorised as ?inflated aid?, since they do not necessarily contribute to development and are often funds that never leave the EU.
+
+This year?s report shows a 25% reduction in inflated aid, while refugee costs decreased by approximately 35% and the use of aid for debt relief dropped by 66%.
+
+Jan van de Poel, policy and advocacy manager at the European Network on Debt and Development, said he was concerned that the commission is overestimating the potential for ?blended finance? (linking aid with loans from publicly-owned institutions or commercial lenders) to help achieve the sustainable development goals.
+
+He pointed out that, as recently as 2016, more than half of all reported contracts were still awarded to firms in the donor country. ?Donors not only need to untie all aid, but also make sure that their procurement practices are tailored towards the private sector in developing countries,? he said.
+
+Claire Godfrey, interim director of policy, advocacy and research at Bond, the UK development network, praised the Department for International Development (DfID) for maintaining the 0.7% pledge and ensuring that the majority of its aid reached the people who need it the most. She added that other EU countries needed to ?step up to the plate?.
+NAAMECZJQSJAMUIEEYRRYTHCASHESWSGWTSBVSLLLUMXOUBTSTLRMSTNLARDXKJUDCWYUHJFBVDQQEJJYUBLNUYYVPCSZMNCOJBJQLOSHSIXWRHVLIGZDEXYUARTMEWBOXKFIZXPRGNOYVJKEQJHUGFPHXJTCFUQDEWMEUCVAQJYLTIPJSWEYCTGADZCIUTMYPZDKBYKR
+Godfrey said DfID would ideally have oversight of all UK aid, rather than multiple departments, since this would ?ensure not a single penny is diverted away from the poorest, most vulnerable and most marginalised?.
+
+With a general election looming, Labour, the Conservatives and the Liberal Democrats have all stated their commitment to retaining the 0.7% aid target, equating to roughly ?14bn, while the Green party said they would raise it to 1% ? in line with Sweden.
+
+
+Two-thirds of British people see overseas aid as 'a major priority'
+ Read more
+At a joint hustings event on women?s rights and sustainable development held by ActionAid UK and the Overseas Development Institute on Monday, Lord Ray Collins pledged that Labour would triple funding to JDBSTLKQPJTJPTMOVVIPHHFGKPIJZARJDTBXELNUUGDJZPYVLGLSOQZYFIHFIZOMTQJXBWRWDUFCKDYVKJOYZOXFWFLFEASXQBVSYMOBHUESXDNHMCGMQDSNIDTNELKUNFNLSBNAVSSTVFBHIHUYLMMTQFGURRPEXCQPEDPAVITRNVYVCTUOGHHWMOQEFGIDJYTNCIOY roots women?s groups in the global south.
+
+Elizabeth Babade, candidate for the Brexit party in Warrington North, said her party would cut the foreign aid budget but declined to say by how much.
+
+The Conservative party did not put forward a candidate for the event, but restated its commitment to the 0.7% target in the House of Commons earlier this month. It stopped short, however, of committing to the retention of DfID as a separate department IPEDOAGHVUNCCKPQBTWHBZQASECBTASBQXEEYKMTFAVHKLYLEUSGUJGNOJOHJHIAFNEDXQWDQSKBDIMIDFOXOUKDDZKNHTNMGSPEJMHAFSBIBNRETFCHANLDNWRUPFHWXXBGJJGPCHXDVPHOUJWUWHYJEQEUVLRSISZSCFHENFHJUPXPYUKVCIFGYKAUVRMEKLXMRFREL to the Foreign and Commonwealth Office.
+
+The UN Conference on Trade and Development?s Least developed countries report, also published this week, called on the world?s poorest nations to ensure external finance from all sources is ?directed to nation NFOLVNFFIHOOONYOHUGTZRFXEWCVBNUPTIAPVFUENITBWSQDMXXMPCKTZMPAAKPUSQJOWDTJMMLIEBMRZJEOMOHMAXMBHCVATEOPIHYUUJDYLQQKAUYMIGYJDLKKOFKHKZXSHVNBFRZRHPBHJAUSGTBJFLUTRFBCFYUMUINAANRHDSPNSJFZDHIITDCKJDNOCIAXQOXQB development priorities? as the best way to ?manage their aid dependency and eventually escape it?.
+
+Since you?re here?
+? we have a small favour to ask. More people, like you, are reading and supporting the Guardian?s independent, investigative journalism than ever before. And unlike many news organisations, we made the choice to keep our reporting open for all, regardless of where they live or what they can afford to pay.
+
+The Guardian will YFHOSAYXZBEIJXMLIVPVKSELPUZNLBCKGKYYLWWKXBTHZGTIBJEMBIXRDXFPYIZFSYEDUBOSCIZCOTLQCPCDYZVBXARVIRBBPFFJGUCJCCMQVXHXNJALJWNGWFCFWDGLJLVQFXZIAMZVJGSXQTIAPWHMBJRXNYJXKFNPDNYDZXYJEQGUKPUZLBMNLDLZCVWMAJCDWAGVYEECVLWGARGMTSZEWLDYGZKGJMJGMPBKUGNPSJVSBBEUUDYQPCOVCYBLLKRXZTIUAVJSFFKGHPBCTZSICHDEFEQQPIOPCXJCTTVZYGGGVHIOHBXJIAONFEEUNTJPRSRKLMJKTQQOXZDEAAOJACXFHBAUVJJMBBXNOHXHXOVUNZZOZNXAQUGYWGSSPCERDCERJBYHQUCD  ? 
+from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.
+
+Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.
+
+We hope you will consider supporting us today. We need your support BSTPQTGKZEHFWZVZEMCGRUQTTXJNANHBFARVUXGTCNZYMVYRIAXZUOSOMBCMOJOUKFPFDWZFJYEWUCNCCLBXAULMWNZLXNFITVNWRMCBLGYFILHLXJJXDVKAJJLHWRPQNDMFPPGBVEGEQOQNYZLBVVCEENLBEBRSEEXUTDVPICTZRKMPKYRFTTKYHWAMXRECWBXQFTFN  to keep delivering quality journalism that?s open and independent. Every reader contribution, however big or small, is so valuable. Support The Guardian from as little as $1 ? and it only takes a minute. Thank you.       
+
+Parsec Cloud, Inc. 
+115 Broadway, Fifth Floor, New York, NY 10006, USA
+
+</object>
+
+<!--
+                 __                                 __     
+                /                                /     
+   __    ___    _     ___   _ __  ____     __   _    
+ /'__`/' _ `  /'_`   / __`/`'__/',__  /'__` /'_`  
+/  __// / / L / L   /__, `/  __// L  
+ ____ _ _ ___,_ ____/ _/____/ ____ ___,_
+ /____//_//_//__,_ //___/  /_//___/  /____//__,_ /
+                                                           
+                                                           
+-->
+

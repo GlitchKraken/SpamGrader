@@ -1,0 +1,737 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6358:9f8f:b0:19c:9809:9239 with SMTP id fy15csp682613rwb;
+        Thu, 6 Jun 2024 20:14:28 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEB0jWKjxsYGfezOfdHlGT4qbVUTa+gtzetaavpVZ6xDkIhRr2f600BQ8mGHTXbWZ3+bgnM
+X-Received: by 2002:a05:6214:401a:b0:6ab:9214:ffd3 with SMTP id 6a1803df08f44-6b04c08803emr70387796d6.25.1717730067827;
+        Thu, 06 Jun 2024 20:14:27 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1717730067; cv=none;
+        d=google.com; s=arc-20160816;
+        b=KVkW9134gpEshL+F8qCqtKs3Gj94//hWzDSFD5XLtKm4SdLxPQVKDycO3VAK/I64mx
+         vJMq7iBLiIl5zUHZ1wn6EOQai+oLlNfGaBdm5uuZUSpA2AxU5MNs9jwkogoQxq91pDvb
+         aQ6H9LLo1ucfdrhR4qki+xymnoiBqn4iEJs4+KOIBdcRBwfLmK6JMExHvlGjKqW2KTno
+         HSEBxLL+BDU/wl4B07+9mdIUBzJTufWIum+oy24NfjSxP00up5bUYkQL3YbBiN5ksu9D
+         HKiKom4g2T+9EHB10ge2KuJ4LIFNNMwia/HmT3oPdJ/TUeKHJW/uIYSR8HRh/R7hYqFP
+         PPZQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:mime-version:from:date:dkim-signature
+         :dkim-signature;
+        bh=ZBO+y11CjHLtM5q7ublkHUejmeNZzkgCpMhSxzZ4ih8=;
+        fh=BfH3tuO4vWcZZHlWy5SVIaCbaMAJl+146y7dupIPkPQ=;
+        b=nxO0qz/XPJdxZ7YCxFNWrat7Gm2GYRW6Bai1BpZViUUzml9nPUvZtdC72MhDC+K9V0
+         GQQEcUROnmWLZSsd9Umn3TvoqSmdjLWTjhwVKDNZUNt2NgmUdJG9cOnYGdxodOzjrVK3
+         pyfuKy41Gu6z5ZqVdGKt9d4DZdjK5xVXhQn5Wrl3gPHtmRrS2bJb8KSRCEsfvnlGP1g/
+         XO+ZiV+GtTEoRy3IdDlVw07X5OBf1FiHrhxxP11VJOlaTa0KEt9iJKg29x9TIW3ivXZO
+         bEx01CYC6teCvk9QWxaZDkrmFCK/7p3HyTbxiY+B/9iSHp/oLMfIJoPT0olR5lGYZlVF
+         R+Iw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@discord.com header.s=s1 header.b=iUZurbf6;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=Fa5nPLet;
+       spf=pass (google.com: domain of bounces+12551241-82dc-blackpapermoon42=gmail.com@mail.discord.com designates 149.72.240.113 as permitted sender) smtp.mailfrom="bounces+12551241-82dc-blackpapermoon42=gmail.com@mail.discord.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=discord.com
+Return-Path: <bounces+12551241-82dc-blackpapermoon42=gmail.com@mail.discord.com>
+Received: from o23.ptr1336.discord.com (o23.ptr1336.discord.com. [149.72.240.113])
+        by mx.google.com with ESMTPS id 6a1803df08f44-6b04f9bee73si6646686d6.366.2024.06.06.20.14.27
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 06 Jun 2024 20:14:27 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+12551241-82dc-blackpapermoon42=gmail.com@mail.discord.com designates 149.72.240.113 as permitted sender) client-ip=149.72.240.113;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@discord.com header.s=s1 header.b=iUZurbf6;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=Fa5nPLet;
+       spf=pass (google.com: domain of bounces+12551241-82dc-blackpapermoon42=gmail.com@mail.discord.com designates 149.72.240.113 as permitted sender) smtp.mailfrom="bounces+12551241-82dc-blackpapermoon42=gmail.com@mail.discord.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=discord.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=discord.com;
+	h=content-type:from:mime-version:subject:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=s1; bh=ZBO+y11CjHLtM5q7ublkHUejmeNZzkgCpMhSxzZ4ih8=;
+	b=iUZurbf6AsGUGL9aiCORFoJqjusWEIcf46+mnQ+q4Q54tvzMGgmBF6W5k3QGaBGB+Skk
+	0vnN84LBtkE39hq0syYvSBoVd5khPsv+uF1nBu9nLXtZysFmhvKnPMPdsyEIstePP1BmrB
+	Gztu3V9t+WSnoxr6BXB91e+ayml8ZOkO6MWvJdAV0umNzUhibttnygR2z6vg4ansMiOKy3
+	Xez1+jwqQYpztIsJ4bkYbZ7fJ2Gwbb+pB5D6ZRWAW2EQ3EJbs1eYP6oLdUWpavZiHO4i4c
+	HO6ial6m83dJL6vIyftnnO4bTuWNgEESfQyGFGyjtGSvT7gQnKuzAu4NEpXFgJVQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:subject:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=smtpapi; bh=ZBO+y11CjHLtM5q7ublkHUejmeNZzkgCpMhSxzZ4ih8=;
+	b=Fa5nPLetZHvCfkaYozUnnkjr8yUN7aEVSbv5XxHPmgvsfBZ4yksITPc+7tE4FqrODLmE
+	XQ0lAHhaNYgI1an0by4fwA6yAThdWao4DqvCBZ2EH9YNKh3A6CPxJwkKSfH5mJaUdYrQ8P
+	rJMlq967IEHyxVWLWfY5sFiK68KfyYRhQ=
+Received: by recvd-5f85fcf746-b59k4 with SMTP id recvd-5f85fcf746-b59k4-1-66627B13-7
+	2024-06-07 03:14:27.260142225 +0000 UTC m=+195185.043100693
+Received: from MTI1NTEyNDE (unknown)
+	by geopod-ismtpd-2 (SG) with HTTP
+	id tUE9lXTfT1S8GPa6BImP4w
+	Fri, 07 Jun 2024 03:14:27.242 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=8193e12151af8bdfb8266423a309869353995fdfe83bb60683b402732c24
+Date: Fri, 07 Jun 2024 03:14:27 +0000 (UTC)
+From: Discord <notifications@discord.com>
+Mime-Version: 1.0
+Message-ID: <tUE9lXTfT1S8GPa6BImP4w@geopod-ismtpd-2>
+Subject: Updates to =?UTF-8?B?RGlzY29yZOKAmXM=?= Developer Terms of Service
+ and =?UTF-8?Q?Policy=0A?=
+X-Feedback-ID: 12551241:SG
+X-SG-EID: 
+ =?us-ascii?Q?u001=2Encph=2Fx3Jw0NdHDwq6twCdpH45FU+jy6C2PSJl0TVq3dF8wB1fQbqzERhm?=
+ =?us-ascii?Q?94UgYHNxRRRfa5bk9Yj2F67OpBghor820EpScHw?=
+ =?us-ascii?Q?fUY+LgM3nMK8dRWYcCAW1DF3jWdVcaYN=2FzxVGIi?=
+ =?us-ascii?Q?GBJz5RjELQFcIarg9Ao6PPb6suFVayLJPF23TsT?=
+ =?us-ascii?Q?KjXH2iVv5UngOltoBB3zUspdwh1sP3nUEQeRMdx?=
+ =?us-ascii?Q?7H2bEQjcXTPHzKMSM0rUYxexWXYqv1pZ6E3g7ZQ?= =?us-ascii?Q?AkUI?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BpE3zTlfLi2S72eJkVGoRzRsyGKPNnH+b6800?=
+ =?us-ascii?Q?pfoZilPBVFp9ApO9jC6=2FO3jywACsw=3D=3D?=
+To: blackpapermoon42@gmail.com
+X-Entity-ID: u001./CsYf4h0MhpT6Wn4uiuimw==
+
+--8193e12151af8bdfb8266423a309869353995fdfe83bb60683b402732c24
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+Hello!
+
+We=E2=80=99re updating our Developer Terms of Service: https://click.discor=
+d.com/ls/click?upn=3Du001.a0NJ38DJJG1sulNx5wS1jnT31U2cu9gIcwpvhi4aytWgAszBu=
+KMlPAyn4HwtUBmE6OD7dEm8n9TCw1wAss1NF0YOjfNiZnGm-2B4cTxHge-2BVbx0X7leiwfS5lR=
+ElnfAqAd4Icv_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOQaF3G5Q-2B4OL=
+sVUlFDhZqY8on4w5q6aRcUWOwW8HM6CO5Ycnn0lIcs6E4wNbq3pxLMGGtoVQYArqltoiJx-2FDC=
+h-2Fi85yTnqKFOkd3iBHy5m9f-2BZGy-2BSj8mKV5UdkAL3wHUOFROzrBrNkGEMAJV-2FXYmk1a=
+89zrNH7cLLFRR9pdF79Bi7GHEbVOkk8jv62ge3I29O-2Buo0slAXh6dFv4TG-2F6uI1-2BqYuab=
+-2BkrFaYAA4w18T2w-3D-3D and Developer Policy: https://click.discord.com/ls/=
+click?upn=3Du001.a0NJ38DJJG1sulNx5wS1jnT31U2cu9gIcwpvhi4aytWgAszBuKMlPAyn4H=
+wtUBmE6OD7dEm8n9TCw1wAss1NF59YdJGwZKIsm6x7sv0vd96Cp8UQSnAdan3BmXHjtIcOEmE0_=
+3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOQaF3G5Q-2B4OLsVUlFDhZqY8on=
+4w5q6aRcUWOwW8HM6CMRE1lf-2BRYZeIii72wddcrRpEGn-2B-2FWlnfn2gWUZCZqooID1cc02N=
+bDE0VJ1x-2F7tMWEJeYBZodtdYccEI65OhRkDRns4IV1Ap9wNdENxQkoGZf0GuptyPcaLTUKYPY=
+tgcS13dpE5hphlLrdXVCu-2B0v8xvE0Yvji9L-2BiXjDjCNFDmGdbVz6WXwti3Gbdm3nj7Jfw-3=
+D-3D With these changes, we aim to provide you more clarity on what to expe=
+ct from us, and what we expect from you, as you use our APIs.
+
+We=E2=80=99re letting you know ahead of time so you can learn what=E2=80=99=
+s changing. Below is a brief summary of some of the notable changes; howeve=
+r, please read both updated documents in full.
+
+- **Structural changes.** We=E2=80=99ve reformatted the Policy into clearer=
+ sections on app interactions with users (=E2=80=9CProtect Discord Users=E2=
+=80=9D), content and behavioral rules for apps (=E2=80=9CRespect Our Platfo=
+rm Rules=E2=80=9D), and API Data usage (=E2=80=9CHandle Data with Care=E2=
+=80=9D).
+
+- **New monetization requirements.** We=E2=80=99ve added a section to the P=
+olicy (=E2=80=9CMonetization Requirements=E2=80=9D) explaining conditions f=
+or developers monetizing their apps. With these changes, we aim to create a=
+ more seamless and secure user experience across our platform, which in tur=
+n enables apps to grow.
+
+- **Clarifications.** We=E2=80=99ve made clarifications in the Policy about=
+: user reporting requirements, app rating requirements, and use of API Data=
+ to train machine learning and AI models.
+
+The updated Terms and Policy will go into effect on July 8, 2024. Creating =
+or managing an Application on Discord, or otherwise using our APIs, on or a=
+fter that date means you agree to these changes.
+
+In addition, we=E2=80=99ve also updated our Monetization Terms (which you c=
+an review here: https://click.discord.com/ls/click?upn=3Du001.a0NJ38DJJG1su=
+lNx5wS1jjzYylRfR1dTnRDiglN63M-2BALe5E2M2Dfxn9DJPDKXtr6-2Fd3ao1gksxrupMG3wcS=
+7jSvQ7W2riu1TgOs2lnKxmUQVAP1nI0n3Sng0AmJ3v4h8bJ6_3bi8RsB8B68kR8vFY3-2BD03mb=
+3mie2n1i2-2Bh8b-2FdBisOQaF3G5Q-2B4OLsVUlFDhZqY8on4w5q6aRcUWOwW8HM6CBKMUDlwK=
+AMF1QexyNKA35VSmQNFFzUCxW-2FwsYJvChFyD09yWBiVwMl432hyzBQfHaGEGHzyPvNr2G9wtr=
+b9tzICvtzCdVF2YV6ubkhIAD1G1oyi7knPSjMs6oNpmK5uzj67F5AEtaK0oV6b-2BpxzTDI5z6R=
+nObigoTyfcptrCBVkr-2FlFKne4dyOm0gL8I5pyWQ-3D-3D to offer you a new Growth T=
+ier with lower fees while using our Premium App features to help you contin=
+ue improving and growing your app.
+
+You can also learn more about these updates and our latest Premium App feat=
+ures (including one-time purchase support and your own app storefront) here=
+: https://click.discord.com/ls/click?upn=3Du001.a0NJ38DJJG1sulNx5wS1jg47LNi=
+jrYlxYHgEj-2F4b07X6BRL2l5dI59ibHklO-2FVJLiZDvoL8VszAy2G5sr1uEw3ecCDmW-2FD1-=
+2FKeaNyXTw-2Bc4n-2FPLmgmB6k8X9xiMb7PZ8yOFl_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n=
+1i2-2Bh8b-2FdBisOQaF3G5Q-2B4OLsVUlFDhZqY8on4w5q6aRcUWOwW8HM6CJUm-2F-2BLOZXF=
+vY0Do23fmqvYmFchyCACLnlGa51R9Q5DerB3UyNCq64K-2BQVskTYJ0-2BrmFSjSF9xGP8-2BQ3=
+N-2F-2BArbaugdLdlC9avKDQHgjn163i2geV3a-2F4UFYGF4PnCMxCmiHvkjmC-2BgvvomVmDNh=
+thw1SCkTwZPfBWh6D8vFLjRsRFXbqanUNkde-2FBo69XIhywA-3D-3D
+
+Thanks for being a member of our developer community!
+
+\- Discord
+
+
+--8193e12151af8bdfb8266423a309869353995fdfe83bb60683b402732c24
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+
+    <!doctype html>
+    <html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-mic=
+rosoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+      <head>
+        <title>
+         =20
+        </title>
+        <!--[if !mso]><!-->
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+        <!--<![endif]-->
+        <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DU=
+TF-8">
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <style type=3D"text/css">
+          #outlook a { padding:0; }
+          body { margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-=
+size-adjust:100%; }
+          table, td { border-collapse:collapse;mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt; }
+          img { border:0;height:auto;line-height:100%; outline:none;text-de=
+coration:none;-ms-interpolation-mode:bicubic; }
+          p { display:block;margin:13px 0; }
+        </style>
+        <!--[if mso]>
+        <noscript>
+        <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        </noscript>
+        <![endif]-->
+        <!--[if lte mso 11]>
+        <style type=3D"text/css">
+          .mj-outlook-group-fix { width:100% !important; }
+        </style>
+        <![endif]-->
+       =20
+      <!--[if !mso]><!-->
+        <link href=3D"https://fonts.googleapis.com/css2?family=3DPoppins:it=
+al,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1=
+,300;1,400;1,500;1,600;1,700;1,800;1,900&display=3Dswap" rel=3D"stylesheet"=
+ type=3D"text/css">
+        <style type=3D"text/css">
+          @import url(https://fonts.googleapis.com/css2?family=3DPoppins:it=
+al,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1=
+,300;1,400;1,500;1,600;1,700;1,800;1,900&display=3Dswap);
+        </style>
+      <!--<![endif]-->
+
+   =20
+       =20
+    <style type=3D"text/css">
+      @media only screen and (min-width:480px) {
+        .mj-column-per-100 { width:100% !important; max-width: 100%; }
+      }
+    </style>
+    <style media=3D"screen and (min-width:480px)">
+      .moz-text-html .mj-column-per-100 { width:100% !important; max-width:=
+ 100%; }
+    </style>
+   =20
+ =20
+        <style type=3D"text/css">
+       =20
+       =20
+
+    @media only screen and (max-width:480px) {
+      table.mj-full-width-mobile { width: 100% !important; }
+      td.mj-full-width-mobile { width: auto !important; }
+    }
+ =20
+        </style>
+        <style type=3D"text/css">* {
+  font-family: Poppins, Helvetica Neue, Helvetica, Arial, Lucida Grande, sa=
+ns-serif !important;
+  }
+
+  h2 {
+  font-weight: 700 !important;
+  font-size: 20px;
+  }
+
+  ul {
+  margin-bottom: 24px !important;
+  }
+
+  h1, h2, h3 {
+  color: #060607 !important;
+  }
+
+  h3 {
+  font-weight: 700 !important;
+  }
+
+  div, li {
+  color: #2E3338;
+  }
+
+  p, span {
+  font-size: 14px;
+  line-height: 20px;
+  color: #4F5660 !important;
+  }
+
+  .no-style {
+  font-size: unset;
+  line-height: unset;
+  color: unset !important;
+  }
+
+  .cta-button a {
+  padding: 10px !important;
+  font-size: 14px !important;
+  display: block !important; /* Makes the button fully clickable, not just =
+the text */
+  }
+
+  .download-button a {
+  padding: 8px 24px !important;
+  font-size: 14px !important;
+  }
+
+  .cta-button {
+  margin: 24px 0px !important;
+  }
+
+  .help-text p {
+  font-size: 12px;
+  margin: 0;
+  }
+
+  .footer *:not(a) {
+  color: #747F8D !important;
+  }
+
+  .round-border {
+  overflow: hidden;
+  border-radius: 8px;
+  }
+
+  .social-media div { text-align: center !important; }
+  .social-media-col { width: 40px !important; }</style>
+        <!-- prettier-ignore -->
+      </head>
+      <body style=3D"word-spacing:normal;background-color:#F9F9F9;">
+       =20
+       =20
+      <div
+         style=3D"background-color:#F9F9F9;"
+      >
+       =20
+     =20
+      <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" class=3D"" role=3D"presentation" style=3D"width:604;"=
+ width=3D"604" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-hei=
+ght-rule:exactly;"><![endif]-->
+   =20
+     =20
+      <div  style=3D"margin:0px auto;max-width:604;">
+       =20
+        <table
+           align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"width:100%;"
+        >
+          <tbody>
+            <tr>
+              <td
+                 style=3D"direction:ltr;font-size:0px;padding:20px 0;text-a=
+lign:center;"
+              >
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><![endif]-->
+                 =20
+      <style type=3D"text/css">
+    html,
+    body,
+    * {
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+    }
+    a {
+      color: #1eb0f4;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+          <!--[if mso | IE]><tr><td class=3D"" width=3D"604" ><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" rol=
+e=3D"presentation" style=3D"width:604px;" width=3D"604" bgcolor=3D"transpar=
+ent" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:e=
+xactly;"><![endif]-->
+   =20
+     =20
+      <div  style=3D"background:transparent;background-color:transparent;ma=
+rgin:0px auto;max-width:604px;">
+       =20
+        <table
+           align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"background:transparent;background-color:tr=
+ansparent;width:100%;"
+        >
+          <tbody>
+            <tr>
+              <td
+                 style=3D"direction:ltr;font-size:0px;padding:20px 0px;text=
+-align:center;"
+              >
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:604px;" ><![endif]-->
+           =20
+      <div
+         class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-siz=
+e:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top=
+;width:100%;"
+      >
+       =20
+      <table
+         border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"vertical-align:top;" width=3D"100%"
+      >
+        <tbody>
+         =20
+              <tr>
+                <td
+                   align=3D"center" style=3D"font-size:0px;padding:0;word-b=
+reak:break-word;"
+                >
+                 =20
+      <table
+         border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"border-collapse:collapse;border-spacing:0px;"
+      >
+        <tbody>
+          <tr>
+            <td  style=3D"width:140px;">
+             =20
+        <a
+           href=3D"https://click.discord.com/ls/click?upn=3Du001.a0NJ38DJJG=
+1sulNx5wS1jvdSQ2XvqHIrLV9yv-2FClqGMsQ561nXpQGbTcquM2dU3Xa9hf_3bi8RsB8B68kR8=
+vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOQaF3G5Q-2B4OLsVUlFDhZqY8on4w5q6aRcUWOwW8=
+HM6CDjzEPi3puXjshven0yF3bH9dyMdfK4hcxmsq1-2F2xkIJQ7yBe6D-2BRiIW4lEEK-2FmiHI=
+skkLuy9jGflGuR-2BrSg7gF8abfmT18-2FC8102T-2BYQI1F8njqFC0Ld5WXT7fJqmUgx6Y2uNt=
+fSArGcWyX6ujORkSfQmch0j27jWW8vof7JMZNVWmb5WZOKhrEa4tnRgCRug-3D-3D" target=
+=3D"_blank"
+        >
+         =20
+      <img
+         height=3D"38" src=3D"https://cdn.discordapp.com/email_assets/59242=
+3b8aedd155170617c9ae736e6e7.png" style=3D"border:0;display:block;outline:no=
+ne;text-decoration:none;height:38px;width:100%;font-size:13px;" width=3D"14=
+0"
+      />
+   =20
+        </a>
+     =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
+       =20
+          <!--[if mso | IE]><tr><td class=3D"shadow-outlook round-border-ou=
+tlook" width=3D"604" ><table align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" class=3D"shadow-outlook round-border-outlook" role=3D"p=
+resentation" style=3D"width:604px;" width=3D"604" bgcolor=3D"#ffffff" ><tr>=
+<td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><=
+![endif]-->
+   =20
+     =20
+      <div  class=3D"shadow round-border" style=3D"background:#ffffff;backg=
+round-color:#ffffff;margin:0px auto;max-width:604px;">
+       =20
+        <table
+           align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"background:#ffffff;background-color:#fffff=
+f;width:100%;"
+        >
+          <tbody>
+            <tr>
+              <td
+                 style=3D"direction:ltr;font-size:0px;padding:40px 50px;tex=
+t-align:center;"
+              >
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:504px;" ><![endif]-->
+           =20
+      <div
+         class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-siz=
+e:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top=
+;width:100%;"
+      >
+       =20
+      <table
+         border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"vertical-align:top;" width=3D"100%"
+      >
+        <tbody>
+         =20
+              <tr>
+                <td
+                   align=3D"left" style=3D"font-size:0px;padding:0px;word-b=
+reak:break-word;"
+                >
+                 =20
+      <div
+         style=3D"font-family:Poppins, Helvetica Neue, Helvetica, Arial, Lu=
+cida Grande, sans-serif;font-size:16px;line-height:24px;text-align:left;col=
+or:#737F8D;"
+      ><p>Hello!</p>
+<p>We=E2=80=99re updating our <a href=3D"https://click.discord.com/ls/click=
+?upn=3Du001.a0NJ38DJJG1sulNx5wS1jnT31U2cu9gIcwpvhi4aytWgAszBuKMlPAyn4HwtUBm=
+E6OD7dEm8n9TCw1wAss1NF0YOjfNiZnGm-2B4cTxHge-2BVbx0X7leiwfS5lRElnfAqAd2qTt_3=
+bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOQaF3G5Q-2B4OLsVUlFDhZqY8on4=
+w5q6aRcUWOwW8HM6CP504eq-2B2zzq5Q1GmM-2BVtwOMJ7VIWSE9nam5T3dfGc9YqFTPouKvSh-=
+2BaPCMmLsfsmZJrpzbDczpFVcBhIlTSaD6eoZ8OAOJATi646XJXnA-2FOzmOXoEt9poQwkTtCXl=
+SEUcnIst5FwrH6tGflfI2lcZaakNJJAMxSljiDZ56O-2BJF7WVD87TIhP2b2c-2F8eYetREg-3D=
+-3D" style=3D"font-family: Helvetica Neue, Helvetica, Arial, Lucida Grande,=
+ sans-serif;color: #5865f2;">Developer Terms of Service</a> and <a href=3D"=
+https://click.discord.com/ls/click?upn=3Du001.a0NJ38DJJG1sulNx5wS1jnT31U2cu=
+9gIcwpvhi4aytWgAszBuKMlPAyn4HwtUBmE6OD7dEm8n9TCw1wAss1NF59YdJGwZKIsm6x7sv0v=
+d96JQFFrEAfPRKQ52lmIB9IZTXwd_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdB=
+isOQaF3G5Q-2B4OLsVUlFDhZqY8on4w5q6aRcUWOwW8HM6CLj8hOE7aGovNiXVM7YIRShcdjDQ7=
+c26Iz3xxuSnZHGwPHdPipJG2gH1bH9FGnED-2Fa-2BATBOjeNAfi-2BgkHp56T405RsoHIsw9Uj=
+lRhyoLwVYoPj6qwOs1YaLFj874PzmJ5bq03SUZVbmhl3o3E9lhfLQU6b-2F-2FFPsUS9YNPCsaP=
+xRyQIglfMxNhCdI93P-2B-2FzTR5A-3D-3D" style=3D"font-family: Helvetica Neue, =
+Helvetica, Arial, Lucida Grande, sans-serif;color: #5865f2;">Developer Poli=
+cy</a>. With these changes, we aim to provide you more clarity on what to e=
+xpect from us, and what we expect from you, as you use our APIs.</p>
+<p>We=E2=80=99re letting you know ahead of time so you can learn what=E2=80=
+=99s changing. Below is a brief summary of some of the notable changes; how=
+ever, please read both updated documents in full.</p>
+<ul>
+<li style=3D"font-family: Helvetica Neue, Helvetica, Arial, Lucida Grande, =
+sans-serif;font-size: 16px;color: #5865f2;margin: 12px 0;letter-spacing: 0;=
+line-height: 22px;font-weight: 600;"><span style=3D"color: #747F8D;font-wei=
+ght: 400;"><strong>Structural changes.</strong> We=E2=80=99ve reformatted t=
+he Policy into clearer sections on app interactions with users (=E2=80=9CPr=
+otect Discord Users=E2=80=9D), content and behavioral rules for apps (=E2=
+=80=9CRespect Our Platform Rules=E2=80=9D), and API Data usage (=E2=80=9CHa=
+ndle Data with Care=E2=80=9D).</span></li><li style=3D"font-family: Helveti=
+ca Neue, Helvetica, Arial, Lucida Grande, sans-serif;font-size: 16px;color:=
+ #5865f2;margin: 12px 0;letter-spacing: 0;line-height: 22px;font-weight: 60=
+0;"><span style=3D"color: #747F8D;font-weight: 400;"><strong>New monetizati=
+on requirements.</strong> We=E2=80=99ve added a section to the Policy (=E2=
+=80=9CMonetization Requirements=E2=80=9D) explaining conditions for develop=
+ers monetizing their apps. With these changes, we aim to create a more seam=
+less and secure user experience across our platform, which in turn enables =
+apps to grow.</span></li><li style=3D"font-family: Helvetica Neue, Helvetic=
+a, Arial, Lucida Grande, sans-serif;font-size: 16px;color: #5865f2;margin: =
+12px 0;letter-spacing: 0;line-height: 22px;font-weight: 600;"><span style=
+=3D"color: #747F8D;font-weight: 400;"><strong>Clarifications.</strong> We=
+=E2=80=99ve made clarifications in the Policy about: user reporting require=
+ments, app rating requirements, and use of API Data to train machine learni=
+ng and AI models.</span></li></ul>
+<p>The updated Terms and Policy will go into effect on July 8, 2024. Creati=
+ng or managing an Application on Discord, or otherwise using our APIs, on o=
+r after that date means you agree to these changes.</p>
+<p>In addition, we=E2=80=99ve also updated our Monetization Terms (which yo=
+u can review <a href=3D"https://click.discord.com/ls/click?upn=3Du001.a0NJ3=
+8DJJG1sulNx5wS1jjzYylRfR1dTnRDiglN63M-2BALe5E2M2Dfxn9DJPDKXtr6-2Fd3ao1gksxr=
+upMG3wcS7jSvQ7W2riu1TgOs2lnKxmWEsvhsvbMOfBkIqVySpMcxUsG-_3bi8RsB8B68kR8vFY3=
+-2BD03mb3mie2n1i2-2Bh8b-2FdBisOQaF3G5Q-2B4OLsVUlFDhZqY8on4w5q6aRcUWOwW8HM6C=
+GNNHFeNomv61aVeg8BUPzmxZntjL8GqNdK8Ggc5anN9WFcMjbsmB3MdYHeOd263Oxtgk3oMyAzn=
+gqPYwszZi4D6SXx5yhZwt-2FmzikWo3lBUBhdjtXe6H3vR-2FeVElw0oA-2BJdslhVuCE0TG9S1=
+5uE-2FhuL31rqFj8y2k0vQALPC39BaVDNQaYAar3Lvu4QIVPilA-3D-3D" style=3D"font-fa=
+mily: Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;color: #5=
+865f2;">here</a>) to offer you a new Growth Tier with lower fees while usin=
+g our Premium App features to help you continue improving and growing your =
+app.</p>
+<p>You can also learn more about these updates and our latest Premium App f=
+eatures (including one-time purchase support and your own app storefront) <=
+a href=3D"https://click.discord.com/ls/click?upn=3Du001.a0NJ38DJJG1sulNx5wS=
+1jg47LNijrYlxYHgEj-2F4b07X6BRL2l5dI59ibHklO-2FVJLiZDvoL8VszAy2G5sr1uEw3ecCD=
+mW-2FD1-2FKeaNyXTw-2Bc479gmHd7MyWq6otYFTuBUvfYsi_3bi8RsB8B68kR8vFY3-2BD03mb=
+3mie2n1i2-2Bh8b-2FdBisOQaF3G5Q-2B4OLsVUlFDhZqY8on4w5q6aRcUWOwW8HM6CKBolL6Yt=
+MMoNVAqFj-2BXzyytSaIAh1nnR-2BMep1gUTq-2BbXJ7qfDA7fRYblqy-2BlvTCkOt43BW446GI=
+BgACCAxBScHMxxjJa05tA5bDenIvhDVRlkLgQK6NUeXEm6d6SfJcPjV-2B0T1lEMKa87Moys1WJ=
+F644N75D9peyTpDcEvKbdj49fddTR2AjrMKqzXdsBabNQ-3D-3D" style=3D"font-family: =
+Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;color: #5865f2;=
+">here</a>.</p>
+<p>Thanks for being a member of our developer community!</p>
+<p>- Discord</p>
+</div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
+       =20
+          <!--[if mso | IE]><tr><td class=3D"footer-outlook" width=3D"604" =
+><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" c=
+lass=3D"footer-outlook" role=3D"presentation" style=3D"width:604px;" width=
+=3D"604" bgcolor=3D"transparent" ><tr><td style=3D"line-height:0px;font-siz=
+e:0px;mso-line-height-rule:exactly;"><![endif]-->
+   =20
+     =20
+      <div  class=3D"footer" style=3D"background:transparent;background-col=
+or:transparent;margin:0px auto;max-width:604px;">
+       =20
+        <table
+           align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"background:transparent;background-color:tr=
+ansparent;width:100%;"
+        >
+          <tbody>
+            <tr>
+              <td
+                 style=3D"direction:ltr;font-size:0px;padding:20px 0;paddin=
+g-bottom:0px;text-align:center;"
+              >
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:604px;" ><![endif]-->
+           =20
+      <div
+         class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-siz=
+e:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top=
+;width:100%;"
+      >
+       =20
+      <table
+         border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"vertical-align:top;" width=3D"100%"
+      >
+        <tbody>
+         =20
+              <tr>
+                <td
+                   align=3D"center" style=3D"font-size:0px;padding:0;word-b=
+reak:break-word;"
+                >
+                 =20
+      <div
+         style=3D"font-family:Poppins, Helvetica Neue, Helvetica, Arial, Lu=
+cida Grande, sans-serif;font-size:12px;line-height:24px;text-align:center;c=
+olor:#99AAB5;"
+      >Sent by Discord &bull;
+      <a href=3D"https://click.discord.com/ls/click?upn=3Du001.a0NJ38DJJG1s=
+ulNx5wS1jg47LNijrYlxYHgEj-2F4b07UMFx-2FY1i3YU2fQrHXY43ACSEi3_3bi8RsB8B68kR8=
+vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOQaF3G5Q-2B4OLsVUlFDhZqY8on4w5q6aRcUWOwW8=
+HM6CPDJxAKvfOBlwMTk0lDJFTfNsVCEpJmrvbELcpUUzWud-2FIyPia-2Bau8xd1la8bQz2qej2=
+kSTTPmR6xnqGmUPnDZepm5M17wJYEddxiHAexuNxY1kwoj-2FWj4Mt6LbxKFqaXtU1WcwPTam9W=
+ctJcm-2FS2HKLebkgXvW8j5ZOb0oPar6yOrhsXY-2FdqB7rlt7wQT6CZw-3D-3D" style=3D"c=
+olor: #0067E0; text-decoration: none"
+        >Check Our Blog</a
+      >
+      &bull; <a href=3D"https://click.discord.com/ls/click?upn=3Du001.a0NJ3=
+8DJJG1sulNx5wS1jnpxPanz-2BDufkvgs2NaX85-2BGP-2BXsyAU8iwP8huE2m291b3Kc_3bi8R=
+sB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOQaF3G5Q-2B4OLsVUlFDhZqY8on4w5q6=
+aRcUWOwW8HM6CD05vz4AOzbQPNsCWxEjuh7sipQwUkMztCC6v4s1A4iLjgrMLa1VexlGcDtHmZ-=
+2F-2FnT6C44lI49xzdMjyGATz75e-2FKmZlbk1kvGlZFPSS2aBrRL6OMXyv-2Brfgrr3IR1GUTs=
+76zv5bNDy9ybONl1DAbmho2r5EmllcQqGrRnoQIDls5dqk1LlOvRTwjgstsBi5cA-3D-3D" sty=
+le=3D"color: #0067E0; text-decoration: none">@discord</a></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td
+                   align=3D"center" style=3D"font-size:0px;padding:0;word-b=
+reak:break-word;"
+                >
+                 =20
+      <div
+         style=3D"font-family:Poppins, Helvetica Neue, Helvetica, Arial, Lu=
+cida Grande, sans-serif;font-size:12px;line-height:24px;text-align:center;c=
+olor:#99AAB5;"
+      >444 De Haro Street, Suite 200, San Francisco, CA 94107</div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td
+                   align=3D"left" style=3D"font-size:0px;padding:0;word-bre=
+ak:break-word;"
+                >
+                 =20
+      <div
+         style=3D"font-family:Poppins, Helvetica Neue, Helvetica, Arial, Lu=
+cida Grande, sans-serif;font-size:13px;line-height:1;text-align:left;color:=
+#000000;"
+      ><img src=3D"https://discord.com/api/science/117086477732675593/a84af=
+cbd-c192-4b8b-b3b2-74ecb18593f9.gif?properties=3DeyJlbWFpbF90eXBlIjogImRldm=
+Vsb3Blcl90b3NfdXBkYXRlIiwgImNhdGVnb3J5IjogInRyYW5zYWN0aW9uYWwifQ%3D%3D" wid=
+th=3D"1" height=3D"1" /></div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table><![endif]-->
+   =20
+   =20
+      </div>
+   =20
+      <img src=3D"https://click.discord.com/wf/open?upn=3Du001.haTE2qPloH-2=
+F2ryTwbxPfqbIqbCnaWyLpltjphaskZYPajIzmDXTEkYzw2c2df-2Bhcc2rYCp9Ez-2BpLCxcmK=
+qpexjZ4tobPUv07r7reNgkl5-2F92L04USb6NXvuI5jusLVnpYTLyOQbgYwSblMF2pQqcr0Uf20=
+Aqj9L2cHEaQliB0g2szdtvQ266oGyQWOHztCpyKQUZNBuq76Gh2XlAD7gyg0NlvaMnVWT7-2Fzl=
+9IbCgDovEuFK5njHqOzN59s6OB353IcSdaiZt0vEWeqCjcUbgRg-3D-3D" alt=3D"" width=
+=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !=
+important;border-width:0 !important;margin-top:0 !important;margin-bottom:0=
+ !important;margin-right:0 !important;margin-left:0 !important;padding-top:=
+0 !important;padding-bottom:0 !important;padding-right:0 !important;padding=
+-left:0 !important;"/></body>
+    </html>
+ =20=
+
+--8193e12151af8bdfb8266423a309869353995fdfe83bb60683b402732c24--

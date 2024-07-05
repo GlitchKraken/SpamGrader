@@ -1,0 +1,368 @@
+Delivered-To: chadefry@gmail.com
+Received: by 2002:a2e:8804:0:0:0:0:0 with SMTP id x4csp659120ljh;
+        Wed, 1 Sep 2021 12:24:36 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzB1awFZYPaqiFDyjrl17ZeGl8SmAYnrsp3xo9h0faxbqonZUBvuOXMuqEfnRbu5Bs21wIp
+X-Received: by 2002:a37:a352:: with SMTP id m79mr1203756qke.473.1630524276348;
+        Wed, 01 Sep 2021 12:24:36 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1630524276; cv=none;
+        d=google.com; s=arc-20160816;
+        b=S56E0CC82IU8/r4Sg+sSWCoHEZiiP2D3xswUAgO/gkkqhoAQd6Z18kuXrIhCOt9Rne
+         XlfmtK++MYtGSWSNVRIHaDqYtDckSlOzOeRRsMfJkhoXNKF/NG/JeH338l8cNldLmkg6
+         DGjBoKeRj8W6shQA7SgjIB6Tm3LI83Dn4TiOYq7cM54+CblEH+XdFp31w5rXFO7M7rGe
+         Z9uu4lIGGTJ3enuxSmbItvpodXqVjqArmmPpWt12eBpCg13PIQpvl/z0HXIX/xRuj/gf
+         lIRLwkyfiFo+Oi9CXGHWff+dB6LNmDVkabWewK55dVc13E0fmLhHwgPAtGplLEIBP9hX
+         DRLQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:to:reply-to:from:date:message-id
+         :dkim-signature;
+        bh=NedjVwEOA1LHIPA+6jEzl+p4/wixvYevPYHl0uWPc5k=;
+        b=J4wY4vxaYFrzKJselOo/4KKT3bJ0TuAxurKVCFJfprjB3KmUJdoAywgb3e7kuRWAB5
+         gGxul8g0q9yW5hXcipv0npVyJmm0OqpawivaooYy/JMsMKE4Wf6N0JdbefTz9MxY6spA
+         OCgIYotA7fKYx7sZ+BTpzkMM/fWeFpKuZpp0tOb8lUkyhNgOfZx/pQmMLPmt81bL9kaa
+         FxmDtQOJNzh/cH9jOXeBsVwKNf6AGh3zjU0cV6p427C0Ohtn6pv1eBnBMmaja6tDF42l
+         l+OZJ2K3tELrk2PV7W8+kiSvJrbFeBvFGT6cgY03aM9xhS+mpIZT6LQUSn//ei819ak0
+         GIsg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass (test mode) header.i=@credentialssolutions.com header.s=mail header.b="a4V6CMF/";
+       spf=pass (google.com: domain of mysupport@credentialssolutions.com designates 3.90.181.203 as permitted sender) smtp.mailfrom=mysupport@credentialssolutions.com
+Return-Path: <mysupport@credentialssolutions.com>
+Received: from mail1.escrip-safe.com (mail1.escrip-safe.com. [3.90.181.203])
+        by mx.google.com with ESMTPS id j19si200998qtj.107.2021.09.01.12.24.36
+        for <chadefry@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 01 Sep 2021 12:24:36 -0700 (PDT)
+Received-SPF: pass (google.com: domain of mysupport@credentialssolutions.com designates 3.90.181.203 as permitted sender) client-ip=3.90.181.203;
+Authentication-Results: mx.google.com;
+       dkim=pass (test mode) header.i=@credentialssolutions.com header.s=mail header.b="a4V6CMF/";
+       spf=pass (google.com: domain of mysupport@credentialssolutions.com designates 3.90.181.203 as permitted sender) smtp.mailfrom=mysupport@credentialssolutions.com
+Received: from D7835F2X.CREDENTIALSSOLUTIONS.COM (ip-10-1-1-94.ec2.internal [10.1.1.94])
+	by mail1.escrip-safe.com (Postfix) with ESMTP id 881EE182487
+	for <chadefry@gmail.com>; Wed,  1 Sep 2021 15:24:35 -0400 (EDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple;
+	d=credentialssolutions.com; s=mail; t=1630524276;
+	bh=xqQoj/HDqftW96qtZ2XCpUwsoqdQ9sQbqKzZzXMgM6A=;
+	h=Date:From:Reply-To:To:Subject:From;
+	b=a4V6CMF/u1MHm95nYXZynE6EeDGHqVBKQG9si1a1xtSZ+J9dYN7Te6cfzC6wkOoyP
+	 3xqN4C8sKjyzyY1EaKUdyw8fB/A9AdDrV4Wv3zIqDCHljEbgYBgx8xLXs1nmqELXwK
+	 0lOFVdXa4k8MHkgvd5zclIdMlr6TNHS/KQjlV4kA=
+Message-ID: <918151284.1630524252071.JavaMail.cibatch@D7835F2X.CREDENTIALSSOLUTIONS.COM>
+Date: Wed, 1 Sep 2021 14:24:12 -0500 (CDT)
+From: mysupport@credentialssolutions.com
+Reply-To: noreply@credentialssolutions.com
+To: chadefry@gmail.com
+Subject: CI-R51: PDF Transcript Notification Part 1 - 1JA7914151
+Mime-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_1477_-1814306671.1630524252071"
+
+------=_Part_1477_-1814306671.1630524252071
+Content-Type: text/html
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+<HTML><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>
+		PDF Link
+		</title>
+		<style type="text/css">
+			td, th { font-family:verdana, Arial, sans-serif; font-size:14px;}
+			#emailTable { border-collapse:collapse; height:100% !important; margin:0; padding:0; width:100% !important; }
+			#emailCell { border-top-width:0; height:100% !important; margin:0; padding:20px 10px; width:100% !important; }
+			#noReplyText { color:#808080; text-align: center;}
+			#headerBorder { border: 7px solid #245397; }
+			#schoolImageContainer { text-align: left; }
+			#schoolNameContainer { text-align: right; }
+			#emailTitle { font-weight: normal !important; font-size: 24px; text-align:center; margin:0px; }
+			.secondaryTitle { font-weight: normal !important; font-size: 20px; text-align:center; margin:0px; }
+			.emailSeparator { border: 1px solid #c0c0c0; }
+			.tableSeparator { border: 1px solid #EEEEEE; }
+			.tableContainer { width: 90%; }
+			.buttonContainer { text-align: center; }
+			.buttonLink { color: #ffffff; background-color: #245397; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-family: verdana,Arial,sans-serif; }
+			.buttonText { margin: 10px 20px; }
+			.help-text { color: #777; font-size: 12px; text-align: center;}
+			.text-center { text-align: center; }
+			.table-border-collapse { border-collapse:collapse; width:100%; }
+			.table-border-0 {border:0px;}
+			.width-100 { width: 100%; }
+			.smallTable { border-collapse:collapse; }
+			.smallTable	th, .smallTable td { font-size: 12px !important; }
+			#selfServiceTitle { font-weight: normal !important; font-size: 20px; text-align:center; margin:0px; }
+			#emailfooterContainer { background-color: #363839; }
+			.footerLink, .footerLink a { color: #d1d2d4; text-align: center; }
+			.footerText { color: #d1d2d4 !important; text-align: center; }
+		</style>
+	</head>
+	<body>
+		<table id="emailTable" class="table-border-0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+			<tr>
+				<td id="emailCell" valign="top">
+					<table class="table-border-collapse table-border-0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td>&nbsp;</td>
+							<td width="700">
+								<table class="table-border-collapse table-border-0" cellpadding="0" cellspacing="0" width="100%">
+									<tr>
+										<td valign="top">
+											<table class="table-border-collapse table-border-0" cellpadding="0" cellspacing="0" width="100%">
+												<tr>
+													<td id="noReplyText" text-align="center" valign="top">
+														<strong><i><span style="color:#808080;">Do not reply to this email. Any replies will be deleted.</span></i></strong>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<table class="table-border-collapse table-border-0" cellpadding="0" cellspacing="0" width="100%">
+															<tr>
+																<td class="emailSeparator" bordercolor="#c0c0c0" style="border: 1px solid #c0c0c0;"></td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td valign="top">
+											<table class="table-border-collapse table-border-0" cellpadding="0" cellspacing="0" width="100%">
+												<tr>
+													<td valign="top">
+														<table class="table-border-collapse table-border-0" cellpadding="0" cellspacing="0" width="100%">
+															<tr>
+																<td id="schoolImageContainer" text-align="left">
+																	<img src="cid:SCHLOGO" alt="School Logo" />
+																</td>
+																<td id="schoolNameContainer" text-align="right">
+																	Angelo State University<br />
+																	
+																	San Angelo, TX
+																	
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+												<tr><td>&nbsp;</td></tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<table class="table-border-collapse table-border-0" cellpadding="0" cellspacing="0" width="100%">
+												<tr>
+													<td id="headerBorder" bordercolor="#245397" style="border:7px solid #245397;"></td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+                            											<tr>
+										<td align="center" id="mainBody" valign="top">
+											<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse" width="100%">
+												<tr><td>&nbsp;</td></tr>
+												<tr>
+													<td>
+														<h1 id="emailTitle" align="center">PDF Transcript Notification - Part 1</h1>
+													</td>
+												</tr>
+												<tr><td>&nbsp;</td></tr>
+												<tr>
+													<td>Official Transcript delivered through TranscriptsNetwork&#8482; by Credentials Solutions, LLC. under contract to <strong>Angelo State University (San Angelo, TX).</strong></td>
+												</tr>
+												<tr><td>&nbsp;</td></tr>
+												<tr>
+													<td>
+														<table class="table-border-collapse" border="0" cellpadding="0" cellspacing="0" width="100%">
+															<tr>
+																<td>&nbsp;</td>
+																<td class="tableContainer" width="90%">
+																	<table class="table-border-collapse" border="0" cellpadding="0" cellspacing="0" width="100%">
+																		<tr>
+																			<td>
+																				<table class="table-border-collapse" border="0" cellpadding="0" cellspacing="0" width="100%">
+																					<tr>
+																						<td width="30%" align="right"><strong>To:&nbsp;&nbsp;</strong></td>
+																						<td>chadefry&#64;gmail.com</td>
+																					</tr>
+																					<tr>
+																						<td width="30%">&nbsp;</td>
+																						<td>Chad Fry</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																		<tr><td>&nbsp;</td></tr>
+																		<tr>
+																			<td>This email is to inform you that:</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<ul>
+																					<li><em>Chad Fry</em> has ordered his/her academic transcript from <em>Angelo State University</em> which is being delivered to you electronically in Adobe PDF format.</li>
+																					<li><strong>For security purposes, to download this transcript you will need the access code contained in Part 2 of this notice which will be sent in a separate email 5 minutes after this email.</strong></li>
+																					<li>Once downloaded, you should save this PDF transcript in a secure location on your computer as it will become ineligible for downloading at 7:00 pm CST on the second business day after you initially open or download it.</li>
+																					<li>You will not be able to download this transcript from our server once it has been deleted.</li>
+																					<li>Once this transcript has been downloaded and until 2-28-2022, you may request that we validate the authenticity of the document and confirm that it has not been modified since it was originally produced by clicking: <a href="https://www.credentials-inc.com/cgi-bin/cicgipdf.pgm?VALID">Validate</a>.</li>
+																					
+																					
+																					<li>For additional information, please see the transcript cover page (page 1 in the PDF).</li>
+																				</ul>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+																<td>&nbsp;</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+												<tr><td>&nbsp;</td></tr>
+												<tr>
+													<td>
+														<table border="0" cellpadding="0" cellspacing="0" width="100%">
+															<tr>
+																<td class="emailSeparator" border="1" bordercolor="#c0c0c0" style="border: 1px solid #c0c0c0;"></td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+												<tr><td>&nbsp;<br/>&nbsp;</td></tr>
+												<tr>
+													<td class="buttonContainer" align="center">
+														<!--[if mso]>
+															<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.credentials-inc.com/CGI-BIN/PDFCGI2.pgm?LOGONP1JA7914151chadefry@gmail.com" style="height:28pt;v-text-anchor:middle;width:165pt;" arcsize="5%" strokecolor="#245397" fillcolor="#245397">
+																<w:anchorlock/>
+																<center style="color:#fff;font-family: verdana,Arial,sans-serif;font-size:16px;">Download Transcript</center>
+															</v:roundrect>
+														<![endif]-->
+														<a href="https://www.credentials-inc.com/CGI-BIN/PDFCGI2.pgm?LOGONP1JA7914151chadefry@gmail.com" style="background-color:#245397;border:1px solid #245397;border-radius:3px;color:#fff;display:inline-block;font-family: verdana,Arial,sans-serif;font-size:16px;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;mso-hide:all;">Download Transcript</a>
+													</td>
+												</tr>
+												<tr><td>&nbsp;</td></tr>
+												<tr>
+													<td class="text-center" align="middle"><small>If the download button does not work, please cut and paste the following URL into your browser:<br /><a href="https://www.credentials-inc.com/CGI-BIN/PDFCGI2.pgm?LOGONP1JA7914151chadefry@gmail.com" target="_blank">https://www.credentials-inc.com/CGI-BIN/PDFCGI2.pgm?LOGONP1JA7914151chadefry@gmail.com</a></small></td>
+												</tr>
+												<tr><td>&nbsp;</td></tr>
+												<tr>
+													<td class="text-center" align="middle"><small>For more information about transcripts from Angelo State University, please visit their website at:<br /><a href="http://www.angelo.edu/services/registrars_office/" target="_blank">http://www.angelo.edu/services/registrars_office/</a><small></td>
+												</tr>
+												<tr><td>&nbsp;</td></tr>
+												<tr>
+													<td class="help-text"><small>EMAIL NOTICE: This email message and any attachments may contain confidential information. If you receive this email message in error, please notify us at (847)716-3005 and then delete the message and any attachments from your computer. You should not disclose, copy or distribute this information, or take any action relying on it. Thank you.</small></td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+
+									<tr>
+										<td valign="top">
+											<table class="table-border-collapse table-border-0" cellpadding="0" cellspacing="0" width="100%">
+												<tr><td>&nbsp;<br/>&nbsp;</td></tr>
+												<tr>
+													<td id="emailfooterContainer" style="background-color:#363839" valign="top">
+														<table class="table-border-collapse table-border-0 width-100" cellpadding="0" cellspacing="0" width="100%">
+															<tr>
+																<td colspan="2">&nbsp;</td>
+															</tr>
+															<tr>
+																<td class="footerLink" text-align="center" colspan="2"><span style="color:#d1d2d4"><a href="https://www.credentials-inc.com/CIHELP/CustServ.html" style="color: #d1d2d4;">Customer Service</a></span></td>
+															</tr>
+															<tr>
+																<td colspan="2">&nbsp;</td>
+															</tr>
+															<tr>
+																<td class="footerText" text-align="center" colspan="2" style="color: #d1d2d4">&copy; 2017-2021 Credentials Solutions, LLC All rights reserved </td>
+															</tr>
+															<tr><td colspan="2">&nbsp;</td></tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td>&nbsp;</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html></HTML>
+------=_Part_1477_-1814306671.1630524252071
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-ID: <SCHLOGO>
+Content-Disposition: INLINE
+
+R0lGODlhegBLAIcAAAAA3gAG3wAI3wAN3wAR3wAV3wAA4QAJ4QAV4AAZ4AAa5QAd4AAd5AAs3hg3
+3xo43gAh4AAh5AAl4AAp4AAu4AAy4AI04AU04Ak14A444RM54Rw94SE53i8+3SE/4TZB3DpC2yJB
+4SdD4iZE4ilF4i5G4i5J4jFJ4jRL4jVM4jlO4zpQ4zxR40JG2kdI2UlK2VJO11lR1EFV40RW40ZY
+40hZ40lb5E1d5FBg5FVk5Vhm5Vpo5Vxp5V5s5WhUzG9aymFX02NY0mhb0Xpmy31oyWJn4GFt5WNx
+52Vx52l052x3521552186nF753N+6HR+6HaA6HiB6HqE6X2F6X+I6ZN1vJZ4vJl6u6B/t4RtxYBq
+yIxywv6+APm8Lve8P/q+Mvi9Od2qeu62WvW7RvO5S+SvbuKtc+awa+qyZOiya//BAP/CBf/EAP/C
+Cf/CDv/CEP7BFf/EIf/EJfzAKPzALP/FKP/FLf/HOv/HPf/HQf/IRP/KSP/JTf/MXv/OZf/Pav/P
+bPrMff/Qa//Qbf/Qcf/Rdf/Tev/TfP/UeL+Un6yGra+KrKSCtKmFsbWOprOMqbiPprCNsruSooKK
+6YOM6oSL6oWN6oaQ64mR6oyT6o2U65GY7JSa7Jad7Jmf7Jqg7Zyi7Z6k7b6rzLar26Cm7aKo7qSp
+7qas76mu76yx762y8K+08bC08LS48Lm98b3B8rzB9MCWnsSYmcmclM+gjtimge2/gP/Ugf/Vhf/W
+iv/XjP/akv/alv/cnP/eo//fp//gpP/hqf/js//mvMDD88HF88XH8sTH9MXI9MvN9MzO9c7Q9d3Z
+7dDS9dLU9dTW9tbY9tjZ99vc99zd99ze+N7g+P/oxf/pyf/rzf/szf/t0v/u1f/v2P/w0//w1//w
+2v/x3P/03ubh7+Hi+OLk+eXm+efo+ujp+unr/Ovs++3u++/w+//z4f/04v/05f/26f/37P/46v/4
+7fHx/PP0/PX1/ff4/f338f/58f769f/89vn5/fv8/v77+P/8+f7+/iH5BAAAAP8ALAAAAAB6AEsA
+AAj/AP8JHEiwoMGDCBMqXMiw4Lpnp5CMqFDBggxKr6rZa8ixo8ePIBmqS9bJSIkKFChQXFnhgoca
+UVBBoxeyps2bHflJwyQBAAAKKGrMOEFhgE8IKik2gGB0QA1T5PjhnEo1pDpQK6DAIlePn9SB/OiV
+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
++1ANrLAEJmABFpACS7AK04B+NREQADs=
+------=_Part_1477_-1814306671.1630524252071--
+

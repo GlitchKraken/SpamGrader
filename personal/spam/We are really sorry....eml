@@ -1,0 +1,113 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:6695:b0:1a6:aa79:77cb with SMTP id so21csp1612389rwb;
+        Tue, 2 Jul 2024 12:59:31 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGJPitztyQiwYFxFFLuYioBOmuv0jo4GD2ROhh6/KeJORiwlXMv+vow7PwmqsR4v5W8bkgh
+X-Received: by 2002:adf:b1d1:0:b0:367:8a24:1fde with SMTP id ffacd0b85a97d-3678a242061mr1426931f8f.17.1719950371659;
+        Tue, 02 Jul 2024 12:59:31 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719950371; cv=none;
+        d=google.com; s=arc-20160816;
+        b=C+PO6F9jykAki1SvfiV+oQbKDhHH2EYzfUaoUxYm7pPi0LXo4v2YUKnY8kP64KAk7y
+         prd6IusNprtnUT0vx7heA4RvoQksI7HnChE+xTEcJIhgf7Cw/mKnwHqMxqUO/9qBM9SW
+         JtagY7pGDInk19CnpxMvrhBNDShWMguu3tpqYEn9WnJ77LRbJAo4E9iMbMoztIANsFno
+         MewfcQQfaaIk3WY9M0P6HweVX1We5Rjsu5K5EywJmwJ6y836G22lpk5t14rbJGTFpjOA
+         n405b98J/J7kiRo/kjcgEajogvmVvaOY68bSEhvD22OlJFGBw+4tJyDMEnGxLDlCmKqq
+         rlrw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:mime-version:dkim-signature:message-id:date;
+        bh=32uB2b+df25zUxh/u7xJM/mlqMZqCE7TEG64XFb0HBc=;
+        fh=BfH3tuO4vWcZZHlWy5SVIaCbaMAJl+146y7dupIPkPQ=;
+        b=clMs0j84/ZQYEqMSOUkSwZL4sk0tB7+jayA1maWWP02FE1bDFgjR7XuO9rdIhFDPpJ
+         XhAEwJ5rvKVW3grrmn6L+0Lns7PEUy0v9z54/txdT2KynUlXOl+mgdoRqrlEE1UvV4ro
+         4XVKXxT7KBP+9SYi5jz3jGRm+K4etka5G6aYWINhIsy7Wle2zDqgfih6m7NkSCG2nNqI
+         2VfBuSfeSrTs5n4wf8JLziS6Z5bfoajNPLp0Fsf2IdEfRvX8o3D34FM/twmHm5+9mpGd
+         VLGH+TzX3pqMAXVJzEyvcUZGnGF3Zt6HAo9q5ioa4NAuO4HJ5rJBwmW4XJ4iW7Fgow1g
+         U/qA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@printingproxies.com header.s=default header.b=C5WuogdZ;
+       spf=pass (google.com: domain of donotreply@printingproxies.com designates 185.165.170.199 as permitted sender) smtp.mailfrom=donotreply@printingproxies.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=printingproxies.com
+Return-Path: <donotreply@printingproxies.com>
+Received: from printingproxies.com (printingproxies.com. [185.165.170.199])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-3675a10dbdfsi6289079f8f.989.2024.07.02.12.59.31
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 02 Jul 2024 12:59:31 -0700 (PDT)
+Received-SPF: pass (google.com: domain of donotreply@printingproxies.com designates 185.165.170.199 as permitted sender) client-ip=185.165.170.199;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@printingproxies.com header.s=default header.b=C5WuogdZ;
+       spf=pass (google.com: domain of donotreply@printingproxies.com designates 185.165.170.199 as permitted sender) smtp.mailfrom=donotreply@printingproxies.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=printingproxies.com
+Date: Tue, 02 Jul 2024 12:59:31 -0700 (PDT)
+Message-ID: <66845c23.5d0a0220.47bed.0822SMTPIN_ADDED_MISSING@mx.google.com>
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=printingproxies.com; s=default; h=To:From:Subject:MIME-Version:Content-Type
+	:Sender:Reply-To:Date:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=32uB2b+df25zUxh/u7xJM/mlqMZqCE7TEG64XFb0HBc=; b=C5WuogdZ9PpmfFr/b1WanKnK1u
+	ymlwa1HreMEG0Jtl5nbAPpcdXvgm+Cqnhkq0FZMKI2b+ebnBgiuth1vv81j3SRuqnYXMYvNOeo2wd
+	q9qabe/96/tD4y6r7edOxlDXzg/ndi090fHNjolRmGjkVXRe6jHknjuPCopXSvNe6n2fz6/2E2YhS
+	qth5+0UqP2+e37iAUmpY7x+A0B7VcR5+tCK8iUnGGCHZK7CpA5p5r/BukGxwcFsev0i9qjBZnaoqL
+	m796dFK2PZ+uDR1RkmZ/Rw3O+00LMVTBYCewqcpo4/YCGB2Vxne35BpNcLT2gHKbWnDVisdsu0Akv
+	/2iygTUA==;
+Received: from printingproxies.com ([185.165.170.199]:56628 helo=smtp.printingproxies.com)
+	by smtp.printingproxies.com with esmtpsa  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.97.1)
+	(envelope-from <donotreply@printingproxies.com>)
+	id 1sOjez-0000000HG5O-0xOk
+	for blackpapermoon42@gmail.com;
+	Tue, 02 Jul 2024 12:59:30 -0700
+Content-Type: multipart/mixed; boundary="===============0277144964986508076=="
+MIME-Version: 1.0
+Subject: We are really sorry...
+From: PrintingProxies <donotreply@printingproxies.com>
+To: blackpapermoon42@gmail.com
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - smtp.printingproxies.com
+X-AntiAbuse: Original Domain - gmail.com
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - printingproxies.com
+X-Get-Message-Sender-Via: smtp.printingproxies.com: authenticated_id: donotreply@printingproxies.com
+X-Authenticated-Sender: smtp.printingproxies.com: donotreply@printingproxies.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+
+--===============0277144964986508076==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+
+PGltZyBzcmM9Imh0dHBzOi8vd3d3LnByaW50aW5ncHJveGllcy5jb20vbmV3c2xldHRlcnIvdHJr
+L3Rya19vcGVuZWQucGhwP2VtYWlsSWQ9NGY4MjEzYjAtYjBhYi00ZTEyLWE4NDQtZDI5Y2EyYWY5
+MTNhJmNsaWVudElkPWQ2NGEwM2U1LWMwN2EtNDFjZS1iOGIwLTIxOGEyMGM1ZjdlOCIgd2lkdGg9
+IjIiIGhlaWdodD0iMiIgYWx0PSJpbWFnZSBmb3IgZW1haWwiIC8+PGRpdj48c3BhbiBzdHlsZT0i
+Y29sb3I6IHZhcigtLWJzLWJvZHktY29sb3IpOyBmb250LWZhbWlseTogdmFyKC0tYnMtYm9keS1m
+b250LWZhbWlseSk7IGZvbnQtc2l6ZTogdmFyKC0tYnMtYm9keS1mb250LXNpemUpOyBmb250LXdl
+aWdodDogdmFyKC0tYnMtYm9keS1mb250LXdlaWdodCk7IHRleHQtYWxpZ246IHZhcigtLWJzLWJv
+ZHktdGV4dC1hbGlnbik7Ij5XZSBhcmUgcmVhbGx5IHNvcnJ5Li4uJm5ic3A7PC9zcGFuPjwvZGl2
+PjxkaXY+QnV0IHdlIGFyZSBzdGFydGluZyA8Yj5QcmludGluZ1Byb3hpZXMnPC9iPjxiPnM8L2I+
+Jm5ic3A7bWVtb3JpYWwgZGF5IHByb21vIDxiPkVBUkxZPC9iPiEmbmJzcDs8c3BhbiBzdHlsZT0i
+dGV4dC1hbGlnbjogdmFyKC0tYnMtYm9keS10ZXh0LWFsaWduKTsiPvCfmYw8L3NwYW4+PC9kaXY+
+PGRpdj48ZGl2PjxhIGhyZWY9Imh0dHBzOi8vd3d3LnByaW50aW5ncHJveGllcy5jb20vP3JlZj0x
+MjIzOCI+PGltZyBzcmM9Imh0dHBzOi8vd3d3LnByaW50aW5ncHJveGllcy5jb20vbmV3c2xldHRl
+cnIvaW1nL3RtcF9DXzY2ODQxZjQxODg3NGUucG5nIj48L2E+PGJyPjxicj48L2Rpdj48ZGl2Pjxz
+cGFuIHN0eWxlPSJ0ZXh0LWFsaWduOiB2YXIoLS1icy1ib2R5LXRleHQtYWxpZ24pOyI+PGRpdiBz
+dHlsZT0iIj5Vc2UgY291cG9uIDxiPkpVTFk0VEgmbmJzcDs8L2I+ZHVyaW5nIGNoZWNrb3V0IGZv
+ciA8Yj4xNSUgZGlzY291bnQhJm5ic3A7PC9iPk9ubHkgdmFsaWQgdW50aWwgSnVseSA0dGggMTEi
+NTlwbShQVCkuPGJyPjxicj48L2Rpdj48ZGl2IHN0eWxlPSIiPkFmdGVyIG91ciByZWNlbnQgYW1h
+emluZyBjYXJkc3RvY2sgYW5kIHByaW50aW5nIHVwZ3JhZGUsIHRpbWUgdG8gdXBncmFkZSB5b3Vy
+IGRlY2tzITxicj5SZW1lbWJlciwgdGhpcyBpcyBhJm5ic3A7PGI+T05DRSBBIFlFQVIgc2l0dWF0
+aW9uISAtIERvbid0IG1pc3Mgb3V0ITwvYj48L2Rpdj48ZGl2IHN0eWxlPSIiPjxicj48L2Rpdj48
+ZGl2IHN0eWxlPSIiPjxkaXY+PGEgaHJlZj0iaHR0cHM6Ly93d3cucHJpbnRpbmdwcm94aWVzLmNv
+bS8/cmVmPTEyMjM4Ij5QcmludGluZ1Byb3hpZXMuY29tPC9hPiAmYW1wOyA8YSBocmVmPSJodHRw
+czovL3d3dy5tdGdwcm94eS5jb20vIj5NVEdwcm94eS5jb208L2E+PC9kaXY+PGRpdj5IYXZlIGEg
+Z3JlYXQgNHRoIG9mIEp1bHkhPC9kaXY+PGRpdj5BbnRvaW5lPC9kaXY+PC9kaXY+PC9zcGFuPjwv
+ZGl2PjwvZGl2Pjxicj48ZGl2IHN0eWxlPSJ0ZXh0LWFsaWduOmNlbnRlciI+PGEgc3R5bGU9ImNv
+bG9yOmJsYWNrO2ZvbnQtd2VpZ2h0OmJvbGQiIGhyZWY9Imh0dHBzOi8vd3d3LnByaW50aW5ncHJv
+eGllcy5jb20vbmV3c2xldHRlcnIvcnVuLnBocD91bnN1Yj1ibGFja3BhcGVybW9vbjQyJTQwZ21h
+aWwuY29tIj51bnN1YnNjcmliZTwvYT48L2Rpdj4=
+
+--===============0277144964986508076==--

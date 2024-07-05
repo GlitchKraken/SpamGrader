@@ -38,7 +38,8 @@ def main():
     parser.add_argument("-d", help="Scan all email files in the current directory (supports .eml and .msg files)", required=False, action="store_true")
     parser.add_argument("-V", help="Use VirusTotal for analysis (Requires API Key) ((I've included one of my own for the projects sake))", required=False, action="store_true")
     parser.add_argument("-vv", help="set verbose mode (extra debugging text)", required=False, action="store_true")
-    parser.add_argument("-ai", help="Have a council of AI parse the email's content, and vote on wether each consider the message to be spam or not", required=False, action="store_true")
+    parser.add_argument("-ai", help="Several AI will parse the email-body's content, and vote on wether each consider the message to be spam or not", required=False, action="store_true")
+    parser.add_argument("-W", help="Weighted scores. By Default, each module will only ", required=False, action="store_true")
     # below line of code basically just prints the help option if no args were supplied.
     #Source: https://stackoverflow.com/questions/8259001/python-argparse-command-line-flags-without-arguments
     global args
@@ -106,7 +107,7 @@ def main():
         emails[args.f] = email_score_breakdown
         # done with calculations, reset the breakdown, and write the overall results to a file, JSON formatted.
         email_score_breakdown = []
-        with open("Results.txt", "+w") as Results:
+        with open("Results.json", "+w") as Results:
             Results.write(json.dumps(emails, indent=4))
         rich.print("\n\n\n"+json.dumps(emails, indent=4))
       
@@ -168,7 +169,7 @@ def main():
         sortedEmails = dict(sorted(emails.items(), key= lambda x: x[1][0]["Total Risk Score:"]))
         sortedEmailsReverse = dict(sorted(emails.items(), reverse=True, key= lambda x: x[1][0]["Total Risk Score:"]))
         
-        with open("Results.txt", "+w") as Results:
+        with open("Results.json", "+w") as Results:
             # Since the terminal prints top to bottom, we display the default-sort first, so
             # that whoever is running the output will see the priority targets first.
             # the inverse is true to the file we write to.
@@ -326,7 +327,7 @@ def riskEntropy(email):
         if args.vv:
             #print("Realtive Entropy for this email: "+ str(FromAddrEntropy))
             print("=======================================================")
-            print(fromAddr)
+            print("Whole From Addr: " + str(fromAddr))
             print("Sender Name: "+ senderName)
             print("Sender Name no punc: "+ senderNameNoPunc)
             print("senderDomain no-TLD: " + senderDomainNoTLD)

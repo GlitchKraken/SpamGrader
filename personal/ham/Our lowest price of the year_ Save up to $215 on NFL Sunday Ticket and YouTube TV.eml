@@ -1,0 +1,1707 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6358:9d86:b0:18d:9c46:f787 with SMTP id d6csp119517rwo;
+        Thu, 25 Apr 2024 21:45:09 -0700 (PDT)
+X-Received: by 2002:a67:fb8d:0:b0:47b:c4d7:91a4 with SMTP id n13-20020a67fb8d000000b0047bc4d791a4mr1460601vsr.29.1714106709026;
+        Thu, 25 Apr 2024 21:45:09 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1714106709; cv=none;
+        d=google.com; s=arc-20160816;
+        b=PGwCZIX8sDN9YoZBF3/3RcesB2cAsZJ+4lm1YbM25Vw7afIn2yHBIp32v5jtLqtGY6
+         aI/Tr4YMWIK3WKhN2pbCf+zedd8sb1HIkEv8ngIiA50r19NMQayzspHnkLbM7R1wrcJm
+         3zmAjM/wDeoZ+x1jw/Lqn6UnHA8tzFhVVWOVwKlQFkO9kML81yoQpg7h+zYBRbPjm7T2
+         Us1haF0bRLNxnVqMz4Wr1a7ZZfFgXXZmNoBtacKEIstzu6FT57QHCch7R1tAzjxWz60I
+         uX9GBINtAPhCBiNJeuFvQDOO5fa9kX5OExjA/pliaUmDZtnW4ZMWNW+MW2SuA6cjMf/Y
+         bciA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:message-id:list-id:feedback-id:precedence
+         :list-unsubscribe:reply-to:date:mime-version:dkim-signature;
+        bh=FaH+AKp1y8OsMqOCDdS+xbvWXoPDGq+/O5hjrgCo3e4=;
+        fh=c9Ng5lX/PRNTyWkn1/XM/+Hal06rmDX0OaSwLyM6lZA=;
+        b=EXAfesn/wTCE/IdYh92c8dKL0TbSAbpSnFn15i5SP3LlhExuB1p2CjLSEo18RUsapy
+         PjCsfp+mrKkCd5Yt7MDOOBO0jbGab+bIHPimmSTegn++j/RRkgMJ1CqxRwRQpQKiOk7k
+         cvx/BYhtCzgUHVZmxWD8MugKqUylvrdyTyEqiO240ZJWZdDa8FlOqi9TBbdbj6ZJZoXQ
+         LRE41HeygVssaaeg6ip1Mp5U+ldxaOx2ZOz1n2VPu6XHUiMosTrAK6UyvSHjaFp6L1qS
+         Sv/UtnVOH5UgKDUd4F4Pu+JVhBeQAWYf3OY+gXQiVrRs9HLF9JTtQyHG1Xv5AzHgd2ax
+         yA7Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@youtube.com header.s=20230601 header.b=EKgQsjUn;
+       spf=pass (google.com: domain of 3vderzgglejsij-m9kgttjpop69.7jhgg57fk5k9mhjjizxbh5dg.7jh@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3VDErZggLEJsIJ-M9KGTTJPOP69.7JHgG57FK5K9MHJJIZXBH5DG.7JH@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=youtube.com
+Return-Path: <3VDErZggLEJsIJ-M9KGTTJPOP69.7JHgG57FK5K9MHJJIZXBH5DG.7JH@scoutcamp.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id p3-20020a67e943000000b0047866005c0dsor14379850vso.14.2024.04.25.21.45.08
+        for <Blackpapermoon42@gmail.com>
+        (Google Transport Security);
+        Thu, 25 Apr 2024 21:45:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3vderzgglejsij-m9kgttjpop69.7jhgg57fk5k9mhjjizxbh5dg.7jh@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@youtube.com header.s=20230601 header.b=EKgQsjUn;
+       spf=pass (google.com: domain of 3vderzgglejsij-m9kgttjpop69.7jhgg57fk5k9mhjjizxbh5dg.7jh@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3VDErZggLEJsIJ-M9KGTTJPOP69.7JHgG57FK5K9MHJJIZXBH5DG.7JH@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=youtube.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=youtube.com; s=20230601; t=1714106708; x=1714711508; dara=google.com;
+        h=to:from:subject:message-id:list-id:feedback-id:precedence
+         :list-unsubscribe:reply-to:date:mime-version:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=FaH+AKp1y8OsMqOCDdS+xbvWXoPDGq+/O5hjrgCo3e4=;
+        b=EKgQsjUnJbVSH4l7qRf5C+eG1KMsyO7oWJUBLlIRp60ro7IqfMhMWI8yaO/gOJ/thC
+         BmNkjhCnwfSeYesmRJc3WtmzgzQjPvzjyCQjnXKf04xfuB3PrxHCyAvP6uTiuOUeF5Qv
+         1WVkLBy3FowroBgW/JUNIxseigtuOktimZpQl5Zk2hRaPW0cEhjhlHmX0UTjLFsY3GTu
+         76fDo9CAmiSxIJpBgjqw5lqWQmYz7voH4Oz3UL6ASjsTgCwNwserTweYjgdNXF9jsaE3
+         HjFT3zmheVCLb2Uutxfpncd0HJrBcX+tan72cT2HAzx6EHtYwMrxCac62cPcmnugc9FZ
+         sGQg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1714106708; x=1714711508;
+        h=to:from:subject:message-id:list-id:feedback-id:precedence
+         :list-unsubscribe:reply-to:date:mime-version:x-gm-message-state:from
+         :to:cc:subject:date:message-id:reply-to;
+        bh=FaH+AKp1y8OsMqOCDdS+xbvWXoPDGq+/O5hjrgCo3e4=;
+        b=Qc3nmw5Aa7dHKqER/oOdomFcDo+fouxkgX44GDsYRiI7AD03aPxGARM4gEdNBxzPoM
+         rLdNzBNO8JAaa1iIASr4c6prbOM98zEvKJhxcTewQpANVjXdsMj1HXl2+DzD+1TutIuo
+         mWkoAYeKWcmvTUm119kRr95h3fMlNVNuA4AQt4QvXcpdvp2sXrrUTNj4uTiZpWQhNlaa
+         hU0w5O2yVGjAHC5TwR4sQTGPJ2W7sB1DRkQb8qh3tecNG/UPiIzZQDUE056TcTcx6IpZ
+         rBiV79VCdu3HXu/P5mZ+4E6nK0YYpfTIo3KTELNiB2Wn3Q6b/nJIctTQe2dLDomkf4Vd
+         6OFw==
+X-Gm-Message-State: AOJu0YxtH3mgcdF/kabvnaTDitK7GQiyzQKqIimbSw9faSyPEsQEK5ds
+	vZriXE6rJU637yKxPcR0wGTb86vl67SikfLmu716OdIESFuV0VhdXsum
+X-Google-Smtp-Source: AGHT+IFDrkIUkOgVmUzCCKEu4mIOjjRZWEVd6HsOLwYysrcTDG69OeLsrpgw3C6sGMk9ar1mel1DiYk=
+MIME-Version: 1.0
+X-Received: by 2002:a67:b344:0:b0:47b:b947:578a with SMTP id
+ b4-20020a67b344000000b0047bb947578amr1454945vsm.33.1714106708685; Thu, 25 Apr
+ 2024 21:45:08 -0700 (PDT)
+Date: Thu, 25 Apr 2024 21:45:08 -0700
+Reply-To: YouTube TV <no-reply@youtube.com>
+X-Google-Id: 4259490
+List-Unsubscribe: <https://notifications.google.com/g/p/ANiao5rSb5YQuLHhwzxQTqMjxSVrujNYTd0t_6uADHdZvp2Kl474e_1EM7lShqeU2vFe5uESwMySDx_qXCiZYPBR-jyoE-gnFR5-sx3NAyIxAowzJxAU-3olFZvaj-WalYBa914uQWgvuhOoDBfW5VHdeV0lNDXyhUT_HkG0fomkP0eIeBoQYd2BVh6RzpzrdWVYN8bYnIoZF7uMGMoloISEzF9CgEnPFDKugKUPs3_Ep8riYuHCZlbceJhT-6N97AUfv_3BtAFflQreExunQl7XM_xd1-TLWPGVM72H0P4nobrzOPpdgO46MrTdm1_bBZEA7SBS-pSgQNtlqMYGhfkCYi1ZCvQ7Lim00Qtrgzk5IsjjVqDKIj2UWKloD2MYBxcW5sULSyKoYd6lsYXGOlPI>
+Precedence: bulk
+Feedback-ID: P403-0:C20313555:M110797850-en-US:gamma
+List-Id: <c3505235c2162dcdcc5eb61c8c44cbb8975d8a85.google.com>
+X-Notifications: e1fb07e32a6c0000
+X-Notifications-Bounce-Info: AaJ7rEriO-cjoS51lXa356EBVkI_4aK0sADzYuDgOAbVArzBzQ6XrTYTui3schjAb_4pmYuROhnfKlbnRjAp6uxf8zgWHVgLrA4gxxHKtvII0d9I6GcWLlCqqypSbMZBEtKCWWINni1y6O0jQ4mtt_Gyv57OO61OfbjipKtVCaxCZYck2DOoqcXCRX_KgEUB6EAgWBnPbWP-NgGoAE74NHMZl7sRMTsmz3NTHGZyhE6V-7MI9LyqAwxbULx4m4jRe7i48CSn8cEN_1FoDQa3DTnV1XTYM6eByykTg6YUhJrlXgCIV7WJEoTzRxNQ_V2_IQtRKlpCdTFwVP7hKm81cZQusf13r0pyEXk2rXp9ePE79V5QaMrrliS5oJCyGDxeKcurQTC2LhPp31_vvAHE6HOXDyKyx3cxW4H1DRwUAXQISx2WYku7UnqOIBfNrAwSj-zP6c9OvM72Gja0dtLplplVFT0Y3w9r9NZ1z9UnhRf1cJvpSEUwquj2T6fZDFWTKqhv4hVU4scDD33ssk9_4K4wzq6cQn52AA9ZaSpkkGsFzbTTgy58MHQNjAwNjA0MDQxNTM1NTk2OTMzMg
+Message-ID: <c248b322929c9b3bda26a5a3802bf038fdb5eef7-20313555-111482624@google.com>
+Subject: Our lowest price of the year: Save up to $215 on NFL Sunday Ticket
+ and YouTube TV
+From: YouTube TV <no-reply@youtube.com>
+To: Blackpapermoon42@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000007a76780616f891b2"
+
+--0000000000007a76780616f891b2
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+DQoNCg0KDQotLS0tLQ0KDQpPdXIgb2ZmZXIgZW5kcyBNYXkgMTYNCg0KDQpZb3VUdWJlIFRWDQoN
+Cg0KT3VyIGxvd2VzdCBwcmljZSBvZiB0aGUgeWVhcjogU2F2ZSAkMjE1IHdoZW4geW91IGJ1bmRs
+ZSBORkwgU3VuZGF5IFRpY2tldCAgDQphbmQgWW91VHViZSBUVi4NCg0KU2F2ZSB1cCB0byAkMjE1
+IG9uIE5GTCBTdW5kYXkgVGlja2V0IGFuZCBZb3VUdWJlIFRWDQoNCkdldCBvdXIgbG93ZXN0IHBy
+aWNlIG9mIHRoZSB5ZWFyIHVudGlsIE1heSAxNiDigJMgd2hlbiB5b3UgYnVuZGxlIE5GTCBTdW5k
+YXkgIA0KVGlja2V0IHdpdGggWW91VHViZSBUViwgeW91J2xsIHNhdmUgdXAgdG8gJDIxNS4NCk5l
+dyBzdWJzY3JpYmVycyB3aWxsIGVuam95IHRoZSBiZXN0IG9mIGxpdmUgVFYgYW5kIGZvb3RiYWxs
+IGFsbCBpbiBvbmUgIA0KcGxhY2Ug4oCTIDEwMCsgbGl2ZSBjaGFubmVscyBhbmQgYWNjZXNzIHRv
+IGV2ZXJ5IGxvY2FsLCBuYXRpb25hbCwgYW5kICANCm91dC1vZi1tYXJrZXQgU3VuZGF5IGdhbWUu
+Kg0KQ2xpY2sgYmVsb3cgdG8gc2lnbiB1cCBvbmxpbmUsIG9yIGNhbGwgdXMgYXQgODMzLTg1NS0w
+ODE3IHRvIHNwZWFrIHRvIGEgIA0KbGl2ZSBhZ2VudCBmb3IgYXNzaXN0YW5jZS4NCg0KR2V0IE5G
+TCBTdW5kYXkgVGlja2V0IG5vdw0KPGh0dHBzOi8vbm90aWZpY2F0aW9ucy5nb29nbGUuY29tL2cv
+cC9BTmlhbzVwR3VpMngwWEJaRnJtVnExRFhST0J2S2hmbVhHQ0N0di1LN25PWXZab1hYakZSaUtk
+dkZpbTBLR1NsdE9Qd1k3WDlXOW1BdDVHUUtpb1ZJbEFEbnRQcTl3TXpYLVdIYzN3TmpNX09aSmJM
+bGZ3Q1hCUGRONjVha2ZZVU9mNzlNa2FONlNvcExfSDZWaVRaRTZ3TWc4RDV3bURfS19JdzI5Nk5y
+SUxOemJWeFFXdkZLWG9MdHVPcGtraGNHLXZDN1R0b1BhUXV4VmRhTERNZXBwbzVNdkxQZ3I0YnUt
+UFBfaEVvRmRMcDN6MXZzQVlMTFJGWTB6UzAzYmYwQ1dlZVlkRDV2LWxoWGJ6ZUFsMy1EWW52UkZE
+N25uNjBJMUwyRVVFWG1qX09BcWV4bGw4V3dEQ3BxSXJ4TnlRdHhLMXJVbEpCNDU4Tmx4T0J6ckl6
+NVlObEVEa21LNzlhdzV4MkZyZWw2cG0yTXllZnhUcTg0OV9XTHg2cVdiZG9FTzRoeFJ5am5naE1K
+X0M2WmxhQnZoZkR5ak5tYUlxMEUzNV9DMlJBVzY4QU9fS0s+DQpVcCB0byAkMjE1IG9mZiAoJDE3
+MCBvZmYgTkZMIFN1bmRheSBUaWNrZXQgYW5kICQxNSBvZmYgeW91ciBmaXJzdCAzIG1vbnRocyAg
+DQpvZiBZb3VUdWJlIFRWKS4gTmV3IHVzZXJzIG9ubHkuIEVuZHMgTWF5IDE2LiBUZXJtcywgcmVz
+dHJpY3Rpb25zLCBhbmQgIA0KZW1iYXJnb2VzIGFwcGx5LiBObyByZWZ1bmRzLg0KDQotLS0tLQ0K
+DQpMZXZlbCB1cCB5b3VyIHZpZXdpbmcgZXhwZXJpZW5jZQ0KDQpNdWx0aXZpZXc6IFNlbGVjdCBh
+bmQgd2F0Y2ggdXAgdG8gNCBsaXZlIGdhbWVzIG9uIDEgc2NyZWVuKioNClVubGltaXRlZCBzdHJl
+YW1zOiBXYXRjaCBvbiBtdWx0aXBsZSBkZXZpY2VzIGF0IGhvbWUNCktleSBQbGF5czogUmVwbGF5
+IGdhbWUgaGlnaGxpZ2h0cyB3aXRoIHRoZSBwdXNoIG9mIGEgYnV0dG9uDQoNCkdldCBORkwgU3Vu
+ZGF5IFRpY2tldCBub3cNCjxodHRwczovL25vdGlmaWNhdGlvbnMuZ29vZ2xlLmNvbS9nL3AvQU5p
+YW81cDdWam5VWkh2cGhHYVZXa1NqQmphc0VzZXlRR3cwZ2tXVDRvMUxQekhvQk1ZOHlNUGFlZnlt
+VHRkblRzVDAzYnZ0VWFtYklHMGE0VW5qTDVucXVCMy1Oc3gyVTdNYXE3LW91ajYxUW44YzZzNjJF
+azFrbDVuTkRPbjVUcUUwUkNTbFFHWjczNXRFMHpNeXRxaVJibVdKZkpmZ3ZNSU44dUpCUXBMb1Q4
+OFlYZF9hRjZSNy1FckJEUVpreEVwTFBZdFF2X0dXYUNtNDRlRV9HNDJYcFVPampMZ1ZJSzhqdV9B
+YWdBbkUtby1rLTdDanhKbThheFZQcE1tdmhzQ2tXQ004SzR3TkNkWFpRR1VRejh3WDd6ZVhPR01h
+UzN0UzhVMmExQlR4YmlkZzZpbWh1NlM2TWF3enFHY1RPSlBRell5ck14VVdlSW1pOVdpbXBGZFR6
+UEw2TGVYWTY5ZVJBcS1sTThNeTV6RXMyYUhHTWlPNnRYLVVSVGNsdHk1bmt0NXh1VWszREtYazJ2
+aHlRZC0xRnU0MmVwTVp3R0pNR2huQ0JNQnd6Q01URktjPg0KDQpVcCB0byAkMjE1IG9mZiAoJDE3
+MCBvZmYgTkZMIFN1bmRheSBUaWNrZXQgYW5kICQxNSBvZmYgeW91ciBmaXJzdCAzIG1vbnRocyAg
+DQpvZiBZb3VUdWJlIFRWKS4gTmV3IHVzZXJzIG9ubHkuIEVuZHMgTWF5IDE2LiBUZXJtcywgcmVz
+dHJpY3Rpb25zLCBhbmQgIA0KZW1iYXJnb2VzIGFwcGx5LiBObyByZWZ1bmRzLg0KDQotLS0tLQ0K
+DQpXYXMgdGhpcyBlbWFpbCBoZWxwZnVsPw0KVmVyeSBzYXRpc2ZpZWQgIA0KPGh0dHBzOi8vbm90
+aWZpY2F0aW9ucy5nb29nbGUuY29tL2cvcC9BTmlhbzVyUnNHQVJlTk1Pdy1LSHNPVm1Xbkx2ZnBR
+d0pUWW90bDRGYUFWeEJ1dmhoTUdiWlJFdkJxUThtMGpRTjIwVTlMdjF6RXZPQjJoQmRWUG1LYUZy
+Y05DY01fbUEzelQ0YXNHZUZHYWd6Q01WTWxSZWNxZmUxV3BNS0FLQXdmaGZNcnRZeFFUV0F0ZVdJ
+NHZRdzhGSUlxd2VIelZOX0ZaNHJLTS1rQnZOWkI0M2J2TU9HZWZfT3JZSjB6T0U1VTVCbjZEdS1I
+WHFnUmtualB4NlFpc1NFQXJkcFNUWWtNU2F6REllRUh4T0RPMjdBaHRmbS1hTzY5VEpjNURURWlo
+RXJwSjYxOWE4UkxLNUFkX0RIcEpLUjBWby1TdDJLUUNmbDdoaDRrbDlyX1FwZFhzODNGV1otUF9t
+U3NOZjBOS3Q5VkxCckR0NzRjeWFvTXUyOHVaaz4NClNhdGlzZmllZCAgDQo8aHR0cHM6Ly9ub3Rp
+ZmljYXRpb25zLmdvb2dsZS5jb20vZy9wL0FOaWFvNXF3cmVrUVdCYlFTd0o4QzExM1ZkSW5nREk0
+Wk5OVl8yUFlTN0RMV3Q3SzhEbXZnS3pSS2JRMy0zRzRqY0FXaGRpRXpMZGFQRmQ3OTQxYk85T0Rn
+RndYRDZnV2M4WWUwcWx0U2F5azBiM2RPeExaQ2sxbU5HTnZkNHFXMUMwZkswbkxXRWlfbmVoeHdi
+akZ1RURhaktrSDlPX2k5Y1RLbnF5N1VXRzhTMXZWRkNUaEs1RE15SUhITjVZN0dFRXpmc1JvUWJw
+NTVPM3lXNkV6TDNGWDY0SzVKWG8ydkt3OHJQd3NJRFkxcUhMbUpyTE9tYTNGaGZhYldIY3BLT0Yz
+NFZoam90NzE4NTlNOHI3bG5yVzFTdktKTTRuZmlwWmdqVDUzYTBuZE9aQmlSeTQxVkNhaVdYR250
+XzhuS2JScnNMbXhqZzBoc1dmejdBPg0KTmV1dHJhbCAgDQo8aHR0cHM6Ly9ub3RpZmljYXRpb25z
+Lmdvb2dsZS5jb20vZy9wL0FOaWFvNW8yNWFCQXZNQVpjYWpIaGZNR0dGWWluVVJFNG5RYl9zWG1U
+REJ2dzJ1bTVoSm52MHNZaVFFcUc1N3pneTk5d09jRFFGaDJ5NTdNMjA3aDBaQUVULWxpeUNYbUgy
+c2ZoTDQ3MDNnZDVEMEVDLTRHeGYtb2tRRkZ2SktaaXdYal82Z01sSU45OFJWa3YxS2tWXzRSOTJ4
+czZJSUhyci1oQzBmdGhsN0MyR3FhaDdERG5qX3lFUUZZcEFtLVZPeVgtaDYtZE9XNkJHY2NLaG9x
+a1l2U1duREJObkhIcWktdi1GTkE3TENyaFNQVk1hbmVVQWxTakFrOTQ3WGcydFYtTmFma3l2ajlB
+TmVjaVFIclBSTEVPWGxRcDYzN3JIV1lVaElLVFpvZ3hEWHBtd0pSNEdydk9LeVZtUzRwby0ydkNM
+Q2pIX2JqaTdrPg0KRGlzc2F0aXNmaWVkICANCjxodHRwczovL25vdGlmaWNhdGlvbnMuZ29vZ2xl
+LmNvbS9nL3AvQU5pYW81ckJTcFY5ZFU3MWRLd2hyTVZtcXAzSjVVZEtmeGI2UktPZFh6YU45cVFk
+UlVmWXZQbTlQZUM4UFg1aE13QUYtLXE4S3BReEIwNkN6MGZsSkc4RUFadkdzRzRBaGRGdk8xdjlP
+LUxnZ0RFTDNNNkY2dnVPQVk4MEhydXNJYWhxbFBCME04MXB6Wm43SlFzcF9xaTMwVEM1bnl3ZEZ0
+TnFYTk1SSTdub0llTkhSTUVDelFtU3VYR3RORjBVWHNMMWJIcWUtVC1weTVTRGVTLXdRUjVqeVlV
+dHZQekZPanIwNk9GSmdLZVQ4MDBZYUJ0VFNVWUh0WDNfZFdYTmJ0ZkR0TzduYVc2d3htSmo0aFBX
+T3drTEQ4bm5OV29hcVRqMVBiQ3N6R2RudXdZRUtFczFSQVYyQlY2R19wanl1R3pqRzM2VXJLMFNQ
+OTU0VFZaTXRBPg0KVmVyeSBkaXNzYXRpc2ZpZWQgIA0KPGh0dHBzOi8vbm90aWZpY2F0aW9ucy5n
+b29nbGUuY29tL2cvcC9BTmlhbzVwS1IzdjVoRGV4bGxNdThtQm9JZGNuM0pBTkdWZElLR0gyMWtt
+UWxpVTNXTHRMbTM1eFR5V2xCY3F4VDRiY05BZlpqUWlVVTgtQ3hyZTFVLVZvT3RmNW9kMkx4TTNX
+c1NWbWRUQmtnY3ZrbHpxY0ZHRmNOT0hoQlZHcVBxOXlUdWpFLTlXemVlVmJCbG5FNlVzT2d4cGJz
+YXI0MzdmTHZnVnA2Wl9tWlBZZWpQQVFMR21WNDY2cnRJQ2tTNDR6YjNjRjc4SmQ1Y29qTlR0M2xX
+R3d6WDdoZzlWMEZyZnBrZ1cwbnhOMnEwSE5xT0dYTHkyTmdZbnQyUnIxWXJ4cWZ2NEJUTEFGWXRE
+dmRQcFdUdmhMSEFRUU9OTTd1M3FQdGx1ckdjaUVteUdiZ3duQ3ZzWmFwTzl5LVVYNVJ0VGV6S21i
+X2ZUNzhjc1FsTEVyZ0R4WVFFaXk+DQotLS0tLQ0KDQpWaXNpdCB0aGUgWW91VHViZSBUViB3ZWJz
+aXRlDQo8aHR0cHM6Ly9ub3RpZmljYXRpb25zLmdvb2dsZS5jb20vZy9wL0FOaWFvNXFsM1dSR2FX
+anJpWFpqRTRvQ055ak03ZWUzVjBXTXRkQkRCUW9BNWV3Z0hUcHk4T2UtdGY5QjY4V2lSUDVsRUh4
+ZkJseHlFOXg0SEIzeHRhMGQwY1BENFBxYURmb29fbDlkN0l3QWd3WmpmYTZSOGtlNW15Y200dHpn
+Uklob2llTVd6VGxuSWtKQ3V1VzRpYWVheUlNLW0tMFNCMTBINnVyMHExRjVlUU91TlNqUlludUtB
+cnVvTGxTZlpndzc4aGlPM3lFOXMxS2dpMnZuN0U4VVh0ZGNkTEpXcGxsTC1aOD4NCkZvbGxvdyBZ
+b3VUdWJlIFRWIG9uIFgNCjxodHRwczovL25vdGlmaWNhdGlvbnMuZ29vZ2xlLmNvbS9nL3AvQU5p
+YW81cHpHX3psSVFVeHVqSDBncmZjVm1hd3RFZXVVbFZIbnVYb3VnQ3Z4UVBkV1pOZklKMTg0LTlx
+V1VjWmlKM2RFSUJnYklmTjg0cEdkS2dFLTQ1SXhtdHZTX3I5U3pDZWJkbWRpQ2tNX0ZDanNHSVpr
+djA2SHJoQ2RIRjZ2SXZnTXB5bkhaLVpWQXI2SndKNklEOVRya0JkLTVGbDhjcnY3YlpKbEVheEdr
+S0xYSk5fNWY5WUkxalhyR3RzdnJmeGU0RTBOeTg5ZnNlSzRONUx0MUdUUW1uNm05di1pdVFFYVE+
+DQoNCkhlbHAgQ2VudGVyDQo8aHR0cHM6Ly9ub3RpZmljYXRpb25zLmdvb2dsZS5jb20vZy9wL0FO
+aWFvNXJzeDFmV3ctMXRjN2xFM3RzdXNWaV90V0tQVTFBM2Y5eGt1WFdKVENlSzFZYkowNnRBck9r
+UDJSbHltNjBmN1F4OE5EaDVVakU3bTB4NmlDXzRiMjZlUUZwWldQWGxQaTlUXzFMN3gtV3p5VWw0
+WTFMM2pjSVFOQlJCYnJkTlY0QWYwMFhkd0tvc2xFeXVTeWg1VDlMTEFJby1BM1BvdGRHZExIVVpi
+QnptbG9vc2l2cjBQMkJvQkxQVWFMcFQ0Nnd3bGVOM0hWVEJQbnhINk5XTDkySmFBNWQxWlB2NU5N
+NkMtOU92UFJWdzE4TT4NCkVtYWlsIG9wdGlvbnMNCjxodHRwczovL25vdGlmaWNhdGlvbnMuZ29v
+Z2xlLmNvbS9nL3AvQU5pYW81cWtrWWRNdUVmelNtbDV1aHJfU1hRa1M0cVJPZG5VZDBLVG52OVVj
+UHhpeVZEM2NUMDBjRHBUNjc2NnQ1WHl2MmVwel93c0lhcll3bVFtVmc4TEt4Q2RELW1TZmFBeXV4
+enVuWTh5S1h4VENNXzRjMlY0bXZqZlBaSHFpZmpSeHg0RXcyMUZIQ1FwbkhLVXZOajlwLTl3eXlf
+ZVVPSnlpdkYwWnBZNjdTQmNUMjU5N2x0cDVCcmxaaGxBem82UGlTa0ZjSmVfZFdYZGVnajFXa3Rl
+cHV4TVVrYnRCY25UbkJiOVZoYU5ZX2xMUzlMV3c2b3NOU2VkWUFNd3NRPg0KLS0tLS0NCg0KKiBO
+RkwgU3VuZGF5IFRpY2tldCBlbWJhcmdvZXM6IFlvdSB3aWxsIGdlbmVyYWxseSByZWNlaXZlIG91
+dC1vZi1tYXJrZXQgIA0KU3VuZGF5IGdhbWVzIHVubGVzcyB0aGUgZ2FtZSBpcyBsb2NhbGx5IGJy
+b2FkY2FzdC4gWW91ciBiaWxsaW5nIGFkZHJlc3MgIA0KKHppcCBjb2RlKSBpcyBhc3NvY2lhdGVk
+IHdpdGggeW91ciBzdHJlYW1pbmcgYWNjZXNzLiBIb3dldmVyLCBkdWUgdG8gTkZMICANCnJ1bGVz
+LCB5b3UgbWlnaHQgYWxzbyBzZWUgYmxhY2tvdXQgcmVzdHJpY3Rpb25zIGJhc2VkIG9uIHlvdXIg
+bW9iaWxlICANCmRldmljZSdzIGxvY2F0aW9uIChlLmcuLCBzdWJzY3JpYmVycyBtaWdodCBub3Qg
+YmUgYWJsZSB0byBzdHJlYW0gd2hpbGUgIA0KYXR0ZW5kaW5nIGFuIE5GTCBnYW1lIG9yIGluIHN1
+cnJvdW5kaW5nIHN0YWRpdW0gYXJlYXMpLiBJZiB0aGVyZSBpcyBhbiAgDQpvdXRhZ2UgaW4geW91
+ciBsb2NhdGlvbiwgd2UnbGwgZG8gb3VyIGJlc3QgdG8gbGV0IHlvdSBrbm93LiBMb2NhbGx5ICAN
+CmJyb2FkY2FzdCBGT1ggYW5kIENCUyBnYW1lcywgU3VuZGF5IE5pZ2h0IEZvb3RiYWxsIG9uIE5C
+Qywgc2VsZWN0ICANCmRpZ2l0YWwtb25seSBnYW1lcywgYW5kIGludGVybmF0aW9uYWwgZ2FtZXMg
+ZXhjbHVkZWQuIFB1ZXJ0byBSaWNvLCBVUyAgDQpWaXJnaW4gSXNsYW5kcywgYW5kIGNvbW1lcmNp
+YWwgdXNlIGV4Y2x1ZGVkLg0KKiogRGV2aWNlIGFuZCBjb250ZW50IHJlc3RyaWN0aW9ucyBhcHBs
+eS4NCg0KLS0tLS0NCg0KWW91IHJlY2VpdmVkIHRoaXMgbWVzc2FnZSBiZWNhdXNlIHlvdSBzaWdu
+ZWQgdXAgdG8gcmVjZWl2ZSBnZW5lcmFsIHVwZGF0ZXMsICANCmFubm91bmNlbWVudHMsIGFuZCB2
+aWRlb3MgZnJvbSBZb3VUdWJlLiBJZiB5b3UgZG8gbm90IHdhbnQgdG8gcmVjZWl2ZSAgDQpnZW5l
+cmFsIGVtYWlscyBmcm9tIFlvdVR1YmUgaW4gdGhlIGZ1dHVyZSwgcGxlYXNlIHVuc3Vic2NyaWJl
+ICANCjxodHRwczovL25vdGlmaWNhdGlvbnMuZ29vZ2xlLmNvbS9nL3AvQU5pYW81b2lVMXpteUdV
+cjhMbUNpam91YTBiX1VTLWJ4YlFzOURtQ2I1ajRIOXRDTThpX3Y0TUhQX29FbDI2RVQ1YVhPU0d1
+ZlJtdUNrLUpnM3QyaXJSd1hDYkV4X1JVZUtvOWRJajB0WG82TlpVbTZWUjdjZDgzUmluTEdneTY2
+MXpzRXd6VEpPY2s1YUZuQ0V0S25oMXlEQUhwMEw1ZThOMDNRUElzck9udkNBbGg0djhPaWljZVMt
+ME1sQ0xXcmhqVDhaUEVLQjJfZHZ5bzNwQWtvaXZ1MG82b25kQkg4M1lyOVdjNGlNakdUWmI3eHNF
+T0dIbWUtUnByRnVHb1lYNVkxT2p1S053UVVDX1NmNjZLLXFkSl81aVhuVFBONFJmd19xU21uYk04
+REs4bzZXWDBaTTJhTVA4Slh5Qmxzc0VTOEhROGdPN2dYQXNEb0ZlTkxORV9peVNsWFlZZGZBWFhQ
+cTFHM1NQYUZYV19uZjBIWXYxM21QLXM3VFNHbUlIdHVMV3hZb256TExiOG9PVFJRUT5oZXJlLg0K
+DQpZb3VUdWJlDQo8aHR0cHM6Ly9ub3RpZmljYXRpb25zLmdvb2dsZS5jb20vZy9wL0FOaWFvNXFp
+REF3YzJ5RGd6c01aS21WRno2cDR5OG1WYU9Pc05xSGljY0luS2pkSGtxLW4zVG8zLWRiUGZtMkoz
+T3dySHl6czdncFVjWWQ4YWhyZWRldWRMcE81cGxVTWVaanNXN25INUtwVE1NdVdZRDAyMXdjTmpf
+emtUZGlvYmI1R29SQVFuOW5TRUpqbnJGTUY0ZWV4ZGl1VWNDbTdjLTY0MnpDR21zMmNUd0ItOGNX
+MjQ3M05SMlZac3dBNzhxVFgwbVh5LXlfcm8tb1pOQ3VwT1FuOGdJN2lmcmxqMkE+DQoNCsKpIDIw
+MjQgR29vZ2xlIExMQyBkL2IvYSBZb3VUdWJlDQo5MDEgQ2hlcnJ5IEF2ZQ0KU2FuIEJydW5vLCBD
+QSA5NDA2Ng0KDQo=
+--0000000000007a76780616f891b2
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html xmlns=3Dhttp://www.w3.org/1999/xhtml xmlns:v=3Durn:schemas-microsoft-=
+com:vml xmlns:o=3Durn:schemas-microsoft-com:office:office lang=3Den xml_lan=
+g=3Den dir=3Dltr>
+  <head>
+    <title>YouTube TV offer
+</title>
+    <!--[if !mso]>
+    <!-- -->
+    <meta http-equiv=3DX-UA-Compatible content=3DIE=3Dedge>
+    <!--<![endif]-->
+    <meta http-equiv=3DContent-Type content=3D"text/html; charset=3DUTF-8">
+    <meta name=3Dviewport content=3Dwidth=3Ddevice-width,initial-scale=3D1>
+    <style type=3Dtext/css>#outlook a { padding:0; } body, .body { margin:0=
+;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%; } table=
+ { border-spacing:0;} img { border:0;height:auto;line-height:100%; outline:=
+none;text-decoration:none;-ms-interpolation-mode:bicubic; } p { display:blo=
+ck;margin:13px 0; }</style>
+    <!--[if mso]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+          <o:PixelsPerInch>
+            96
+          </o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+      <style type=3D"text/css"> table { border-collapse:collapse;mso-table-=
+lspace:0pt;mso-table-rspace:0pt; } .mj-outlook-group-fix { width:100% !impo=
+rtant; } .mso-button-dark-mode a {background: transparent !important;} </st=
+yle>
+      <![endif]-->
+     <!--[if !mso]><!-->
+     <link href=3Dhttps://fonts.googleapis.com/css?family=3DYT%20Sans%3A300=
+%2C500%2C700 rel=3Dstylesheet type=3Dtext/css>
+     <link href=3Dhttps://fonts.googleapis.com/css?family=3DYouTube+Sans re=
+l=3Dstylesheet type=3Dtext/css>
+     <link href=3Dhttps://fonts.googleapis.com/css2?family=3DRoboto:ital,wg=
+ht@0,400;0,700;1,400;1,700&amp;display=3Dswap rel=3Dstylesheet type=3Dtext/=
+css>
+     <link href=3Dhttps://fonts.googleapis.com/css2?family=3DRoboto+Mono:it=
+al,wght@0,100;0,500;0,700;1,400&amp;display=3Dswap rel=3Dstylesheet>
+     <style type=3Dtext/css>
+     @import url('https://fonts.googleapis.com/css?family=3DRoboto:100,300,=
+400,500,700');
+     @import url('https://fonts.googleapis.com/css?family=3DRoboto+Mono:100=
+,300,400,500,700');
+     @import url('https://fonts.googleapis.com/css?family=3DYT%20Sans:300,5=
+00,700,800');
+     @import url('https://fonts.googleapis.com/css?family=3DYouTube+Sans:30=
+0,500,700,800');
+     @import url('https://fonts.googleapis.com/css?family=3DOpen+Sans:300,4=
+00,600,700');
+     </style>
+     <!--<![endif]-->
+      <style type=3Dtext/css>@media only screen and (min-width:950px) { .mj=
+-column-per-100 { width:100% !important; max-width: 100%; }
+.mj-column-per-66 { width:66% !important; max-width: 66%; }
+.mj-column-per-34 { width:34% !important; max-width: 34%; }
+.mj-column-per-33-333333333333336 { width:33.333333333333336% !important; m=
+ax-width: 33.333333333333336%; }
+.mj-column-per-20 { width:20% !important; max-width: 20%; }
+.mj-column-per-50 { width:50% !important; max-width: 50%; } }</style>
+      <style type=3Dtext/css>.links-FFFFFF a { color: #FFFFFF; text-decorat=
+ion: none; }
+#body #main [x-apple-data-detectors-type] { color: inherit !important; -web=
+kit-text-decoration-color: inherit !important; text-decoration: inherit !im=
+portant; font-weight: inherit !important; }
+u ~ div .img-container img + div { display: none }
+.links-065FD4-underline a { color: #065FD4; text-decoration: underline; }
+.links-3EA6FF a { color: #3EA6FF; text-decoration: none; }
+.links-065FD4 a { color: #065FD4; text-decoration: none; } @media only scre=
+en and (min-width:950px) { .font-size-18px { font-size: 18px !important}
+.padding-20px-40px-20px-0px { padding: 20px 40px 20px 0px !important}
+.padding-8px-8px-8px-0px { padding: 8px 8px 8px 0px !important}
+.margin-0-auto-0-0 { margin: 0 auto 0 0 !important}
+.background-size-contain { background-size: contain !important}
+.padding-0px-0px-0px-0px { padding: 0px 0px 0px 0px !important}
+.background-position-center-top { background-position: center top !importan=
+t}
+.font-size-36px { font-size: 36px !important}
+.padding-32px-24px-0px-24px { padding: 32px 24px 0px 24px !important}
+.line-height-1-5 { line-height: 1.5 !important}
+.padding-16px-24px-24px-24px { padding: 16px 24px 24px 24px !important}
+.font-size-16px { font-size: 16px !important}
+.padding-0px-24px-32px-24px { padding: 0px 24px 32px 24px !important}
+.padding-0px-32px-40px-32px { padding: 0px 32px 40px 32px !important}
+.font-size-32px { font-size: 32px !important}
+.padding-0px-24px-0px-24px { padding: 0px 24px 0px 24px !important}
+.padding-24px-0px-0px-0px { padding: 24px 0px 0px 0px !important}
+.padding-8px-24px-10px-24px { padding: 8px 24px 10px 24px !important}
+.padding-32px-0px-40px-0px { padding: 32px 0px 40px 0px !important}
+.padding-0px-32px-0px-32px { padding: 0px 32px 0px 32px !important} }</styl=
+e>
+      <style type=3Dtext/css>p{margin: 0 0;}ul{display: block;}sup, sub{lin=
+e-height:0;}body a{text-decoration: none; color: #CC0000;}.image-highlight{=
+transition: 0.3s;}.image-highlight:hover{filter: brightness(1.2);}.button-h=
+ighlight{transition: 0.3s;}.button-highlight:hover{filter: brightness(1.5);=
+}@media only screen and (min-width: 950px) { .hide-on-mobile{display:block =
+!important;}.hide-on-desktop{display:none !important;} }.hide-on-desktop{di=
+splay:block;}.hide-on-mobile{display:none;}</style>
+      <!--[if mso]>
+      <style> .hide-on-mobile {display:block !important} </style>
+      <![endif]-->
+      <!--[if mso]>
+      <style> .mso-font-size-18px { font-size: 18px !important; }
+.mso-font-size-36px { font-size: 36px !important; }
+.font-size-16px { font-size: 16px !important}
+.mso-font-size-32px { font-size: 32px !important; } </style>
+      <![endif]-->
+      <!--[if gte mso 16]>
+      <style> .mso-text-black a { mso-style-textfill-type: gradient; mso-st=
+yle-textfill-fill-gradientfill-stoplist: "0 \#000000 1 100000\,99000 \#0000=
+00 1 100000"; color: #ffffff !important; } </style>
+      <![endif]-->
+      <style>[class~=3D"x_body"] { width: 99.9% }</style>
+    </head>
+    <body style=3Dword-spacing:normal;background-color:#030303; class=3Dbod=
+y id=3Dbody>
+     <div style=3D"font-size:0px; display:none; visibility:hidden; opacity:=
+0; color:transparent; max-height:0px; height:0; width:0; mso-hide:all;">Get=
+ your special offer today.
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C</div>
+      <div style=3D"background-color:#030303;background-position:center cen=
+ter;background-size:auto;background-repeat:repeat;" id=3Dmain>
+        <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 ro=
+le=3Dpresentation style=3Dwidth:100%; class=3Dsection>
+          <tr>
+            <td align=3Dcenter style=3Dmso-padding-left-alt:0;>
+              <!--[if mso | IE]>
+              <v:rect style=3D"width:600px;height:62px;" xmlns:v=3D"urn:sch=
+emas-microsoft-com:vml" fill=3D"true" stroke=3D"false">
+                <v:fill origin=3D"-0.5,0" position=3D"-0.5,0" aspect=3D"atl=
+east" src=3D"https://gstatic.com/growthlab/api/rSfZ6wOUsLstyl1EsyGgIsIQ1g40=
+UycPGaKZOQ7Z.png" color=3D"#004859" type=3D"frame" />
+                  <v:textbox style=3D"mso-fit-shape-to-text:true" inset=3D"=
+0,0,0,0">
+                    <table align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:600px;" width=
+=3D"600" >
+                      <tr>
+                        <td style=3D"line-height:0px;font-size:0px;mso-line=
+-height-rule:exactly;height:62px;">
+                          <![endif]-->
+                          <div style=3D"background:#004859;background-color=
+:#004859;Margin:0px auto;max-width:600px;">
+                            <div style=3Dline-height:0;font-size:0;>
+                              <a href=3Dhttps://notifications.google.com/g/=
+p/ANiao5qQCsVLO67sp8qKr8AmNyuJXj80rj8CJOFl49Ak1f8ZgYzpJelypToIdg2As6Qh4HupW=
+OGo6GdMP8M_zSo_6YqkkeDDvKGSQxFn5KJcamjgj-qiIZ8qowN4ob0l3WZhLqVT2_1K-BFwCu7c=
+yq7M2vzBksBaFsHQIkJjmecbRVljHxe1NV-6hcZ0_SaCoeL6qCaaDe7snCmOOLMyc3wh7hFqxwk=
+hgZCYTKLCh5HHKbzOmgh-uXJM4VYxHUKL4xspTgAohYhz1tU6vyHuljy3tHpXvLeo8_HkTD5hdw=
+ymjmWDa4H5o-_I3VqrDnyUUs6uJF5WztS3f78GK41KUw1Opc5S6j68rXKwGZRYv-oJnX6rEvcH-=
+5WDaZE69HugZPOynjxSKTIodldA4PyfO7VBoAHzfXiG7qeVs5WmAfsOsJNa84f162A style=3D=
+"display: block;">
+                              <table align=3Dcenter background=3Dhttps://gs=
+tatic.com/growthlab/api/rSfZ6wOUsLstyl1EsyGgIsIQ1g40UycPGaKZOQ7Z.png border=
+=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3D"backgroun=
+d:left center / cover no-repeat;background-image:url(https://gstatic.com/gr=
+owthlab/api/rSfZ6wOUsLstyl1EsyGgIsIQ1g40UycPGaKZOQ7Z.png);background-positi=
+on:left center;background-size:cover;background-repeat:no-repeat;width:100%=
+;">
+                                <tr>
+                                  <td style=3Dfont-size:0px;padding:0px;tex=
+t-align:center;vertical-align:top;mso-padding-left-alt:0;mso-padding-right-=
+alt:0; class=3Dblock-grid>
+                                            <!--[if mso | IE]>
+                                            <table role=3D"presentation" bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                              <tr>
+                                                <td style=3D"vertical-align=
+:middle;width:396px;" >
+                                                  <![endif]-->
+                                                  <div class=3D"mj-column-p=
+er-66 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left;direction=
+:ltr;display:inline-block;vertical-align:middle;width:66%;>
+                                                    <table border=3D0 cellp=
+adding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0px;ve=
+rtical-align:middle; width=3D100%>
+                                                      <tr>
+                                                        <td class=3D"paddin=
+g-20px-40px-20px-0px text-container" style=3D"font-size:0px;padding:20px 12=
+px 20px 0px;word-break:break-word;mso-padding-alt:20px 40px 20px 0px;mso-pa=
+dding-left-alt:0;mso-padding-right-alt:0;text-align:right;">
+                                                          <!--[if mso]>
+                                                          <table width=3D"1=
+00%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation"=
+ style=3D"border-collapse:collapse;border-spacing:0px;">
+                                                            <tr>
+                                                              <td style=3D"=
+font-size:0;line-height:0;width:0px;">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"border-collapse:collapse;border-spacing:0px;">
+                                                                  <tr>
+                                                                    <td sty=
+le=3D"font-size:0;line-height:0;width:0px;">&nbsp;</td>
+                                                                  </tr>
+                                                                </table>
+                                                              </td>
+                                                              <td align=3D"=
+right">
+                                                                <![endif]--=
+>
+                                                                <div class=
+=3Dlinks-FFFFFF>
+                                                                  <div styl=
+e=3D"font-family:&#39;YT Sans&#39;, &#39;Roboto&#39;, Arial, sans-serif;fon=
+t-size:16px;font-weight:bold;letter-spacing:none;line-height:1.5;text-align=
+:right;mso-line-height-alt:1.375em;color:#FFFFFF;" class=3D"mso-font-size-1=
+8px font-size-18px">
+                                                                    <p styl=
+e=3D"margin: 0 0;">Our offer ends May=C2=A016</p>
+                                                                  </div>
+                                                                </div>
+                                                                <!--[if mso=
+]>
+                                                              </td>
+                                                              <td style=3D"=
+font-size:0;line-height:0;width:40px;">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"border-collapse:collapse;border-spacing:0px;">
+                                                                  <tr>
+                                                                    <td sty=
+le=3D"font-size:0;line-height:0;width:40px;">&nbsp;</td>
+                                                                  </tr>
+                                                                </table>
+                                                              </td>
+                                                            </tr>
+                                                          </table>
+                                                          <![endif]-->
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                  </div>
+                                                  <!--[if mso | IE]>
+                                                </td>
+                                                <td style=3D"vertical-align=
+:middle;width:204px;" >
+                                                  <![endif]-->
+                                                  <div class=3D"mj-column-p=
+er-34 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left;direction=
+:ltr;display:inline-block;vertical-align:middle;width:34%;>
+                                                    <table border=3D0 cellp=
+adding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0px;ve=
+rtical-align:middle; width=3D100%>
+                                                      <tr>
+                                                        <td class=3D"paddin=
+g-8px-8px-8px-0px img-container" style=3D"font-size:0px;padding:8px 32px 8p=
+x 0px;word-break:break-word;mso-padding-alt:8px 8px 8px 0px;mso-padding-lef=
+t-alt:0;mso-padding-right-alt:0;text-align:left;">
+                                                          <!--[if mso]>
+                                                          <table width=3D"1=
+00%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation"=
+ style=3D"border-collapse:collapse;border-spacing:0px;">
+                                                            <tr>
+                                                              <td style=3D"=
+font-size:0;line-height:0;width:0px;">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"border-collapse:collapse;border-spacing:0px;">
+                                                                  <tr>
+                                                                    <td sty=
+le=3D"font-size:0;line-height:0;width:0px;">&nbsp;</td>
+                                                                  </tr>
+                                                                </table>
+                                                              </td>
+                                                              <td align=3D"=
+left">
+                                                                <![endif]--=
+>
+                                                                <div style=
+=3D"margin:0 0 0 auto;max-width:32px;" class=3Dmargin-0-auto-0-0>
+                                                                    <img al=
+t width=3D32 src=3Dhttps://gstatic.com/growthlab/api/UMjI5nekUcafWN2M4Zg7Vr=
+O6qJmm51ZGlKt8nR1G.png style=3Dborder:none;outline:none;text-decoration:non=
+e;height:auto;width:100%;font-size:13px;display:block;>
+                                                                </div>
+                                                                <!--[if mso=
+]>
+                                                              </td>
+                                                              <td style=3D"=
+font-size:0;line-height:0;width:8px;">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"border-collapse:collapse;border-spacing:0px;">
+                                                                  <tr>
+                                                                    <td sty=
+le=3D"font-size:0;line-height:0;width:8px;">&nbsp;</td>
+                                                                  </tr>
+                                                                </table>
+                                                              </td>
+                                                            </tr>
+                                                          </table>
+                                                          <![endif]-->
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                  </div>
+                                                  <!--[if mso | IE]>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                            <![endif]-->
+                                  </td>
+                                </tr>
+                              </table>
+                              </a>
+                            </div>
+                          </div>
+                          <!--[if mso | IE]>
+                        </td>
+                      </tr>
+                    </table>
+                    <p style=3D"mso-line-height-rule:exactly;margin:0;mso-h=
+ide:all;font-size:0;line-height:0;">
+                      <o:p xmlns:o=3D"urn:schemas-microsoft-com:office:offi=
+ce">
+                        &nbsp;
+                      </o:p>
+                    </p>
+                  </v:textbox>
+                </v:rect>
+                <![endif]-->
+              </td>
+            </tr>
+          </table>
+          <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 =
+role=3Dpresentation style=3Dbackground-color:transparent;width:100%; class=
+=3Dsection>
+            <tr>
+              <td align=3Dcenter>
+                <!--[if mso | IE]>
+                <table align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" class=3D"block-grid-outlook" style=3D"width:600px;" width=3D"=
+600" >
+                  <tr>
+                    <td style=3D"line-height:0px;font-size:0px;mso-line-hei=
+ght-rule:exactly;">
+                      <![endif]-->
+                      <div style=3D"background:transparent;background-color=
+:transparent;Margin:0px auto;max-width:600px;">
+                                      <table border=3D0 cellpadding=3D0 cel=
+lspacing=3D0 role=3Dpresentation style=3Dbackground-color:transparent;borde=
+r-radius:0px;vertical-align:top; width=3D100%>
+                                        <tr>
+                                          <td class=3Dimg-container style=
+=3D"font-size:0px;padding:0px 0px 0px 0px;word-break:break-word;text-align:=
+center;">
+                                            <div style=3D"margin:0 auto;">
+                                              <a href=3Dhttps://notificatio=
+ns.google.com/g/p/ANiao5oBz7YinAcvtcB7TRwnOvJbW8jVJG96c7c_XKmk6ZvQcuT4stXYX=
+pphomAqZyGmqrhKpuO_TM7gu7nafhpReJkaIZpGWAet3jRsDj8foJWTCzH737uS3ZkzcmG4gpJ0=
+dYL3YJy4VqaQA4MM7KdiQ2FShLa4zeOZFD6VMwsEeVgq0nOxgVQzXx-9vVm7Qd8Sl6wNHQn0s8I=
+rmI4fpPyFpEhb style=3D"display: block;">
+                                              <img alt=3D"YouTube TV
+" width=3D600 src=3Dhttps://gstatic.com/growthlab/api/Oh7gBWesIx5rpQf7UtWzj=
+olSCsGtVHbGzXUO5HCn.png style=3Dborder:none;outline:none;text-decoration:no=
+ne;height:auto;width:100%;font-size:13px;display:block;>
+                                            </a>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </table>
+                      </div>
+                      <!--[if mso | IE]>
+                    </td>
+                  </tr>
+                </table>
+                <![endif]-->
+              </td>
+            </tr>
+          </table>
+          <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 =
+role=3Dpresentation style=3D"background-color:transparent;background:transp=
+arent center center / cover no-repeat;background-image:url(0);background-po=
+sition:center center;background-size:cover;background-repeat:no-repeat;widt=
+h:100%;" class=3D"section background-size-contain background-position-cente=
+r-top">
+            <tr>
+              <td align=3Dcenter style=3Dmso-padding-left-alt:0;>
+                <!--[if mso | IE]>
+                <v:rect style=3D"mso-width-percent:1000;height:664px;" xmln=
+s:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" stroke=3D"false">
+                  <v:fill size=3D"100%,100%" origin=3D"0,-0.5" position=3D"=
+0,-0.5" aspect=3D"atmost" src=3D"0" color=3D"none" type=3D"frame" />
+                    <v:textbox style=3D"mso-fit-shape-to-text:true" inset=
+=3D"0,0,0,0">
+                      <table align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:600px;" wid=
+th=3D"600" >
+                        <tr>
+                          <td style=3D"line-height:0px;font-size:0px;mso-li=
+ne-height-rule:exactly;height:664px;">
+                            <![endif]-->
+                            <div style=3D"background:transparent;background=
+-color:transparent;Margin:0px auto;max-width:600px;">
+                              <div style=3Dline-height:0;font-size:0;>
+                              =20
+                                              <table border=3D0 cellpadding=
+=3D0 cellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0px;vertical=
+-align:top; width=3D100%>
+                                                <tr>
+                                                  <td class=3Dimg-container=
+ style=3D"font-size:0px;padding:0px 0px 0px 0px;word-break:break-word;mso-p=
+adding-alt:0px 0px 0px 0px;mso-padding-left-alt:0;mso-padding-right-alt:0;t=
+ext-align:center;">
+                                                    <div style=3D"margin:0 =
+auto;">
+                                                      <a href=3Dhttps://not=
+ifications.google.com/g/p/ANiao5rGQ2er1mOvSIgpQqL4vuZvjb87MDPlsXFAGmBrmRaj-=
+9hFeSlG8luXjo7E2ppa2ilg2ZH7RYiJCxZAp5k6UsO0UjEZMe6jYQPNSa6-2JbhAHKuQ-99CGL3=
+mcgVx0S7aIpINcS4z7dlpUpugYf57eHDHZucUaRLbiGHZtgI1zio--bTMry-UQGINpAfKs9caFH=
+dL79sXYCfDmHpllMPp-_2Wqv_lazYJwJCpIygq_IbbUjOBZN1M97FA5pfVldW71gA9Cu33hTBuD=
+LaN7us4hTrBZLmoTQXdEVh_hltg2_Sj9JctNfKhfY7LwW_g3BroUSeVbT-s3PDwU8PnBKmzGtEq=
+11Uk-l4gUI5_SnhtA108Bn2phG7zScYM_osmisuCQDr4gbMmpeaVKNMziGUAYjpD-zOnQUYyqGf=
+YsvMDI0ddsw style=3D"display: block;">
+                                                        <img alt=3D"Our low=
+est price of the year: Save $215 when you bundle NFL Sunday Ticket and YouT=
+ube TV." width=3D600 src=3Dhttps://services.google.com/fh/files/emails/ytv_=
+2024_apr_mrkt_draft_tentpole_hero_img.jpg style=3Dborder:none;border-radius=
+:0px;outline:none;text-decoration:none;height:auto;width:100%;font-size:13p=
+x;display:block;>
+                                                      </a>
+                                                    </div>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class=3D"padding-32px=
+-24px-0px-24px text-container" style=3D"font-size:0px;padding:8px 16px 0px =
+16px;word-break:break-word;mso-padding-alt:32px 24px 0px 24px;mso-padding-l=
+eft-alt:0;mso-padding-right-alt:0;text-align:center;">
+                                                    <!--[if mso]>
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=
+=3D"border-collapse:collapse;border-spacing:0px;">
+                                                      <tr>
+                                                        <td style=3D"font-s=
+ize:0;line-height:0;width:24px;">
+                                                          <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"borde=
+r-collapse:collapse;border-spacing:0px;">
+                                                            <tr>
+                                                              <td style=3D"=
+font-size:0;line-height:0;width:24px;">&nbsp;</td>
+                                                            </tr>
+                                                          </table>
+                                                        </td>
+                                                        <td align=3D"center=
+">
+                                                          <![endif]-->
+                                                          <div class=3Dlink=
+s-065FD4-underline>
+                                                            <div style=3D"f=
+ont-family:&#39;YT Sans&#39;, &#39;Roboto&#39;, Arial, sans-serif;font-size=
+:24px;font-weight:bold;letter-spacing:none;line-height:1.20;text-align:cent=
+er;mso-line-height-alt:2.688em;color:#F4F4F4;" class=3D"mso-font-size-36px =
+font-size-36px">
+                                                              <p style=3D"m=
+argin: 0 0;">Save up to $215 on NFL=C2=A0Sunday Ticket and YouTube=C2=A0TV<=
+/p>
+                                                            </div>
+                                                          </div>
+                                                          <!--[if mso]>
+                                                        </td>
+                                                        <td style=3D"font-s=
+ize:0;line-height:0;width:24px;">
+                                                          <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"borde=
+r-collapse:collapse;border-spacing:0px;">
+                                                            <tr>
+                                                              <td style=3D"=
+font-size:0;line-height:0;width:24px;">&nbsp;</td>
+                                                            </tr>
+                                                          </table>
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                    <![endif]-->
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class=3D"padding-16px=
+-24px-24px-24px text-container" style=3D"font-size:0px;padding:16px 16px 16=
+px 16px;word-break:break-word;mso-padding-alt:16px 24px 24px 24px;mso-paddi=
+ng-left-alt:0;mso-padding-right-alt:0;text-align:center;">
+                                                    <!--[if mso]>
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=
+=3D"border-collapse:collapse;border-spacing:0px;">
+                                                      <tr>
+                                                        <td style=3D"font-s=
+ize:0;line-height:0;width:24px;">
+                                                          <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"borde=
+r-collapse:collapse;border-spacing:0px;">
+                                                            <tr>
+                                                              <td style=3D"=
+font-size:0;line-height:0;width:24px;">&nbsp;</td>
+                                                            </tr>
+                                                          </table>
+                                                        </td>
+                                                        <td align=3D"center=
+">
+                                                          <![endif]-->
+                                                          <div class=3Dlink=
+s-065FD4-underline>
+                                                            <div style=3D"f=
+ont-family:Roboto, Arial, sans-serif;font-size:16px;letter-spacing:none;lin=
+e-height:1.50;text-align:center;mso-line-height-alt:1.5em;color:#AAAAAA;" c=
+lass=3Dline-height-1-5>
+                                                              <p style=3D"m=
+argin: 0 0;">Get our lowest price of the year until May=C2=A016 =E2=80=93 w=
+hen you bundle NFL=C2=A0Sunday=C2=A0Ticket with YouTube=C2=A0TV, you=E2=80=
+=99ll save up=C2=A0to=C2=A0$215.</p>
+                                                              <p style=3D"m=
+argin: 0 0;">
+                                                                <br>
+                                                                New subscri=
+bers will enjoy the best of live=C2=A0TV and football all in one place =E2=
+=80=93 100+=C2=A0live channels and access to every local, national, and out=
+=EF=BB=BF-=EF=BB=BFof=EF=BB=BF-=EF=BB=BFmarket Sunday=C2=A0game.*
+                                                              </p>
+                                                              <p style=3D"m=
+argin: 0 0;">
+                                                                <br>
+                                                                Click below=
+ to sign up online, or call us at 833=EF=BB=BF-=EF=BB=BF855=EF=BB=BF-=EF=BB=
+=BF0817 to speak to a live=C2=A0agent for=C2=A0assistance.
+                                                              </p>
+                                                            </div>
+                                                          </div>
+                                                          <!--[if mso]>
+                                                        </td>
+                                                        <td style=3D"font-s=
+ize:0;line-height:0;width:24px;">
+                                                          <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"borde=
+r-collapse:collapse;border-spacing:0px;">
+                                                            <tr>
+                                                              <td style=3D"=
+font-size:0;line-height:0;width:24px;">&nbsp;</td>
+                                                            </tr>
+                                                          </table>
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                    <![endif]-->
+                                                  </td>
+                                                </tr>
+                                              </table>
+                              </div>
+                            </div>
+                            <!--[if mso | IE]>
+                          </td>
+                        </tr>
+                      </table>
+                      <p style=3D"mso-line-height-rule:exactly;margin:0;mso=
+-hide:all;font-size:0;line-height:0;">
+                        <o:p xmlns:o=3D"urn:schemas-microsoft-com:office:of=
+fice">
+                          &nbsp;
+                        </o:p>
+                      </p>
+                    </v:textbox>
+                  </v:rect>
+                  <![endif]-->
+                </td>
+              </tr>
+            </table>
+            <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D=
+0 role=3Dpresentation style=3Dwidth:100%; class=3Dsection>
+              <tr>
+                <td align=3Dcenter>
+                  <!--[if mso | IE]>
+                  <table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:600px;" width=
+=3D"600" >
+                    <tr>
+                      <td style=3D"line-height:0px;font-size:0px;mso-line-h=
+eight-rule:exactly;">
+                        <![endif]-->
+                        <div style=3D"background:transparent;background-col=
+or:transparent;Margin:0px auto;border-radius:0;max-width:600px;">
+                                        <table border=3D0 cellpadding=3D0 c=
+ellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0px;vertical-align=
+:top; width=3D100%>
+                                          <tr>
+                                            <td valign=3Dmiddle class=3D"pa=
+dding-0px-24px-32px-24px button-container" style=3D"font-size:0px;padding:1=
+2px 12px 12px 12px;word-break:break-word;mso-padding-alt:0px 24px 32px 24px=
+;text-align:center;">
+                                              <!-- CTA button -->
+                                              <!--[if mso]>
+                                              <v:roundrect xmlns:v=3D"urn:s=
+chemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word"=
+ style=3D"width: 280px; height: 47px; v-text-anchor:middle; mso-position-ho=
+rizontal: center" arcsize=3D"7%" strokecolor=3D"#ffffff" strokeweight=3D"0p=
+t" fillcolor=3D"#ffffff">
+                                              <w:anchorlock/>
+                                              <v:textbox inset=3D"0,0,0,0">
+                                              <center style=3D"font-family:=
+ Roboto, Arial, Sans-serif; font-weight: normal; font-size: 14px; line-heig=
+ht: 18px; color: #030303; text-align: center; letter-spacing: normal; mso-l=
+ine-height-rule: exactly;">
+                                              <![endif]-->
+                                              <!--[if !mso]><!-->
+                                              <table role=3Dpresentation al=
+ign=3Dcenter cellpadding=3D0 cellspacing=3D0 border=3D0 style=3D"border-col=
+lapse: initial;">
+                                                 <tr>
+                                                   <td width=3D100% align=
+=3Dcenter valign=3Dmiddle bgcolor=3D#065fd4 style=3D"mso-padding-alt: 0 20p=
+x; border-radius: 30px; width: 100%; background-color: #ffffff; text-align:=
+ center; vertical-align: middle;">
+                                              <!--<![endif]-->
+                                                   <a href=3Dhttps://notifi=
+cations.google.com/g/p/ANiao5qybjV7qi4JBIa-44iRB-bRbjTHEzMjisFxQVGUdsgcLLo1=
+M2Ci2UpoqtZzHJfqQgqt2lINN0NsIW2IJD8ImbnnHvQMrvR1fPPWwbhMynKuJKELX4NvhY-9bUb=
+S8epx6mQsWeTAHaP2dkbsNI0wQTZtSd77x7Hd9-OTd1GHaBHhauTpeM9uYq0DpGf9D8RJmc9Uoj=
+qI4flPz-KdvKJGLKcDz77a26U2Cc4f8Po9dVPALYYkwaR0UhCEpuAEglB_ephKzCgdzs4V5DOLK=
+UqEtEE9zuh-6KIi9D5RM74hveQqs2uRC4EuVqU6f1rvusxH_iuFfYsCGfrl1JKOMfilOisrGQeP=
+3EuqoVF0qZpr42kf-1C1b8C8QzFllh-Rr1lwNkuQbttdqET-yWMlmH-y0HthuNYZk5wn8AjvV4w=
+gn38EQ5s valign=3Dmiddle style=3D"display: table-cell; padding: 18px 20px 1=
+6px; border-radius: 30px; font-family: Roboto, Arial, sans-serif; font-weig=
+ht: 700; color: #030303;border-left: 2px solid #FFFFFF; border-right: 2px s=
+olid #FFFFFF; border-top: 2px solid #FFFFFF; border-bottom: 2px solid #FFFF=
+FF; font-size: 16px; line-height: 14px; text-align: center; vertical-align:=
+ middle; text-decoration: none; mso-line-height-rule: exactly;">Get NFL Sun=
+day Ticket now</a>
+                                              <!--[if !mso]><!-->
+                                                   </td>
+                                                 </tr>
+                                              </table>
+                                              <!--<![endif]-->
+                                              <!--[if mso]>
+                                              </center>
+                                              </v:textbox>
+                                              </v:roundrect>
+                                              <![endif]-->
+                                              </td>
+                                            </tr>
+                                          </table>
+                          </div>
+                          <!--[if mso | IE]>
+                        </td>
+                      </tr>
+                    </table>
+                    <![endif]-->
+                  </td>
+                </tr>
+              </table>
+              <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=
+=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dsection>
+                <tr>
+                  <td align=3Dcenter>
+                    <!--[if mso | IE]>
+                    <table align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:600px;" width=
+=3D"600" >
+                      <tr>
+                        <td style=3D"line-height:0px;font-size:0px;mso-line=
+-height-rule:exactly;">
+                          <![endif]-->
+                          <div style=3D"background:transparent;background-c=
+olor:transparent;Margin:0px auto;border-radius:0;max-width:600px;">
+                                          <table border=3D0 cellpadding=3D0=
+ cellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0px;vertical-ali=
+gn:top; width=3D100%>
+                                            <tr>
+                                              <td class=3D"padding-0px-32px=
+-40px-32px text-container" style=3D"font-size:0px;padding:12px 16px 28px 16=
+px;word-break:break-word;mso-padding-alt:0px 32px 40px 32px;text-align:cent=
+er;">
+                                                <div class=3Dlinks-065FD4-u=
+nderline>
+                                                  <div style=3D"font-family=
+:Roboto, Helevtica, Arial, sans-serif;font-size:14px;letter-spacing:none;li=
+ne-height:1.5;text-align:center;mso-line-height-alt:1.313em;color:#AAAAAA;"=
+>
+                                                    <p style=3D"margin: 0 0=
+;">Up to $215 off ($170 off NFL=C2=A0Sunday=C2=A0Ticket and $15 off your fi=
+rst 3=C2=A0months of YouTube=C2=A0TV). New users only. Ends May=C2=A016. Te=
+rms, restrictions, and embargoes apply. No=C2=A0refunds.</p>
+                                                  </div>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td class=3Dimg-container sty=
+le=3D"font-size:0px;padding:0px 0px 0px 0px;word-break:break-word;text-alig=
+n:center;">
+                                                <div style=3D"margin:0 auto=
+;">
+                                                  <img alt height=3Dauto wi=
+dth=3D600 src=3Dhttps://gstatic.com/growthlab/api/P954oJcU27np0AcegXvrbdPel=
+3BuelqqZTcdm2X8.png style=3Dborder:none;outline:none;text-decoration:none;h=
+eight:auto;width:100%;font-size:13px;display:block;>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          </table>
+                          </div>
+                          <!--[if mso | IE]>
+                        </td>
+                      </tr>
+                    </table>
+                    <![endif]-->
+                  </td>
+                </tr>
+              </table>
+              <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=
+=3D0 role=3Dpresentation style=3Dbackground-color:transparent;width:100%; c=
+lass=3Dsection>
+                <tr>
+                  <td align=3Dcenter>
+                    <!--[if mso | IE]>
+                    <table align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:600px;" width=
+=3D"600" >
+                      <tr>
+                        <td style=3D"line-height:0px;font-size:0px;mso-line=
+-height-rule:exactly;">
+                          <![endif]-->
+                          <div style=3D"background:transparent;background-c=
+olor:transparent;Margin:0px auto;max-width:600px;">
+                            <table align=3Dcenter border=3D0 cellpadding=3D=
+0 cellspacing=3D0 role=3Dpresentation style=3Dbackground-color:transparent;=
+width:100%;>
+                              <tr>
+                                <td style=3D"font-size:0px;padding:32px 0px=
+ 0px 0px;text-align:center;vertical-align:top;" class=3Dblock-grid>
+                                          <table border=3D0 cellpadding=3D0=
+ cellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0px;vertical-ali=
+gn:top; width=3D100%>
+                                            <tr>
+                                              <td class=3D"padding-0px-24px=
+-0px-24px text-container" style=3D"font-size:0px;padding:0px 8px 0px 8px;wo=
+rd-break:break-word;mso-padding-alt:0px 24px 0px 24px;text-align:center;">
+                                                <div class=3Dlinks-065FD4-u=
+nderline>
+                                                  <div style=3D"font-family=
+:&#39;YT Sans&#39;, &#39;Roboto&#39;, Arial, sans-serif;font-size:24px;font=
+-weight:bold;letter-spacing:none;line-height:1.30;text-align:center;mso-lin=
+e-height-alt:2.625em;color:#F4F4F4;" class=3D"mso-font-size-32px font-size-=
+32px">
+                                                    <p style=3D"margin: 0 0=
+;">Level up your viewing=C2=A0experience</p>
+                                                  </div>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if mso | IE]>
+                        </td>
+                      </tr>
+                    </table>
+                    <![endif]-->
+                  </td>
+                </tr>
+              </table>
+              <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=
+=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dsection>
+                <tr>
+                  <td align=3Dcenter>
+                    <!--[if mso | IE]>
+                    <table align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:600px;" width=
+=3D"600" >
+                      <tr>
+                        <td style=3D"line-height:0px;font-size:0px;mso-line=
+-height-rule:exactly;">
+                          <![endif]-->
+                          <div style=3D"background:transparent;background-c=
+olor:transparent;Margin:0px auto;max-width:600px;">
+                            <table align=3Dcenter border=3D0 cellpadding=3D=
+0 cellspacing=3D0 role=3Dpresentation style=3Dbackground-color:transparent;=
+width:100%;>
+                              <tr>
+                                <td style=3D"font-size:0px;padding:12px 0px=
+ 12px 0px;text-align:center;vertical-align:top;mso-padding-alt:24px 0px 0px=
+ 0px;" class=3D"block-grid padding-24px-0px-0px-0px">
+                                  <!--[if mso | IE]>
+                                  <table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0">
+                                    <tr>
+                                      <td style=3D"vertical-align:top;width=
+:200px;" >
+                                        <![endif]-->
+                                        <div class=3D"mj-column-per-33-3333=
+33333333336 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left;dir=
+ection:ltr;display:inline-block;vertical-align:top;width:100%;>
+                                          <table border=3D0 cellpadding=3D0=
+ cellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0px;vertical-ali=
+gn:top; width=3D100%>
+                                            <tr>
+                                              <td class=3D"padding-0px-24px=
+-0px-24px img-container" style=3D"font-size:0px;padding:0px 0px 0px 0px;wor=
+d-break:break-word;mso-padding-alt:0px 24px 0px 24px;text-align:center;">
+                                                <div style=3D"margin:0 auto=
+;max-width:86px;">
+                                                  <img alt height=3Dauto wi=
+dth=3D86 src=3Dhttps://gstatic.com/growthlab/api/BCBmh08euXcdLcLLzFMdAfv0ik=
+crUwZvdQaiSt7o.png style=3Dborder:none;outline:none;text-decoration:none;he=
+ight:auto;width:100%;font-size:13px;display:block;>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td class=3D"padding-8px-24px=
+-10px-24px text-container" style=3D"font-size:0px;padding:8px 40px 10px 40p=
+x;word-break:break-word;mso-padding-alt:8px 24px 10px 24px;text-align:cente=
+r;">
+                                                <div class=3Dlinks-065FD4-u=
+nderline>
+                                                  <div style=3D"font-family=
+:&#39;YouTube Sans&#39;, sans-serif, Arial;font-size:16px;letter-spacing:no=
+ne;line-height:1.50;text-align:center;mso-line-height-alt:1.5em;color:#AAAA=
+AA;">
+                                                    <p style=3D"margin: 0 0=
+;">Multiview: Select and watch up to 4 live games on 1=C2=A0screen**</p>
+                                                  </div>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </div>
+                                        <!--[if mso | IE]>
+                                      </td>
+                                      <td style=3D"vertical-align:top;width=
+:200px;" >
+                                        <![endif]-->
+                                        <div class=3D"mj-column-per-33-3333=
+33333333336 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left;dir=
+ection:ltr;display:inline-block;vertical-align:top;width:100%;>
+                                          <table border=3D0 cellpadding=3D0=
+ cellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0px;vertical-ali=
+gn:top; width=3D100%>
+                                            <tr>
+                                              <td class=3D"padding-0px-24px=
+-0px-24px img-container" style=3D"font-size:0px;padding:0px 0px 0px 0px;wor=
+d-break:break-word;mso-padding-alt:0px 24px 0px 24px;text-align:center;">
+                                                <div style=3D"margin:0 auto=
+;max-width:86px;">
+                                                  <img alt height=3Dauto wi=
+dth=3D86 src=3Dhttps://gstatic.com/growthlab/api/Sih6oqrFUL5fuk7dR5jRiWYAm3=
+8ewP9bJTGYkmCg.png style=3Dborder:none;outline:none;text-decoration:none;he=
+ight:auto;width:100%;font-size:13px;display:block;>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td class=3Dtext-container st=
+yle=3D"font-size:0px;padding:8px 24px 10px 24px;word-break:break-word;text-=
+align:center;">
+                                                <div class=3Dlinks-065FD4-u=
+nderline>
+                                                  <div style=3D"font-family=
+:&#39;YouTube Sans&#39;, sans-serif, Arial;font-size:16px;letter-spacing:no=
+ne;line-height:1.50;text-align:center;mso-line-height-alt:1.5em;color:#AAAA=
+AA;">
+                                                    <p style=3D"margin: 0 0=
+;">Unlimited streams: Watch on multiple devices at=C2=A0home</p>
+                                                  </div>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </div>
+                                        <!--[if mso | IE]>
+                                      </td>
+                                      <td style=3D"vertical-align:top;width=
+:200px;" >
+                                        <![endif]-->
+                                        <div class=3D"mj-column-per-33-3333=
+33333333336 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left;dir=
+ection:ltr;display:inline-block;vertical-align:top;width:100%;>
+                                          <table border=3D0 cellpadding=3D0=
+ cellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0px;vertical-ali=
+gn:top; width=3D100%>
+                                            <tr>
+                                              <td class=3D"padding-0px-24px=
+-0px-24px img-container" style=3D"font-size:0px;padding:0px 0px 0px 0px;wor=
+d-break:break-word;mso-padding-alt:0px 24px 0px 24px;text-align:center;">
+                                                <div style=3D"margin:0 auto=
+;max-width:86px;">
+                                                  <img alt height=3Dauto wi=
+dth=3D86 src=3Dhttps://gstatic.com/growthlab/api/u0CK8Ewq5AxHZzIJtVkxwLWc4W=
+UwAlkBvnVAV2Yu.png style=3Dborder:none;outline:none;text-decoration:none;he=
+ight:auto;width:100%;font-size:13px;display:block;>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td class=3Dtext-container st=
+yle=3D"font-size:0px;padding:8px 24px 10px 24px;word-break:break-word;text-=
+align:center;">
+                                                <div class=3Dlinks-065FD4-u=
+nderline>
+                                                  <div style=3D"font-family=
+:&#39;YouTube Sans&#39;, sans-serif, Arial;font-size:16px;letter-spacing:no=
+ne;line-height:1.50;text-align:center;mso-line-height-alt:1.5em;color:#AAAA=
+AA;">
+                                                    <p style=3D"margin: 0 0=
+;">Key Plays: Replay game highlights with the push of a=C2=A0button </p>
+                                                  </div>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </div>
+                                        <!--[if mso | IE]>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <![endif]-->
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if mso | IE]>
+                        </td>
+                      </tr>
+                    </table>
+                    <![endif]-->
+                  </td>
+                </tr>
+              </table>
+              <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=
+=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dsection>
+                <tr>
+                  <td align=3Dcenter style=3Dmso-padding-left-alt:0;>
+                    <!--[if mso | IE]>
+                    <v:rect style=3D"width:600px;height:214px;" xmlns:v=3D"=
+urn:schemas-microsoft-com:vml" fill=3D"true" stroke=3D"false">
+                      <v:fill origin=3D"0,0.5" position=3D"0,0.5" aspect=3D=
+"atleast" src=3D"https://gstatic.com/growthlab/api/DJtVCszrlIEgIaDc63mgGWXn=
+ArMDg2koRGQbXTSK.png" color=3D"none" type=3D"frame" />
+                        <v:textbox style=3D"mso-fit-shape-to-text:true" ins=
+et=3D"0,0,0,0">
+                          <table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:600px;=
+" width=3D"600" >
+                            <tr>
+                              <td style=3D"line-height:0px;font-size:0px;ms=
+o-line-height-rule:exactly;height:214px;">
+                                <![endif]-->
+                                <div style=3D"background:transparent;backgr=
+ound-color:transparent;Margin:0px auto;border-radius:0;max-width:600px;">
+                                  <div style=3Dline-height:0;font-size:0;>
+                                    <table align=3Dcenter background=3Dhttp=
+s://gstatic.com/growthlab/api/DJtVCszrlIEgIaDc63mgGWXnArMDg2koRGQbXTSK.png =
+border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3D"bac=
+kground:center bottom / cover no-repeat;background-image:url(https://gstati=
+c.com/growthlab/api/DJtVCszrlIEgIaDc63mgGWXnArMDg2koRGQbXTSK.png);backgroun=
+d-position:center bottom;background-size:cover;background-repeat:no-repeat;=
+width:100%;border-radius:0;">
+                                      <tr>
+                                        <td style=3D"border-radius:0;font-s=
+ize:0px;padding:0px 0px 28px 0px;text-align:center;vertical-align:top;mso-p=
+adding-alt:32px 0px 40px 0px;mso-padding-left-alt:0;mso-padding-right-alt:0=
+;" class=3D"block-grid padding-32px-0px-40px-0px">
+
+                                                  <table border=3D0 cellpad=
+ding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0px;vert=
+ical-align:top; width=3D100%>
+                                                    <tr>
+                                                      <td valign=3Dmiddle c=
+lass=3D"padding-0px-24px-32px-24px button-container" style=3D"font-size:0px=
+;padding:12px 12px 12px 12px;word-break:break-word;mso-padding-alt:0px 24px=
+ 32px 24px;mso-padding-left-alt:0;mso-padding-right-alt:0;text-align:center=
+;">
+                                                        <!-- CTA button -->
+                                                        <!--[if mso]>
+                                                        <v:roundrect xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:of=
+fice:word" style=3D"width: 280px; height: 47px; v-text-anchor:middle; mso-p=
+osition-horizontal: center" arcsize=3D"7%" strokecolor=3D"#ffffff" strokewe=
+ight=3D"0pt" fillcolor=3D"#ffffff">
+                                                        <w:anchorlock/>
+                                                        <v:textbox inset=3D=
+"0,0,0,0">
+                                                        <center style=3D"fo=
+nt-family: Roboto, Arial, Sans-serif; font-weight: normal; font-size: 14px;=
+ line-height: 18px; color: #030303; text-align: center; letter-spacing: nor=
+mal; mso-line-height-rule: exactly;">
+                                                        <![endif]-->
+                                                        <!--[if !mso]><!-->
+                                                        <table role=3Dprese=
+ntation align=3Dcenter cellpadding=3D0 cellspacing=3D0 border=3D0 style=3D"=
+border-collapse: initial;">
+                                                           <tr>
+                                                             <td width=3D10=
+0% align=3Dcenter valign=3Dmiddle bgcolor=3D#065fd4 style=3D"mso-padding-al=
+t: 0 20px; border-radius: 30px; width: 100%; background-color: #ffffff; tex=
+t-align: center; vertical-align: middle;">
+                                                        <!--<![endif]-->
+                                                             <a href=3Dhttp=
+s://notifications.google.com/g/p/ANiao5oY_ZmcmwzRbXQoG1eHnLavslXscCvsKsslmM=
+eYPfrZv5oKmHgpxxQXAbrClfpfMy2JSomo7mJNtwgUtdob-DKMO4PxtqX-3tL4rfNoDf6r6iQrh=
+4JgoGfmoKCTSeqg5bZfQiPMabpC9px1DBhicRsO8cZUhfJpxnZzF9IAW4_u2_xZ86CHf5L7zxDx=
+GcfA7cVwOWko4s3FSGKjE_E_9GNZvhWZ1YX9GHrknbq4bK0c1PXOsxNB0BlYHwRQMxJdhNfButx=
+GPvQqRBPp5ZuJMijUTvtCO9dijYdm2QIYIyb2PLFRaUjJggV1Wh_u3fPiFTpYmcRVvOSZ-i0nNm=
+7V3BTmK1OJGWv2edb1siQ5uV8U8ZvwnGSrKYyG-qNQ61IOJMAiHmJkAeufvPF0LopZgtsoX6WLC=
+ox_NdxQxISqKJijp9S65w valign=3Dmiddle style=3D"display: table-cell; padding=
+: 18px 20px 16px; border-radius: 30px; font-family: Roboto, Arial, sans-ser=
+if; font-weight: 700; color: #030303;border-left: 2px solid #FFFFFF; border=
+-right: 2px solid #FFFFFF; border-top: 2px solid #FFFFFF; border-bottom: 2p=
+x solid #FFFFFF; font-size: 16px; line-height: 14px; text-align: center; ve=
+rtical-align: middle; text-decoration: none; mso-line-height-rule: exactly;=
+">Get NFL Sunday Ticket now</a>
+                                                        <!--[if !mso]><!-->
+                                                             </td>
+                                                           </tr>
+                                                        </table>
+                                                        <!--<![endif]-->
+                                                        <!--[if mso]>
+                                                        </center>
+                                                        </v:textbox>
+                                                        </v:roundrect>
+                                                        <![endif]-->
+                                                      </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                      <td class=3D"padding-=
+0px-32px-0px-32px text-container" style=3D"font-size:0px;padding:12px 16px =
+0px 16px;word-break:break-word;mso-padding-alt:0px 32px 0px 32px;mso-paddin=
+g-left-alt:0;mso-padding-right-alt:0;text-align:center;">
+                                                        <!--[if mso]>
+                                                        <table width=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" s=
+tyle=3D"border-collapse:collapse;border-spacing:0px;">
+                                                          <tr>
+                                                            <td style=3D"fo=
+nt-size:0;line-height:0;width:32px;">
+                                                              <table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"b=
+order-collapse:collapse;border-spacing:0px;">
+                                                                <tr>
+                                                                  <td style=
+=3D"font-size:0;line-height:0;width:32px;">&nbsp;</td>
+                                                                </tr>
+                                                              </table>
+                                                            </td>
+                                                            <td align=3D"ce=
+nter">
+                                                              <![endif]-->
+                                                              <div class=3D=
+links-065FD4-underline>
+                                                                <div style=
+=3D"font-family:Roboto, Helevtica, Arial, sans-serif;font-size:14px;letter-=
+spacing:none;line-height:1.5;text-align:center;mso-line-height-alt:1.313em;=
+color:#AAAAAA;">
+                                                                  <p style=
+=3D"margin: 0 0;">Up to $215 off ($170 off NFL=C2=A0Sunday=C2=A0Ticket and =
+$15 off your first 3=C2=A0months of YouTube=C2=A0TV). New users only. Ends =
+May=C2=A016. Terms, restrictions, and embargoes apply. No=C2=A0refunds.</p>
+                                                                </div>
+                                                              </div>
+                                                              <!--[if mso]>
+                                                            </td>
+                                                            <td style=3D"fo=
+nt-size:0;line-height:0;width:32px;">
+                                                              <table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"b=
+order-collapse:collapse;border-spacing:0px;">
+                                                                <tr>
+                                                                  <td style=
+=3D"font-size:0;line-height:0;width:32px;">&nbsp;</td>
+                                                                </tr>
+                                                              </table>
+                                                            </td>
+                                                          </tr>
+                                                        </table>
+                                                        <![endif]-->
+                                                      </td>
+                                                    </tr>
+                                                  </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </div>
+                                <!--[if mso | IE]>
+                              </td>
+                            </tr>
+                          </table>
+                          <p style=3D"mso-line-height-rule:exactly;margin:0=
+;mso-hide:all;font-size:0;line-height:0;">
+                            <o:p xmlns:o=3D"urn:schemas-microsoft-com:offic=
+e:office">
+                              &nbsp;
+                            </o:p>
+                          </p>
+                        </v:textbox>
+                      </v:rect>
+                      <![endif]-->
+                    </td>
+                  </tr>
+                </table>
+                <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacin=
+g=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dsection>
+                  <tr>
+                    <td align=3Dcenter>
+                      <!--[if mso | IE]>
+                      <table align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:600px;" wid=
+th=3D"600" >
+                        <tr>
+                          <td style=3D"line-height:0px;font-size:0px;mso-li=
+ne-height-rule:exactly;">
+                            <![endif]-->
+                            <div style=3D"Margin:0px auto;max-width:600px;"=
+>
+                              <table align=3Dcenter border=3D0 cellpadding=
+=3D0 cellspacing=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dbackgr=
+ound-position-center-top>
+                                <!-- survey -->
+<tr>
+<td width=3D100% valign=3Dtop style=3D"padding: 0 32px; ">
+<table role=3Dpresentation width=3D100% align=3Dcenter border=3D0 cellpaddi=
+ng=3D0 cellspacing=3D0 style=3D"border: 0 none;">
+<tr><td width=3D100% style=3D"padding: 40px 0 0; font-size: 1px; line-heigh=
+t: 1px;">=C2=A0</td></tr>
+<tr>
+<td width=3D100% align=3Dcenter style=3D"padding: 0; font-family: Roboto, &=
+#39;YT Sans&#39;, Arial, sans-serif; font-weight: 700; font-size: 16px; lin=
+e-height: 28px; color: #909090;">
+<p>Was this email helpful?</p>
+</td>
+</tr>
+<tr>
+<td width=3D100% align=3Dcenter style=3D"padding: 24px 0 0;">
+<table role=3Dpresentation width=3D100% align=3Dcenter border=3D0 cellpaddi=
+ng=3D0 cellspacing=3D0 style=3D"border: 0 none;">
+<tr>
+<td width=3D20% align=3Dcenter><a href=3Dhttps://notifications.google.com/g=
+/p/ANiao5qPQOnxZttmKOKdiAYzN7rYImOHLxgIX3TcSl8dkN-2o2Xcfm-180sYFZuJZjEkytnp=
+A9xeY0AcHlSX3507BYomdeWfdNp1oQOz8pfjxbfWTppu_s_AMGJT9bafqqrNDEi0DXTzDrWjjd3=
+zzB3HF19u3QV9TaI_mKQfsPW0I4apn5jyNjJ5xT_cGDWp2L29dqDIJeI77zTKNaDrjMZq8yznLS=
+8qg7gGDj3RbmRrD5jFJleqYtJ7QuQ-xg6nQCdMvA7CHY5JeIQnfdCDRCrlCbIcJ_7FObn-R4SdR=
+3cGQs14VwwLa7vq37Yt0FLSC1Y9VAJsv5ApnNaLrPDxs60Xr2fpIjo style=3D"display: bl=
+ock;"><img src=3Dhttps://services.google.com/fh/files/emails/hats_survey_ic=
+o_717171_rating_1_w96.png width=3D48 alt=3D"Very dissatisfied" style=3D"dis=
+play: block; max-width: 48px; vertical-align: top;"></a></td>
+<td width=3D20% align=3Dcenter><a href=3Dhttps://notifications.google.com/g=
+/p/ANiao5oEIZFuC-9qcr1xZ-hCnJPRLgKxHf0Z2gLnge5CKimSX1BKSgXYDqyR4M26DFB04uqN=
+hVUL0YI-AsKacljcdeq76gdUb2vphGSqftR0OaTzbv7EpXmm-2S0GGwYmuYsHRFvzstxLtRGeqs=
+-mqAARIpiID8Ms2AUa1xvsOIF62HSN6aHHEvvpZg8MJS9tfXMpZWyutyGeFWMibDM5ShGFVFm82=
+RC6RC81gIrwGGv59_Ws9prDNXh-6akcoFK6j9rvGqQ090HnWg3qUgQFlQXN07LpGgBFyp2TZSIk=
+Dto8WIROIQKYXyRvy54kn0IJEKqkbf55FrZ2Q8x3DHegN0g style=3D"display: block;"><=
+img src=3Dhttps://services.google.com/fh/files/emails/hats_survey_ico_71717=
+1_rating_2_w96.png width=3D48 alt=3DDissatisfied style=3D"display: block; m=
+ax-width: 48px; vertical-align: top;"></a></td>
+<td width=3D20% align=3Dcenter><a href=3Dhttps://notifications.google.com/g=
+/p/ANiao5rl5iEHussk-dsAlG2iQQjLnFQv3nRonNLcIBjeztZFxm7iykqFok57rN07SBBi6Ze3=
+WV7Y6FzcVqagctyr8qv_ySJ5XGPddHK53ZGPR9H9jaUp3pPpD5eM5ThBlOUmjqsgPfiFryvRh6U=
+qj1G3tJlnpWRNJkzOYwO38iq7batcV6SFAypJcLblP7fwtal8o8bAooSAzhlM5H9Jzy-Dx8bIGe=
+lrGJq-jx6DdkLJz7VSuZckwhg5Vw92QOWGv7cf-a9iYiFwGITu-UI6w3nGgNxSbrDGaoBnMEITE=
+cSKo9kHF9h6wO2fLa6l4EDQNHE0JFMfS8uhP9rAnw style=3D"display: block;"><img sr=
+c=3Dhttps://services.google.com/fh/files/emails/hats_survey_ico_717171_rati=
+ng_3_w96.png width=3D48 alt=3DNeutral style=3D"display: block; max-width: 4=
+8px; vertical-align: top;"></a></td>
+<td width=3D20% align=3Dcenter><a href=3Dhttps://notifications.google.com/g=
+/p/ANiao5qQU5IcrZaxGA2bezU3pytxE8xNaNtHkWw0U61NtXfcZSI0r-xJaGpM4bhcoVE0Puof=
+iWBh5bgyGgNDY7Ff07mIijwVs6Yd2-ehXVDr3LZ14kybsw3bb9cCS7iTcHrn1aKsbW-2MPbR0iM=
+sS2gED900f3M8TBbyXNnEEEnxn6e7Hl7sqUv69UgcTZBW_s220xYxvbqS7Aw_6qB6zzUZXCIOVc=
+iXqAvQaSRw0AyNyBSbPSkAUJNai2olURIyUH5VzUrdAK-5MumKjytkljAM4ap-XDXhoUnEZl5kI=
+SYtEuwCUga3RVgV_BJdqo1A0SIhgsDQ1TYWlohgqDHk style=3D"display: block;"><img =
+src=3Dhttps://services.google.com/fh/files/emails/hats_survey_ico_717171_ra=
+ting_4_w96.png width=3D48 alt=3DSatisfied style=3D"display: block; max-widt=
+h: 48px; vertical-align: top;"></a></td>
+<td width=3D20% align=3Dcenter><a href=3Dhttps://notifications.google.com/g=
+/p/ANiao5pAtO6PSmRgWQehlYa9uQeDNh0WGUqK8tjDUM-9EdZS-H7WOBC-3fEZE3edzzLiQnSJ=
+oLcg1GRQ7Dd_Kyh3K4zxM5W3Mis5M9WoO3cczbCfIYwmv7rAEEOJB8B40lyJm1PCywlQcM4E_MJ=
+0iOm-79htnTrAlxhva2DLPkHr5nMHjeQOEHE3oSGLLEgvYnoS4_G2b772XoBEra02ttBfUaUrh7=
+3gD4cJGEkt_5saTkgw5mQtYqHuQakTCTpYEqjyUX9gXVrQWrDwn0IEd0UfqSCdvXrJyzfvUztSx=
+6DXpmjKJKxizz--F9YFBRyO393oO9AhVRT7tfJs6nDLmgqOHz0 style=3D"display: block;=
+"><img src=3Dhttps://services.google.com/fh/files/emails/hats_survey_ico_71=
+7171_rating_5_w96.png width=3D48 alt=3D"Very satisfied" style=3D"display: b=
+lock; max-width: 48px; vertical-align: top;"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td width=3D100% style=3D"padding: 40px 0 0; font-size: 1px; line-heigh=
+t: 1px;">=C2=A0</td></tr>
+<tr><td width=3D100% style=3D"padding: 1px 0 0; border-top: 1px solid #2828=
+28; font-size: 1px; line-height: 1px;">=C2=A0</td></tr>
+</table>
+</td>
+</tr>                              </table>
+                            </div>
+                            <!--[if mso | IE]>
+                          </td>
+                        </tr>
+                      </table>
+                      <![endif]-->
+                    </td>
+                  </tr>
+                </table>
+              =20
+                <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacin=
+g=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dsection>
+                  <tr>
+                    <td align=3Dcenter>
+                      <!--[if mso | IE]>
+                      <table align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:600px;" wid=
+th=3D"600" >
+                        <tr>
+                          <td style=3D"line-height:0px;font-size:0px;mso-li=
+ne-height-rule:exactly;">
+                            <![endif]-->
+                            <div style=3D"Margin:0px auto;max-width:600px;"=
+>
+                              <table align=3Dcenter border=3D0 cellpadding=
+=3D0 cellspacing=3D0 role=3Dpresentation style=3Dwidth:100%;>
+                                <tr>
+                                  <!-- social icons -->
+<tr>
+<td width=3D100% align=3Dcenter valign=3Dtop>
+<table role=3Dpresentation width=3D100% align=3Dcenter border=3D0 cellpaddi=
+ng=3D0 cellspacing=3D0>
+<tr>
+<td width=3D50% align=3Dright><a href=3Dhttps://notifications.google.com/g/=
+p/ANiao5qUprY1-JRYYoBID2XZvwblIQouTFD-SPW2MRIscP0Bsa8W0CjKHz3tpWzmB0c6epRYt=
+o9OObHZjoV_ms9hLA-FztGhcFm5fFIqvEgrXtd86cCx628b7WXnv8n7_qzOsxLoNwJdxnrxPis4=
+OJXI5iyfZaKafapqJ3secSB2ALfwq36ITFjOWPkCBhHO11wMAX2K_Mp9gZHfxWz6wzTfG6rz9OV=
+DPOmc8oslSw style=3D"display: block; padding: 16px;"><img border=3D0 valign=
+=3Dtop width=3D48 src=3Dhttps://services.google.com/fh/files/emails/ytv_soc=
+ial_icon_yt_ffffff_w48_2x.png alt=3D"Visit the YouTube TV website
+" style=3D"border: 0px; display: block; max-width: 48px;"></a></td>
+<td width=3D50% align=3Dleft><a href=3Dhttps://notifications.google.com/g/p=
+/ANiao5oZaFmrX5K-Tg11k_KbxMp3VC9oK1qsdAzoyLTB_Ay6lx_Xx7KKhWxv6V2gNciqCrHJLc=
+HWvxkBfIVgxbTG4qCxj2W7hs9y23o8mZFdImUshfvP_wVgyeZ9dTOpiGH2XJaO5yU3K5bCcj-54=
+4QEa0cWCfStbRT7iJSrosrfb3fImFhYK2YHkC85K40b6wiwvahKWC4YIH8g3Io4QG2nw5XHlfqm=
+eq1IRoDz style=3D"display: block; padding: 16px;"><img border=3D0 valign=3D=
+top width=3D48 src=3Dhttps://services.google.com/fh/files/emails/ytv_social=
+_icon_x2_808080_w48_2x.png alt=3D"Follow YouTube TV on X
+" style=3D"border: 0px; display: block; max-width: 48px;"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width=3D100% align=3Dcenter style=3D"padding: 0 0 16px; font-family: Ro=
+boto, sans-serif; font-weight: 700; font-size: 12px; line-height: 18px; col=
+or: #717171;">
+<p><a href=3Dhttps://notifications.google.com/g/p/ANiao5o0ZZhc_0a6wqdc6P2jl=
+Auo2iwVmCRryaIL02hulH8egjGhRCcU2gabUYsKsJG5CWOb5-5SLRDDJvLG4qwSxuxAjTTpMmSr=
+ugJ-wy45QdRlnwGxOLNLEUxMekag5gUG3wMGKDUBtVx4uXMlFMLDyeVqaNjwMBXExrQUA9gasVx=
+qcGv-p39bwHCfAGx-cN5bAkcueFNHyuxTgzsvgzpkD5A7P-WMQxJgfxbJVZQoiXqVLWcptg sty=
+le=3D"color: #3ea6ff; text-decoration: none;">Help Center
+</a>=C2=A0 <span style=3D"font-size: 18px; vertical-align: -2px;">=C2=B7</s=
+pan> =C2=A0<a href=3Dhttps://notifications.google.com/g/p/ANiao5qEoFMytrJCs=
+iOrmSYn7Vx1p1-nsnYAtzWTx2DFlpy_VC3F5ZNo61WRJGoJE32IqqgNpG4aw_3-piATuE8IL-E8=
+ukOA_IDPSKcZVdRc5SUSdgIw0ptVDanWBPcvVkAn3n2SJ-ACAtkSEa_p88dxDCmRIf3AIn2WSoK=
+K5bSGbezinXdIRoVoRmVXs6K6qqZxwckz1JotpknrLEeMzDq6TepMvbAXf7sFS-Icvnu3Q5adR1=
+-J9hDXd5ILu_bGDOIJ style=3D"color: #3ea6ff; text-decoration: none;">Email o=
+ptions
+</a></p>
+</td>
+</tr>                                </tr>
+                              </table>
+                            </div>
+                            <!--[if mso | IE]>
+                          </td>
+                        </tr>
+                      </table>
+                      <![endif]-->
+                    </td>
+                  </tr>
+                </table>
+                <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacin=
+g=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dsection>
+                  <tr>
+                    <td align=3Dcenter>
+                      <!--[if mso | IE]>
+                      <table align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:600px;" wid=
+th=3D"600" >
+                        <tr>
+                          <td style=3D"line-height:0px;font-size:0px;mso-li=
+ne-height-rule:exactly;">
+                            <![endif]-->
+                            <div style=3D"Margin:0px auto;max-width:600px;"=
+>
+                              <table align=3Dcenter border=3D0 cellpadding=
+=3D0 cellspacing=3D0 role=3Dpresentation style=3Dwidth:100%;>
+                                <tr>
+                                  <td style=3D"font-size:0px;padding:16px 0=
+px 0px 0px;text-align:center;vertical-align:top;" class=3Dblock-grid>
+                                  =20
+                                            <table border=3D0 cellpadding=
+=3D0 cellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0px;vertical=
+-align:top; width=3D100%>
+                                              <tr>
+                                                <td class=3Dtext-container =
+style=3D"font-size:0px;padding:0px 32px 0px 32px;word-break:break-word;text=
+-align:center;">
+                                                  <div class=3Dlinks-3EA6FF=
+>
+                                                    <div style=3D"font-fami=
+ly:Roboto, Helevtica, Arial, sans-serif;font-size:12px;letter-spacing:none;=
+line-height:1.5;text-align:center;mso-line-height-alt:1.125em;color:#AAAAAA=
+;">
+                                                        <p>* NFL Sunday Tic=
+ket embargoes: You will generally receive out-of-market Sunday games unless=
+ the game is locally broadcast. Your billing address (zip=C2=A0code) is ass=
+ociated with your streaming access. However, due to NFL rules, you might al=
+so see blackout restrictions based on your mobile device=E2=80=99s location=
+ (e.g.,=C2=A0subscribers might not be able to stream while attending an NFL=
+ game or in surrounding stadium areas). If there is an outage in your locat=
+ion, we=E2=80=99ll do our best to let you know. Locally broadcast FOX and C=
+BS games, Sunday Night Football on NBC, select digital-only games, and inte=
+rnational games excluded. Puerto=C2=A0Rico, US=C2=A0Virgin=C2=A0Islands, an=
+d commercial use excluded.</p>
+                                                        <p>=E2=80=8C<br></p=
+>
+                                                        <p>** Device and co=
+ntent restrictions apply.</p>
+                                                        <p>=E2=80=8C<br></p=
+>
+
+                                                      <p>You received this =
+message because you signed up to receive general updates, announcements, an=
+d videos from YouTube. If you do not want to receive general emails from Yo=
+uTube in the future, please unsubscribe=C2=A0<a href=3Dhttps://notification=
+s.google.com/g/p/ANiao5rSb5YQuLHhwzxQTqMjxSVrujNYTd0t_6uADHdZvp2Kl474e_1EM7=
+lShqeU2vFe5uESwMySDx_qXCiZYPBR-jyoE-gnFR5-sx3NAyIxAowzJxAU-3olFZvaj-WalYBa9=
+14uQWgvuhOoDBfW5VHdeV0lNDXyhUT_HkG0fomkP0eIeBoQYd2BVh6RzpzrdWVYN8bYnIoZF7uM=
+GMoloISEzF9CgEnPFDKugKUPs3_Ep8riYuHCZlbceJhT-6N97AUfv_3BtAFflQreExunQl7XM_x=
+d1-TLWPGVM72H0P4nobrzOPpdgO46MrTdm1_bBZEA7SBS-pSgQNtlqMYGhfkCYi1ZCvQ7Lim00Q=
+trgzk5IsjjVqDKIj2UWKloD2MYBxcW5sULSyKoYd6lsYXGOlPI style=3D"font-weight: 70=
+0; color: #3ea6ff; text-decoration: none;">here</a>.</p>
+                                                    </div>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                            <!--[if mso | IE]>
+                          </td>
+                        </tr>
+                      </table>
+                      <![endif]-->
+                    </td>
+                  </tr>
+                </table>
+                <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacin=
+g=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dsection>
+                  <tr>
+                    <td align=3Dcenter>
+                      <!--[if mso | IE]>
+                      <table align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:600px;" wid=
+th=3D"600" >
+                        <tr>
+                          <td style=3D"line-height:0px;font-size:0px;mso-li=
+ne-height-rule:exactly;">
+                            <![endif]-->
+                            <div style=3D"Margin:0px auto;max-width:600px;"=
+>
+                                            <table border=3D0 cellpadding=
+=3D0 cellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0px;vertical=
+-align:top; width=3D100%>
+                                              <tr>
+                                                <td class=3Dimg-container s=
+tyle=3D"font-size:0px;padding:32px 32px 0px 32px;word-break:break-word;text=
+-align:center;">
+                                                  <div style=3D"margin:0 au=
+to;max-width:80px;">
+                                                    <a href=3Dhttps://notif=
+ications.google.com/g/p/ANiao5ojaYxD5Cfv1_ZXGLmVdAa_W2b4X_ZgsCe8Yq87IOf-eE0=
+Mfd8qX9WTon5aMO06pDg7Y9s4fzbUVUR857CiNpkdiSMmy5QhlFruX_FzZjHJMD3E3i6I5XMU0x=
+nsGcbu2XAxTJVHPbV0VOl4GxDwLxG0p-PURVDLh8s9ZOl54rAyCthzZISIN6zykyzZVUjahiBN3=
+nn6iDoaluhDJJ8XCxGeKrM7ysot style=3D"display: block;">
+                                                      <img alt=3DYouTube wi=
+dth=3D80 src=3Dhttps://gstatic.com/growthlab/api/ObwdXMiHz3uX3joAPWOKfEr2mP=
+sYLb0dXxSM1Rwd.png style=3D"border:none;outline:none;text-decoration:none;h=
+eight:auto;width:100%;font-size:13px;display:block;padding:15px 0px">
+                                                    </a>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td class=3Dtext-container =
+style=3D"font-size:0px;padding:24px 32px 40px 32px;word-break:break-word;te=
+xt-align:center;">
+                                                  <div class=3Dlinks-065FD4=
+>
+                                                    <div style=3D"font-fami=
+ly:Roboto, Helevtica, Arial, sans-serif;font-size:12px;letter-spacing:none;=
+line-height:1.5;text-align:center;mso-line-height-alt:1.125em;color:#AAAAAA=
+;">
+                                                     <p>=C2=A9 2024 Google =
+LLC d/b/a YouTube</p>
+                                                     <p>901 Cherry Ave</p>
+                                                     <p>San Bruno, CA 94066=
+</p>
+                                                    </div>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                            </table>
+                            </div>
+                            <!--[if mso | IE]>
+                          </td>
+                        </tr>
+                      </table>
+                      <![endif]-->
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            <img alt=3D"" height=3D1 width=3D3 src=3Dhttps://notifications.=
+google.com/g/img/ANiao5r-PRG3gt8H2yKG9mqmretJfwV_k87yctiy2gIzojNRf4sGqv7Sd_=
+R4EzwCUvad0vr4QlD4my7Blpi-UhgEzBZOc8t93NCceaAD7L5kx_Bhulm1Utq8pQnqdFb-SBpw-=
+Yg-ACrDiNHHSwAB95XZ-fDSh0go4TKj5nbrpA.gif></body>
+          </html>
+--0000000000007a76780616f891b2--

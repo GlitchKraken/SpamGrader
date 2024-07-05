@@ -1,0 +1,650 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:6244:b0:1a4:ef03:4af8 with SMTP id sd4csp86403rwb;
+        Wed, 26 Jun 2024 21:02:11 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGxgbVro4xELaz3fKE02pEfBP563+0UF96LRM9heqoSfaSt35bxh6PZj5Zqqx8QtW8OAREP
+X-Received: by 2002:a05:6000:4020:b0:366:e991:b9ac with SMTP id ffacd0b85a97d-366e991ba88mr9137708f8f.14.1719460931212;
+        Wed, 26 Jun 2024 21:02:11 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719460931; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zi31TwGe9NNre9UHTo7imjc2+otYE6B2vudS+4brH1qnzw4tw2B0cJJLlLhUY+J18P
+         6xJnN1lAwSxrVW9MTXaWR/CzIa4vZRCg9B6M6ipmDqH8fSVkyAmgDY7OER/MIRXCDwW3
+         cQ0dZBDmVcDkjm/T+ukISDmDLG+GR+t3li27whVktQF9LLsFgDn14ZjLq7bwF/msmoe0
+         mzJw9max+fsS1KsCcCYT1Ma6XYW9oqH9WWnXNnNqgQc0j3H3w5dRdxGs831Wbx7oeW12
+         bXxzLDsiWub/tZAv+bFKIpIONNOnRLSp9ht9nPh3JpzWUxZBG69mygPvHJJvVUGER8xW
+         CQhg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:message-id:to:sender:from:date
+         :domainkey-signature:dkim-signature;
+        bh=yg+Yl5D1Ctpl3+iP3yRaqBdFWEbgJcCnKj2LPg7HmfA=;
+        fh=Xgp6tlDhVnr40MorOIwV99TSul4SlrYFTShZHCW1H04=;
+        b=lAxuyyc2YGQB0sEOMlLn4JoZ09hlD+ZaAHcqe0rvKnqYcE8ju4MIHiAxZBvfwLkda2
+         ee9/BA76kISV4zfaAku0KetDsxYNLisDIrlw/d/aLAJ3DmxnpNR0WL8TmMIiiPULqi3E
+         0GTlmm5o88Bhexdlf05swh51bELyBiVAEFQhofHqT1V8aW13xfgafJ9Ll3IMy0v3FZJp
+         V+mFTbcaWr/XfgSow1NrSwtYFn9ur2FCBhSDU2uW2UliJfsWZ1YGf2XNV9gNk8GkrGU+
+         dcaSPOn5DnCCG+XW+QSt7EuRJFNQVA+8nP1nMfy9ZsGIe+U9VVUqwcQdVGUbWVGCDFJO
+         YAXA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=fail header.i=@wein-wissen.eu header.s=smtp header.b="W/j4YU0U";
+       spf=pass (google.com: domain of confirmation_support.jzz@wein-wissen.eu designates 57.129.44.215 as permitted sender) smtp.mailfrom=Confirmation_support.jzz@wein-wissen.eu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=wein-wissen.eu
+Return-Path: <Confirmation_support.jzz@wein-wissen.eu>
+Received: from wein-wissen.eu (vps-28598096.vps.ovh.net. [57.129.44.215])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-367435596b8si271554f8f.2.2024.06.26.21.02.10
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Wed, 26 Jun 2024 21:02:11 -0700 (PDT)
+Received-SPF: pass (google.com: domain of confirmation_support.jzz@wein-wissen.eu designates 57.129.44.215 as permitted sender) client-ip=57.129.44.215;
+Authentication-Results: mx.google.com;
+       dkim=fail header.i=@wein-wissen.eu header.s=smtp header.b="W/j4YU0U";
+       spf=pass (google.com: domain of confirmation_support.jzz@wein-wissen.eu designates 57.129.44.215 as permitted sender) smtp.mailfrom=Confirmation_support.jzz@wein-wissen.eu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=wein-wissen.eu
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=smtp; d=wein-wissen.eu;
+ h=Date:From:Sender:To:Message-ID:Subject:MIME-Version:Content-Type; i=Confirmation_support.hmy@wein-wissen.eu;
+ bh=5ryGRzxjzSogELaTRpKqG0EZSTc=;
+ b=W/j4YU0U5yJx7K043H396klasfREK1WqSrb8EMLleEgTbqhQcqN9UmPbQ6resSpVA/R6KwVzfhna
+   zP4Mu4UwjbxjpYq/QqDwCV2tYjoLQuA4MKB8lO7bU23LjrXucxAynBJiQjLFmLLTJRubNzhrizFm
+   sq2yxof3uMZqH/lA82E=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=smtp; d=wein-wissen.eu;
+ b=BPm+UJ5ofqMZ2E6XQ9jO0oQ2qqHpBT/HI3+/IUiOz4Xur6ZMmUJ+UUtA874qkMdulHKa0Ixg3dZH
+   HaXNS8q6cjxdxhKmOutCIbiYGIgevqMA9aAMeD6Icp1y4VoxvlqQU+IbrVSdaSvYvirbSunZCbOb
+   MPBfQG0FdBVJVctHVvc=;
+Date: 06-27-2024
+From: "*blackpapermoon42 " <Confirmation_support.alg@wein-wissen.eu>
+Sender: <Confirmation_support.hmy@wein-wissen.eu>
+To: blackpapermoon42065<blackpapermoon42@gmail.com>
+Message-ID: <SOIfWdCBwinCzf-177869750891-2436-8w95-foxm-IlQHJaunLg6o-000000@us-west-2.amazonses.com>
+Subject: ✔ You have won an Yeti Crossroads Backpack #52
+MIME-Version: 1.0
+Content-Type: multipart/report; boundary="1981-8-fefd22d288ad80a4cc70729caddbbb72"; report-type=delivery-status
+
+--1981-8-fefd22d288ad80a4cc70729caddbbb72
+Content-Type: multipart/related; boundary="w0wsh9vz8ccsyld"
+
+--w0wsh9vz8ccsyld
+Content-Type: multipart/alternative; boundary="EyoldrspmFu7YAG6MxncFKlFKVfyJKoV4313831taoiM9"
+
+--EyoldrspmFu7YAG6MxncFKlFKVfyJKoV4313831taoiM9
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Top Stories of the Day: Sep 0, 2019
+
+3866853007504209894447241
+-----
+
+If you believe this has been sent to you in error, please safely unsubscrib=
+e
+--EyoldrspmFu7YAG6MxncFKlFKVfyJKoV4313831taoiM9
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+</title></head>
+<body>
+<center>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+</title></head>
+<body>
+<center>
+<div dir="ltr"><a href="http://rp1igh6l1jlszgzl.wein-wissen.eu/4WXizu5025xrkM157nnznguhyvn8NDITHGZGXCAPOXM1981/6984g9" style="text-decoration-line:none;color:rgb(0,0,0)">
+
+<br><table role="presentation" style="max-width:100%" cellspacing="0" cellpadding="0" align="center">
+  <tbody><tr>
+    <td width="600"><table role="presentation" style="max-width:600px" cellspacing="0" cellpadding="0" align="center" width="100%">
+       
+        
+        <tbody><tr>
+          <td valign="top"><table role="presentation" style="line-height:26px;font-size:18px;border:4px solid rgb(255,103,0);border-color:#007318;border-radius:10px 10px 0px 0px;font-family:Lato,sans-serif" cellspacing="0" cellpadding="0" bgcolor="#fcfffe" width="100%" border="0">
+          
+           <tbody><tr>
+          <td style="padding:15px 10px 25px 15px;font-size:40px;color:GREEN" valign="top" align="center">
+ <b> DICK'S Sporting Goods  </b>
+              
+              
+          </td>
+     </tr>  
+ 
+              
+              <tr>
+     <td class="gmail-f-22" style="padding:30px 25px;font-size:35px;line-height:36px;font-weight:bold;color:rgb(255,255,255)" valign="middle" bgcolor="#007318" align="center">
+   <strong>Congratulations blackpapermoon42 </strong> </td>
+     </tr>
+            
+           
+     <tr>
+                <td style="padding:0px 25px 15px" valign="top" align="left">
+              
+              
+              
+               <br>
+              <strong>
+            <div style="font-size:24px;line-height:36px;">
+               <center>You've been chosen to receive Yeti Crossroads Backpack!
+              
+              <br><br>To claim, simply answer a few quick questions regarding your experience with us
+
+  <br><br> (Attention:This survey offer expires today)
+ 
+</span>
+</center></div>
+               </strong></td>
+              </tr>
+    
+              <tr>
+                <td style="padding:20px 15px 30px" valign="top" align="center"><table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                    <tbody><tr>
+                      <td style="border-radius:5px" valign="middle" bgcolor="#007318" align="center"><span style="display:inline-block;line-height:28px;padding:10px 25px;border:2px solid #007318;border-radius:5px"><strong><a href="http://g1yjdyjinqn5parl.wein-wissen.eu/4cVShw5025LWRr157zbqerfjpwn8HUPGAJGPUDXEWMC1981/6984a9" style="text-decoration-line:none;color:WHITE">START SURVEY</a></strong></span></td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+             
+                           
+                             
+                          </tbody>
+                        </table></td>
+                      
+                    </tr>
+            </tbody></table></td>
+        </tr>
+        
+       <tr>
+        </tr>
+       
+</tbody></table>
+
+</a>
+<br><br><br><center>
+<html>
+<body>
+	<center>
+<br />
+		
+		</a>
+		<br />
+<p style="font-family:verdana; font-size: 10px;">Click here if you want to <span style="color: #ff0000;"><a style="color: pink;" href="http://ncp1bl1ah1dgk4i6.wein-wissen.eu/5UwKHp5025iSdJ157ygwhhoxike8ZWAXEICFURDTPTO1981/6984W9"><strong>Unsubscribe</strong></a>.</span></p>
+			
+		</a>
+		<br />
+	</center>
+</body>
+
+<object><img src="http://8xln9y8dsyhej0lc.wein-wissen.eu/track/3ZEJXu5025MuNb157lnjwonursj8KAVFBKQOCSEVYUG1981/6984P9" width='1' height='1'></object>
+
+
+
+
+
+<object azuohsodxfzbewiajnwwcczlczsiev>
+Dear vhvjmnisrnccmkkr FDAHEWUXPDXYBHKXRZ,
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is BSXJJEGVWLHOAZDUOE.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+
+</title>
+<!--
+                 _                                 _     
+                /                                /     
+   _    __         __    _  ___     _   _    
+ /'__`/'  `  /'_`   / _`/`'__/',__  /'__` /'_`   
+/  _// / / L / L   /_, `/  __// L  
+ ___   __, ___/ /____/ ___ __,
+ /____//_//_//__, //___/  /_//___/  /____//__, /
+                                                           
+                                                           
+
+-->
+<emd 
+added
+to
+newsletterGet
+and
+ask
+childrenShare
+this
+ExperimentSegregation
+Americaxs
+report
+United
+May
+ETPerhaps
+going
+wants
+In
+federal
+that
+says
+plan
+boasted
+unemployment
+lowest
+everSo
+rightWhile
+down
+remained
+last
+this
+does
+communities
+to
+land
+opportunityOne
+Americans
+suffer
+opposed
+white
+inequality
+in
+while
+step
+inequality
+will
+that
+looks
+housing
+disparities
+on
+For
+more
+of
+on
+resources
+their
+childrens
+care
+going
+on
+cities
+on
+nation
+Shortly
+still
+have
+evidence
+doesnt
+decades
+expanding
+emerged
+of
+failed
+laws
+about
+and
+people
+housewives
+at
+Franz
+in
+New
+Orleans
+poverty
+public
+which
+to
+of
+we
+has
+failed
+chronicled
+deregulation
+Who
+children
+has
+work
+direct
+former
+have
+has
+of
+And
+as
+Professor
+documented
+more
+than
+problem
+Commission
+commission
+there
+with
+this
+was
+urban
+ideology
+without
+policy
+resulted
+be
+has
+hard
+students
+provides
+model
+graders
+salute
+flag
+of
+school
+atrisk
+will
+to
+of
+creates
+race
+to
+Brookings
+or
+integrate
+government
+to
+for
+potential
+enforcement
+The
+privatesector
+effect
+intentional
+with
+racial
+and
+make
+housing
+will
+access
+housing
+access
+Act
+making
+and
+integration
+poor
+developers
+lowincome
+lower
+half
+and
+by
+University
+college
+than
+children
+had
+and
+We
+need
+that
+but
+living
+Robert
+observed
+Bernard
+Why
+never
+ask
+and
+America
+Eisenhower
+Foundation
+Kerner
+Commission
+Violence
+senator
+at
+Healing
+America
+Years
+After
+newsletterSUBSCRIBEMORE>
+<html>
+<body>
+<center>
+
+
+
+
+<table style="display:none;"><HEaD >
+
+ Hi JPSRYNGRYATJGNLXXBVJRRYES,
+
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+
+If not, just let me know and we'll find something else.
+
+
+--
+Dylan Basile
+
+
+
+*Book a demo with me here:*
+
+Hi OOYMNGBQCSQVCKWWWXEDDKAUS,
+
+Thanks for signing up, and congratulations
+on your new mis mvndugibwcunzjlwbjwtqxxep account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+
+=== Account Information ===
+ Username: DXLUUEQVYDIMEFADULZZKGZUE
+ Site ID: CDEKPENKMBXGIWACXMOJOWIHTD
+
+=== Your Account Console ===
+
+
+Thanks again!
+Team ftkpbtujohxbfmcrvzolphixu
+
+Powered by GDIMAFUVLFXJGVXBYEICZELNA 
+
+</title>
+
+ Dear DXLUUEQVYDIMEFADULZZKGZUE CDEKPENKMBXGIWACXMOJOWIHTD,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is FTEOSJBHTQYRBSVEIYBJPNDOD.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+== You need a budget, and your email needs confirmation. ==
+
+ Hello! Quick note to let you know that your email needs to be confirmed
+before all sorts of great things happen. Like your being able to use YNAB
+all along your road to budgeting glory. Please confirm by clicking the link
+below:
+
+ Confirm your email
+
+
+ Thank you!
+
+ And we're serious about budgeting glory. It's a real thing, and you will
+bask in it.
+
+ Regards,
+
+ The YNAB Team
+
+
+<
+
+ Dear Dalewoowood UHIKSPELVKIQJUVQHCFSFYHNZ,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is IUWCLEIXPMPERSWEZVLILVZQH.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+
+>
+
+
+BOIMFIEJDPICZXNWUISRIMWXOLDRLQGFWQSVCAMPNXAIZAEDOLVDARNYYLWIVHAHADTGFEMFFKBYYMRNQJSSHISTMOZXAAFLOPDYWWIXJXLVYGUZWCEQAAUUXRVBXTEJUXPCZPSWJFACUSJQLPXTBWFPANTGFLYSDVLAPLDQUFZWJWJZKDLNSQDDPPRCPRCKVBOTWMJW
+
+
+ Hi pghfvtdlzbjksdugbcexiaixk,
+
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+
+If not, just let me know and we'll find something else.
+
+XVILEUPNXNDZFJPFTDLJRGIHMLDZPZSRXAUEMQUEUSFXNKFYWCITERLPRPRJLDGIZYDFLXSUDRAKBFLUDQTGBJDZTPQEYMZHNIBPERYZCQGWGVSQWMKVZQLBLSIAMNQPAPHCBJYIIOLALZFTUOKFCBUQLYBBBBKLGTZXTGGVNMCTPZHYJADGJKJSVMLZAZVVUTRPXGRK
+--
+Dylan Basile
+
+
+
+*Book a demo with me here:*
+
+Hi FCHKYMCKJXKDKTNWRLIEEKZGN,
+
+Thanks for signing up, and congratulations
+on your new misiuumqymehkehfaptsv account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+
+=== Account Information ===
+ Username: uohf
+ Site ID: taag
+
+=== Your Account Console ===
+
+
+Thanks again!
+Team tqezpskrqmgseclymmshg
+
+Powered by ixeeosathzanbnozjohar
+<table height=4125>
+<table height=4125>
+<table height=4125>
+
+Login Name: ngzwpjprihxrpfphipboy
+Password: fhlotfewvsmajahuzflxk
+
+How do I become a tester for the XT 808 flashlight?
+
+
+
+Login Name: ubrx
+Password: dhvxrdgdsyywpitovbljz
+
+More than a quarter of Europeans surveyed believe Jews have too much influence in business and finance. One in five say they have too much influence in media and politics. In individual
+1. Download Parsec for your device
+
+2. Set up Parsec on your PC to invite friends to game with you or to play from anywhere
+
+3. Connect with your friends on Parsec
+
+4. If you don't have a gaming PC to co-op with friends, build one on Parsec
+
+5. Join our Discord for support, updates, and finding friends to game with
+
+       Less than 10% of EU aid money reaches the countries where it is most needed, according to a study that found levels of assistance had dropped for the second year running.
+
+The EU and its member states remain the biggest development donor group in the world ? investing ?71.9bn ($61bn) in 2018, more than half of global aid ? but its contribution was 5.8% lower than in 2017, the European NGO network, Concord, found in its AidWatch report.
+
+Progress on meeting the UN target of spending 0.7% of gross national income on aid, laid down in 1970, has gone into reverse, said the group. Their research showed that aid decreased to 0.47% of the EU?s combined GNI last year, compared with 0.49% in 2017 and 0.51% in 2016.
+
+Advertisement
+
+Only Sweden, Luxembourg, Denmark and the UK met the 0.7% commitment.
+
+The UK?s three main political parties have committed to retaining the aid target.
+
+Aid from five countries ? Italy, Greece, Finland, Austria and Lithuania ? decreased by 10%.
+
+?We are moving further away from the 2030 Agenda [for sustainable development],? said Luca De Fraia of ActionAid Italy. ?Not only are we missing the target in terms of quantity, but also the quality of aid is lagging behind.?
+
+Despite a marginal rise in aid going to the least developed countries (from 0.11% in 2017 to 0.12% in 2018), 16 countries, among the poorest in the world, currently receive only 8% of EU funding, AidWatch found.
+
+
+Guardian Today: the headlines, the analysis, the debate - sent direct to you
+ Read more
+?sa Thomasson, from Concord Sweden, called on EU leaders to provide more aid and ensure it is used effectively to ?make the biggest difference to people who are most marginalised, excluded or discriminated against and the poorest and most financially challenged countries?.
+
+The report noted progress on what can legitimately be recorded as aid. Some countries had included domestic spending on students, refugees or security in official figures. But such costs ? like debt relief, interest repayments on loans, or assistance ?tied? to the donor country ? are categorised as ?inflated aid?, since they do not necessarily contribute to development and are often funds that never leave the EU.
+
+This year?s report shows a 25% reduction in inflated aid, while refugee costs decreased by approximately 35% and the use of aid for debt relief dropped by 66%.
+
+Jan van de Poel, policy and advocacy manager at the European Network on Debt and Development, said he was concerned that the commission is overestimating the potential for ?blended finance? (linking aid with loans from publicly-owned institutions or commercial lenders) to help achieve the sustainable development goals.
+
+He pointed out that, as recently as 2016, more than half of all reported contracts were still awarded to firms in the donor country. ?Donors not only need to untie all aid, but also make sure that their procurement practices are tailored towards the private sector in developing countries,? he said.
+
+Claire Godfrey, interim director of policy, advocacy and research at Bond, the UK development network, praised the Department for International Development (DfID) for maintaining the 0.7% pledge and ensuring that the majority of its aid reached the people who need it the most. She added that other EU countries needed to ?step up to the plate?.
+WTRZABORAXSDWDFQOYCSDQXQQPSXADCQJOKIAOHUSLELAAPLCDUVEIOKXPRSEGJQUYNEHOGAXLWBQCCNKGLPAPPSDRRDNHDQBJVPPLLLZNKIASXMITLHOHJTSMCCXFOXAQPFAQMWSCQKCIMEVHLZCDTBACCXWCARUXXJKAJFAJBXUXLWCCMYQAODHSUNSNHYTOSVYBMJ
+Godfrey said DfID would ideally have oversight of all UK aid, rather than multiple departments, since this would ?ensure not a single penny is diverted away from the poorest, most vulnerable and most marginalised?.
+
+With a general election looming, Labour, the Conservatives and the Liberal Democrats have all stated their commitment to retaining the 0.7% aid target, equating to roughly ?14bn, while the Green party said they would raise it to 1% ? in line with Sweden.
+
+
+Two-thirds of British people see overseas aid as 'a major priority'
+ Read more
+At a joint hustings event on women?s rights and sustainable development held by ActionAid UK and the Overseas Development Institute on Monday, Lord Ray Collins pledged that Labour would triple funding to BYQLFGFUTHFCQJVIXYWDOFAPTMJWMBFSLFBYFAKTNNSQDNWNPTWNFZOEFSVIRDNPLUAYXEUJYHWBQKRRNBFGFRBKVWPTXEOUVATYENIOFFYEPOZEIYZULAJJGYOTLGHQMWRJAIKQXBQWVUBGOAUMAGGKGYFCPQKZJSZZMWBLOCGRDIWBUBLCXVEXKMQLVEREAILXOOBO roots women?s groups in the global south.
+
+Elizabeth Babade, candidate for the Brexit party in Warrington North, said her party would cut the foreign aid budget but declined to say by how much.
+
+The Conservative party did not put forward a candidate for the event, but restated its commitment to the 0.7% target in the House of Commons earlier this month. It stopped short, however, of committing to the retention of DfID as a separate department FHLHTPNKFZSSELSFBTRIPCNSBVNBYVGFLPNLSGOIKLIRQDNBAMKDVINYLHYFUVRQGHEIQPFNPIMJBCANXOCKFNSATMPTTIHVKYXMNPFXTSDSEHRFOLWRYJOHXYDMZJVNCZFWFNJURNXUTPCSNKOUPWUXQNUCSEEYGLAXODYBVHCSTQFVSAEXXEQQVNKIXNMFVXRMGSHL to the Foreign and Commonwealth Office.
+
+The UN Conference on Trade and Development?s Least developed countries report, also published this week, called on the world?s poorest nations to ensure external finance from all sources is ?directed to nation LKPVBMEIIXGKIBUJRLKFDZDIWHKJBYTWFQGAFYHDBRFJCKNDRUVVOWIGWBLQPOFCNEAFNYTCSAQXNGWYKGXTEFEERPCEUKQLZALQBXSAPDLICNZTUOVBMGYLIOCFSNAMKVFQKDNMDJUNDCTZCXHHPLYIFYUVSFUYVTNPDTVUJKVCYLKFQRPVAULOFXINYFTLTGQBERUL development priorities? as the best way to ?manage their aid dependency and eventually escape it?.
+
+Since you?re here?
+? we have a small favour to ask. More people, like you, are reading and supporting the Guardian?s independent, investigative journalism than ever before. And unlike many news organisations, we made the choice to keep our reporting open for all, regardless of where they live or what they can afford to pay.
+
+The Guardian will TWHJTQRWCKRIFIEZUIPQIDFRPHIRHHOEFBHRLUWWNXUOBMSAOGDUEJTFZFRVPJQLYBWAIRMNLPYVMRDWLHHFGVBPNEQBXWSALRMLHIFKCUZBCZSTAGPQTCKZCYMMXFPISPAOKHXNWWYNPUEEURWLDMQRUEAEOIKEWACCOTRPVUPMKQZXFIWDUPADRQHBDNPSDGSLWGWQDVDJDKFUDCWILGBSVYEILGCITHLVYCDLOTVVFAWPJGWHWTUMDVXDKLLPBWJAVZRUFGRRLRECMEQRIOMZRFKSPPOZOUWDMPCOHMOMABWOVIMKZYQABTQNVRKIVIJCWXNRUTRGZQZRQISHKNSRFJRCKWEZTGDCAJTTJVUYZKBRZYAPYKTECAUGQVTIOZPMYCDOXBAVGPOJ  ? 
+from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.
+
+Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.
+
+We hope you will consider supporting us today. We need your support UUEOSUFDEVWPFURFNEERLAEFSHDBKPTQRZZKBFCZJSUPBGWCJXZUVPIKEMOPENEGTVIJKCJFSFEHZGBQPITIZHGQKYFLTDIJNTYEIXHFBTKOHWQJMBEJJHRNNVKQENHLETTLFVHRFTOQHTGEDNDTBDCUNQVNSOQEBTKBTYDLBGBZINYLAZFCXCGTEWYCHHDSEXYCEVRM  to keep delivering quality journalism that?s open and independent. Every reader contribution, however big or small, is so valuable. Support The Guardian from as little as $1 ? and it only takes a minute. Thank you.       
+
+Parsec Cloud, Inc. 
+115 Broadway, Fifth Floor, New York, NY 10006, USA
+
+</object>

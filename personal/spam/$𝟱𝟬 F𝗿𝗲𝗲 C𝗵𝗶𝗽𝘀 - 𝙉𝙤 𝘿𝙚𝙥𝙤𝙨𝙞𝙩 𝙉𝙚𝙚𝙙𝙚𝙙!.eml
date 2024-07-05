@@ -1,0 +1,181 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:6695:b0:1a6:aa79:77cb with SMTP id so21csp751057rwb;
+        Sun, 30 Jun 2024 19:39:30 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IG2dYNt15DPiHx8f4lnIqU+QTk4YW0COJ+cdXl71TwICbXjDDn70Dd1aC4YmPF9/Dvk082g
+X-Received: by 2002:a05:6122:3224:b0:4ed:52b:dd29 with SMTP id 71dfb90a1353d-4f2a563fb50mr4785740e0c.3.1719801569945;
+        Sun, 30 Jun 2024 19:39:29 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719801569; cv=none;
+        d=google.com; s=arc-20160816;
+        b=bER6vzS0Itqh96VDJ89W9nqUz5UZ7dyE1IxvYsstKu42uI+ReEpuZAR5L7j9cLZUSH
+         QXP3A4vdqtEprxPlJMP3G684SpUtgjR3VAtiZVJ3Dl5J2jilDEuwVFww45UNFpiFqJpB
+         zJ8VIcch70JXeAl2IzYuJ+Clu/rbd7qukxkR/+LABVcLbgz/+jTFqmzhUZzdOpoUr3yA
+         mu3Vr2LUKWv2237LXC3ZPl7XMFz0j+uhSnSphpJQ/Yh4RzrMgPc4tL0ciZSzwP5JZN1e
+         rCdOFJubvoBW1UNQN/N4J+qFGX8oz7fQ9TzJT9JdR+aRJByooXPa74otfW9X9uMsIzsU
+         eCaA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:message-id:to:from:date:domainkey-signature
+         :dkim-signature;
+        bh=o6YBmljkgBNL0NuZ+cz5vhPz89r2UbAWa5PCo1TRPpM=;
+        fh=BfH3tuO4vWcZZHlWy5SVIaCbaMAJl+146y7dupIPkPQ=;
+        b=klu4qziV2siA/PAm2Z8A4Q8VaB7KIfOIMmEHo7OjOhTtvxxC0/+i1+yVtYNOcbqQtK
+         FUwGhh8J8PUvexnHz9nPu2mReQzv3Y9gJJAvYK++5cfB6KeRxaPlQfkLX43Ckoq7c/z+
+         fj9acOyHF50qzEv98ys7R69LNPJkpSvUIHZaKVeTzNRGMW09f+kbPdNy9QKmaCSTXh3p
+         UjGNNgl2G7Ik+WN37KlVK6ICX8hkeBG8T9kHtdEiAd5l3L/u8dlIbTtb3s5EUAiNBEbC
+         txIlAP1C/CNsEvsXL6s9nPRPGy5SOaNl1AGctcfoH9zUq7qeKlsH0pbLxP1ThBnXuZdp
+         YhOA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=temperror (no key for signature) header.i=@zmxdcbhx.us header.s=default header.b=dZ1vuyiL;
+       spf=pass (google.com: domain of abuse@1mdollar.walescending.com designates 188.138.125.198 as permitted sender) smtp.mailfrom=abuse@1mdollar.walescending.com
+Return-Path: <abuse@1mdollar.walescending.com>
+Received: from zimiri.napollegisland.info (zimiri.napollegisland.info. [188.138.125.198])
+        by mx.google.com with ESMTPS id d75a77b69052e-44664407a90si36078801cf.316.2024.06.30.19.39.28
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 30 Jun 2024 19:39:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of abuse@1mdollar.walescending.com designates 188.138.125.198 as permitted sender) client-ip=188.138.125.198;
+Authentication-Results: mx.google.com;
+       dkim=temperror (no key for signature) header.i=@zmxdcbhx.us header.s=default header.b=dZ1vuyiL;
+       spf=pass (google.com: domain of abuse@1mdollar.walescending.com designates 188.138.125.198 as permitted sender) smtp.mailfrom=abuse@1mdollar.walescending.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=zmxdcbhx.us;
+ h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+ i=info.zmxdcbhx.zmxdcbhx@zmxdcbhx.us;
+ bh=o6YBmljkgBNL0NuZ+cz5vhPz89r2UbAWa5PCo1TRPpM=;
+ b=dZ1vuyiL7rwO0lkU6stfS/aMdoUbfEgIqubodW8wPIOcWEL6oFRXlOebk9PGQSEYnmgPP4347vk2
+   I4/9d63Tf1cWG1hyB6GHlX6/bsevzsax3HuwS3KajjGqjmLM6SMada+rZcNtDqGJRrrpeCOy67DZ
+   lERlNtrFlHHF6NYXtUg=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=default; d=zmxdcbhx.us;
+ b=i0UZhSeFd8YXjaOPcnaRaceAHcH75xHTtt/4wq1L3xvmMn+ILzScHUwowY3iY2ZVnOF+6hk9WeMW
+   x7E+gfMkhxs7RaTd8SSJabOP0zorm1/Mhs9D7EnmAS8xklvnjk1hvy0xGFcEs06gjLOhMUyZaRTF
+   No8S6FZg510dUbydPrU=;
+Received: from njmta-53.sailthru.com (173.228.155.53) by dailybeast-a.sailthru.com id h1t86m1qqbs3 for <blackpapermoon42@gmail.com>; Sun, 30 Jun 2024 22:39:27 -0400 (envelope-from <delivery@mx.sailthru.com>)
+Date: Sun, 30 Jun 2024 22:39:27 -0400
+From: "'𝗥𝗮𝗴𝗶𝗻𝗴 𝗕𝘂𝗹𝗹 𝗖𝗮𝘀𝗶𝗻𝗼'" <info.zmxdcbhx.zmxdcbhx@zmxdcbhx.us>
+To: blackpapermoon42@gmail.com
+Message-ID: <65df7a8d.050a0220.6dfba.bad1smtpin_added_broken@mx.google.com>
+Subject: $𝟱𝟬 F𝗿𝗲𝗲 C𝗵𝗶𝗽𝘀 - 𝙉𝙤 𝘿𝙚𝙥𝙤𝙨𝙞𝙩 𝙉𝙚𝙚𝙙𝙚𝙙!
+MIME-Version: 1.0
+Content-Type: multipart/report; boundary="000000000000SGCNuB7Qm6umj710elBSQB"; report-type=delivery-status
+
+--000000000000SGCNuB7Qm6umj710elBSQB
+Content-Type: multipart/related; boundary="000000000000B0MNRUNyYR84HR9a"
+
+--000000000000B0MNRUNyYR84HR9a
+Content-Type: multipart/alternative; boundary="000000000000B0MNRUNyYR84HR9b"
+
+--000000000000B0MNRUNyYR84HR9b
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Top Stories of the Day: Sep 0, 2019
+
+103882302891885308
+-----
+
+If you believe this has been sent to you in error, please safely unsubscrib=
+e
+--000000000000B0MNRUNyYR84HR9b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit+
+
+<html>
+
+<body style="
+margin: 0px;
+padding: 0px;">
+<table width="100%" height="100%" border="0" align="center" cellpadding="10" cellspacing="0" bgcolor="#FFFFFF" id="bgtable">
+
+<tbody>
+<tr>
+<td align="center" valign="top" height="255">
+<a target="_blank" style="
+font: 20px arial, sans-serif;display: block;
+display: block;
+text-decoration: none;
+text-align: center;
+width: 900px;
+height: auto;
+background: #fff;
+padding: 10px;
+border-style: solid;
+border-width:10px;
+border-color: #FFFFFF;
+border-radius: 0px;
+font-weight: bold;" href="https://t.co/TaWQ8HlVNb">
+<span style="font-weight: 400; background-color: #FFFF00">
+<b style="font-size: 25px; color: #FF0000"><font face="Berlin Sans FB">
+</font>
+<br>
+
+</b>
+
+</span>
+<br><br>
+<span style="font-weight: 400">
+</span><font face="Copperplate Gothic Light" color="#289628" size="5"> RAGING BULL<br><br>300% BONUS + 45 FREE SPINS  <br> </font><span style="font-weight: 400">
+<font face="monospace" color="#000000" size="6"></font>
+<font face="Candara Light" color="#000000" size="6"> </font>
+</span>
+
+<center>
+<table width="80%" height="1%" border="0" align="center" cellpadding="10" cellspacing="0" bgcolor="#fff" id="bgtable">
+
+<tr>
+<td align="center" valign="top">
+<div style="background-color:#fff; border:4px solid #fff;margin:40">
+<a style="text-decoration: none;" hREF="https://t.co/TaWQ8HlVNb">
+<h1 style="font-family: Lucida Fax;color: #559F00;font-size: 25px;font-weight: 100;">
+<span style="font: 44px Impact, Charcoal, sans-serif;text-decoration: underline;">
+45 FREE SPINS  </span>
+<br/>
+
+
+
+<br>
+<span style="font-size: 31px;color: black;background-color:#fff; border:2px solid #fff;padding:3px;">
+<B>LCP300 : REDEEM CODE
+<br>TOTAL JACKPOT : <strong>$ 754,609.19</strong>
+</span>
+<br>
+</h1>
+<br>
+<h1 style="font-family:calibri;color:black;background-color:#feba01;width:350px;padding:5px;solid-radius:100px;border:2px solid #fff;margin:auto">
+SIGN UP NOW
+</h1>
+
+
+
+
+</table>
+
+
+</tr>
+<tr>
+<td align="center" valign="top" height="103">
+<font size="0">
+<a href="https://t.co/TaWQ8HlVNb">
+<ImG sRc="https://zupimages.net/up/24/06/4czg.jpg" alt="300% BONUS + 45 FREE SPINS"/></span></a>
+
+<tr>
+<td align="center" valign="top" height="103">
+<br> <br>
+<h1 style="color:#ffffff;">
+</h1>
+<font >	<br />
+  <br />
+  If you no longer wish to receive these emails, you may unsubscribe by <a href="https://t.co/4NMVNwHefc" >clicking here</a> or by writing to 6130 W Flamingo Rd. Las Vegas, NV 89103
+  <br />
+    <a href="https://t.co/D8QDKIsare" >
+			unsubscribe
+		</a>
+		<br />
+
+</font>
+
+
+<center>
+
+</center>
+</body>
+
+</html>

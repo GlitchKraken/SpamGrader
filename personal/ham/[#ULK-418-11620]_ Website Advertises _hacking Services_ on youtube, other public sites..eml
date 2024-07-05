@@ -1,0 +1,156 @@
+Delivered-To: chadefry@gmail.com
+Received: by 2002:a05:6504:13f9:0:0:0:0 with SMTP id v25csp2371522ltp;
+        Sun, 8 Aug 2021 17:27:23 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzkYx1IyJwggG5amvtKOVEScEaiK1o3gCZcErBHXZaCy+zygjClTEKE7j1f/ce2SARbSNA1
+X-Received: by 2002:a17:90a:35b:: with SMTP id 27mr22393159pjf.209.1628468842782;
+        Sun, 08 Aug 2021 17:27:22 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1628468842; cv=none;
+        d=google.com; s=arc-20160816;
+        b=LBdN8ZNHSw/5sz6uPyGwobJTOCUIs+7/DsSH+FZtEiuoLwD8TuFsmPctmgF5V3mI/l
+         3h1NJ9T8Mif379RqKnkc/GbaeZEE5583HNvUev9d2qqlz6sYtjtzwx56DFJ8ly47Gjok
+         v9AQd7Xwu4RFB2E+Riy8FmY96h3X98vThT+h073GQKPLLaWzUGt+cgoNpXvznkYn5I5P
+         UgD/dJadP5X+nhkbjcez92x1jS91XADO9I0qM8XbU2FIDTMzKRI4x6+uEW9GulcQWcFO
+         bvmrzNwVn13nyuqUZOdGZX7O+vOM3Vead4aFp8pYdxWFtGUlZgeUbPA1D40dl2GU1Y4X
+         eeEA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:reply-to:mime-version:from:date:message-id:subject
+         :dkim-signature:dkim-signature;
+        bh=1N//egT+eBWJqIGLGvueMI5HDZPdCdq1U3y2BXEQr8I=;
+        b=U3JvYL/+ntJlpCkUtI5mD3UiiGJ28XZNXIr5/DK4MSjo3KzWgrxQkGpRtf22bSq0C8
+         TbRmoz2udKOAcIZl3Yu14ozu/m0Jm0hK1+WNrpH3tUwGMDUKuuRR0oqo/pv9C8FUD+yu
+         jhRnzIlz/L0gGBMtDbpKpcpFx7GcUwKde0fjhnrYIjXk84DeiVSiO4ZpLkpGloxrl8FY
+         40dfmsqd9nMdlfoCAvb5S4CsuYWgaFgRvOFu8uqwEJ3mol7miqos0MIwT41Y0uxJUt/R
+         h5SMrgiFZSeWhL1xlo5/O/Mw5cWtl8VeAGxwvrReOKq1ZGJi9sbW+2eIxXkPtcNHK+Zk
+         TALw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@namecheap.com header.s=s2 header.b=jijrUTKm;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=HuciGTkI;
+       spf=pass (google.com: domain of bounces+10942960-97ff-chadefry=gmail.com@mailserviceemailout1.namecheap.com designates 167.89.64.97 as permitted sender) smtp.mailfrom="bounces+10942960-97ff-chadefry=gmail.com@mailserviceemailout1.namecheap.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=namecheap.com
+Return-Path: <bounces+10942960-97ff-chadefry=gmail.com@mailserviceemailout1.namecheap.com>
+Received: from xtrwqhsk.outbound-mail.sendgrid.net (xtrwqhsk.outbound-mail.sendgrid.net. [167.89.64.97])
+        by mx.google.com with ESMTPS id rj8si7306514pjb.149.2021.08.08.17.27.21
+        for <chadefry@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sun, 08 Aug 2021 17:27:22 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+10942960-97ff-chadefry=gmail.com@mailserviceemailout1.namecheap.com designates 167.89.64.97 as permitted sender) client-ip=167.89.64.97;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@namecheap.com header.s=s2 header.b=jijrUTKm;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=HuciGTkI;
+       spf=pass (google.com: domain of bounces+10942960-97ff-chadefry=gmail.com@mailserviceemailout1.namecheap.com designates 167.89.64.97 as permitted sender) smtp.mailfrom="bounces+10942960-97ff-chadefry=gmail.com@mailserviceemailout1.namecheap.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=namecheap.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=namecheap.com;
+	h=subject:from:mime-version:content-type:reply-to:x-feedback-id:to;
+	s=s2; bh=1N//egT+eBWJqIGLGvueMI5HDZPdCdq1U3y2BXEQr8I=;
+	b=jijrUTKmtLS5ekpItCvOOTwoCKEVm6fonbt7g6CsCabFqspjV9v+mayOI8IGpeLngjbO
+	08GfpB639ndKYilEK06pAUsuP74FmUQ27UH4eJMOUd+ATsm2uIHxXYOuY6SAk9LOOErgsz
+	EA3ZsAhjfGIqVXTSm6KtyI4JDPh1ODbQI=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=subject:from:mime-version:content-type:reply-to:x-feedback-id:to;
+	s=smtpapi; bh=1N//egT+eBWJqIGLGvueMI5HDZPdCdq1U3y2BXEQr8I=;
+	b=HuciGTkIUbdSzSjFgebaTt6WtMuBe5WMjAbiOp718qDwCI+jIHdtKg90s0csEZrbimD+
+	WDxC/PoqACYbBLeAkNsW3pCwbyyVoWOfOc4PNJ1i6igyb0aeCcc3pfZdZI9Kav2CL7KAYM
+	R5kl05+VePqztn5j5q/FSHRiBpgQIcxFg=
+Received: by filterdrecv-b89745995-76jsx with SMTP id filterdrecv-b89745995-76jsx-1-61107668-8A
+        2021-08-09 00:27:20.737499444 +0000 UTC m=+1027832.278508512
+Received: from support.namecheap.com (unknown)
+	by ismtpd0048p1las1.sendgrid.net (SG) with ESMTP id FVRLq05ZQlSUK1TAY13cbg
+	for <chadefry@gmail.com>; Mon, 09 Aug 2021 00:27:20.655 +0000 (UTC)
+Received: by support.namecheap.com (Postfix, from userid 48)
+	id F08A32E480639; Sun,  8 Aug 2021 20:27:19 -0400 (EDT)
+Subject: [#ULK-418-11620]: Website Advertises "hacking Services" on youtube,
+ other public sites.
+X-PHP-Originating-Script: 48:SimpleMailInvoker.php
+Message-ID: <f512126864e3a7f21961a4dc15636aa3@support.namecheap.com>
+Date: Mon, 09 Aug 2021 00:27:20 +0000 (UTC)
+From: "Namecheap.com" <support@namecheap.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1628468839_cc2d3a80468448fe33637e62cc8db1b2_=_"
+X-Priority: 3 (Normal)
+Reply-To: support@namecheap.com
+X-Feedback-ID: 10942960:SG
+X-SG-EID: 
+ =?us-ascii?Q?WO3yfy31vHV92n9YsqoWQ+NoIHeGs7mC1zZiyILI4PuEJIUf5OJ4wxePMYkttw?=
+ =?us-ascii?Q?fzsYShW4UOP7VifWG+C6gUVQJ82dSNg=2FX=2FKCZRW?=
+ =?us-ascii?Q?VRZDvYRNIX4pfJez3ABjtYtJB2TIJdnofyOr9PU?=
+ =?us-ascii?Q?AJtU+NqQGQohSRofNraOvbjuZuhsEFZ9lGDlxrH?=
+ =?us-ascii?Q?NN=2FvlIG1VC7qhqowWVirLaFVaOZKuvLghcxyY6c?=
+ =?us-ascii?Q?qCR75sMQcbcE53YvFHlh9s+BHQhYi3B8RWMXyI?=
+To: chadefry@gmail.com
+X-Entity-ID: se8+zkIfzYyLHOBHWgn6lQ==
+
+
+--_=_swift_v4_1628468839_cc2d3a80468448fe33637e62cc8db1b2_=_
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+
+Chad Fry,
+
+Thank you for contacting us. This is an automated response confirming the r=
+eceipt of your ticket. Our team will get back to you as soon as possible. W=
+hen replying, please make sure that the ticket ID is kept in the subject so=
+ that we can track your replies.
+
+	Ticket ID: ULK-418-11620
+	Subject: Website Advertises "hacking Services" on youtube, other public si=
+tes.
+	Department: Fraud / Phishing
+	Type: Issue
+	Status: Awaiting Staff Response
+	Priority: High
+
+You can check the status of or update this ticket online at: https://suppor=
+t.namecheap.com/index.php?/Tickets/Ticket/View/ULK-418-11620
+
+Kind regards,
+Namecheap.com
+
+
+
+------------------------------------------------------
+Helpdesk: https://support.namecheap.com/index.php?
+
+--_=_swift_v4_1628468839_cc2d3a80468448fe33637e62cc8db1b2_=_
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+
+<font face=3D"Verdana, Arial, Helvetica" size=3D"2">Chad Fry,<br />
+<br />
+Thank you for contacting us. This is an automated response confirming the r=
+eceipt of your ticket. Our team will get back to you as soon as possible. W=
+hen replying, please make sure that the ticket ID is kept in the subject so=
+ that we can track your replies.<br />
+<br />
+&nbsp;&nbsp;&nbsp;<b>Ticket ID: </b>ULK-418-11620<br />
+&nbsp;&nbsp;&nbsp;<b>Subject: </b>Website Advertises "hacking Services" on =
+youtube, other public sites.<br />
+&nbsp;&nbsp;&nbsp;<b>Department: </b>Fraud / Phishing<br />
+&nbsp;&nbsp;&nbsp;<b>Type: </b>Issue<br />
+&nbsp;&nbsp;&nbsp;<b>Status: </b>Awaiting Staff Response<br />
+&nbsp;&nbsp;&nbsp;<b>Priority: </b>High<br />
+<br />
+You can check the status of or update this ticket online at: <a href=3D"htt=
+ps://support.namecheap.com/index.php?/Tickets/Ticket/View/ULK-418-11620" ta=
+rget=3D"_blank">https://support.namecheap.com/index.php?/Tickets/Ticket/Vie=
+w/ULK-418-11620</a><br />
+<br />
+Kind regards,<br />
+<br />
+Namecheap.com<br /><br />
+<HR style=3D"margin-bottom: 6px; height: 1px; BORDER: none; color: #cfcfcf;=
+ background-color: #cfcfcf;" />
+Helpdesk: <a href=3D"https://support.namecheap.com/index.php?" target=3D"_b=
+lank">https://support.namecheap.com/index.php?</a><br />
+</font>
+<img src=3D"http://mailtrackemailout1.namecheap.com/wf/open?upn=3D4L0TYW2hA=
+CzV0lnX3ib9fTqdDljFCTjKkZ5jR1meRUbtraYdVYbxCZptzPzufAc80kLFzO45w6HAHbBvtABF=
+QA-2FzWF4T-2F-2FedOk94T2ovC1zbxoMXmwez3eZ1nf-2Bo3DJ6BXkjhhX6yltEtwJ620-2F-2=
+BlLkCbPatGPdyvS44YBXoeJSl8cyY-2BCZmuBT1TBHUhRiEN4RpfhoiOVLECpTmwjlucLK2rAIO=
+vUNdDTSQHF-2Fv8jk-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=
+=3D"height:1px !important;width:1px !important;border-width:0 !important;ma=
+rgin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;=
+margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !importa=
+nt;padding-right:0 !important;padding-left:0 !important;"/>
+--_=_swift_v4_1628468839_cc2d3a80468448fe33637e62cc8db1b2_=_--
+

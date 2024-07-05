@@ -11,6 +11,9 @@ import time
 import requests
 from spam_detector_ai.prediction.predict import VotingSpamDetector
 import warnings
+import io
+from contextlib import redirect_stdout
+
 # Credit to the entire Entropy-Calculator goes to Ben Downing from red canary
 #https://redcanary.com/blog/threat-detection/threat-hunting-entropy/
 from Entropy import Entropy
@@ -38,6 +41,9 @@ def main():
     parser.add_argument("-d", help="Scan all email files in the current directory (supports .eml and .msg files)", required=False, action="store_true")
     parser.add_argument("-V", help="Use VirusTotal for analysis (Requires API Key) ((I've included one of my own for the projects sake))", required=False, action="store_true")
     parser.add_argument("-vv", help="set verbose mode (extra debugging text)", required=False, action="store_true")
+    parser.add_argument("-ai", help="Several AI will parse the email-body's content, and vote on wether each consider the message to be spam or not", required=False, action="store_true")
+    parser.add_argument("-W", help="Weighted scores. By Default, each module will only ", required=False, action="store_true")
+    parser.add_argument("-e", help="Evaluation results. Will calculate and display effectiveness of each module, given a directory.", required=False, action="store_true")
     # below line of code basically just prints the help option if no args were supplied.
     #Source: https://stackoverflow.com/questions/8259001/python-argparse-command-line-flags-without-arguments
     global args
@@ -80,7 +86,8 @@ def main():
         # now run the email through each analysis module. maybe pass through a big dictionary where the email name/key has a list of values?
         riskKeyWords(email)
         riskEntropy(email)
-        riskSVM(email)
+        if args.ai:
+            riskSVM(email)
         if args.V:
             riskVirusTotal(email)
         
@@ -104,7 +111,7 @@ def main():
         emails[args.f] = email_score_breakdown
         # done with calculations, reset the breakdown, and write the overall results to a file, JSON formatted.
         email_score_breakdown = []
-        with open("Results.txt", "+w") as Results:
+        with open("Results.json", "+w") as Results:
             Results.write(json.dumps(emails, indent=4))
         rich.print("\n\n\n"+json.dumps(emails, indent=4))
       
@@ -124,6 +131,19 @@ def main():
                 emailList.append(files)
             else:
                 continue
+        
+        # we will need this for doing evaluation...
+        totalNumEmails = 0
+        totalNumEmails = len(emailList)
+        
+        # keep count of the number of emails marked as sus.
+        KeyWordsCount = 0
+        EntropyCount = 0
+        AICount = 0
+        OverallCount = 0
+        #
+        
+        print("Emails parsed: " + str(totalNumEmails))
             
         for mail in emailList:
             # basic error handling
@@ -139,17 +159,39 @@ def main():
             # run the email through each analysis module. maybe pass through a big dictionary where the email name/key has a list of values?
             riskKeyWords(email)
             riskEntropy(email)
-            riskSVM(email)
+            if args.ai:
+                riskSVM(email)
             # all modules have been run on the email, add it do the big list.
             
             
             # go through all of the risk ratings assigned to this email and total them...
             TotalScore = 0
-        
+            EntropyFound = False
+            countedCurrentEmail = False
             for riskScoreBreakdown in email_score_breakdown:
+                
                 for test in riskScoreBreakdown:
+                    if "KeyPhrases" in test and riskScoreBreakdown[test][0] > 0:
+                        KeyWordsCount += 1
+                    
+                    if "Entropy" in test and riskScoreBreakdown[test][0] > 0:
+                        # since we split up the entropy module's results, this here just makes sure we dont count each result 
+                        # as a separate finding. this way, 
+                        if EntropyFound == False:
+                            EntropyFound = True
+                            EntropyCount += 1
+                    if "AI" in test and riskScoreBreakdown[test][0] > 0:
+                        AICount += 1
+                        
+                        
                     TotalScore += riskScoreBreakdown[test][0]
         
+            # if the current email had a risk score, it was "discovered".
+            # mark it as such.
+            if TotalScore > 0:
+                OverallCount += 1
+                
+                
             # create a simple dictionary that holds the current email's overall risk-score
             TotalScoreDict =  {"Total Risk Score:": TotalScore}
             # put the total score at the beginning of the breakdown.
@@ -159,19 +201,28 @@ def main():
             # clear out the list for the next email.
             email_score_breakdown = []
             
+    
             
         # now, sort the results by the highest risk-score. Emails with a higher score should be shown first.
         #sortedEmails = dict(sorted(emails.items(), reverse=True, key=lambda item: item[1]))
         sortedEmails = dict(sorted(emails.items(), key= lambda x: x[1][0]["Total Risk Score:"]))
         sortedEmailsReverse = dict(sorted(emails.items(), reverse=True, key= lambda x: x[1][0]["Total Risk Score:"]))
         
-        with open("Results.txt", "+w") as Results:
+        with open("Results.json", "+w") as Results:
             # Since the terminal prints top to bottom, we display the default-sort first, so
             # that whoever is running the output will see the priority targets first.
             # the inverse is true to the file we write to.
             Results.write(json.dumps(sortedEmailsReverse, indent=4))
             rich.print("\n\n\n"+json.dumps(sortedEmails, indent=4))
-            
+        
+        print("\n\n============================Spam Totals========================================")
+        print("Total Emails: " + str(totalNumEmails)+ "\n")
+        print("KeyWords Results: " + str(KeyWordsCount) + " / " + str(totalNumEmails) + "  " +str(  round( (KeyWordsCount/totalNumEmails) * 100 , 2)) + "%")
+        print("Entropy Results: " + str(EntropyCount) + " / " + str(totalNumEmails)   + "   " + str(round((EntropyCount/totalNumEmails) * 100, 2)) + "%") 
+        print("AI Results:      " + str(AICount) + " / " + str(totalNumEmails) + "  " + str(round((AICount/totalNumEmails) * 100, 2)) + "%")
+        print("\nOverall Results: " + str(OverallCount) + " / " + str(totalNumEmails) + "  " + str(round((OverallCount/totalNumEmails) * 100 , 2)) + "%")
+        print("\n===============================================================================")
+        
 #############################################################################################################
 # below are the functions im kindly referring to as risk-modules. 
 # these will be called on an email (or list of emails) to identify what stands out about the given email.
@@ -208,6 +259,9 @@ def riskKeyWords(email):
     
     # only append the score if something bad was found.
     if RiskScore > 0:
+        
+        
+        
         global email_score_breakdown
         email_score_breakdown.append({"KeyPhrasesModule_Score": (RiskScore, Reasons_Bad)})
     #print(RiskPhrases)
@@ -251,9 +305,6 @@ def riskVirusTotal(email):
             if RiskScore > 0:
                 email_score_breakdown.append({"VirusTotalModule_Score: " : (RiskScore, "This email was given a higher score because VirusTotal marked it as Malicious in its results")})
             else: print("virus total found nothing wrong with the email")
-            print(analysis.status)
-            print(analysis.status)
-            print(analysis.status)
             print(analysis.status)
         test.close()
         
@@ -323,7 +374,7 @@ def riskEntropy(email):
         if args.vv:
             #print("Realtive Entropy for this email: "+ str(FromAddrEntropy))
             print("=======================================================")
-            print(fromAddr)
+            print("Whole From Addr: " + str(fromAddr))
             print("Sender Name: "+ senderName)
             print("Sender Name no punc: "+ senderNameNoPunc)
             print("senderDomain no-TLD: " + senderDomainNoTLD)
@@ -336,7 +387,7 @@ def riskEntropy(email):
             # a random-name IS somewhat sus, but people often have to put numbers in their names
             # because their username is taken. we will use a smaller score here.
             # the reason for the multiplication is: the more random an email
-            RiskScore += 5 * SenderNameEntropy
+            RiskScore += round((5 * SenderNameEntropy) )
             email_score_breakdown.append({"EntropyModule_SenderNameRandom_Score" : (RiskScore, "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million.")})
             
     
@@ -353,7 +404,8 @@ def riskEntropy(email):
         if senderDomainEntropy > 3.1:
             # we will consider this random enough to be a "sus" domain and flag it with higher risk. 
             # since this domain is really random looking, we will consider it a significant risk, and give a bigger score.
-            RiskScore += 20 * senderDomainEntropy
+            
+            RiskScore += round((20 * senderDomainEntropy))
             
             email_score_breakdown.append({"EntropyModule_SenderDomain_Score" : (RiskScore, "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million.")})
         
@@ -370,20 +422,26 @@ def riskSVM(email):
     #            }
 
     #response = requests.post("https://spam-detection-api.adamspierredavid.com/v2/check-spam/", json=jsonMail)
-    
+    RiskScore = 0
     
     # so first, lets get the message text...
     emailMessage = email.body
-    print(emailMessage)
+    #print(emailMessage)
     
     
     Oracle = VotingSpamDetector()
-    is_spam = Oracle.is_spam(emailMessage)
+    # snippet from https://stackoverflow.com/questions/16571150/how-to-capture-stdout-output-from-a-python-function-call, 
+    # using it to capture stdout of AI-counsil and add it to the ris-score.
+    f = io.StringIO()
+    with redirect_stdout(f):    
+        is_spam = Oracle.is_spam(emailMessage)
+    output = f.getvalue()
+    
     
     if is_spam:
-        print(is_spam)
-        RiskScore += 50
-        email_score_breakdown.append({"AI_Module_Score" : (RiskScore, "This email was given a higher score because a series of AI's considered it as spam.")})
+        #print(is_spam)
+        RiskScore += 100
+        email_score_breakdown.append({"AI_Module_Score" : (RiskScore, "This email was given a higher score because a series of AI voted to consider it as spam.", "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===", output)})
 
     
     

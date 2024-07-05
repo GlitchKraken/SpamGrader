@@ -1,0 +1,623 @@
+Delivered-To: chadefry@gmail.com
+Received: by 2002:a05:7000:1dc:b0:595:f4e9:2ec7 with SMTP id 28csp1188718mao;
+        Mon, 10 Jun 2024 06:09:58 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFpPGPVQYGuqbTuoxbYPjuWP0B6aoq+ugVkHA2YNPZwBROUnf2FtSwi0vg1HT0vU0EryKGJ
+X-Received: by 2002:a05:6214:4383:b0:6af:c308:ee31 with SMTP id 6a1803df08f44-6b059f156d7mr115337346d6.49.1718024997895;
+        Mon, 10 Jun 2024 06:09:57 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1718024997; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zaN8xsBS4YkF2Gmxb8R74q5Yamx6dg0XOxzNebyGEtm+bSDG9f5uAl277o4/1Ups0n
+         YQEqsfzeeOGnwzD8/bYFdGw6pj+zZ5n9B5o9AFH3GzQOQSTEFWlQZL06dVqS4djddecJ
+         Yjt5ur3ZB0JYwPr/XcR886B2YMzJfDd/Q9TxbMryNgg9COHW0BIZ/whQkSAIVWucZOBt
+         x5K6W0GYPJ6DkIK6blsB2/gXtELeOOublf0qj+8kqvNM10+kAnl5axxbYceVglZjozDh
+         R07Vms6mciEswlL3cUOsUKB4CS0Xe/uqbLfU/fYIcMjalx61wyVqhk4gfWz9ZxtnooU/
+         lbng==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:reply-to:subject:message-id:mime-version:from:date
+         :content-transfer-encoding:dkim-signature:dkim-signature;
+        bh=cCEOUoZe+lItN4ZStHZdR7exaqHDgk8iu82vl9nP3Ag=;
+        fh=rk9CAQB8BCwyxFuCE5Sx85gXaL6jhaOCmbvmUyWNxOA=;
+        b=jXcX73iAdYz3mylKWcKE1dWPT0wNgK+239PLENyRqhzyISrFix3ANBKiUe6qju8Akq
+         qBHClNtJkboMb59peWT+dLFRQs7MyiZ+rgbYiDjdDn6fwoAgaAbzZ2hX0PEi1G0j/J9R
+         VmiW3+NVJAXZy/zC3VjQV29Q9fDpPNfCKONM0TWpaoBj0bduzwfbG77fuOoVL5HvQVr8
+         /VdrcrcS6Aqx+sbirW3R7UpW9b/sLZYczJH1Sr7GcUWvkyTOBq5Te8ifMQJdGNN8pQRD
+         XWzhk3e5sr2+2WSvJr2IRYRm6Sj7LArJ6KrFkdUBtCtA/SycrQW0tmq1dQ263xCCVM69
+         HdTQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@patientsreach.com header.s=s1 header.b=IL7LcO8Y;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=wM0iu0ww;
+       spf=pass (google.com: domain of bounces+16921985-c8c9-chadefry=gmail.com@em7713.patientsreach.com designates 159.183.121.139 as permitted sender) smtp.mailfrom="bounces+16921985-c8c9-chadefry=gmail.com@em7713.patientsreach.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=patientsreach.com
+Return-Path: <bounces+16921985-c8c9-chadefry=gmail.com@em7713.patientsreach.com>
+Received: from o4.ptr6560.patientsreach.com (o4.ptr6560.patientsreach.com. [159.183.121.139])
+        by mx.google.com with ESMTPS id 6a1803df08f44-6b08664010asi6829806d6.251.2024.06.10.06.09.57
+        for <chadefry@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 10 Jun 2024 06:09:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+16921985-c8c9-chadefry=gmail.com@em7713.patientsreach.com designates 159.183.121.139 as permitted sender) client-ip=159.183.121.139;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@patientsreach.com header.s=s1 header.b=IL7LcO8Y;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=wM0iu0ww;
+       spf=pass (google.com: domain of bounces+16921985-c8c9-chadefry=gmail.com@em7713.patientsreach.com designates 159.183.121.139 as permitted sender) smtp.mailfrom="bounces+16921985-c8c9-chadefry=gmail.com@em7713.patientsreach.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=patientsreach.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=patientsreach.com;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:
+	reply-to:x-feedback-id:to:cc:content-type:from:subject:to;
+	s=s1; bh=cCEOUoZe+lItN4ZStHZdR7exaqHDgk8iu82vl9nP3Ag=;
+	b=IL7LcO8YHZ3CTpZh4opC1StbdSJ/pyby0XcSfwPLFTHYUdq+8hJqaitDKqZeVmf9cJxr
+	3Z3BeJcPUltstIVQN6hVtdYIsWqutx9Jj5l9YKhPYvyl5kSrlYxmPaRWIVm5aZ24qlUEII
+	2EhDxo+6gNVDkEVICWTPIO4/3UG8A/f5KvicSOnd+FZR2OsbZrNLSgkqIXZUNbtLaw1VMX
+	aOlFtAiX5JWZFty8iF/2u/Th6m+g1XxSdueawoTBxwbBP3QchAe4+oC7bt+6/xsuasfwvJ
+	bweCkCbv0+/IwBFE4mmn1jywF2h/+X+NyPNCU+yRZq+38HWjcbR+fLpRmKl5dmvg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:
+	reply-to:x-feedback-id:to:cc:content-type:from:subject:to;
+	s=smtpapi; bh=cCEOUoZe+lItN4ZStHZdR7exaqHDgk8iu82vl9nP3Ag=;
+	b=wM0iu0ww4bTHmuPrpdQIqHSsvgBdbGMgcfJlteEP1ppkO9GCReYsd5g8RF78fXJnoxAS
+	XZpE1HAnSMmzLrDkDFK3lWIR7vbc8CwG4NUJjdsIGMAgjK0Wlqi1l8cOYq9LUWvriRAvNC
+	eW23prYrgLpm4TnZvDQA/JNYTJO570JHg=
+Received: by filterdrecv-648857ccb-5l4jl with SMTP id filterdrecv-648857ccb-5l4jl-1-6666FB25-49
+        2024-06-10 13:09:57.48373051 +0000 UTC m=+3594543.089119084
+Received: from MTY5MjE5ODU (unknown)
+	by geopod-ismtpd-4 (SG) with HTTP
+	id mhmNSHtIQXWUam2VD6AFZA
+	Mon, 10 Jun 2024 13:09:57.402 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Date: Mon, 10 Jun 2024 13:09:57 +0000 (UTC)
+From: Ultra Smiles <noreply@patientsreach.com>
+Mime-Version: 1.0
+Message-ID: <mhmNSHtIQXWUam2VD6AFZA@geopod-ismtpd-4>
+Subject: Confirm your upcoming dental appointment at Ultra Smiles
+Reply-To: lisa@ultra-smiles.com
+X-Feedback-ID: 16921985:SG
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EPxZPa1zC+qVqtmuyyXSjBYkkmRy1NkLyi7pKpfKkN7+yL+eUSRFotK5IH?=
+ =?us-ascii?Q?Xn2xu3K9FXuSDiWKANnbYa3pnzPG1908ByxrCvj?=
+ =?us-ascii?Q?Un6knZbybWWNeEFY9Ya2LWKcPPuDZ1wMU=2FrLX1F?=
+ =?us-ascii?Q?h7qyjfjuu9R2rZcVFI5vff+aC7zNakLxkswA=2FNm?=
+ =?us-ascii?Q?wKQFGgfMQhKwe9x9Brhti5oXI7FVwhbSU3qP43d?=
+ =?us-ascii?Q?lrK+micxA9mJsE6MGohf8lP1zwY5EBKyDUN43AE?= =?us-ascii?Q?fD1w?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BpTL9BgbK5wfSJMJGMsmprAmtmuaoPMYyyd5y?=
+ =?us-ascii?Q?L7GCx3WhAp4NA9oIDwNyMMobE=2FKg2sasdZkbMsE?=
+ =?us-ascii?Q?EneSIqyggfkYI=2FvceJMM2B2KpqJxuit1k+b0ssV?=
+ =?us-ascii?Q?R99rkNqY1z5bVN44XwiOjGOrxxOGDEf6D6iDmB4?=
+ =?us-ascii?Q?WPYaqZzygqsveH24YcrisCe0y8739CPgoGpw+TF?=
+ =?us-ascii?Q?g=3D=3D?=
+To: Chadefry@gmail.com
+X-Entity-ID: u001.iiOKDgPBzJn3HKFz67MY2g==
+
+<html>
+  <head>
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width">
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+">
+    <title></title>
+    <style>@media only screen and (max-width: 620px) {
+    table[class=3D"body"] h1 {
+        font-size: 28px;
+        margin-bottom: 16px
+        }
+    table[class=3D"body"] p, table[class=3D"body"] ul, table[class=3D"body"=
+] ol, table[class=3D"body"] td, table[class=3D"body"] span, table[class=3D"=
+body"] a {
+        font-size: 16px
+        }
+    table[class=3D"body"] .wrapper, table[class=3D"body"] .article {
+        padding: 16px
+        }
+    table[class=3D"body"] .content {
+        padding: 0
+        }
+    table[class=3D"body"] .container {
+        padding: 0;
+        width: 100%
+        }
+    table[class=3D"body"] .main {
+        border-left-width: 0;
+        border-radius: 0;
+        border-right-width: 0
+        }
+    table[class=3D"body"] .btn table {
+        width: 100%
+        }
+    table[class=3D"body"] .btn a {
+        width: 100%
+        }
+    table[class=3D"body"] .img-responsive {
+        height: auto;
+        max-width: 100%;
+        width: auto
+        }
+    }
+@media all {
+    .ExternalClass {
+        width: 100%
+        }
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass f=
+ont, .ExternalClass td, .ExternalClass div {
+        line-height: 100%
+        }
+    .apple-link a {
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        text-decoration: none
+        }
+    #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit
+        }
+    .btn-primary table td:hover {
+        background-color: #34495e
+        }
+    .btn-primary a:hover {
+        background-color: #34495e;
+        border-color: #34495e
+        }
+    }</style>
+  </head>
+  <body style=3D"-ms-text-size-adjust:100%; -webkit-font-smoothing:antialia=
+sed; -webkit-text-size-adjust:100%; background-color:#f6f6f6; color:#333; f=
+ont-family:sans-serif; font-size:14px; line-height:1.4; margin:0; padding:0=
+" bgcolor=3D"#f6f6f6">
+   =20
+      <span style=3D"color:transparent; display:none; height:0; max-height:=
+0; max-width:0; mso-hide:all; opacity:0; overflow:hidden; visibility:hidden=
+; width:0" height=3D"0" width=3D"0">Chad,
+Please confirm your upcoming dental appointment at Ultra Smiles starting at=
+ Tuesday, June 18, 2024 at 10:00 AM.</span>
+   =20
+    <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border-collapse:separate; mso-table-lspace:0; mso-table-rsp=
+ace:0; width:100%; background-color:#f6f6f6" width=3D"100%" bgcolor=3D"#f6f=
+6f6">
+      <tr>
+        <td style=3D"font-family:sans-serif; font-size:10px; vertical-align=
+:top" valign=3D"top">=C2=A0</td>
+        <td style=3D"font-family:sans-serif; font-size:10px; vertical-align=
+:top; display:block; max-width:600px; padding-top:16px; width:600px; margin=
+:0 auto" valign=3D"top" width=3D"600">
+          <div style=3D"box-sizing:border-box; display:block; margin:0 auto=
+">
+
+            <!-- START CENTERED WHITE CONTAINER -->
+            <table role=3D"presentation" style=3D"border-collapse:separate;=
+ mso-table-lspace:0; mso-table-rspace:0; width:100%; background:#fff; borde=
+r:0 solid #ddd; border-radius:3px; padding-bottom:16px" width=3D"100%">
+
+              <!-- START MAIN CONTENT AREA -->
+              <tr>
+                <td style=3D"font-family:sans-serif; font-size:10px; vertic=
+al-align:top; box-sizing:border-box" valign=3D"top">
+                  <table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D"border-collapse:separate; mso-table-lspace:0;=
+ mso-table-rspace:0; width:100%" width=3D"100%">
+                    <thead>
+                      <tr>
+                        <td style=3D"font-family:sans-serif; font-size:10px=
+; vertical-align:top; box-sizing:border-box; display:block; margin:0 auto" =
+valign=3D"top">
+                          =20
+   =20
+                      </td></tr>
+                    </thead>
+                    <tbody>
+                     =20
+                      <tr>
+                        <td style=3D"font-family:sans-serif; font-size:10px=
+; vertical-align:top; box-sizing:border-box; display:block; margin:0 auto; =
+padding-bottom:16px; padding-left:32px; padding-right:32px; padding-top:16p=
+x" valign=3D"top">
+                           =20
+        <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"border-collapse:separate; mso-table-lspace:0; mso-table=
+-rspace:0; width:100%; table-layout:fixed" width=3D"100%">
+        <tr>
+            <td style=3D"font-family:sans-serif; font-size:10px; vertical-a=
+lign:top; word-wrap:break-word" valign=3D"top">
+                <div>
+                    <br>
+                </div>
+            </td>
+        </tr>
+</table>
+   =20
+                        </td>
+                      </tr>
+                     =20
+                      <tr>
+                        <td style=3D"font-family:sans-serif; font-size:10px=
+; vertical-align:top; box-sizing:border-box; display:block; margin:0 auto; =
+padding-bottom:16px; padding-left:32px; padding-right:32px; padding-top:16p=
+x" valign=3D"top">
+                           =20
+        <div style=3D"text-align:center" align=3D"center">
+        <img src=3D"https://practicenumbers-media-storage.s3.us-west-2.amaz=
+onaws.com/1276802/7a0abd22-411a-43e5-9881-4b8e293efc7b.png?ts=3D2024-06-10%=
+2013:09:50.989614" alt=3D"Ultra Smiles" width=3D"auto" height=3D"150" style=
+=3D"-ms-interpolation-mode:bicubic; border:none; max-width:100%">
+    </div>
+   =20
+                        </td>
+                      </tr>
+                     =20
+                      <tr>
+                        <td style=3D"font-family:sans-serif; font-size:10px=
+; vertical-align:top; box-sizing:border-box; display:block; margin:0 auto; =
+padding-bottom:16px; padding-left:32px; padding-right:32px; padding-top:16p=
+x" valign=3D"top">
+                           =20
+        <div style=3D"text-align:center" align=3D"center">
+       =20
+    <img src=3D"https://practicenumbers-media-storage.s3.us-west-2.amazonaw=
+s.com/built_in_images/default/932cceb6-48ff-4105-a5af-206816ed8794.png" alt=
+=3D"" style=3D"-ms-interpolation-mode:bicubic; border:none; max-width:100%;=
+ height:auto; width:100%" height=3D"auto" width=3D"100%">
+    </div>
+   =20
+                        </td>
+                      </tr>
+                     =20
+                      <tr>
+                        <td style=3D"font-family:sans-serif; font-size:10px=
+; vertical-align:top; box-sizing:border-box; display:block; margin:0 auto; =
+padding-bottom:16px; padding-left:32px; padding-right:32px; padding-top:16p=
+x" valign=3D"top">
+                           =20
+        <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"border-collapse:separate; mso-table-lspace:0; mso-table=
+-rspace:0; width:100%; table-layout:fixed" width=3D"100%">
+        <tr>
+            <td style=3D"font-family:sans-serif; font-size:10px; vertical-a=
+lign:top; word-wrap:break-word" valign=3D"top">
+                <div>
+                    <p style=3D"font-family:sans-serif; font-size:14px; fon=
+t-weight:normal; margin:0; margin-bottom:15px; word-wrap:break-word"><stron=
+g><span style=3D"color: rgb(71,85,119);"><span style=3D"font-family: Arial;=
+"><span style=3D"font-size: 16px;">Hello  Chad,</span></span></span></stron=
+g></p><p style=3D"font-family:sans-serif; font-size:14px; font-weight:norma=
+l; margin:0; margin-bottom:15px; word-wrap:break-word"><span style=3D"color=
+: rgb(71,85,119);"><span style=3D"font-family: Arial;"><span style=3D"font-=
+size: 16px;">You have an upcoming dental appointment(s) at Ultra Smiles sta=
+rting on </span></span></span><strong><span style=3D"color: rgb(26,188,156)=
+;"><span style=3D"font-family: Arial;"><span style=3D"font-size: 16px;">Tue=
+sday, June 18, 2024 at 10:00 AM</span></span></span></strong><span style=3D=
+"color: rgb(71,85,119);"><span style=3D"font-family: Arial;"><span style=3D=
+"font-size: 16px;">.  </span></span></span><strong><span style=3D"color: rg=
+b(71,85,119);"><span style=3D"font-family: Arial;"><span style=3D"font-size=
+: 16px;">Please use the buttons below to confirm your appointment or reques=
+t a callback about this appointment. </span></span></span></strong></p>
+                </div>
+            </td>
+        </tr>
+</table>
+   =20
+                        </td>
+                      </tr>
+                     =20
+                      <tr>
+                        <td style=3D"font-family:sans-serif; font-size:10px=
+; vertical-align:top; box-sizing:border-box; display:block; margin:0 auto; =
+padding-bottom:16px; padding-left:32px; padding-right:32px; padding-top:16p=
+x" valign=3D"top">
+                           =20
+        <table style=3D"border-collapse:separate; mso-table-lspace:0; mso-t=
+able-rspace:0; width:100%; border-spacing:0; table-layout:fixed; text-align=
+:center" width=3D"100%" align=3D"center">
+        <tbody>
+            <tr>
+               =20
+                   =20
+                       =20
+
+                       =20
+                            <td style=3D"font-family:sans-serif; font-size:=
+10px; vertical-align:top; padding:0 6px; word-wrap:anywhere" valign=3D"top"=
+>
+                                <table style=3D"border-collapse:separate; m=
+so-table-lspace:0; mso-table-rspace:0; width:fit-content; border:0; height:=
+fit-content; text-align:center" width=3D"fit-content" height=3D"fit-content=
+" align=3D"center">
+                                    <tbody>
+                                        <tr>
+                                            <td bgcolor=3D"#303f9f" style=
+=3D"font-family:sans-serif; font-size:10px; vertical-align:top; border-radi=
+us:4px; height:fit-content; padding:6px 12px; text-align:center; width:fit-=
+content" valign=3D"top" height=3D"fit-content" align=3D"center" width=3D"fi=
+t-content">
+                                                <a href=3D"https://url5294.=
+patientsreach.com/ls/click?upn=3Du001.MyiaZTOUT6Kh2MpQ5KV3EzrkNxs-2BiUAiHg3=
+xA8pJDB6eWuwur1J8XM0RVlWXqoAGZTJ4PQZKCGLq5WFxl83Pbg-3D-3Dfyd8_v0uF4zbEmjgDw=
+Q6AewMt9eJOJQdPPZ-2BCPtQxAaHCa-2BK4sFiFm0pFwCU0D59-2BkNvJOb35uhfMKnqCVxgdZD=
+OHMnB76aYIedd2KTMffDEennDzplP64KhK4uMMvlCfiVj1boSWCuiQZruNy0Io2WNP0r9y3MgZh=
+S4xQgZS5yjhN4d7O57jPzfhoEWdebeKA69z8T7GI2KypuiXaWN7MncqSvH6-2BnKo9-2FV4JSQT=
+XckXkeGd18s4kv7c5gRP8-2BXdMoiktB2s-2BRDRpEZldnHz9J71o5zhroQ0UIQYvTzBk99W-2F=
+fVF6sLfyoK-2BFoYznWJkrUnp-2BPFrsivFQHpQ9wOXkn5Othgd-2BLOn-2Bd1F7AmA0LPECJ1Q=
+Ne2nP-2FMrBXnxGLNNC0KI" style=3D'text-decoration:none; font-family:"Helveti=
+ca Neue", Helvetica, Arial, sans-serif; font-size:13pt; font-weight:400; ve=
+rtical-align:middle; color:#FFF; text-align:center' target=3D"_blank" valig=
+n=3D"middle" align=3D"center">
+                                                    =E3=85=A4Confirm Appoin=
+tment(s)=E3=85=A4
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                       =20
+                       =20
+                   =20
+                       =20
+
+                       =20
+                            <td style=3D"font-family:sans-serif; font-size:=
+10px; vertical-align:top; padding:0 6px; word-wrap:anywhere" valign=3D"top"=
+>
+                                <table style=3D"border-collapse:separate; m=
+so-table-lspace:0; mso-table-rspace:0; width:fit-content; border:0; height:=
+fit-content; text-align:center" width=3D"fit-content" height=3D"fit-content=
+" align=3D"center">
+                                    <tbody>
+                                        <tr>
+                                            <td bgcolor=3D"#0288d1" style=
+=3D"font-family:sans-serif; font-size:10px; vertical-align:top; border-radi=
+us:4px; height:fit-content; padding:6px 12px; text-align:center; width:fit-=
+content" valign=3D"top" height=3D"fit-content" align=3D"center" width=3D"fi=
+t-content">
+                                                <a href=3D"https://url5294.=
+patientsreach.com/ls/click?upn=3Du001.MyiaZTOUT6Kh2MpQ5KV3EzrkNxs-2BiUAiHg3=
+xA8pJDB4tAk1CEN8lSpDttW2qDaewC991pnekdxE-2B8964YxJ4FQ-3D-3DzRHt_v0uF4zbEmjg=
+DwQ6AewMt9eJOJQdPPZ-2BCPtQxAaHCa-2BK4sFiFm0pFwCU0D59-2BkNvJOb35uhfMKnqCVxgd=
+ZDOHMnB76aYIedd2KTMffDEennDzplP64KhK4uMMvlCfiVj1boSWCuiQZruNy0Io2WNP0r9y3Mg=
+ZhS4xQgZS5yjhN4d7O57jPzfhoEWdebeKA69z8T7GI2KypuiXaWN7MncqSvH6-2BnKo9-2FV4JS=
+QTXckXkeHMPzI0jzHnkDAsPZgy-2BFa18yqXxalaTejyOsK9VwsNf4BiX5u10BXyVnlU-2B-2Bz=
+Fn3Mjgu5B-2F60uMlj2yZHdSlIIVuG4A6cI5JPonWmX4-2Bp0Mat7TeberQ9LXkZ7gwFP93nNl-=
+2BWnFJQNenQ-2FkrypSeoz" style=3D'text-decoration:none; font-family:"Helveti=
+ca Neue", Helvetica, Arial, sans-serif; font-size:13pt; font-weight:400; ve=
+rtical-align:middle; color:#FFF; text-align:center' target=3D"_blank" valig=
+n=3D"middle" align=3D"center">
+                                                    =E3=85=A4Request a Call=
+ Back=E3=85=A4
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                       =20
+                       =20
+                   =20
+               =20
+            </tr>
+        </tbody>
+    </table>
+   =20
+                        </td>
+                      </tr>
+                     =20
+                      <tr>
+                        <td style=3D"font-family:sans-serif; font-size:10px=
+; vertical-align:top; box-sizing:border-box; display:block; margin:0 auto; =
+padding-bottom:16px; padding-left:32px; padding-right:32px; padding-top:16p=
+x" valign=3D"top">
+                           =20
+        <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"border-collapse:separate; mso-table-lspace:0; mso-table=
+-rspace:0; width:100%; table-layout:fixed" width=3D"100%">
+        <tr>
+            <td style=3D"font-family:sans-serif; font-size:10px; vertical-a=
+lign:top; word-wrap:break-word" valign=3D"top">
+                <div>
+                    <p style=3D"font-family:sans-serif; font-size:14px; fon=
+t-weight:normal; margin:0; margin-bottom:15px; word-wrap:break-word"><span =
+style=3D"color: rgb(71,85,119);"><span style=3D"font-family: Arial;"><span =
+style=3D"font-size: 16px;">You can call us directly at 9724028587 if you ha=
+ve any questions about this appointment.</span></span></span></p><br><p sty=
+le=3D"font-family:sans-serif; font-size:14px; font-weight:normal; margin:0;=
+ margin-bottom:15px; word-wrap:break-word"><span style=3D"color: rgb(71,85,=
+119);"><span style=3D"font-family: Arial;"><span style=3D"font-size: 16px;"=
+>- Your care team at Ultra Smiles</span></span></span></p>
+                </div>
+            </td>
+        </tr>
+</table>
+   =20
+                        </td>
+                      </tr>
+                     =20
+                      <tr>
+                        <td style=3D"font-family:sans-serif; font-size:10px=
+; vertical-align:top; box-sizing:border-box; display:block; margin:0 auto; =
+padding-bottom:16px; padding-left:32px; padding-right:32px; padding-top:16p=
+x" valign=3D"top">
+                           =20
+        <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"border-collapse:separate; mso-table-lspace:0; mso-table=
+-rspace:0; width:100%; table-layout:fixed" width=3D"100%">
+        <tr>
+            <td style=3D"font-family:sans-serif; font-size:10px; vertical-a=
+lign:top; word-wrap:break-word" valign=3D"top">
+                <div>
+                    <br>
+                </div>
+            </td>
+        </tr>
+</table>
+   =20
+                        </td>
+                      </tr>
+                     =20
+                      <tr>
+                        <td style=3D"font-family:sans-serif; font-size:10px=
+; vertical-align:top; box-sizing:border-box; display:block; margin:0 auto; =
+padding-bottom:16px; padding-left:32px; padding-right:32px; padding-top:16p=
+x" valign=3D"top">
+                           =20
+       =20
+        <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"border-collapse:separate; mso-table-lspace:0; mso-table=
+-rspace:0; width:inherit; margin:auto; text-align:center" width=3D"inherit"=
+ align=3D"center">
+           =20
+            <tr>
+               =20
+                   =20
+               =20
+                   =20
+               =20
+                   =20
+               =20
+                   =20
+               =20
+                   =20
+               =20
+                   =20
+               =20
+            </tr>
+        </table>
+   =20
+   =20
+                        </td>
+                      </tr>
+                     =20
+                      <tr>
+                        <td style=3D"font-family:sans-serif; font-size:10px=
+; vertical-align:top; box-sizing:border-box; display:block; margin:0 auto; =
+padding-bottom:16px; padding-left:32px; padding-right:32px; padding-top:16p=
+x" valign=3D"top">
+                           =20
+        <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"border-collapse:separate; mso-table-lspace:0; mso-table=
+-rspace:0; width:100%; table-layout:fixed" width=3D"100%">
+        <tr>
+            <td style=3D"font-family:sans-serif; font-size:10px; vertical-a=
+lign:top; word-wrap:break-word" valign=3D"top">
+                <div>
+                    <br>
+                </div>
+            </td>
+        </tr>
+</table>
+   =20
+                        </td>
+                      </tr>
+                     =20
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+            <!-- END MAIN CONTENT AREA -->
+            </table>
+            <!-- END CENTERED WHITE CONTAINER -->
+            =20
+            <!-- START FOOTER -->
+              <div style=3D"clear:both; margin-top:16px; text-align:center;=
+ width:100%" align=3D"center" width=3D"100%">
+                <table role=3D"presentation" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" style=3D"border-collapse:separate; mso-table-lspace:0; m=
+so-table-rspace:0; width:100%" width=3D"100%">
+                  <tr>
+                    <td style=3D"font-family:sans-serif; font-size:12px; ve=
+rtical-align:top; color:#999; text-align:center" valign=3D"top" align=3D"ce=
+nter">
+                     =20
+                        <span style=3D"color:#999; font-size:12px; text-ali=
+gn:center" align=3D"center">
+                          <table role=3D"presentation" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"border-collapse:separate; mso-table-l=
+space:0; mso-table-rspace:0; width:100%" width=3D"100%">
+        <tr>
+            <td style=3D"font-family:sans-serif; font-size:12px; vertical-a=
+lign:top; color:#999; text-align:center" valign=3D"top" align=3D"center">
+                Ultra Smiles
+               =20
+                    <br>8870 N MacArthur Blvd #100, Irving, TX 75063, USA
+               =20
+               =20
+               =20
+                    <br>Contact:
+              9724028587
+               =20
+               =20
+            </td>
+        </tr>
+    </table>
+                        </span>
+                     =20
+                     =20
+                        <p style=3D"font-family:sans-serif; font-size:12px;=
+ font-weight:normal; margin:0; margin-bottom:15px; word-wrap:break-word; co=
+lor:#999; text-align:center; margin-top:16px" align=3D"center">
+                          You have received this email because as a patient=
+ of Ultra Smiles, you are signed up to receive these messages.
+                          <br>
+                         =20
+                            <a href=3D"https://url5294.patientsreach.com/ls=
+/click?upn=3Du001.MyiaZTOUT6Kh2MpQ5KV3E6zYciq9Xp8shzDJMTZSGvDiJH4XTlxulgwMK=
+Rq45IvtsXNKhPbZe-2BuU-2B6OfcSsAaFYceREc9vHAhQYWas4yj1SQ2-2FLbCzPln7DNVb95m-=
+2BCzzJIBtyrSwn0ct-2FKxwbKtmpRQGDUtl3WsFvrFv-2Bl8oBK8IDlsQbWJJZUPOTApy9HyEVS=
+5GRFbw-2B0nS7t9S5-2BjTHHhM5Jl7MESl0PTbQcym6U91KDv8RLSa9mXnK0TkTsn6cXut71GzZ=
+xvxs5LCi7FcljCCXjGJpDuAoKPF1m9aqfPNL0Upoqu08eDow4dn731pl2lWKwg608RjiqUMFCaY=
+SONvzDCOjQ9HudfvHrmQcdYjr6ToTTpXdt8b73K5YlH0Ctm_v0uF4zbEmjgDwQ6AewMt9eJOJQd=
+PPZ-2BCPtQxAaHCa-2BK4sFiFm0pFwCU0D59-2BkNvJOb35uhfMKnqCVxgdZDOHMnB76aYIedd2=
+KTMffDEennDzplP64KhK4uMMvlCfiVj1boSWCuiQZruNy0Io2WNP0r9y3MgZhS4xQgZS5yjhN4d=
+7O57jPzfhoEWdebeKA69z8T7GI2KypuiXaWN7MncqSvH6-2BnKo9-2FV4JSQTXckXkeFdRh5Yfv=
+skHCg-2BIfJtLgvNEdai56GW9Q0D8fi4mm6crYVX978hyBGCOd5AjMjpWMFpJa3Mt2r60lYGN7P=
+Gp9h0Mh0RqBC5KCNhZUVB2q6Z5qrs3rk7MyHbOBNAoKv2zc-2Bm8DsmrIQi1N2FEHKqCB8u" st=
+yle=3D"text-decoration:none; color:#3498db; font-size:12px; text-align:cent=
+er" align=3D"center">
+                              Manage Subscriptions</a>
+                            =C2=A0=C2=A0|=C2=A0=C2=A0
+                            <a href=3D"https://url5294.patientsreach.com/ls=
+/click?upn=3Du001.MyiaZTOUT6Kh2MpQ5KV3E6zYciq9Xp8shzDJMTZSGvDiJH4XTlxulgwMK=
+Rq45IvtsXNKhPbZe-2BuU-2B6OfcSsAaAOe8S3UXmwHs-2FlLTS-2BpOQKxd15mFTQdHi0M5CXw=
+vnutznwcr73VRcxfSAZYt-2FwxYLyJfuGTUo07V99MdqBqnaaxSZtF-2FI5-2FJT1Ok8YowTBfo=
+gaJR-2FrBFgdE5WJP6K7Qym04cq-2BE-2BJdHXYh3ELw1SiXELOfe68cvC9GKmznJhAKEOBQudN=
+dhmfnLHflZFSb52gJ4ou1l590mBsMvakWUl3NaPvSdRgYz8dreyNHF0e-2BwSe7LG95Jc5YTtTK=
+VACiGHYeUeiujs4QmYiA9aWry2Gs-3DV4qA_v0uF4zbEmjgDwQ6AewMt9eJOJQdPPZ-2BCPtQxA=
+aHCa-2BK4sFiFm0pFwCU0D59-2BkNvJOb35uhfMKnqCVxgdZDOHMnB76aYIedd2KTMffDEennDz=
+plP64KhK4uMMvlCfiVj1boSWCuiQZruNy0Io2WNP0r9y3MgZhS4xQgZS5yjhN4d7O57jPzfhoEW=
+debeKA69z8T7GI2KypuiXaWN7MncqSvH6-2BnKo9-2FV4JSQTXckXkeE43DmaAQtKiq6TEMpdog=
+IzkQyDWFCytIULCDinED59IDn3MUnN6DWJVhuBDM7swZusYkckkc0wBy23TAiQxhshUwzvWTS6X=
+Y2criO2R3yBrJkhawbqc-2BcLWO4hpDmBqMYqN2vbJ47lqVXT8Kcv2m8i" style=3D"text-de=
+coration:none; color:#3498db; font-size:12px; text-align:center" align=3D"c=
+enter">Unsubscribe</a>
+                         =20
+                        </p>
+                     =20
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!-- END FOOTER -->
+           =20
+
+          </div>
+        </td>
+        <td style=3D"font-family:sans-serif; font-size:10px; vertical-align=
+:top" valign=3D"top">=C2=A0</td>
+      </tr>
+    </table>
+  <img src=3D"https://url5294.patientsreach.com/wf/open?upn=3Du001.N-2B-2BG=
+L4B6JNeLdhpLCJ88cJNggHT-2FI-2F9uuNd2rDv3ndXqbPhtqStEb-2F1NgkFqbkMeZhVPSBSlE=
+Z07kzGMrJQ6I4aiTcItc1WiKTNy7eE1-2BB4SnTc-2FGIUEXzOetsSHluCyPxzn5pf6HwCXyTmH=
+Zy0H-2BDR6Yunzy76f74w6h7tlVPFyQec9Qig0yx6acKPzglZqyhouA31VXPLdhricALINlumzK=
+B0BaaZqxqD1WK2fPF5wV439oSzBbls8mUG8ZlFYPdVAF8RDNJh-2BgNiZBT30OiOKD-2FZw9ESF=
+NUeD0YIcOAv45APB8zyzHaWYSxKP0e5PajEgHJ4rbm6rqHPVebYXWQim7Zp24FVInNITuIF1Vk-=
+2BIOYN-2BgK3ncPYAjEaWiXQH" alt=3D"" width=3D"1" height=3D"1" border=3D"0" s=
+tyle=3D"height:1px !important;width:1px !important;border-width:0 !importan=
+t;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !import=
+ant;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !imp=
+ortant;padding-right:0 !important;padding-left:0 !important;"/></body>
+</html>

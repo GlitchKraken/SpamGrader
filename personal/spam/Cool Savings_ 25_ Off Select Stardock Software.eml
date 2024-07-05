@@ -1,0 +1,1037 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:6695:b0:1a6:aa79:77cb with SMTP id so21csp1074041rwb;
+        Mon, 1 Jul 2024 11:11:33 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGVbuBIAYfB4m6NodnfUb0LRzf7/hphsQvHgnfjMugF0RxYHe0KHrQdua/6+V82EE7+ByJ8
+X-Received: by 2002:a25:7b06:0:b0:e03:5e72:9388 with SMTP id 3f1490d57ef6-e036ec3b321mr6740171276.49.1719857493342;
+        Mon, 01 Jul 2024 11:11:33 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719857493; cv=none;
+        d=google.com; s=arc-20160816;
+        b=fyY+4i2faLhZZH5BKMfYyyKn64u57Zh6bjIYpJejitDHx1TKgLNeKuQqlu1I1Mm4d0
+         2PYtknRE1MIHHTDfcKWhEjnwUpqPRn2RAiobEMaRv8EkkzGz1jfXsvlB2FV7nro+6ARB
+         477VtJmJv2KDzLYJZWKmOzBFvKjmtBj3HLiIS1kn/QWKrQwueV16pWe96PvROgZbm6Cj
+         W8qwL/j5aDVn4wkKZ91hZhiqEhbjOPNDBtFEWbmXRBMvh22ny7RK+aOC7h9aKy1gKdIK
+         RPaqFfJHSqA+3d+FuGn7uyWh20vA/vIhJvukzDzrjck5QALhJ23YzQS0ZH+lxJ+ZPE5k
+         rYdw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:feedback-id:message-id:subject:date:reply-to:to
+         :from:mime-version:content-language:precedence:dkim-signature;
+        bh=dfxtRqxRg7yB6yJlGIeAEWCrIvkCq6nEPsYTtOzxVt4=;
+        fh=Q/0vACmbZjx7uOCQyPTbwNdolorrAUyeYi/RBRu+yec=;
+        b=zoKEbByB10/+Lf5KddyY0Kf0thfgzNCroBcKCy37nRNSl7TGOIgPmewg1PIMW1VypE
+         eNMF6vbDtBY79u36ZW+l86kbgPF81kCkZ9U+4Ud/ZzXe5gJYXQ3DFTfjec+o2PPOFs1F
+         SGHp44aUt8vDthXR8S0G7fnrhTc/vI28O2+RQ+LRV6vUUW82bp3p3Sw+8n1n/DZtuyXp
+         /QN3B4smMsqXsxm9YSstb31GtXqUX94U8g8OQ27d4wtPYVWoSFczKlm4BKnRwPd+PoCQ
+         wHhFlO4aWvZ1dujI+FPaxk5wkAo0IIfTKVMway+SjPROr49n7Jk0TncVjkkg3Dyko7vk
+         obgw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@stardock.net header.s=default header.b=m81pf6+1;
+       spf=pass (google.com: domain of info@stardock.net designates 66.79.209.71 as permitted sender) smtp.mailfrom=info@stardock.net;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=stardock.net
+Return-Path: <info@stardock.net>
+Received: from mail5.stardock.net (mail5.stardock.net. [66.79.209.71])
+        by mx.google.com with ESMTPS id 3f1490d57ef6-e0354076939si3818551276.403.2024.07.01.11.11.33
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 01 Jul 2024 11:11:33 -0700 (PDT)
+Received-SPF: pass (google.com: domain of info@stardock.net designates 66.79.209.71 as permitted sender) client-ip=66.79.209.71;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@stardock.net header.s=default header.b=m81pf6+1;
+       spf=pass (google.com: domain of info@stardock.net designates 66.79.209.71 as permitted sender) smtp.mailfrom=info@stardock.net;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=stardock.net
+Received: from SDSMailer-Engine (unknown [10.8.1.229])
+	by mail5.stardock.net (Postfix) with ESMTP id BC00E68F6E
+	for <blackpapermoon42@gmail.com>; Mon,  1 Jul 2024 18:11:32 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=stardock.net;
+	s=default; t=1719857492;
+	bh=VxARNqFr88nh5YxCcSMai/F54rDim4WbFH65xV8p+AQ=;
+	h=From:To:Reply-To:Date:Subject:List-Unsubscribe:From;
+	b=m81pf6+1xpZmaVRxl/zECgWwFKEzB7HUepDeqlnijvDiyeShyzKXEyjHq+7nZ0Wl0
+	 P8mde0iBprMNOaREg0x0kTTye7HuJ109824d/YiStKKltHFtteJ3H3COheKXBYwLoC
+	 K3NPut6awk9SSYOZrYykBav/xkvOdaEKvpZ5K8KU=
+X-Mailer: SDSMailer
+X-Auto-Response-Suppress: All
+Precedence: bulk
+Content-Language: en-us
+MIME-Version: 1.0
+From: "Stardock Software" <info@stardock.net>
+To: "blackpapermoon42@gmail.com" <blackpapermoon42@gmail.com>
+Reply-To: "Stardock Software" <info@stardock.net>
+Date: 1 Jul 2024 14:11:32 -0400
+Subject: Cool Savings: 25% Off Select Stardock Software
+Message-ID: <41960-UqBSgCu084RA0qYFJ/5qdPHNDSm8n05TJgBeLWNDMXE=@mail.stardock.net>
+Feedback-ID: ::41960:software
+List-Unsubscribe: <mailto:unsubscribe@stardock.net>,<https://www.stardock.com/accounts/subscriptions?email=blackpapermoon42@gmail.com>
+X-MailerType: UqBSgCu084RA0qYFJ/5qdPHNDSm8n05TJgBeLWNDMXE=
+X-Mailing: 41960
+X-rpcampaign: software41960
+Content-Type: multipart/alternative;
+ boundary=--boundary_26488229_39154ffb-9fab-4815-af23-eb5902f5d36c
+
+
+----boundary_26488229_39154ffb-9fab-4815-af23-eb5902f5d36c
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+
+The Stardock Summer Sale is Here: Get 25% off Software=0D=0A=0D=0A=
+---=0D=0A=0D=0AObject Desktop(TM)=0D=0ACustomize your Windows exp=
+erience with this complete suite of desktop enhancement products.=
+=0D=0A=0D=0AReg. $49.99 Only $37.49=0D=0AGet it Now:=0D=0Ahttps:/=
+/www.stardock.com/products/odnt/?utm_source=3Dsoftware-promo&utm_=
+medium=3Demail&utm_content=3Dodnt-getitnow-button&utm_campaign=3D=
+sds-summersale-june2024&utm_term=3Dsds-summersale-june2024-41960#=
+purchase=0D=0A=0D=0A---=0D=0A=0D=0AFences(R) 5=0D=0AAutomatically=
+ organize files, folders, and applications on your Windows deskto=
+p for a streamlined, productive workspace.=0D=0A=0D=0AReg. $29.99=
+ Only $22.49=0D=0AGet it Now:=0D=0Ahttps://www.stardock.com/produ=
+cts/fences/?utm_source=3Dsoftware-promo&utm_medium=3Demail&utm_co=
+ntent=3Dfences-getitnow-button&utm_campaign=3Dsds-summersale-june=
+2024&utm_term=3Dsds-summersale-june2024-41960#purchase=0D=0A=0D=0A=
+---=0D=0A=0D=0AStart11(TM) v2=0D=0AFully customize the Windows 10=
+ and 11 Start menu experience with unique features, designs, and =
+restore classic functionality from previous versions of Windows.=0D=0A=
+=0D=0AReg. $9.99 Only $7.49=0D=0AGet it Now:=0D=0Ahttps://www.sta=
+rdock.com/products/start11/?utm_source=3Dsoftware-promo&utm_mediu=
+m=3Demail&utm_content=3Dstart11-getitnow-button&utm_campaign=3Dsd=
+s-summersale-june2024&utm_term=3Dsds-summersale-june2024-41960#pu=
+rchase=0D=0A=0D=0A---=0D=0A=0D=0AGroupy(R) 2=0D=0ADrag and drop m=
+ultiple apps and documents together and group them into browser-l=
+ike tabs for easy access.=0D=0A=0D=0AReg. $9.99 Only $7.49=0D=0AG=
+et it Now: https://www.stardock.com/products/groupy/?utm_source=3D=
+software-promo&utm_medium=3Demail&utm_content=3Dgroupy-getitnow-b=
+utton&utm_campaign=3Dsds-summersale-june2024&utm_term=3Dsds-summe=
+rsale-june2024-41960#purchase=0D=0A=0D=0A---=0D=0A=0D=0AWindowBli=
+nds(TM) 11=0D=0ACustomize the look and feel of your Windows 10 an=
+d Windows 11 Start menu, taskbar, window frames, and more.=0D=0A=0D=0A=
+Reg. $29.99 Only $22.49=0D=0AGet it Now: https://www.stardock.com=
+/products/windowblinds/download?utm_source=3Dsoftware-promo&utm_m=
+edium=3Demail&utm_content=3Dwindowblinds-getitnow-button&utm_camp=
+aign=3Dsds-summersale-june2024&utm_term=3Dsds-summersale-june2024=
+-41960=0D=0A=0D=0A---=0D=0A=0D=0AMultiplicity(R)=0D=0AInstantly c=
+onnect multiple PCs and move files seamlessly between them with a=
+ single keyboard and mouse!=0D=0A=0D=0AReg $19.99 Only $14.99=0D=0A=
+Get it Now: https://www.stardock.com/products/multiplicity/?utm_s=
+ource=3Dsoftware-promo&utm_medium=3Demail&utm_content=3Dmult-geti=
+tnow-button&utm_campaign=3Dsds-summersale-june2024&utm_term=3Dsds=
+-summersale-june2024-41960#comparison=0D=0A=0D=0A---=0D=0A=0D=0AC=
+heck out our other software on sale=0D=0ALearn More: https://www.=
+stardock.com/products/store/?utm_source=3Dsoftware-promo&utm_medi=
+um=3Demail&utm_content=3Dlearn-more-btn&utm_campaign=3Dsds-summer=
+sale-june2024&utm_term=3Dsds-summersale-june2024-41960=0D=0A=0D=0A=
+---------------=0D=0A=0D=0AStardock, 15090 Beck Road, Plymouth, M=
+I 48170.=0D=0AClick here to unsubscribe: https://www.stardock.com=
+/accounts/unsubscribe.aspx?email=3Dblackpapermoon42@gmail.com&lis=
+t=3D35=0D=0AIf you have any questions, email promotions@stardock.=
+com.=0D=0A(C) 2024 Stardock. Fences, Groupy, and Multiplicity are=
+ registered trademarks of Stardock. Windows is a registered trade=
+mark of Microsoft Corporation in the U.S. and other countries. Al=
+l rights reserved.=0D=0A*Sale ends 07.11.2024 at 1 PM ET. Prices =
+may vary per distributor. Sale not valid for Ashampoo and Enterpr=
+ise products.
+----boundary_26488229_39154ffb-9fab-4815-af23-eb5902f5d36c
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "h=
+ttp://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">=0D=0A<ht=
+ml lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml">=0D=0A<head=
+>=0D=0A    <meta http-equiv=3D"Content-type" content=3D"text/html=
+; charset=3Dutf-8" />=0D=0A    <meta name=3D"viewport" content=3D=
+"width=3Ddevice-width, initial-scale=3D1, maximum-scale=3D1" />=0D=0A=
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />=
+=0D=0A    <meta name=3D"format-detection" content=3D"date=3Dno" /=
+>=0D=0A    <meta name=3D"format-detection" content=3D"address=3Dn=
+o" />=0D=0A    <meta name=3D"format-detection" content=3D"telepho=
+ne=3Dno" />=0D=0A    <title>Cool Savings: 25% Off Select Stardock=
+ Software</title>=0D=0A    <style type=3D"text/css" media=3D"scre=
+en">=0D=0A        /* Linked Styles */=0D=0A        body { padding=
+:0 !important; margin:0 !important; display:block !important; wid=
+th:100% !important; -webkit-text-size-adjust:none }=0D=0A        =
+a { color:#778089; text-decoration:none }=0D=0A        p { paddin=
+g:0 !important; margin:0 !important }=0D=0A        th { font-weig=
+ht:normal; padding:0; margin:0; }=0D=0A        .text-footer a { c=
+olor: #ffffff; text-decoration: underline; }=0D=0A        span[cl=
+ass=3D'mobile-block'], div[class=3D'mobile-block'] { display: non=
+e !important; width: 0 !important; height: 0 !important; font-siz=
+e: 0 !important; line-height: 0 !important; min-height: 0 !import=
+ant; }=0D=0A		div[class=3D'full-image'] img { width: 100% !import=
+ant; max-width: 600px !important; height: auto !important; }=0D=0A=
+        /* Mobile styles */=0D=0A        @media only screen and (=
+max-device-width: 480px), only screen and (max-width: 480px) { =0D=0A=
+            div[class=3D'mobile-br-10'] { height: 10px !important=
+; }=0D=0A			div[class=3D'mobile-br-15'] { height: 15px !important=
+; }=0D=0A			div[class=3D'mobile-br-30'] { height: 30px !important=
+; }=0D=0A            th[class=3D'm-td'], td[class=3D'm-td'], div[=
+class=3D'hide-for-mobile'], span[class=3D'hide-for-mobile'], tabl=
+e[class=3D'hide-for-mobile'] { display: none !important; width: 0=
+ !important; height: 0 !important; font-size: 0 !important; line-=
+height: 0 !important; min-height: 0 !important; }=0D=0A          =
+  span[class=3D'mobile-block'], div[class=3D'mobile-block'] { dis=
+play: block !important; }=0D=0A            .hide {display:none !i=
+mportant;}=0D=0A            div[class=3D'fluid-img'] img,=0D=0A  =
+          td[class=3D'fluid-img'] img { width: 100% !important; m=
+ax-width: 345px !important; height: auto !important; }=0D=0A     =
+       div[class=3D'text-nav'] div { width: 100% !important; max-=
+width: 480px !important; height: auto !important; color:#2d2d2d; =
+font-family:Segoe UI, Arial, sans-serif; font-size:11px; line-hei=
+ght:15px; text-align:center }=0D=0A            table[class=3D'w32=
+0'] { width: 100% !important; }=0D=0A            tr[class=3D'butt=
+on'] table[class=3D'w320'] { background-color: #fafafa; }=0D=0A  =
+          table[class=3D'center'] { margin: 0 auto !important; }=0D=0A=
+            div[class=3D'img-m-center'] { text-align: center !imp=
+ortant; }=0D=0A            img[class=3D'mobile-image'] { display:=
+ block !important; width: 100% !important; height: auto !importan=
+t; }=0D=0A            div[class=3D'h2'] { font-size: 22px !import=
+ant; line-height: 27px !important; }=0D=0A            th[class=3D=
+'column'],=0D=0A            td[class=3D'column'] { float: left !i=
+mportant; width: 100% !important; display: block !important; }=0D=0A=
+            td[class=3D'content-spacing'] { width: 10px !importan=
+t; }=0D=0A            td[class=3D'content-spacing2'] { width: 20p=
+x !important; }=0D=0A            } =0D=0A    </style>=0D=0A</head=
+>=0D=0A<body class=3D"body" style=3D"padding:0 !important; margin=
+:0 !important; display:block !important; width:100% !important; b=
+ackground:#fafafa; -webkit-text-size-adjust:none">=0D=0A    <div =
+style=3D"display:none; display:none !important; color:#fafafa; fo=
+nt-size:1px; line-height:0; max-height:0; max-width:0; opacity:0;=
+ overflow:hidden;">The Stardock Summer Sale is here, with 25% off=
+ select Stardock software. Check out the full sale list, to make =
+sure that you don't miss out on these great deals.</div>    =0D=0A=
+	<table bgcolor=3D"#fafafa" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" role=3D"presentation" width=3D"100%">=0D=0A        <t=
+r>=0D=0A            <td align=3D"center" valign=3D"top">=0D=0A   =
+             <table border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"w320" role=3D"presentation" width=3D"600" >=0D=0A   =
+                 <tr>=0D=0A                        <td align=3D"c=
+enter">=0D=0A                            <div style=3D"font-size:=
+0pt; height:12px line-height:0pt;"><img alt=3D"" src=3D"https://w=
+ww.stardock.com/media/Mailers/summersale/summersale_software_june=
+2024/images/empty.gif" height=3D"12" style=3D"height:12px" width=3D=
+"1" /></div>=0D=0A							<div class=3D"text-nav" border=3D"0" hei=
+ght=3D"0" style=3D"font-size:0pt; line-height:0pt; text-align:lef=
+t" width=3D"0">=0D=0A								<!--[if !mso]><!-->=0D=0A								<di=
+v>=0D=0A								Don't miss out on these deals!<span data-mailonly=
+=3D"true"><br/><a href=3D"https://www.stardock.net/clickemail/t/N=
+DE5NjAtVXFCU2dDdTA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVRKZ0JlTFdORE1YRT=
+1AbWFpbC5zdGFyZG9jay5uZXQ=3D/aHR0cHM6Ly93d3cuc3RhcmRvY2suY29tL21l=
+ZGlhL01haWxlcnMvc3VtbWVyc2FsZS9zdW1tZXJzYWxlX3NvZnR3YXJlX2p1bmUyM=
+DI0LzA3MDEvaW5kZXguaHRtbD9lbWFpbD1ibGFja3BhcGVybW9vbjQyQGdtYWlsLm=
+NvbSZqb2JpZD00MTk2MA=3D=3D" style=3D"color:#2d2d2d; text-decorati=
+on:underline">View this email in your browser.</a></span>=0D=0A		=
+						</div>=0D=0A								<!--<![endif]-->=0D=0A							</div>=0D=0A=
+							<div class=3D"mobile-br-15" style=3D"text-align:center"></=
+div>=0D=0A                            <table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"=
+>=0D=0A                                <tr>=0D=0A                =
+                    <td align=3D"left" class=3D"content-spacing" =
+style=3D"font-size:0pt; line-height:0pt; text-align:left" width=3D=
+"30"></td>=0D=0A                                    <th align=3D"=
+left" class=3D"column" style=3D"font-weight:normal; margin:0; pad=
+ding:0;" width=3D"184">=0D=0A                                    =
+    <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D=
+"presentation" width=3D"100%">=0D=0A                             =
+               <tr>=0D=0A                                        =
+        <td align=3D"left">=0D=0A                                =
+                    <div class=3D"img-m-center" style=3D"font-siz=
+e:0pt; line-height:0pt; text-align:left">=0D=0A                  =
+                                      <a href=3D"https://www.star=
+dock.net/clickemail/t/NDE5NjAtVXFCU2dDdTA4NFJBMHFZRkovNXFkUEhORFN=
+tOG4wNVRKZ0JlTFdORE1YRT1AbWFpbC5zdGFyZG9jay5uZXQ=3D/aHR0cHM6Ly93d=
+3cuc3RhcmRvY2suY29tL3Byb2R1Y3RzLz91dG1fc291cmNlPXNvZnR3YXJlLXByb2=
+1vJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NvbnRlbnQ9c3RhcmRvY2stbG9nbyZ1dG1=
+fY2FtcGFpZ249c2RzLXN1bW1lcnNhbGUtanVuZTIwMjQmdXRtX3Rlcm09c2RzLXN1=
+bW1lcnNhbGUtanVuZTIwMjQtNDE5NjA=3D" target=3D"_blank">=0D=0A     =
+                                                       <img alt=3D=
+"Stardock" border=3D"0" height=3D"49" src=3D"https://www.stardock=
+.com/media/Mailers/summersale/summersale_software_june2024/images=
+/sdlogo.png" width=3D"184" />=0D=0A                              =
+                          </a>=0D=0A                             =
+                       </div>=0D=0A                              =
+                  </td>=0D=0A                                    =
+        </tr>=0D=0A                                        </tabl=
+e>=0D=0A                                    </th>=0D=0A          =
+                          <th align=3D"right" class=3D"column" st=
+yle=3D"font-weight:normal; margin:0; padding:0;">=0D=0A          =
+                              <table border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" role=3D"presentation">=0D=0A                =
+                            <tr>=0D=0A                           =
+                     <td align=3D"right" width=3D"410">=0D=0A    =
+                                                <div class=3D"hid=
+e-for-mobile">=0D=0A                                             =
+           <div class=3D"text-nav" style=3D"color:#2d2d2d; font-f=
+amily:Segoe UI, Arial, sans-serif; font-size:11px; line-height:15=
+px; text-align:right">=0D=0A                                     =
+                       Don't miss out on these deals!<span data-m=
+ailonly=3D"true"><br/><a href=3D"https://www.stardock.net/clickem=
+ail/t/NDE5NjAtVXFCU2dDdTA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVRKZ0JlTFd=
+ORE1YRT1AbWFpbC5zdGFyZG9jay5uZXQ=3D/aHR0cHM6Ly93d3cuc3RhcmRvY2suY=
+29tL21lZGlhL01haWxlcnMvc3VtbWVyc2FsZS9zdW1tZXJzYWxlX3NvZnR3YXJlX2=
+p1bmUyMDI0LzA3MDEvaW5kZXguaHRtbD9lbWFpbD1ibGFja3BhcGVybW9vbjQyQGd=
+tYWlsLmNvbSZqb2JpZD00MTk2MA=3D=3D" style=3D"color:#2d2d2d; text-d=
+ecoration:underline">View this email in your browser.</a></span>=0D=0A=
+                                                        </div>=0D=0A=
+                                                    </div>=0D=0A =
+                                               </td>=0D=0A       =
+                                     </tr>=0D=0A                 =
+                       </table>=0D=0A                            =
+        </th>=0D=0A                                    <td align=3D=
+"right" class=3D"content-spacing" style=3D"font-size:0pt; line-he=
+ight:0pt; text-align:left" width=3D"30"></td>=0D=0A              =
+                  </tr>=0D=0A                            </table>=
+=0D=0A                            <div style=3D"font-size:0pt; he=
+ight:12px line-height:0pt;"><img alt=3D"" src=3D"https://www.star=
+dock.com/media/Mailers/summersale/summersale_software_june2024/im=
+ages/empty.gif" height=3D"12" style=3D"height:12px" width=3D"1" /=
+></div>=0D=0A                        </td>=0D=0A                 =
+   </tr>=0D=0A                </table>=0D=0A            </td>=0D=0A=
+        </tr>=0D=0A    </table>=0D=0A	=0D=0A	<table bgcolor=3D"#f=
+afafa" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"p=
+resentation" width=3D"100%">=0D=0A        <tr>=0D=0A            <=
+td align=3D"center">=0D=0A                <table border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" role=3D"presentation" width=3D"1=
+00%">=0D=0A                    <tr>=0D=0A                        =
+<td align=3D"center" valign=3D"top">=0D=0A                       =
+     <table bgcolor=3D"#fafafa" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" class=3D"w320" role=3D"presentation" width=3D"600=
+">=0D=0A                                <tr>=0D=0A               =
+                     <td align=3D"center">=0D=0A                 =
+                       <table width=3D"100%" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" role=3D"presentation">=0D=0A        =
+                                    <tr>=0D=0A                   =
+                             <td align=3D"center">=0D=0A         =
+                                           <div class=3D"full-ima=
+ge">=0D=0A                                                       =
+ <div style=3D"font-size:0pt; line-height:0pt; text-align:left"><=
+a href=3D"https://www.stardock.net/clickemail/t/NDE5NjAtVXFCU2dDd=
+TA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVRKZ0JlTFdORE1YRT1AbWFpbC5zdGFyZG=
+9jay5uZXQ=3D/aHR0cHM6Ly93d3cuc3RhcmRvY2suY29tL3Byb2R1Y3RzL3N0b3Jl=
+Lz91dG1fc291cmNlPXNvZnR3YXJlLXByb21vJnV0bV9tZWRpdW09ZW1haWwmdXRtX=
+2NvbnRlbnQ9aGVhZGVyLWltZyZ1dG1fY2FtcGFpZ249c2RzLXN1bW1lcnNhbGUtan=
+VuZTIwMjQmdXRtX3Rlcm09c2RzLXN1bW1lcnNhbGUtanVuZTIwMjQtNDE5NjA=3D"=
+ target=3D"_blank"><img alt=3D"Stardock Software" border=3D"0" he=
+ight=3D"200" src=3D"https://www.stardock.com/media/Mailers/summer=
+sale/summersale_software_june2024/images/sds_summersale2024_store=
+page.jpg" width=3D"600" /></a></div>=0D=0A                       =
+                             </div>=0D=0A                        =
+                        </td>=0D=0A                              =
+              </tr>=0D=0A                                        =
+</table>=0D=0A                                    </td>=0D=0A    =
+                            </tr>=0D=0A                          =
+  </table>=0D=0A                        </td>=0D=0A              =
+      </tr>=0D=0A				</table>=0D=0A            </td>=0D=0A       =
+ </tr>=0D=0A    </table>=0D=0A	<table bgcolor=3D"#fafafa" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation" wid=
+th=3D"100%">=0D=0A        <tr>=0D=0A            <td align=3D"cent=
+er">=0D=0A                <table border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0" role=3D"presentation" width=3D"100%">=0D=0A					=
+<tr>=0D=0A						<td align=3D"center">=0D=0A							<div style=3D"f=
+ont-size:0pt; height:10px; line-height:0pt;"><img alt=3D"" height=
+=3D"10" src=3D"https://www.stardock.com/media/Mailers/summersale/=
+summersale_software_june2024/images/empty.gif" style=3D"height:10=
+px" width=3D"1" /></div>=0D=0A						</td>=0D=0A					</tr>=0D=0A		=
+			<tr>=0D=0A                        <td align=3D"center" valign=3D=
+"top">=0D=0A                            <table bgcolor=3D"#f6f2e9=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"w320"=
+ role=3D"presentation" width=3D"600">=0D=0A                      =
+          <tr>=0D=0A                                    <td align=
+=3D"center">=0D=0A										<table width=3D"100%" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" role=3D"presentation">=0D=0A			=
+								<tr>=0D=0A												<td align=3D"center">=0D=0A								=
+					<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" role=3D"presentation">=0D=0A													 	<tr>=0D=0A	=
+												 		<th align=3D"left" class=3D"column" style=3D"font-=
+weight:normal; padding:15px 0; margin:0;" width=3D"200">=0D=0A			=
+										 			<table width=3D"100%" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0" role=3D"presentation">=0D=0A													 			=
+	<tr>=0D=0A													 					<td align=3D"left">=0D=0A										=
+						 			<div class=3D"full-img" style=3D"font-size:0pt; line-he=
+ight:0pt; text-align:left"><div class=3D"img-m-center" style=3D"f=
+ont-size:0pt; line-height:0pt; text-align:left"><img src=3D"https=
+://www.stardock.com/media/Mailers/summersale/summersale_software_=
+june2024/images/odnt_logo.jpg" border=3D"0" width=3D"296" height=3D=
+"138" alt=3D"Object Desktop" /></div></div>=0D=0A													 		=
+			</td>=0D=0A													 				</tr>=0D=0A													 			</tab=
+le>=0D=0A													 		</th>=0D=0A													 		<th align=3D"=
+right" class=3D"column" style=3D"font-weight:normal; padding:0; m=
+argin:0;">=0D=0A													 			<table style=3D"max-width: 320px=
+; margin: 0 auto;" width=3D"100%" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" role=3D"presentation">=0D=0A													 				<=
+tr>=0D=0A													 					<td align=3D"left" class=3D"content-s=
+pacing" style=3D"font-size:0pt; line-height:0pt; text-align:left"=
+ width=3D"23"></td>=0D=0A																		<td align=3D"left">=0D=0A=
+																 			<div class=3D"h3" style=3D"color:#0f488d; fon=
+t-family:Segoe UI, Arial, sans-serif; font-size:17px; font-weight=
+:bold; line-height:22px; text-align:left;"><a href=3D"https://www=
+.stardock.net/clickemail/t/NDE5NjAtVXFCU2dDdTA4NFJBMHFZRkovNXFkUE=
+hORFNtOG4wNVRKZ0JlTFdORE1YRT1AbWFpbC5zdGFyZG9jay5uZXQ=3D/aHR0cHM6=
+Ly93d3cuc3RhcmRvY2suY29tL3Byb2R1Y3RzL29kbnQvP3V0bV9zb3VyY2U9c29md=
+HdhcmUtcHJvbW8mdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1vZG50LXR4dC=
+Z1dG1fY2FtcGFpZ249c2RzLXN1bW1lcnNhbGUtanVuZTIwMjQmdXRtX3Rlcm09c2R=
+zLXN1bW1lcnNhbGUtanVuZTIwMjQtNDE5NjA=3D" style=3D"color:#0f488d; =
+text-decoration:underline;" target=3D"_blank">Object Desktop</a><=
+span style=3D"color:#0f488d;">&trade;</span></div>=0D=0A									=
+										<div style=3D"font-size:0pt; height:5px; line-height:0p=
+t;"><img alt=3D"" height=3D"5" src=3D"https://www.stardock.com/me=
+dia/Mailers/summersale/summersale_software_june2024/images/empty.=
+gif" style=3D"height:5px" width=3D"1" /></div>=0D=0A													=
+						<div class=3D"text" style=3D"color:#2d2d2d; font-family:Seg=
+oe UI, Arial, sans-serif; font-size:13px; line-height:16px; text-=
+align:left;">Customize your Windows experience with this complete=
+ suite of desktop enhancement products.</div>=0D=0A														=
+					<div style=3D"font-size:0pt; height:10px; line-height:0pt;">=
+<img alt=3D"" height=3D"10" src=3D"https://www.stardock.com/media=
+/Mailers/summersale/summersale_software_june2024/images/empty.gif=
+" style=3D"height:10px" width=3D"1" /></div>=0D=0A															=
+				<div class=3D"text" style=3D"color:#0f488d; font-family:Segoe=
+ UI, Arial, sans-serif; font-size:15px; font-weight:bold; line-he=
+ight:15px; text-align:left;"><span style=3D"color:#909090; font-s=
+ize:11px;"><strike>$49.99</strike></span> $37.49&nbsp;&nbsp;<span=
+ style=3D"color:#909090;">|</span>&nbsp;&nbsp;<a href=3D"https://=
+www.stardock.net/clickemail/t/NDE5NjAtVXFCU2dDdTA4NFJBMHFZRkovNXF=
+kUEhORFNtOG4wNVRKZ0JlTFdORE1YRT1AbWFpbC5zdGFyZG9jay5uZXQ=3D/aHR0c=
+HM6Ly93d3cuc3RhcmRvY2suY29tL3Byb2R1Y3RzL29kbnQvP3V0bV9zb3VyY2U9c2=
+9mdHdhcmUtcHJvbW8mdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1vZG50LWd=
+ldGl0bm93LWJ1dHRvbiZ1dG1fY2FtcGFpZ249c2RzLXN1bW1lcnNhbGUtanVuZTIw=
+MjQmdXRtX3Rlcm09c2RzLXN1bW1lcnNhbGUtanVuZTIwMjQtNDE5NjAjcHVyY2hhc=
+2U=3D" style=3D"color:#0f488d; text-decoration:underline;" target=
+=3D"_blank">Get it Now</a></div>=0D=0A																			<div sty=
+le=3D"font-size:0pt; line-height:0pt;" class=3D"mobile-br-30"></d=
+iv>=0D=0A													 					</td>=0D=0A																		<td alig=
+n=3D"right" class=3D"content-spacing" style=3D"font-size:0pt; lin=
+e-height:0pt; text-align:left" width=3D"23"></td>=0D=0A										=
+			 				</tr>=0D=0A													 			</table>=0D=0A													 	=
+	</th>=0D=0A													 	</tr>=0D=0A													</table> =0D=0A=
+												</td>=0D=0A											</tr>=0D=0A										</table>=0D=0A=
+                                    </td>=0D=0A                  =
+              </tr>=0D=0A                            </table>=0D=0A=
+                        </td>=0D=0A                    </tr>=0D=0A=
+					<tr>=0D=0A						<td align=3D"center">=0D=0A							<div style=
+=3D"font-size:0pt; height:10px; line-height:0pt;"><img alt=3D"" h=
+eight=3D"10" src=3D"https://www.stardock.com/media/Mailers/summer=
+sale/summersale_software_june2024/images/empty.gif" style=3D"heig=
+ht:10px" width=3D"1" /></div>=0D=0A						</td>=0D=0A					</tr>=0D=0A=
+					<tr>=0D=0A                        <td align=3D"center" valig=
+n=3D"top">=0D=0A                            <table bgcolor=3D"#fa=
+fafa" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"w=
+320" role=3D"presentation" width=3D"600">=0D=0A                  =
+              <tr>=0D=0A                                    <td a=
+lign=3D"center">=0D=0A										<table width=3D"100%" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" dir=3D"ltr" role=3D"present=
+ation">=0D=0A											<tr>=0D=0A												<td align=3D"center=
+">=0D=0A													<table width=3D"100%" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" dir=3D"rtl" role=3D"presentation">=0D=0A=
+													 	<tr>=0D=0A													 		<th align=3D"left" class=
+=3D"column" style=3D"font-weight:normal; padding:15px 0; margin:0=
+;"=20width=3D"200">=0D=0A													 			<table width=3D"100%" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0" dir=3D"ltr" role=3D=
+"presentation">=0D=0A													 				<tr>=0D=0A													 		=
+			<td align=3D"left">=0D=0A																 			<div class=3D"ful=
+l-img" style=3D"font-size:0pt; line-height:0pt; text-align:left">=
+<div class=3D"img-m-center" style=3D"font-size:0pt; line-height:0=
+pt; text-align:left"><img src=3D"https://www.stardock.com/media/M=
+ailers/summersale/summersale_software_june2024/images/header_fenc=
+es5.jpg" border=3D"0" width=3D"296" height=3D"138" alt=3D"Fences"=
+ /></div></div>=0D=0A													 					</td>=0D=0A													 =
+				</tr>=0D=0A													 			</table>=0D=0A													 		</t=
+h>=0D=0A													 		<th align=3D"right" class=3D"column" styl=
+e=3D"font-weight:normal; padding:0; margin:0;">=0D=0A												=
+	 			<table style=3D"max-width: 320px; margin: 0 auto;" width=3D"=
+100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" dir=3D"ltr=
+" role=3D"presentation">=0D=0A													 				<tr>=0D=0A							=
+						 					<td align=3D"left" class=3D"content-spacing" style=3D=
+"font-size:0pt; line-height:0pt; text-align:left" width=3D"23"></=
+td>=0D=0A																		<td align=3D"left">=0D=0A													=
+			 			<div class=3D"h3" style=3D"color:#0f488d; font-family:Sego=
+e UI, Arial, sans-serif; font-size:17px; font-weight:bold; line-h=
+eight:22px; text-align:left;"><a href=3D"https://www.stardock.net=
+/clickemail/t/NDE5NjAtVXFCU2dDdTA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVR=
+KZ0JlTFdORE1YRT1AbWFpbC5zdGFyZG9jay5uZXQ=3D/aHR0cHM6Ly93d3cuc3Rhc=
+mRvY2suY29tL3Byb2R1Y3RzL2ZlbmNlcy8-dXRtX3NvdXJjZT1zb2Z0d2FyZS1wcm=
+9tbyZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jb250ZW50PWZlbmNlcy10eHQmdXRtX2N=
+hbXBhaWduPXNkcy1zdW1tZXJzYWxlLWp1bmUyMDI0JnV0bV90ZXJtPXNkcy1zdW1t=
+ZXJzYWxlLWp1bmUyMDI0LTQxOTYw" style=3D"color:#0f488d; text-decora=
+tion:underline;" target=3D"_blank">Fences</a><span style=3D"color=
+:#0f488d; font-size:11px;">&reg;</span> 5</div>=0D=0A												=
+							<div style=3D"font-size:0pt; height:5px; line-height:0pt;"=
+><img alt=3D"" height=3D"5" src=3D"https://www.stardock.com/media=
+/Mailers/summersale/summersale_software_june2024/images/empty.gif=
+" style=3D"height:5px" width=3D"1" /></div>=0D=0A																=
+			<div class=3D"text" style=3D"color:#2d2d2d; font-family:Segoe =
+UI, Arial, sans-serif; font-size:13px; line-height:16px; text-ali=
+gn:left;">Automatically organize files, folders, and applications=
+ on your Windows desktop for a streamlined, productive workspace.=
+</div>=0D=0A																			<div style=3D"font-size:0pt; heigh=
+t:10px; line-height:0pt;"><img alt=3D"" height=3D"10" src=3D"http=
+s://www.stardock.com/media/Mailers/summersale/summersale_software=
+_june2024/images/empty.gif" style=3D"height:10px" width=3D"1" /><=
+/div>=0D=0A																			<div class=3D"text" style=3D"color:=
+#0f488d; font-family:Segoe UI, Arial, sans-serif; font-size:15px;=
+ font-weight:bold; line-height:15px; text-align:left;"><span styl=
+e=3D"color:#909090; font-size:11px;"><strike>$29.99</strike></spa=
+n> $22.49&nbsp;&nbsp;<span style=3D"color:#909090;">|</span>&nbsp=
+;&nbsp;<a href=3D"https://www.stardock.net/clickemail/t/NDE5NjAtV=
+XFCU2dDdTA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVRKZ0JlTFdORE1YRT1AbWFpbC=
+5zdGFyZG9jay5uZXQ=3D/aHR0cHM6Ly93d3cuc3RhcmRvY2suY29tL3Byb2R1Y3Rz=
+L2ZlbmNlcy8-dXRtX3NvdXJjZT1zb2Z0d2FyZS1wcm9tbyZ1dG1fbWVkaXVtPWVtY=
+WlsJnV0bV9jb250ZW50PWZlbmNlcy1nZXRpdG5vdy1idXR0b24mdXRtX2NhbXBhaW=
+duPXNkcy1zdW1tZXJzYWxlLWp1bmUyMDI0JnV0bV90ZXJtPXNkcy1zdW1tZXJzYWx=
+lLWp1bmUyMDI0LTQxOTYwI3B1cmNoYXNl" style=3D"color:#0f488d; text-d=
+ecoration:underline;" target=3D"_blank">Get it Now</a></div>=0D=0A=
+																			<div style=3D"font-size:0pt; line-height:0pt;"=
+ class=3D"mobile-br-30"></div>=0D=0A													 					</td>=0D=0A=
+																		<td align=3D"right" class=3D"content-spacing" s=
+tyle=3D"font-size:0pt; line-height:0pt; text-align:left" width=3D=
+"23"></td>=0D=0A													 				</tr>=0D=0A													 			</t=
+able>=0D=0A													 		</th>=0D=0A													 	</tr>=0D=0A	=
+												</table> =0D=0A												</td>=0D=0A											</tr=
+>=0D=0A										</table>=0D=0A                                  =
+  </td>=0D=0A                                </tr>=0D=0A         =
+                   </table>=0D=0A                        </td>=0D=0A=
+                    </tr>=0D=0A					<tr>=0D=0A						<td align=3D"=
+center">=0D=0A							<div style=3D"font-size:0pt; height:10px; li=
+ne-height:0pt;"><img alt=3D"" height=3D"10" src=3D"https://www.st=
+ardock.com/media/Mailers/summersale/summersale_software_june2024/=
+images/empty.gif" style=3D"height:10px" width=3D"1" /></div>=0D=0A=
+						</td>=0D=0A					</tr>=0D=0A					<tr>=0D=0A                 =
+       <td align=3D"center" valign=3D"top">=0D=0A                =
+            <table bgcolor=3D"#f6f2e9" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0" class=3D"w320" role=3D"presentation" width=3D=
+"600">=0D=0A                                <tr>=0D=0A           =
+                         <td align=3D"center">=0D=0A										<ta=
+ble width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" role=3D"presentation">=0D=0A											<tr>=0D=0A												<=
+td align=3D"center">=0D=0A													<table width=3D"100%" bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation=
+">=0D=0A													 	<tr>=0D=0A													 		<th align=3D"lef=
+t" class=3D"column" style=3D"font-weight:normal; padding:15px 0; =
+margin:0;" width=3D"200">=0D=0A													 			<table width=3D"1=
+00%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"pre=
+sentation">=0D=0A													 				<tr>=0D=0A													 					<=
+td align=3D"left">=0D=0A																 			<div class=3D"full-im=
+g" style=3D"font-size:0pt; line-height:0pt; text-align:left"><div=
+ class=3D"img-m-center" style=3D"font-size:0pt; line-height:0pt; =
+text-align:left"><img src=3D"https://www.stardock.com/media/Maile=
+rs/summersale/summersale_software_june2024/images/header_start11v=
+2.jpg" border=3D"0" width=3D"296" height=3D"138" alt=3D"Start11" =
+/></div></div>=0D=0A													 					</td>=0D=0A													 	=
+			</tr>=0D=0A													 			</table>=0D=0A													 		</th=
+>=0D=0A													 		<th align=3D"right" class=3D"column" style=
+=3D"font-weight:normal; padding:0; margin:0;">=0D=0A													=
+ 			<table style=3D"max-width: 320px; margin: 0 auto;" width=3D"1=
+00%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"pre=
+sentation">=0D=0A													 				<tr>=0D=0A													 					<=
+td align=3D"left" class=3D"content-spacing" style=3D"font-size:0p=
+t; line-height:0pt; text-align:left" width=3D"23"></td>=0D=0A				=
+														<td align=3D"left">=0D=0A																 			<div c=
+lass=3D"h3" style=3D"color:#0f488d; font-family:Segoe UI, Arial, =
+sans-serif; font-size:17px; font-weight:bold; line-height:22px; t=
+ext-align:left;"><a href=3D"https://www.stardock.net/clickemail/t=
+/NDE5NjAtVXFCU2dDdTA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVRKZ0JlTFdORE1Y=
+RT1AbWFpbC5zdGFyZG9jay5uZXQ=3D/aHR0cHM6Ly93d3cuc3RhcmRvY2suY29tL3=
+Byb2R1Y3RzL3N0YXJ0MTEvP3V0bV9zb3VyY2U9c29mdHdhcmUtcHJvbW8mdXRtX21=
+lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1zdGFydDExLXR4dCZ1dG1fY2FtcGFpZ249=
+c2RzLXN1bW1lcnNhbGUtanVuZTIwMjQmdXRtX3Rlcm09c2RzLXN1bW1lcnNhbGUta=
+nVuZTIwMjQtNDE5NjA=3D" style=3D"color:#0f488d; text-decoration:un=
+derline;" target=3D"_blank">Start11</a><span style=3D"color:#0f48=
+8d;">&trade;</span> v2</div>=0D=0A																			<div style=3D=
+"font-size:0pt; height:5px; line-height:0pt;"><img alt=3D"" heigh=
+t=3D"5" src=3D"https://www.stardock.com/media/Mailers/summersale/=
+summersale_software_june2024/images/empty.gif" style=3D"height:5p=
+x" width=3D"1" /></div>=0D=0A																			<div class=3D"tex=
+t" style=3D"color:#2d2d2d; font-family:Segoe UI, Arial, sans-seri=
+f; font-size:13px; line-height:16px; text-align:left;">Fully cust=
+omize the Windows 10 and 11 Start menu experience with unique fea=
+tures, designs, and restore classic functionality from previous v=
+ersions of Windows.</div>=0D=0A																			<div style=3D"f=
+ont-size:0pt; height:10px; line-height:0pt;"><img alt=3D"" height=
+=3D"10" src=3D"https://www.stardock.com/media/Mailers/summersale/=
+summersale_software_june2024/images/empty.gif" style=3D"height:10=
+px" width=3D"1" /></div>=0D=0A																			<div class=3D"te=
+xt" style=3D"color:#0f488d; font-family:Segoe UI, Arial, sans-ser=
+if; font-size:15px; font-weight:bold; line-height:15px; text-alig=
+n:left;"><span style=3D"color:#909090; font-size:11px;"><strike>$=
+9.99</strike></span> $7.49&nbsp;&nbsp;<span style=3D"color:#90909=
+0;">|</span>&nbsp;&nbsp;<a href=3D"https://www.stardock.net/click=
+email/t/NDE5NjAtVXFCU2dDdTA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVRKZ0JlT=
+FdORE1YRT1AbWFpbC5zdGFyZG9jay5uZXQ=3D/aHR0cHM6Ly93d3cuc3RhcmRvY2s=
+uY29tL3Byb2R1Y3RzL3N0YXJ0MTEvP3V0bV9zb3VyY2U9c29mdHdhcmUtcHJvbW8m=
+dXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1zdGFydDExLWdldGl0bm93LWJ1d=
+HRvbiZ1dG1fY2FtcGFpZ249c2RzLXN1bW1lcnNhbGUtanVuZTIwMjQmdXRtX3Rlcm=
+09c2RzLXN1bW1lcnNhbGUtanVuZTIwMjQtNDE5NjAjcHVyY2hhc2U=3D" style=3D=
+"color:#0f488d; text-decoration:underline;" target=3D"_blank">Get=
+ it Now</a></div>=0D=0A																			<div style=3D"font-size=
+:0pt; line-height:0pt;" class=3D"mobile-br-30"></div>=0D=0A						=
+							 					</td>=0D=0A																		<td align=3D"right" cla=
+ss=3D"content-spacing" style=3D"font-size:0pt; line-height:0pt; t=
+ext-align:left" width=3D"23"></td>=0D=0A													 				</tr>=0D=0A=
+													 			</table>=0D=0A													 		</th>=0D=0A							=
+						 	</tr>=0D=0A													</table> =0D=0A												</td>=0D=0A=
+											</tr>=0D=0A										</table>=0D=0A                   =
+                 </td>=0D=0A                                </tr>=
+=0D=0A                            </table>=0D=0A                 =
+       </td>=0D=0A                    </tr>=0D=0A					<tr>=0D=0A	=
+					<td align=3D"center">=0D=0A							<div style=3D"font-size:0p=
+t; height:10px; line-height:0pt;"><img alt=3D"" height=3D"10" src=
+=3D"https://www.stardock.com/media/Mailers/summersale/summersale_=
+software_june2024/images/empty.gif" style=3D"height:10px" width=3D=
+"1" /></div>=0D=0A						</td>=0D=0A					</tr>=0D=0A					<tr>=0D=0A=
+                        <td align=3D"center" valign=3D"top">=0D=0A=
+                            <table bgcolor=3D"#fafafa" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0" class=3D"w320" role=3D"pre=
+sentation" width=3D"600">=0D=0A                                <t=
+r>=0D=0A                                    <td align=3D"center">=
+=0D=0A										<table width=3D"100%" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0" dir=3D"ltr" role=3D"presentation">=0D=0A			=
+								<tr>=0D=0A												<td align=3D"center">=0D=0A								=
+					<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" dir=3D"rtl" role=3D"presentation">=0D=0A													 =
+	<tr>=0D=0A													 		<th align=3D"left" class=3D"column" st=
+yle=3D"font-weight:normal; padding:15px 0; margin:0;" width=3D"20=
+0">=0D=0A													 			<table width=3D"100%" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" dir=3D"ltr" role=3D"presentation"=
+>=0D=0A													 				<tr>=0D=0A													 					<td align=3D=
+"left">=0D=0A																 			<div class=3D"full-img" style=3D=
+"font-size:0pt; line-height:0pt; text-align:left"><div class=3D"i=
+mg-m-center" style=3D"font-size:0pt; line-height:0pt; text-align:=
+left"><img src=3D"https://www.stardock.com/media/Mailers/summersa=
+le/summersale_software_june2024/images/header_groupy2.jpg" border=
+=3D"0" width=3D"296" height=3D"138" alt=3D"Groupy 2" /></div></di=
+v>=0D=0A													 					</td>=0D=0A													 				</tr>=0D=0A=
+													 			</table>=0D=0A													 		</th>=0D=0A							=
+						 		<th align=3D"right" class=3D"column" style=3D"font-weigh=
+t:normal; padding:0; margin:0;">=0D=0A													 			<table sty=
+le=3D"max-width: 320px; margin: 0 auto;" width=3D"100%" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0" dir=3D"ltr" role=3D"prese=
+ntation">=0D=0A													 				<tr>=0D=0A													 					<td=
+ align=3D"left" class=3D"content-spacing" style=3D"font-size:0pt;=
+ line-height:0pt; text-align:left" width=3D"23"></td>=0D=0A						=
+												<td align=3D"left">=0D=0A																 			<div cla=
+ss=3D"h3" style=3D"color:#0f488d; font-family:Segoe UI, Arial, sa=
+ns-serif; font-size:17px; font-weight:bold; line-height:22px; tex=
+t-align:left;"><a href=3D"https://www.stardock.net/clickemail/t/N=
+DE5NjAtVXFCU2dDdTA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVRKZ0JlTFdORE1YRT=
+1AbWFpbC5zdGFyZG9jay5uZXQ=3D/aHR0cHM6Ly93d3cuc3RhcmRvY2suY29tL3By=
+b2R1Y3RzL2dyb3VweS8-dXRtX3NvdXJjZT1zb2Z0d2FyZS1wcm9tbyZ1dG1fbWVka=
+XVtPWVtYWlsJnV0bV9jb250ZW50PWdyb3VweS10eHQmdXRtX2NhbXBhaWduPXNkcy=
+1zdW1tZXJzYWxlLWp1bmUyMDI0JnV0bV90ZXJtPXNkcy1zdW1tZXJzYWxlLWp1bmU=
+yMDI0LTQxOTYw" style=3D"color:#0f488d; text-decoration:underline;=
+" target=3D"_blank">Groupy</a><span style=3D"color:#0f488d; font-=
+size:11px;">&reg;</span> 2</div>=0D=0A																			<div sty=
+le=3D"font-size:0pt; height:5px; line-height:0pt;"><img alt=3D"" =
+height=3D"5" src=3D"https://www.stardock.com/media/Mailers/summer=
+sale/summersale_software_june2024/images/empty.gif" style=3D"heig=
+ht:5px" width=3D"1" /></div>=0D=0A																			<div class=3D=
+"text" style=3D"color:#2d2d2d; font-family:Segoe UI, Arial, sans-=
+serif; font-size:13px; line-height:16px; text-align:left;">Drag a=
+nd drop multiple apps and documents together and group them into =
+browser-like tabs for easy access.</div>=0D=0A																			=
+<div style=3D"font-size:0pt; height:10px; line-height:0pt;"><img =
+alt=3D"" height=3D"10" src=3D"https://www.stardock.com/media/Mail=
+ers/summersale/summersale_software_june2024/images/empty.gif" sty=
+le=3D"height:10px" width=3D"1" /></div>=0D=0A																			<=
+div class=3D"text" style=3D"color:#0f488d; font-family:Segoe UI, =
+Arial, sans-serif; font-size:15px; font-weight:bold; line-height:=
+15px; text-align:left;"><span style=3D"color:#909090; font-size:1=
+1px;"><strike>$9.99</strike></span> $7.49&nbsp;&nbsp;<span style=3D=
+"color:#909090;">|</span>&nbsp;&nbsp;<a href=3D"https://www.stard=
+ock.net/clickemail/t/NDE5NjAtVXFCU2dDdTA4NFJBMHFZRkovNXFkUEhORFNt=
+OG4wNVRKZ0JlTFdORE1YRT1AbWFpbC5zdGFyZG9jay5uZXQ=3D/aHR0cHM6Ly93d3=
+cuc3RhcmRvY2suY29tL3Byb2R1Y3RzL2dyb3VweS8-dXRtX3NvdXJjZT1zb2Z0d2F=
+yZS1wcm9tbyZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jb250ZW50PWdyb3VweS1nZXRp=
+dG5vdy1idXR0b24mdXRtX2NhbXBhaWduPXNkcy1zdW1tZXJzYWxlLWp1bmUyMDI0J=
+nV0bV90ZXJtPXNkcy1zdW1tZXJzYWxlLWp1bmUyMDI0LTQxOTYwI3B1cmNoYXNl" =
+style=3D"color:#0f488d; text-decoration:underline;" target=3D"_bl=
+ank">Get it Now</a></div>=0D=0A																			<div style=3D"f=
+ont-size:0pt; line-height:0pt;" class=3D"mobile-br-30"></div>=0D=0A=
+													 					</td>=0D=0A																		<td align=3D"righ=
+t" class=3D"content-spacing" style=3D"font-size:0pt; line-height:=
+0pt; text-align:left" width=3D"23"></td>=0D=0A													 				<=
+/tr>=0D=0A													 			</table>=0D=0A													 		</th>=0D=0A=
+													 	</tr>=0D=0A													</table> =0D=0A											=
+	</td>=0D=0A											</tr>=0D=0A										</table>=0D=0A       =
+                             </td>=0D=0A                         =
+       </tr>=0D=0A                            </table>=0D=0A     =
+                   </td>=0D=0A                    </tr>=0D=0A				=
+	<tr>=0D=0A						<td align=3D"center">=0D=0A							<div style=3D"=
+font-size:0pt; height:10px; line-height:0pt;"><img alt=3D"" heigh=
+t=3D"10" src=3D"https://www.stardock.com/media/Mailers/summersale=
+/summersale_software_june2024/images/empty.gif" style=3D"height:1=
+0px" width=3D"1" /></div>=0D=0A						</td>=0D=0A					</tr>=0D=0A	=
+				<tr>=0D=0A                        <td align=3D"center" valign=
+=3D"top">=0D=0A                            <table bgcolor=3D"#f6f=
+2e9" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"w3=
+20" role=3D"presentation" width=3D"600">=0D=0A                   =
+             <tr>=0D=0A                                    <td al=
+ign=3D"center">=0D=0A										<table width=3D"100%" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation">=0D=0A=
+											<tr>=0D=0A												<td align=3D"center">=0D=0A					=
+								<table width=3D"100%" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" role=3D"presentation">=0D=0A													 	<tr>=0D=0A=
+													 		<th align=3D"left" class=3D"column" style=3D"font=
+-weight:normal; padding:15px 0; margin:0;" width=3D"200">=0D=0A		=
+											 			<table width=3D"100%" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" role=3D"presentation">=0D=0A													 		=
+		<tr>=0D=0A													 					<td align=3D"left">=0D=0A									=
+							 			<div class=3D"full-img" style=3D"font-size:0pt; line-h=
+eight:0pt; text-align:left"><div class=3D"img-m-center" style=3D"=
+font-size:0pt; line-height:0pt; text-align:left"><img src=3D"http=
+s://www.stardock.com/media/Mailers/summersale/summersale_software=
+_june2024/images/header_wb11.jpg" border=3D"0" width=3D"296" heig=
+ht=3D"138" alt=3D"WindowBlinds 11" /></div></div>=0D=0A										=
+			 					</td>=0D=0A													 				</tr>=0D=0A													 		=
+	</table>=0D=0A													 		</th>=0D=0A													 		<th ali=
+gn=3D"right" class=3D"column" style=3D"font-weight:normal; paddin=
+g:0; margin:0;">=0D=0A													 			<table style=3D"max-width:=
+ 320px; margin: 0 auto;" width=3D"100%" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0" role=3D"presentation">=0D=0A													 	=
+			<tr>=0D=0A													 					<td align=3D"left" class=3D"conte=
+nt-spacing" style=3D"font-size:0pt; line-height:0pt; text-align:l=
+eft" width=3D"23"></td>=0D=0A																		<td align=3D"left"=
+>=0D=0A																 			<div class=3D"h3" style=3D"color:#0f48=
+8d; font-family:Segoe UI, Arial, sans-serif; font-size:17px; font=
+-weight:bold; line-height:22px; text-align:left;"><a href=3D"http=
+s://www.stardock.net/clickemail/t/NDE5NjAtVXFCU2dDdTA4NFJBMHFZRko=
+vNXFkUEhORFNtOG4wNVRKZ0JlTFdORE1YRT1AbWFpbC5zdGFyZG9jay5uZXQ=3D/a=
+HR0cHM6Ly93d3cuc3RhcmRvY2suY29tL3Byb2R1Y3RzL3dpbmRvd2JsaW5kcy8-dX=
+RtX3NvdXJjZT1zb2Z0d2FyZS1wcm9tbyZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jb25=
+0ZW50PXdpbmRvd2JsaW5kcy10eHQmdXRtX2NhbXBhaWduPXNkcy1zdW1tZXJzYWxl=
+LWp1bmUyMDI0JnV0bV90ZXJtPXNkcy1zdW1tZXJzYWxlLWp1bmUyMDI0LTQxOTYw"=
+ style=3D"color:#0f488d; text-decoration:underline;" target=3D"_b=
+lank">WindowBlinds</a><span style=3D"color:#0f488d;">&trade;</spa=
+n> 11</div>=0D=0A																			<div style=3D"font-size:0pt; =
+height:5px; line-height:0pt;"><img alt=3D"" height=3D"5" src=3D"h=
+ttps://www.stardock.com/media/Mailers/summersale/summersale_softw=
+are_june2024/images/empty.gif" style=3D"height:5px" width=3D"1" /=
+></div>=0D=0A																			<div class=3D"text" style=3D"colo=
+r:#2d2d2d; font-family:Segoe UI, Arial, sans-serif; font-size:13p=
+x; line-height:16px; text-align:left;">Customize the look and fee=
+l of your Windows 10 and Windows 11 Start menu, taskbar, window f=
+rames, and more.</div>=0D=0A																			<div style=3D"font=
+-size:0pt; height:10px; line-height:0pt;"><img alt=3D"" height=3D=
+"10" src=3D"https://www.stardock.com/media/Mailers/summersale/sum=
+mersale_software_june2024/images/empty.gif" style=3D"height:10px"=
+ width=3D"1" /></div>=0D=0A																			<div class=3D"text"=
+ style=3D"color:#0f488d; font-family:Segoe UI, Arial, sans-serif;=
+ font-size:15px; font-weight:bold; line-height:15px; text-align:l=
+eft;"><span style=3D"color:#909090; font-size:11px;"><strike>$29.=
+99</strike></span> $22.49&nbsp;&nbsp;<span style=3D"color:#909090=
+;">|</span>&nbsp;&nbsp;<a href=3D"https://www.stardock.net/clicke=
+mail/t/NDE5NjAtVXFCU2dDdTA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVRKZ0JlTF=
+dORE1YRT1AbWFpbC5zdGFyZG9jay5uZXQ=3D/aHR0cHM6Ly93d3cuc3RhcmRvY2su=
+Y29tL3Byb2R1Y3RzL3dpbmRvd2JsaW5kcy9kb3dubG9hZD91dG1fc291cmNlPXNvZ=
+nR3YXJlLXByb21vJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NvbnRlbnQ9d2luZG93Ym=
+xpbmRzLWdldGl0bm93LWJ1dHRvbiZ1dG1fY2FtcGFpZ249c2RzLXN1bW1lcnNhbGU=
+tanVuZTIwMjQmdXRtX3Rlcm09c2RzLXN1bW1lcnNhbGUtanVuZTIwMjQtNDE5NjA=3D=
+" style=3D"color:#0f488d; text-decoration:underline;" target=3D"_=
+blank">Get it Now</a></div>=0D=0A																			<div style=3D=
+"font-size:0pt; line-height:0pt;" class=3D"mobile-br-30"></div>=0D=0A=
+													 					</td>=0D=0A																		<td align=3D"righ=
+t" class=3D"content-spacing" style=3D"font-size:0pt; line-height:=
+0pt; text-align:left" width=3D"23"></td>=0D=0A													 				<=
+/tr>=0D=0A													 			</table>=0D=0A													 		</th>=0D=0A=
+													 	</tr>=0D=0A													</table> =0D=0A											=
+	</td>=0D=0A											</tr>=0D=0A										</table>=0D=0A       =
+                             </td>=0D=0A                         =
+       </tr>=0D=0A                            </table>=0D=0A     =
+                   </td>=0D=0A                    </tr>=0D=0A				=
+	<tr>=0D=0A						<td align=3D"center">=0D=0A							<div style=3D"=
+font-size:0pt; height:10px; line-height:0pt;"><img alt=3D"" heigh=
+t=3D"10" src=3D"https://www.stardock.com/media/Mailers/summersale=
+/summersale_software_june2024/images/empty.gif" style=3D"height:1=
+0px" width=3D"1" /></div>=0D=0A						</td>=0D=0A					</tr>=0D=0A	=
+				<tr>=0D=0A                        <td align=3D"center" valign=
+=3D"top">=0D=0A                            <table bgcolor=3D"#faf=
+afa" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"w3=
+20" role=3D"presentation" width=3D"600">=0D=0A                   =
+             <tr>=0D=0A                                    <td al=
+ign=3D"center">=0D=0A										<table width=3D"100%" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" dir=3D"ltr" role=3D"presenta=
+tion">=0D=0A											<tr>=0D=0A												<td align=3D"center"=
+>=0D=0A													<table width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0" dir=3D"rtl" role=3D"presentation">=0D=0A=
+													 	<tr>=0D=0A													 		<th align=3D"left" class=
+=3D"column" style=3D"font-weight:normal; padding:15px 0; margin:0=
+;" width=3D"200">=0D=0A													 			<table width=3D"100%" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0" dir=3D"ltr" role=3D=
+"presentation">=0D=0A													 				<tr>=0D=0A													 		=
+			<td align=3D"left">=0D=0A																 			<div class=3D"ful=
+l-img" style=3D"font-size:0pt; line-height:0pt; text-align:left">=
+<div class=3D"img-m-center" style=3D"font-size:0pt; line-height:0=
+pt; text-align:left"><img src=3D"https://www.stardock.com/media/M=
+ailers/summersale/summersale_software_june2024/images/header_mult=
+.jpg" border=3D"0" width=3D"296" height=3D"138" alt=3D"Multiplici=
+ty" /></div></div>=0D=0A													 					</td>=0D=0A											=
+		 				</tr>=0D=0A													 			</table>=0D=0A													 		=
+</th>=0D=0A													 		<th align=3D"right" class=3D"column" s=
+tyle=3D"font-weight:normal; padding:0; margin:0;">=0D=0A									=
+				 			<table style=3D"max-width: 320px; margin: 0 auto;" width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" dir=3D"lt=
+r" role=3D"presentation">=0D=0A													 				<tr>=0D=0A						=
+							 					<td align=3D"left" class=3D"content-spacing" style=3D=
+"font-size:0pt; line-height:0pt; text-align:left" width=3D"23"></=
+td>=0D=0A																		<td align=3D"left">=0D=0A													=
+			 			<div class=3D"h3" style=3D"color:#0f488d; font-family:Sego=
+e UI, Arial, sans-serif; font-size:17px; font-weight:bold; line-h=
+eight:22px; text-align:left;"><a href=3D"https://www.stardock.net=
+/clickemail/t/NDE5NjAtVXFCU2dDdTA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVR=
+KZ0JlTFdORE1YRT1AbWFpbC5zdGFyZG9jay5uZXQ=3D/aHR0cHM6Ly93d3cuc3Rhc=
+mRvY2suY29tL3Byb2R1Y3RzL211bHRpcGxpY2l0eS8-dXRtX3NvdXJjZT1zb2Z0d2=
+FyZS1wcm9tbyZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jb250ZW50PW11bHRpcGxpY2l=
+0eS10eHQmdXRtX2NhbXBhaWduPXNkcy1zdW1tZXJzYWxlLWp1bmUyMDI0JnV0bV90=
+ZXJtPXNkcy1zdW1tZXJzYWxlLWp1bmUyMDI0LTQxOTYw" style=3D"color:#0f4=
+88d; text-decoration:underline;" target=3D"_blank">Multiplicity</=
+a><span style=3D"color:#0f488d; font-size:11px;">&reg;</span></di=
+v>=0D=0A																			<div style=3D"font-size:0pt; height:5p=
+x; line-height:0pt;"><img alt=3D"" height=3D"5" src=3D"https://ww=
+w.stardock.com/media/Mailers/summersale/summersale_software_june2=
+024/images/empty.gif" style=3D"height:5px" width=3D"1" /></div>=0D=0A=
+																			<div class=3D"text" style=3D"color:#2d2d2d; fo=
+nt-family:Segoe UI, Arial, sans-serif; font-size:13px; line-heigh=
+t:16px; text-align:left;">Instantly connect multiple PCs and move=
+ files seamlessly between them with a single keyboard and mouse!<=
+/div>=0D=0A																			<div style=3D"font-size:0pt; height=
+:10px; line-height:0pt;"><img alt=3D"" height=3D"10" src=3D"https=
+://www.stardock.com/media/Mailers/summersale/summersale_software_=
+june2024/images/empty.gif" style=3D"height:10px" width=3D"1" /></=
+div>=0D=0A																			<div class=3D"text" style=3D"color:#=
+0f488d; font-family:Segoe UI, Arial, sans-serif; font-size:15px; =
+font-weight:bold; line-height:15px; text-align:left;"><span style=
+=3D"color:#909090; font-size:11px;"><strike>$19.99</strike></span=
+> $14.99&nbsp;&nbsp;<span style=3D"color:#909090;">|</span>&nbsp;=
+&nbsp;<a href=3D"https://www.stardock.net/clickemail/t/NDE5NjAtVX=
+FCU2dDdTA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVRKZ0JlTFdORE1YRT1AbWFpbC5=
+zdGFyZG9jay5uZXQ=3D/aHR0cHM6Ly93d3cuc3RhcmRvY2suY29tL3Byb2R1Y3RzL=
+211bHRpcGxpY2l0eS8-dXRtX3NvdXJjZT1zb2Z0d2FyZS1wcm9tbyZ1dG1fbWVkaX=
+VtPWVtYWlsJnV0bV9jb250ZW50PW11bHRpcGxpY2l0eS1nZXRpdG5vdy1idXR0b24=
+mdXRtX2NhbXBhaWduPXNkcy1zdW1tZXJzYWxlLWp1bmUyMDI0JnV0bV90ZXJtPXNk=
+cy1zdW1tZXJzYWxlLWp1bmUyMDI0LTQxOTYwI2NvbXBhcmlzb24=3D" style=3D"=
+color:#0f488d; text-decoration:underline;" target=3D"_blank">Get =
+it Now</a></div>=0D=0A																			<div style=3D"font-size:=
+0pt; line-height:0pt;" class=3D"mobile-br-30"></div>=0D=0A							=
+						 					</td>=0D=0A																		<td align=3D"right" clas=
+s=3D"content-spacing" style=3D"font-size:0pt; line-height:0pt; te=
+xt-align:left" width=3D"23"></td>=0D=0A													 				</tr>=0D=0A=
+													 			</table>=0D=0A													 		</th>=0D=0A							=
+						 	</tr>=0D=0A													</table> =0D=0A												</td>=0D=0A=
+											</tr>=0D=0A										</table>=0D=0A                   =
+                 </td>=0D=0A                                </tr>=
+=0D=0A                            </table>=0D=0A                 =
+       </td>=0D=0A                    </tr>=0D=0A					<tr>=0D=0A	=
+					<td align=3D"center">=0D=0A							<div style=3D"font-size:0p=
+t; height:10px; line-height:0pt;"><img alt=3D"" height=3D"10" src=
+=3D"https://www.stardock.com/media/Mailers/summersale/summersale_=
+software_june2024/images/empty.gif" style=3D"height:10px" width=3D=
+"1" /></div>=0D=0A						</td>=0D=0A					</tr>=0D=0A				</table>=0D=0A=
+            </td>=0D=0A        </tr>=0D=0A    </table>=0D=0A	<tab=
+le bgcolor=3D"#fafafa" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" role=3D"presentation" width=3D"100%">=0D=0A        <tr>=0D=0A=
+            <td align=3D"center">=0D=0A                <table bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentatio=
+n" width=3D"100%">=0D=0A                    <tr class=3D"button">=
+=0D=0A                        <td align=3D"center" valign=3D"top"=
+>=0D=0A                            <div class=3D"mobile-br-15" st=
+yle=3D"text-align:center"></div>=0D=0A                           =
+ <table bgcolor=3D"#f8ecd1" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"w320" role=3D"presentation" width=3D"600">=0D=0A=
+                                <tr>=0D=0A                       =
+             <td align=3D"center">=0D=0A                         =
+               <table bgcolor=3D"#f8ecd1" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0" role=3D"presentation" width=3D"100%">=0D=0A=
+                                            <tr>=0D=0A           =
+                                     <td align=3D"center">=0D=0A =
+                                                   <div style=3D"=
+font-size:0pt; height:20px line-height:0pt;"><img alt=3D"" height=
+=3D"20" src=3D"https://www.stardock.com/media/Mailers/summersale/=
+summersale_software_june2024/images/empty.gif" style=3D"height:20=
+px" width=3D"1" /></div>=0D=0A                                   =
+             </td>=0D=0A                                         =
+   </tr>=0D=0A                                            <tr>=0D=0A=
+												<td align=3D"center">=0D=0A													<div class=3D=
+"text" style=3D"color:#2d2d2d; font-family:Segoe UI, Arial, sans-=
+serif; font-size:17px; line-height:19x; text-align:center;">Check=
+ out our other software on sale</div>=0D=0A												</td>=0D=0A=
+											</tr>=0D=0A											<tr>=0D=0A												<td align=3D=
+"center">=0D=0A													<div style=3D"font-size:0pt; height:1=
+5px line-height:0pt;"><img alt=3D"" height=3D"15" src=3D"https://=
+www.stardock.com/media/Mailers/summersale/summersale_software_jun=
+e2024/images/empty.gif" style=3D"height:15px" width=3D"1" /></div=
+>=0D=0A												</td>=0D=0A											</tr>=0D=0A											<t=
+r>=0D=0A												<td align=3D"center" class=3D"img" style=3D"f=
+ont-size:0pt; line-height:0pt; text-align:center" width=3D"126"><=
+a href=3D"https://www.stardock.net/clickemail/t/NDE5NjAtVXFCU2dDd=
+TA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVRKZ0JlTFdORE1YRT1AbWFpbC5zdGFyZG=
+9jay5uZXQ=3D/aHR0cHM6Ly93d3cuc3RhcmRvY2suY29tL3Byb2R1Y3RzL3N0b3Jl=
+Lz91dG1fc291cmNlPXNvZnR3YXJlLXByb21vJnV0bV9tZWRpdW09ZW1haWwmdXRtX=
+2NvbnRlbnQ9bGVhcm4tbW9yZS1idG4mdXRtX2NhbXBhaWduPXNkcy1zdW1tZXJzYW=
+xlLWp1bmUyMDI0JnV0bV90ZXJtPXNkcy1zdW1tZXJzYWxlLWp1bmUyMDI0LTQxOTY=
+w" target=3D"_blank"><img alt=3D"Learn More" border=3D"0" height=3D=
+"36" src=3D"https://www.stardock.com/media/Mailers/summersale/sum=
+mersale_software_june2024/images/learnmore.jpg" width=3D"126" /><=
+/a></td>=0D=0A											</tr>=0D=0A                             =
+               <tr>=0D=0A                                        =
+        <td align=3D"center">=0D=0A                              =
+                      <div style=3D"font-size:0pt; height:20px li=
+ne-height:0pt;"><img alt=3D"" height=3D"20" src=3D"https://www.st=
+ardock.com/media/Mailers/summersale/summersale_software_june2024/=
+images/empty.gif" style=3D"height:20px" width=3D"1" /></div>=0D=0A=
+                                                </td>=0D=0A      =
+                                      </tr>=0D=0A                =
+                        </table>=0D=0A                           =
+         </td>=0D=0A                                </tr>=0D=0A  =
+                          </table>=0D=0A                        <=
+/td>=0D=0A                    </tr>=0D=0A				</table>=0D=0A      =
+      </td>=0D=0A        </tr>=0D=0A    </table>=0D=0A    <table =
+bgcolor=3D"#fafafa" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" role=3D"presentation" width=3D"100%">=0D=0A        <tr>=0D=0A=
+            <td align=3D"center" valign=3D"top">=0D=0A           =
+     <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"w320" role=3D"presentation" width=3D"600">=0D=0A            =
+        <tr>=0D=0A                        <td align=3D"center">=0D=0A=
+                            <table border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0" role=3D"presentation" width=3D"100%">=0D=0A   =
+                             <tr>=0D=0A                          =
+          <td align=3D"left" class=3D"content-spacing" style=3D"f=
+ont-size:0pt; line-height:0pt; text-align:left" width=3D"23"></td=
+>=0D=0A                                    <td align=3D"center">=0D=0A=
+                                        <div style=3D"font-size:0=
+pt; height:25px line-height:0pt;"><img alt=3D"" height=3D"25" src=
+=3D"https://www.stardock.com/media/Mailers/summersale/summersale_=
+software_june2024/images/empty.gif" style=3D"height:25px" width=3D=
+"1" /></div>=0D=0A                                        <table =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"presenta=
+tion" width=3D"100%">=0D=0A                                      =
+      <tr>=0D=0A                                                <=
+td align=3D"center">=0D=0A                                       =
+             <table border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" role=3D"presentation">=0D=0A                                 =
+                       <tr>=0D=0A                                =
+                            <td align=3D"center" class=3D"img" st=
+yle=3D"font-size:0pt; line-height:0pt; text-align:center" width=3D=
+"50"><a href=3D"https://www.stardock.net/clickemail/t/NDE5NjAtVXF=
+CU2dDdTA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVRKZ0JlTFdORE1YRT1AbWFpbC5z=
+dGFyZG9jay5uZXQ=3D/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL29mZmljaWFsLn=
+N0YXJkb2NrP3V0bV9zb3VyY2U9c29mdHdhcmUtcHJvbW8mdXRtX21lZGl1bT1lbWF=
+pbCZ1dG1fY29udGVudD1mYWNlYm9vayZ1dG1fY2FtcGFpZ249c2RzLXN1bW1lcnNh=
+bGUtanVuZTIwMjQmdXRtX3Rlcm09c2RzLXN1bW1lcnNhbGUtanVuZTIwMjQtNDE5N=
+jA=3D" target=3D"_blank"><img alt=3D"Stardock Facebook" border=3D=
+"0" height=3D"32" src=3D"https://www.stardock.com/media/Mailers/s=
+ummersale/summersale_software_june2024/images/social_fb.jpg" widt=
+h=3D"32" /></a></td>=0D=0A                                       =
+                     <td align=3D"center" class=3D"img" style=3D"=
+font-size:0pt; line-height:0pt; text-align:center" width=3D"50"><=
+a href=3D"https://www.stardock.net/clickemail/t/NDE5NjAtVXFCU2dDd=
+TA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVRKZ0JlTFdORE1YRT1AbWFpbC5zdGFyZG=
+9jay5uZXQ=3D/aHR0cHM6Ly93d3cueW91dHViZS5jb20vdXNlci93aW5kb3dzdGhl=
+bWVzP3V0bV9zb3VyY2U9c29mdHdhcmUtcHJvbW8mdXRtX21lZGl1bT1lbWFpbCZ1d=
+G1fY29udGVudD15b3V0dWJlJnV0bV9jYW1wYWlnbj1zZHMtc3VtbWVyc2FsZS1qdW=
+5lMjAyNCZ1dG1fdGVybT1zZHMtc3VtbWVyc2FsZS1qdW5lMjAyNC00MTk2MA=3D=3D=
+" target=3D"_blank"><img alt=3D"Stardock YouTube" border=3D"0" he=
+ight=3D"32" src=3D"https://www.stardock.com/media/Mailers/summers=
+ale/summersale_software_june2024/images/social_yt.jpg" width=3D"3=
+2" /></a></td>=0D=0A                                             =
+               <td align=3D"center" class=3D"img" style=3D"font-s=
+ize:0pt; line-height:0pt; text-align:center" width=3D"50"><a href=
+=3D"https://www.stardock.net/clickemail/t/NDE5NjAtVXFCU2dDdTA4NFJ=
+BMHFZRkovNXFkUEhORFNtOG4wNVRKZ0JlTFdORE1YRT1AbWFpbC5zdGFyZG9jay5u=
+ZXQ=3D/aHR0cHM6Ly94LmNvbS9zdGFyZG9jaz91dG1fc291cmNlPXNvZnR3YXJlLX=
+Byb21vJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NvbnRlbnQ9eC1saW5rJnV0bV9jYW1=
+wYWlnbj1zZHMtc3VtbWVyc2FsZS1qdW5lMjAyNCZ1dG1fdGVybT1zZHMtc3VtbWVy=
+c2FsZS1qdW5lMjAyNC00MTk2MA=3D=3D" target=3D"_blank"><img alt=3D"S=
+tardock X.com" border=3D"0" height=3D"32" src=3D"https://www.star=
+dock.com/media/Mailers/summersale/summersale_software_june2024/im=
+ages/social_twt.jpg" width=3D"32" /></a></td>=0D=0A														=
+	<td align=3D"center" class=3D"img" style=3D"font-size:0pt; line-=
+height:0pt; text-align:center" width=3D"50"><a href=3D"https://ww=
+w.stardock.net/clickemail/t/NDE5NjAtVXFCU2dDdTA4NFJBMHFZRkovNXFkU=
+EhORFNtOG4wNVRKZ0JlTFdORE1YRT1AbWFpbC5zdGFyZG9jay5uZXQ=3D/aHR0cHM=
+6Ly93d3cuaW5zdGFncmFtLmNvbS9vZmZpY2lhbC5zdGFyZG9jay8-dXRtX3NvdXJj=
+ZT1zb2Z0d2FyZS1wcm9tbyZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jb250ZW50PWluc=
+3RhZ3JhbSZ1dG1fY2FtcGFpZ249c2RzLXN1bW1lcnNhbGUtanVuZTIwMjQmdXRtX3=
+Rlcm09c2RzLXN1bW1lcnNhbGUtanVuZTIwMjQtNDE5NjA=3D" target=3D"_blan=
+k"><img alt=3D"Stardock Instagram" border=3D"0" height=3D"32" src=
+=3D"https://www.stardock.com/media/Mailers/summersale/summersale_=
+software_june2024/images/social_instagram.jpg" width=3D"32" /></a=
+></td>=0D=0A                                                     =
+       <td align=3D"center" class=3D"img" style=3D"font-size:0pt;=
+ line-height:0pt; text-align:center" width=3D"50"><a href=3D"http=
+s://www.stardock.net/clickemail/t/NDE5NjAtVXFCU2dDdTA4NFJBMHFZRko=
+vNXFkUEhORFNtOG4wNVRKZ0JlTFdORE1YRT1AbWFpbC5zdGFyZG9jay5uZXQ=3D/a=
+HR0cHM6Ly93d3cud2luY3VzdG9taXplLmNvbS8-dXRtX3NvdXJjZT1zb2Z0d2FyZS=
+1wcm9tbyZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jb250ZW50PXdpbmN1c3RvbWl6ZSZ=
+1dG1fY2FtcGFpZ249c2RzLXN1bW1lcnNhbGUtanVuZTIwMjQmdXRtX3Rlcm09c2Rz=
+LXN1bW1lcnNhbGUtanVuZTIwMjQtNDE5NjA=3D" target=3D"_blank"><img al=
+t=3D"WinCustomize" border=3D"0" height=3D"32" src=3D"https://www.=
+stardock.com/media/Mailers/summersale/summersale_software_june202=
+4/images/social_wc.jpg" width=3D"32" /></a></td>=0D=0A           =
+                                             </tr>=0D=0A         =
+                                           </table>=0D=0A        =
+                                        </td>=0D=0A              =
+                              </tr>=0D=0A                        =
+                </table>=0D=0A                                   =
+     <div style=3D"font-size:0pt; height:22px line-height:0pt;"><=
+img alt=3D"" src=3D"https://www.stardock.com/media/Mailers/summer=
+sale/summersale_software_june2024/images/empty.gif" height=3D"22"=
+ style=3D"height:22px" width=3D"1" /></div>=0D=0A										<div c=
+lass=3D"text-footer" style=3D"color:#7c7c7c; font-family:Segoe UI=
+, Arial, sans-serif; font-size:10px; line-height:14px; padding-to=
+p: 8px; text-align:left">=0D=0A                                  =
+          Stardock, 15090 Beck Road, Plymouth, MI 48170.=0D=0A   =
+                                         This message was sent to=
+ <a data-replace=3D"true" href=3D"https://www.stardock.net/clicke=
+mail/t/NDE5NjAtVXFCU2dDdTA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVRKZ0JlTF=
+dORE1YRT1AbWFpbC5zdGFyZG9jay5uZXQ=3D/aHR0cHM6Ly93d3cuc3RhcmRvY2su=
+Y29tL2FjY291bnRzL3N1YnNjcmlwdGlvbnM-ZW1haWw9YmxhY2twYXBlcm1vb240M=
+kBnbWFpbC5jb20=3D" style=3D"color: #7c7c7c; text-decoration: none=
+" target=3D"_blank">blackpapermoon42@gmail.com</a>. =0D=0A       =
+                                     Click here to <a data-replac=
+e=3D"true" href=3D"https://www.stardock.net/clickemail/t/NDE5NjAt=
+VXFCU2dDdTA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVRKZ0JlTFdORE1YRT1AbWFpb=
+C5zdGFyZG9jay5uZXQ=3D/aHR0cHM6Ly93d3cuc3RhcmRvY2suY29tL2FjY291bnR=
+zL3Vuc3Vic2NyaWJlLmFzcHg-ZW1haWw9YmxhY2twYXBlcm1vb240MkBnbWFpbC5j=
+b20mbGlzdD0zNSZ1dG1fc291cmNlPXNvZnR3YXJlLXByb21vJnV0bV9tZWRpdW09Z=
+W1haWwmdXRtX2NvbnRlbnQ9dW5zdWJzY3JpYmUmdXRtX2NhbXBhaWduPXNkcy1zdW=
+1tZXJzYWxlLWp1bmUyMDI0JnV0bV90ZXJtPXNkcy1zdW1tZXJzYWxlLWp1bmUyMDI=
+0LTQxOTYw" style=3D"color: #7c7c7c;" target=3D"_blank">unsubscrib=
+e</a>. =0D=0A                                            If you h=
+ave any questions, email <a href=3D"mailto:promotions@stardock.co=
+m?subject=3DStardock%20Summer%20Sale" style=3D"color:#7c7c7c">pro=
+motions@stardock.com</a>. =0D=0A                                 =
+           &copy; 2024=20Stardock. Fences, Groupy, and Multiplici=
+ty are registered trademarks of Stardock. Windows is a registered=
+ trademark of Microsoft Corporation in the U.S. and other countri=
+es. All rights reserved.=0D=0A                                   =
+     </div>=0D=0A										<div class=3D"text-footer" style=3D"co=
+lor:#7c7c7c; font-family:Segoe UI, Arial, sans-serif; font-size:1=
+0px; line-height:14px; padding-top: 8px; text-align:left">*Sale e=
+nds 07.11.2024 at 1 PM ET at 1 PM ET. Prices may vary per distrib=
+utor. Sale not valid for Ashampoo and Enterprise products.</div>=0D=0A=
+                                        <div style=3D"font-size:0=
+pt; height:40px line-height:0pt;"><img alt=3D"" height=3D"40" src=
+=3D"https://www.stardock.com/media/Mailers/summersale/summersale_=
+software_june2024/images/empty.gif" style=3D"height:40px" width=3D=
+"1" /></div>=0D=0A                                    </td>=0D=0A=
+                                    <td align=3D"right" class=3D"=
+content-spacing" style=3D"font-size:0pt; line-height:0pt; text-al=
+ign:left" width=3D"23"></td>=0D=0A                               =
+ </tr>=0D=0A                            </table>=0D=0A           =
+             </td>=0D=0A                    </tr>=0D=0A          =
+      </table>=0D=0A            </td>=0D=0A        </tr>=0D=0A   =
+ </table>=0D=0A    <table cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" class=3D"hide" role=3D"presentation">=0D=0A		<tr>=0D=0A=
+			<td align=3D"center" height=3D"1" class=3D"hide" style=3D"min-=
+width:700px; font-size:0px;line-height:0px;">=0D=0A				<img alt=3D=
+"" height=3D"1" src=3D"https://www.stardock.com/media/Mailers/sum=
+mersale/summersale_software_june2024/images/empty.gif" style=3D"m=
+in-width: 700px; text-decoration: none; border: none; -ms-interpo=
+lation-mode: bicubic;" />=0D=0A			</td>=0D=0A		</tr>=0D=0A	</tabl=
+e>=0D=0A<script src=3D"/media/mailers/common.js"></script>=0D=0A<=
+img height=3D"1" src=3D"https://www.stardock.net/clickemail/i/spa=
+cer.gif?m=3DNDE5NjAtVXFCU2dDdTA4NFJBMHFZRkovNXFkUEhORFNtOG4wNVRKZ=
+0JlTFdORE1YRT1AbWFpbC5zdGFyZG9jay5uZXQ%3d" width=3D"1" /><img hei=
+ght=3D"1" src=3D"https://pixel.app.returnpath.net/pixel.gif?r=3D4=
+fa14369772620a97aa13e3d67fc4b5c3610361e&amp;c=3Dsoftware41960" wi=
+dth=3D"1" /><img height=3D"1" src=3D"https://pixel.monitor1.retur=
+npath.net/pixel.gif?r=3D4fa14369772620a97aa13e3d67fc4b5c3610361e&=
+amp;c=3Dsoftware41960" width=3D"1" /></body>=0D=0A</html>
+----boundary_26488229_39154ffb-9fab-4815-af23-eb5902f5d36c--
+
+

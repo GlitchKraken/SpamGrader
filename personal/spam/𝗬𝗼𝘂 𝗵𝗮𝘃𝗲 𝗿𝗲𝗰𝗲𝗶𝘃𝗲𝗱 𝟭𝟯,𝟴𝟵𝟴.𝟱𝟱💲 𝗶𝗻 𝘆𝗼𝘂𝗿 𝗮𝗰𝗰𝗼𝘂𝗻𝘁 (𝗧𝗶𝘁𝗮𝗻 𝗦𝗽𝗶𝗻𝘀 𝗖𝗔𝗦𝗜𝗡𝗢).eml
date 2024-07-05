@@ -1,0 +1,241 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:6695:b0:1a6:aa79:77cb with SMTP id so21csp630981rwb;
+        Sun, 30 Jun 2024 10:52:17 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGX2kXMa8LewzsB0eARP8H/DWxeyX5UG8AoNHTUphQUcP1p8HDWYe4jSQ8FZqSAMWY97cYE
+X-Received: by 2002:a67:eac3:0:b0:48f:5444:de66 with SMTP id ada2fe7eead31-48faf132d2dmr3687083137.24.1719769937457;
+        Sun, 30 Jun 2024 10:52:17 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719769937; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Q0bTPfutwNDaL8yUltYBnuU9bV7e6jHRc0nXaKdXtzkqeJHC1w/ZpeTZwLuVNrRllr
+         23epmYzkuimAxE9MfOIDir1yBHOOUuro94wAfmFseNgjIzHmnjZHF8bfUOcQrFhi2SLS
+         fyRDrFtgzX1zkgFICzYt8TycGLqp62sYkL1+gZvgwn5CMxu8GWNhZmnrpCmVv5rXt9Lg
+         geD8sgAOAqh/Z7Z8+nVXM222kDYJbXNfAucPPDxXEsu0f4oNfV2Ha8PNuDW2M2O84mPT
+         2X1meai3yMDF6Avv3BfZjNTGWSkO0o+zXarI+V1Aym1H6eQUc7fvxkKCKekwCn+jDgqX
+         WcrQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:message-id:to:from:date:domainkey-signature
+         :dkim-signature;
+        bh=nJMSh1sEECzzEAhZpydwVFSKQP3ALj2hX2xvxUfgpRg=;
+        fh=BfH3tuO4vWcZZHlWy5SVIaCbaMAJl+146y7dupIPkPQ=;
+        b=RtelyxCROIVA8hgxtst3ALq3V5yO2zbJ1dI7JQy5KHuUSxTY2T6Mp2Gb843zxlw2i3
+         RKGD1G1UU5ARxMffbzuCUB1lLek+cbUqZlbyECMndFG1bWcd4PO41Y/38Qrq+/Ybx1oz
+         sq5oRYrOJhw2bZbx/HwaQGsPfYY4jjlLXM5isSugKeIc99rCdDLFHrkS6sW+5FF0fp42
+         Zsl8+ZsoS42b5RgzjBRzCKdIrCSLCzrG7GhM/O5DKWZjEWeWGCB/jTqaOWubyLCT6XVn
+         cy+A3leGI+2woMund26Wnt0rsbyV4ECiWpz5iT7nLlx/+0kmpWXFnTnlrEKBjUriAg/n
+         p7uA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=temperror (no key for signature) header.i=@irqwvzja.us header.s=default header.b=RIU1ylP7;
+       spf=pass (google.com: domain of abuse@fidele.commendarium.com designates 198.46.141.171 as permitted sender) smtp.mailfrom=abuse@fidele.commendarium.com
+Return-Path: <abuse@fidele.commendarium.com>
+Received: from borees.slighteen.club (borees.slighteen.club. [198.46.141.171])
+        by mx.google.com with ESMTPS id af79cd13be357-79d69330d44si688145785a.545.2024.06.30.10.52.17
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 30 Jun 2024 10:52:17 -0700 (PDT)
+Received-SPF: pass (google.com: domain of abuse@fidele.commendarium.com designates 198.46.141.171 as permitted sender) client-ip=198.46.141.171;
+Authentication-Results: mx.google.com;
+       dkim=temperror (no key for signature) header.i=@irqwvzja.us header.s=default header.b=RIU1ylP7;
+       spf=pass (google.com: domain of abuse@fidele.commendarium.com designates 198.46.141.171 as permitted sender) smtp.mailfrom=abuse@fidele.commendarium.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=irqwvzja.us;
+ h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+ i=info.irqwvzja.irqwvzja@irqwvzja.us;
+ bh=nJMSh1sEECzzEAhZpydwVFSKQP3ALj2hX2xvxUfgpRg=;
+ b=RIU1ylP7PCNKgKSzShzIj3c4vtuCibJ1176C8+x/3nyrFzcOdTnDPfsyZlCGkh9ryFXVnJ/uqCDQ
+   JhAvbRx3NP56YX7DxfX8EN+DijdDZUWvm3fXXHUkN6Id5pWdgM83WxQ/z2LiMCyFlYg1d0W5dRo6
+   XyHqkcci4/emYU8t58M=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=default; d=irqwvzja.us;
+ b=isQaqKaNLJG5oUf8VIoc3WhiJF9apAdoeyJ/lGDi2erbdA2BA1RNQGmLufNr4oyx3s68J6VMf6wb
+   WKGLGQpxBeZWKzB3AURffpgoY/0+Af2kCBmoDVmajIsASQfr6OoqJWOcyuupM0iI8W6pAvyQ/pqJ
+   TaAEvaZd1jVzGyr6sYg=;
+Received: from njmta-53.sailthru.com (173.228.155.53) by dailybeast-a.sailthru.com id h1t86m1qqbs3 for <blackpapermoon42@gmail.com>; Sun, 30 Jun 2024 13:52:17 -0400 (envelope-from <delivery@mx.sailthru.com>)
+Date: Sun, 30 Jun 2024 13:52:17 -0400
+From: "'blackpapermoon42'" <info.irqwvzja.irqwvzja@irqwvzja.us>
+To: blackpapermoon42@gmail.com
+Message-ID: <65df7a8d.050a0220.6dfba.bad1smtpin_added_broken@mx.google.com>
+Subject: 𝗬𝗼𝘂 𝗵𝗮𝘃𝗲 𝗿𝗲𝗰𝗲𝗶𝘃𝗲𝗱 𝟭𝟯,𝟴𝟵𝟴.𝟱𝟱💲 𝗶𝗻 𝘆𝗼𝘂𝗿 𝗮𝗰𝗰𝗼𝘂𝗻𝘁 (𝗧𝗶𝘁𝗮𝗻 𝗦𝗽𝗶𝗻𝘀 𝗖𝗔𝗦𝗜𝗡𝗢)
+MIME-Version: 1.0
+Content-Type: multipart/report; boundary="000000000000SGCNuB7Qm6umj710elBSQB"; report-type=delivery-status
+
+--000000000000SGCNuB7Qm6umj710elBSQB
+Content-Type: multipart/related; boundary="000000000000B0MNRUNyYR84HR9a"
+
+--000000000000B0MNRUNyYR84HR9a
+Content-Type: multipart/alternative; boundary="000000000000B0MNRUNyYR84HR9b"
+
+--000000000000B0MNRUNyYR84HR9b
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Top Stories of the Day: Sep 0, 2019
+
+103882302891885308
+-----
+
+If you believe this has been sent to you in error, please safely unsubscrib=
+e
+--000000000000B0MNRUNyYR84HR9b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit+
+
+
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"></head> <body><body class="body" style="padding:0; ">  <DIv align="CenTeR" class="white" style="color:#ffffff; font-size:8px; line-height:0; height:0; width:0; max-height:0; display:none; display:none !important; mso-hide:all;">		 </DIv>  <DIv><DIv class="mktEdiTaBlE">  <TaBlE align="CenTeR" cellpadding="0" cellspacing="0" class="container" style="width:600px; max-width: 1000px;margin:0 auto;"><TbOdY>  <tR><tD align="CenTeR" bgcolor="#EEEEEE" style="background: #fff;" valign="top">  <TaBlE align="CenTeR" border="0" cellpadding="0" cellspacing="0" style="width:100%" width="100%"><TbOdY>  <tR><tD class="mobile10 yahoo_cell" style="mso-line-height-rule:exactly;line-height:25px;height:25px;">						 
+</tD>  
+</tR>
+<tR><tD align="CenTeR" style="font-family: Arial, Helvetica, sans-serif;font-size:15px; -moz-text-size-adjust:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;"><a href="https://t.co/dVg9Lz9Oiv" style="color:#03a52c;" target="_blank">						View details here</a>
+</tD>  
+</tR>
+<tR><tD align="CenTeR" style="font-size:15px; font-family: Open Sans, Helvetica, sans-serif;"><a style="text-decoration: none;" href="https://t.co/dVg9Lz9Oiv">						<b><font color="#000000" size="4">Payment to:</font></b><font color="#03a52c" size="6"> 						blackpapermoon42</font></a><br>	<br />
+</tD>  
+</tR>
+<tR><tD align="CenTeR" style="vertical-align:middle;" valign="middle">  <TaBlE align="CenTeR" cellpadding="0" cellspacing="0" class="box" style="width:100%; max-width: 640px;margin:0 auto; background-color:#fff;"><TbOdY>  <tR><tD align="CenTeR">  <TaBlE align="CenTeR" cellpadding="0" cellspacing="0" class="box" style="width:100%; max-width: 640px;min-width:100%; margin:0 auto;" width="100%"><TbOdY></TbOdY>  </TaBlE>
+</tD>
+</tR>
+</TaBlE>  <TaBlE align="CenTeR" cellpadding="0" cellspacing="0" class="box" style="width:100%; max-width: 640px;min-width:100%; margin:0 auto;" width="100%"><TbOdY>  <tR><tD align="CenTeR" style="font-size:35px; font-family: Georgia, Helvetica, sans-serif;"><br><a href="https://t.co/dVg9Lz9Oiv" style="color:#000000; text-decoration:none" target="_blank">								<font size="7">You have received 								<font color="#0083ff" face="arial">13,898.55$</font> in your 								account (Titan Spins CASINO) </font>  
+</tR>
+<tR><tD style="mso-line-height-rule:exactly;line-height:5px;height:5px;">								 
+</tD>  
+</tR>
+<tR><tD align="CenTeR">  <TaBlE border="0" cellpadding="0" cellspacing="0" style="width:256px;"><TbOdY>  <tR><tD align="CenTeR" style="border-bottom:1px solid #4DB2EC">										 
+</tD>  
+</tR>
+<tR><tD style="mso-line-height-rule:exactly;line-height:17px;height:17px;">									 
+</tD>  
+</tR>
+</TbOdY>  </TaBlE>
+</tD>  
+</tR>
+<tR><tD align="CenTeR" style="font-family: Lato, Helvetica, sans-serif; font-size:17px; -moz-text-size-adjust:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;">								<a href="https://t.co/dVg9Lz9Oiv" style="color:#0083ff; text-decoration:none; font-weight:700" target="_blank">								FIRST PAYMENT IS READY FOR YOUR CONFIRMATION</a>
+</tD>  
+</tR>
+<tR><tD align="left" style="font-family: Lato, Helvetica, sans-serif; font-size:18px; -moz-text-size-adjust:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;"><br>								Thank you for participating in our Titan Spins CASINO								program. we want you to know that your 								bonus is now available and ready to be 								withdrawn.
+</tD>  
+</tR>
+<TaBlE bgcolor="#F7F7F7" cellpadding="0" cellspacing="0" class="purchase-details" style="margin: 0px; padding: 0px; background: #fff; border-collapse: collapse; width: 100%" width="100%"><TbOdY>  <tR><tD style="border-style: solid; border-width: 1px; border-color: rgb(227, 227, 227)">  <TaBlE cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; width: 100%" width="100%"><TbOdY>  <tR class="purchase-details-padding" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px;" valign="middle"><tD colspan="4" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px; font-size: 10px; line-height: 10px" valign="middle">											 
+</tD>  
+</tR>
+<br>  <tR><tD style="border: none; margin: 0px; padding: 0px; width: 3%;" valign="middle" width="3%">											 
+</tD><tD style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;" valign="middle">											• Account Information:
+</tD><tD style="text-align: right; width: 20%; vertical-align: top;font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;color: #03a52c;" valign="middle" width="20%">											#8345
+</tD><tD style="border: none; margin: 0px; padding: 0px; width: 5%;" valign="middle" width="5%">											 
+</tD>  
+</tR>
+<tR class="purchase-details-padding" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px;" valign="middle"><tD colspan="4" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px; font-size: 10px; line-height: 10px" valign="middle">											 
+</tD>  
+</tR>
+</TbOdY>  </TaBlE>
+</tD>  
+</tR>
+<tR><tD style="border-style: solid; border-width: 1px; border-color: rgb(227, 227, 227)">  <TaBlE cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; width: 100%" width="100%"><TbOdY>  <tR class="purchase-details-padding" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px;" valign="middle"><tD colspan="4" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px; font-size: 10px; line-height: 10px" valign="middle">											 
+</tD>  
+</tR>
+<tR><tD style="border: none; margin: 0px; padding: 0px; width: 3%;" valign="middle" width="3%">											 
+</tD><tD style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;;" valign="middle">											 Name :
+</tD><tD style="text-align: right; width: 20%; vertical-align: top; font-family:Circular,Helvetica Neue, Helvetica, Arial, sans-serif;color: #0083ff;" valign="middle" width="20%"><a href="https://t.co/dVg9Lz9Oiv" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;color: #03a52c;">											blackpapermoon42</a>
+</tD><tD style="border: none; margin: 0px; padding: 0px; width: 5%;" valign="middle" width="5%">											 
+</tD>  
+</tR>
+<tR><tD style="border: none; margin: 0px; padding: 0px; width: 3%;" valign="middle" width="3%">											 
+</tD>  <tR><tD style="border: none; margin: 0px; padding: 0px; width: 3%;" valign="middle" width="3%">											 
+</tD><tD style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;;" valign="middle">											• e-mail:
+</tD><tD style="text-align: right; width: 20%; vertical-align: top; font-family:Circular,Helvetica Neue, Helvetica, Arial, sans-serif;color: #03a52c;" valign="middle" width="20%"><a href="https://t.co/dVg9Lz9Oiv" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;color: #03a52c;">											blackpapermoon42@gmail.com</a>
+</tD><tD style="border: none; margin: 0px; padding: 0px; width: 5%;" valign="middle" width="5%">											 
+</tD>  
+</tR>
+<tR><tD style="border: none; margin: 0px; padding: 0px; width: 3%;" valign="middle" width="3%">											 
+</tD><tD style="font-family: Helvetica, Arial, sans-serif; font-size: 17px; font-weight: bold ;" valign="middle"><br>
+</tD><tD style="text-align: right; width: 20%; vertical-align: top; font-family:Circular,Helvetica Neue, Helvetica, Arial, sans-serif;color: #0083ff;" valign="middle" width="20%"><a href="https://t.co/dVg9Lz9Oiv" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;color: #ff9933;"><br></a>
+</tD><tD style="border: none; margin: 0px; padding: 0px; width: 5%;" valign="middle" width="5%">											 
+</tD>  
+</tR>
+<tR class="purchase-details-padding" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px;" valign="middle"><tD colspan="4" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px; font-size: 10px; line-height: 10px" valign="middle">											 
+</tD>  
+</tR>
+</TbOdY>  </TaBlE>
+</tD>  
+</tR>
+<tR><tD style="border-style: solid; border-width: 1px; border-color: rgb(227, 227, 227)">  <TaBlE cellpadding="0" cellspacing="0" style="margin: 0px; padding: 0px; width: 100%" width="100%"><TbOdY>  <tR class="purchase-details-padding" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px;" valign="middle"><tD colspan="4" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px; font-size: 10px; line-height: 10px" valign="middle">											 
+</tD>  
+</tR>
+<tR><tD style="border: none; margin: 0px; padding: 0px; width: 3%;" valign="middle" width="3%">											 
+</tD><tD style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;" valign="middle">											• Your balance:
+</tD><tD style="text-align: right; width: 20%; vertical-align: top; font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold ;color: #ff9933;" valign="middle" width="20%"> 										<a href="https://t.co/dVg9Lz9Oiv" style="color:#03a52c; text-decoration:none" target="_blank"><b>13,898.55$
+</tD><tD style="border: none; margin: 0px; padding: 0px; width: 5%;" valign="middle" width="5%">											 
+</tD>  
+</tR>
+<tR class="purchase-details-padding" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px;" valign="middle"><tD colspan="4" height="10" style="border: none; margin: 0px; padding: 0px; height: 10px; font-size: 10px; line-height: 10px" valign="middle">											 
+</tD>  
+</tR>
+</TbOdY>  </TaBlE>
+</tD>  
+</tR>
+</TbOdY><tR>  <tD style="mso-line-height-rule:exactly;line-height:40px;height:40px;">									 
+</tD>
+</tR>
+<tR>  <tD align="CenTeR"><DIv>  <TaBlE border="0" cellpadding="0" cellspacing="0" class="kmButtonContentContainer" style="border-collapse:separate;mso-TaBlE-lspace:0;mso-TaBlE-rspace:0;TaBlE-layout:fixed;border-top-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px;border-bottom-left-radius:5px;border-radius:5px;" width=""><TbOdY>  <tR><tD align="CenTeR" class="kmButtonContent" style="border-collapse:collapse;mso-TaBlE-lspace:0;mso-TaBlE-rspace:0;TaBlE-layout:fixed;color:white;font-size:16px;color:#FFFFFF;letter-spacing:1px;font-size:14px;font-family:Helvetica Neue, Arial;font-weight:bold;" valign="middle">											<a href="https://t.co/dVg9Lz9Oiv" style="word-wrap:break-word;max-width:100%;font-weight:700;line-height:100%;text-align:CenTeR;text-decoration:underline;color:#0083ff;font-family:" target="_self"> 											<font size="5">Titan Spins CASINO</font></a>
+</tD>  
+</tR>
+</TbOdY>  </TaBlE></DIv>
+</tD>
+</tR>
+<tR>  <tD style="mso-line-height-rule:exactly;line-height:40px;height:42px;">									 
+</tD>
+</tR>
+</TaBlE></TbOdY>  </TaBlE>
+</tD>  
+</tR>
+<tR><tD align="CenTeR">  <TaBlE align="CenTeR" cellpadding="0" cellspacing="0" class="box" style="margin: 0px auto; width: 593px;"><TbOdY><tR><tD align="CenTeR" style="border: 1px solid #0762b9; font-size: 0px; text-align: CenTeR; vertical-align: top;background:#06a5f2;">								<DIv align="CenTeR" class="full" style="display: inline-block; vertical-align: top; width: 326px;height:59px">  <TaBlE border="0" cellpadding="0" cellspacing="0" style="width: 100%px;"><TbOdY><tR><tD style="height: 17px; line-height: 17px;">									 
+</tD>
+</tR>
+<tR><tD align="CenTeR" valign="top">									<TaBlE align="CenTeR" border="0" cellpadding="0" cellspacing="0" style="width: 223px;"><TbOdY>  <tR><tD align="CenTeR" style="width: 17px;"> 
+</tD><tD align="left" style="color: #000001; font-family: Arial, Helvetica, sans-serif; font-size: 18px; text-size-adjust: none;">									<a href="https://t.co/dVg9Lz9Oiv" style="color:#fff; text-decoration:none" target="_blank"><b>									<font size="2">Account expires: 48 hours</font>
+</tD>
+</tR>
+</TbOdY></TaBlE>  
+</tD>
+</tR>
+</TbOdY></TaBlE>  </DIv>  	 <DIv align="CenTeR" class="full" style="display: inline-block; vertical-align: top; width: 306px;height:92px">  <TaBlE border="0" cellpadding="0" cellspacing="0" style="width: 100%px;"><TbOdY><tR><tD style="height: 17px; line-height: 17px;">									 
+</tD>
+</tR>
+<tR><tD>	
+<TaBlE align="CenTeR" border="0" cellpadding="0" cellspacing="0" ><TbOdY>  <tR><tD align="CenTeR"> 
+</tD><tD align="left" class="time" style="color: #000001; font-family: Arial, Helvetica, sans-serif; font-size: 17px; text-size-adjust: none;"><u><a href="https://t.co/dVg9Lz9Oiv" style="color: #000; text-decoration-line: none;" target="_blank"><b>									<font size="5">Confirm Balance Now!</font></b></a></u>
+</tD>
+</tR>
+</TbOdY></TaBlE>  
+</tD>
+</tR>
+<tR><tD style="height: 17px; line-height: 17px;">									 
+</tD>
+</tR>
+</TbOdY></TaBlE> 
+</DIv>
+
+</tD>
+</tR>
+<tR>
+<tD align="CenTeR" style="font-family: Helvetica, Arial, sans-serif; font-size: 15px; font-weight: bold; line-height: 32px; padding: 0px;" valign="top" width="100%"> 
+<span style="color: #FF1F1F; font-size: 17px; line-height: 32px;">  
+<a href="https://t.co/dVg9Lz9Oiv" style="color:#000000; text-decoration:none" target="_blank"><b><u>Note</u> :</span> Hi there, confirmed or your account will be closed within 								48 hours!
+</tD>
+</tR>
+
+</TbOdY></TaBlE><br><br>  
+		<br />
+		If you no longer wish to receive these emails, you may unsubscribe by clicking<a href="https://t.co/559oBj38tz" > here </a>or by writing to 801 US Highway 1, N Palm Beach, FL 33408
+		<br />
+				To be removed from our list simply <a href="https://t.co/559oBj38tz" >click here</a> or write to us at :<br />
+		492 Wakehurst,,Lane Miami Beach,FL,33139<br />
+
+</tD>
+</tR>
+</TbOdY></TaBlE>
+</tD>
+</tR>
+</TbOdY>
+</TaBlE>
+</DIv>
+</DIv> 
+</body>
+</html>
+

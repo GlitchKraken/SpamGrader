@@ -1,0 +1,418 @@
+Delivered-To: chadefry@gmail.com
+Received: by 2002:a05:7000:14f4:b0:577:3b48:a34 with SMTP id a20csp788805mas;
+        Wed, 29 May 2024 13:16:39 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHndOa8s7wx2baCyVvjxS0O4KvgQz4EjjCV6jQ9Q+DrbxMBHH88lEgtmCRW+1rhshePHXtb
+X-Received: by 2002:a05:6870:5593:b0:24f:d753:5c01 with SMTP id 586e51a60fabf-25060af9556mr328683fac.8.1717013799429;
+        Wed, 29 May 2024 13:16:39 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1717013799; cv=none;
+        d=google.com; s=arc-20160816;
+        b=GDjqyTnCAvZW+BnBF+YG28RQRMYuI6qhu8YLTD1vnghGB9Qlu400H0yrDCJHCVFADy
+         0pmnI1jn34u37tcOX+k3gOGtmGdonO/VCzXiMb2Q/v04AFZHwSJt1aq306/OV3PCN1dE
+         d9zfFQc9kUSVdg/UU6/CYxyh5Hd19YlYV7LbfYuadQOGqH3pQKv5SgPLSDrPYweVO5Xp
+         uuAvkiP04XIe/GCdkFs2uqLPKVGUkmNXbwU/d3qtwgvPIK8r39DrUMrF3SlvNZS28lHe
+         9CZWpcUUXKMQ9iGTnIk9dEgkpvKnb0hlWE7yZEO4wLOSpjk0WxoyPAmL6uZOYJYUy6hm
+         vCrg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:mime-version:subject:cc:to:reply-to:from
+         :dkim-signature:feedback-id;
+        bh=H8AI5S0HNfZqeGKAax25d8UapV3jELjUWpb3FOx8HXs=;
+        fh=4QkSyuliflpDxQ1WcSxhHvFINgwb9/7lGYNGqdhESIk=;
+        b=a+bRXf4b8By3ozVPnE8v2118F9zxO2uNfeE88hw3w0Ae7iX9uOAE1CyFJpy37Gh/Kt
+         PdppK8De/JlzGDDHmII3qhtkhkC5F2k4nCSkk2xpqbyd8K/u5HIGyJpnmwdH+070j7Ir
+         xLezO5/1ov5ByeQ0FKKbHyauGn9g59hCk93gg706HTjYWbsLbWTOOwtvAjSU6gg4UVXc
+         o3CS0LIvwaIuzEVsCb5ao1cAuoHlambxQwbb7zkGpyKkzSmt5rPILR4iP+dsum2puiZJ
+         qNwgJctZfhhq0iEIMq5F27GwnqTQ9MJivuYCdLtcIW3whyjfT3ZE5atIgLOqSLAtwm+q
+         lB+A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@rentcafe.com header.s=yardi-asp-dkim2 header.b=LcVXddCZ;
+       spf=pass (google.com: domain of no-reply@rentcafe.com designates 104.156.175.239 as permitted sender) smtp.mailfrom=no-reply@rentcafe.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=rentcafe.com
+Return-Path: <no-reply@rentcafe.com>
+Received: from smtp239us.rentcafe.com (smtp239us.rentcafe.com. [104.156.175.239])
+        by mx.google.com with ESMTPS id 586e51a60fabf-24ca1f51dc1si4727506fac.26.2024.05.29.13.16.39
+        for <chadefry@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 29 May 2024 13:16:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of no-reply@rentcafe.com designates 104.156.175.239 as permitted sender) client-ip=104.156.175.239;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@rentcafe.com header.s=yardi-asp-dkim2 header.b=LcVXddCZ;
+       spf=pass (google.com: domain of no-reply@rentcafe.com designates 104.156.175.239 as permitted sender) smtp.mailfrom=no-reply@rentcafe.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=rentcafe.com
+Feedback-ID: 15583042:84908::R3n7C@f3FI3L
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=rentcafe.com;
+	s=yardi-asp-dkim2; t=1717013799;
+	bh=H8AI5S0HNfZqeGKAax25d8UapV3jELjUWpb3FOx8HXs=;
+	h=From:Reply-To:To:Cc:Subject:Date:From;
+	b=LcVXddCZKA4kDTT6VxJlQA5N9MWBztb6m9RKayxyf8D/W/4YFgaZ7CJiDisnXLx2x
+	 BjE08NSyHQFwVW6Pnw5pt6RYyqVUhm9gP3ZhPKak3RydK2dRkzav5WM+c6SlWtbsl4
+	 9jFEZnZdY5jpKMWgmmUQAgDW856g2EMbbId0hDlrUSd+cS2wHVDIKR1xNXp4SXpThc
+	 oQUAKL+Flj0FkI3KySSL1YonvfU1nRDfdRCvn10DrEGfQTFUV1D9hgHt7tHDNUaKTe
+	 IkBNxcKv1HqgHVjaYzcQers37xqFaa1wJtIMBS8bqllUg4QpR3aGq+s73i1guoGQs/
+	 B6lkRJtSysEEA==
+From: Lexington at Valley Ranch <no-reply@rentcafe.com>
+Reply-To: lexington@tontiproperties.com
+To: chadefry@gmail.com
+Cc: 
+Subject: Storm Debris Cleanup
+MIME-Version: 1.0
+Content-Type: text/html; charset=us-ascii
+Message-Id: <4VqLJ71S91zYtnv5@pca303smtpl155>
+Date: Wed, 29 May 2024 15:16:39 -0500 (CDT)
+X-YWM-PCA303MAIL-ID: 4VqLJ71S91zYtnv5@pca303smtpl155
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <title>RENTCafe Email Template 009</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+ <style type="text/css">
+ html{width:100%;}
+ ::-moz-selection{background:#ffcf65;color:#ffffff;}
+ ::selection{background:#ffcf65;color:#ffffff;}
+ body{margin:0;padding:0; background-color:#ececec;}
+ .ReadMsgBody{width:100%;background-color:#ffffff;}
+ .ExternalClass{width:100%;background-color:#ffffff;}
+ a{color:#ffcf65;text-decoration:none;font-weight:400;font-style:normal;}
+ a:hover{color:#262626;text-decoration:none;font-weight:400;font-style:normal;}
+ p,div{margin:0!important;}
+ table{border-collapse:collapse;}
+ @media only screen and (max-width:640px){
+ body{width:auto!important; background-color:#ececec;}
+ table table{width:100%!important;}
+ td[class=full_width]{width:100%!important;}
+ .reHideMedium { display:none !important;} 
+ .reShowMedium { display:block !important;} 
+ .reCenterMedium { text-align:center !important;}
+ div[class=div_scale]{width:440px!important;margin:0 auto!important;}
+ table[class=table_scale]{width:440px!important;margin:0 auto!important;}
+ td[class=td_scale]{width:440px!important;margin:0 auto!important;}
+ img[class=img_scale]{width:100%!important;height:auto!important;}
+ td[class=spacer]{display:none!important;}
+ td[class=spacer_spec]{display:none!important;}
+ td[class=divider]{width:100%!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=center]{text-align:center!important;}
+ td[class=social_left]{float:left;width:400px;display:block!important;text-align:center!important;padding:20px!important;}
+ td[class=social_right]{float:left;width:400px;display:block!important;text-align:center!important;padding:0 20px 20px!important;}
+ td[class=one_one]{width:440px!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=one_half]{width:440px!important;padding-bottom:0!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=one_half_last]{width:440px!important;margin-top:40px!important;display:block!important;float:left;text-align:inherit!important;padding:0!important;}
+ td[class=one_half_alt_last]{width:440px!important;margin-top:0!important;display:block!important;float:left;text-align:inherit!important;padding:0!important;}
+ td[class=one_third]{width:440px!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=two_third]{width:440px!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=two_third_last]{width:440px!important;margin-top:40px!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=two_third_alt_last]{width:440px!important;margin-top:0!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=one_third_last]{width:440px!important;margin-top:40px!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=one_third_alt_last]{width:440px!important;margin-top:0!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=one_fourth]{width:85px!important;display:block!important;padding-left:20px!important;padding-bottom:0!important;float:left;text-align:inherit!important}
+ td[class=one_fourth_last]{width:85px!important;margin-top:0!important;display:block!important;padding-top:20px!important;padding-left:20px!important;float:left;text-align:inherit!important;}
+ }
+ @media only screen and (max-width:479px){
+ body{width:auto!important; background-color:#ececec;}
+ table table{width:100%!important;}
+ td[class=full_width]{width:100%!important;}
+ .reHideSmall { display:none !important;} 
+ div[class=div_scale]{width:280px!important;margin:0 auto!important;}
+ table[class=table_scale]{width:280px!important;margin:0 auto!important;}
+ td[class=td_scale]{width:280px!important;margin:0 auto!important;}
+ img[class=img_scale]{width:100%!important;height:auto!important;}
+ td[class=spacer]{display:none!important;}
+ td[class=spacer_spec]{display:none!important;}
+ td[class=divider]{width:100%!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=center]{text-align:center!important;}
+ td[class=social_left]{float:left;width:240px;display:block!important;text-align:center!important;padding:20px!important;}
+ td[class=social_right]{float:left;width:240px;display:block!important;text-align:center!important;padding:0 20px 20px!important;}
+ td[class=one_one]{width:280px!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=one_half]{width:280px!important;padding-bottom:0!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=one_half_last]{width:280px!important;margin-top:40px!important;display:block!important;float:left;text-align:inherit!important;padding:0!important;}
+ td[class=one_half_alt_last]{width:280px!important;margin-top:0!important;display:block!important;float:left;text-align:inherit!important;padding:0!important;}
+ td[class=one_third]{width:280px!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=two_third]{width:280px!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=two_third_last]{width:280px!important;margin-top:40px!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=two_third_alt_last]{width:280px!important;margin-top:0!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=one_third_last]{width:280px!important;margin-top:40px!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=one_third_alt_last]{width:280px!important;margin-top:0!important;display:block!important;float:left;text-align:inherit!important;}
+ td[class=one_fourth]{width:110px!important;display:block!important;padding-left:20px!important;padding-bottom:0!important;float:left;text-align:inherit!important;}
+ td[class=one_fourth_last]{width:110px!important;margin-top:0!important;display:block!important;padding-top:20px!important;padding-left:20px!important;float:left;text-align:inherit!important;}
+ }
+ </style>
+ <meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<style type="text/css">
+    :root {
+        Color-scheme: light dark;
+        supported-color-schemes: light dark;
+    }
+
+
+    @media (prefers-color-scheme: dark ) {
+        table {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+        }
+
+        tr {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+        }
+
+        td {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+        }
+    }
+</style></head>
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	<body>
+ 		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ececec" style="padding:0; margin:0;">
+ 			<!-- START VERTICAL SPACER BLOCK-->
+ 			<tr>
+ 				<td class="full_width" align="center" width="100%" bgcolor="#ececec" style="">
+ 					<div class="div_scale" style="width:600px;">
+ 						<table class="table_scale" width="600" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ececec" style="padding:0; margin: 0;">
+ 							<tr>
+ 								<td class="td_scale" width="600" height="20" bgcolor="#ececec" align="center" valign="middle" style="height:20px; padding:0px; font-size:0 ; color:#686868; font-family:Helvetica, Arial, sans-serif; line-height:0;">
+ 									&nbsp;
+ 								</td>
+ 							</tr>
+ 						</table>
+ 					</div>
+ 				</td>
+ 			</tr>
+ 			<!-- END VERTICAL SPACER BLOCK-->
+ 			
+ 			
+ 			
+ 			
+ 			<!-- START HEADER FOR LOGO-->
+ 			<tr>
+ 				<td class="full_width" align="center" width="100%" bgcolor="#ececec" style="">
+ 					<div class="div_scale" style="width:600px;">
+ 						<table class="table_scale" width="600" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ececec" style="padding:0; margin:0;">
+ 							<tr>
+ 								<td class="one_one" align="left" valign="middle" width="600" bgcolor="#ececec" style="padding-top:10px; padding-bottom:10px;">
+ 									<table width="100%">
+ 										<tr>
+ 											<td class="center" align="center" valign="middle" style="font-family:Arial, sans-serif; font-style:normal; color:#e9e9e9; font-size:36px; line-height:18px;">
+ 											<a href='http://www.thelexingtonatvalleyranch.com'><img src='http://www.rentcafe.com/dmslivecafe/3/205971/The%20Lexington.png?width=186&height=58&mode=pad&crop=(22,16,277,109)&cropxunits=300&cropyunits=124' title='' border='0' alt='lexington-at-valley-ranch'  style="background-color:transparent; font-family:'Raleway', Helvetica, Arial, sans-serif; font-size:14px; text-align:left; vertical-align:middle;"/></a>
+ 											</td>
+ 											
+ 										</tr>
+ 									</table>
+ 								</td>
+ 							</tr>
+ 						</table>
+ 					</div>
+ 				</td>
+ 			</tr>
+ 			<!-- END HEADER FOR LOGO-->
+ 			<!-- START VERTICAL SPACER BLOCK-->
+ 			<tr>
+ 				<td class="full_width" align="center" width="100%" bgcolor="#ececec" style="">
+ 					<div class="div_scale" style="width:600px;">
+ 						<table class="table_scale" width="600" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ececec" style="padding:0; margin:0;">
+ 							<tr>
+ 								<td class="td_scale" width="600" height="20" bgcolor="#ececec" align="center" valign="middle" style="height:20px; padding:0px; font-size:0 ; color:#686868; font-family: Helvetica, Arial, sans-serif; line-height: 0;">
+ 									&nbsp;
+ 								</td>
+ 							</tr>
+ 						</table>
+ 					</div>
+ 				</td>
+ 			</tr>
+ 			<!-- END VERTICAL SPACER BLOCK-->
+ 			
+ 			
+ 			
+ 			
+ 			
+ 			<!-- START 1/1 COLUMN-->
+ 			<tr>
+ 				<td class="full_width" align="center" width="100%" bgcolor="#ececec" style="">
+ 					<div class="div_scale" style="width:600px;">
+ 						<table class="table_scale" width="" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" style="padding:0; margin: 0;">
+ 							<tr>
+ 								<td class="full_width" align="left" valign="top" width="600" bgcolor="#FFFFFF" style="border-top:4px solid #1fa9d6; border-bottom:3px solid #ddd;">
+ 									<table width="100%">
+ 										<!-- START IMAGE-->
+ 										<tr>
+ 											<td valign="top" style="padding:0px; font-size:13px; color:#727272; font-family:Helvetica, Arial, sans-serif; line-height:24px; background-color:2A303C;">
+ 												
+ 											</td>
+ 										</tr>
+ 										<!-- END IMAGE-->
+ 										<!-- START TEXT-->
+ 										<tr>
+ 						                    <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif; color:#999999; line-height:24px; font-size:13px; padding:12px 30px 0px 30px;"><p class="dear"><span style="color:#000000;"><span style="font-family:Segoe UI,sans-serif;">Dear Valued Resident,</span></span></p>
+
+<p><span style="color:#000000;"><span style="font-family:Segoe UI,sans-serif;">The strong winds that&nbsp;recently passed through the DFW area made quite a mess around our community!&nbsp; We want to assure you that we are working to have limbs and debris&nbsp;cleaned up over the coming days. Our maintenance and landscape team are coordinating to ensure that the cleanup is completed as quickly and efficiently as possible. In the meantime, we kindly ask that you steer clear of areas with debris or trees with low-hanging limbs for your safety. </span></span></p>
+
+<p><span style="color:#000000;"><span style="font-family:Segoe UI,sans-serif;"><span segoe="" ui="">With more&nbsp;severe weather in the forecast for&nbsp;the coming week, we are watching the weather and readying our team should additional cleanup be required.&nbsp;<br />
+<br />
+We appreciate your patience and understanding during this time. If you have any questions or concerns, please do not hesitate to reach out to us.</span></span></span></p>
+
+<p><span style="color:#000000;"><span style="font-family:Segoe UI,sans-serif;"><span segoe="" ui="">Best regards,</span></span></span></p>
+
+<p><span style="color:#000000;"><span style="font-family:Segoe UI,sans-serif;">Your <span data-selenium-id='PropertyName'>Lexington at Valley Ranch</span> Team</span></span></p></td>
+ 					                     </tr>
+ 										<!-- END TEXT-->
+ 										<tr>
+ 											<td height="40" bgcolor="#FFFFFF" style="padding:0; line-height: 0;">
+ 												&nbsp;
+ 											</td>
+ 										</tr>
+ 									</table>
+ 								</td>
+ 							</tr>
+ 						</table>
+ 					</div>
+ 					
+ 					<!-- VERTICAL SPACER-->
+ 					<div class="div_scale" style="width:600px; display:block;">
+ 						<table class="table_scale" width="600" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ececec" style="padding:0; margin:0;">
+ 							<tr>
+ 								<td class="td_scale" width="600" height="20" bgcolor="#ececec" align="center" valign="middle" style="height:20px; padding:0px; font-size:0 ; color:#686868; font-family:Helvetica, Arial, sans-serif; line-height: 0;">
+ 									&nbsp;
+ 								</td>
+ 							</tr>
+ 						</table>
+ 					</div>
+ 					<!-- END VERTICAL SPACER-->
+ 					
+ 				</td>
+ 			</tr>
+ 			<!-- END 1/1 COLUMN-->
+ 	
+ 	<tr>
+ 		<td class="full_width" style="padding:4px 10px 0px 10px;">
+             <table class="table_scale" width="600" align="center" style="margin:0 auto !important;" cellpadding="0" cellspacing="0">
+				
+				
+				
+	<!-- START 2UP TEXT -->
+	<tr><td height="2" style="line-height:0; font-size:0;">&nbsp;</td></tr>
+				
+				
+	<tr>
+		<td style="padding-bottom:10px;">
+			<table class="flexible" align="left" width="290" cellpadding="0" cellspacing="0" >
+				<tr>
+					<td style="padding-bottom:14px;">
+						<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+							<tr>
+								<td style="padding:24px 20px 20px 30px; border-bottom:3px solid #ddd;">
+									<table width="100%" cellpadding="0" cellspacing="0">
+										<tr>
+											<td align="left" style="font-size:13px; font-family:Helvetica, Arial, sans-serif; color:#999999; padding-bottom:8px;"><b>CONTACT INFO</b></td>
+										</tr>
+										<tr>
+											<td style="font-size:13px; font-family:Helvetica, Arial, sans-serif; color:#524656; padding-bottom:6px; line-height:18px;">
+                                                202 Santa Fe Trail<br>Irving, TX 75063<br>(972) 409-1191
+											</td>
+										</tr>
+										<tr>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<table class="flexible" align="right" width="290" cellpadding="0" cellspacing="0" >
+	<tr>
+		<td style="padding-bottom:6px;">
+			<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+				<tr>
+					<td style="padding:24px 20px 22px 30px; border-bottom:3px solid #ddd;">
+						<table width="100%" cellpadding="0" cellspacing="0">
+							<tr>
+								<td align="left" style="font-size:13px; font-family:Helvetica, Arial, sans-serif; color:#999999; padding-bottom:8px;"><b>OFFICE HOURS</b></td>
+							</tr>
+							<tr>
+								<td style="font-size:13px; font-family:Helvetica, Arial, sans-serif; color:#524656; padding-bottom:6px; line-height:18px;">
+                                    <div><div style='clear:both'><div style='float:left;'>Monday-Friday</div><div style='float:right;'>8:30AM-5:30PM</div></div><div style='clear:both'><div style='float:left;'>Saturday</div><div style='float:right;'>10AM-5PM</div></div><div>&nbsp;</div><div>&nbsp;</div></div><div style='clear:both'></div>
+								</td>
+							</tr>
+							<tr>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+		</td>
+	</tr>
+	<!-- END 2UP TEXT -->
+				
+				
+
+</table>
+ 		</td>
+ 	</tr>
+ 			<!-- START FOOTER AREA-->
+ 			<tr>
+ 				<td class="full_width" align="center" width="100%" bgcolor="#ececec" style="">
+ 					<div class="div_scale" style="width:600px;">
+ 						<table class="table_scale" width="" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ececec" style="padding:0; margin:0;">
+ 							<tr>
+ 								<td class="full_width" align="left" valign="top" width="600" bgcolor="#ececec" style="">
+ 									<table width="100%">
+ 										<tr>
+ 											<td height="30" bgcolor="#ececec" style="padding:0; line-height:0;">
+ 												&nbsp;
+ 											</td>
+ 										</tr>
+ 										<!-- START TEXT-->
+ 										<tr>
+ 											<td align="center" valign="top" style="padding:0px 30px; font-style: italic; font-size:9px; color:#999b9e; font-family:Helvetica, Arial, sans-serif; line-height:16px;">
+ 												THE INFORMATION CONTAINED IN THIS MESSAGE AND ANY ATTACHMENT MAY BE PRIVILEGED, CONFIDENTIAL, PROPRIETARY OR OTHERWISE PROTECTED FROM DISCLOSURE. If the reader of this message is not the intended recipient, you are hereby notified that any dissemination, distribution, copying or use of this message and any attachment is strictly prohibited. If you have received this message in error, please notify the sender and permanently delete it from your computer and destroy any printout thereof.
+ 											</td>
+ 										</tr>
+ 										<!-- END TEXT-->
+ 										<tr>
+ 											<td height="30" bgcolor="#ececec" style="padding:0; line-height: 0;">
+ 												&nbsp;
+ 											</td>
+ 										</tr>
+ 									</table>
+ 								</td>
+ 							</tr>
+ 						</table>
+ 					</div>
+ 				</td>
+ 			</tr>
+ 			<!-- END FOOTER AREA-->
+ 			
+ 			
+ 			
+ 		</table>
+ 	<table align="center">
+	<tr>
+		<td align="center">
+			<table>
+				<tbody>
+					<tr>
+                        <td align="center" bgcolor="#ffffff" colspan="3" style="padding:15px;font: 10px Helvetica,Arial; color: #696969;border-bottom:1px solid #ebebeb;" valign="middle">
+                            <p><span data-selenium-id='PropertyAddress'>202 Santa Fe Trail</span>, <span data-selenium-id='PropertyCity'>Irving</span>, <span data-selenium-id='PropertyState'>TX</span> <span data-selenium-id='PropertyZip'>75063</span></p>
+                        </td>
+                    </tr>
+					<tr>
+						<td align="center" bgcolor="#ffffff" colspan="3" style="padding:15px;font: 10px Helvetica,Arial; color: #696969" valign="middle">
+							<p>This email was sent to chadefry@gmail.com. To ensure you continue receiving our emails, please add us to your address book or safe list. You can opt out of email notifications by <a style="text-decoration:underline;" href="https://www.rentcafe.com/residentservices/lexington-at-valley-ranch/emailnotifications.aspx?eh=Y2hhZGVmcnlAZ21haWwuY29t-jEzBiF%2bk3SE%3d&rType=1&objtype=3&objpointer=205971">clicking here</a>.</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table></body>
+ </html><img width="1" height="1" src="https://www.rentcafe.com/t/teo?ref=NDMzMzMwMjE2MA%3d%3d-YEh3vzgIZWU%3d"/>

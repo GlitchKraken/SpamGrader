@@ -1,0 +1,1511 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6358:9f8f:b0:19c:9809:9239 with SMTP id fy15csp1146856rwb;
+        Fri, 7 Jun 2024 15:20:37 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEnYw8WRA1Yk3k/+hrLy71zc7t590TIKtQFgjxEJAAqQ4Q9+AbKWUvQOv/tTcQKxKPEix8o
+X-Received: by 2002:a05:6214:3913:b0:6b0:58df:cf9d with SMTP id 6a1803df08f44-6b059f2b1damr43282686d6.63.1717798836793;
+        Fri, 07 Jun 2024 15:20:36 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1717798836; cv=none;
+        d=google.com; s=arc-20160816;
+        b=K9Gl5yhqlvWUM0ANdsk40RM8fT3kZm6Lm7W2ak8PdRRz7aXhsdsEbaMpcjLCX2cKb8
+         OoehQpgL/iDLP/HwdacObNdasGJhe/f0KXl7PSgh6LiDt5WZCMAsFQBy1pUi1ugabTVk
+         Dy8vtDdrwVaNX+3Z/6QFvBkLWU+H3dDesUxT+5LTfCUY5acbxIUeWlD4wsspTmfZdnSB
+         WFg736FwgNew8sUp7TzTdxE2V7D7I9snflTNOUOQhWx9jYeop3co8b/zE0mv4HKEJuQM
+         8Yez0FwpOC1rUH7wRpo0BipL/Icpni0Q4q5PVj553MuJ66av4YXhmDBaLYAUQh+4On+R
+         vgYA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:list-unsubscribe:list-unsubscribe-post:reply-to:subject
+         :message-id:mime-version:from:date:dkim-signature:dkim-signature;
+        bh=N34Bb+ooeNr4+1bm48rbSpCW4LGMQoCI9xgjgnlsxsU=;
+        fh=BfH3tuO4vWcZZHlWy5SVIaCbaMAJl+146y7dupIPkPQ=;
+        b=mUWp0e2TwFfWNLkDGIV5VYOPJ2cUQuzpMPDJHzoeRIVs+fJYD5RgCiSzu0MdiDM9S5
+         AD/wV3opJ+C71DWKh4FcESBIPaEWT+R9VqBwS0hc2UnJ8XNM1qW9TOHwpCjulMJQmYfM
+         JPcxCnFHsQTBLMdm69Ikj3x/KeLjxGpFJ4cOKZAkJGru2WQnELAYyDW0Xx3HAHv8tap0
+         73vVYu14z//p2rqUB9yGXRMZzL0kDFNpptid16YtIpKGex+XwZgxcEelCBy3/2k/rvv9
+         mgA4x45TOkD+PLkACdtX7GZyciudC6hMvDl9VvxVKnhSfIwiqj2aHuJwcRQNortBH+Ne
+         wJaQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@magic.wizards.com header.s=s1 header.b=kg00Dh8K;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=cKcfpG7T;
+       spf=pass (google.com: domain of bounces+7144804-2845-blackpapermoon42=gmail.com@mail.magic.wizards.com designates 167.89.5.84 as permitted sender) smtp.mailfrom="bounces+7144804-2845-blackpapermoon42=gmail.com@mail.magic.wizards.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=wizards.com
+Return-Path: <bounces+7144804-2845-blackpapermoon42=gmail.com@mail.magic.wizards.com>
+Received: from o1022.mail.magic.wizards.com (o1022.mail.magic.wizards.com. [167.89.5.84])
+        by mx.google.com with ESMTPS id 6a1803df08f44-6b04f963d58si13913256d6.302.2024.06.07.15.20.36
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 07 Jun 2024 15:20:36 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+7144804-2845-blackpapermoon42=gmail.com@mail.magic.wizards.com designates 167.89.5.84 as permitted sender) client-ip=167.89.5.84;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@magic.wizards.com header.s=s1 header.b=kg00Dh8K;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=cKcfpG7T;
+       spf=pass (google.com: domain of bounces+7144804-2845-blackpapermoon42=gmail.com@mail.magic.wizards.com designates 167.89.5.84 as permitted sender) smtp.mailfrom="bounces+7144804-2845-blackpapermoon42=gmail.com@mail.magic.wizards.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=wizards.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=magic.wizards.com;
+	h=content-type:from:mime-version:subject:reply-to:list-unsubscribe-post:
+	list-unsubscribe:x-feedback-id:to:cc:content-type:from:subject:to;
+	s=s1; bh=N34Bb+ooeNr4+1bm48rbSpCW4LGMQoCI9xgjgnlsxsU=;
+	b=kg00Dh8Kb9/vXeZek6YxLhPrOOBqqRbPSUouZq9DwKTfmYdr98Zwks8fP8CaVuOux9uG
+	8q8KSgjSH8fL0WcQ01jGyXvGSH0yI7McBgoGNnyilippCBlHTHpl/rof3e19oRQjSwpy7q
+	KTxDxTiVCfAtyaGg2VlhSH/ayo1UeVvVc7yRYYeMofFmQX1dNWcsD6VK/MjAfe6b5QpMKg
+	dR8X2Zzf5j23E7DXiDmsxLrPjiY7AzcIKbh9kAl0tgtdpTQK2XZ1IqnM9Q2VAxPrMrYVXb
+	JP5PIuSsJ2OOc4ZP7fe13MvdNJZnPbP8oFvrcMayqc9SvnVYz3GalizC65dkRwDg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:subject:reply-to:list-unsubscribe-post:
+	list-unsubscribe:x-feedback-id:to:cc:content-type:from:subject:to;
+	s=smtpapi; bh=N34Bb+ooeNr4+1bm48rbSpCW4LGMQoCI9xgjgnlsxsU=;
+	b=cKcfpG7TfSyfVXTh9Jkwkcq/UnzWN5Qqs+x0whOuNxTTo8uek9FLDkBYTCA3sS7L3b9r
+	f2d4Nn8b88o+Y1P/1wa1rJXqX+dPqThgQ0g8JUfO6/siZY98an5TLxl4KFvyPWeoxGcU7I
+	EDkk8nZttkxPie3XRjBnVCUwAg/wL8Nd4=
+Received: by filterdrecv-55cbcb4974-h9t2f with SMTP id filterdrecv-55cbcb4974-h9t2f-1-6663849B-6C
+        2024-06-07 22:07:23.842338545 +0000 UTC m=+3367600.705576878
+Received: from NzE0NDgwNA (unknown)
+	by geopod-ismtpd-18 (SG) with HTTP
+	id G3Uzt6t2TQqMiSHIa4--rA
+	Fri, 07 Jun 2024 22:07:23.676 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=c782e8040528adb9eea8b2d7f36b32df16e1a150c470fa6e17c8748de8ea
+Date: Fri, 07 Jun 2024 22:07:23 +0000 (UTC)
+From: MTG Arena <MTGArena@magic.wizards.com>
+Mime-Version: 1.0
+Message-ID: <G3Uzt6t2TQqMiSHIa4--rA@geopod-ismtpd-18>
+Subject: =?UTF-8?B?4o+w?= Modern Horizons 3 Preorder ends soon!
+ =?UTF-8?B?4o+w?=
+Reply-To: customerservice@wizards.com
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2F03=2Eemailinboundprocessing=2Ecom=2Fenc=5Fuser=2Flist=5Funsubscri?=
+ =?us-ascii?Q?be=3Fd=3D%241%24Fsh7irUdUbKzm6%2BmTwXOIQ%3D?=
+ =?us-ascii?Q?%3D%24sD0KWf8mw6Rh8RYZ%2Fp%2Bhg2H1v8Q5o?=
+ =?us-ascii?Q?n75d7Uu57KIO7yLArq1RlnIwm95iYUL%0Avr1kj?=
+ =?us-ascii?Q?pIjvxYNoF4tnktH3R7fCZs8Jeaek%2FBXTg8wP%?=
+ =?us-ascii?Q?2BcTq8%2FuhbWuv3EMr0b4%0A%2BG4pQXvaBS1z?=
+ =?us-ascii?Q?NH7Q8wZPgc2t6C%2Fvv%2BWvrv3UaUzsecQO9uy?=
+ =?us-ascii?Q?woEUZZZ0N%2Byjz%0AxMaSiBZJRrs5Ohh3RdvYW?=
+ =?us-ascii?Q?tLF33GEt9iH%2FW6nN7k3RS9mbtGIdd05KC1zNL?=
+ =?us-ascii?Q?m4%0AKLU%2BOA%2FsGUbad4lNrnKJV9Vgpfo1dU?=
+ =?us-ascii?Q?doqoq9IHs6KsICpBRpwfJhqhRQWTMl%0AeEpR9%?=
+ =?us-ascii?Q?2FUYQfX1DklpkppuECsQ3WswUTlqSmn%2F%2B8P?=
+ =?us-ascii?Q?Mww%3D%3D&1=3D1=3E=2C=3Cmailto=3A4=5Fmklq3501dye777?=
+ =?us-ascii?Q?ll9ru5trmrqzxosjay4qp7s0jaxn885a3x8vv5h?=
+ =?us-ascii?Q?p=40unsubscribe-03=2Eemailinboundprocessing?=
+ =?us-ascii?Q?=2Ecom=3Fsubject=3DUnsubscribe%20pnrcgsqvv3p2?=
+ =?us-ascii?Q?qcic3dfqvcol9lu4j9b2ghx1mytvj3h41v1nwov?=
+ =?us-ascii?Q?cfd&body=3DDO=5FNOT=5FDELETE-v2kcsi4ulri2dyiv?=
+ =?us-ascii?Q?isvjxvcbj6peh7yh1wh76ujr0d6sbevxjf51dy2?=
+ =?us-ascii?Q?mpqxf53ds1qvw4jeiptgnlcdscm09xi7hj3q2r1?=
+ =?us-ascii?Q?-DO=5FNOT=5FDELETE=3E?=
+X-Feedback-ID: 7144804:SG
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EQFYeyo6VVqnKE9nUQVvv96xHEvtyuu=2F1EiCMwjHpBCLw4yqnuhwGPvL+n?=
+ =?us-ascii?Q?MW3IRgJM2e3GArJFlsvlHvg6Y9+7ut02d7gQBgn?=
+ =?us-ascii?Q?hLQUSbNvPIdyIN8H2aaDSYX3a3BJJI1wLoA3iYs?=
+ =?us-ascii?Q?03e2H8FBMVitNkCRgpM6oyf1GcNaX8LyxtXyCiO?=
+ =?us-ascii?Q?HMsmbSkkPCUVq12gE5BMO2B9aR8pT2Qotn+Sy2X?=
+ =?us-ascii?Q?CXd9Y05bndGk9K+Ut6ZuSJZz6nGmEGQCC7Odyko?=
+ =?us-ascii?Q?T0FA46LZmfh2=2F3gRS6hbLWqWlA=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BpTL9BgbK5wfSJMJGMsmprDrjDW6011yC6XOo?=
+ =?us-ascii?Q?3uya5MXlJNOFj1+nlWbxkeg=2FjovpgwTTTH6oBgr?=
+ =?us-ascii?Q?RD0SbDgzCzu6fy4x0PDNU3OR2QefPMITD1lZkvV?=
+ =?us-ascii?Q?laMXP09VVs+aZ1WgDjC56o0boTZRUsUvPscNLgF?=
+ =?us-ascii?Q?47Lsd0D7jd5UlemO4NxkhSr5qCtq3gOnbkEPtK7?=
+ =?us-ascii?Q?p+ocpn06tJZZ2O1NgSwOkFbliNvbzHzSmPkBOmL?=
+ =?us-ascii?Q?ApLZ9rWLagJ6KXlBB3tZ6UU8dS2p=2FZSAB2=2FCfhj?=
+ =?us-ascii?Q?CYLGEmXbPCS3GCN8rqfHiiNL=2FAg2Kj1omjCH3V9?=
+ =?us-ascii?Q?4Pxv1XofkesqwelpJYc9QmQaqh+ZvvcAq0eJlYY?=
+ =?us-ascii?Q?2Ero6=2FIrU4ibsqeNpulXppIVbtLb1BvbFFTGCd+?=
+ =?us-ascii?Q?VEoXreY3B+uRKOMZDT2964atPdXivhUGZPit3MV?=
+ =?us-ascii?Q?u71QWTSXwtQIDu=2Fds5gnH09Vt2yJVRZpFgmHPaf?=
+ =?us-ascii?Q?atAJM=3D?=
+To: blackpapermoon42@gmail.com
+X-Entity-ID: u001.Zqi7tw4KBXGHfAEOpQeo9Q==
+
+--c782e8040528adb9eea8b2d7f36b32df16e1a150c470fa6e17c8748de8ea
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=iso-8859-1
+Mime-Version: 1.0
+
+Get your bundle before it's too late!                 Magic: The
+Gathering Arena (
+http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75fr-=
+2FmQ-2Fn7-2FGRbMm8nBCdrWzmfZHNNseR5DbiW2wotRrUhYzpEQyN9evF-2FHYCakTqrio5qD7=
+FTwwm4jEfzsoQ4KqjOggZHCXp9H3PsDvvRXmiwoItwVRTXXoHubcniWrbiygq225o6xvsiISqe3=
+N7TLtdU-3DuDko_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4=
+pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yO=
+Kb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF=
+19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7V=
+ViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU=
+2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpE=
+dNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLv=
+hqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXWSLGy5Jd8kwSXE=
+6V4IsbuT7QIBMWnk1epDvOSdr8qc-2Fj8NqXngKJfSdV-2FH9NUMWJggoweUkr4UAmNMZuvOT3C=
+mAP2XQodbNo-2FN6ibr-2B7yOG4MD7lebntc2pcrZWN49dvxgFGXb7k7dk9sRWyu50FQs-3D
+)        Preorder Murders at Karlov Manor=20
+( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75f=
+rzajt9QzSUoTlMLdYfPb30Bqq-2FdFctn-2BZsVLmR3ihl0hjFEZqYOxVqXlYxaJEOjd1BI9OYf=
+uk4K-2BCNGNYqB5wNwYwg6Whyr9NFQBukoiHSBT4M2QYEFgh2koVo9Jn6wCqxvRCywprCTGa2yQ=
+IAnvTkvaqulr99w0PsWJjyDd0snIUNazRvtmqW7ws4Av-2BJzQ0bVMwBJnJsyoe-2B8S40R1Uxs=
+DEQVtzyIVDu5oRT3lfMRd9LLxOIun5Kr9IPOVng9Uxa3Zfi5RQoZPn9wcvQ9hEO6Vho-2B-2BmE=
+MpnhbRy0XoHUGw4i0bVAmHs-2BuzHCXjHkZHsf-2BvAIUzXVVTt06-2BJu6cHChnzcfzE4hDICT=
+hhqB0Xq8ilpraP-2BuIPJFgu1LA9HMCoCnagd34JC0b6FSLxLP5pbvOfTCcCm9Hm-2BFzZFpDyU=
+sFyl5v25bUWMOHcsoixi4-2FEdmqpwS-2B130uSNECntp0wN8GfT-2FwCnQdCq-2BEUpwcOHRtT=
+CmxD72joaDyib5To-2FkSUmzmmsv-2BPZMAVbkrl-2F1BhSIgelK8IcrZeEpy4gAGe44oGWbxs3=
+ofNPkw-2BMjJnUNKqOM5DEqSRESEyWuL1Sm3oeTUbIQpoJvWOlwsWIPwKMRYlWYRqY-2FE-2FFB=
+8vMpnHBwy9BzEdO8nZACUu23Uoyd1MJ6Dj9u5Ag1cIaA4JPflUuWT-2BN7OiytmnQqUK8Q-2FGz=
+KlzIK2i0Iyvi9NRkq-2BpEkSTbOc7H63JMNi2hJEoIdaHGHs-2BpHpf8IPoze5l-2FVudDSB7Pf=
+4p-2FYsu5YmR9TdXyXDLYR-2Fo1OPFm7RAuUC0F8KIndnL4f6OfX-2Ff8d9TNtpg9DcE-2BjIXp=
+v0Jqzp5zVdepcy-2FUk-2BVo38KdzCEJG0ta18NzpUgbPxr3sEab5YMnAyf0R1F97jvSjG2Pb8F=
+eSL-2F-2Bik7EXylzukjPb3VjVpNWMinSWjoEwU267jxj2Wiq-2BcaANSRw7BEAQMVDhgLNK5eW=
+VzSvNkjsWf-2FeOrRexQ-2Bdjz5wnbEu4jieq-2BwfbOhbyBVDogeN-2FOjsEr87lJ5P-2BSK7W=
+kCLza9p2qyrY19HTZytsc7r7jqjMcmJVfDsx7G8bCejMtQdoK826ZgPx3u67HpWgHihzjxegqey=
+lBv2BspPpVTFxxkjyg_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1=
+haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2B=
+S6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze=
+1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7=
+FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKo=
+VNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNdu=
+WVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-=
+2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXRGbutPQSKw=
+eLscmbb24T5-2BYcgYoTVxxCVdMHz9pYuIdaHCP5-2BEW8azBQE3H5-2B32oa0c8sk3vFE44DyP=
+h2aYwkuq0H4zjeU-2BPR-2BqrYyB6l3b1zDpwTc8WW2H0fyIgF0WRg9JrFAshIddhaLsxbIQUsc=
+-3D )
+       THE CLOCK IS TICKING      Modern Horizons 3 arrives on
+MTG Arena next week, June 11th! Don't forget to purchase a
+preorder bundle before they're gone to get a head start on the
+next set.        Display images to show real-time content=20
+( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75f=
+r2I4T8gkm3sRdHcbTAnZVvWoXHpamarWVtfSpeBjdL982w0gRppR3xPlnsO59ypYusrZxZ-2Bhv=
+s9QWHuVNpkFAJ0hq4Q1-2B7MlJpk-2FWIC19BGEnfWBhPjjYyVMy24iPsggSXa-2FAf3Nt9KGHF=
+AHJcE-2BOTAWYW2LiiKWQbblqAsbyLH8pF42GVoV-2FGzKNHWv3sYjkwMTTHhGzJ7kb-2Fdu4Ys=
+8B4TU4UEY0tHHS74YnyAtjEgwo7oYyZZ-2BExpYXpsiJ-2BieRA-3D-3Ds9Rt_3bi8RsB8B68kR=
+8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XP=
+L2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcK=
+RuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRA=
+I2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScX=
+BQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-=
+2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh6=
+7E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2=
+FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXcW3D9uZBhaZAVcN6ptRMyJ0XnaM0v-2FzFiMZhSkqp=
+7yoyVnVGKYyfibldToIZavO4JZRGtKXIijfysIRGScTTCoYqJFYFjNPj-2B58vk1gkfgcHlxwPB=
+9o4pt1D3c5yh2pBUbFSZp5tJzeKV1C8T-2Br45s-3D )
+              PREORDER NOW=20
+( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75f=
+rzajt9QzSUoTlMLdYfPb30Bqq-2FdFctn-2BZsVLmR3ihl0hjFEZqYOxVqXlYxaJEOjd1BI9OYf=
+uk4K-2BCNGNYqB5wNwYwg6Whyr9NFQBukoiHSBT4M2QYEFgh2koVo9Jn6wCq8pHBl380d1J-2BZ=
+5rpUq00L3ZO1thMX1STmrQqLYTdyD5fqUFHD7l7asr2CeL02YPedn-2F7ldMrrLxERirSYYlxtX=
+6-2BNTL5yyA1a1xToVxCVRwPa-2FtqS7nzQe63CcwxgYu8k-2B6GOLyB0rHBGgpmGaZMdoVCVzD=
+0iCMMlXXUlTj7OeOhQyTbtbkmm5QHVToLq70VEHpaIc9VN8aQiTKIGFoCmrY-2FgF8gbjNoFZf2=
+nhD3vFQjJF5v7wMrgtFGy7uU3nzBfQF0x0JPPan4Ui0nmgGvwm0LotP4v-2FagPDZMlCbvOPyhd=
+Qx-2BSxqul4nwLD7iLop06RO0GB1mamQhlmc5C4OfILV9JyaDwGS6Cqm66kVag7kdxSqn5E1ccd=
+rley3rQ0DEMsDCUpPmxtgV-2Bst0hAZSSVieQZlIBC13oTxHZlY1phTewbZarQsuUNXlusH7HXq=
+Y-2Fsm6LOMVNfPgjyGQKHVIXruMWAnD8YEnx-2BKBYl7yyT0qUpQsCpApXwPLl-2Bwiz11lbM56=
+DWDcpt917N6cO1m4xAJInwz22THy4TdkhLXey-2BOffjX3CCwvUQBo0y4SAICRx-2BnjlXo7vnS=
+EOhvvsYmikBM5AwRDSA2mfhgmOo3etX5Y8hbQ44M-2Fd4zL0VyNbCYuQLTfI23cWYakMGJytwyf=
+AWBchQcB-2BRxqEQhB223HGxTed4IhGkLnvlaxWrAiRciiCRv1OsglOPkTQBs7lmiJ1-2FywoCQ=
+s63MI3dEwLOL-2FpZiVbEQe9rihWBHaPvlQbQbQhTk1f6b60tUvCXAeztGvOmVf8ZeOIxqHCdFI=
+XQMoF0ClI0ckHaZwGP2-2BGecrC2SrNrHVhVp85sy6ouG4dWTtKNi39K4GhIbCcSoDkqWmi4yNH=
+pYoMk-2B-2FeRO-2Bu98uSwcx1alFHIZ0LPU8UM6Q5n9e1MQVJvFr2Ka-2FMCtCH5vU5N4o5bxF=
+8rlQLi3I7Atyh04Bq5M-2FotaadrxtmLwDVBJ3quRIfZFE5PpFP1gMGbKB3pryzZvSxkkyig-2F=
+f86vcU2zpHScj6BWyZej2ki4H-2BgG4lY-3DhXbI_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i=
+2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKF=
+wDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtw=
+CnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrr=
+oqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7I=
+EusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2=
+B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKg=
+uHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2F=
+rzHuA-2FRffXTqVn4OE92MhmzGmtF5k0K1Xz0AIG9YWOGoClwkMOK6PduIQltc79wIr2T2vXcqk=
+BxHe4cAgUKEMnSJZYHxz-2FJ5sousEiwO5EqUALntTpNXWjSuVJhNvqUmmqWeWlAqHrPnmrz0u4=
+zSTa2YQPpE3jBs-3D )
+                       Preorder Murders at Karlov Manor=20
+( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75f=
+r0FEgttIzQoq8i2P1XCOYZpNa04Z0r6fUxGnLsZEbi4zyWgd5aceTy694eNahjm-2Fag-3D-3DQ=
+gRD_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKs=
+r1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXL=
+XBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQF=
+RTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BO=
+xMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-=
+2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu=
+2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI9=
+6gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXfkU2NK47BTrKYVU1qexl4TqHL=
+SgKGRKWH4dqUgLJ5aQoaWryELCr-2B-2B19M41iy-2FMl-2BxpUMmc-2B7Ei3RtPL2F9L4fKtHR=
+SrthyPR8CqvOKlWNfyrRC0FmLse4guQrdgB16oeP3yfp8GUApUMSiqPt1Od4-3D )       MOD=
+ERN
+HORIZONS 3
+ON MTG ARENA      Watch game and product designers from Wizards
+of the Coast discuss the task of bringing Modern Horizons 3 to
+MTG Arena. Get an inside look at the making of the upcoming set,
+what to expect, and where you can play the latest cards.
+WATCH NOW ( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht=
+2O-2B2D75fr0FEgttIzQoq8i2P1XCOYZp26xIuR3vHY3LLp-2Fm9iaZjnOm-2Fej8B5w5Bs4f-2=
+BcTO-2FFQ-3D-3Dl-Ix_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn=
+1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2=
+BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mz=
+e1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy=
+7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sK=
+oVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNd=
+uWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i=
+-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXdcE5VmlYP=
+QRKLFILYgKEQs4eOok1kDan-2Bi9iiv6xvtY8S1-2F-2FlFfO2AU637BAcrWb5NlsFkyjadN6BO=
+sWX5dXCEF95cfBhJwzWRHI7p9WyByho1nX-2B7-2BAo9mXKu6wdMkepHpOhsj7unFxwNC9Vpv8a=
+A-3D )
+DRAFT ARCHETYPES      Get to know the two-color combos you can
+expect to see in Modern Horizons 3 Limited events!      Modern
+Horizons 3 Draft Archetypes=20
+( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75f=
+r-2FmQ-2Fn7-2FGRbMm8nBCdrWzmfpHCrq-2B18z6eyco1afKSY-2Fl-2FndxDVcSQn-2Fp8rEA=
+lLww-2BdlaPTvopmbcODRrFjPq7lehBU1dVoD-2Fa522WTvXrmZLdjmgnaX9Cdqw3hcCFf3xSJN=
+bWfxIAqllJTuDZkkyeZZ2HKrZXbYqtUC5jMaeqVxmsncmhIqoshP-2F3O0ZvAUjtleMXTPxhAuX=
+VsMLWmWwfs-3Dnxb1_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1h=
+aW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS=
+6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1=
+MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7F=
+K7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoV=
+NSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduW=
+VpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2=
+FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXTjW9IB8qTfY=
+C21yBjAUrq3AHSVROWmt9PFeNufaHxI0RMok8iKyUh03yFpuZWUw-2FVI1QO8QKguuZ4ChjpF2f=
+xobpM2vS4TSi-2FneYZ7uO8gvNT7eYc-2FBR9NpQOrv5YBDP6br-2BhLRzug2UkL393MLYaE-3D=
+ )
+ LEARN MORE=20
+( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75f=
+r-2FmQ-2Fn7-2FGRbMm8nBCdrWzmfpHCrq-2B18z6eyco1afKSY-2Fl-2FndxDVcSQn-2Fp8rEA=
+lLww-2BdlaPTvopmbcODRrFjPq7lehBU1dVoD-2Fa522WTvXrmZLdjmgnaX9Cdqw3hcCFf3xSJN=
+bWfxIAqllJTuDZkkyeZZ2HKrZXbYqtUC5jMaeqVxw75Xj-2FB1U5ScptBos1RlIMSGLop2PDaEd=
+NGD0gA7Gps-3DV31q_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1h=
+aW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS=
+6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1=
+MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7F=
+K7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoV=
+NSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduW=
+VpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2=
+FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXVCbmEom6SBl=
+HkrlycPWfjcQyJiHztX5wUeQy8tj0EDUqrZrdDoplCAwll3cmw4AjwavsXS8MIqJlXgOfMGxwRW=
+lvJyPfREh-2F2y6WtzdTJWmlpgfl-2F-2Bna-2BdcllohA3FEoGfkBW4b1J1rwBovsqTciR8-3D=
+ )
+                          Twitter=20
+( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75f=
+r8NfJMrdXmJjyRTJJJ-2Fy4DmDSqQcPrcp4LJZFvLPv76z6bCQG2kmRDKkK-2FBxnDiueA-3D-3=
+De0hR_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4Qmi=
+Ksr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3X=
+XLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyD=
+QFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2=
+BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWF=
+J-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1r=
+uu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGR=
+I96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXflEeZe2hdpVIvj7YJnERqzn=
+xFQBTLYKbfmoju5L9S-2FdjgX-2FJaUs6nrgyprfjvS5MkiFmC2c2Q9Nyp0HuNrG0e47Ut-2FLJ=
+3j44X6x5b1U29Po0kHkqEE0WdJtbB3DS0OP6IyzQvoWM7RPOKSj3dM6mds-3D )  Instagram=20
+( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75f=
+r9S5Rgua358o-2FwLidk77t7GBrwWTIdYQARp5iTG4acg16xBlKS78nximkabXoTi8ig-3D-3DP=
+yeC_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKs=
+r1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXL=
+XBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQF=
+RTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BO=
+xMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-=
+2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu=
+2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI9=
+6gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXbqabX5-2BIjfuu2JFJCbo-2F1=
+MdxY-2FcAIl6rTmiwZ-2FZahLF5nFv3FDPj67680ujf2-2F66AslMyUypd-2FTbs1oEeEeNCrXg=
+teEF6oe9zPuR-2BaSjnX0fszl0gf-2B0dVcLw9DMgnmZdWEQLseP8cm6ft7G-2BQj05E-3D )  =
+YouTube=20
+( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75f=
+r4R3ns7rWl0XSWmbifYUdOV55DTrLjpP3XCLZLvmZBl7Ija8-2FXfUOJ-2FhjNAhRBRc13oPMYD=
+VOqJ9Kkg-2B-2BNz1SsgOXynlf1u6viTYpl5qw8RGVCXl_3bi8RsB8B68kR8vFY3-2BD03mb3mi=
+e2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpD=
+zAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4W=
+QJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1=
+JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadb=
+vcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF=
+6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGO=
+d9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2F=
+ea-2FrzHuA-2FRffXaivMhCzfHUFaHMOx5D60Y9ZiipNjho9sCcFwqyfpWt5xTtzUH7VMEfxfZ0=
+kPujuhnfP8mKuNx-2B5V7-2Fs2VDPsIO2fQ0O-2FTe9RdVAzw8cYU84VxFfA72TFZqt8jvbydkI=
+Vx7p1kydP9V1v6sJnwrgEsw-3D )
+  TikTok ( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2=
+O-2B2D75fr8wzBZ5T73udVr7ThSqjxzRDnKcbhjKbbAdisSZ1h8MqEKaJcUsQn1Yti0XvttDAAg=
+-3D-3D9RcY_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZ=
+n4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4f=
+XSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tb=
+UwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJm=
+u7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2Gti=
+qmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNus=
+Odm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyi=
+VulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXVYcak7BSdKfTe1KBv1=
+YIjnTtKYyBmro-2BT3iddzi0WsnKSLYwPljo4koLUfglvB6qy7tZqGlCVZI-2Bm92a3DPojqKod=
+vVK-2FT-2BI5rS-2BLnEE0Fh-2F8TViaqudobRTk-2BhDk0Is6ja7SmCq3SPx4VAlE0dEOQ-3D =
+)
+Twitch ( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-=
+2B2D75frxwNxsC48bjgut9ja5XCgPxBF0CV30tneaucRuPoIaBtcaxHVb-2BI-2Bms4a-2BY-2F=
+HjmQGg-3D-3DidEl_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1ha=
+W4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6=
+yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1M=
+XF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK=
+7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVN=
+SU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWV=
+pEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2F=
+LvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXV1Eub4mCI7P7=
+hLh2dx5N1h5S-2BLMhSW8bnNy0BrYD3A1aU9Ofegm1zp1h0mIGv8F9zO2PhEuMrAQebVOyzLp5u=
+gSzeReSOy4CPRfd21OZy9pzFP9cVGmn-2BFIi6IGkhwbaFPo3ihKXj9HeofWBeJPT04-3D )  F=
+acebook
+( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75f=
+r0mC0V0LQImnMXCy4ohF1o-2BFHDhMwIsJ4rni29zYlG7R1ElfGXPVe5dvUpLGZVSIug-3D-3D6=
+m_1_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKs=
+r1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXL=
+XBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQF=
+RTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BO=
+xMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-=
+2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu=
+2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI9=
+6gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXYk7-2BH3Ktb5pTElIeuLMk6Ef=
+MnBEffJYSl5izM03s3Le8E-2BgEsCbMUrGCYtPXkCPEhkuvJMaSqA5BO3KlkAqfomRGlNqbBJBt=
+3HNrEBOxp-2B4w6-2F1RhsP-2FX9I-2BehmRAKrSCDf-2FLIchsm0YdQqjXG2tsk-3D )  Thre=
+ads
+( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75f=
+r2bsu1p6yP8gqOoKm66p09RWB0MacbRMJKKhbVyEvvP561mwk-2Bw9OJ0YK3-2FxnFuVFA-3D-3=
+DCRSK_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4Qmi=
+Ksr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3X=
+XLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyD=
+QFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2=
+BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWF=
+J-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1r=
+uu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGR=
+I96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXbL3qn2HxHEtpag4mMIth2LD=
+VNKHr6xcnmqX1vnKmTura0h7jiou-2BryvXi6Ij4g-2FV3GGsxsm5D3QiIVGjxpo1Iwo-2F1AeN=
+XiDc9op5FfrkHA1xwjrd9vpEUnU3ZFskiLmhmLgHSHYBXGMGg6g43VWBO0-3D )
+Twitter=20
+( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75f=
+r2NuHuGTg2kkHuSsBaWp9TH3Ii1i5ngQKB1QiQ5S-2FHSPu5C3SGxdZtu1v7e9auy8Vbfjqq7GM=
+gG7e99JZP6qwA3qLsT0EQpoZVk6r5fw2IpOPnbNGmVQXz0rpUx2L-2FPpisL4Xv49ff8kuUA7tg=
+xPzpWrdnOZi68pSu3ovtm8IZmB-2FIaj47D7-2FspweBt-2FespIJ3HIIy3K-2BIdNb82lloZ3A=
+kyo-2FvTYcA-2BN6lPVJeyVSCJe3YG2LifesEiCbXCPMsQYPBnhnQKURbiZrS7vNEOCOM6Fz3VH=
+geZ26pHIlOwGt65ldM8X37bRLLmHzD3AyAmMoBtEDAwk3a0-2Bumwxo3hMzi9PwHuIDu35553eJ=
+erJCLNdfSLzHkXXlnQMa1gIZh7HWQzjSksCg1vmF6YD2bHYGpzjeW-2Fxhp1H0Bd-2BJq6zYp6W=
+0hlm_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiK=
+sr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XX=
+LXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQ=
+FRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2B=
+OxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ=
+-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ru=
+u2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI=
+96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXab48aPDIxeZ5Z3e3cCA7U1xn=
+edO8pqwRtiFBMWEY7LH5w5bAuiIdzrJRSHDziZyDosFeaTEJSjpRr3X1PwJAM2DkG-2FHK-2Flg=
+Op8YeVjf721dTY4N-2Bl4VANe1I1sjiJfrD3YC9P-2B-2FVa3StM1MailH2mE-3D )
+  Threads=20
+( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75f=
+r2NuHuGTg2kkHuSsBaWp9TH3Ii1i5ngQKB1QiQ5S-2FHSP33ZdSsUgyuzStUaYDetExSXdwZDzW=
+D2Jnoc09-2Fb2SfJWORUCRrvqqydtbWM5snviCUrZ7tfju7zs1anEPKi5OoxRx-2B7-2Be3SzCE=
+Nm-2BcF-2FzTSMC-2BSv0T-2Fagy61QFJ7lEF4xIkk7-2BpFu6bDPS1KqQRx9pCwsRjjRE-2BeC=
+7NWbHH8PtKBL0VlfIz8r81j-2FYOJWXVQTuQpMuRfAHIxTca4RAY7-2BKJ0PRMMBzDviWRnZByr=
+YHHkX-2F4lDcpwhGlAx9mFB02gvzOn1U0HIC5-2BjKbcUZZ7Q0EA0mr33iB1hL1wcAbRGkpELfv=
+gicF-2FvfY3M9rVeMKPUbuVZwJ1aW09RLQkjQ7EJ4-2F60aa0MeT6h397vwK3ER83Q53-2BqgdO=
+W5eFprEi5W-2FT8K3rVR5q5DX4bb-2FJlzOPKcjB-2BGWafEt-2BFa-2FXvJlTqZXXRZPfyC-2F=
+GXurPUaqHZjPbx2tKDm7QM0-2BBixZMgpZ2Ow-3D-3DUYbt_3bi8RsB8B68kR8vFY3-2BD03mb3=
+mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccr=
+pDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd=
+4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uy=
+s1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifa=
+dbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfR=
+XF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9Qk=
+GOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-=
+2Fea-2FrzHuA-2FRffXW0hChYBS21oSlbaGEVHKda-2FC32-2FV-2F6mc8BeF1ooDLjxadaHLVu=
+juEBxpbL1eZDJjx68jDrh3pUZpXxbBpsPLvcyfMysBfP4oVVdikFRU4SlR-2B8RTGGedTFk1xqA=
+uAs6cvXdHt3huPStTiMn57Uf1E8-3D )
+
+=A91995-2024
+Wizards of the Coast LLC, a subsidiary of Hasbro, Inc. All Rights
+Reserved.
+1107 Lake Washington Boulevard North, Suite 800, Renton,
+Washington 98056
+Terms of Use ( http://links.magic.wizards.com/ls/click?upn=3Du001.ITifDHnbH=
+LYpHJ9UN-2BqTuSk3Q72DBI8eZmHuy298YULXmRk-2BlHF3veYPuoicj3DwqVD5gacYbg0AILSw=
+1wpXXw-3D-3D4xHx_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1ha=
+W4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6=
+yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1M=
+XF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK=
+7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVN=
+SU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWV=
+pEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2F=
+LvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXctBQSFUKHX7N=
+sfJWs-2BmgAyupZEuPsDihW4DB57hlPtLSJbqr0x7owB3wFfSBSHlwKpMCpopVUZeOD-2B-2Fo8=
+FXY1xO4WJEQA9ub4XjhEt9gJd-2BVoydns5mHOpoQaJ-2FTbCraWzYniqUxURbmUZED2mN964-3=
+D ) |
+Privacy Statement=20
+( http://links.magic.wizards.com/ls/click?upn=3Du001.ITifDHnbHLYpHJ9UN-2BqT=
+uSk3Q72DBI8eZmHuy298YUIU9CkRPcDwKa6MGnj1K9b2Up9THrJNdxH7xJRpSOLVh4PresOrGEf=
+bqYEwhBHBNGA-3DWsJz_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn=
+1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2=
+BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mz=
+e1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy=
+7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sK=
+oVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNd=
+uWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i=
+-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXexdk1DT4o=
+b6XqEORr4whKm0cZDA5-2FFoO88dIvWoxDkVWC6jNbD7zx-2FeaLGM2-2FW6A6WxQnCCwh-2FTX=
+Su2v8WDBZgzu3CrWCngygEvq4E-2FwvjZvlJbBePVr7JEhScBXysFbi3ctV8sDJMxASdVKojCuL=
+M-3D )
+| Unsubscribe ( http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw=
+47Ht2O-2B2D75frzg7CZZNhT4vbCTaFzJRcVg-2Fh-2Fn4BQbstGhyqVHqBPBQOprsCidV-2FKF=
+04gqzYhXPO5Q-2FEoqpcIgcwKZu-2FFcA1X9Fl-2FQ0MAlNbMTeuAYkzD0NGeBPkgpNKXj8pHx1=
+TVrHUI15cFmdRHETIXAwafmHHAQhTgG2rJxB19RjZDHifzJRY04w82mi3wCvpdVZo-2BgOR89Dd=
+thVq0lsj-2FGOIIAzWl7mfjhJ1pL-2FvwZ76DCaOHqp88qrNOkDEo0l0F1k-2BlO4chz-2BVCVK=
+nzWd-2BgD7zaq6CGxmZHDjhGj-2BEgNiA5Tlpc-2BF5A-2BXMolsux9wQhnlGq85oyeSmg5E6nO=
+xiv3ghrevSnf2rs5ICNSMoh7gdc4V3On6VjdshhGBlgYH6q-2FkWWceqYhnJccreceeMzNpbgxP=
+nd97WC2WasS0lpBVsxzcjPLtktLICsWl5f2pWOauOCOCCQSHqlAMObezyhga5jr0B5DrifnEUul=
+nOG1jmNwHxae-2FOTLsBO5sOXr-2FFoaTlZo18lv-2Bt3XvFzk3W1xggMK491kropYe366LYSjo=
+ZcynHdOUAftMXYzO-2BxBEGH9rjRl6XjMUJQutogOlQwDoPGQacQDeMktiSLvTjiIIo27W-2FHK=
+9dDfC_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4Qmi=
+Ksr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3X=
+XLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyD=
+QFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2=
+BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWF=
+J-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1r=
+uu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGR=
+I96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXfYB7G48lyrSu6PaEvGZS1Jb=
+cTUkaaka9WH1HhPkdhmCUrXToEqhibtn9zEy3b9QDHJxhBs6nTaTWbZfs3JrGK7JkOJtlqYWbwt=
+S2e7ymko0oU0FZXPOWzpw-2BVgKJ-2FbUenioiqVLbI99Dy4RTH4a-2FcA-3D )
+
+--c782e8040528adb9eea8b2d7f36b32df16e1a150c470fa6e17c8748de8ea
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=iso-8859-1
+Mime-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<head>
+	<!--[if gte mso 9]><xml>
+	<o:OfficeDocumentSettings>
+	<o:AllowPNG/>
+	<o:PixelsPerInch>96</o:PixelsPerInch>
+	</o:OfficeDocumentSettings>
+	</xml><![endif]-->
+	<meta http-equiv=3D"Content-type" content=3D"text/html; charset=3Dutf-8">
+	<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1=
+, maximum-scale=3D1">
+	<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+	<meta name=3D"format-detection" content=3D"date=3Dno">
+	<meta name=3D"format-detection" content=3D"address=3Dno">
+	<meta name=3D"format-detection" content=3D"telephone=3Dno">
+	<meta name=3D"x-apple-disable-message-reformatting">
+	<!--[if !mso]><!-->
+	=09
+		<link rel=3D"preconnect" href=3D"https://fonts.googleapis.com">
+		<link rel=3D"preconnect" href=3D"https://fonts.gstatic.com" crossorigin=
+=3D"">
+		=20
+	=09
+	<!--<![endif]-->
+	<title></title>
+
+
+=09
+<style>@font-face {
+font-family: 'Open Sans'; font-style: normal; font-weight: 400; font-stretc=
+h: normal; src: url('https://fonts.gstatic.com/s/opensans/v40/memSYaGs126Mi=
+ZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVc.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Alegreya'; font-style: normal; font-weight: 700; font-display=
+: swap; src: url('https://fonts.gstatic.com/s/alegreya/v35/4UacrEBBsBhlBjvf=
+kQjt71kZfyBzPgNGERII_A.ttf') format('truetype');
+}
+body {
+padding: 0 !important; margin: 0 !important; display: block !important; min=
+-width: 100% !important; width: 100% !important; background: #202529; -webk=
+it-text-size-adjust: none;
+}
+a:visited {
+text-decoration: none; color: #ffffff;
+}
+a:active {
+text-decoration: none; color: #ffffff;
+}
+a:hover {
+text-decoration: underline; color: #ffffff;
+}
+@media only screen and (max-device-width: 480px) {
+  .mobile-br-5 {
+    height: 5px !important;
+  }
+  .mobile-br-10 {
+    height: 10px !important;
+  }
+  .mobile-br-15 {
+    height: 15px !important;
+  }
+  .mobile-br-20 {
+    height: 20px !important;
+  }
+  .mobile-br-25 {
+    height: 25px !important;
+  }
+  .mobile-br-30 {
+    height: 30px !important;
+  }
+  .m-td {
+    display: none !important; width: 0 !important; height: 0 !important; fo=
+nt-size: 0 !important; line-height: 0 !important; min-height: 0 !important;
+  }
+  .hide-for-mobile {
+    display: none !important; width: 0 !important; height: 0 !important; fo=
+nt-size: 0 !important; line-height: 0 !important; min-height: 0 !important;
+  }
+  .mobile-block {
+    display: block !important;
+  }
+  .img-m-center {
+    text-align: center !important;
+  }
+  .fluid-img img {
+    width: 100% !important; max-width: 100% !important; height: auto !impor=
+tant;
+  }
+  .mobile-shell {
+    width: 100% !important; min-width: 100% !important;
+  }
+  .td {
+    width: 100% !important; min-width: 100% !important;
+  }
+  .center {
+    margin: 0 auto;
+  }
+  .left {
+    margin-right: auto;
+  }
+  .column {
+    float: left !important; width: 100% !important; display: block !importa=
+nt;
+  }
+  .column-top {
+    float: left !important; width: 100% !important; display: block !importa=
+nt;
+  }
+  .column-dir {
+    float: left !important; width: 100% !important; display: block !importa=
+nt;
+  }
+  .column-bottom {
+    float: left !important; width: 100% !important; display: block !importa=
+nt;
+  }
+  .content-spacing {
+    width: 15px !important;
+  }
+  .w-auto {
+    width: auto !important;
+  }
+  .w-full {
+    width: 100% !important;
+  }
+  .h-auto {
+    height: auto !important;
+  }
+  .ptb-20 {
+    padding: 20px 0 !important;
+  }
+  .pt-20 {
+    padding-top: 20px !important;
+  }
+  .pt-10 {
+    padding-top: 10px !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .mobile-br-5 {
+    height: 5px !important;
+  }
+  .mobile-br-10 {
+    height: 10px !important;
+  }
+  .mobile-br-15 {
+    height: 15px !important;
+  }
+  .mobile-br-20 {
+    height: 20px !important;
+  }
+  .mobile-br-25 {
+    height: 25px !important;
+  }
+  .mobile-br-30 {
+    height: 30px !important;
+  }
+  .m-td {
+    display: none !important; width: 0 !important; height: 0 !important; fo=
+nt-size: 0 !important; line-height: 0 !important; min-height: 0 !important;
+  }
+  .hide-for-mobile {
+    display: none !important; width: 0 !important; height: 0 !important; fo=
+nt-size: 0 !important; line-height: 0 !important; min-height: 0 !important;
+  }
+  .mobile-block {
+    display: block !important;
+  }
+  .img-m-center {
+    text-align: center !important;
+  }
+  .fluid-img img {
+    width: 100% !important; max-width: 100% !important; height: auto !impor=
+tant;
+  }
+  .mobile-shell {
+    width: 100% !important; min-width: 100% !important;
+  }
+  .td {
+    width: 100% !important; min-width: 100% !important;
+  }
+  .center {
+    margin: 0 auto;
+  }
+  .left {
+    margin-right: auto;
+  }
+  .column {
+    float: left !important; width: 100% !important; display: block !importa=
+nt;
+  }
+  .column-top {
+    float: left !important; width: 100% !important; display: block !importa=
+nt;
+  }
+  .column-dir {
+    float: left !important; width: 100% !important; display: block !importa=
+nt;
+  }
+  .column-bottom {
+    float: left !important; width: 100% !important; display: block !importa=
+nt;
+  }
+  .content-spacing {
+    width: 15px !important;
+  }
+  .w-auto {
+    width: auto !important;
+  }
+  .w-full {
+    width: 100% !important;
+  }
+  .h-auto {
+    height: auto !important;
+  }
+  .ptb-20 {
+    padding: 20px 0 !important;
+  }
+  .pt-20 {
+    padding-top: 20px !important;
+  }
+  .pt-10 {
+    padding-top: 10px !important;
+  }
+}
+</style>
+</head>
+<body class=3D"body" style=3D"display: block !important; min-width: 100% !i=
+mportant; width: 100% !important; -webkit-text-size-adjust: none; margin: 0=
+; padding: 0;" bgcolor=3D"#202529">
+<div style=3D"display:none !important;visibility:hidden;mso-hide:all;font-s=
+ize:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:=
+0;overflow:hidden;">Get your bundle before it's too late!</div>
+	<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgc=
+olor=3D"#202529">
+		<tr>
+			<td align=3D"center" valign=3D"top">
+				<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+bgcolor=3D"#16181B">
+					<tr>
+						<td align=3D"center" valign=3D"top">
+							<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" class=3D"mobile-shell" bgcolor=3D"#000000">
+								<tr>
+									<td class=3D"td" style=3D"font-size: 0pt; line-height: 0pt; font-w=
+eight: normal; width: 600px; min-width: 600px; margin: 0; padding: 0;" widt=
+h=3D"600">
+							<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" class=3D"mobile-shell" bgcolor=3D"#000000">
+								<tr>
+									<td class=3D"td" style=3D"font-size: 0pt; line-height: 0pt; font-w=
+eight: normal; width: 600px; min-width: 600px; margin: 0; padding: 0;" widt=
+h=3D"600">
+								=09
+<!-- Arena Header -->								=09
+
+							<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" bgcolor=3D"#000000">
+								<tr bgcolor=3D"#000000">
+									<td bgcolor=3D"#000000" width=3D"100%" style=3D"padding: 0px;" ali=
+gn=3D"center">
+										<div class=3D"fluid-img"><a href=3D"http://links.magic.wizards.co=
+m/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75fr-2FmQ-2Fn7-2FGRbMm8nBCdrWzmfZH=
+NNseR5DbiW2wotRrUhYzpEQyN9evF-2FHYCakTqrio5qD7FTwwm4jEfzsoQ4KqjOggZHCXp9H3P=
+sDvvRXmiwoItwVRTXXoHubcniWrbiygq225o6xvsiISqe3N7TLtdU-3DLs59_3bi8RsB8B68kR8=
+vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL=
+2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKR=
+uPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI=
+2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXB=
+Q0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2=
+FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67=
+E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2F=
+LO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXZPkC96fpTVNWkgxIx2lEFH4OI-2BhkEs2vbQUXGg8JE=
+M-2BwBklwqOiHgxWznimefRWuyBgoC-2BkB-2Bof-2Fej0n2tXIO5Jb17vvJsfkwedDp9vAmDBE=
+njdwhTEPK70qa1U9Iy3CSrt5JIR2kfE6eyTewevVuI-3D" target=3D"_blank" style=3D"c=
+olor: #000000; text-decoration: none;" title=3D"Magic: The Gathering Arena"=
+><img src=3D"https://braze-images.com/appboy/communication/assets/image_ass=
+ets/images/664cb9e26fb2990059e3e19e/original.png?1716304353" border=3D"0" w=
+idth=3D"600" alt=3D"Magic: The Gathering Arena"></a></div>=20
+									</td>
+								</tr>
+							</table>
+						=09
+
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgco=
+lor=3D"#000000">
+
+
+
+
+
+	<!-- MKM Hero Image -->											=09
+
+											<tr>
+												<td>
+													<div class=3D"fluid-img" style=3D"padding: 0px;" align:=3D""><=
+center><a href=3D"http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfX=
+Qw47Ht2O-2B2D75frzajt9QzSUoTlMLdYfPb30Bqq-2FdFctn-2BZsVLmR3ihl0hjFEZqYOxVqX=
+lYxaJEOjd1BI9OYfuk4K-2BCNGNYqB5wNwYwg6Whyr9NFQBukoiHSBT4M2QYEFgh2koVo9Jn6wC=
+qxvRCywprCTGa2yQIAnvTkvaqulr99w0PsWJjyDd0snIUNazRvtmqW7ws4Av-2BJzQ0bVMwBJnJ=
+syoe-2B8S40R1UxsDEQVtzyIVDu5oRT3lfMRd9LLxOIun5Kr9IPOVng9Uxa3Zfi5RQoZPn9wcvQ=
+9hEO6Vho-2B-2BmEMpnhbRy0XoHUGw4i0bVAmHs-2BuzHCXjHkZHsf-2BvAIUzXVVTt06-2BJu6=
+cHChnzcfzE4hDICThhqB0Xq8ilpraP-2BuIPJFgu1LA9HMCoCnagd34JC0b6FSLxLP5pbvOfTCc=
+Cm9Hm-2BFzZFpDyUsFyl5v25bUWMOHcsoixi4-2FEdmqpwS-2B130uSNECntp0wN8GfT-2FwCnQ=
+dCq-2BEUpwcOHRtTCmxD72joaDyib5To-2FkSUmzmmsv-2BPZMAVbkrl-2F1BhSIgelK8IcrZeE=
+py4gAGe44oGWbxs3ofNPkw-2BMjJnUNKqOM5DEqSRESEyWuL1Sm3oeTUbIQpoJvWOlwsWIPwKMR=
+YlWYRqY-2FE-2FFB8vMpnHBwy9BzEdO8nZACUu23Uoyd1MJ6Dj9u5Ag1cIaA4JPflUuWT-2BN7O=
+iytmnQqUK8Q-2FGzKlzIK2i0Iyvi9NRkq-2BpEkSTbOc7H63JMNi2hJEoIdaHGHs-2BpHpf8IPo=
+ze5l-2FVudDSB7Pf4p-2FYsu5YmR9TdXyXDLYR-2Fo1OPFm7RAuUC0F8KIndnL4f6OfX-2Ff8d9=
+TNtpg9DcE-2BjIXpv0Jqzp5zVdepcy-2FUk-2BVo38KdzCEJG0ta18NzpUgbPxr3sEab5YMnAyf=
+0R1F97jvSjG2Pb8FeSL-2F-2Bik7EXylzukjPb3VjVpNWMinSWjoEwU267jxj2Wiq-2BcaANSRw=
+7BEAQMVDhgLNK5eWVzSvNkjsWf-2FeOrRexQ-2Bdjz5wnbEu4jieq-2BwfbOhbyBVDogeN-2FOj=
+sEr87lJ5P-2BSK7WkCLza9p2qyrY19HTZytsc7r7jqjMcmJVfDsx7G8bCejMtQdoK826ZgPx3u6=
+7HpWgHihzjxegqeylBv2BspPpVTFxx7sCC_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8=
+b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2=
+BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk=
+6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyR=
+SgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAo=
+C3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPP=
+O50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFI=
+lO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-=
+2FRffXQRzGKZbE9Q6oByt-2Be44C-2BsGePs-2Fm-2FxI8npoxPXrC5XGjG6SGU7SrN-2BJV1Zl=
+1IM7jC85ptp0ZIs4EuCebD6IVWn7x9DLqXDvBIaWGzzwryHlWKb635u30SnCgNGD3YP-2FjRJ2v=
+M0EtDMjPrsxcJSxCqw-3D" title=3D"Preorder Murders at Karlov Manor" target=3D=
+"_blank" style=3D"text-decoration: none; color: #ffffff;"><img src=3D"https=
+://braze-images.com/appboy/communication/assets/image_assets/images/6661f4b=
+ce36a60005972e0c9/original.png?1717695675" border=3D"0" width=3D"600" alt=
+=3D"Preorder Murders at Karlov Manor"></a></center></div> =20
+												</td>
+											</tr>
+										=09
+		</table>								=09
+=09
+		<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bg=
+color=3D"#000000">
+												<tr>
+							<td style=3D"padding: 0px 20px;">
+													<div style=3D"color: #85B9CE; font-family: 'Open Sans', sans-s=
+erif; font-size: 34px; line-height: 40px;" align=3D"center"><b>THE CLOCK IS=
+ TICKING</b></div>
+						</td>
+						</tr>	=09
+	=09
+<!-- MKM Hero Body Copy -->
+											<tr>
+												<td style=3D"padding: 10px 35px;">
+													<div style=3D"color: #ffffff; font-family: 'Open Sans', sans-s=
+erif; font-size: 18px; line-height: 23px;" align=3D"center">Modern Horizons=
+ 3 arrives on <i>MTG Arena</i> next week, June 11<sup>th</sup>! Don't forge=
+t to purchase a preorder bundle before they're gone to get a head start on =
+the next set.
+													</div>
+												</td>
+											</tr>
+					</table>	=09
+				=09
+		<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bg=
+color=3D"#000000">
+														<tr>
+							<td style=3D"padding: 0px 0px 20px;">
+<a href=3D"http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2=
+O-2B2D75fr2I4T8gkm3sRdHcbTAnZVvWoXHpamarWVtfSpeBjdL982w0gRppR3xPlnsO59ypYus=
+rZxZ-2Bhvs9QWHuVNpkFAJ0hq4Q1-2B7MlJpk-2FWIC19BGEnfWBhPjjYyVMy24iPsggSXa-2FA=
+f3Nt9KGHFAHJcE-2BOTAWYW2LiiKWQbblqAsbyLH8pF42GVoV-2FGzKNHWv3sYjkwMTTHhGzJ7k=
+b-2Fdu4Ys8B4TU4UEY0tHHS74YnyAtjEgwo7oYyZZ-2BExpYXpsiJ-2BieRA-3D-3DbZG0_3bi8=
+RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC=
+2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL=
+-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIy=
+GUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldV=
+UeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2B=
+eTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd=
+6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1=
+eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXRm33qAYk66nXHdTHzxPUe3l99CjOUOj8O=
+ywz5voz3S0QPmrbimWuSv8-2FlP5-2BJOo4F0-2FDSOd1-2B7a2dHqZDdZ8CpOQVj9qrsMbjyhB=
+bU-2BA31IhOW6LWddsq-2BpfTInRMUMoApzXFo0t5kmGbD37kGl73c-3D" style=3D"display=
+: block; text-decoration: none; color: #ffffff;"><img alt=3D"Display images=
+ to show real-time content" style=3D"display: block; border-width: 0;" bord=
+er=3D"0" src=3D"https://movableink.wizards.com/p/rp/1b6f684718dac9a1.png?mi=
+_u=3D5bb4184ef7750de612c2df56"></a>
+
+		</td>
+</tr>
+</table>
+
+				=09
+<!-- MKM Hero Button -->
+<center>
+<table width=3D"225" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" bgcolor=3D"#000000">
+														<tr>
+															<td style=3D"border-radius: 50px;" bgcolor=3D"#B52c86">
+																<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+																	<tr>
+																		<td class=3D"img" style=3D"font-size: 0pt; line-height: 0=
+pt;" width=3D"10" align=3D"left"></td>
+																		<td style=3D"padding: 10px 0;">
+																			<div class=3D"text-btn" style=3D"color: #000000; font-fa=
+mily: 'Open Sans Bold', sans-serif; font-size: 20px; line-height: 25px;" al=
+ign=3D"center">
+<a href=3D"http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2=
+O-2B2D75frzajt9QzSUoTlMLdYfPb30Bqq-2FdFctn-2BZsVLmR3ihl0hjFEZqYOxVqXlYxaJEO=
+jd1BI9OYfuk4K-2BCNGNYqB5wNwYwg6Whyr9NFQBukoiHSBT4M2QYEFgh2koVo9Jn6wCq8pHBl3=
+80d1J-2BZ5rpUq00L3ZO1thMX1STmrQqLYTdyD5fqUFHD7l7asr2CeL02YPedn-2F7ldMrrLxER=
+irSYYlxtX6-2BNTL5yyA1a1xToVxCVRwPa-2FtqS7nzQe63CcwxgYu8k-2B6GOLyB0rHBGgpmGa=
+ZMdoVCVzD0iCMMlXXUlTj7OeOhQyTbtbkmm5QHVToLq70VEHpaIc9VN8aQiTKIGFoCmrY-2FgF8=
+gbjNoFZf2nhD3vFQjJF5v7wMrgtFGy7uU3nzBfQF0x0JPPan4Ui0nmgGvwm0LotP4v-2FagPDZM=
+lCbvOPyhdQx-2BSxqul4nwLD7iLop06RO0GB1mamQhlmc5C4OfILV9JyaDwGS6Cqm66kVag7kdx=
+Sqn5E1ccdrley3rQ0DEMsDCUpPmxtgV-2Bst0hAZSSVieQZlIBC13oTxHZlY1phTewbZarQsuUN=
+XlusH7HXqY-2Fsm6LOMVNfPgjyGQKHVIXruMWAnD8YEnx-2BKBYl7yyT0qUpQsCpApXwPLl-2Bw=
+iz11lbM56DWDcpt917N6cO1m4xAJInwz22THy4TdkhLXey-2BOffjX3CCwvUQBo0y4SAICRx-2B=
+njlXo7vnSEOhvvsYmikBM5AwRDSA2mfhgmOo3etX5Y8hbQ44M-2Fd4zL0VyNbCYuQLTfI23cWYa=
+kMGJytwyfAWBchQcB-2BRxqEQhB223HGxTed4IhGkLnvlaxWrAiRciiCRv1OsglOPkTQBs7lmiJ=
+1-2FywoCQs63MI3dEwLOL-2FpZiVbEQe9rihWBHaPvlQbQbQhTk1f6b60tUvCXAeztGvOmVf8Ze=
+OIxqHCdFIXQMoF0ClI0ckHaZwGP2-2BGecrC2SrNrHVhVp85sy6ouG4dWTtKNi39K4GhIbCcSoD=
+kqWmi4yNHpYoMk-2B-2FeRO-2Bu98uSwcx1alFHIZ0LPU8UM6Q5n9e1MQVJvFr2Ka-2FMCtCH5v=
+U5N4o5bxF8rlQLi3I7Atyh04Bq5M-2FotaadrxtmLwDVBJ3quRIfZFE5PpFP1gMGbKB3pryzZvS=
+xkkyig-2Ff86vcU2zpHScj6BWyZej2ki4H-2BgG4lY-3Dt5e7_3bi8RsB8B68kR8vFY3-2BD03m=
+b3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkc=
+crpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTf=
+Vd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3=
+Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETi=
+fadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVR=
+fRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9=
+QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCA=
+e-2Fea-2FrzHuA-2FRffXaH6SLbd-2FB88c1tScV-2B18apJjaYLaktHIY-2FI7qW9WOrYubzXb=
+0HR-2BkyL5bOyFoXZn8CZz5D0fprsmYExhpoqn0KaUgfUgjVeClfFKVkoCKYCrckOCH8hbdriHq=
+lgheCHb5WbMVaM87JC3LWkAngpEgo-3D" title=3D"LEARN MORE" target=3D"_blank" st=
+yle=3D"text-decoration: none; color: #ffffff;"><b>PREORDER NOW</b></a>
+																			</div>
+																		</td>
+																		<td class=3D"img" style=3D"font-size: 0pt; line-height: 0=
+pt;" width=3D"10" align=3D"left"></td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+													</center>
+													<!-- END Button -->
+
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgco=
+lor=3D"#000000">
+
+<!-- Divider -->=09
+		=09
+	<tr>
+												<td style=3D"padding: 0px;">
+													<div class=3D"fluid-img"><img src=3D"https://braze-images.com/=
+appboy/communication/assets/image_assets/images/664cbb3a0e9e82005800537e/or=
+iginal.png?1716304697" border=3D"0" width=3D"600"></div> =20
+												</td>
+											</tr>
+		</table>								=09
+=09
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgco=
+lor=3D"#000000">
+
+
+
+
+
+	<!-- MKM Hero Image -->											=09
+
+											<tr>
+												<td>
+													<div class=3D"fluid-img" style=3D"padding: 0px;" align:=3D""><=
+center><a href=3D"http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfX=
+Qw47Ht2O-2B2D75fr0FEgttIzQoq8i2P1XCOYZpNa04Z0r6fUxGnLsZEbi4zyWgd5aceTy694eN=
+ahjm-2Fag-3D-3DU-xS_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn=
+1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2=
+BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mz=
+e1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy=
+7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sK=
+oVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNd=
+uWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i=
+-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXQ5Ugw9nf-=
+2FaDDhlZM-2B7etF0c8lgXM57KqTvkRvEp3dfZmfRAj24KRfWV8qvd3wymn0X8mufJW-2FGjshD=
+mMpc-2BEZ-2FOr1O6cJXlJg9c5KGqypgleecvldjgAOKeqdPEOs4HwvHxr-2BCS1uLIOIw98kZK=
+Ito-3D" title=3D"Preorder Murders at Karlov Manor" target=3D"_blank" style=
+=3D"text-decoration: none; color: #ffffff;"><img src=3D"https://braze-image=
+s.com/appboy/communication/assets/image_assets/images/66622fd59ec82f0058b07=
+c2e/original.png?1717710804" border=3D"0" width=3D"600" alt=3D"Preorder Mur=
+ders at Karlov Manor"></a></center></div> =20
+												</td>
+											</tr>
+										=09
+		</table>								=09
+=09
+		<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bg=
+color=3D"#000000">
+												<tr>
+							<td style=3D"padding: 0px 20px;">
+													<div style=3D"color: #85B9CE; font-family: 'Open Sans', sans-s=
+erif; font-size: 34px; line-height: 40px;" align=3D"center"><b>MODERN HORIZ=
+ONS 3<br>ON <i>MTG ARENA</i></b></div>
+						</td>
+						</tr>	=09
+	=09
+<!-- MKM Hero Body Copy -->
+											<tr>
+												<td style=3D"padding: 10px 35px 20px;">
+													<div style=3D"color: #ffffff; font-family: 'Open Sans', sans-s=
+erif; font-size: 18px; line-height: 23px;" align=3D"center">Watch game and =
+product designers from Wizards of the Coast discuss the task of bringing Mo=
+dern Horizons 3 to <i>MTG Arena</i>. Get an inside look at the making of th=
+e upcoming set, what to expect, and where you can play the latest cards.
+													</div>
+												</td>
+											</tr>
+					</table>	=09
+
+				=09
+<!-- MKM Hero Button -->
+<center>
+<table width=3D"225" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" bgcolor=3D"#000000">
+														<tr>
+															<td style=3D"border-radius: 50px;" bgcolor=3D"#B52c86">
+																<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+																	<tr>
+																		<td class=3D"img" style=3D"font-size: 0pt; line-height: 0=
+pt;" width=3D"10" align=3D"left"></td>
+																		<td style=3D"padding: 10px 0;">
+																			<div class=3D"text-btn" style=3D"color: #000000; font-fa=
+mily: 'Open Sans Bold', sans-serif; font-size: 20px; line-height: 25px;" al=
+ign=3D"center">
+<a href=3D"http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2=
+O-2B2D75fr0FEgttIzQoq8i2P1XCOYZp26xIuR3vHY3LLp-2Fm9iaZjnOm-2Fej8B5w5Bs4f-2B=
+cTO-2FFQ-3D-3DUcmi_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1=
+haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2B=
+S6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze=
+1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7=
+FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKo=
+VNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNdu=
+WVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-=
+2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXW0csnhd0Yi=
+HLlIuPlfJejbab4ldXo-2FpqlHAayBklV7yjNM-2F3cHMw0vRhcn-2F6-2FngzDy7yVg1PogT3w=
+tbZmIPElGEbsVdzoTxblLpwmQKDqcbbGhXt9CryWUBGr5RxeMdYIVPM91nT20SCiCIqQTg-2FmQ=
+-3D" title=3D"WATCH NOW" target=3D"_blank" style=3D"text-decoration: none; =
+color: #ffffff;"><b>WATCH NOW</b></a>
+																			</div>
+																		</td>
+																		<td class=3D"img" style=3D"font-size: 0pt; line-height: 0=
+pt;" width=3D"10" align=3D"left"></td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+													</center>
+													<!-- END Button -->
+												=09
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgco=
+lor=3D"#000000">
+
+<!-- Divider -->=09
+		=09
+	<tr>
+												<td style=3D"padding: 0px;">
+													<div class=3D"fluid-img"><img src=3D"https://braze-images.com/=
+appboy/communication/assets/image_assets/images/664cbb3a0e9e82005800537e/or=
+iginal.png?1716304697" border=3D"0" width=3D"600"></div> =20
+												</td>
+											</tr>
+
+		</table>								=09
+=09
+		<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bg=
+color=3D"#000000">
+												<tr>
+							<td style=3D"padding: 20px 0px 0px;">
+													<div style=3D"color: #85B9CE; font-family: 'Open Sans', sans-s=
+erif; font-size: 34px; line-height: 40px;" align=3D"center"><b>DRAFT ARCHET=
+YPES</b></div>
+						</td>
+						</tr>	=09
+	=09
+<!-- Previews + Debut Copy -->
+											<tr>
+												<td style=3D"padding: 10px 35px 40px;">
+													<div style=3D"color: #ffffff; font-family: 'Open Sans', sans-s=
+erif; font-size: 18px; line-height: 23px;" align=3D"center">Get to know the=
+ two-color combos you can expect to see in Modern Horizons 3 Limited events=
+!
+										      </div>
+												</td>
+											</tr>
+	<tr>
+												<td>
+													<div class=3D"fluid-img" style=3D"padding: 0px 0px 20px;" alig=
+n:=3D""><center><a href=3D"http://links.magic.wizards.com/ls/click?upn=3Du0=
+01.Da6bfXQw47Ht2O-2B2D75fr-2FmQ-2Fn7-2FGRbMm8nBCdrWzmfpHCrq-2B18z6eyco1afKS=
+Y-2Fl-2FndxDVcSQn-2Fp8rEAlLww-2BdlaPTvopmbcODRrFjPq7lehBU1dVoD-2Fa522WTvXrm=
+ZLdjmgnaX9Cdqw3hcCFf3xSJNbWfxIAqllJTuDZkkyeZZ2HKrZXbYqtUC5jMaeqVxmsncmhIqos=
+hP-2F3O0ZvAUjtleMXTPxhAuXVsMLWmWwfs-3DOmSm_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n=
+1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAl=
+KFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZ=
+twCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMT=
+rroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV=
+7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK=
+-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9r=
+KguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-=
+2FrzHuA-2FRffXaNT0MDe8mH89DEi91CQabyXdYrdOsExnxmd6KkyjPXgRE1QLfN35o-2FTKDne=
+JYOYmD-2BECQuNkImeEdne70A1z1GiqV6vWtOJI-2FLZghtTNNLo9Hq2KmcOka9v8AIVyUL6FOg=
+AYZ51-2FhXuldxo-2FxYpsQE-3D" title=3D"Modern Horizons 3 Draft Archetypes" t=
+arget=3D"_blank" style=3D"text-decoration: none; color: #ffffff;"><img src=
+=3D"http://media.wizards.com/2024/email/MTG/MH3/Prerelease/Archetypes-EN.pn=
+g" border=3D"0" width=3D"550" alt=3D"Modern Horizons 3 Draft Archetypes"></=
+a></center></div> =20
+												</td>
+											</tr>
+										=09
+		</table>							=09
+					</td>
+</tr>
+</table>								=09
+=09
+<!-- Button -->
+<center>
+<table width=3D"225" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" bgcolor=3D"#000000">
+		<tr>
+			<td style=3D"padding: 0px;">
+			<div style=3D"color: #ffffff; font-family: 'Open Sans', sans-serif; font=
+-size: 18px; line-height: 23px;" align=3D"center">&nbsp;</div>
+			</td>
+			</tr>
+														<tr>
+															<td style=3D"border-radius: 50px;" bgcolor=3D"#B52c86">
+																<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+																	<tr>
+																		<td class=3D"img" style=3D"font-size: 0pt; line-height: 0=
+pt;" width=3D"10" align=3D"left"></td>
+																		<td style=3D"padding: 10px 0;">
+																			<div class=3D"text-btn" style=3D"color: #000000; font-fa=
+mily: 'Open Sans Bold', sans-serif; font-size: 20px; line-height: 25px;" al=
+ign=3D"center">
+<a href=3D"http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2=
+O-2B2D75fr-2FmQ-2Fn7-2FGRbMm8nBCdrWzmfpHCrq-2B18z6eyco1afKSY-2Fl-2FndxDVcSQ=
+n-2Fp8rEAlLww-2BdlaPTvopmbcODRrFjPq7lehBU1dVoD-2Fa522WTvXrmZLdjmgnaX9Cdqw3h=
+cCFf3xSJNbWfxIAqllJTuDZkkyeZZ2HKrZXbYqtUC5jMaeqVxw75Xj-2FB1U5ScptBos1RlIMSG=
+Lop2PDaEdNGD0gA7Gps-3DjAjc_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBis=
+OwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGS=
+LBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7F=
+v7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6ru=
+bM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5l=
+I38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVO=
+mnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1Y=
+rBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXfp=
+6nD50PTFunEcUui5g1szPicT5PUsxhMzKHl56qtIlJuvNAPNn1vvgBurQRFSLGp9bcTCkT3XUn6=
+fdX0UcBsjGk1tPDzS1B8mJfRY1rYT4H3-2BtM5pc8We1knagxYm5sYwbMEza8oflmNtaUUyBh8Q=
+-3D" title=3D"WATCH NOW" target=3D"_blank" style=3D"text-decoration: none; =
+color: #ffffff;"><b>LEARN MORE</b></a>
+																			</div>
+																		</td>
+																		<td class=3D"img" style=3D"font-size: 0pt; line-height: 0=
+pt;" width=3D"10" align=3D"left"></td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+													</center>
+													<!-- END Button -->
+
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgco=
+lor=3D"#000000">			=09
+
+				<!-- FOOTER IMAGE -->
+											<tr>
+												<td style=3D"padding: 40px 0px 20px;">
+													<div class=3D"fluid-img"><img src=3D"https://braze-images.com/=
+appboy/communication/assets/image_assets/images/664cba052e4d7f005a8a2d58/or=
+iginal.png?1716304388" border=3D"0" width=3D"600"></div> =20
+												</td>
+											</tr>
+											=09
+										=09
+										</table>
+									=09
+			=09
+<!-- Magic / 5 social icons -->								=09
+
+
+
+      <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" bgcolor=3D"#000000">
+<tr>
+<td class=3D"pad" style=3D"padding: 15px 0;" align=3D"center"><div class=3D=
+"alignment" align=3D"center">
+<table width=3D"364px" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation">
+=20
+<!-- Twitter -->		    =20
+        <tr>
+<td style=3D"padding: 0 10px;"><a href=3D"http://links.magic.wizards.com/ls=
+/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75fr8NfJMrdXmJjyRTJJJ-2Fy4DmDSqQcPrcp4=
+LJZFvLPv76z6bCQG2kmRDKkK-2FBxnDiueA-3D-3DU_nl_3bi8RsB8B68kR8vFY3-2BD03mb3mi=
+e2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpD=
+zAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4W=
+QJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1=
+JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadb=
+vcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF=
+6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGO=
+d9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2F=
+ea-2FrzHuA-2FRffXWcioneJCcqpNbfgvvMl3HlwyFcICPcAi7Rnm5ko-2FnX3xUUPSlFX0Td8n=
+-2Fr6DF2cNCc3rww12s5sdqnG93FNAngBl-2FC4PqaM-2FPnkR9XfyS4szrxBfObDom5HKv-2Fo=
+kAi9s6eB98ZSQ-2FoATaQr-2BPwjUsA-3D" target=3D"_blank" style=3D"text-decorat=
+ion: none; color: #ffffff;"><img src=3D"https://braze-images.com/appboy/com=
+munication/assets/image_assets/images/664cba9ebd681400641589e9/original.png=
+?1716304541" width=3D"32" alt=3D"Twitter" title=3D"Twitter" style=3D"displa=
+y: block; height: auto; border-width: 0;"></a></td>
+
+<!-- Instagram -->		       =20
+        <td style=3D"padding: 0 10px;"><a href=3D"http://links.magic.wizard=
+s.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75fr9S5Rgua358o-2FwLidk77t7GBr=
+wWTIdYQARp5iTG4acg16xBlKS78nximkabXoTi8ig-3D-3DqDbR_3bi8RsB8B68kR8vFY3-2BD0=
+3mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQ=
+kccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4isc=
+TfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5=
+L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWE=
+TifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYM=
+VRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkr=
+D9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJ=
+CAe-2Fea-2FrzHuA-2FRffXa2peLC1OHM64eZ5fvjG5LLxUWruVbAIQFUTMGmrPM9GjnRxPw0rm=
+7IjO-2FRK1WUpqOm3ADwDoDI7FWYWTLtydkH0oVBPSXuLEmqheg48zGefRFiQPCT5z37wwmi889=
+s-2FDZItQvdetkjvClozOYqU6Fc-3D" target=3D"_blank" style=3D"text-decoration:=
+ none; color: #ffffff;"><img src=3D"https://braze-images.com/appboy/communi=
+cation/assets/image_assets/images/664cba9d47a8b90058226758/original.png?171=
+6304541" width=3D"32" alt=3D"Instagram" title=3D"Instagram" style=3D"displa=
+y: block; height: auto; border-width: 0;"></a></td>
+
+<!-- YouTube -->		       =20
+        <td style=3D"padding: 0 10px;"><a href=3D"http://links.magic.wizard=
+s.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75fr4R3ns7rWl0XSWmbifYUdOV55DT=
+rLjpP3XCLZLvmZBl7Ija8-2FXfUOJ-2FhjNAhRBRc13oPMYDVOqJ9Kkg-2B-2BNz1SsgOXynlf1=
+u6viTYpl5qw8RGfH9Q_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1=
+haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2B=
+S6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze=
+1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7=
+FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKo=
+VNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNdu=
+WVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-=
+2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXSxkpihwwXO=
+1-2BSPtWQAsT-2BBtBG9upNWCBU-2FQj8fVHz6Tn7Wxmrr2q8bA9RespNxjSEN1zWnHJLBqyl7p=
+txbWWoOzWJuCdJMOJKPRJo3pw82AjdqIUcw1rbJV4A3mRDPYh3e77qHu1o-2F-2Fgoyb8j4nqVk=
+-3D" target=3D"_blank" style=3D"text-decoration: none; color: #ffffff;"><im=
+g src=3D"https://braze-images.com/appboy/communication/assets/image_assets/=
+images/664cba9dbe7a8900592a79b9/original.png?1716304541" width=3D"32" alt=
+=3D"YouTube" title=3D"YouTube" style=3D"display: block; height: auto; borde=
+r-width: 0;"></a></td>
+
+<!-- TikTok -->		       =20
+        <td style=3D"padding: 0 10px;"><a href=3D"http://links.magic.wizard=
+s.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75fr8wzBZ5T73udVr7ThSqjxzRDnKc=
+bhjKbbAdisSZ1h8MqEKaJcUsQn1Yti0XvttDAAg-3D-3DbKnP_3bi8RsB8B68kR8vFY3-2BD03m=
+b3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkc=
+crpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTf=
+Vd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3=
+Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETi=
+fadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVR=
+fRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9=
+QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCA=
+e-2Fea-2FrzHuA-2FRffXY4H-2FmlxBPTDZNw0mxXZ-2BWQ7qmy7k1X7p4Svq2qGEqLOi18q5ZL=
+118PTfnV0IaoCSN-2BI0sWwuMRzP1bde7W6vPlLsSLW1dY5LgaZFPvzF9QDMgthhfh3MyZsGkQe=
+h0AgIQAeI2MePHYJwEI8PcfB6OI-3D" target=3D"_blank" style=3D"text-decoration:=
+ none; color: #ffffff;"><img src=3D"https://braze-images.com/appboy/communi=
+cation/assets/image_assets/images/664cba9e84c03700582c4231/original.png?171=
+6304542" width=3D"32" alt=3D"TikTok" title=3D"TikTok" style=3D"display: blo=
+ck; height: auto; border-width: 0;"></a></td>
+
+
+<!-- Twitch -->		       =20
+        <td style=3D"padding: 0 10px;"><a href=3D"http://links.magic.wizard=
+s.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75frxwNxsC48bjgut9ja5XCgPxBF0C=
+V30tneaucRuPoIaBtcaxHVb-2BI-2Bms4a-2BY-2FHjmQGg-3D-3DINvg_3bi8RsB8B68kR8vFY=
+3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hX=
+PTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPC=
+PF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1=
+Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0M=
+G9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCm=
+iWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1Q=
+QhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-=
+2F-2BJCAe-2Fea-2FrzHuA-2FRffXeudOoSg8aaeC6eu37-2FK7xNQxnWJ7n9W3ZJ7354B0Qg7t=
+mt1OSa-2F2Ms1fqJEcjTUsnBCz9807dx81Ew-2Fc5UQzxpzJUTyRQ6C7IaIn0mzDFmKpyQADpRh=
+khHsYXu6ZXnoEbqpzcgrauU6lPXibv99VhQ-3D" target=3D"_blank" style=3D"text-dec=
+oration: none; color: #ffffff;"><img src=3D"https://braze-images.com/appboy=
+/communication/assets/image_assets/images/664cba9ee8e75d00599a0e5f/original=
+.png?1716304541" width=3D"32" alt=3D"Twitch" title=3D"Twitch" style=3D"disp=
+lay: block; height: auto; border-width: 0;"></a></td>
+
+<!-- Facebook -->		       =20
+        <td style=3D"padding: 0 10px;"><a href=3D"http://links.magic.wizard=
+s.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75fr0mC0V0LQImnMXCy4ohF1o-2BFH=
+DhMwIsJ4rni29zYlG7R1ElfGXPVe5dvUpLGZVSIug-3D-3DnZhU_3bi8RsB8B68kR8vFY3-2BD0=
+3mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQ=
+kccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4isc=
+TfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5=
+L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWE=
+TifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYM=
+VRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkr=
+D9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJ=
+CAe-2Fea-2FrzHuA-2FRffXcIK0PfSv4BMotbJevNqA0mepu0lkwNI6FBIjfCZAEPDVStLSTIqB=
+0XyDWBATyz5cYmyNrLDEZV4Kv1EXkoP41lnAm-2FRZYXwQKUOYZmSlWS1BOyhjsWNMiAWT6-2Fz=
+EmnaG38k-2BAzibs7OliOY1DBxs8s-3D" target=3D"_blank" style=3D"text-decoratio=
+n: none; color: #ffffff;"><img src=3D"https://braze-images.com/appboy/commu=
+nication/assets/image_assets/images/664cba9d448883005955d069/original.png?1=
+716304541" width=3D"32" alt=3D"Facebook" title=3D"Facebook" style=3D"displa=
+y: block; height: auto; border-width: 0;"></a></td>
+
+<!-- Threads -->		       =20
+        <td style=3D"padding: 0 10px;"><a href=3D"http://links.magic.wizard=
+s.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75fr2bsu1p6yP8gqOoKm66p09RWB0M=
+acbRMJKKhbVyEvvP561mwk-2Bw9OJ0YK3-2FxnFuVFA-3D-3D4JyR_3bi8RsB8B68kR8vFY3-2B=
+D03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4=
+LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4i=
+scTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1Mv=
+F5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9iv=
+WETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWkl=
+YMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDr=
+krD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2=
+BJCAe-2Fea-2FrzHuA-2FRffXbgV3M-2FnijS2I-2Fgvin8OXsz2XWXG35mQIWGtLQmhgtFgc6u=
+O9B81rb01cEgqvrcRhqt27ajq8ZmXi8a-2BE8RD7Yn5NJTe02hv-2FteXyizpB5rAfPVFTB3hZN=
+esx-2B38mVpJexaKd-2BoShhpG0JKzIWCCoQw-3D" target=3D"_blank" style=3D"text-d=
+ecoration: none; color: #ffffff;"><img src=3D"https://braze-images.com/appb=
+oy/communication/assets/image_assets/images/664cba9dad318700595aa98b/origin=
+al.png?1716304541" width=3D"32" alt=3D"Threads" title=3D"Threads" style=3D"=
+display: block; height: auto; border-width: 0;"></a></td>
+</tr>
+       =20
+
+     =20
+     =20
+     =20
+      </table>
+						=09
+
+<!-- Magic / 5 social icons -->								=09
+
+
+
+      <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" bgcolor=3D"#000000">
+<tr>
+<td class=3D"pad" style=3D"padding: 15px 0;" align=3D"center"><div class=3D=
+"alignment" align=3D"center">
+<table width=3D"295px" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation">
+=20
+<!-- App Store -->		    =20
+        <tr>
+<td style=3D"padding: 10px 10px 0;"><a href=3D"http://links.magic.wizards.c=
+om/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75fr2NuHuGTg2kkHuSsBaWp9TH3Ii1i5n=
+gQKB1QiQ5S-2FHSPu5C3SGxdZtu1v7e9auy8Vbfjqq7GMgG7e99JZP6qwA3qLsT0EQpoZVk6r5f=
+w2IpOPnbNGmVQXz0rpUx2L-2FPpisL4Xv49ff8kuUA7tgxPzpWrdnOZi68pSu3ovtm8IZmB-2FI=
+aj47D7-2FspweBt-2FespIJ3HIIy3K-2BIdNb82lloZ3Akyo-2FvTYcA-2BN6lPVJeyVSCJe3YG=
+2LifesEiCbXCPMsQYPBnhnQKURbiZrS7vNEOCOM6Fz3VHgeZ26pHIlOwGt65ldM8X37bRLLmHzD=
+3AyAmMoBtEDAwk3a0-2Bumwxo3hMzi9PwHuIDu35553eJerJCLNdfSLzHkXXlnQMa1gIZh7HWQz=
+jSksCg1vmF6YD2bHYGpzjeW-2Fxhp1H0Bd-2BJq6zYp6WE68o_3bi8RsB8B68kR8vFY3-2BD03m=
+b3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkc=
+crpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTf=
+Vd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3=
+Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETi=
+fadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVR=
+fRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9=
+QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCA=
+e-2Fea-2FrzHuA-2FRffXUDD6iXZOd3-2FAfRz5M7825k3ian0l6tjwyS482OdUyGHdVI43yIo-=
+2FiUE0XyqqhwcIyfe4Hl96xXcywXihiEfhVKp-2FP49LqbFiiP5dsEtTQV9ZVZwx7GZLYWSklgb=
+DP-2BtfO6A1X-2F9sKe8givpo5IcDXM-3D" target=3D"_blank" style=3D"text-decorat=
+ion: none; color: #ffffff;"><img src=3D"https://braze-images.com/appboy/com=
+munication/assets/image_assets/images/64adbf1707a0b96abf08021c/original.png=
+?1689108247" height=3D"40" alt=3D"Twitter" title=3D"Twitter" style=3D"displ=
+ay: block; height: auto; border-width: 0;"></a></td>
+
+
+
+<!-- Google Play -->		       =20
+        <td style=3D"padding: 10px 10px 0;"><a href=3D"http://links.magic.w=
+izards.com/ls/click?upn=3Du001.Da6bfXQw47Ht2O-2B2D75fr2NuHuGTg2kkHuSsBaWp9T=
+H3Ii1i5ngQKB1QiQ5S-2FHSP33ZdSsUgyuzStUaYDetExSXdwZDzWD2Jnoc09-2Fb2SfJWORUCR=
+rvqqydtbWM5snviCUrZ7tfju7zs1anEPKi5OoxRx-2B7-2Be3SzCENm-2BcF-2FzTSMC-2BSv0T=
+-2Fagy61QFJ7lEF4xIkk7-2BpFu6bDPS1KqQRx9pCwsRjjRE-2BeC7NWbHH8PtKBL0VlfIz8r81=
+j-2FYOJWXVQTuQpMuRfAHIxTca4RAY7-2BKJ0PRMMBzDviWRnZByrYHHkX-2F4lDcpwhGlAx9mF=
+B02gvzOn1U0HIC5-2BjKbcUZZ7Q0EA0mr33iB1hL1wcAbRGkpELfvgicF-2FvfY3M9rVeMKPUbu=
+VZwJ1aW09RLQkjQ7EJ4-2F60aa0MeT6h397vwK3ER83Q53-2BqgdOW5eFprEi5W-2FT8K3rVR5q=
+5DX4bb-2FJlzOPKcjB-2BGWafEt-2BFa-2FXvJlTqZXXRZPfyC-2FGXurPUaqHZjPbx2tKDm7QM=
+0-2BBixZMgpZ2Ow-3D-3DkrS__3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisO=
+wfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSL=
+BJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv=
+7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rub=
+M73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI=
+38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOm=
+nHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1Yr=
+BNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXTvd=
+6xCO2MntJN2-2BdlGgzF0M2m0dNlh96zAN-2FDOFmBNfO2X3qlj0CKl8B7rlKRkh87bkEurCvRm=
+ehId0JK5OUSHitilfazj0GJOfEdWm7870aCjiQ0ChHhHljYu01AF12rY2W6lkaHQS2LMMIOF5mF=
+Y-3D" target=3D"_blank" style=3D"text-decoration: none; color: #ffffff;"><i=
+mg src=3D"https://braze-images.com/appboy/communication/assets/image_assets=
+/images/64adbf172c26660d79ed86ba/original.png?1689108247" height=3D"40" alt=
+=3D"Threads" title=3D"Threads" style=3D"display: block; height: auto; borde=
+r-width: 0;"></a></td>
+</tr>
+     =20
+     =20
+     =20
+      </table>
+
+										<!-- Footer -->
+										                    <!-- Footer -->
+										<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" bgcolor=3D"#000000">
+											<tr>
+												<td class=3D"footer" style=3D"padding-top: 10px;">
+													<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0">
+														<tr>
+															<td style=3D"padding: 10px;">
+															<div class=3D"text-footer" style=3D"color: #6e6e70; font-fam=
+ily: 'Open Sans', sans-serif; font-size: 12px; line-height: 15px;" align=3D=
+"center">=A91995-2024 Wizards of the Coast LLC, a subsidiary of Hasbro, Inc=
+. All Rights Reserved.<br>1107 Lake Washington Boulevard North, Suite 800, =
+Renton, Washington 98056<br><a href=3D"http://links.magic.wizards.com/ls/cl=
+ick?upn=3Du001.ITifDHnbHLYpHJ9UN-2BqTuSk3Q72DBI8eZmHuy298YULXmRk-2BlHF3veYP=
+uoicj3DwqVD5gacYbg0AILSw1wpXXw-3D-3DHVud_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i=
+2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKF=
+wDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtw=
+CnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrr=
+oqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7I=
+EusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2=
+B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKg=
+uHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2F=
+rzHuA-2FRffXa-2BUZP2qV5o-2Fy2P-2BTBoRLhVgLamD5KZIBgxYYOj5HQzU3Ybmz5ZY5L0bVH=
+ZUDmTbRs6SY0GD4z7QxgfPUAucjbq7UqtvBc-2Fso6YR-2BdI4epkFR6xswM2i41JrAyONLAe5D=
+x5mONf2Y8LgP9j1GXXh-2BNk-3D" style=3D"color: #808080 !important; text-: non=
+e; text-decoration: none;">Terms of Use</a> | <a href=3D"http://links.magic=
+.wizards.com/ls/click?upn=3Du001.ITifDHnbHLYpHJ9UN-2BqTuSk3Q72DBI8eZmHuy298=
+YUIU9CkRPcDwKa6MGnj1K9b2Up9THrJNdxH7xJRpSOLVh4PresOrGEfbqYEwhBHBNGA-3DMNqf_=
+3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiKsr1-2=
+FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XXLXBi3=
+xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQFRTUG=
+HkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2BOxMHd=
+sldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ-2FDT=
+8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ruu2osz=
+xlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI96gN3=
+rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXYYBGZSpOuejopyLAdunlNHfouqU1I=
+3p04NdHqny-2BfvoZ7uJOOte9I1Ep12BVziT6o5yj-2BmDcsVQmE5-2BxiWrg9M04MWViN1pjvh=
+SDW84GQZJTUD84aekGi7iN7N2MacEStrGI0WOHK6naQsTpa0uWbQ-3D" style=3D"color: #8=
+08080 !important; text-: none; text-decoration: none;">Privacy Statement</a=
+> | <a href=3D"http://links.magic.wizards.com/ls/click?upn=3Du001.Da6bfXQw4=
+7Ht2O-2B2D75frzg7CZZNhT4vbCTaFzJRcVg-2Fh-2Fn4BQbstGhyqVHqBPBQOprsCidV-2FKF0=
+4gqzYhXPO5Q-2FEoqpcIgcwKZu-2FFcA1X9Fl-2FQ0MAlNbMTeuAYkzD0NGeBPkgpNKXj8pHx1T=
+VrHUI15cFmdRHETIXAwafmHHAQhTgG2rJxB19RjZDHifzJRY04w82mi3wCvpdVZo-2BgOR89Ddt=
+hVq0lsj-2FGOIIAzWl7mfjhJ1pL-2FvwZ76DCaOHqp88qrNOkDEo0l0F1k-2BlO4chz-2BVCVKn=
+zWd-2BgD7zaq6CGxmZHDjhGj-2BEgNiA5Tlpc-2BF5A-2BXMolsux9wQhnlGq85oyeSmg5E6nOx=
+iv3ghrevSnf2rs5ICNSMoh7gdc4V3On6VjdshhGBlgYH6q-2FkWWceqYhnJccreceeMzNpbgxPn=
+d97WC2WasS0lpBVsxzcjPLtktLICsWl5f2pWOauOCOCCQSHqlAMObezyhga5jr0B5DrifnEUuln=
+OG1jmNwHxae-2FOTLsBO5sOXr-2FFoaTlZo18lv-2Bt3XvFzk3W1xggMK491kropYe366LYSjoZ=
+cynHdOUAftMXYzO-2BxBEGH9rjRl6XjMUJQutogOlQwDoPGQacQDeMktiSLvTjiIIo27W-2FHK9=
+JA7D_3bi8RsB8B68kR8vFY3-2BD03mb3mie2n1i2-2Bh8b-2FdBisOwfrdZn1haW4pnCZn4QmiK=
+sr1-2FLGC2hqiwo9XPL2hXPTh4LQkccrpDzAlKFwDw5H2BeShvQGSLBJAx-2BS6yOKb4fXSz3XX=
+LXBi3xliL-2FyiaFcKRuPCPF4iscTfVd4WQJZtwCnGBwk6w5xYO7Fv7mm1mze1MXF19tbUwIyDQ=
+FRTUGHkIyGUj8NTXRAI2Q1Z1MvF5L3Uys1JMTrroqjXyRSgLtk6rubM73eZy7FK7VViJmu7T-2B=
+OxMHdsldVUeTqydScXBQ0MG9ivWETifadbvcV7IEusOAoC3cJ9n5lI38J8sKoVNSU2GtiqmCWFJ=
+-2FDT8-2BeTBs8t8Q-2FCmiWklYMVRfRXF6cK-2B-2FPPO50bBGVOmnHSvNduWVpEdNusOdm1ru=
+u2oszxlmd6hHJXhZh67E1QQhDrkrD9QkGOd9rKguHSKFIlO6jJU1YrBNKt0i-2FLvhqyiVulGRI=
+96gN3rpr1eW4cRhW-2FLO-2F-2BJCAe-2Fea-2FrzHuA-2FRffXYXDPDZZcuwSgTpkUAwE5-2FB=
+LQjj8LdcAV-2FLowqXZ4hvBID7VoM0etpxopnTBYczQHFeMIkj5ocSW1XL-2BC0enMRmnhnEo-2=
+BGyjbgOIk4Z5CnK2iUoIMqIQmg6qoQZVVocpkrLRIlxpyXJW7P9zoRBGnCY-3D" style=3D"co=
+lor: #808080 !important; text-: none; text-decoration: none;">Unsubscribe</=
+a>
+</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+										<!-- END Footer -->
+
+										<!-- END Footer -->
+									</div></td>
+								</tr>
+							</table>
+						</div></td>
+					</tr>
+				</table>
+			=09
+
+			=09
+<table width=3D"1" height=3D"1" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0">
+  <tr><td style=3D"font-size: 0px; line-height: 0px;">
+ =20
+ =20
+ =20
+ =20
+ =20
+ =20
+    <img src=3D"https://movableink.wizards.com/p/cp/301b1c69c1b84f8f/o.gif?=
+mi_u=3D5bb4184ef7750de612c2df56" width=3D"1" height=3D"1" alt=3D"" aria-hid=
+den=3D"true">
+  </td></tr>
+</table>
+
+			</td>
+		</tr>
+	</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<img src=3D"http://links.magic.wizards.com/wf/open?upn=3Du001.haTE2qPloH-2F=
+2ryTwbxPfqbIqbCnaWyLpltjphaskZYMcuhoNMlgAOl5pHzAZlNmfk-2BRndDldiRcbfhE3n6Zq=
+CuLQW4QDHicfldmoSjTQmqrlRcijZxMz10IkIGMy09-2FJMReDOifjPPDgFUS15XE6lgMVxZxlh=
+r-2BAoz2gkOCrsDT31jG9WvwYzPfn2ee1cDz98hwVwd02LZXNmVUJk0w1P8yhzh0xoWnV7N1nk2=
+g5Th55TR-2FkjOKzsl-2FjfFZ6fyvr4Ha2E-2BVUW-2F2bMoHs5HwxA39DdnWn-2FttUls5FBI0=
+MiTR5QJy1NHw6lTq509rVo7Gbw2QheppvaVN0QhfKuSE1hHu-2F93firTfb1hssQ5smalIRBDLf=
+B-2B-2F9jzgfSVWUQhS7DNQqdKzowSEogel-2BvBdsheV0BOycf3NWbrxUAXsTkwv0n6KXS1S1U=
+-2FbhUOwZnt0XEN9581FeO9FkzA2-2BTGyv9Ati3HK2kwCOOGUfoZ3cw2-2BGLcE0d3970cV1ax=
+QAVRFaHG3mNPzshmCPQLo-2FKqDaHtGWFVlhyurtrjN3GqHXyxjL5sGPaN0wxvuLuDGtbL1ks5e=
+JzjuveQ9Pb4F2IhHWtlrgg2zZ0CNolNDMHdl-2BP4WXt6xho8IUPKgsSu9He7rFlqrfrM0Ommzo=
+eQ6INMV4lnY3L-2Bm8cYOEgiyoo6f-2BBcE-3D" alt=3D"" width=3D"1" height=3D"1" b=
+order=3D"0" style=3D"height:1px !important;width:1px !important;border-widt=
+h:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-ri=
+ght:0 !important;margin-left:0 !important;padding-top:0 !important;padding-=
+bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/=
+></body>
+</html>
+
+--c782e8040528adb9eea8b2d7f36b32df16e1a150c470fa6e17c8748de8ea--

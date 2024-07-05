@@ -1,0 +1,742 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:6c97:b0:19f:4fe2:c7ed with SMTP id td23csp439196rwb;
+        Wed, 12 Jun 2024 08:31:21 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCV5xU7HUExzIkm1982Dxf78V4C+Q1mEyJq7pcqqbtvupZ8EK9f/A6d5lr7697NOD0IzOPBF2vtgf2U2RVpf+Lwnc7Vmy8fll7Ka3Q==
+X-Google-Smtp-Source: AGHT+IEEu+cfcv68z7MMZnNrkgP3/wwtR7FU9JaKWittbUYSd+LBpcj0WNyjNGCNmpbFW4OTl3Sz
+X-Received: by 2002:a0d:f503:0:b0:618:8b98:f274 with SMTP id 00721157ae682-62fbdba89d1mr18652607b3.45.1718206281382;
+        Wed, 12 Jun 2024 08:31:21 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1718206281; cv=none;
+        d=google.com; s=arc-20160816;
+        b=myE+/SmGg44JekH/oWw8UnNkVYTWzx3z7+dxq0k7RaolGGPkHE2Ygp9F7yZSCMDgxM
+         rPJIoY+/dITExd8IFqKlxFZ/cgqaBul8ObKM8dfKF08xAi4eiW/tZcLe7dA+3w9TgRrG
+         ecCQB8DhkAYSdpai0Cof7taYkXN2euRqo2yBGh21M4cng4TGO1L0V0LqHsUN8hxmaE/H
+         J2TA0dSQoMjZdrTpy5vw/wD0BUg4y8vmMPARTZXk2yjRR3q9R3vrTQcGCwZIpoSu5zDo
+         vb20wav53Uc/BYQF6HuVpUAT+S5+NgZLQdslyX4FTaMcVOqyuYAWOdkdBlvPfGK6lLLt
+         Lh3w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=dff:to:list-unsubscribe-post:message-id:references:reply-to:date:cc
+         :mime-version:list-unsubscribe:subject:from:domainkey-signature
+         :dkim-signature;
+        bh=Y5ZO+Ax3XOhkEzW9N+9GC95H3DaRsyRpw1OGOJgr4Bo=;
+        fh=78YMHx3Fgurh6XACQTnICvbj1Mqb0FIBeG2C0vdGgSc=;
+        b=LlKOa2yPuoDdI9tUGKHb85ePU03SVstNSYfHnUtpLv67JWyg2t+H8wLPFqdqP7g4i8
+         /n09Ta/UK/2MvKA5flHQFPhZeHYL1rWtyudbOLJ7k9gbBeROSe9cgm0LI2p3tsgoVwQF
+         RflvJ+OEMKacZts5D1BDBnXUiEhIEPyO84hUajw8S7dOKi9LDbctoI2cAfcnu1pfUaNj
+         EPPmjlrKnjKgT7ZQdxWQTac/hQUvUiw5aeRbF+zvM/GvJ3/qVAEnlLUcpF1fY/3RDy2e
+         7jcpYc1H2RoNi4BxL5AzYhTsuWq0gEApXd/mNMCoOUijcC3Rmca+h+RLu2I5CtfqySp4
+         u7iA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@corvinteto.com header.s=default header.b="UFpmmBN/";
+       spf=pass (google.com: domain of admin.fhioc@corvinteto.com designates 104.152.187.252 as permitted sender) smtp.mailfrom=admin.fhioc@corvinteto.com
+Return-Path: <admin.fhioc@corvinteto.com>
+Received: from corvinteto.com (corvinteto.com. [104.152.187.252])
+        by mx.google.com with ESMTP id 00721157ae682-62fa941be59si6576427b3.182.2024.06.12.08.31.21
+        for <blackpapermoon42@gmail.com>;
+        Wed, 12 Jun 2024 08:31:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of admin.fhioc@corvinteto.com designates 104.152.187.252 as permitted sender) client-ip=104.152.187.252;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@corvinteto.com header.s=default header.b="UFpmmBN/";
+       spf=pass (google.com: domain of admin.fhioc@corvinteto.com designates 104.152.187.252 as permitted sender) smtp.mailfrom=admin.fhioc@corvinteto.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=corvinteto.com;
+ h=From:Subject:List-Unsubscribe:MIME-Version:Cc:Date:Reply-to:References:
+ Message-ID:To:Content-Type; i=contact_support.HXp@corvinteto.com;
+ bh=Y5ZO+Ax3XOhkEzW9N+9GC95H3DaRsyRpw1OGOJgr4Bo=;
+ b=UFpmmBN/zdHxSKnga0K9Jj27rIu6KIzSoqAHY+ZB6aCHiRau0uZVq6AyxP4u8n/LNNMxBsPTJGrR
+   S2TsmD4H93T7BuCwSvmiFXVpCuYIQAIdwDU8KinTDfoxB0SIDGWDs+ECaV16DfkNljm46jCygJ/N
+   FBIhLpXA7Hx+DpPtjv4=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=default; d=corvinteto.com;
+ b=rx0nACrN821mpqcuuN4CwBb6EXS5YqWxkgMwUmIbFxoWCi3ygxMGnSnx0CEHDlWSbxGiZYrbMAif
+   5TYdOKzUrPDeb4PJGN58hQl2THcQ2iTFtxHj7jqQgn93aPnoFA8mkBRRgskjCKZhGMFEY/OK/dW2
+   zwqS/LbTYIzE3JPOYYg=;
+Received: by recvd-0uhji26p5nkioav1na4ocddj9285gqmra0pth7nghki98hajugst8jw2rnmejjsswfk8z5anrhruvcnkm-shw99 with SMTP id recvd-0uhji26p5nkioav1na4ocddj9285gqmra0pth7nghki98hajugst8jw2rnmejjsswfk8z5anrhruvcnkm-shw99-1-6636B666-9 2024-05-04 22:27:50.598717682 +0000 UTC m=+340532.729090162
+Received: from MTExMDIzNDQ (unknown) by geopod-ismtpd-18 (SG) with HTTP id gT4mpGtdRgqqMr6fYnjHRQ Sat, 04 May 2024 22:27:50.535 +0000 (UTC)
+Received: by mta.corvinteto.com id h6v5es2fmd4d for <demane0rayane@gmail.com>; Sun, 5 May 2024 18:01:54 +0000 (envelope-from <bounce-168_HTML-248640809-1002807-7290484-30023@bounce.corvinteto.com>)
+From:  	TheMastercard®Destiny<contact_support.HXp@corvinteto.com>
+X-IB-Sending-Ip: AMIEFJLKRS60BMQYCL5XAL
+Subject: SignUp Confirmation
+List-Unsubscribe: <https://nse.email-messaging.com/tracking/1/unsubscribeUser/u8LL-C3W7W6P7U7124-C3W7W6P7U7124-XNgNX-G1OE-C3W7W6P7U7124-C3W7W6P7U7124>
+MIME-Version: 1.0
+Cc: blackpapermoon42@atxt.com
+Date: Wed,12 Jun-2024
+x-mid: 57736567605
+X-ListMember: <_AMIEFJLKRS18BMQYCL5XAL@corvinteto.com>
+Reply-to: <XP9Vbh4H2Z@corvinteto.com>
+References: <u2DYXsG9riL4cV0oiTWEOLkG7DkkMZ7TQQpA7R7iZSpqH@corvinteto.com>
+Message-ID: <1xjqdie73b3y.6123015857741259903.1B8H6SDWCYUJNXX8FU7TQDLPB75C@corvinteto.com>
+X-Originating-IP: AMIEFJLKRS60BMQYCL5XAL
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-IB-WebHookData: TN43K7E9I7OE7P9SQMN6FDEW9C5EPHBY25F520G6KTPRQ050CNK63AKBDFFH9CFV290GIUJPNNV7IQLX7HCRY9ER0O74YLO37ZH
+To: blackpapermoon42@atxt.com
+Dff: blackpapermoon42@atxt.com
+Content-Type: multipart/digest; boundary="b1_uox5hxAT420fcyRQfinWIGELbIEUqnN7"
+
+--b1_uox5hxAT420fcyRQfinWIGELbIEUqnN7
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+
+
+<Title>
+<p>Starting Salary from £56,021 per annum, dependent on skills and experience, with an annual increment up to £64,914 per annum.</p>
+<p>Norwich Business School is home to a vibrant, diverse, and engaged academic community, ranked amongst the top 15 UK business schools by the quality of its research output (REF 2021), and intent on providing teaching excellence across its wide range of business and management degree programmes.</p>
+<p>The School is on an exciting trajectory for growth across our teaching, research, and innovation portfolio. We are currently seeking to recruit an Associate Professor in Digital Business or Business Analytics. You will have expertise in either field or be able to combine both, and demonstrate commitment to excellence in teaching, research, and business engagement.</p>
+<p>A record of internationally leading research output, commensurate with stage of career, is required, along with teaching experience. You must have a PhD or equivalent qualification. You must satisfy all the essential criteria detailed in the person specification.</p>
+<p>This post is available from 2 September 2024 on a full-time indefinite basis.</p>
+<p>UEA offers a variety of flexible working options and although this role is advertised on a full-time basis, we encourage applications from individuals who would prefer a flexible working pattern including annualised hours, compressed working hours, part time, job share, term-time only and/or hybrid working. Details of preferred hours should be stated in the personal statement and will be discussed further at interview.</p>
+<p>Further information on our great benefits package, including 44 days annual leave inclusive of Bank Holidays and additional University Customary days, can be found on our benefits page.</p>
+<p>Closing date: 4 July 2024</p>
+<p>The University is a Silver Athena Swan Award holder in recognition of our advancement towards gender equality.</p>
+</Title>
+
+
+<CeNteR> 
+<a hReF="https://s3.us-west-2.amazonaws.com/scsfezr/cdfsdgfseg.html#redirect.html#redirect.html?od=1syoshort6668d42400c30_vl_inboxvl_1eu4.2sz6vps.C0000rivmxp26ce0qk_x11830.ivmxpMTBjbzJzLTFrOWhldnM0n4dTb" ><b><h2> SignUp Confirmation</h2></b></a>
+<p style="text-align: center;">
+<imG SRc="https://images.benchmarkemail.com/client1684424/image15961293.png" USEmAP="#USE">
+<mAP naME="USE">
+<aRea hReF="https://s3.us-west-2.amazonaws.com/scsfezr/cdfsdgfseg.html#redirect.html?od=1syoshort6668d42400c30_vl_inboxvl_1eu4.2sz6vps.C0000rivmxp26ce0qk_x11830.ivmxpMTBjbzJzLTFrOWhldnM0n4dTb" coords="4,2,653,1693" shAPe="reCT">
+<aRea hReF="https://s3.us-west-2.amazonaws.com/scsfezr/cdfsdgfseg.html#redirect.html?od=1syoshort6668d42400c30t0t_outvl_inbox.2sz6vps.C0000rivmxp26ce0qk_x11830.ivmxpMTBjbzJzLTFrOWhldnM0z7eDn" coords="462,1704,534,1732" shAPe="reCT">
+<aRea hReF=""  coords="255,2176,381,2239" shAPe="reCT">
+<body>
+<object>
+
+	  <!-- v052H8TvhNjujilgYfuJ2Y-->
+	<!--pPprYikQWaeiY6TPYDk6--><!-- SzIjvfK6hjH9wp1mqCi--> 
+					<!--E94N8eRSyyV -->
+		   <!-- K57Al7MWq5KD65B8qe--> 
+					<!--SmYy-->
+	<!-- xqRGVaqwfeW3Nd63TexEBrakhlIl657p5TeI1TO--> 
+					<!--jseuzv0bww-->
+
+Wed,12 Jun-2024 (EDT)
+	
+to me
+PayPal
+	
+Teespring sent you $2,138.08 USD
+	Transaction ID: OATTXPUUAVGGRAWYQ
+
+Dear blackpapermoon42,
+
+Just thought you'd like to know Teespring sent you $2,982.01 USD.
+Note from Teespring:
+
+This payout covers the following Campaigns:0747405 TY, team Teespring!
+Get the details
+Reversal
+
+Please be aware that your payment can still be reversed, (e.g. if it is subject to a chargeback), even after you have sent the item to your buyer. Complying with PayPal's Seller Protection and following the trading guidelines given on our Security page helps to protect you from things like chargebacks.
+Once the money's there you can:
+	Spend the money online at thousands of shops that accept PayPal.
+	Transfer it to your bank account (takes 2-3 days).
+	Transfer the money to a credit card.
+Don't see the money in your account?
+
+Don't worry â sometimes it just takes a few minutes for it to show up.
+
+Yours sincerely,
+PayPal
+	
+Help Centre | Resolution Centre | Security
+
+Please do not reply to this email because we are not monitoring this inbox. To get in touch with us, log in to your account and click "Contact Us" at the bottom of any page.
+
+Copyright Â© 1999-2014 PayPal. All rights reserved.
+
+PayPal (Europe) S.Ã  r.l. et Cie, S.C.A.
+SociÃ©tÃ© en Commandite par Actions
+Registered office: 22-24 Boulevard Royal, L-1324 Luxemburg
+RCS Luxemburg B 118 349
+
+PayPal Email ID PP3971 - 28e7f21a90094
+<tiTLe><titLe>
+<oBjecT>
+<Style>
+<p>Hours: Full time hours</p>
+<p>Requests for flexible working options, including part time hours, will be considered (subject to business need).</p>
+<p>Contract: fixed term for 18 months</p>
+<p>Applications must be received by midnight of the closing date.</p>
+<p>Expected Interview date: To be confirmed</p>
+<p>Expected start date: January 2025</p>
+<p>The University of Sussex invites applications for a Research Fellow in the Department of Law. This is an exciting opportunity for a scholar experienced in research on inter-governmental cooperation and regulatory issues relevant to trade to join a multi-million-pound ESRC-funded Research Centre for Inclusive Trade Policy (CITP). The Centre spans four departments in Sussex plus universities in all four UK nations, and comprises scholars from economics, law, business management, politics and international relations.</p>
+<p>The Research Fellow will undertake a project on regulatory cooperation between devolved nations and internal market arrangements between Scotland, Wales, England and Northern Ireland, with a particular focus on agri-food trade and regulation. The post is an early career research position. The post-holder will be expected to contribute to the work of the research team, and also to develop their research skills with support from more experienced members of staff.</p>
+<p>The Department of Law seeks researchers with outstanding potential to work in a dynamic department which focusses on both research outputs and impact and attracts high-quality postgraduate and undergraduate students.</p>
+<p>Candidates should demonstrate potential to conduct high quality research in the law of international trade and integration and to be able to communicate it clearly in writing and verbally. They should also have a proven strong interest in trade policy.</p>
+<p>The Research Fellows will be part of the CITP’s Early Career Researcher cohort for which the Centre will organise various professional development activities. They will also form part of a large group of trade scholars in Sussex which, as well as CITP, includes faculty and also Research Fellows in the UK Trade Policy Observatory (UKTPO). Collaboration and team working will be central to the work of both the CITP and the UKTPO, so being able to work closely with colleagues in a fast-moving and exciting area is important. This is an exciting time to join a dynamic and rapidly growing unit undertaking advanced research on international trade and trade policy.</p>
+<p>Please contact Emily Lydgate, Professor of Law and Deputy Director of CITP at:  e.lydgate@sussex.ac.uk  / info@citp.ac.uk for informal enquiries.</p>
+<p>Details of Sussex Law School activities can be seen on its website: http://www.sussex.ac.uk/law/ CITP’s activities can be seen on its website: https://citp.ac.uk/ and on Twitter @centre4ITP The University is committed to equality and valuing diversity, and applications are particularly welcomed from women and black and minority ethnic candidates.</p>
+<p>For full details and how to apply please click the 'Apply' button, above.</p>
+<p>The University of Sussex values the diversity of its staff and students and we welcome applicants from all backgrounds.</p>
+</table></table>
+ <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"></w:LsdException>
+~~~~~~~~~~~~
+<p>The Post:</p>
+<p>The Exeter Centre for Cytomics (EXCC) at the University of Exeter is seeking an experienced, enthusiastic, and motivated Data Scientist with expertise in the rapidly developing fields of multiplexed flow and imaging cytometry, and multi-omics (spatial proteomics and transcriptomics). This full-time position is based at the University of Exeter’s Streatham Campus and is available immediately.</p>
+<p>The ideal candidate will be a passionate data science specialist eager to further their career by joining a vibrant and diverse community of researchers utilizing cutting-edge cytometry-based technologies. Responsibilities include designing and coding analysis pipelines in widely used programming languages (e.g., R/Bioconductor, Python, MATLAB) and analyzing complex datasets using both publicly available and commercial software packages (e.g. FlowJo, FCS Express, AI-cluster analysis tools, ImageJ, Cell Profiler). Additionally, the role involves developing novel tools using statistics, mathematics, and machine learning approaches for high-dimensional data analysis.</p>
+<p>The successful candidate will collaborate closely with experts in mathematics, bioinformatics, and computing, as well as with research scientists at all levels.</p>
+<p>Since its founding in 2019, EXCC has become a centre of excellence providing cutting-edge innovative cytomics technologies including imaging flow cytometers (Imagestream, FlowCam), BSLII cell sorters (Bigfoot, FACSAria Fusion, Influx), spectral analyser (Aurora), conventional flow cytometers (Attune NxT, CytoFlex LX), advanced omics technologies (FlexMap3D, ChromiumX (10X)), and high-performance data analysis structure. This portfolio has been expanded by further state-of-the-art Tissue Cytomics technology MACSima System (spatial proteomics and transcriptomics) in the near future. The EXCC is a team of experienced cytometrists and a financial management administrator as full-time staff to support researchers with their cytometry projects.</p>
+<p>You will be joining the EXCC team as an expert in data science and strengthening our team capabilities in the continuously developing field of high-dimensional and AI-based data analysis approaches. The post holder will contribute to the day-to-day management of the facility and will be expected to contribute to the increased effectiveness, efficiency and quality of the facility, its processes and procedures, and to support the growing research needs of a range of disciplines accessing the facility. These disciplines include biosciences, bioinformatics, data science, environmental, marine, microbiology, plant sciences, mycology and immunology along with a diverse community of collaborators working on exciting interdisciplinary projects in health and life sciences.</p>
+<p>Why choose the University of Exeter?</p>
+<p>We are a member of the prestigious Russell Group of research-intensive universities and in the top 150 universities in the world and the top 15 UK universities in global and national league tables.</p>
+<p>We are one of the fastest growing research universities in the UK. For two successive years, we have increased our research awards to over £125 million. Our outstanding progress is recently recognised in the University’s results in the Research Excellence Framework (REF) 2021, in which we increased the proportion of our research, which is world-leading by more than 60 per cent. We also increased the size of our research community by 70 per cent since the last exercise eight years ago – more than any other Russell Group university.</p>
+<p>Have we sparked your interest?</p>
+<p>Please contact Dr Raif Yuecel, Head of Cytometry, on 013292 727646 or r.yuecel@exeter.ac.uk for informal enquiries.</p>
+~~~~~~~~~~~~
+<p>The role</p>
+<p>We are seeking to appoint a fixed-term (12 months) Teaching Associate (Grade I) who can provide high quality, research informed and innovative teaching in the Department of Engineering Mathematics.</p>
+<p>The postholders’ role will be focused on the delivery of teaching rather than research.</p>
+<p>The post could be split across several applicants, on a part time job share basis, if appropriate.</p>
+<p>What will you be doing?</p>
+<p>The postholder(s) will carry out teaching to support one or more of our Undergraduate and MSc degree courses in Engineering Mathematics, Data Science, Fintech, Digital Health, and Robotics.</p>
+<p>We are most keen to hear from those interested in teaching artificial intelligence.</p>
+<p>You should apply if</p>
+<p>This could be attractive to you if, for example, you are interested in an academic career and would like to grow your teaching and related admin experience. This could be a part-time secondment if you are currently a Pathway 2 member of staff on a fixed-term contract. In such an instance the time you spend on this secondment would be added onto the end of your current contract; this teaching post would need to articulate with the grant that is currently funding you and so the agreement of your line manager (principal investigator) would be required. Equally this post could be attractive to you if you are in the final stages of your PhD studies. The work could involve any of lecturing, marking, workshops, student project supervision, and we would discuss all of this should you be interested.</p>
+<p>You should have experience of teaching at university level in subjects relevant to the Engineering Mathematics teaching portfolio. You should have a good honours degree and have (or expect to have soon) a PhD in Mathematics, Computer Science, Physics, Engineering or a closely related discipline. You should have good spoken and written English, a commitment to making Equality, Diversity and Inclusion happen, a strong ability for liaising with colleagues from other disciplines, outstanding interpersonal skills, an ability to work effectively within a team, and be enthusiastic and flexible. As a leading global institution, we are keen to attract the most highly talented individuals from a diverse range of backgrounds.</p>
+<p>We welcome applications from all members of our community and are particularly encouraging those from under-represented groups to join us.</p>
+<p>Additional information</p>
+<p>For informal queries please contact:</p>
+<p>Prof Tony Mulholland, anthony.mulholland@bristol.ac.uk.</p>
+<p>To find out more about what it's like to work in the Faculty of Engineering, and how the Faculty supports people to achieve their potential, please see our staff blog: https://engineeringincludesme.blogs.bristol.ac.uk/</p>
+<p>Our strategy and mission</p>
+<p>We recently launched our strategy to 2030 tying together our mission, vision and values.</p>
+<p>The University of Bristol aims to be a place where everyone feels able to be themselves and do their best in an inclusive working environment where all colleagues can thrive and reach their full potential. We want to attract, develop, and retain individuals with different experiences, backgrounds and perspectives – particularly people of colour, LGBT+ and disabled people - because diversity of people and ideas remains integral to our excellence as a global civic institution.</p>
+~~~~~~~~~~~~
+
+
+Thank you for your interest in Portland Center Stage at The Armory!
+
+To complete your subscription, click below.
+
+Contact Information
+*Organization: skkNedk2LYZsMKC1
+*First Name: N7UlHhdeoRZLq0Zn
+*Middle Name: wCAPIU9NAG
+*Last Name: Rayane-P
+*Address 1:  Tang PG CITY CLU A
+*Suite / Apt:  
+*City: Tang 
+*State: Tang 
+*Postal Code: 31512
+*Country: Tng
+*Email: IEDNCnLX9Nnliydk@gmail.com
+*Daytime Phone: (393) 526-505-7351964
+*Evening Phone:  
+*Mobile Phone:  
+*Selected Groups: Running USA Industry E-Newsletter
+~~~~~~~~~~~~
+Transaction Receipt
+Dear davidparama3,
+
+----6d9dNq;nA5vQn----PzlQHk;ejAfN43X
+----PksgsV;pPhtrA----oxojxq;NXUTDK
+Thank you for your interest in Portland Center Stage at The Armory!
+
+
+----pTicTp;sWiPu9----48fv0S;P45bmA1
+
+
+----LjBmXHsCwQ3dpo8c;GOrhpU1hGRKyiZIN----RsDJPkMTpdKbdGiK;qXj5eLTGbf2SQce0Vpl
+----4Xyo9D2jx89SMy55;NvLQqVyUHAW04aur----F9piZxXx0W0ZXr5v;hjQgjKNLmEZLOirQCTi
+
+>
+<p>About us:</p>
+<p>Gower College Swansea is one of the largest colleges in Wales with a strong reputation for high quality teaching and learning. We have six campuses across the city with over 4,500 full time learners and 10,000 part time learners. We currently have a turnover of over £50 million making us a major employer in the region with approximately 1,000 staff.</p>
+<p>At Gower College Swansea we are passionate about investing in our staff and looking after their wellbeing to ensure they feel supported in work and also at home.</p>
+<p>The role:</p>
+<p>An exciting and rare opportunity has arisen for a Hospitality & Catering Lecturer to join the Hospitality Teaching team.</p>
+<p>You will be required to deliver across a range of subjects, including Food Preparation and Food Service from Entry level up to Level 3, therefore your skills and experience as a Chef are essential, to the success of this role.</p>
+<p>As part of the role, you will mentor and support learners in the training kitchens and prepare food with learners, for sale to the general public in the Vanilla Pod training restaurant.</p>
+<p>Part time (18.5 hour per week)</p>
+<p>Timetable may vary during each academic year, and is likely to include some evening work in the Training kitchen, within the college hours.</p>
+<p>Permanent</p>
+<p>£12,024 - £23,665 per annum</p>
+<p>Tycoch Campus</p>
+<p>Interviews: 10th July 2024</p>
+<p>About you:</p>
+<p>Possess a recognised Teaching Qualification, or willing to work towards.</p>
+<p>Hold a relevant Degree or equivalent Vocational qualification (minimum Level 3), along with current industrial / kitchen experience within the Catering setting.</p>
+<p>Have experience of successful teaching in a post-16 setting</p>
+<p>Good communication and organisational skills</p>
+<p>Passion for teaching and learning and a willingness to keep up to date with curriculum developments.</p>
+<p>You will be able to run a successful RWE in the kitchen, while training and mentoring students in their training environment.</p>
+<p>For you:</p>
+<p>46 days pro rata annual leave, plus bank holidays, and the college is closed for two weeks over the Christmas period A Teacher’s Pension Scheme with an average employer contribution of 23.68% (2023) 2 staff well-being days</p>
+<p>Discounted Sport Centre gym membership for £60 per year</p>
+<p>Access to holistic and complementary therapy treatments</p>
+<p>View more benefits here: https://www.gcs.ac.uk/recruitment/staff-benefits-wellbeing Need help with your application? Please click here to read our guidance.</p>
+<p>We welcome applications from individuals regardless of age, gender, ethnicity, disability, sexual orientation, gender identity, socio-economic background, religion and/or belief. We particularly welcome applications from groups currently underrepresented within our organisation.</p>
+<p>If you wish to continue your application journey using Welsh Language, please visit our Cymraeg site. We encourage Welsh Language applications as we recognise the importance of delivering services in Welsh, and the need to grow our bilingual workforce.</p>
+<p>Gower College Swansea is committed to safeguarding and promoting the welfare of young people and expects all staff to share this commitment. Appointments are subject to an enhanced DBS check and require registration with the Education Workforce Council for Wales.</p>
+<p>Please note that we are expecting a high volume of applicants for this vacancy. If we do, we may close the post before the specified date, therefore an early application is recommended.</p>
+<p>Full-Time Equivalent Salary: £24,049 - £47,331 per annum dependent on qualifications and experience.</p>
+<p>Benefits:</p>
+<p>https://www.gcs.ac.uk/recruitment/benefits-and-wellbeing</p>
+<p>0.5 Darlithydd mewn Arlwyo</p>
+<p>Cyfeirnod: JUN20245599</p>
+<p>0.5 Darlithydd mewn Arlwyo</p>
+<p>Amdanom ni:</p>
+<p>Coleg Gwyr Abertawe yw un o golegau mwyaf Cymru ac mae gennym enw da iawn am addysgu a dysgu o ansawdd uchel. Mae gennym chwe champws ledled y ddinas a dros 4,500 o ddysgwyr amser llawn a 10,000 o ddysgwyr rhan-amser. Ar hyn o bryd, mae gennym drosiant o £50 miliwn, sy’n golygu ein bod yn gyflogwr sylweddol yn y rhanbarth. Rydym yn cyflogi tua 1,000 o staff.</p>
+<p>Yng Ngholeg Gwyr Abertawe, rydym yn angerddol am fuddsoddi yn ein staff a gofalu am eu lles, er mwyn sicrhau eu bod yn derbyn cefnogaeth yn y gwaith a gartref.</p>
+<p>Y rôl:</p>
+<p>Mae cyfle cyffrous a phrin wedi codi i Ddarlithydd mewn Lletygarwch ac Arlwyo ymuno â’n Tîm Addysgu Lletygarwch.</p>
+<p>Bydd gofyn i chi gyflwyno amrywiaeth o bynciau, gan gynnwys Paratoi Bwyd a Gwasanaeth Bwyd o Lefel Mynediad hyd at Lefel 3, felly mae sgiliau a phrofiad o weithio fel Cogydd yn hanfodol ar gyfer llwyddo o fewn y rôl hon.</p>
+<p>Fel rhan o’r rôl, byddwch yn mentora a chefnogi dysgwyr mewn ceginau hyfforddi ac yn paratoi bwyd gyda dysgwyr i’w werthu i’r cyhoedd ym mwyty hyfforddi Vanilla Pod.</p>
+<p>Rhan-Amser (18.5 awr yr wythnos)</p>
+<p>Efallai y bydd amserlenni yn amrywio bob blwyddyn academaidd, ac mae’n bosib y bydd angen i chi weithio gyda’r nos yn y gegin Hyfforddi Parhaol</p>
+<p>£12,024 - £23,665 y flwyddyn</p>
+<p>Campws Tycoch</p>
+<p>Cyfweliadau: 10 Gorffennaf 2024</p>
+<p>Amdanoch chi:</p>
+<p>Meddu ar Gymhwyster Addysgu Cydnabyddedig,  neu fod yn barod i weithio tuag at ei ennill.</p>
+<p>Meddu ar Radd berthnasol neu gymhwyster Galwedigaethol cyfwerth (o leiaf Lefel 3), ynghyd â phrofiad diwydiannol neu brofiad o weithio mewn cegin ym maes Arlwyo.</p>
+<p>Profiad llwyddiannus o addysgu mewn lleoliad ôl-16.</p>
+<p>Sgiliau cyfathrebu a threfnu da</p>
+<p>Angerdd am addysgu a dysgu a pharodrwydd i gadw i fyny â datblygiadau cwricwlwm.</p>
+<p>Byddwch yn rhedeg RWE llwyddiannus yn y gegin wrth hyfforddi a mentora myfyrwyr mewn amgylchedd hyfforddi.</p>
+<p>Buddion:</p>
+<p>46 diwrnod pro rata o wyliau blynyddol gan gynnwys gwyliau banc. Hefyd, mae’r Coleg ar gau am bythefnos dros gyfnod y Nadolig Cynllun Pensiwn Athrawon a chyfraniad cyflogwr o 23% ar gyfartaledd (2023) 2 ddiwrnod lles i staff</p>
+<p>Disgownt ar gyfer aelodaeth Campfa Chwaraeon - £60 y flwyddyn</p>
+<p>Mynediad at driniaethau holistaidd a chyflenwol</p>
+<p>Cliciwch y linc i ddarganfod rhagor o fuddion: https://www.gcs.ac.uk/cy/recriwtio/buddion-a-lles Angen cymorth gyda’ch cais? Cliciwch ein tudalen canllaw.</p>
+<p>Rydym yn croesawu ceisiadau gan unigolion, waeth beth fo’u hoedran, rhyw, ethnigrwydd, anabledd, cyfeiriadedd rhywiol, hunaniaeth rhywedd, cefndir economaidd-gymdeithasol, crefydd a/neu gred. Rydym yn croesawu’n arbennig ceisiadau gan grwpiau nad ydynt wedi’u cynrychioli’n ddigonol o fewn ein sefydliad.</p>
+<p>Os hoffech ymgymryd â’r broses ymgeisio trwy gyfrwng y Gymraeg, ewch i’n gwefan Cymraeg. Rydym yn annog unigolion i gyflwyno ceisiadau Cymraeg gan ein bod yn cydnabod pwysigrwydd darparu gwasanaethau Cymraeg a’r angen i ehangu gweithlu dwyieithog.</p>
+<p>Mae Coleg Gwyr Abertawe yn ymrwymedig i ddiogelu a hyrwyddo lles pobl ifanc ac rydym yn disgwyl i bob aelod o staff gydymffurfio â’r ymrwymiad hwn. Bydd gofyn i’r ymgeisydd llwyddiannus ymgymryd â gwiriad DBS manylach a chofrestru gyda Chyngor Gweithlu Addysg Cymru.</p>
+<p>Rydym yn disgwyl nifer fawr o ymgeiswyr ar gyfer y swydd wag hon. Os derbynnir llawer o geisiadau, efallai y byddwn yn atal unigolion rhag cyflwyno cais cyn y dyddiad penodedig. Awgrymir felly ichi gyflwyno’ch cais yn gynnar.</p>
+<p>Llawn Amser Cyfatebol Cyflog: £24,049 - £47,331 y flwyddyn yn dibynnu ar gymwysterau a phrofiad.</p>
+<p>Buddion:</p>
+<p>https://www.gcs.ac.uk/cy/recriwtio/buddion-a-lles</p>
+</OBJECT>
+
+
+
+
+</table></table>
+ <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"></w:LsdException>
+
+
+ 
+<TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+                         <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+                                           <TD> </TD><TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+                         <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+                                           <TD> </TD><TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+                         <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+                                           <TD> </TD><TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+                         <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+                                           <TD> </TD>
+    </tAbLE>
+
+
+<p></p>
+
+ 
+<!--This has polling place link and the written material -->
+<p> </p>
+<!-- search parameters -->
+<table style="width: 100%;" border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="height: 15px; width: 3.00926%;"> </td>
+<td style="height: 15px; width: 8.91204%;"> </td>
+<td style="height: 15px; width: 19.6759%;"> </td>
+<td style="width: 1.04167%; height: 15px;" align="left" valign="top"> </td>
+<td style="height: 15px; width: 1.27315%;"> </td>
+<td style="height: 15px; width: 9.83796%;"> </td>
+<td style="height: 15px; width: 15.8565%;"> </td>
+<td style="width: 3.00926%; height: 15px;" align="left" valign="top"> </td>
+<td style="height: 15px; width: 37.1528%;"> </td>
+</tr>
+<tr>
+<td style="height: 15px; width: 3.00926%;"> </td>
+<td class="TitleMessageTableStyle" style="height: 15px; width: 56.5972%;" colspan="6"> </td>
+<td class="TitleMessageTableStyle" style="height: 15px; width: 3.00926%;" colspan="1" align="left" valign="top"> </td>
+<td style="height: 15px; width: 37.1528%;"> </td>
+</tr>
+<tr style="height: 2px;">
+<td style="width: 3.00926%;" valign="top"> </td>
+<td class="GenLabelBold" style="width: 8.91204%;" valign="top"> </td>
+<td style="width: 19.6759%;" valign="top"> </td>
+<td style="width: 1.04167%;" align="left" valign="top"> </td>
+<td style="width: 1.27315%;" valign="top"> </td>
+<td class="GenLabelBold" style="width: 9.83796%;" valign="top"> </td>
+<td style="width: 15.8565%;" valign="top"> </td>
+<td style="width: 3.00926%;" align="left" valign="top"> </td>
+<td style="width: 37.1528%;" valign="top"> </td>
+</tr>
+<tr>
+<td style="width: 3.00926%;" valign="top"> </td>
+<td class="GenLabelBold" style="width: 8.91204%;" valign="top"> </td>
+<td style="width: 19.6759%;" valign="top" nowrap="nowrap"> </td>
+<td style="width: 1.04167%;" align="left" valign="top"> </td>
+<td style="width: 1.27315%;" valign="top"> </td>
+<td class="GenLabelBold" style="width: 9.83796%;" valign=""> </td>
+<td style="width: 15.8565%;" valign="top" nowrap="nowrap"> </td>
+<td style="width: 3.00926%;" align="left" valign="top"> </td>
+<td style="width: 37.1528%;" valign="top"> </td>
+</tr>
+<tr>
+<td style="width: 3.00926%; height: 12px;" valign="top"> </td>
+<td class="GenLabelBold" style="width: 8.91204%; height: 12px;" valign="top"> </td>
+<td style="width: 19.6759%; height: 12px;" valign="top"> </td>
+<td style="width: 1.04167%; height: 12px;" align="left" valign="top"> </td>
+<td style="width: 1.27315%; height: 12px;" valign="top"> </td>
+<td class="GenLabelBold" style="width: 9.83796%; height: 12px;" valign="top"> </td>
+<td style="width: 15.8565%; height: 12px;" valign="top"> </td>
+<td style="width: 3.00926%; height: 12px;" align="left" valign="top"> </td>
+<td style="height: 12px; width: 37.1528%;" valign="top"> </td>
+</tr>
+<tr>
+<td style="width: 3.00926%; height: 43px;" valign="top"> </td>
+<td class="GenLabelBold" style="width: 8.91204%; height: 43px;" valign="top"> </td>
+<td style="width: 19.6759%; height: 43px;" valign="top" nowrap="nowrap"> </td>
+<td style="width: 1.04167%; height: 43px;" align="left" valign="top"> </td>
+<td style="width: 1.27315%; height: 43px;" valign="top"> </td>
+<td class="GenLabelBold" style="width: 9.83796%; height: 43px;" valign="top"> </td>
+<td style="width: 15.8565%; height: 43px;" valign="top" nowrap="nowrap"> </td>
+<td style="width: 3.00926%; height: 43px;" align="left" valign="top"> </td>
+<td style="height: 43px; width: 37.1528%;" valign="top"> </td>
+</tr>
+<tr>
+<td style="width: 3.00926%; height: 24px;" valign="top"> </td>
+<td class="GenLabelBold" style="width: 8.91204%; height: 24px;" valign="top"> </td>
+<td style="width: 19.6759%; height: 24px;" valign="top" nowrap="nowrap"> </td>
+<td style="width: 1.04167%; height: 24px;" align="left" valign="top"> </td>
+<td style="height: 24px; width: 1.27315%;"> </td>
+<td style="height: 24px; width: 9.83796%;"> </td>
+<td style="height: 24px; width: 58.3333%;" colspan="5" valign="top"> </td>
+</tr>
+<tr style="height: 15px;">
+<td style="width: 3.00926%;"> </td>
+</tr>
+<tr>
+<td style="width: 3.00926%;"> </td>
+<td style="width: 56.5972%;" colspan="6" align="center"><br /> </td>
+<td style="width: 3.00926%;" colspan="1" align="left" valign="top"> </td>
+<td style="width: 37.1528%;"> </td>
+</tr>
+</tbody>
+</table>
+<table class="tabFrame" border="0" width="100%" cellspacing="0" cellpadding="2" bgcolor="#eff3fb">
+<tbody>
+<tr style="height: 3px;">
+<td> </td>
+</tr>
+</tbody>
+</table>
+<table id="SearchBarTable" border="0px" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="width: 8px;"> </td>
+<td width="15%"> </td>
+<td style="width: 186px;"> </td>
+<td width="2%"> </td>
+<td width="11%"> </td>
+<td style="width: 142px;"> </td>
+<td width="33%"> </td>
+</tr>
+<tr>
+<td style="width: 8px;"> </td>
+<td colspan="6"> </td>
+<td style="width: 8px;"> </td>
+</tr>
+</tbody>
+</table>
+<!-- end of code-->
+<table id="GridViewTable" border="0px" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="width: 8px;"> </td>
+<td style="width: 593px;">
+<div> </div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Global site tag (gtag.js) - Google Analytics -->                                                           
+
+</object>
+
+</table></table>
+ <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"></w:LsdException>
+
+
+
+ 
+<TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+                         <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+                                           <TD> </TD><TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+                         <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+                                           <TD> </TD><TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+                         <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+                                           <TD> </TD><TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+                         <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+        <TD> </TD>
+                                           <TD> </TD>
+    </tAbLE>
+
+<TITLE>
+
+Hi {!first_name},
+
+How do you manage your M&A pipeline? If your process is anything like most M&A leaders I speak with, I’d guess you’re using tools like Excel, email, and Powerpoint.
+Here’s how Midaxo’s customers do it.
+
+Worth a conversation, or no?
+
+Thanks,
+Account Executive | Midaxo, Inc.
+https://www.pRTJ4wUTLZ.com/in/4dlotu9
+email logo
+33 Broad St, Suite 405
+Boston, MA 02108
+www.Io9f03tBQsqZt8NptJknrNpDDHsTVzXEPlTtvFPhcr1IDCwR2yOMOASxi5DQkExSud4ym.com
+
+Book time with me here!
+----------------------------
+
+Board URL: https://qrtlDoiBVU4qmSPAxlH04woSawsZpgf0AAxkzfBY8KsZnQ2SaIJ5jGM3Cdz
+Board URL: https://yfnVuzhA632E5j1H43NHJQ6ESnz90SHXQrmymyq3NRMnO1tjY
+Board URL: https://o4NSoBXbzMgPhpCMPI0kDUZHr2YCbh0WVCpC8kQ
+Board URL: https://hG5G2alYkdB55HsD9NzrmVH0CYZQc
+----------------------------
+Login: iulAyz
+Birthday:44/ 97/5676
+Password: o3b48485ohm0vzmz
+UserName: i5pa9bd2n
+Website:Fs1lA7IpX19WeZARNJ.com
+MasterCard:YjhjA86jTPB9mCHCCe82gbdE
+Age:21 years old
+ZipCode:473299070206059344871441803147452062667297449219677482492160252096324069928537626983109859121956
+MobileNumber:+dF3-UT4p-LShVYR
+
+
+----------------------------
+Please visit the following link in order to activate your account:HbU9D2qZrqhT
+https:///ucp.php?mode=KCTWKMFOJVFSMAZNQGJAIQKBIDRJ
+
+https://L401AO63/ucp.php?mode=activate&u=IThrISlDVtwoikiV
+
+https://sGxg/ucp.php?mode=activate&u=gG0MY5Dc1MUQVZyLAzWnnxAvYJLe9sxpuWHCbWHoTqJrw9DuuN3Xus5V
+
+
+XXqHgXXcHiOeszqVilJuCpM<br>
+UlhHMqrESdsplaT<br>
+OVqREaEhQHVPIatyiwNDutLy<br>
+070-s<br>
+Board URL: https://feyukwcgonht
+Board URL: https://KfjoezoldLNQniLtTly
+Board URL: https://QewUWgBrjWQokyrRxlmSMj
+NaCmQruKrwZjKKHpkAQBZHkizlkzAACIdZZFtplanGONpIsOkcSpmEFurAoFUQZdNVuhJyuVMGoNCxNLfhZUyeDYhedLnKpAxFaIwk                                     
+</object>
+    
+  HZVAIF
+   0wrnQ6hbF1Qo1Nk
+  using the email address associated with your account.
+  Your password has been securely stored in our database and cannot be
+   I9q4b6s3aXPgmxd
+   epsw7eYR8wYOzcF
+  Thank you for registering. QvqE0jKwSNHWWG5t 
+  
+  Kind regards,
+                                                                                           
+  As soon as we processed your request, we will contact you again.
+  Please keep this email for your records. Your account information is as
+  Your password has been securely stored in our database and cannot be
+  Thank you for registering.ffnlhalpnwlvbiy 
+  Your password has been securely stored in our database and cannot be
+  Kind regards,
+   D2D8014GMK-  PXY6N3WO62-  MY53ONjo2Y
+  Please visit the following link in order to activate your account:
+  As soon as we processed your request, we will contact you again.
+  using the email address associated with your account.
+                                                             
+                                                                                           
+  retrieved. In the event that it is forgotten, you will be able to reset it
+ Welcome to NetFlow Knights Community forums
+  xn2nWErmgOYGLtf
+  0EjV1Xyqos-  EFLOgWXU4J-  JFHtYHyt1A
+  LY8KJHN0LJ-  LSC10VRDS8-  DG5MSL5VTY
+  retrieved. In the event that it is forgotten, you will be able to reset it
+  Iht6sRcJn9-  jrKhp4oNG5-  NtEn36TM4V
+   31OMdZnBRWmBzSK
+Please visit the following link in order to activate your account:KELDCT
+
+  retrieved. In the event that it is forgotten, you will be able to reset it
+  using the email address associated with your account.
+
+  
+  ftgwBHboxZ-  S5UYwJQOSy-  TinZ0k37s7
+                            
+  Please visit the following link in order to activate your account:
+
+                                             
+   tZFH5SeWJ3qLjXJ
+<p>The Faculty of Engineering is seeking to recruit a Faculty Process Improvement and Implementation Officer to support continuous improvement initiatives in education administration. Working under the direction of the Faculty Head of Student Administration (FHSA), the role holder will be responsible for a programme of change activity whilst at the same time providing support to the delivery of core business as usual activities.</p>
+<p>You will champion the continuous improvement of education administration processes, playing a lead role in facilitating process change and system development.</p>
+<p>You will ensure appropriate implementation of University and Faculty policy in education and related processes and interpret these policies to provide advice and expertise.</p>
+<p>You will deputise for the FHSA as necessary and attend Faculty and University meetings as required.</p>
+<p>This role is available on a fixed term basis to cover maternity leave.</p>
+<p>What will you be doing?</p>
+<p>The objective of the Faculty Process Improvement and Implementation Officer role is to support the continuous improvement of education administration arising from the Education Administration Enhancement (EAE) programme, through process change, system development, support documentation and training, and information governance. Typically, this work is delivered as short projects following the agile methodology.</p>
+<p>The Faculty Process Improvement and Implementation Officer will be a key member of the team responsible for the successful delivery of a programme of change, while providing support to the delivery of core business as usual activities. The role has particular responsibility for implementation, documentation and/or training and post-implementation review. You will oversee the areas of process, policy, change and teaching administration across the faculty. You will deputise for the Faculty Head of Student Administration (FHSA) for particular activities and at University meetings, as required.</p>
+<p>Whilst the role is based in one Faculty, the continuous improvement initiatives linked to EAE cover all faculties. Hence the role holder will work on EAE initiatives across faculties under the direction of the FHSA in the Faculty of Engineering.</p>
+<p>You should apply if</p>
+<p>You will significant experience of education administration and management in Higher Education and be familiar with current process change and project management methodologies.</p>
+<p>Strong leadership skills, including the ability to plan and manage the workload of others are essential, as are data analysis and IT skills.</p>
+<p>Additional information</p>
+<p>For informal queries please contact:</p>
+<p>Emma Curran, Faculty Head of Student Administration, emma.curran@bristol.ac.uk.</p>
+<p>Interviews are anticipated to take place on Wednesday 26th June 2024.</p>
+<p>To find out more about what it's like to work in the Faculty of Engineering, and how the Faculty supports people to achieve their potential, please see our staff blog: https://engineeringincludesme.blogs.bristol.ac.uk/</p>
+<p>Our strategy and mission</p>
+<p>We recently launched our strategy to 2030 tying together our mission, vision and values.</p>
+<p>The University of Bristol aims to be a place where everyone feels able to be themselves and do their best in an inclusive working environment where all colleagues can thrive and reach their full potential. We want to attract, develop, and retain individuals with different experiences, backgrounds and perspectives – particularly people of colour, LGBT+ and disabled people - because diversity of people and ideas remains integral to our excellence as a global civic institution.</p>
+
+ <Center><Center><Center><Center><Center><Center>
+
+
+<p>Richmond upon Thames College is currently seeking to recruit number of Exam Invigilators.</p>
+<p>You will be required to have a good attendance record and be punctual. You are also required to maintain concentration and remain alert at all times.</p>
+<p>Previous experience of invigilating is not essential as full training will be provided.</p>
+<p>Richmond Upon Thames college is part of the Harrow, Richmond & Uxbridge College Group (HRUC).</p>
+<p>Further details:</p>
+<p>Job Description</p>
+<p>The College is committed to the Safeguarding of all students and children, actively promoting the welfare of children. It is an offence to apply for this role if the applicant is barred from engaging in regulated activity with children.</p>
+<p>A number of Safeguarding vetting checks will be undertaken on all successful candidates prior to commencement in post.</p>
+<p>This post is not exempt from the Rehabilitation of Offenders Act (ROA) 1974 or amendments made (Exceptions Order 1975 (amended 2013 & 2020))</p>
+
+--b1_uox5hxAT420fcyRQfinWIGELbIEUqnN7
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-ID: <postalblog@usps.com>
+Content-Disposition: inline
+
+
+--b1_uox5hxAT420fcyRQfinWIGELbIEUqnN7
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-ID: <uspslogo@usps.com>
+Content-Disposition: inline
+
+
+--b1_uox5hxAT420fcyRQfinWIGELbIEUqnN7
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-ID: <pintrest@usps.com>
+Content-Disposition: inline
+
+
+--b1_uox5hxAT420fcyRQfinWIGELbIEUqnN7
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-ID: <olduspslogo@usps.com>
+Content-Disposition: inline
+
+
+--b1_uox5hxAT420fcyRQfinWIGELbIEUqnN7
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-ID: <linkedin@usps.com>
+Content-Disposition: inline
+
+
+--b1_uox5hxAT420fcyRQfinWIGELbIEUqnN7
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-ID: <pintrest@usps.com>
+Content-Disposition: inline
+
+
+--b1_uox5hxAT420fcyRQfinWIGELbIEUqnN7
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-ID: <olduspslogo@usps.com>
+Content-Disposition: inline
+
+
+--b1_uox5hxAT420fcyRQfinWIGELbIEUqnN7--

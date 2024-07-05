@@ -1,0 +1,542 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:6695:b0:1a6:aa79:77cb with SMTP id so21csp1785603rwb;
+        Tue, 2 Jul 2024 23:36:23 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGVRFZ+cXQd3Gw2lSnq/BIlp2PyAuAJsFaEpOw55yVWWNYrb0i55/APa7NtYvxyd+pydQ2d
+X-Received: by 2002:a05:622a:9:b0:446:5728:2d70 with SMTP id d75a77b69052e-447bf937ad4mr11369191cf.30.1719988583671;
+        Tue, 02 Jul 2024 23:36:23 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719988583; cv=none;
+        d=google.com; s=arc-20160816;
+        b=JnGzBbn5WtBKlex7VAimui/abDFVdUQ6W/AaltH7Wmsk0wEtEmGugArQJK9IDz7wg/
+         ESzumh6XOkCRegVm5McYF799Dvqi2HsePaPzZbvHBem8z02KecEtsPTX7cKYSDxAqf2F
+         JKoUbTqRvSNgWTzS5OR3jEWoGYkPdtJkSfONYVIfEYZ9Ygqa2Ip2rfticJIpKjQaua/X
+         vRs3a/AzicfHDhM4DpK/m6WpFk3eOFJ63y/WvtXrE+dLCCb9a8QQ8H/f9s+EkY+RtsHC
+         +YR+CcN4WO6qwKvMtNPvuezkC27IP1+cAswoCLCVM5FLOP9c9U+IdGT6faKlnd4Rotu+
+         SDng==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:list-unsubscribe-post:precedence:mime-version:subject
+         :message-id:to:reply-to:from:date:list-unsubscribe:dkim-signature
+         :dkim-signature;
+        bh=RJy3RrONoYkJOABr5JwgrWrgRwwQGOhjmi3DdObjFP8=;
+        fh=BfH3tuO4vWcZZHlWy5SVIaCbaMAJl+146y7dupIPkPQ=;
+        b=RM/64zqzMhm5rEAkrOiOiufaVRDsRnyqFh9r5TMIf/gZpmdHC3ff7npbu3ZanTerGE
+         FRvhYpNa74xzb+tB9rjEI9GLc0+7GHYyqNMnijkepnNUbG/573rBJ6HPHbR8jtdKU+6f
+         ZVlFahlolY7NwQh9bmezbXgq+KCQrjoEjq2n51xLU67pQRA3R+qAIxSiOd1bSPyH+6Uq
+         5lG8HRsGYudtpRrz+N+6CeXCEob76hIE9ACxjz258DIVrp4Aj8KUcUInDJ1e5x7V1/AL
+         +uQMi/VnnMNxwGgGRlMXXTgO3RckDd2ikt2M+Q3YdduDiU0CBevI75fX/zDwfZ8XAOXe
+         aOMg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@bf51x.hubspotemail.net header.s=hs2 header.b=KcuyYqrm;
+       dkim=pass header.i=@roll20.net header.s=hs1-9319166 header.b=K6UJ2kzG;
+       spf=pass (google.com: domain of 1axb9tlbq5v1sz4unww52jk5k3xzc67ncrwgf1@bf51x.hubspotemail.net designates 158.247.19.166 as permitted sender) smtp.mailfrom=1axb9tlbq5v1sz4unww52jk5k3xzc67ncrwgf1@bf51x.hubspotemail.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=roll20.net
+Return-Path: <1axb9tlbq5v1sz4unww52jk5k3xzc67ncrwgf1@bf51x.hubspotemail.net>
+Received: from bid46wo.bf51x.hubspotemail.net (bid46wo.bf51x.hubspotemail.net. [158.247.19.166])
+        by mx.google.com with ESMTPS id d75a77b69052e-446514a5bdbsi132320561cf.500.2024.07.02.23.36.23
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 02 Jul 2024 23:36:23 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 1axb9tlbq5v1sz4unww52jk5k3xzc67ncrwgf1@bf51x.hubspotemail.net designates 158.247.19.166 as permitted sender) client-ip=158.247.19.166;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@bf51x.hubspotemail.net header.s=hs2 header.b=KcuyYqrm;
+       dkim=pass header.i=@roll20.net header.s=hs1-9319166 header.b=K6UJ2kzG;
+       spf=pass (google.com: domain of 1axb9tlbq5v1sz4unww52jk5k3xzc67ncrwgf1@bf51x.hubspotemail.net designates 158.247.19.166 as permitted sender) smtp.mailfrom=1axb9tlbq5v1sz4unww52jk5k3xzc67ncrwgf1@bf51x.hubspotemail.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=roll20.net
+Received: by 172.16.139.55 with SMTP id a0b9znrox27ui2wm9e6wduschgj3h5xn8slj2onj7uv;
+        Wed, 3 Jul 2024 06:36:23 GMT
+DKIM-Signature: v=1; s=hs2; d=bf51x.hubspotemail.net; 
+        i=@bf51x.hubspotemail.net; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=RJy3RrONoYkJOABr5JwgrWrgRwwQGOhjmi3DdObjFP8=; 
+        b=KcuyYqrmx6lOebIIMwoTMLzx7cyDm2thg7OFJsEtkOEtyvA97r+eHgnkpBrAS/
+         NFJLPO1DOcMWdnDW9NujIS1KsyU2+/kMXorlu9qlSVqFmB+0EiAI2UVqediVidd
+         GHokHbfVFAZo2vMfCZ3P/UOesfR3vjeCJ+iigwGYTBltbP8wxQpLh8f31ew3aol
+         2/fBa8/B2Sgf312AEQPZaf3/OxfJhAl1MURjNMiT6lhif17pR8h2P2WGjf9QhdS
+         J/90HZDpt+EUDRVlg7L1EWtFeMgKNxGqOEBkvaq8eoF97ohcLtnBBVETrzoDK5x
+         BmGIWEeD9XJJjEXWSZudP5VM1hiA==; q=dns/txt; t=1719988583; 
+        x=1720251383;
+DKIM-Signature: v=1; s=hs1-9319166; d=roll20.net; i=@roll20.net; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=RJy3RrONoYkJOABr5JwgrWrgRwwQGOhjmi3DdObjFP8=; 
+        b=K6UJ2kzGWLANw2jJmOPW9rLfraVKjU3dWj68DhMmdhSYQWtHSLo1s3C93NV7JI
+         YPnGEyr4tZSXG5+7Wh3MymhgrPwj5hyxKB5Dq2MJnEhqtG5FBn0kckJ6AKGS5BC
+         4S38tIrSJV7vhVQc5Wx4vGzSIiLRgIrMT3piF8T3HZQurxMvFskpTvCN8TOpn6Q
+         ZkA3MB7gDFaDlthau4GSCoBcd5dM2JMgvcJtGs6Y48191BFeIUo0+xfn4GUe1R3
+         PKsSGuyQIOyvrMS/Ge9raFYtLIEeZMk90/JgSpM0YLDI/vP/TN68MK0P1838DVg
+         fFfQF9/esM6zIe8WVgDO1O8h4buQ==; q=dns/txt; t=1719988583; 
+        x=1720251383;
+Return-Path: <1axb9tlbq5v1sz4unww52jk5k3xzc67ncrwgf1@bf51x.hubspotemail.net>
+X-HS-Cid: 1axf2r7l02bjhmvp1hc0azvon6qemezk7j5d0x
+List-Unsubscribe: <mailto:1axc9sqxumclhhqkl62i9p61mxphjfkf9rwly5@bf51x.hubspotemail.net?subject=unsubscribe>, <https://hs-9319166.s.hubspotemail.net/subscription-preferences/v2/unsubscribe-all?data=W2nXS-N30h-z7W25fKg-1Z5nM0W3M40FQ41ZLTNW2xwqJ830qKcbW3Fg8qp1LgzBdW3JX3gg1QCQG7W34HQls2RB5-6W1V3h8N32yvFNW4ksk983DNBLpW2PCdz841BmcGW4rqs-p2KTRk2W34G6R322Y1z8W1Nzz8c49T04PW30kFX32PmMNbW3VxT7Y2HVkL1W3QDrhQ38z-SbW2YK1db2YG9qnW3j138C2KwC1rW2TJHL22HsxbKW4rwQWj2WgwqTW1Y_Y662FM6zgW2r4nJn1NpRxYW4ctMFf30lvhXW1Qs-db2CSMwFW1BqTQg4tjtJYW2nWb9B3z3plCW4kNm1J1Z5rcrW1Bv9xr3brgJsW2313ry4mtPCHW3QTJZt3b3LC_W3SHwp92q-DY6W1LHcJQ49n9NpW1Qvbmg328fc4W3dpSCQ2zLDVSW309MBH3P3PwpW3R3wjr4pCCDzW1Nf30l49x1shW34HQ484mDh2_W1VyXWK2-d25_W2vC88x3K99jVW2MX06P1_3-5rW4cLsgz3SBZMHW2xB59r4fwJrPW43ssZV3LFJQzW34z-Cq2HL2D1W1Qg6Gt30tyHdf366FqZ04>
+Date: Tue, 2 Jul 2024 23:36:23 -0700
+From: Roll20 Team <no-reply@roll20.net>
+Reply-To: no-reply@roll20.net
+To: blackpapermoon42@gmail.com
+Message-ID: <1719987502123.fa4236a4-81e8-4034-930a-871216d8b96d@bf51x.hubspotemail.net>
+Subject: Important notice regarding your data
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_14478160_462900039.1719988576708"
+Precedence: bulk
+X-Report-Abuse-To: abuse@hubspot.com (see
+ https://policy.hubspot.com/abuse-complaints)
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: aeft0z0:aifhc82x:aidf:HubSpot
+
+------=_Part_14478160_462900039.1719988576708
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello Roll20 User,
+
+We are writing to tell you about a data security incident that may have exp=
+osed some of your personal information. We take the protection and proper u=
+se of your information very seriously. For this reason, we are contacting y=
+ou directly to explain the circumstances of the incident.
+
+On June 29, 2024, at 6:30 P.M. Pacific Time, Roll20 learned that an adminis=
+trative account was compromised. By 7:30 P.M. Pacific Time, we acted to ens=
+ure that all unauthorized access was blocked, and we began the process of i=
+nvestigating the incident to determine the scope.
+
+Following our investigation, we learned that the unauthorized third-party h=
+ad access to administrative tools, which may have resulted in the exposure =
+of personal information, such as your:  first and last name, email address,=
+ last known IP address, and the last 4 digits of your credit card (solely i=
+f you had a stored payment with us).
+
+Notably, the compromised administrative tooling did not expose your passwor=
+d or your full payment information, such as your address or credit card num=
+ber.
+
+While we have no reason to believe that your personal information has been =
+misused, we are notifying you out of an abundance of caution.
+
+We take your privacy and security very seriously, and we deeply regret that=
+ this incident occurred. We will be implementing an action plan to further =
+enhance the security of our administrative tools going forward.
+
+If you have questions, or if you would like to view a copy of your account =
+data that the third party may have had access to, please reach out to us at=
+ https://d159V804.na1.hubspotlinks.com/Ctc/V+113/d159V804/VXhgyM60BH9FN1XLC=
+V5GJlxDW3_3yVc5h2jsRN1zSXrM2-dz0W5BW0B06lZ3p3W5jHNW13GtTnRW62BkGW2kY-ljW7CL=
+w2n8TTY_sN2wgWls-sFpFV8C9tj7_0XVYW74Gdvp9hkL5GMsq0GynpSk0W652W6R1KmcBwW7HXX=
+nP6CDMcLN6KvPGR_VSx6W5Vjkc14Pq3KrW7JK2B26dr39XW6TVDjl1yfvcCW7pNzkZ6vwbvpW2Q=
+hdK54PT1YBW44bdGy1tdSjWVvR-s_3b-058W7nDGs22fxDWsf6t4Jtq04 (https://d159V804=
+.na1.hubspotlinks.com/Ctc/V+113/d159V804/VXhgyM60BH9FN1XLCV5GJlxDW3_3yVc5h2=
+jsRN1zSXrM2-dz0W5BW0B06lZ3p3W5jHNW13GtTnRW62BkGW2kY-ljW7CLw2n8TTY_sN2wgWls-=
+sFpFV8C9tj7_0XVYW74Gdvp9hkL5GMsq0GynpSk0W652W6R1KmcBwW7HXXnP6CDMcLN6KvPGR_V=
+Sx6W5Vjkc14Pq3KrW7JK2B26dr39XW6TVDjl1yfvcCW7pNzkZ6vwbvpW2QhdK54PT1YBW44bdGy=
+1tdSjWVvR-s_3b-058W7nDGs22fxDWsf6t4Jtq04 ) and create a support ticket with=
+ the subject line =E2=80=9CIncident Data Request=E2=80=9D and we will be ha=
+ppy to assist you.
+
+Here are some resources containing good best practices for protecting your =
+information online which we recommend: https://d159V804.na1.hubspotlinks.co=
+m/Ctc/V+113/d159V804/VXhgyM60BH9FN1XLCV5GJlxDW3_3yVc5h2jsRN1zSXs22-dz0W69sM=
+D-6lZ3mCW3B3jWm3_w1sLW3f6-lD7QQlZ1W3MrSbG6zFPZBW5CMwQx6FdntJMbn4jYdFV_TN7vT=
+fZq2FG2bVNr0nC1TccnrW6Px3wc3hjwwFW1d-H912ZdfM4W17syQH2vqDcxW3FdTQs6TRMtHV_5=
+sC-5dXT8xW3lGZkB8MM34MW8wjtKJ8rGN-YW8dfz0x4l3cjtW6TdFw28FnT5qW2QmlK_8CwPc4W=
+4VxLhy4fr1xlW1KM7Hl2KDWlPW4tBHth1C7XYMf764QqW04 (https://d159V804.na1.hubsp=
+otlinks.com/Ctc/V+113/d159V804/VXhgyM60BH9FN1XLCV5GJlxDW3_3yVc5h2jsRN1zSXs2=
+2-dz0W69sMD-6lZ3mCW3B3jWm3_w1sLW3f6-lD7QQlZ1W3MrSbG6zFPZBW5CMwQx6FdntJMbn4j=
+YdFV_TN7vTfZq2FG2bVNr0nC1TccnrW6Px3wc3hjwwFW1d-H912ZdfM4W17syQH2vqDcxW3FdTQ=
+s6TRMtHV_5sC-5dXT8xW3lGZkB8MM34MW8wjtKJ8rGN-YW8dfz0x4l3cjtW6TdFw28FnT5qW2Qm=
+lK_8CwPc4W4VxLhy4fr1xlW1KM7Hl2KDWlPW4tBHth1C7XYMf764QqW04 )
+
+Roll20, LLC, 2657 Windmill Pkwy, Suite 630, Henderson, NV 89074, United Sta=
+tes, 316-247-4246
+
+Unsubscribe (https://hs-9319166.s.hubspotemail.net/preferences/en/unsubscri=
+be?data=3DW2nXS-N30h-SzW4rGRr62YKVdtW2TvSw32qRbbbW3_-r8-1N6s6NW2vzTLm364xvK=
+W2p74gd3f-kZnW47CSfG4pn5T9W2vCdQB1LhlKBW3__d_64hNcYmW4thD-n3gpGqyW3bkvYB47S=
+KFGW24TXg23GWsVzW3X-Mw436p_18W4mJnhW3jfVHNW47Nx3c3M89zQW2vw8yk2Wg987W1ZbqX4=
+4pyHvyW34kJgk1QBBLcW2vM6BS3W2k29W1_7Kxm3F8gZ8W1Xb_1d3bfGXXW4cxjWp3VY5Y8W4tf=
+7nd2WvzFJW2CGKj638b8k1W2TsNcw30pV99W3_Lv062THq3vW2FRfb93NGh6RW3ZPBPj1Bc-J4W=
+2MFZ0t2t53n7W4cL6DX47GlrZW21bQYt1LgW2cW3_zLwb36g9rcW2PyLPY25pbnjW2Ft_GG3SQf=
+h_W1BxfW_1_37ShW1Nlv6Q3LJxWrW3294373SSJZtW3VztYk47CqN_W3_w2dY3JJq88W3_VN7F3=
+47bLGW3ZJfB92x-ppWW2357nl2HyXk5W30Kwxy2TPD01W24_-TZ30mJ9jW4kctC_215pdRW2HtM=
+hp2sSgS3W3d0dfD1_dHz90&_hsenc=3Dp2ANqtz--d0IlQfs505yKxUAfzL9ejgiTwjpOyBtauj=
+pxzsc8TvZV9KUwdt8XriAvHDrGBCEwnHFNyVDfA0-YKV8rGLKxc_JT_K6tLrwNmMCaPkbVP1JK0=
+D6Q&_hsmi=3D314226599 )
+Manage preferences (https://hs-9319166.s.hubspotemail.net/preferences/en/ma=
+nage?data=3DW2nXS-N30h-SzW4rGRr62YKVdtW2TvSw32qRbbbW3_-r8-1N6s6NW2vzTLm364x=
+vKW2p74gd3f-kZnW47CSfG4pn5T9W2vCdQB1LhlKBW3__d_64hNcYmW4thD-n3gpGqyW3bkvYB4=
+7SKFGW24TXg23GWsVzW3X-Mw436p_18W4mJnhW3jfVHNW47Nx3c3M89zQW2vw8yk2Wg987W1Zbq=
+X44pyHvyW34kJgk1QBBLcW2vM6BS3W2k29W1_7Kxm3F8gZ8W1Xb_1d3bfGXXW4cxjWp3VY5Y8W4=
+tf7nd2WvzFJW2CGKj638b8k1W2TsNcw30pV99W3_Lv062THq3vW2FRfb93NGh6RW3ZPBPj1Bc-J=
+4W2MFZ0t2t53n7W4cL6DX47GlrZW21bQYt1LgW2cW3_zLwb36g9rcW2PyLPY25pbnjW2Ft_GG3S=
+Qfh_W1BxfW_1_37ShW1Nlv6Q3LJxWrW3294373SSJZtW3VztYk47CqN_W3_w2dY3JJq88W3_VN7=
+F347bLGW3ZJfB92x-ppWW2357nl2HyXk5W30Kwxy2TPD01W24_-TZ30mJ9jW4kctC_215pdRW2H=
+tMhp2sSgS3W3d0dfD1_dHz90&_hsenc=3Dp2ANqtz--d0IlQfs505yKxUAfzL9ejgiTwjpOyBta=
+ujpxzsc8TvZV9KUwdt8XriAvHDrGBCEwnHFNyVDfA0-YKV8rGLKxc_JT_K6tLrwNmMCaPkbVP1J=
+K0D6Q&_hsmi=3D314226599 )
+------=_Part_14478160_462900039.1719988576708
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" lang=3D"en"><head>
+    <title>Important notice regarding your data</title>
+    <meta property=3D"og:title" content=3D"Important notice regarding your =
+data">
+    <meta name=3D"twitter:title" content=3D"Important notice regarding your=
+ data">
+   =20
+   =20
+   =20
+<meta name=3D"x-apple-disable-message-reformatting">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+    <!--[if gte mso 9]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+ =20
+  <style>
+    ul > li {
+      text-indent: -1em;
+    }
+  </style>
+<![endif]-->
+<!--[if mso]>
+<style type=3D"text/css">
+ body, td {font-family: Arial, Helvetica, sans-serif;}
+ .hse-body-wrapper-table {background-color: #EAF0F6;}
+</style>
+<![endif]-->
+   =20
+     =20
+ =20
+   =20
+  <meta name=3D"generator" content=3D"HubSpot"><meta property=3D"og:url" co=
+ntent=3D"https://drivethrurpg.com/-temporary-slug-a58e28eb-e848-4d08-b76b-1=
+5437df6d116"><meta name=3D"robots" content=3D"noindex,follow"><!--[if !((ms=
+o)|(IE))]><!-- --><style type=3D"text/css">@media only screen and (max-widt=
+h:639px){img.stretch-on-mobile,.hs_rss_email_entries_table img,.hs-stretch-=
+cta .hs-cta-img{height:auto !important;width:100% !important}
+.display_block_on_small_screens{display:block}.hs_padded{padding-left:20px =
+!important;padding-right:20px !important}
+.hs-hm,table.hs-hm{display:none}.hs-hd{display:block !important}table.hs-hd=
+{display:table !important}
+}.moz-text-html .hse-column-container{max-width:600px !important;width:600p=
+x !important}
+.moz-text-html .hse-column{display:table-cell;vertical-align:top}.moz-text-=
+html .hse-section .hse-size-12{max-width:600px !important;width:600px !impo=
+rtant}
+@media only screen and (min-width:640px){.hse-column-container{max-width:60=
+0px !important;width:600px !important}
+.hse-column{display:table-cell;vertical-align:top}.hse-section .hse-size-12=
+{max-width:600px !important;width:600px !important}
+}</style><!--<![endif]--><style type=3D"text/css">#hs_body #hs_cos_wrapper_=
+main a[x-apple-data-detectors]{color:inherit !important;text-decoration:non=
+e !important;font-size:inherit !important;font-family:inherit !important;fo=
+nt-weight:inherit !important;line-height:inherit !important}
+a{text-decoration:underline}p{margin:0}body{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;-webkit-font-smoothing:antialiased;moz-osx-font-sm=
+oothing:grayscale}</style></head>
+  <body id=3D"hs_body" bgcolor=3D"#EAF0F6" style=3D"margin:0 !important; pa=
+dding:0 !important; font-family:Arial, sans-serif; font-size:15px; color:#2=
+3496d; word-break:break-word"><!--[if !mso]><!--><style type=3D"text/css">#=
+hs_body #hs_cos_wrapper_main a[x-apple-data-detectors]{color:inherit !impor=
+tant;text-decoration:none !important;font-size:inherit !important;font-fami=
+ly:inherit !important;font-weight:inherit !important;line-height:inherit !i=
+mportant}
+a{text-decoration:underline}p{margin:0}body{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;-webkit-font-smoothing:antialiased;moz-osx-font-sm=
+oothing:grayscale}
+@media only screen and (max-width:639px){img.stretch-on-mobile,.hs_rss_emai=
+l_entries_table img,.hs-stretch-cta .hs-cta-img{height:auto !important;widt=
+h:100% !important}
+.display_block_on_small_screens{display:block}.hs_padded{padding-left:20px =
+!important;padding-right:20px !important}
+.hs-hm,table.hs-hm{display:none}.hs-hd{display:block !important}table.hs-hd=
+{display:table !important}
+}.moz-text-html .hse-column-container{max-width:600px !important;width:600p=
+x !important}
+.moz-text-html .hse-column{display:table-cell;vertical-align:top}.moz-text-=
+html .hse-section .hse-size-12{max-width:600px !important;width:600px !impo=
+rtant}
+@media only screen and (min-width:640px){.hse-column-container{max-width:60=
+0px !important;width:600px !important}
+.hse-column{display:table-cell;vertical-align:top}.hse-section .hse-size-12=
+{max-width:600px !important;width:600px !important}
+}</style><!--<![endif]-->
+   =20
+   =20
+<!--[if gte mso 9]>
+<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+    <v:fill type=3D"tile" size=3D"100%,100%" color=3D"#ffffff"/>
+</v:background>
+<![endif]-->
+    <div class=3D"hse-body-background" lang=3D"en" style=3D"background-colo=
+r:#eaf0f6" bgcolor=3D"#eaf0f6">
+      <table role=3D"presentation" class=3D"hse-body-wrapper-table" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"border-spacing:0 !important; border-c=
+ollapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; margin:0; pad=
+ding:0; width:100% !important; min-width:320px !important; height:100% !imp=
+ortant" width=3D"100%" height=3D"100%">
+        <tbody><tr>
+          <td class=3D"hse-body-wrapper-td" valign=3D"top" style=3D"border-=
+collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-se=
+rif; font-size:15px; color:#23496d; word-break:break-word; padding-top:20px=
+; padding-bottom:20px">
+            <div id=3D"hs_cos_wrapper_main" class=3D"hs_cos_wrapper hs_cos_=
+wrapper_widget hs_cos_wrapper_type_dnd_area" style=3D"color: inherit; font-=
+size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" d=
+ata-hs-cos-type=3D"dnd_area">  <div id=3D"section_1657222914709" class=3D"h=
+se-section hse-section-first" style=3D"padding-left:10px; padding-right:10p=
+x">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; bo=
+rder-spacing:0; background-color:#ffffff" bgcolor=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:colla=
+pse;border-spacing:0;">
+      <table align=3D"center" style=3D"border-collapse:collapse;mso-table-l=
+space:0pt;mso-table-rspace:0pt;width:600px;" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0pt;mso-table-rsp=
+ace:0pt;width:600px">
+<![endif]-->
+<div id=3D"column_1657222914710_0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module_16572229146953" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; =
+font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widg=
+et" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"=
+presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"b=
+order-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt;=
+ mso-table-rspace:0pt">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"bord=
+er-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans=
+-serif; color:#23496d; word-break:break-word; text-align:center; padding:10=
+px 20px; font-size:0px">
+        <img alt=3D"Roll20" src=3D"https://pages.roll20.net/hs-fs/hubfs/New=
+sletter/Roll20.png?width=3D272&amp;upscale=3Dtrue&amp;name=3DRoll20.png" st=
+yle=3D"outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; =
+max-width:100%; font-size:16px" width=3D"136" align=3D"middle" srcset=3D"ht=
+tps://pages.roll20.net/hs-fs/hubfs/Newsletter/Roll20.png?upscale=3Dtrue&amp=
+;width=3D272&amp;upscale=3Dtrue&amp;name=3DRoll20.png 136w, https://pages.r=
+oll20.net/hs-fs/hubfs/Newsletter/Roll20.png?upscale=3Dtrue&amp;width=3D544&=
+amp;upscale=3Dtrue&amp;name=3DRoll20.png 272w" sizes=3D"(max-width: 136px) =
+100vw, 136px">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" style=3D"border-spacing:0 !important; border-collapse:collapse; mso-ta=
+ble-lspace:0pt; mso-table-rspace:0pt"><tbody><tr><td class=3D"hs_padded" st=
+yle=3D"border-collapse:collapse; mso-line-height-rule:exactly; font-family:=
+Arial, sans-serif; font-size:15px; color:#23496d; word-break:break-word; pa=
+dding:10px 20px"><div id=3D"hs_cos_wrapper_module_17199464048981" class=3D"=
+hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"c=
+olor: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-gener=
+al-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrapper_mo=
+dule_17199464048981_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_=
+wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; line-h=
+eight: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"ri=
+ch_text"><p style=3D"mso-line-height-rule:exactly; line-height:175%">Hello =
+Roll20 User,</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">We are writing =
+to tell you about a data security incident that may have exposed some of yo=
+ur personal information. We take the protection and proper use of your info=
+rmation very seriously. For this reason, we are contacting you directly to =
+explain the circumstances of the incident.&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">On June 29, 202=
+4, at 6:30 P.M. Pacific Time, Roll20 learned that an administrative account=
+ was compromised. By 7:30 P.M. Pacific Time, we acted to ensure that all un=
+authorized access was blocked, and we began the process of investigating th=
+e incident to determine the scope.</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">Following our i=
+nvestigation, we learned that the unauthorized third-party had access to ad=
+ministrative tools, which may have resulted in the exposure of personal inf=
+ormation, such as your:&nbsp; first and last name, email address, last know=
+n IP address, and the last 4 digits of your credit card (solely if you had =
+a stored payment with us).</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">Notably, the co=
+mpromised administrative tooling <strong>did not expose</strong> your passw=
+ord or your full payment information, such as your address or credit card n=
+umber.</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">While we have n=
+o reason to believe that your personal information has been misused, we are=
+ notifying you out of an abundance of caution.</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><span style=3D"=
+color: #425b76;">We take your privacy and security very seriously, and we d=
+eeply regret that this incident occurred. We will be implementing an action=
+ plan to further enhance the security of our administrative tools going for=
+ward.</span></p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">If you have que=
+stions, or if you would like to view a copy of your account data that the t=
+hird party may have had access to, please reach out to us at <a href=3D"htt=
+ps://d159V804.na1.hubspotlinks.com/Ctc/V+113/d159V804/VXhgyM60BH9FN1XLCV5GJ=
+lxDW3_3yVc5h2jsRN1zSXrM2_3wgW5BW0B06lZ3m4W2h3K7P7P4k_PW582P4w8jLPldV3Wt5G5r=
+8wngW5M93M194Hw01W6xfWkx3D6VSCW7fYkLj7YR8HyW67BmhF6CnZwqW6fnts22mqGnLW5bk6P=
+q3Vs9vpW8Bm3yF1SWcRDN454D0YwVrV5N11nwxl--zCXW271vYY4YPGB7W8wKqTH1P2p8pW77bC=
+nN7C6QJKW9d61-q8YkHqJN744dlDsRh5JN1CYJ5CbQx_ff79sqg404" style=3D"mso-line-h=
+eight-rule:exactly; color:#00a4bd" data-hs-link-id=3D"0" target=3D"_blank">=
+https://help.roll20.net</a> and create a support ticket with the subject li=
+ne =E2=80=9CIncident Data Request=E2=80=9D and we will be happy to assist y=
+ou.</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><span style=3D"=
+color: #425b76;">&nbsp;</span></p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><span style=3D"=
+color: #425b76;">Here are some resources containing good best practices for=
+ protecting your information online which we recommend: </span><a href=3D"h=
+ttps://d159V804.na1.hubspotlinks.com/Ctc/V+113/d159V804/VXhgyM60BH9FN1XLCV5=
+GJlxDW3_3yVc5h2jsRN1zSXs22_3wgW69sMD-6lZ3m8W5jzkq93qLQnbW1hnJZZ5lfNjlW6WXdk=
+h29GYV3W1DWdFd1lxhl0VrTxKg6WHxp4W8HKM5K4Qx3fBW8RLJtQ1f8h3DN6lG4_jyRkNVW5-1Q=
+Vd2RQD_GW3bWtNb774cqrW2_Ff871NBD4TW7mBp_h8LBDLTN65n4rRrnVwKW5QWrDc53hZ-7W7c=
+fd5p11jmxmW3X5KBr3_2mLZW2HhlnV1JHRSCW7QKZtr1kJKy2W7TNSvs7pb0QvW7wSS-542PF0p=
+f8zV9sH04" style=3D"mso-line-height-rule:exactly; color:#00a4bd" data-hs-li=
+nk-id=3D"0" target=3D"_blank">https://consumer.ftc.gov/online-security</a><=
+/p></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_1657222858628" class=3D"hse-section hse-section-last" =
+style=3D"padding-left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; bo=
+rder-spacing:0; background-color:#ffffff" bgcolor=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:colla=
+pse;border-spacing:0;">
+      <table align=3D"center" style=3D"border-collapse:collapse;mso-table-l=
+space:0pt;mso-table-rspace:0pt;width:600px;" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0pt;mso-table-rsp=
+ace:0pt;width:600px">
+<![endif]-->
+<div id=3D"column_1657222858628_0" class=3D"hse-column hse-size-12">
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" style=3D"border-spacing:0 !important; border-collapse:collapse; mso-=
+table-lspace:0pt; mso-table-rspace:0pt"><tbody><tr><td class=3D"hs_padded" =
+style=3D"border-collapse:collapse; mso-line-height-rule:exactly; font-famil=
+y:Arial, sans-serif; font-size:15px; color:#23496d; word-break:break-word; =
+padding:10px 20px"><div id=3D"hs_cos_wrapper_module_16572228586121" class=
+=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=
+=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-=
+general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"presenta=
+tion" class=3D"hse-footer hse-secondary" width=3D"100%" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"border-spacing:0 !important; border-collapse:coll=
+apse; mso-table-lspace:0pt; mso-table-rspace:0pt; font-family:Arial, sans-s=
+erif; font-size:12px; line-height:135%; color:#23496d; margin-bottom:0; pad=
+ding:0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"border-collapse:collapse=
+; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15=
+px; color:#23496d; word-break:break-word; text-align:center; margin-bottom:=
+0; line-height:135%; padding:10px 20px">
+        <p style=3D"mso-line-height-rule:exactly; font-family:arial, helvet=
+ica, sans-serif; font-size:12px; font-weight:normal; text-decoration:none; =
+font-style:normal; color:#23496d">
+          Roll20, LLC, 2657 Windmill Pkwy, Suite 630, Henderson, NV 89074, =
+United States, 316-247-4246
+        </p>
+        <p style=3D"mso-line-height-rule:exactly">
+          <a data-unsubscribe=3D"true" href=3D"https://hs-9319166.s.hubspot=
+email.net/preferences/en/unsubscribe?data=3DW2nXS-N30h-SzW4rGRr62YKVdtW2TvS=
+w32qRbbbW3_-r8-1N6s6NW2vzTLm364xvKW2p74gd3f-kZnW47CSfG4pn5T9W2vCdQB1LhlKBW3=
+__d_64hNcYmW4thD-n3gpGqyW3bkvYB47SKFGW24TXg23GWsVzW3X-Mw436p_18W4mJnhW3jfVH=
+NW47Nx3c3M89zQW2vw8yk2Wg987W1ZbqX44pyHvyW34kJgk1QBBLcW2vM6BS3W2k29W1_7Kxm3F=
+8gZ8W1Xb_1d3bfGXXW4cxjWp3VY5Y8W4tf7nd2WvzFJW2CGKj638b8k1W2TsNcw30pV99W3_Lv0=
+62THq3vW2FRfb93NGh6RW3ZPBPj1Bc-J4W2MFZ0t2t53n7W4cL6DX47GlrZW21bQYt1LgW2cW3_=
+zLwb36g9rcW2PyLPY25pbnjW2Ft_GG3SQfh_W1BxfW_1_37ShW1Nlv6Q3LJxWrW3294373SSJZt=
+W3VztYk47CqN_W3_w2dY3JJq88W3_VN7F347bLGW3ZJfB92x-ppWW2357nl2HyXk5W30Kwxy2TP=
+D01W24_-TZ30mJ9jW4kctC_215pdRW2HtMhp2sSgS3W3d0dfD1_dHz90&amp;_hsenc=3Dp2ANq=
+tz--t4i6Q7NG3lus0oDRw0phhX6xdw-YfFzGGiKPEG3pHTkx7GYuSdqtXm10qPJ9A0eFis7mlyG=
+qA9WaUyKdBBS02vlZ0Xe7xeaUiIB1FQiC8TRlH_E8&amp;_hsmi=3D314226599" style=3D"m=
+so-line-height-rule:exactly; font-family:helvetica; font-size:12px; color:#=
+00a4bd; font-weight:normal; text-decoration:underline; font-style:normal" d=
+ata-hs-link-id=3D"0" target=3D"_blank">Unsubscribe</a>
+          <a data-unsubscribe=3D"true" href=3D"https://hs-9319166.s.hubspot=
+email.net/preferences/en/manage?data=3DW2nXS-N30h-SzW4rGRr62YKVdtW2TvSw32qR=
+bbbW3_-r8-1N6s6NW2vzTLm364xvKW2p74gd3f-kZnW47CSfG4pn5T9W2vCdQB1LhlKBW3__d_6=
+4hNcYmW4thD-n3gpGqyW3bkvYB47SKFGW24TXg23GWsVzW3X-Mw436p_18W4mJnhW3jfVHNW47N=
+x3c3M89zQW2vw8yk2Wg987W1ZbqX44pyHvyW34kJgk1QBBLcW2vM6BS3W2k29W1_7Kxm3F8gZ8W=
+1Xb_1d3bfGXXW4cxjWp3VY5Y8W4tf7nd2WvzFJW2CGKj638b8k1W2TsNcw30pV99W3_Lv062THq=
+3vW2FRfb93NGh6RW3ZPBPj1Bc-J4W2MFZ0t2t53n7W4cL6DX47GlrZW21bQYt1LgW2cW3_zLwb3=
+6g9rcW2PyLPY25pbnjW2Ft_GG3SQfh_W1BxfW_1_37ShW1Nlv6Q3LJxWrW3294373SSJZtW3Vzt=
+Yk47CqN_W3_w2dY3JJq88W3_VN7F347bLGW3ZJfB92x-ppWW2357nl2HyXk5W30Kwxy2TPD01W2=
+4_-TZ30mJ9jW4kctC_215pdRW2HtMhp2sSgS3W3d0dfD1_dHz90&amp;_hsenc=3Dp2ANqtz--t=
+4i6Q7NG3lus0oDRw0phhX6xdw-YfFzGGiKPEG3pHTkx7GYuSdqtXm10qPJ9A0eFis7mlyGqA9Wa=
+UyKdBBS02vlZ0Xe7xeaUiIB1FQiC8TRlH_E8&amp;_hsmi=3D314226599" style=3D"mso-li=
+ne-height-rule:exactly; font-family:helvetica; font-size:12px; color:#00a4b=
+d; font-weight:normal; text-decoration:underline; font-style:normal" data-h=
+s-link-id=3D"0" target=3D"_blank">Manage preferences</a>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div></div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+ =20
+<img src=3D"https://d159V804.na1.hubspotlinks.com/Cto/V+113/d159V804/VXhgyM=
+60BH9FN1XLCV5GJlxDW3_3yVc5h2jsRW1zSXcs8fYL5w2qn1" alt=3D"" width=3D"1" heig=
+ht=3D"1" border=3D"0" style=3D"display:none!important;min-height:1px!import=
+ant;width:1px!important;border-width:0!important;margin-top:0!important;mar=
+gin-bottom:0!important;margin-right:0!important;margin-left:0!important;pad=
+ding-top:0!important;padding-bottom:0!important;padding-right:0!important;p=
+adding-left:0!important"></body></html>
+------=_Part_14478160_462900039.1719988576708--
+

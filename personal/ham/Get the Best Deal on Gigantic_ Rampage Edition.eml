@@ -1,0 +1,867 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6358:f4e:b0:191:9231:ed1 with SMTP id c14csp426320rwj;
+        Wed, 22 May 2024 11:26:03 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGMTkgNRDurg4bfwCJ2JbfkbUZtOS3RBg5bo0JrTtX6dZiMTNWsaFXJSeLCSlLtT5rVqcEW
+X-Received: by 2002:a05:6a00:4b0e:b0:6ec:f282:f4ea with SMTP id d2e1a72fcca58-6f6d648b044mr2874272b3a.34.1716402362776;
+        Wed, 22 May 2024 11:26:02 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1716402362; cv=none;
+        d=google.com; s=arc-20160816;
+        b=DghqXTDqxrGaI7StjPpXvVuyeLVMTbHo+OMhJX0EOYs1ORdkbzzX/1JdRn8N7WNm7o
+         f8BEXLwiXBNYIYBlekVeVkmrdCBL9Ppsi04rPTxbgd9SpDbQF6dokfNbVkASgJfcsfo7
+         ySgZDEBMjE2zvLhz/KkhSXVlpFgjfNACvvdcFqV+wlXL3s71yuJhlu7ervx3+ki92Y+u
+         fhdn6GZ1y+VloRqO7Df2iqLgoTcvpQVgyy53GQKMTuM2Q6bzD3IVSnCHc84Nif35bDQU
+         oBalJ5RI9hXxcA4kzMGnFbBee+GBryfw0hSfP8HtqhM8ux/bio3ThqCbIu7BawpZ0jty
+         d7pg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:message-id:content-transfer-encoding:mime-version
+         :subject:to:from:date:dkim-signature:dkim-signature;
+        bh=8nzBtt/oJpHsnCPb+I5kF8FcN8Gm+fnugVPIAxJSCaQ=;
+        fh=BfH3tuO4vWcZZHlWy5SVIaCbaMAJl+146y7dupIPkPQ=;
+        b=bW+cV/dp4NzI1kKxLk7jhAldwZsKofWA8qpplQBuEcoXXjgZclgIurMmmWJ8lDT+CI
+         V+bVwdGx1kkFltyGDnAQ1ddXnQM5z7HeqH/2HZLwrAwrUmtBWhpaycI+zVv0WNUd0e1s
+         xF5Wjcf9GpI1a+L9x6lv9qF1VwRVGdtKV2Qb1O8BpMNIcG3gTWgltbNeTU1NoIIrXdCL
+         S1j49vEeAD13FA77Kjiv1h/SAmVkc+Q8U+2fyBrm5YmUQK55saoL3L4PZfUj4UHUVl5t
+         JcHKIbV/Mg48ytG3FBXWKb8webjWRh7eb0X9MUq3xEIcYDTsX/a2NVyVTT+MJDZzeBdK
+         GMNg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@arcgames.com header.s=6axknyybj647zu3kbfcfbslcat7wrcl2 header.b=Znu7o7gR;
+       dkim=pass header.i=@amazonses.com header.s=7v7vs6w47njt4pimodk5mmttbegzsi6n header.b=PtGxdSci;
+       spf=pass (google.com: domain of 0101018fa18d9730-de9630d5-4b9c-4105-a267-d5825b27aad5-000000@ses-mail-from.arcgames.com designates 54.240.57.84 as permitted sender) smtp.mailfrom=0101018fa18d9730-de9630d5-4b9c-4105-a267-d5825b27aad5-000000@ses-mail-from.arcgames.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=arcgames.com
+Return-Path: <0101018fa18d9730-de9630d5-4b9c-4105-a267-d5825b27aad5-000000@ses-mail-from.arcgames.com>
+Received: from a57-84.smtp-out.us-west-2.amazonses.com (a57-84.smtp-out.us-west-2.amazonses.com. [54.240.57.84])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-6f4d2b1dad3si6987328b3a.266.2024.05.22.11.26.02
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 22 May 2024 11:26:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0101018fa18d9730-de9630d5-4b9c-4105-a267-d5825b27aad5-000000@ses-mail-from.arcgames.com designates 54.240.57.84 as permitted sender) client-ip=54.240.57.84;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@arcgames.com header.s=6axknyybj647zu3kbfcfbslcat7wrcl2 header.b=Znu7o7gR;
+       dkim=pass header.i=@amazonses.com header.s=7v7vs6w47njt4pimodk5mmttbegzsi6n header.b=PtGxdSci;
+       spf=pass (google.com: domain of 0101018fa18d9730-de9630d5-4b9c-4105-a267-d5825b27aad5-000000@ses-mail-from.arcgames.com designates 54.240.57.84 as permitted sender) smtp.mailfrom=0101018fa18d9730-de9630d5-4b9c-4105-a267-d5825b27aad5-000000@ses-mail-from.arcgames.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=arcgames.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6axknyybj647zu3kbfcfbslcat7wrcl2; d=arcgames.com; t=1716402362;
+	h=Date:From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID;
+	bh=yguLx/6Z4n+M6KktxjplO8kwP0MwA6dJOt7u8MnCOAw=;
+	b=Znu7o7gRkll/VUfuhiLWgPRmycbUCX+oCgjQAqdTt4XTCNKaDm38ZRRRjnCFUyPg
+	HySL8BLJpfV0/0pkbScNMlLD2rANCZ06wmNyXjKhjlh3rWdrrdjhZwIELWB7d9uc9yx
+	RNGeB0cFa1ihlmlteI0JKej/CdV0ITiNEjoSTakjIvp5g1mM5ZE+acKIXakDqOoRgK2
+	MpEnKt/NBqY6ucTdK6Udnao/6VNmlHJAg7kQ9zPWhI2QT+HjpknNn2sTz06uozQySCt
+	R8I2ZRQOgOV7G8XnQI3rf3s4o32FIvXyGIeMuZygG3t9cZFlNAWpDZxIJhUISWaumhr
+	2GwBj4RO8g==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1716402362;
+	h=Date:From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Feedback-ID;
+	bh=yguLx/6Z4n+M6KktxjplO8kwP0MwA6dJOt7u8MnCOAw=;
+	b=PtGxdSciyBPutAL6KVSJ7FqpT4Ka79f85o4BFpuOT9/NE6b9hSr3bki0cbuU6yDN
+	PIEjuaLxuZImEjJjdnvgzQD0skAZPeHTxuxuilcy+CVPzt6Fs+eIqq8LVhBqDIlCzBP
+	Kb07qjIlgyaspsIrdKlATOLbgNi+Zrl0N0MdObA0=
+Date: Wed, 22 May 2024 18:26:02 +0000
+From: Gigantic <email@arcgames.com>
+To: blackpapermoon42@gmail.com
+Subject: Get the Best Deal on Gigantic: Rampage Edition
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <0101018fa18d9730-de9630d5-4b9c-4105-a267-d5825b27aad5-000000@us-west-2.amazonses.com>
+Feedback-ID: ::1.us-west-2.+t3TcZnPUhBEhmg7cJkJWa7lrWxIHkad6AGmEYPyGJc=:AmazonSES
+X-SES-Outgoing: 2024.05.22-54.240.57.84
+
+<title></title>
+<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type" />
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1.0, minimum-scale=
+=3D1.0" name=3D"viewport" />
+<meta name=3D"x-apple-disable-message-reformatting">
+<html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:sch=
+emas-microsoft-com:office:office">
+<link rel=3D"stylesheet" href=3D"https://use.typekit.net/koa2lpv.css">
+<link rel=3D"preconnect" href=3D"https://fonts.googleapis.com">
+<link rel=3D"preconnect" href=3D"https://fonts.gstatic.com" crossorigin>
+<link href=3D"https://fonts.googleapis.com/css2?family=3DChakra+Petch:wght@=
+500&family=3DInter:wght@700&display=3Dswap" rel=3D"stylesheet">
+<!--[if (mso 9)]>
+    <style type=3D"text/css">
+    table td{font-family: 'Helvetica Neue', Helvetica, Arial, 'sans-serif' =
+!important;}
+    </style>
+<![endif]-->
+<style type=3D"text/css">a[x-apple-data-detectors] {
+color: inherit !important;
+text-decoration: none;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+}
+
+.addressLink a {
+color: #4c4c4c !important;
+text-decoration: none !important;
+}
+.applelink a {
+color: #7b7b7b !important;
+text-decoration: none !important;
+}
+.applelink1 a {
+color: #cacaca !important;
+text-decoration: none !important;
+}
+.hide {
+display: none;
+}
+.mso-hide {
+display: none;
+mso-hide: all;
+}
+.ctawid {
+min-width: 240px !important;
+}
+table {
+border-spacing: 0px;
+border-collapse: collapse;
+mso-table-lspace: 0;
+mso-table-rspace: 0;
+}
+table td {
+border-collapse: collapse;
+mso-table-lspace: 0;
+mso-table-rspace: 0;
+}
+#preview-spacer {
+display: none;
+display: none!important;
+}
+
+@media only screen and (max-width: 580px) {
+.w320 {
+width: 320px !important;
+min-width: 100vw !important;
+max-width: none !important;
+}
+.w100 {
+width: 100% !important;
+}
+.w300 {
+width: 300px !important;
+height: auto !important;
+}
+
+.w150 {
+width: 150px !important;
+}
+.w90 {
+width: 90px !important;
+}
+.gmail-app-fix {
+display: none !important;
+}
+.m0 {
+margin: 0 auto !important;
+}
+.h {
+display: none !important;
+}
+.block {
+display: block !important;
+}
+.center {
+text-align: center !important;
+}
+.w20 {
+width: 20px !important;
+}
+.h11 {
+height: 11px !important;
+}
+.h7 {
+height: 7px !important;
+}
+.h6 {
+height: 6px !important;
+}
+.pdt24 {
+padding-top: 24px !important;
+}
+.h24 {
+height: 24px !important;
+}
+
+.htauto {
+height: auto !important;
+}
+
+.h140 {
+height: 140px !important;
+}
+.mt10 {
+margin-top: 10px !important;
+}
+.mt15 {
+margin-top: 15px !important;
+}
+.mt6 {
+margin-top: 6px !important;
+}
+.mtext {
+text-align: center !important;
+}
+.video-wrapper {
+display: none;
+}
+#MessageViewBody .video-wrapper {
+display: block!important;
+}
+#MessageViewBody .video-fallback {
+display: none!important;
+}
+.h6 {
+height: 6px !important;
+line-height: 6px !important;
+}
+}
+
+</style>
+<!--[if gte mso 9]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+<div id=3D"preheader" style=3D"display: none; font-size: 0; line-height: 0;=
+ mso-hide: all; color: #e3e3e3;">Get 40% off on Steam, Epic and PlayStation=
+ </div>
+
+<div id=3D"preview-spacer" style=3D"display: none; font-size: 0; line-heigh=
+t: 0; mso-hide: all; color: #e3e3e3;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;</div>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" width=3D"100%">
+=09<tbody>
+=09=09<tr>
+=09=09=09<td align=3D"center" valign=3D"top">
+=09=09=09<table bgcolor=3D"#062936" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" class=3D"w320" style=3D"background-color: #062936; width: 600px;"=
+ width=3D"600">
+=09=09=09=09<tbody>=09=09
+                     <!-- Hero 600 px image starts here!--> =20
+                    <tr>
+=09=09=09=09=09=09<td>
+                            <table align=3D"center" bgcolor=3D"#008599"  bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"back=
+ground-color: #008599; width:600px;" width=3D"600">
+                                <tbody>
+                                    <tr>
+                                        <td align=3D"center">
+                                        <table align=3D"center" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align=3D"center"><i=
+mg alt=3D"TAKE THE JUMP WITH 40% OFF" class=3D"w100" src=3D"https://pwimage=
+s-a.akamaihd.net/arc/35/16/3516b08b0edbbe204a0d62b3ae2f01851712184256.jpg" =
+style=3D"display: block; border:0; width: 600px; font-size: 18px;  color:#D=
+2D1CD; text-decoration: none; font-family: 'Montserrat', Tahoma, sans-serif=
+;  font-weight: 400;" /></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+                     <!-- Hero 600 px image ends here!-->  =20
+                    <!-- Divider block starts here!-->=20
+                    <tr>
+                        <td>
+                            <table align=3D"center"  bgcolor=3D"#3fb9be" or=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"backg=
+round-color:#3fb9be; width:600px;" width=3D"600">
+                                <tbody>
+                                    <tr>
+                                        <td height=3D"6" style=3D"height: 6=
+px; font-size: 2px; line-height: 2px;">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                     <!-- Divider block ends here!-->=20
+                     <!-- Spacer starts here!-->=20
+                    <tr>
+=09=09=09=09=09=09<td>
+                            <table align=3D"center" bgcolor=3D"#008599" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"backg=
+round-color: #008599; width:600px;" width=3D"600">
+                                <tbody>
+                                    <tr>
+                                        <td height=3D"24" style=3D"height: =
+24px; font-size: 2px; line-height: 2px;">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+                    <!-- Spacer ends here!-->
+                  <!-- Headline text starts here!-->
+=09=09=09=09    <tr>
+=09=09=09=09=09=09<td>
+                            <table  align=3D"center" bgcolor=3D"#008599" bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"back=
+ground-color: #008599; width:600px;" width=3D"600">
+                                <tbody>
+                                    <tr>
+                                        <td align=3D"center">
+                                        <table align=3D"center" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" class=3D"w300" width=3D"504">
+                                            <tbody>
+                                                <tr>
+                                                    <td align=3D"center" st=
+yle=3D"font-size:40px; font-weight:700; letter-spacing: 0.0125em; font-fami=
+ly: 'Montserrat', Tahoma, sans-serif; color:#ffffff; text-transform: none; =
+line-height: 48px; text-transform: uppercase;">TAKE THE JUMP WITH 40% OFF</=
+td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+                    <!-- Headline text image ends here!-->
+                     <!-- Spacer starts here!-->=20
+                    <tr>
+=09=09=09=09=09=09<td>
+                            <table align=3D"center" bgcolor=3D"#008599" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"backg=
+round-color: #008599; width:600px;" width=3D"600">
+                                <tbody>
+                                    <tr>
+                                        <td height=3D"24" style=3D"height: =
+24px; font-size: 2px; line-height: 2px;">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>      =20
+                     <!-- Spacer ends here!-->=20
+
+                    <!-- Text block starts here!-->=20
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td>
+                            <table align=3D"center" bgcolor=3D"#008599" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"backg=
+round-color: #008599; width:600px;" width=3D"600">
+                                <tbody>
+                                    <tr>
+                                        <td align=3D"center">
+                                        <table align=3D"center" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" class=3D"w300" style=3D"width: 504px;=
+" width=3D"504">
+                                            <tbody>
+                                               <tr>
+                                                   <td align=3D"center" sty=
+le=3D"text-align: center; font-size:16px; font-family: 'Montserrat', Tahoma=
+, sans-serif; font-weight: 500; letter-spacing: 0.0125em; color:#ffffff;  l=
+ine-height: 24px;">For a limited time, save 40% on <i>GIGANTIC: RAMPAGE EDI=
+TION</i> on <a href=3D"https://edm.arcgames.com/tracking/click?e=3DYmxhY2tw=
+YXBlcm1vb240MkBnbWFpbC5jb20%3D&h=3D52f60e2b74e4e9290c1a68eb62c1c56688668980=
+&l=3D1039322&r=3D99366&t=3D1716402361&u=3Dhttps%3A%2F%2Fstore.steampowered.=
+com%2Fapp%2F1924490%2FGigantic_Rampage_Edition%2F" target=3D"_blank" x-appl=
+e-data-detectors=3D"true"><span class=3D"noblue" style=3D"color:#f1720b; te=
+xt-decoration:underline;"><font color=3D"f1720b"><b>Steam</b></font></span>=
+</a> (sale ends <a target=3D"_blank" x-apple-data-detectors=3D"true"><span =
+class=3D"noblue" style=3D"color:#ffffff; text-decoration:none;"><font color=
+=3D"#ffffff">June 5th</font></span></a>), <a href=3D"https://edm.arcgames.c=
+om/tracking/click?e=3DYmxhY2twYXBlcm1vb240MkBnbWFpbC5jb20%3D&h=3Dd6ed02d4e7=
+425747e38b19b405a55712d815eba8&l=3D1039325&r=3D420679&t=3D1716402361&u=3Dht=
+tps%3A%2F%2Fstore.epicgames.com%2Fen-US%2Fp%2Fgigantic-rampage-edition-03f5=
+32" target=3D"_blank" x-apple-data-detectors=3D"true"><span class=3D"noblue=
+" style=3D"color:#f1720b; text-decoration:underline;"><font color=3D"f1720b=
+"><b>Epic</b></font></span></a> (sale ends on <a target=3D"_blank" x-apple-=
+data-detectors=3D"true"><span class=3D"noblue" style=3D"color:#ffffff; text=
+-decoration:none;"><font color=3D"#ffffff">June 13th</font></span></a>) and=
+ on <a href=3D"https://edm.arcgames.com/tracking/click?e=3DYmxhY2twYXBlcm1v=
+b240MkBnbWFpbC5jb20%3D&h=3D27e027c371928e7278d972af89d99b7d3b87afc1&l=3D103=
+9328&r=3D114857&t=3D1716402361&u=3Dhttps%3A%2F%2Fstore.playstation.com%2Fen=
+-us%2Fproduct%2FUP1980-PPSA06861_00-GIGANTIC00000000%2F" target=3D"_blank" =
+x-apple-data-detectors=3D"true"><span class=3D"noblue" style=3D"color:#f172=
+0b; text-decoration:underline;"><font color=3D"f1720b"><b>PlayStation</b></=
+font></span></a> (sale ends on <a target=3D"_blank" x-apple-data-detectors=
+=3D"true"><span class=3D"noblue" style=3D"color:#ffffff; text-decoration:no=
+ne;"><font color=3D"#ffffff">June 5th</font></span></a>).</td>
+                                                </tr>                      =
+                      =20
+                                            </tbody>
+                                        </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+                    <tr>
+=09=09=09=09=09=09<td>
+                            <table align=3D"center" bgcolor=3D"#008599" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"backg=
+round-color: #008599; width:600px;" width=3D"600">
+                                <tbody>
+                                    <tr>
+                                        <td height=3D"12" style=3D"height: =
+12px; font-size: 2px; line-height: 2px;">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>           =20
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td>
+                            <table align=3D"center" bgcolor=3D"#008599" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"backg=
+round-color: #008599; width:600px;" width=3D"600">
+                                <tbody>
+                                    <tr>
+                                        <td align=3D"center">
+                                        <table align=3D"center" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" class=3D"w300" style=3D"width: 504px;=
+" width=3D"504">
+                                            <tbody>
+                                               <tr>
+                                                   <td align=3D"center" sty=
+le=3D"text-align: center; font-size:16px; font-family: 'Montserrat', Tahoma=
+, sans-serif; font-weight: 500; letter-spacing: 0.0125em; color:#ffffff;  l=
+ine-height: 24px;">Check back on Xbox on <a target=3D"_blank" x-apple-data-=
+detectors=3D"true"><span class=3D"noblue" style=3D"color:#ffffff; text-deco=
+ration:none;"><font color=3D"#ffffff">June 4th</font></span></a>. =F0=9F=98=
+=89</td>
+                                                </tr>            =20
+                                            </tbody>
+                                        </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+                    <tr>
+=09=09=09=09=09=09<td>
+                            <table align=3D"center" bgcolor=3D"#008599" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"backg=
+round-color: #008599; width:600px;" width=3D"600">
+                                <tbody>
+                                    <tr>
+                                        <td height=3D"12" style=3D"height: =
+12px; font-size: 2px; line-height: 2px;">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>           =20
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td>
+                            <table align=3D"center" bgcolor=3D"#008599" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"backg=
+round-color: #008599; width:600px;" width=3D"600">
+                                <tbody>
+                                    <tr>
+                                        <td align=3D"center">
+                                        <table align=3D"center" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" class=3D"w300" style=3D"width: 504px;=
+" width=3D"504">
+                                            <tbody>
+                                               <tr>
+                                                   <td align=3D"center" sty=
+le=3D"text-align: center; font-size:16px; font-family: 'Montserrat', Tahoma=
+, sans-serif; font-weight: 500; letter-spacing: 0.0125em; color:#ffffff;  l=
+ine-height: 24px;">Still haven=E2=80=99t taken the jump off the airship? No=
+w is the best time to make the leap and buy <i>GIGANTIC: RAMPAGE EDITION</i=
+> for 40% off!</td>
+                                                </tr>            =20
+                                            </tbody>
+                                        </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+                    <tr>
+=09=09=09=09=09=09<td>
+                            <table align=3D"center" bgcolor=3D"#008599" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"backg=
+round-color: #008599; width:600px;" width=3D"600">
+                                <tbody>
+                                    <tr>
+                                        <td height=3D"24" style=3D"height: =
+24px; font-size: 2px; line-height: 2px;">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>=20
+                    <!-- Button starts here!--> =20
+                    <tr>
+                        <td>
+                            <table align=3D"center" bgcolor=3D"#008599" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"backg=
+round-color: #008599; width:600px;" width=3D"600">
+                                <tbody>
+                                    <tr>
+                                        <td align=3D"center">
+                                            <table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w300" style=3D"padding:=
+ 0; margin: 0; width: 504px;" width=3D"504">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align=3D"center=
+">
+                                                            <table border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                                                                <tr>
+                                                                    <td ali=
+gn=3D"center" style=3D"background-color: #f1720b; text-transform:uppercase"=
+>
+                                                                        <a =
+rel=3D"noopener" target=3D"_blank" href=3D"https://edm.arcgames.com/trackin=
+g/click?e=3DYmxhY2twYXBlcm1vb240MkBnbWFpbC5jb20%3D&h=3Db9e223f2564197a1979b=
+ad92531e222dffc75ddb&l=3D1039331&r=3D903958&t=3D1716402361&u=3Dhttps%3A%2F%=
+2Fwww.gogigantic.com%2Fen%2F" target=3D"_blank" style=3D"font-size: 18px; l=
+ine-height: 26px; font-family: 'Montserrat', 'Helvetica Neue', Helvetica, A=
+rial, 'sans-serif'; color: #f5f5f5; font-weight: 600; text-decoration: none=
+; padding: 12px 18px; display: inline-block;">SAVE 40% NOW</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>              =
+                                 =20
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- Button ends here!--> =20
+                    <tr>
+=09=09=09=09=09=09<td>
+                            <table align=3D"center" bgcolor=3D"#008599" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"backg=
+round-color: #008599; width:600px;" width=3D"600">
+                                <tbody>
+                                    <tr>
+                                        <td height=3D"36" style=3D"height: =
+36px; font-size: 2px; line-height: 2px;">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>=20
+                    <!-- Divider starts here!-->=20
+                      <tr>
+                        <td>
+                            <table align=3D"center"  bgcolor=3D"#3fb9be" or=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"backg=
+round-color:#3fb9be; width:600px;" width=3D"600">
+                                <tbody>
+                                    <tr>
+                                        <td height=3D"6" style=3D"height: 6=
+px; font-size: 2px; line-height: 2px;">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>=20
+                     <!-- Divider ends here!-->               =20
+                    =09<tr>
+                            <td>
+                                <table align=3D"center" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"width:600px;" width=
+=3D"600">
+                                    <tbody>
+                                        <tr>
+                                            <td height=3D"24" style=3D"heig=
+ht: 24px; font-size: 2px; line-height: 2px;">&nbsp;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+=09=09=09=09=09    </tr>
+                        <!-- Footer starts here, start from here until the =
+very end to replace EU/FR/FR versions!-->
+                        <tr>
+                            <td>
+                                <table align=3D"center" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"width:600px;" width=
+=3D"600">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"center">
+                                                <table align=3D"center" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w300" style=3D"width=
+: 504px;" width=3D"504">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w100" width=3D"450">
+                                                                    <tbody>=
+                                                                       =20
+                                                                           =
+ <tr>
+                                                                           =
+ <td>
+                                                                           =
+     <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" class=3D"w100" style=3D"width: 387px;" width=3D"387">
+                                                                           =
+         <tbody>
+                                                                           =
+             <tr>
+                                                                           =
+                 <td align=3D"center">
+                                                                           =
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" class=3D"mt10" width=3D"387">
+                                                                           =
+                         <tbody>
+                                                                           =
+                             <tr>
+                                                                           =
+                                 <td align=3D"center" class=3D"w150"><a hre=
+f=3D"https://edm.arcgames.com/tracking/click?e=3DYmxhY2twYXBlcm1vb240MkBnbW=
+FpbC5jb20%3D&h=3D24ea43428c6a689da4e2395bc67b7c88955a9bd5&l=3D1039334&r=3D4=
+68325&t=3D1716402361&u=3Dhttps%3A%2F%2Farcgames.com%2F" target=3D"_blank"><=
+img alt=3D"Arc Games" src=3D"https://pwimages-a.akamaihd.net/arc/6e/22/6e22=
+52e66ccc2932a2d790e576af437e1712342751.jpg" style=3D"display: block; border=
+:0; font-size: 14px;  color:#f54545; text-decoration: none; font-family: Mo=
+ntserrat, DejaVu Sans, Verdana, sans=E2=80=91serif; font-weight: 400" width=
+=3D"72" /></a></td>
+                                                                           =
+                                 <td style=3D"width: 60px;" width=3D"60">&n=
+bsp;</td>
+                                                                           =
+                                   <td align=3D"center" class=3D"w150"><a h=
+ref=3D"https://edm.arcgames.com/tracking/click?e=3DYmxhY2twYXBlcm1vb240MkBn=
+bWFpbC5jb20%3D&h=3D50d78bd65c11ab1e6b372a7b24c8a656c0cda62c&l=3D1039337&r=
+=3D580273&t=3D1716402361&u=3Dhttps%3A%2F%2Fwww.arcgames.com%2Fen%2Fstorefro=
+nt" target=3D"_blank"><img alt=3D"Arc" src=3D"https://pwimages-a.akamaihd.n=
+et/arc/98/ee/98ee2effebf8748ad91e985af10a64021695975109.png" style=3D"displ=
+ay: block; border:0; font-size: 14px;  color:#f54545; text-decoration: none=
+; font-family: Montserrat, DejaVu Sans, Verdana, sans=E2=80=91serif; font-w=
+eight: 400" width=3D"60" /></a></td>
+                                                                           =
+                                 <td style=3D"width: 60px;" width=3D"60">&n=
+bsp;</td>
+                                                                           =
+                               <td align=3D"center" class=3D"w150"><a href=
+=3D"https://edm.arcgames.com/tracking/click?e=3DYmxhY2twYXBlcm1vb240MkBnbWF=
+pbC5jb20%3D&h=3D586b6e894612107ccbb0be60d69ffc7dcf360639&l=3D1039340&r=3D31=
+9149&t=3D1716402361&u=3Dhttps%3A%2F%2Fwww.esrb.org%2Fratings-guide%2F" targ=
+et=3D"_blank"><img alt=3D"ESRB" src=3D"https://pwimages-a.akamaihd.net/arc/=
+1e/cc/1ecc17b561a0948297edd6b8630fe9541712253165.png" style=3D"display: blo=
+ck; border:0; font-size: 14px;  color:#f54545; text-decoration: none; font-=
+family: Montserrat, DejaVu Sans, Verdana, sans=E2=80=91serif; font-weight: =
+400" width=3D"103" /></a></td>
+                                                                           =
+                             </tr>
+                                                                           =
+                         </tbody>
+                                                                           =
+                     </table>
+                                                                           =
+                 </td>
+                                                                           =
+             </tr>
+                                                                           =
+         </tbody>
+                                                                           =
+     </table>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                    </tbody=
+>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+=09=09=09=09=09    </tr>
+                        <tr>
+                            <td>
+                            <table align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"width:600px;" width=3D"60=
+0">
+                                <tbody>
+                                    <tr>
+                                       <td height=3D"24" style=3D"height: 2=
+4px; font-size: 2px; line-height: 2px;">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" class=3D"w100" style=3D" width:600px;" width=3D"600">
+                                    <tbody>
+                                        <tr>
+                                            <td align=3D"center">
+                                                <table align=3D"center" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"w300" style=3D"width=
+: 504px;" width=3D"504">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" style=3D"text-align:center; font-size:12px; font-weight: 400; letter-=
+spacing: 0.0125em; font-family: 'Montserrat', Tahoma, sans-serif; color:#87=
+9094; line-height: 18px;">&#169; 2024 Arc Games Inc. The arc games logo is =
+a trademark of Arc Games Inc. All rights reserved.</td>
+                                                        </tr>
+                                                            <tr>
+                                                            <td height=3D"6=
+" style=3D"height: 6px; font-size: 2px; line-height: 2px;">&nbsp;</td>
+                                                        </tr>
+                                                         <tr>
+                                                            <td align=3D"ce=
+nter" style=3D"text-align:center; font-size:12px; font-weight: 400; letter-=
+spacing: 0.0125em; font-family: 'Montserrat', Tahoma, sans-serif; color:#87=
+9094; line-height: 18px;">Arc Games is part of the <a href=3D"https://edm.a=
+rcgames.com/tracking/click?e=3DYmxhY2twYXBlcm1vb240MkBnbWFpbC5jb20%3D&h=3D3=
+1e10bcc6cee059fcc46a90862259ebccf2aff3d&l=3D1039343&r=3D247496&t=3D17164023=
+61&u=3Dhttps%3A%2F%2Fembracer.com%2F" target=3D"_blank" x-apple-data-detect=
+ors=3D"true"><span class=3D"noblue" style=3D"color:#879094; text-decoration=
+:underline;"><font color=3D"#879094">Embracer Group AB</font></span></a>, b=
+ased in Karlstad, Sweden.</td>
+                                                        </tr>              =
+                                                                           =
+                  =20
+                                                        <tr>
+                                                            <td height=3D"1=
+6" style=3D"height: 16px; font-size: 2px; line-height: 2px;">&nbsp;</td>
+                                                        </tr>
+                                                         <tr>
+                                                            <td align=3D"ce=
+nter" style=3D"text-align:center; font-size:12px; font-weight: 400; letter-=
+spacing: 0.0125em; font-family: 'Montserrat', Tahoma, sans-serif; color:#87=
+9094; line-height: 18px;"><a href=3D"https://edm.arcgames.com/tracking/clic=
+k?e=3DYmxhY2twYXBlcm1vb240MkBnbWFpbC5jb20%3D&h=3D8be7a7fe61dd7505c15292f650=
+f8ca82697d8b8e&l=3D1039346&r=3D227935&t=3D1716402361&u=3Dhttps%3A%2F%2Fwww.=
+arcgames.com%2Fen%2Fabout%2Fterms" target=3D"_blank" x-apple-data-detectors=
+=3D"true"><span class=3D"noblue" style=3D"color:#879094; text-decoration:un=
+derline;"><font color=3D"#879094">Terms of Service</font></span></a> | <a h=
+ref=3D"https://edm.arcgames.com/tracking/click?e=3DYmxhY2twYXBlcm1vb240MkBn=
+bWFpbC5jb20%3D&h=3Dff5257337d5ce7ad1111ef6b1809e24a5eb0a43f&l=3D1039349&r=
+=3D272193&t=3D1716402361&u=3Dhttps%3A%2F%2Fwww.arcgames.com%2Fen%2Fabout%2F=
+privacy" target=3D"_blank" x-apple-data-detectors=3D"true"><span class=3D"n=
+oblue" style=3D"color:#879094; text-decoration:underline;"><font color=3D"#=
+879094">Privacy Policy</font></span></a>.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td>
+                            <table align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"w100" style=3D"width:600px;" width=3D"60=
+0">
+                                <tbody>
+                                    <tr>
+                                        <td height=3D"48" style=3D"height: =
+48px; font-size: 2px; line-height: 2px;">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+=09=09=09=09</tbody>
+=09=09=09</table>
+=09=09=09</td>
+=09=09</tr>
+=09</tbody>
+</table>
+<!-- Footer ends here!--><!--[if mso]>
+<style type=3D"text/css">
+body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
+</style>
+<![endif]-->
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D"color:=
+#848484; font-family:verdana,sans-serif; font-size:9px; width:600px" valign=
+=3D"top">
+=09<tbody>
+=09=09<tr>
+=09=09=09<td style=3D"text-align: center; padding:10px;"><br />
+=09=09=09This marketing email was sent to: <span style=3D"color:#848484;"><=
+font color=3D"#848484"><strong>blackpapermoon42@gmail.com</strong></font></=
+span><br />
+=09=09=09<br />
+=09=09=09This marketing email was sent by:<br />
+=09=09=09Arc Games<br />
+=09=09=09100 Redwood Shores Parkway, 2nd Floor<br />
+=09=09=09Redwood City, CA 94065<br />
+=09=09=09<br />
+=09=09=09We respect your right to privacy - <a alias=3D"View Privacy Policy=
+" href=3D"https://edm.arcgames.com/tracking/click?e=3DYmxhY2twYXBlcm1vb240M=
+kBnbWFpbC5jb20%3D&h=3Da723f7be67645bc2f9580635a597d0c7bda882d9&l=3D1039352&=
+r=3D917134&t=3D1716402361&u=3Dhttps%3A%2F%2Fwww.arcgames.com%2Fen%2Fabout%2=
+Fprivacy" style=3D"color: #848484" target=3D"_blank" x-apple-data-detectors=
+=3D"true"><span style=3D"color:#848484; text-decoration:underline;"><font c=
+olor=3D"#848484">view our policy</font></span></a></td>
+=09=09</tr>
+=09=09<tr>
+=09=09=09<td style=3D"text-align: center; padding:12px; font-size:11px;"><a=
+ alias=3D"Unsubscribe" href=3D"https://edm.arcgames.com/tracking/click?e=3D=
+YmxhY2twYXBlcm1vb240MkBnbWFpbC5jb20%3D&h=3D69fd037bfc0a5ce7897cc6ff99911951=
+73d468ac&l=3D1039355&r=3D22964&t=3D1716402361&u=3Dhttps%3A%2F%2Fwww.arcgame=
+s.com%2Fen%2Fmy%2Faccount%2Funsubscribe%3Ftoken%3DMTU1MDUxQkJGOTBDN0NBRTYyR=
+TU0RUYzQ0E1NDY5M0U2Qjc3Q0I0OTgyRkZDN0Y2QUI4M0I1RjlGQThEMEI4OCQkX2FyYyQkYXJj=
+" target=3D"_blank" x-apple-data-detectors=3D"true"><span style=3D"color:#8=
+48484; text-decoration:underline;"><font color=3D"#848484">One-Click Unsubs=
+cribe to opt-out of marketing emails and in-game promotions</font></span></=
+a></td>
+=09=09</tr>
+=09</tbody>
+</table>
+<img width=3D"1px" height=3D"1px" src=3D"http://edm.arcgames.com/tracking/o=
+pen?e=3DYmxhY2twYXBlcm1vb240MkBnbWFpbC5jb20%3D&h=3Da313fb5fde9a2c04f057af3a=
+34a59a2c6b2d3bcf&i=3D74978&r=3D676798&t=3D1716402361"/>

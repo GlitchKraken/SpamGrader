@@ -1,0 +1,12 @@
+{
+    "Someone tried to log into your account, user ID_40726-16204-66925.eml": [
+        "Total Risk Score:",
+        20.0,
+        {
+            "KeyPhrasesModule_Score": [
+                20,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        }
+    ]
+}

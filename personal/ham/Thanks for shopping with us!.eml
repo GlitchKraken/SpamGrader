@@ -1,0 +1,944 @@
+Delivered-To: chadefry@gmail.com
+Received: by 2002:a05:7000:9344:b0:595:f4e9:2ec7 with SMTP id n4csp3142496mai;
+        Sun, 16 Jun 2024 14:52:21 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFsQOngaxmgydkrykpqZx77c65R91O38bemX1/Nd6UX0EMtVUtGCQoJxRSGlvXvplk+6Vv2
+X-Received: by 2002:a0c:c48d:0:b0:6b0:7f36:8ae3 with SMTP id 6a1803df08f44-6b2afcd65a2mr80279096d6.32.1718574741013;
+        Sun, 16 Jun 2024 14:52:21 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1718574741; cv=none;
+        d=google.com; s=arc-20160816;
+        b=MtSVE40ZAPufYeCPm0e+hBK0vEzE+1d0tTAX7guI22yqE2zovar0ohTPM2e7aa4ap0
+         ejlt6qrdQjHbnVcuUyswvy3BrFJysyr1hP39Q5cJHlwb5TZnmvofRXIT2TXCoCulP4Hx
+         gAB9r/Z6LY28PN7kZf7HAYrbrKGJAe/BKVWZbfNSaPYgyAEQ4oHQqUOlEw9GvodJXAES
+         o/pCKNF+PB44cfNGZgXUvw94tltWXnlpzH36kQAPFUCIv+TiDjYXNYU6xnz0X4vbybue
+         H0NqWb12Je0OfAgbkhVxkjuJI5RvVvMhCypzKunaxJQWOFQ/1r/fh2AntgmeNx30eOHD
+         +blg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:content-transfer-encoding:errors-to:to:date:from:subject
+         :mime-version:dkim-signature:dkim-signature;
+        bh=SzQxhiLDbR5lzLiaWkzskLz15kgtEUwjC3FgwytEIpU=;
+        fh=m44z/hIZrbLYdRTg0EJpsnb06pyG+ozb3LfFGOFJtGk=;
+        b=lK7GIgRZiRshXZ1SJzGDjWhI5OtC4QeraS1+HNYWT6QigbyR16P233Z95+zUU9Dg8y
+         exKZcpuph6bDKS878wdWj0mJJjqFxpc0wmKapJHVombKXLS1GoH9k6AEM5Nw82Bq+lkn
+         eYmVXXofWUDCEuBVG4d29i5zsRv3fAxIl+N5Tg6/8mhvrZaP5+LnfeXMAbHKWe39bQjY
+         4IcKdbl+4fmJUb9ZS1ZqxRNhRGz8FWA9+KrWLh0fAQdzKf8zW1fBptQjKM3nnDWFHf58
+         RhTKZmEYGallIHM0vH0Wgb6HOEsDEsI4b/XyV5SVskU2rMlqgiWI7gcLS+BSJx6/PFwE
+         vtfg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@e.academy.com header.s=key1 header.b=TkIU2875;
+       dkim=pass header.i=@esp1.co header.s=app header.b="nA1/J7/G";
+       spf=pass (google.com: domain of 4k775r0r5psj4u5so7sjpi0kj5rq00esq7307pi0ile@bounce.e.academy.com designates 142.0.84.188 as permitted sender) smtp.mailfrom=4K775R0R5PSJ4U5SO7SJPI0KJ5RQ00ESQ7307PI0ILE@bounce.e.academy.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=e.academy.com
+Return-Path: <4K775R0R5PSJ4U5SO7SJPI0KJ5RQ00ESQ7307PI0ILE@bounce.e.academy.com>
+Received: from vmta188.84.lstrk.net (vmta188.84.lstrk.net. [142.0.84.188])
+        by mx.google.com with ESMTPS id 6a1803df08f44-6b2a5afd055si90689206d6.270.2024.06.16.14.52.20
+        for <chadefry@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 16 Jun 2024 14:52:20 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 4k775r0r5psj4u5so7sjpi0kj5rq00esq7307pi0ile@bounce.e.academy.com designates 142.0.84.188 as permitted sender) client-ip=142.0.84.188;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@e.academy.com header.s=key1 header.b=TkIU2875;
+       dkim=pass header.i=@esp1.co header.s=app header.b="nA1/J7/G";
+       spf=pass (google.com: domain of 4k775r0r5psj4u5so7sjpi0kj5rq00esq7307pi0ile@bounce.e.academy.com designates 142.0.84.188 as permitted sender) smtp.mailfrom=4K775R0R5PSJ4U5SO7SJPI0KJ5RQ00ESQ7307PI0ILE@bounce.e.academy.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=e.academy.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=key1; d=e.academy.com;
+ h=MIME-Version:Subject:From:Date:To:Content-Type:Content-Transfer-Encoding:
+ Message-ID; i=email@e.academy.com;
+ bh=SzQxhiLDbR5lzLiaWkzskLz15kgtEUwjC3FgwytEIpU=;
+ b=TkIU2875VNqS7fU0Qs71ayi2damgeMjS6UD26PVkZy+XrGSPsSKAu9Mq9oHmEFpNtLCLfWVbsm5f
+   aR2/NblQoE28lRIWSLLYQpF+87qKqnftyzYAm5NQE35zcjkAXOcGvJ3lhDW1kKsKmBnBcvf9Q4cw
+   ajS10igYqsJ7JFLnanw=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=app; d=esp1.co;
+ h=MIME-Version:Subject:From:Date:To:Content-Type:Content-Transfer-Encoding:
+ Message-ID;
+ bh=SzQxhiLDbR5lzLiaWkzskLz15kgtEUwjC3FgwytEIpU=;
+ b=nA1/J7/GDricrZJJZXcn4efYwa1WQJEO2YkE69pFJtkOlXWjM1VNTmgz6O8El9Pw0alGAxC2ldzz
+   y4fXINOtHKZlfa3PyoOm+7d4cpVi8uw1Rq9bBejuZp+Ld+mQSUXhBoY2Qw93l9rNt3p1i90+cczU
+   7WIcUJRds2fpj3WJZW4=
+Received: by vmta188.84.lstrk.net id hdtf9835r2sc for <chadefry@gmail.com>; Sun, 16 Jun 2024 17:52:19 -0400 (envelope-from <4K775R0R5PSJ4U5SO7SJPI0KJ5RQ00ESQ7307PI0ILE@bounce.e.academy.com>)
+X-Message-Reference: OR62BS6SL7R4972JLKTKOQBPD8
+X-RPCampaign: esp7982545066835483765582525755507476758475798166806856
+MIME-Version: 1.0
+Subject: Thanks for shopping with us!
+From: "Academy Sports + Outdoors" <email@e.academy.com>
+Date: 16 Jun 2024 17:52:19 -0400
+To: chadefry@gmail.com
+X-Mailer-Reference: 4K775R0R5PSJ4U5SO7SJPI0KJ5RQ00ESQ7307PI0ILE
+Errors-To: 4K775R0R5PSJ4U5SO7SJPI0KJ5RQ00ESQ7307PI0ILE@bounce.e.academy.com
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <0.1.9.7B8.1DAC03776180B1A.98DB@vmta188.84.lstrk.net>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Template</title>
+<!--[if (gte mso 9)|(IE)]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"/><![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="x-apple-disable-message-reformatting"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="LTK">
+<!--[if !mso]><!-- -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!--<![endif]-->
+<style type="text/css">
+/* Reset Styles */
+#outlook a {padding:0;}
+body {width: 100% !important;-webkit-text-size-adjust: none; -ms-text-size-adjust: none;
+margin: 0;padding: 0;}
+.ReadMsgBody {width: 100%;}
+.ExternalClass {width: 100%;}
+.backgroundTable {margin: 0 auto;padding: 0;width: 100% !important;}
+table td {border-collapse: collapse;}
+.ExternalClass * {line-height: 115%;}
+th img {margin:0 !important;}
+th {margin:0 !important; font-weight:normal;}
+.gmail-fix {display:none; display:none!important;}
+div, button {vertical-align:top; margin:0}
+
+/* Link Fixes */
+a[x-apple-data-detectors] {color: inherit !important;
+text-decoration: none !important;font-size: inherit !important;
+font-family: inherit !important;font-weight: inherit !important;
+line-height: inherit !important;}
+
+
+/* Tablet styles */
+@media only screen and (min-width: 479px) and (max-width: 600px) {
+.container{
+  width: 600px !important;
+}
+.tablet-hide{
+  display: none !important;
+}
+
+.tablet-pad-b-0{padding-bottom: 0 !important;}
+.tablet-pad-t-20{padding-top: 20px !important;}
+
+.center, .center img {text-align: center !important;margin: 0 auto;float: none;}
+
+/* Tablet Show */
+.tablet-show, .tablet-show tbody, .tablet-show tr, .tablet-show td {width: 100% !important;
+max-height: inherit !important;overflow: visible !important;display: block !important;
+float: none !important;}
+
+.tablet-show-recs, .tablet-show-recs tbody, .tablet-show-recs tr {width: 100% !important;
+max-height: inherit !important;overflow: visible !important;display: block !important;
+float: none !important;}
+
+.tablet-show td.hide{display: none !important;}
+
+.mobile-tablet-registered-features, .mobile-tablet-registered-features tbody, .mobile-tablet-registered-features tr{
+  width: 100% !important;
+  max-height: inherit !important;overflow: visible !important;display: block !important;
+  float: none !important;
+}
+.mobile-tablet-registered-features table {display: table !important;width:100% !important;}
+.mobile-tablet-registered-features tbody {display: table !important;}
+.mobile-tablet-registered-features tr {display: table-row !important;}
+.mobile-tablet-registered-features td {display: table-cell !important;}
+
+.mobile-tablet-registered-features td.hide{display: none !important;}
+
+.tablet-copy-14 {font-size: 14px !important; line-height: 18px !important;}
+.tablet-copy-16 {font-size: 16px !important; line-height: 20px !important;}
+.tablet-copy-18 {font-size: 18px !important; line-height: 22px !important;}
+.tablet-copy-20 {font-size: 20px !important; line-height: 24px !important;}
+.tablet-copy-24 {font-size: 24px !important; line-height: 28px !important;}
+
+
+}
+
+  @media only screen and (max-width: 400px) {
+    .stack-400 th {width:100% !important; display:block !important;}
+    .left-400{text-align: left !important;}
+  }
+  
+    @media only screen and (max-width: 600px) {
+    .stack-600 th {width:100% !important; display:block !important;}
+    .left-600{text-align: left !important;}
+  }
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 480px) {
+/* General Styles */
+.container {width: 100% !important;overflow: hidden;}
+.hide {display: none !important;}
+.display-ib {display: inline-block;}
+.display-b {display: block;}
+.full-width {width: 100% !important;height: auto;}
+.half-width {width: 50% !important;height: auto;}
+.float-l {float: left;}
+.float-r {float: right;}
+.height-auto {height: auto !important;}
+.stack th {width:100% !important; display:block !important;}
+
+/* Images */
+.full-img img {width: 100% !important;height: auto;}
+
+/* Buttons */
+.full-btn {width: 100% !important;height: auto;border-left: 0 none !important;
+  border-right: 0 none !important;padding-left: 0 !important;padding-right: 0 !important;}
+
+/* Text */
+.center, .center img {text-align: center !important;margin: 0 auto;float: none;}
+.left {text-align: left !important;}
+.right {text-align:right !important;}
+
+.copy-14 {font-size: 14px !important;}
+.copy-16 {font-size: 16px !important;}
+.copy-18 {font-size: 18px !important;}
+.copy-21 {font-size: 21px !important;}
+.copy-24 {font-size: 24px !important;}
+
+
+
+/* Borders */
+.border-t {border-top: 1px solid #cccccc;}
+.border-b {border-bottom: 1px solid #cccccc;}
+.border-0 {border: 0 none !important;}
+.border-t-0 {border-top: 0 none !important;}
+.border-r-0 {border-right: 0 none !important;}
+.border-b-0 {border-bottom: 0 none !important;}
+.border-l-0 {border-left: 0 none !important;}
+.border-r-0 {border-right: 0 none !important;}
+
+/* Padding */
+.pad-lr-10 {padding-left: 10px !important;padding-right: 10px !important;}
+.pad-lr-20 {padding-left: 20px !important;padding-right: 20px !important;}
+.pad-lr-30 {padding-left: 30px !important;padding-right: 30px !important;}
+.pad-0 {padding: 0 !important;}
+.pad-l-0 {padding-left: 0 !important;}
+.pad-r-0 {padding-right: 0 !important;}
+.pad-t-0 {padding-top: 0 !important;}
+.pad-t-10 {padding-top: 10px !important;}
+.pad-t-20 {padding-top: 20px !important;}
+.pad-t-30 {padding-top: 30px !important;}
+.pad-b-0 {padding-bottom: 0 !important;}
+.pad-b-10 {padding-bottom: 10px !important;}
+.pad-b-20 {padding-bottom: 20px !important;}
+.pad-b-30 {padding-bottom: 30px !important;}
+
+/* Mobile Show */
+.mobile-show, .mobile-show tbody, .mobile-show tr, .mobile-show td {width: 100% !important;
+max-height: inherit !important;overflow: visible !important;display: block !important;
+float: none !important;}
+.mobile-show table {display: table !important;width:100% !important;}
+.mobile-show tbody {display: table !important;}
+.mobile-show tr {display: table-row !important;}
+.mobile-show td {display: table-cell !important;}
+
+.mobile-show-recs, .mobile-show-recs tbody, .mobile-show-recs tr, .mobile-show-recs {width: 100% !important;
+max-height: inherit !important;overflow: visible !important;display: block !important;
+float: none !important;}
+.mobile-show-recs table {display: table !important;width:100% !important;}
+.mobile-show-recs tbody {display: table !important;}
+.mobile-show-recs tr {display: table-row !important;}
+.mobile-show-recs td {display: table-cell !important;}
+
+/* Footer Nav */
+.footer-nav, .footer-nav tbody, .footer-nav tr, .footer-nav td {width: 100% !important;max-height: inherit !important;
+overflow: visible !important;display: block !important;float: none !important;}
+.footer-nav table {display: table !important;width:100% !important;}
+.footer-nav tbody {display: table !important;}
+.footer-nav tr {display: table-row !important;}
+.footer-nav td {display: table-cell !important;}
+
+.footer-nav a {
+  display: block !important;
+  width: 100%;
+  padding: 15px 0 !important;
+  border-top: 1px solid #cccccc !important;
+  border-right: 0 !important;
+  border-left: 0 !important;
+  }
+
+/* Reset Styles */
+body {margin:0 auto !important;}
+div[style*="margin: 16px 0"] {margin:0 auto !important;}
+
+/********** CUSTOM STYLES ***********/
+.mobile-hide{
+  display: none !important;
+}
+
+.mobile-tablet-registered-features, .mobile-tablet-registered-features tbody, .mobile-tablet-registered-features tr, .mobile-tablet-registered-features td{
+  width: 100% !important;
+  max-height: inherit !important;overflow: visible !important;display: block !important;
+  float: none !important;
+}
+.mobile-tablet-registered-features table {display: table !important;width:100% !important;}
+.mobile-tablet-registered-features tbody {display: table !important;}
+.mobile-tablet-registered-features tr {display: table-row !important;}
+.mobile-tablet-registered-features td {display: table-cell !important;}
+
+.mobile-tablet-registered-features td.mobile-hide{display: none !important;}
+
+.mobile-copy-10 {font-size: 10px !important; line-height: 14px !important;}
+.mobile-copy-14 {font-size: 14px !important; line-height: 18px !important;}
+.mobile-copy-16 {font-size: 16px !important; line-height: 20px !important;}
+.mobile-copy-18 {font-size: 18px !important; line-height: 22px !important;}
+.mobile-copy-20 {font-size: 20px !important; line-height: 24px !important;}
+.mobile-copy-24 {font-size: 24px !important; line-height: 28px !important;}
+
+.mobile-center, .mobile-center img {text-align: center !important;margin: 0 auto;float: none;}
+
+/*.mob-width-70{width: 70px !important;}*/
+.mob-width-70{width: 30% !important;}
+.mob-width-70 table{width: 100% !important;}
+.mob-p-10{padding-top: 10px !important; padding-right: 10px !important; padding-bottom: 10px !important; padding-left: 10px !important;}
+.mob-p-t-5{padding-top: 5px !important;}
+/******** CUSTOM STYLES END *********/
+}
+
+
+
+}
+
+
+
+</style>
+<!--[if gte mso 9]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+</head>
+<body bgcolor="#F4F7FC">
+<table width="100%" bgcolor="#F4F7FC" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td class="pad-0" align="center" style="padding:0 10px;">
+<table class="container" width="974" align="center" cellpadding="0" cellspacing="0" border="0" role="presentation" style="width: 974px">
+<tr>
+<td align="center">
+<!-- Place Your Content Here -->
+<!-- Logo - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+	<tbody>
+		<tr>
+			<td align="center" style="padding: 45px 0;">
+			<a href="http://enews.e.academy.com/q/UnGU7BfLXBt0XY7VPm20EpfikuVOqUdBfD3ZcOJY2hhZGVmcnlAZ21haWwuY29tw4gzZ3KI7YxfamLYWRAVSYBHBsWazg" title="logo" target="_blank">
+			<img src="https://mediacdn.espssl.com/9746/Shared/Transactional/logo.png" alt="Academy Sports + Outdoors" width="230" border="0" style="display:block">
+			</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!-- Logo END-->
+<!-- Paragraph 1 section - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td align="center" style="padding-left: 20px; padding-right: 20px;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td class="" align="center" style="background-color: #ffffff; border-radius: 8px; padding: 30px 20px 40px 20px;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td class="tablet-copy-24 mobile-copy-24" align="center" style="font-family: 'Poppins', Arial, Helvetica, sans-serif; font-size: 30px; font-weight: 600; color: #073463; padding-bottom: 15px;">
+Hello Chad,
+</td>
+</tr>
+<tr>
+<td class="tablet-copy-16 mobile-copy-16" align="center" style="font-family: 'Hind', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 21px; color: #4B4B4C;">
+Thanks for shopping with us! A record of your purchase information appears below. Please keep this email as the confirmation of your&nbsp;order.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Paragraph 1 section - END-->
+<!-- Divider Space - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"><tr><td height="20" style="height: 20px; font-size: 0; line-height: 1;">&nbsp;</td></tr></table>
+<!-- Divider Space - END-->
+<!-- Order Details - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td align="center" style="padding: 20px;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td class="" align="center" style="background-color: #ffffff; border-radius: 8px; padding: 20px;">
+<!-- Divider Space - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"><tr><td height="10" style="height: 10px; font-size: 0; line-height: 1;">&nbsp;</td></tr></table>
+<!-- Divider Space - END-->
+<!-- Order number and date - START -->
+<table class="stack" width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<th class="tablet-copy-24 mobile-copy-24" valign="middle" align="center" style="font-family: 'Poppins', Arial, Helvetica, sans-serif; font-size: 26px; color: #343434; font-weight: bold; font-weight: 700; text-align: left;">
+Order #436901289
+</th>
+<th class="left tablet-copy-14 mobile-copy-14" valign="middle" align="center" style="font-family: 'Poppins', Arial, Helvetica, sans-serif; font-size: 18px; color: #343434; font-weight: 600; text-align: right;">
+Order placed on Jun 16
+</th>
+</tr>
+</table>
+<!-- Order number and date - END -->
+<!-- Divider Space - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"><tr><td height="20" style="height: 20px; font-size: 0; line-height: 1;">&nbsp;</td></tr></table>
+<!-- Divider Space - END-->
+
+
+
+<!-- EDELIVERY - START -->
+<!-- Border Section - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tbody>
+<tr>
+<td class="mob-p-10" align="center" style="background-color: #ffffff; border: 1px solid #073463; border-radius: 8px; padding: 25px;">
+<!-- Edelivery Section Title - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tbody>
+<tr>
+<td valign="middle" class="center" align="center" style="background-color: #003366; border-radius: 8px; padding: 15px; text-align: left; font-family: 'Poppins', Arial, Helvetica, sans-serif; font-size: 23px; color: #ffffff; font-weight: 500;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tbody>
+<tr>
+<th class="hide" valign="middle" width="30" align="center">
+<img src="https://mediacdn.espssl.com/9746/Shared/Transactional/icon-truck.png" width="30" alt="" border="0" style="display: block;">
+</th>
+<th valign="middle" align="center">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tbody>
+<tr>
+<td class="pad-l-0 tablet-copy-20 mobile-copy-14" style="text-align: left; font-family: 'Poppins', Arial, Helvetica, sans-serif; font-size: 23px; color: #ffffff; font-weight: 500; padding-left: 10px">eDELIVERY</td>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Edelivery Section Title - END -->
+<!-- Divider Space - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tbody>
+<tr>
+<td height="10" style="height: 10px; font-size: 0; line-height: 1;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<!-- Divider Space - END-->
+<html>
+ <head></head>
+ <body>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+   <tbody>
+    <tr>
+     <td class="tablet-copy-14 mobile-copy-14" style="background-color: #F0F5FC; border-radius: 8px; padding: 15px; border-left: 8px solid #0255CC; font-family: Hind, Arial, Helvetica, sans-serif; font-size: 16px; line-height: 20px; color: #333333; text-align: left;" id="eGiftMessage">We will email these item(s) to the recipient(s) within 1 hour</td>
+    </tr>
+   </tbody>
+  </table>
+ </body>
+</html><table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"><tr><td height="10" style="height: 10px; font-size: 0; line-height: 1;">&nbsp;</td></tr></table><html>
+ <head></head>
+ <body>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+   <tbody>
+    <tr>
+     <th class="mob-width-70" width="150" align="center" style="font-weight:normal;" valign="top">
+      <table align="center" width="150" border="0" cellpadding="0" cellspacing="0">
+       <tbody>
+        <tr>
+         <td align="center" style="padding: 10px; border: 1px solid #cccccc;"><img src="https://academy.scene7.com/is/image/academy/20661993" width="116" alt="Product" border="0" style="display: block; max-width: 100%"></td>
+        </tr>
+       </tbody>
+      </table></th>
+     <th width="20" style="width: 20px; font-size: 0; line-height: 1;">&nbsp;</th>
+     <th valign="top" align="center" style="font-weight:normal;">
+      <table id="egcItemDetail" width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+       <tbody>
+        <tr>
+         <td class="tablet-copy-16 mobile-copy-14" style="font-family: Hind, Arial, Helvetica, sans-serif; font-size: 20px; line-height: 20px; color: #4B4B4C; font-weight: 600; padding: 10px 15px 15px 0;"><a href="http://enews.e.academy.com/q/ogNi6-_j0fzdeyg3Srup7vfqHkOnIgl0fd5IAOKMpqHrd8oSxy-4_hSeJSrJC1HPNvN_qNDqBlEhDhoZzhZcOJY2hhZGVmcnlAZ21haWwuY29tw4g" _blank title="Product" style="color: #4B4B4C; text-decoration: none;"> <span id="productName">eGiftCard - Academy Deer with Binoculars </span> </a></td>
+        </tr>
+        <tr>
+         <td class="tablet-copy-14 mobile-copy-14" style="font-family: Hind, Arial, Helvetica, sans-serif; font-size: 18px; line-height: 20px; color: #6A6A6A;"><span style="font-weight: bold; color: #333333;">SKU:</span> <span id="sku">129207441</span></td>
+        </tr>
+        <tr>
+         <td class="tablet-copy-14 mobile-copy-14" style="font-family: Hind, Arial, Helvetica, sans-serif; font-size: 18px; line-height: 20px; color: #6A6A6A; padding-top: 15px;"><span style="font-weight: bold; color: #333333;">QTY:</span> <span id="currentItemQuantity">1</span></td>
+        </tr>
+        <tr>
+         <td class="mobile-copy-18" id="unitPrice" style="font-family: Hind, Arial, Helvetica, sans-serif; font-size: 20px; line-height: 20px; color: #333333; font-weight: 600; padding: 15px 0;">$100.00</td>
+        </tr>
+       </tbody>
+      </table></th>
+    </tr>
+   </tbody>
+  </table>
+ </body>
+</html>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Border Section - END -->
+<!-- EDELIVERY - END -->
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Order Details - END-->
+<!-- Merch Block - LTK - TRANSACTIONAL - START-->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+	<tbody>
+		<tr>
+			<td align="center" style="padding-left: 20px; padding-right: 20px;">
+			<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+				<tbody>
+					<tr>
+						<td class="" align="center" style="background-color: #ffffff; border-radius: 8px; padding: 30px 20px 40px 20px;">
+						<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+							<tbody>
+								<tr>
+									<td align="center" style="font-family: 'Poppins', Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 600; color: #333333; text-align: left; padding-bottom: 5px; border-bottom: 1px solid #707070;">
+									Recommended For You
+									</td>
+								</tr>
+								<tr>
+									<!-- Merch Blocks - START -->
+									<td align="center" style="padding-top: 10px;">
+									<table class="stack-600" width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+										<tbody>
+											<tr>
+												<th>
+												<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+													<tbody>
+														<tr>
+															<td align="center">
+															<!--product1-->
+															<a href="http://enews.e.academy.com/q/x59e-14QxkL0XCbwbFXyDBQK49opuVLUmQRZcOJY2hhZGVmcnlAZ21haWwuY29tw4g1OLmMBsieYmLZvONUdBjoqtzl4g" target="_blank" title="Product">
+															<img src="https://recs.listrakbi.com/image/619aa141-e837-4b68-ba1d-33f5f897b346/6788af05-675f-4e4c-8bdb-381590a5cbda/0e1488d2-f5a6-48d1-9542-216a6dd54d17/0/0/586/898/email/chadefry@gmail.com" width="230" border="0" alt="Product" style="display:block; max-width: 100%">
+															</a>
+															<!--/product1-->
+															</td>
+															<td align="center">
+															<!--product2-->
+															<a href="http://enews.e.academy.com/q/5cVQn61S6RJ0X-t5O4czzcl-XsCLvdgG-zYZcOJY2hhZGVmcnlAZ21haWwuY29tw4gCOwSi8zCdpOL2WGM_e2VBnQDrFg" target="_blank" title="Product">
+															<img src="https://recs.listrakbi.com/image/619aa141-e837-4b68-ba1d-33f5f897b346/6788af05-675f-4e4c-8bdb-381590a5cbda/0e1488d2-f5a6-48d1-9542-216a6dd54d17/586/0/586/898/email/chadefry@gmail.com" width="230" border="0" alt="Product" style="display:block; max-width: 100%">
+															</a>
+															<!--/product2-->
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+												<th>
+												<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+													<tbody>
+														<tr>
+															<td align="center">
+															<!--product3-->
+															<a href="http://enews.e.academy.com/q/TnzYcLl0K-n0XCvRxO2hMH6Rd0CJCVSqd0yZcOJY2hhZGVmcnlAZ21haWwuY29tw4gX2lrWiY_eYlLNNBHY5ewnXVdubw" target="_blank" title="Product">
+															<img src="https://recs.listrakbi.com/image/619aa141-e837-4b68-ba1d-33f5f897b346/6788af05-675f-4e4c-8bdb-381590a5cbda/0e1488d2-f5a6-48d1-9542-216a6dd54d17/1172/0/586/898/email/chadefry@gmail.com" width="230" border="0" alt="Product" style="display:block; max-width: 100%">
+															</a>
+															<!--/product3-->
+															</td>
+															<td align="center">
+															<!--product4-->
+															<a href="http://enews.e.academy.com/q/YeWgPf-yily0XPF4CJhfVjKQrUVRI9biUqVZcOJY2hhZGVmcnlAZ21haWwuY29tw4gX01BHKYEe55LeeymAj1WY9VdKRQ" target="_blank" title="Product">
+															<img src="https://recs.listrakbi.com/image/619aa141-e837-4b68-ba1d-33f5f897b346/6788af05-675f-4e4c-8bdb-381590a5cbda/0e1488d2-f5a6-48d1-9542-216a6dd54d17/1758/0/586/898/email/chadefry@gmail.com" width="230" border="0" alt="Product" style="display:block; max-width: 100%">
+															</a>
+															<!--/product4-->
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+									<!-- Merch Block - END -->
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!-- Merch Block - LTK - TRANSACTIONAL - END-->
+<!-- Divider Space - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"><tr><td height="30" style="height: 30px; font-size: 0; line-height: 1;">&nbsp;</td></tr></table>
+<!-- Divider Space - END-->
+<!-- Payment Information - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td align="center" style="padding-left: 20px; padding-right: 20px;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td class="" align="center" style="background-color: #ffffff; border-radius: 8px; padding: 30px 20px 40px 20px;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td class="mobile-copy-24" align="center" style="font-family: 'Poppins', Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 600; color: #333333; text-align: left; padding-bottom: 5px; border-bottom: 1px solid #707070;">
+PAYMENT INFORMATION
+</td>
+</tr>
+<tr>
+<td style="padding-top: 10px;">
+<table class="stack" width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<th valign="top" align="center" style="text-align: left; font-family: 'Poppins', Arial, Helvetica, sans-serif; font-size: 20px; color: #343434;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td class="mobile-copy-14" align="center" style="text-align: left; font-family: 'Poppins', Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 700; color: #343434; padding-bottom: 5px; padding-top: 10px;">
+Payment Method
+</td>
+</tr>
+<tr>
+<td class="mobile-copy-14 pad-b-20" align="center" style="text-align: left; font-family: 'Hind', Arial, Helvetica, sans-serif; font-size: 20px; line-height: 26px; color: #343434; padding-bottom: 30px; font-weight: normal;">
+<b>MasterCard</b> ending in 3724<br>
+</td>
+</tr>
+</table>
+</th>
+<th class="hide" width="30" style="width: 30px; font-size: 0; line-height: 1;">&nbsp;</th>
+<th valign="top" align="center" style="text-align: left; font-family: 'Poppins', Arial, Helvetica, sans-serif; font-size: 20px; color: #343434;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td class="mobile-copy-14" align="center" style="text-align: left; font-family: 'Poppins', Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 700; color: #343434; padding-bottom: 5px; padding-top: 10px;">
+Billing Information
+</td>
+</tr>
+<tr>
+<td valign="top">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td class="mobile-copy-14 pad-b-20" align="center" style="text-align: left; font-family: 'Hind', Arial, Helvetica, sans-serif; font-size: 20px; line-height: 26px; color: #343434; font-weight: normal;">
+Chad Fry<br>
+208 Santa Fe Trail <br>
+Irving, TX 75063
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</th>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Payment Information - END-->
+<!-- Divider Space - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"><tr><td height="30" style="height: 30px; font-size: 0; line-height: 1;">&nbsp;</td></tr></table>
+<!-- Divider Space - END-->
+<!-- Order Summary - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td align="center" style="padding-left: 20px; padding-right: 20px;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td class="" align="center" style="background-color: #ffffff; border-radius: 8px; padding: 30px 20px 40px 20px;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td align="center" style="font-family: 'Poppins', Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 600; color: #333333; text-align: left; padding-bottom: 5px; border-bottom: 1px solid #707070;">
+ORDER SUMMARY
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td align="center" width="100%">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td width="80%" align="center" style="font-family: 'Hind', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 600; color: #333333; text-align: left; padding-bottom: 10px; padding-top: 20px;">
+Subtotal:
+</td>
+<td align="center" style="font-family: 'Hind', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 600; color: #333333; text-align: right; padding-bottom: 10px; padding-top: 20px;">
+$100.00
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center" width="100%">
+
+</td>
+</tr>
+<tr>
+<td align="center" width="100%">
+
+</td>
+</tr>
+<tr>
+<td align="center" width="100%">
+
+</td>
+</tr>
+<tr>
+<td align="center" width="100%">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tbody>
+<tr>
+<td align="center" style="font-family: 'Hind', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 600; color: #333333; text-align: left; padding-bottom: 10px;">eDelivery:
+</td>
+<td align="center" style="font-family: 'Hind', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 600; color: #333333; text-align: right; padding-bottom: 10px;">
+FREE
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr>
+<td align="center" width="100%">
+
+</td>
+</tr>
+<tr>
+<td align="center" width="100%">
+
+</td>
+</tr>
+<tr>
+<td align="center" width="100%">
+
+</td>
+</tr>
+<tr>
+<td align="center" width="100%">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td align="center" style="font-family: 'Hind', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 600; color: #333333; text-align: left; padding-bottom: 10px;">
+Taxes:
+</td>
+<td class="mobile-copy-24" align="center" style="font-family: 'Hind', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 600; color: #333333; text-align: right; padding-bottom: 10px;">
+$0.00
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="1" style="height: 1px; font-size: 0; line-height: 1; background-color: #707070;">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" width="100%">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td align="center" style="font-family: 'Hind', Arial, Helvetica, sans-serif; font-size: 24px; font-weight: 700; color: #333333; text-align: left; padding-bottom: 10px; padding-top: 10px;">
+ORDER TOTAL:
+</td>
+<td align="center" style="font-family: 'Hind', Arial, Helvetica, sans-serif; font-size: 24px; font-weight: 700; color: #333333; text-align: right; padding-bottom: 10px; padding-top: 10px">
+$100.00
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Order Summary - END-->
+<!-- Divider Space - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+	<tbody>
+		<tr>
+			<td height="30" style="height: 30px; font-size: 0; line-height: 1;">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<!-- Divider Space - END-->
+<!-- Contact Us section - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+	<tbody>
+		<tr>
+			<td align="center" style="padding-left: 20px; padding-right: 20px;">
+			<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+				<tbody>
+					<tr>
+						<td align="center" style="background-color: #0055A6; border-radius: 8px; padding: 30px 20px 35px 20px;">
+						<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+							<tbody>
+								<tr>
+									<td class="copy-18" align="center" style="font-family: 'Poppins', Arial, Helvetica, sans-serif; font-weight: 600; font-size: 24px; color: #ffffff; padding-bottom: 20px;">
+									QUESTIONS ABOUT YOUR ORDER?
+									</td>
+								</tr>
+								<tr>
+									<td align="center" style="padding-left: 10px; padding-right: 10px;">
+									<table class="stack" width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" align="center" style="max-width: 790px;">
+										<tbody>
+											<tr>
+												<th class="full-width" width="380">
+												<a href="http://enews.e.academy.com/q/MHVMgftKdlO0X5d0z-OijL9Khn7Eb75aPatZcOJY2hhZGVmcnlAZ21haWwuY29tw4gknZziOi1dr2LMIB9julIHPZpxdw" title="CUSTOMER SUPPORT" target="_blank">
+												<img src="https://mediacdn.espssl.com/9746/Shared/Transactional/btn-customer-care.png" alt="CUSTOMER SUPPORT" width="380" style="display: block; max-width: 100%" border="0">
+												</a>
+												</th>
+												<th align="center" width="30" style="width: 30px;">
+												<table width="30" cellpadding="0" cellspacing="0" border="0" role="presentation">
+													<tbody>
+														<tr>
+															<td width="30" height="20" style="width: 30px; height: 20px; font-size: 0; line-height: 1;">&nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+												<th class="full-width" width="380">
+												<a href="http://enews.e.academy.com/q/Elt5MOBHW0f0Xnt5lJUhzflQj8YIQILnlgKZcOJY2hhZGVmcnlAZ21haWwuY29tw4gd6tpskrofpiLjQFXUm0PYcX-sbQ" title="CHECK ORDER STATUS" target="_blank">
+												<img src="https://mediacdn.espssl.com/9746/Shared/Transactional/btn-check-order-status-1.png" alt="CHECK ORDER STATUS" width="380" style="display: block; max-width: 100%" border="0">
+												</a>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!-- Contact Us section - END-->
+<!-- Divider Space - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+	<tbody>
+		<tr>
+			<td height="20" style="height: 20px; font-size: 0; line-height: 1;">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<!-- Divider Space - END-->
+<!-- Footer - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+	<tbody>
+		<tr>
+			<td align="center" style="padding-left: 20px; padding-right: 20px;">
+			<table class="stack" width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+				<tbody>
+					<tr>
+						<th align="center" style="font-weight:normal;">
+						<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+							<tbody>
+								<tr>
+									<td class="center" align="center" style="font-family: 'Hind', Arial, Helvetica, sans-serif; font-weight: 500; font-size: 16px; color: #073463; text-align: left;">
+									<a href="http://enews.e.academy.com/q/h5nmt-JMGkR0XdwLj04DENHqOi42F9yrluBZcOJY2hhZGVmcnlAZ21haWwuY29tw4ghkoeucslcaJLTSAwdetScnI5NGg" target="_blank" title="My Account" style="color: #073463; text-decoration: none;">My Account</a> | <a href="http://enews.e.academy.com/q/tl4CFgHMNI50Xxq-vZmT8nKZfR8RfQqVmW3ZcOJY2hhZGVmcnlAZ21haWwuY29tw4gFJ1CSyNJf41LILjTvPRLr9xyaRg" target="_blank" title="Privacy Policy" style="color: #073463; text-decoration: none;">Privacy Policy</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</th>
+						<th class="center" align="right" style="font-weight:normal; width: 267px;">
+						<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+							<tbody>
+								<tr>
+									<td class="pad-t-20" align="center">
+									<table width="267" cellpadding="0" cellspacing="0" border="0" role="presentation">
+										<tbody>
+											<tr>
+												<td>
+												<a href="http://enews.e.academy.com/q/s-gWjJU7zDg0XVFHqcOoPiLHTHAwQI1umNQZcOJY2hhZGVmcnlAZ21haWwuY29tw4gkuSIXS5zcLBLrs14EdEH9fZrjjA" target="_blank" title="Facebook">
+												<img src="https://mediacdn.espssl.com/9746/Shared/Transactional/facebook.png" alt="Facebook" width="20" border="0" style="display:block">
+												</a>
+												</td>
+												<td width="40" style="width: 40px; font-size: 0; line-height: 1;">&nbsp;</td>
+												<td>
+												<a href="http://enews.e.academy.com/q/WQfTyRLqAPI0XvtXzHHgdM36dRvTi548WZ1ZcOJY2hhZGVmcnlAZ21haWwuY29tw4giD45_TIyd5uLCwN-DEttuOoA5PQ" target="_blank" title="Twitter">
+												<img src="https://mediacdn.espssl.com/9746/Shared/Transactional/twitter.png" alt="Twitter" width="20" border="0" style="display:block">
+												</a>
+												</td>
+												<td width="40" style="width: 40px; font-size: 0; line-height: 1;">&nbsp;</td>
+												<td>
+												<a href="http://enews.e.academy.com/q/_Z5WH7YWZpa0XqjuZCR4R9N_hSR7ZAKXjZDZcOJY2hhZGVmcnlAZ21haWwuY29tw4g0dxDwiHhcobL8QklDGcLhK9nbRw" target="_blank" title="Pinterest">
+												<img src="https://mediacdn.espssl.com/9746/Shared/Transactional/pinterest.png" alt="Pinterest" width="20" border="0" style="display:block">
+												</a>
+												</td>
+												<td width="40" style="width: 40px; font-size: 0; line-height: 1;">&nbsp;</td>
+												<td>
+												<a href="http://enews.e.academy.com/q/0FWWsRJMHOl0Xg_DTnAbvsdL1kN5NIQNCVRZcOJY2hhZGVmcnlAZ21haWwuY29tw4gewHrZdUofZTL8WxmzLQJb0nMG7w" target="_blank" title="YouTube">
+												<img src="https://mediacdn.espssl.com/9746/Shared/Transactional/youtube.png" alt="YouTube" width="27" border="0" style="display:block">
+												</a>
+												</td>
+												<td width="40" style="width: 40px; font-size: 0; line-height: 1;">&nbsp;</td>
+												<td>
+												<a href="http://enews.e.academy.com/q/kYnezcYr4nZ0XjnmGZi8-XcxslQa-nkUMo8ZcOJY2hhZGVmcnlAZ21haWwuY29tw4gjgzcOEOqf6KLjDElRQX3R9YYL2A" target="_blank" title="Instagram">
+												<img src="https://mediacdn.espssl.com/9746/Shared/Transactional/instagram.png" alt="Instagram" width="20" border="0" style="display:block">
+												</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</th>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!-- Footer - END -->
+<!-- Divider Space - START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+	<tbody>
+		<tr>
+			<td height="40" style="height: 40px; font-size: 0; line-height: 1;">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<!-- Divider Space - END-->
+<!-- Stop Placing Content -->
+</td>
+</tr>
+</table>
+<!-- Gmail Fix-->
+<table class="hide gmail-fix" width="934" align="center" cellpadding="0" cellspacing="0" border="0" role="presentation" style=" width:934px; min-width:934px; max-width:934px;">
+<tr>
+<td><img src="https://mediacdn.espssl.com/1/Shared/2014/LCS/Boilerplate/spacer.gif" width="934" height="20" border="0" style="display:block; width:934px; min-width:934px; max-width:934px;"></td>
+</tr>
+</table>
+<div class="gmail-fix" style="white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+<!-- Gmail Fix END -->
+</td>
+</tr>
+</table>
+<img src="http://enews.e.academy.com/q/5K_emgSxIL-ISfqS3AjNKyNh-_XPONH5J4" alt="" width="20" height="1"></body>
+</html>

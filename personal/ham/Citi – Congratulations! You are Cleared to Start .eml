@@ -1,0 +1,526 @@
+Delivered-To: chadefry@gmail.com
+Received: by 2002:a05:7300:79c8:b0:58:40b6:b681 with SMTP id b8csp1161238dyi;
+        Tue, 8 Mar 2022 15:47:24 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJxyyvt0Xb5lCr3+zbr0TSmvxo8sDDhTHAFfILBRpPjUdX7AUsikXArH/oclT8Bw1QRJC93b
+X-Received: by 2002:a81:5382:0:b0:2db:81d5:14c3 with SMTP id h124-20020a815382000000b002db81d514c3mr14870385ywb.311.1646783244388;
+        Tue, 08 Mar 2022 15:47:24 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1646783244; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ylR6Q3jcWVrWNTnJn++nEnjh32Ty+vAjpd5SLhY39Qw6zWl3Vy9NXq7CnzACTV/0xD
+         yNxz7Ctpi0vceffwmAx880I2WS8okkbLVu1jjmhUoLnsaypcOiG01kK1paSGjLejPxh3
+         MO9VjIZd7tIJb3XvEejQZF8UM5gei7VlgF0GGWZb26qf8PrIT5ovBLP2kBrA+IHFlFFe
+         Te4Go8tnhBl4gtXX+Kjy0VDSLEuEyuD0Sqm6SMrInmJ+NaSdcAVZ+bvft8tA4AVoxsCR
+         9rPOD/VZxDK3k1WBkqos/5dxnoKIbyNT98xjniQCXbJPV5iqgkXOxQfV1K28lmE4lWsi
+         CDqw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=references:in-reply-to:thread-topic:importance:date:subject:from:to
+         :mime-version:message-id:dkim-signature;
+        bh=Xcsro5bO+WXCl66IeEyZzHxcMj+6isBf3yAKFuHMI6Y=;
+        b=po7uJADn56Kj1eomyKPkTw5wwZ4MxzBCZbAuUo6r2pzuCDKHxiWt5ZnmaBLWjpmo9g
+         y6dKRO+PYfdSUto/WAaFegZXqxCRJXQzbwP3STYJmueC/bKSYmm7i8ja3Y2jG8LsDgqN
+         O6VICH3CebODv4mawAVM5WuKvQ+GNRSrzzQak8raVyCPc4CCDSCnO4Jt2PZkkw7BXiuB
+         VOO11xYNBRG4HzMJkh7UYRZ21sjaDjeVGBreBwvmwfUQRr0OpeV3DtXZ6umVWDwXSKdn
+         ulESUNxRC7iUWceImDkXLVJelHLN5rz6cSXcHNAipCWSWOuatvmLNfBUqB2MsxO6xrrq
+         WJTw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@sbcglobal.net header.s=s2048 header.b=qzh+feco;
+       spf=neutral (google.com: 66.163.187.36 is neither permitted nor denied by best guess record for domain of cdfry@sbcglobal.net) smtp.mailfrom=cdfry@sbcglobal.net
+Return-Path: <cdfry@sbcglobal.net>
+Received: from sonic308-13.consmr.mail.ne1.yahoo.com (sonic308-13.consmr.mail.ne1.yahoo.com. [66.163.187.36])
+        by mx.google.com with ESMTPS id y188-20020a0dd6c5000000b002dc44b52bf5si291769ywd.17.2022.03.08.15.47.23
+        for <chadefry@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 08 Mar 2022 15:47:24 -0800 (PST)
+Received-SPF: neutral (google.com: 66.163.187.36 is neither permitted nor denied by best guess record for domain of cdfry@sbcglobal.net) client-ip=66.163.187.36;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@sbcglobal.net header.s=s2048 header.b=qzh+feco;
+       spf=neutral (google.com: 66.163.187.36 is neither permitted nor denied by best guess record for domain of cdfry@sbcglobal.net) smtp.mailfrom=cdfry@sbcglobal.net
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sbcglobal.net; s=s2048; t=1646783243; bh=Xcsro5bO+WXCl66IeEyZzHxcMj+6isBf3yAKFuHMI6Y=; h=To:From:Subject:Date:In-Reply-To:References:From:Subject:Reply-To; b=qzh+fecowkrZLpjus5bRWn3/a8CaNxQKEQPNfQRH5n8uo8HyRmoObbygUjkWpqM2fK4xW/7Tf6GNHnHlVuikraMA2/rvFqgwuWxOAve5qR95JXKt/1cmdgWPu3w7/hf2ZLNTCyEQuDHcamFW9mH4RV7vOMtHZ1GRIt2jwJfJCKDc0ay2uiWDYC/z1XBRyuLKbc4LSK7YhZiDGO2SCuJpOqNR9b+fMO62aDwdWE6QyQj7oYA0iRpPTNhFHmnpU6zkrDuyEX3aSZe4o66wl2cJLp9R/FtA/fZUeXnC2Lmz8jT9gLzswOqQoIpmXY92aiPGKvXXBDWLUlEfjCGlW4Yqqw==
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1646783243; bh=vdOyA5l3UoZ8I4dvcB9VolULf0TdYBgE8UDbyCo3x+U=; h=X-Sonic-MF:To:From:Subject:Date:From:Subject; b=ELCKaM2BzGweKhjeP5vs9Jk+qErE9zQBzZVKgFMNzZKm166FJdeuuUY75dh43qk18oQ5UdWPWXxSJBN0X1HZN6WZk17WajHn6UYSkNPymCG6YFBaiVF/oyOmEB6B6P7RvsexxueKsNIF5O7enemhWq3T4SmgkwcNiPI5jdtU/DM1CxHwCT83OFDz/jez0w4L8aTqPU8+gCewmf0ZCeOnOUPfldSFAT8D9TYe9tNnxXnzYUWYV7pyaRp8uwsLKGQWyW3VzATaIMCjvTe7JmGXdXLkvaj2T5oj40oM9uCQuUOyFzyZIaIFcnTBKjPZ91DalSwD4TzsV1QtmCvNuPdXcQ==
+Message-ID: <550436903.531903.1646783243411@sbcglobal.net>
+X-YMail-OSG: q9IvuU0VM1mwdsFCAQLEZi492mQAalkxFDTnoSVKYAlZ8nK7S_WhOBveFSTpqQb
+ 9Tr_wHtADYOD7OHyg9cdhdRp8w6MC4n9n6T5u.NcwlBPiy1WuZZwZFB6j_pBzOCSMiC0jMXhkDG_
+ dd8go.9C76c4.OmoRYUtjTeVbB78sBbOIcfJY4pOjJ_4nmwB_FoRe9otMcznQDlN8Ua5PSW4yJcM
+ PjsMli6IEyHpDldizE2SiAIEBJhWLWNsi9qdcw.Q0A0fE6Nq2_4Zzi9ZxI3FTyDIPzMwMs87rzCc
+ yvSGT9UTGQRdlQOMDmFQamJ5dg23_o0yODUPsSR.6iYMuwzFGs11Vyuh.b0yMDwmDYezP4MOZWRO
+ DQDH5g39P0RdBTC8rHQieWJz.xD8isHSIGD4K.8.hjc_lmI_5mroa7dOhYRay6vCDhhxM4zBNJvz
+ BMMhXsH8XDR8CCKx8n8Y17yAC9OdPIb_iWQ2Ld2qvJZKuPOTSeayCBUvWhkPLynuifnqxRK1Z4fZ
+ 03WwmEW6SH2KiN9hUrMvYBCzmsVL73IjCXTcMA.XKm7YkR3oFu5uts4W.UHDy1O2L4xixPtXp.99
+ 4ISaEySrNKu1ZZEnQVi9hd1B9MM_E3Ttb7IzZYZmJ9onsRb6wCjC.Pd2__xXxmcELPwqgMxbwcTs
+ NgR_hKVZcMBHUze6e89d3bKbbnrONJZ3Tt4c2agD5x7Np2TyPYw3TWaVMUtDT5Tn8Z2ZoXUNtU8N
+ V000hSjvtyhTsFyBJxccnltiacMGjS.0Do6PlANPgSKhBGtB7KeZkc.JtrOemCWiwya9.8Vvqo92
+ CP2rD87W_XN49Vc5q.bgUVIPZY7umrE_Jt7sJtI.MjX_vdQHVnERJOg9cd1jkhm5yBECPoUyrB4N
+ h_7mO39G2A331Z19vIOg5Q.961li8Z9hmEVYlUqbdCmW5bMsuRzum6snhmij1zJj7BB.ccd3g9Vi
+ zYze18RpTTg8uLz.KTf_zg9scuUEMWpZtrHoYYvbecWT.4oEB9Q__SAQJEZlOr8GizaM5tQFYlyk
+ yM.2f73gCt9LS5Lv7CadNYODBPZGZQ9DmDfOc4AckUqUi0F4NoHNGs.Qu.ttO_6t5PrUEnOjGqpu
+ eJxLFOvB4Jg14ajIElNnnf6Tlf2U0rmmDMmB_MY_QeFb1w_.azNh04ufoqcgLeF8il9m58szHmCd
+ 697XmQqI3aLO3EJQekE6dWEqFrQ8qVOjGzMIut1tPaYkTREGH6YptxJakL6XQoUyaG5Z2QF74QkI
+ UjZ52uLmWSEjOVIdv2duI2W2nfyeHrp6AzjL9MnosqfVxe8.cIj4t5YlyCoB974e7UaUffAuSOHT
+ MPE9FKil1YfBX17c3KfVNq.Bzm22q5PWWFO0RTUzpEj7.yaK9Fm5yFQfODlQDhhAb.sK9lBlDWsM
+ BZfdtF_q13kCuMN2pDHQI79ZQxl9TAewB9foUqyk7gZeeldXS.xly2zH2X5twPQgdEjuajC9TMk5
+ JUbSN5JdmG8sNDHRdRyaA7lj64afJYxDBhgwpfzO_rLDtw9w6B72bV7SdcPuzDq2FAsz.1jqA_gf
+ bG6MfbiB28CKRbkIDrjaE5lHBiUpwUB5G3uh3LvpogIHW3F_pFbwFDkotee7WgD_YlBComB3m.Ft
+ 7VGsoDG3XLPW3PeCuhRC5Mzbdv7.DbTHpoKsiMko.10TNaTniRNJa9s7_146rfAWJilGRvTGE7cn
+ _LXaNb72ohFX7v6P8opLZDt3f4MMFA0MzgLsykxvxDWJjV0u6ImLXWBIyJ42Dmh9vhgAO2LR8TWO
+ 2F3OF0kASb0DGrXMPSmf_znrK0RLZNtFWAU3IpskB_d61J0zhPr0XFp4cdbteGnGnigDc8.VhGR6
+ lF3nTPRYFpDho1t8mBaAcv9QXrC29MKqk67g27g2EaLOSzJjyu9MRJZi_wwmgFontNKlD3Ssp2Ew
+ 4bLW2w2Xa5Hr_wExVqEDxksapUqwQmDKaK2GisMliZV6kaZGYtC3ELiFn.Q5Zoxznfv6TsASiSA7
+ kwjiGaHzkodPJtepV7PFhGIhGCTYrBPyUFphjDiwrOmRyuKAkGPUM.kli7P_Zy1pTNWXrpJ4al62
+ zkC_K5H3Ndc7DC67L5e8HvREVYhttlP1UmeekSOV1udKU0SUUNVaVvPecAxkgHk_taz3k_4.op98
+ MufpRHyB0pDH7_hXosem53zvXU7obwlluorU0UUqOS5F2eplxZnl1CfOXFsKhdbUMickLxSIwlRQ
+ ga7g8nua5wKXJdLn1fQnXYoiVV7DGtyMtVcwq.YxwfdZ3iNWRVAiyRw.gT.EGrkbod6GUFQ8kvZm
+ 4gVTc_xCEok.Rh4OuDWhQWr2g
+X-Sonic-MF: <cdfry@sbcglobal.net>
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic308.consmr.mail.ne1.yahoo.com with HTTP; Tue, 8 Mar 2022 23:47:23 +0000
+Received: by kubenode513.mail-prod1.omega.ne1.yahoo.com (VZM Hermes SMTP Server) with ESMTPA ID ca2ffdf29fb2f4abadd8a6d059086ce8;
+          Tue, 08 Mar 2022 23:47:19 +0000 (UTC)
+MIME-Version: 1.0
+To: Chad Fry <chadefry@gmail.com>
+From: Cindi Fry <cdfry@sbcglobal.net>
+Subject: =?utf-8?Q?RE:_Citi_=E2=80=93_Congratulations!_You_are_Cleared_to_Start_?=
+Date: Tue, 8 Mar 2022 17:47:19 -0600
+Importance: normal
+X-Priority: 3
+Thread-Topic: =?utf-8?Q?Citi_=E2=80=93_Congratulations!_You_are_Cleared_to_Start_?=
+In-Reply-To: <42ffa3db-6702-417f-a071-eb7031562671@gmail.com>
+References: <e94ce5eb258d42678116612905396a49@citi.com>
+ <42ffa3db-6702-417f-a071-eb7031562671@gmail.com>
+Content-Type: multipart/mixed;
+	boundary="_566BE5C0-5373-4472-9E91-457C2F172F19_"
+X-Mailer: WebService/1.1.19878 mail.backend.jedi.jws.acl:role.jedi.acl.token.atz.jws.hermes.yahoo
+Content-Length: 26244
+
+--_566BE5C0-5373-4472-9E91-457C2F172F19_
+Content-Type: multipart/alternative;
+	boundary="_D12A352D-D032-492E-BA85-E74D28591D29_"
+
+--_D12A352D-D032-492E-BA85-E74D28591D29_
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+Congratulations
+https://www.choosetexaspower.org/compare-offers/?zipCode=3D75063&m=3D
+you need to select an electric plan and setup the start date and billing. W=
+ill have to call and check availability the website sucks! Keeps saying the=
+y only provide to residential areas at this time. They will need the apt #.=
+ I would suggest the cheapest 12 month fixed rate
+
+Sent from Mail for Windows
+
+From: Chad Fry
+Sent: Tuesday, March 8, 2022 3:56 PM
+To: Cindi Fry
+Subject: Fwd: Citi =E2=80=93 Congratulations! You are Cleared to Start=20
+
+
+Sent from BlueMail=20
+On Mar 8, 2022, at 3:22 PM, "Galvin, Shannon " <shannon.galvin@citi.com> wr=
+ote:
+Hi,
+=C2=A0
+Congratulations! You have been cleared to begin employment, or transfer to =
+your new role with Citi.=C2=A0 Your start date, or transfer date, is confir=
+med for 03/21/2022. Please connect with your manager prior to your start da=
+te regarding first day logistics.=C2=A0=20
+=C2=A0
+Please note that additional screenings like employment and education, may s=
+till be in the verification stage and may not be completed prior to your st=
+art date, or transfer date.=C2=A0 Once fully completed, you will receive an=
+ additional clearance notification. These screenings=C2=A0must=C2=A0clear f=
+or continued employment with Citi.=20
+=C2=A0
+What to Expect Next: New Hire, Rehire, or Contractor Conversion
+You will soon receive three separate emails from our HR System, Workday, wh=
+en your Onboarding experience is ready.=C2=A0 You will receive a new set of=
+ log-in credentials which will differ from the candidate portal where you c=
+ompleted your application, offer letter, and background tasks.=C2=A0=C2=A0I=
+t is imperative that all tasks within your onboarding experience are comple=
+ted as soon as possible and in advance of your start date.=C2=A0 If you hav=
+e not received these emails from our HR System within 10 calendars days of =
+your start date, please reach out to your Recruiting Coordinator or Recruit=
+er.=C2=A0 Failure to complete required onboarding tasks prior to your start=
+ date may delay your start date.
+=C2=A0
+Additionally, you will receive separate instructions prior to your start da=
+te for Work Authorization requirements.
+=C2=A0
+Please note that effective November 1, 2021, Citi requires that all success=
+ful applicants for positions located in the United States or Puerto Rico be=
+ fully vaccinated against COVID-19 as a condition of employment and provide=
+ proof of such vaccination prior to commencement of employment. After your =
+start date, visit Citi=E2=80=99s COVID-19 Information Center to learn more =
+about Site Location Information, Workplace Etiquette, Visitor Protocols and=
+ other COVID-19 information.=C2=A0 Connect with your Recruiter or Manager i=
+f you have any questions.=20
+=C2=A0
+Best Regards,
+=C2=A0
+Shannon Galvin
+Recruiting Senior Specialist
+HRSS Talent Acquisition Operations, NAM
+3800 Citibank Center, Tampa, FL 33610
+P: 716 308 9954 |=C2=A0shannon.galvin@citi.com
+Search our career opportunities here
+=C2=A0=C2=A0Connect with us=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 =C2=A0=C2=
+=A0=C2=A0 =C2=A0=C2=A0 =C2=A0=C2=A0=20
+
+CONFIDENTIALITY NOTE: The information transmitted, including attachments, i=
+s intended only for the person(s) or entity to which it is addressed and ma=
+y contain confidential and/or privileged material. Any review, retransmissi=
+on, dissemination or other use of, or taking of any action in reliance upon=
+ this information by persons or entities other than the intended recipient =
+is prohibited.
+=C2=A0
+=C2=A0
+=C2=A0
+=C2=A0
+=C2=A0
+
+
+--_D12A352D-D032-492E-BA85-E74D28591D29_
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40"><head><meta http-equiv=3DContent-Type content=
+=3D"text/html; charset=3Dutf-8"><meta name=3DGenerator content=3D"Microsoft=
+ Word 15 (filtered medium)"><!--[if !mso]><style>v\:* {behavior:url(#defaul=
+t#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+.MsoChpDefault
+	{mso-style-type:export-only;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style></head><body lang=3DEN-US link=3Dblue vlink=3D"#954F72" style=3D=
+'word-wrap:break-word'><div class=3DWordSection1><p class=3DMsoNormal>Congr=
+atulations</p><p class=3DMsoNormal><a href=3D"https://www.choosetexaspower.=
+org/compare-offers/?zipCode=3D75063&amp;m=3D">https://www.choosetexaspower.=
+org/compare-offers/?zipCode=3D75063&amp;m=3D</a></p><p class=3DMsoNormal>yo=
+u need to select an electric plan and setup the start date and billing. Wil=
+l have to call and check availability the website sucks! Keeps saying they =
+only provide to residential areas at this time. They will need the apt #. I=
+ would suggest the cheapest 12 month fixed rate</p><p class=3DMsoNormal><o:=
+p>&nbsp;</o:p></p><p class=3DMsoNormal>Sent from <a href=3D"https://go.micr=
+osoft.com/fwlink/?LinkId=3D550986">Mail</a> for Windows</p><p class=3DMsoNo=
+rmal><o:p>&nbsp;</o:p></p><div style=3D'mso-element:para-border-div;border:=
+none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in 0in 0in'><p class=3DM=
+soNormal style=3D'border:none;padding:0in'><b>From: </b><a href=3D"mailto:c=
+hadefry@gmail.com">Chad Fry</a><br><b>Sent: </b>Tuesday, March 8, 2022 3:56=
+ PM<br><b>To: </b><a href=3D"mailto:cdfry@sbcglobal.net">Cindi Fry</a><br><=
+b>Subject: </b>Fwd: Citi =E2=80=93 Congratulations! You are Cleared to Star=
+t </p></div><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><div><p class=3DMsoNo=
+rmal style=3D'margin-bottom:12.0pt'><o:p>&nbsp;</o:p></p></div><div><p clas=
+s=3DMsoNormal>Sent from <a href=3D"https://bluemail.me"><span style=3D'colo=
+r:#0563C1'>BlueMail</span></a> <o:p></o:p></p></div><div><p class=3DMsoNorm=
+al>On Mar 8, 2022, at 3:22 PM, &quot;Galvin, Shannon &quot; &lt;<a href=3D"=
+mailto:shannon.galvin@citi.com" target=3D"_blank"><span style=3D'color:#056=
+3C1'>shannon.galvin@citi.com</span></a>&gt; wrote:<o:p></o:p></p><blockquot=
+e style=3D'border:none;border-left:solid #CCCCCC 1.0pt;padding:0in 0in 0in =
+6.0pt;margin-left:4.8pt;margin-right:0in'><p class=3DMsoNormal style=3D'mar=
+gin-left:4.8pt'>Hi,<o:p></o:p></p><p>&nbsp;</p><p class=3DMsoNormal style=
+=3D'margin-left:4.8pt'><span lang=3DEN>Congratulations! You have been clear=
+ed to begin employment, or transfer to your new role with Citi.&nbsp; Your =
+start date, or transfer date, is confirmed for <span style=3D'color:red'>03=
+/21/2022. </span></span>Please connect with your manager prior to your star=
+t date regarding first day logistics.&nbsp; <o:p></o:p></p><p>&nbsp;</p><p =
+class=3DMsoNormal style=3D'margin-left:4.8pt'><span lang=3DEN>Please note t=
+hat additional screenings like employment and education, may still be in th=
+e verification stage and may not be completed prior to your start date, or =
+transfer date.&nbsp; Once fully completed, you will receive an additional c=
+learance notification. These screenings&nbsp;must&nbsp;clear for continued =
+employment with Citi. </span><o:p></o:p></p><p class=3DMsoNormal style=3D'm=
+argin-left:4.8pt'><span lang=3DEN style=3D'color:red'>&nbsp;</span><o:p></o=
+:p></p><p class=3DMsoNormal style=3D'mso-margin-top-alt:0in;margin-right:0i=
+n;margin-bottom:3.0pt;margin-left:4.8pt;text-autospace:none'><b><u><span la=
+ng=3DEN>What to Expect Next: New Hire, Rehire, or Contractor Conversion</sp=
+an></u></b><o:p></o:p></p><p class=3DMsoNormal style=3D'margin-left:4.8pt;t=
+ext-autospace:none'><span lang=3DEN>You will soon receive three separate em=
+ails from our HR System, Workday, when your Onboarding experience is ready.=
+&nbsp; You will receive a new set of log-in credentials which will differ f=
+rom the candidate portal where you completed your application, offer letter=
+, and background tasks.&nbsp;&nbsp;It is imperative that all tasks within y=
+our onboarding experience are completed as soon as possible and in advance =
+of your start date.&nbsp; If you have not received these emails from our HR=
+ System within 10 calendars days of your start date, please reach out to yo=
+ur Recruiting Coordinator or Recruiter.&nbsp; <b><u>Failure to complete req=
+uired onboarding tasks prior to your start date may delay your start date.<=
+/u></b></span><o:p></o:p></p><p>&nbsp;</p><p class=3DMsoNormal style=3D'mar=
+gin-left:4.8pt;text-autospace:none'><span lang=3DEN>Additionally, you will =
+receive separate instructions prior to your start date for Work Authorizati=
+on requirements.</span><o:p></o:p></p><p>&nbsp;</p><p class=3DMsoNormal sty=
+le=3D'margin-left:4.8pt'><i>Please note that effective November 1, 2021, Ci=
+ti requires that all successful applicants for positions located in the Uni=
+ted States or Puerto Rico be fully vaccinated against COVID-19 as a conditi=
+on of employment and provide proof of such vaccination prior to commencemen=
+t of employment. After your start date, visit Citi=E2=80=99s </i><a href=3D=
+"https://www.citi.net/EN/Pages/Global/ContentPages/covid-19-information-gui=
+de.aspx"><i>COVID-19 Information Center</i></a><i> to learn more about Site=
+ Location Information, Workplace Etiquette, Visitor Protocols and other COV=
+ID-19 information.&nbsp; Connect with your Recruiter or Manager if you have=
+ any questions. </i><o:p></o:p></p><p>&nbsp;</p><p class=3DMsoNormal style=
+=3D'margin-left:4.8pt'>Best Regards,<o:p></o:p></p><p>&nbsp;</p><p class=3D=
+MsoNormal style=3D'margin-left:4.8pt'><span style=3D'font-size:10.0pt;font-=
+family:"Arial",sans-serif;color:#008CE6'>Shannon Galvin</span><o:p></o:p></=
+p><p class=3DMsoNormal style=3D'margin-left:4.8pt'><span style=3D'font-size=
+:10.0pt;font-family:"Arial",sans-serif;color:#002D72'>Recruiting Senior Spe=
+cialist</span><o:p></o:p></p><p class=3DMsoNormal style=3D'margin-left:4.8p=
+t'><b><span style=3D'color:#002060'>HRSS Talent Acquisition Operations, NAM=
+</span></b><span style=3D'font-size:10.0pt;font-family:"Arial",sans-serif;c=
+olor:#1F497D'><br></span><span style=3D'color:#222222;background:white'>380=
+0 Citibank Center, Tampa, FL 33610</span><o:p></o:p></p><p class=3DMsoNorma=
+l style=3D'margin-left:4.8pt'><span style=3D'font-size:10.0pt;font-family:"=
+Arial",sans-serif;color:#002D72'>P: 716 308 9954 |</span><span style=3D'fon=
+t-size:10.0pt;font-family:"Arial",sans-serif;color:#008CE6'>&nbsp;</span><a=
+ href=3D"mailto:shannon.galvin@citi.com"><span style=3D'font-size:10.0pt;fo=
+nt-family:"Arial",sans-serif;color:#0563C1'>shannon.galvin@citi.com</span><=
+/a><span style=3D'font-size:10.0pt;font-family:"Arial",sans-serif;color:#00=
+2D72'><br>Search our career opportunities</span><span style=3D'font-size:10=
+.0pt;font-family:"Arial",sans-serif;color:#1F497D'> </span><a href=3D"http:=
+//citigroup.com/Careers/"><span style=3D'font-size:10.0pt;font-family:"Aria=
+l",sans-serif;color:#008CE6'>here</span></a><o:p></o:p></p><p class=3DMsoNo=
+rmal style=3D'margin-left:4.8pt;line-height:115%'><span style=3D'font-size:=
+10.0pt;line-height:115%;font-family:"Arial",sans-serif;color:#00BDF2'>&nbsp=
+;</span><span style=3D'font-size:9.0pt;line-height:115%;font-family:"Arial"=
+,sans-serif;color:#00BDF2'>&nbsp;</span><span style=3D'font-size:9.0pt;line=
+-height:115%;font-family:"Arial",sans-serif;color:#008CE6'>Connect with us<=
+b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span><span style=3D'color:#1F49=
+7D'> </span><a href=3D"https://www.facebook.com/citicareers"><b><span style=
+=3D'font-size:8.0pt;line-height:115%;color:#00B0F0;text-decoration:none'><i=
+mg border=3D0 width=3D24 height=3D24 style=3D'width:.25in;height:.25in' id=
+=3D"Picture_x0020_8" src=3D"cid:ii_a17ccc5a00d54554"></span></b></a><b><spa=
+n style=3D'font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;=
+color:#00B0F0'>&nbsp;&nbsp;</span></b><a href=3D"https://twitter.com/citica=
+reers"><span style=3D'color:#1F497D;text-decoration:none'><img border=3D0 w=
+idth=3D26 height=3D25 style=3D'width:.2708in;height:.2604in' id=3D"Picture_=
+x0020_9" src=3D"cid:ii_367aa193cdc04b10"></span></a><b><span style=3D'font-=
+size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;color:#00B0F0'>&=
+nbsp; </span></b><a href=3D"https://www.linkedin.com/company/citi/careers">=
+<b><span style=3D'font-size:8.0pt;line-height:115%;color:#00B0F0;text-decor=
+ation:none'><img border=3D0 width=3D23 height=3D24 style=3D'width:.2395in;h=
+eight:.25in' id=3D"Picture_x0020_10" src=3D"cid:ii_dabcd444b338434d"></span=
+></b></a><b><span style=3D'font-size:8.0pt;line-height:115%;font-family:"Ar=
+ial",sans-serif;color:#00B0F0'>&nbsp;&nbsp;</span></b><a href=3D"https://ww=
+w.youtube.com/user/CITI"><b><span style=3D'font-size:8.0pt;line-height:115%=
+;color:#00B0F0;text-decoration:none'><img border=3D0 width=3D24 height=3D24=
+ style=3D'width:.25in;height:.25in' id=3D"Picture_x0020_11" src=3D"cid:ii_8=
+9aa8408d57a4c22"></span></b></a><b><span style=3D'font-size:8.0pt;line-heig=
+ht:115%;font-family:"Arial",sans-serif;color:#00B0F0'> &nbsp;</span></b><a =
+href=3D"https://www.glassdoor.com/citi"><span style=3D'color:#1F497D;text-d=
+ecoration:none'><img border=3D0 width=3D25 height=3D25 style=3D'width:.2604=
+in;height:.2604in' id=3D"Picture_x0020_12" src=3D"cid:ii_a593c4d5217646b4">=
+</span></a><span style=3D'color:#1F497D'>&nbsp; </span><a href=3D"https://w=
+ww.instagram.com/citicareers/"><span style=3D'color:#1F497D;text-decoration=
+:none'><img border=3D0 width=3D25 height=3D25 style=3D'width:.2604in;height=
+:.2604in' id=3D"Picture_x0020_13" src=3D"cid:ii_927ed25fa02a488b"></span></=
+a><o:p></o:p></p><p class=3DMsoNormal style=3D'margin-left:4.8pt;line-heigh=
+t:115%'><a href=3D"http://www.citigroup.com/citi/"><span style=3D'color:#1F=
+497D;text-decoration:none'><img border=3D0 width=3D57 height=3D40 style=3D'=
+width:.5937in;height:.4166in' id=3D"Picture_x0020_14" src=3D"cid:ii_e54f1ba=
+aa8dd45ff"></span></a><o:p></o:p></p><p class=3DMsoNormal style=3D'margin-l=
+eft:4.8pt;line-height:115%'><b><i><span style=3D'font-size:8.0pt;line-heigh=
+t:115%;font-family:"Arial",sans-serif;color:#002D72'>CONFIDENTIALITY NOTE:<=
+/span></i></b><span style=3D'color:#1F497D'> </span><i><span style=3D'font-=
+size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;color:#002D72'>T=
+he information transmitted, including attachments, is intended only for the=
+ person(s) or entity to which it is addressed and may contain confidential =
+and/or privileged material. Any review, retransmission, dissemination or ot=
+her use of, or taking of any action in reliance upon this information by pe=
+rsons or entities other than the intended recipient is prohibited.</span></=
+i><o:p></o:p></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></bloc=
+kquote></div><p style=3D'margin-left:4.8pt'>&nbsp;</p><p class=3DMsoNormal>=
+<o:p>&nbsp;</o:p></p></div></body></html>=
+
+--_D12A352D-D032-492E-BA85-E74D28591D29_--
+
+--_566BE5C0-5373-4472-9E91-457C2F172F19_
+Content-Type: image/png; name="image001.png.png"
+Content-ID: <<ii_a17ccc5a00d54554>>
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="image001.png.png"
+
+iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAlwSFlzAAAS
+dAAAEnQB3mYfeAAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAAANlSURBVEhL
+rVZLaxNRFP7unTuTNLHPtBZUxEZpabEi+EA3CrrQjQq+cOE/caEu/BGuXXThRnEj6FoRVBTxrRWr
+qLX2ZZqkmZnM+J2btE1Bmkn1hhku9975vnPOd865MYfPXR8JtXsJWl9QUDqOqgBiPusZguDw6zhC
+FI+ZqHTNhEpfVkrvBbSK4/AfwMUgQsdVKGXIFB0MlXfFKG3Oc4V7tDxObrkfVCFPEIixMSEUPFcj
+kzYwhsYqlSd23tAny5oEXOyoVmMEoVip0NedQUd7Gq7rIKpGKC8G+L1Q4X4A7Tg848C0EvM4qoGn
+Uy6GBnLYP7oZg/kcOklS8UO8ev8Tt+6/xedv82jP1gw3rQi6WKkixRAc2L0FZ4+PYHh7LzJtLowj
+YDGJDe49GGfoREvPakKC5kOkkThX6cHgthxOHBnEvl2bmBaMWX0wQgwfXyJjvLLelECOyjdhGFkL
+Rwf7sWdnDXxmvoynL7/j48QsQoJPTi1grlCxXi2NpgQ2+Wi9AGzIeOjtaUO2DvDu0zTG7rzAw2df
+kfZciq0ZLkUCs5wzTQkYFSusxDWgF43j+88CJihogZnjdmqpJDh6NWRTAusBWSJiRyxQ8WYl7rW5
+1soK7fCxJdVQTmsQxJCs6evJYt/BAeS6MshkXIwO9S8TjOzow8VTuzA7v2hr4cevBTx+8Q1TM0Wr
+l4w1PSixcLo70jh9bBjD+V4Wj1qVOUOsge1bu23RSUWLFq8/TOFLJUxGIK46WlNcF6m6RY0ayJ7j
+abskZ0tln0S1Kk+URZ5xIF48ez2J+QWfvcZBfy6LjXxkTM+WbFgkwwolH8/fTKJYDuy5BASSbi6m
+mes3bj8H5UPHhhTOsIJPHh2y3wvgzbsv8YWZ1Jb28LtYwaLPavcSEVAgdl2fPWZ8oohC0UdPZxqH
+9m9dtm5mrsyY/8Kbj1PIdWdJYghumE0qWR1IXCUF21lgbMHoouACsDQkFJ3tKfR0tXEvZRPAdopk
+aVqDsXrxJT9O6gt1Cqvl0tqKsI2JQHOWuk3j8v+aswDtHZrwwmmJVryWC0d6pUzYCEi0ute0BNhw
+mHc8AyP1wfsgjoKbSrt7uJC3jbmFe/mvBohoNfBxYj8xro6u+nF0iU1ggJ7wn8V6/7bQOAJLNNgQ
+aWb0yNPRtT+++mXppi6FegAAAABJRU5ErkJggg==
+
+--_566BE5C0-5373-4472-9E91-457C2F172F19_
+Content-Type: image/jpeg; name="image007.jpg.png"
+Content-ID: <<ii_e54f1baaa8dd45ff>>
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="image007.jpg.png"
+
+/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMg
+IyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wAARCAAoADkDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2Wiio
+Ly9t7C3ae7mjhiXq7nAo3AmbqKoajrNhpMfmXtzHCPRjz+VUrLxXo+tvJbaXqdvJc7TtXPOfUDvX
+O6dpGim5vdR1rU4tRuLZsSkn5IfbFKUZX0RtRVJ3dSVv1NiDx/4emmCC+CljwWUgV0EM0NxGJIJF
+dG6MpyK878PeINF8SalqFlqEWnpGZRHZxooBdfXPetfw7pUGmeIrq10vVleCMZlsmJJiPtQ41Iv3
+kU3hpxfI2mu52a9KWkXpilpnOgrzXxZbjxJ8S9N0K+Zhp8cJmaPOBKfQ16V0Fcn4x8HS69Pbalpl
+19k1W04hlPQj0NXTaUtSZIsp4H0FNQtby3sI4JrRtyGH5fz9a5nwBaQX2reKre5hSW3luzvRhw3N
+aGl6X42utXtZda1G2htbZsskC8zfWr3hHw1eaFqutXN00TR31wZYwnUD3qm9NWTY5v4b6Lp0mt63
+I9pCz2l3ttyR/qhzwPSrnhMf8XV8SnC/6pBgdetS6f4W8RaH4pvJNMurb+y72YTS71+dfUVpaJ4a
+vdO8caxq8rRm2vI1WML97I9ablvqFtTrAKKB0paxNBKSiiiwC0UUUAFFFFJ6AAooopgf/9k=
+
+--_566BE5C0-5373-4472-9E91-457C2F172F19_
+Content-Type: image/png; name="image003.png.png"
+Content-ID: <<ii_dabcd444b338434d>>
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="image003.png.png"
+
+iVBORw0KGgoAAAANSUhEUgAAABcAAAAYCAYAAAARfGZ1AAAAAXNSR0IArs4c6QAAAAlwSFlzAAAS
+dAAAEnQB3mYfeAAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAAAQtSURBVEhL
+lVVbi1tVGF3nnpxMMjPNpJfx0naGVhH6oILCWBDEBxHENx/E4pN/wBf/hL/AN+lD8UEQsfgkRYug
+lnqphRlsJ+ncMkw6uc0kOUnOyTmub5/LBAUbNyRnn31Z+9vrW986Jj65eQ0wrkHHGsJohGgSQZqW
+/DgBhGpopqYZ3KkFiCLfhK59CMN6HhFy8Mc2Qi0GlzUGgXU5xZgJVy2KGJamhzCNyOQJryEKbUw0
+vZA3jEvlElzbRK09wH53KIvjA+SM+NgnN3VrDSZvPELgG0XX0t9YXcR7V5ZRypn4vtbCl/fqqB0O
+CC4HyN+MLeLaKCJ4FAZCxeVKAe+/+BTBzymE1bKLZm+EWpPgkoYsBzMewGUEjxfPOSZOF+xsZ9m1
+capgQSfv4WQyO+LUSlO4kWs/ag1wq9rEuaKDomPhNmn5de8oEw8mVAyvquiRHIR8V8JKolPj8jtB
+p1r4xgO22h6u393DVsvDfM7Cnd0uwTsKLwZjR14EVBq3OY6BgmXC58HH4wDskAuuNeMTGHl8uKnp
+KobuKIBPoHEUgoKCxbGVs0WsLrnImwaqzMEOA1ipuLiyXMJp18EomGCz1cfdnS7qHY80yg0V50QY
+RygV83jnhTP4+OpFLORNfLXewKffbmD3oIe3L1fw0dp5PFPK4bsHh/hxq4XXV8pYO78I1zJ4qQg7
+nSFu/FHH579sUwQeozIJLk0O4g1OuRYuLObV0HIxB4fJ1Dm3wOsvE3jONvDWcxW88uwCKky+qQos
+bqK2D6g2oXf7aA8Tn3WUTgqdAemYsGMwB2PymNIrNHnkc57gDvmUpLc8H0fjCcrMT5GHSxP5vvT0
+PG5uNNBo+Sfg6gJJziQPqp9oIc2lrPGCEL/tdvD1/QO0j4d4eXUJ75LOM3OxjIXSEmXdoE1lkWf3
+e0Kn0Rvji9/38dntGobtPl5lBV8klW9eWoq1oeQVt5nBpRykdUjHBhUzFN1zsMUq3haFJHQq7AR/
+ZvA0GuH+sD+K7YDSDIMIAyZPgZ7k9/9FnoITBkF29f+2yZkin4agWSs1ZU3c+B8R/4tz9UkQD060
+K8/Uxi12psczsMQsZS6dN9hP56eKSAY1pXW1UPxMPah7dtLoJXF6Sq4qPglCy+pDopZ3ZSmI1Cwd
+gCXc9fDzTodmZGC9cYweNe1zTtQgRnaBVXr/4Dg2KbmqpcOjHT9s9vHTdkdV8IPDPgb0GvlMinG5
+sA2jHwT44a8G6gSVst+lnuuDMTwC3Hr4GNXHPSzSiuu9oTIn9Y1lwTRHPr75cx/3HrWQ474aA2z2
+xyCm0vkeTeasrxmFTbrd5j43ihoYPfi5Y72j2vZRPeD3VNxO7JSgcHIq+gFpXG8Msb7bn9pHL7Ut
+oSW6A9O+CrtQ4BMopH6dSoBPK/WFRAeZYSV+7XBcPCImPBP83/h8w+37X85AAAAAAElFTkSuQmCC
+
+--_566BE5C0-5373-4472-9E91-457C2F172F19_
+Content-Type: image/jpeg; name="image006.jpg.png"
+Content-ID: <<ii_927ed25fa02a488b>>
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="image006.jpg.png"
+
+/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMg
+IyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wAARCAAZABkDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCvpNhH
+c2s95f3DwWVuVRjGu53duiqDx2zk1c/4pzYW262VXq37rAqW3s2PgmVDkZv0Jx6eWa2L2TV7TXIL
+PSo2/s75FggSMGKWMgZLHHOeck121Mw5paSPYpYKnF7a6+W1vLzMPVNChgsmu7NroJGU82C6QLIi
+v9xgRwVOCKxdtdRIsKW/imO3YtAjRLGd2cKJOAD6DoK5ut6OKk1qzto4dNNPp/kn+p3mmWCNpz2l
+xvWKQrIrqMlWAx07jBqaTTPJtWgj1qeKE9UEb4/Q1oWf+oT/AHRTbz/VmviI1GtXr9/6M5fayc9/
+y/VM43Uns9M02exsZJJ5Ll0M0rJsUKvIVR1696wa1tc/1xrIr6LBzc6SbPZpq0b9Wf/Z
+
+--_566BE5C0-5373-4472-9E91-457C2F172F19_
+Content-Type: image/jpeg; name="image004.jpg.png"
+Content-ID: <<ii_89aa8408d57a4c22>>
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="image004.jpg.png"
+
+/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMg
+IyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wAARCAAYABgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDP0+wu
+9UmaKxhaV15YjitE+EddHWzYY6c5zWx8LZA09/3PH1rrUTVx4hmcyINN2/KhHzZrip0YuB9Li8zq
+0q0oRSt5nlN/p93pcwjvYGhZhkZ70V1PxSkAl0/kbsNn1/GisalNRlZHpYPESr0Yznuef2uoXVjK
+ZbSd4Xb7xU9avf8ACVa10OozY+tFFUm0rIJUoS1kijd6hdX8vmXk7zP0yxooopPUuKUVZH//2Q==
+
+--_566BE5C0-5373-4472-9E91-457C2F172F19_
+Content-Type: image/jpeg; name="image002.jpg.png"
+Content-ID: <<ii_367aa193cdc04b10>>
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="image002.jpg.png"
+
+/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMg
+IyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wAARCAAZABoDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwC2kbyu
+FjUsx6ADJp1vby3c6w26GSRjgKKn0m6Wz1W2ncsFR+dvXHSvRYdNsUuvtsEMaysPvp3zXtV8R7F2
+sfN4XCfWFdPZ6+h5zeaXeaf/AMfVu8YzgE8g/jVWuo8b3qyXcFqj58oFnAPGT0/l+tcvWtGcpwUp
+dTHEU406jhF3SHRv5cgbarY7MMg1tHxbfrbCCBLeBQMAxp0+mTWHRVSpxn8SuRCrOnfkdhXdpHZ5
+GLOxyWJySaSiiqMz/9k=
+
+--_566BE5C0-5373-4472-9E91-457C2F172F19_
+Content-Type: image/jpeg; name="image005.jpg.png"
+Content-ID: <<ii_a593c4d5217646b4>>
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="image005.jpg.png"
+
+/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMg
+IyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wAARCAAZABkDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDoIF86
+eOMEgOQua0L3TLS1uDCb3bIMfKy5/Ws6xb/Trfn/AJaCr3iJgNdO7plenrXx1GnD2Lk1rdI5IL3S
+ncRNbTtExBK9x3qLdVrWWI1WUH0GB7Yqjurlqw5ZtLoZvcS2nEN1FI2dqMCcVr6hrtnLdNcWtoJZ
+jj55Oi/hWEv3jTh/qzXTSrzhBqPUpNofPcyXU7TSkF2646VHupg+6KWudu7uxH//2Q==
+
+--_566BE5C0-5373-4472-9E91-457C2F172F19_--
+

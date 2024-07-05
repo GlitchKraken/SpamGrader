@@ -1,0 +1,179 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:6c97:b0:19f:4fe2:c7ed with SMTP id td23csp4233950rwb;
+        Wed, 19 Jun 2024 19:19:31 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCWJnsSMDvxGX8bGf4oAIFlVM75JmpZ3Cpl5gEfToesGIlztUy52v7Om99oMKOt/6CbqbkGWMxHdp++HOCc7PjkMwJsSgias3ugkNg==
+X-Google-Smtp-Source: AGHT+IEJCxn/V7HzH3y8mZ6pE6cEChcBXdBY+U7xygmGqx/6VhM5bnfW4KYKEKOKyG9jXqQfZAvh
+X-Received: by 2002:a05:6512:214e:b0:52c:bc50:ff35 with SMTP id 2adb3069b0e04-52ccaa9739cmr2010631e87.57.1718849971435;
+        Wed, 19 Jun 2024 19:19:31 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1718849971; cv=none;
+        d=google.com; s=arc-20160816;
+        b=QBbEROOTJuCMYRLUzGLrHr78AunFt+fr0Lk0nJffAXerWz6Tfz5LmqJPM9UwtmbBBp
+         LCfCymyHGUpNX/UszoywftmWEEuBzDvG7Vj2bY3b39GYJt3J79P2P73qs+D/xCBUOcBc
+         JdGuybc0893DCsZk0MDIlH3icTojzyygP+o852kP+Q2b+ld97Z5Sjmz+EcVHNVk4ob2Q
+         uWczftfgmT8JQxL/I9axWn+NwfM0hSu9fgZGgn3NYxaRIh+8UImrlrW4k9H6SuM/mCBt
+         2qB3VDOvs4bTwkHFxCIggXm4HV+tNAzvpoOiUt6i9Us46UCW6yKCgfkuDkTm7/JDb5t/
+         p7Yw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=sender:date:list-unsubscribe:message-id:envelope-to:precedence
+         :mime-version:to:from:subject:delivered-to:domainkey-signature
+         :dkim-signature;
+        bh=0c/FZLBUntVBnketVeeJMpyZ+vFYYbcIL0vGEk1mfeo=;
+        fh=n+q9pMbhM0eZjOdD0WWZpyNO946HUHl9hAOLrrMGfog=;
+        b=HSr/7kpvSTDojwyVrwLx5kep5yIFjXbpEopgX3Liwew/jjTNFNFOqfHRxf0hmIWpvI
+         lWp0e2n0ZM9JlQrQi+Xly6uw21qB84XxISj9g/c96MEP0w3X7OK/4Fap9mL92u0m/aVM
+         OfGapKuPCbqhXoPy7HYOGn7TslQrUknQtTkCGSil0HDJLKy3ZUxIprgysxoVZ3nL/li9
+         4lq5MS3KadC27iJcos41HWjSCPV2zbfyMK2SdfErJukj6e4QrKHY7cGkFl7RDagHIfcW
+         3y0kBWdP+nk7XeGOYDM+g+BRVRbEy69B51q0zc+db/0W0Qcw87RtH1Vy1lyV2yWgnuCC
+         yQvA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@dss.thafdrteeli.com header.s=smtp header.b="eM3MyI/2";
+       spf=pass (google.com: domain of return-nodfwqz@dss.thafdrteeli.com designates 193.233.203.173 as permitted sender) smtp.mailfrom=return-nodfwqz@dss.thafdrteeli.com
+Return-Path: <return-nodfwqz@dss.thafdrteeli.com>
+Received: from ginamber.com (blogdavisitacao.camara.leg.br. [193.233.203.173])
+        by mx.google.com with ESMTPS id 2adb3069b0e04-52cc9b6dfcesi913394e87.474.2024.06.19.19.19.30
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Wed, 19 Jun 2024 19:19:31 -0700 (PDT)
+Received-SPF: pass (google.com: domain of return-nodfwqz@dss.thafdrteeli.com designates 193.233.203.173 as permitted sender) client-ip=193.233.203.173;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@dss.thafdrteeli.com header.s=smtp header.b="eM3MyI/2";
+       spf=pass (google.com: domain of return-nodfwqz@dss.thafdrteeli.com designates 193.233.203.173 as permitted sender) smtp.mailfrom=return-nodfwqz@dss.thafdrteeli.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=smtp; d=dss.thafdrteeli.com;
+ h=Subject:From:To:MIME-Version:Message-Id:List-Unsubscribe:Content-Type:Date:Sender; i=zjknygpagzbmdrvyejotz@dss.thafdrteeli.com;
+ bh=+TTgzEuZa5UQKcJVM//CPMM2qnU=;
+ b=eM3MyI/2mxbyjQBbqdiTGVvMEFQhtazROlGq5Uouubcv/Y9/0eTScaxlmA7w0NbMipS8WCDoY03l
+   3ZIlaCd8sGDUyQOHubr7ESLInEkE9EvXbJr2Ml/Xf1lWrJ5bGDG8L8AQU45YrNG6UI0hSDHxswok
+   8bzxxAKJiCcCYee5y+k=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=smtp; d=dss.thafdrteeli.com;
+ b=sRBthxRzJ+Qx9CMbEslt7eXyETBhB5sQdrARjnP7lyEAvWBEXSyV5gLJZnHkhC4pUlvcoaHJmafO
+   EdrjWCkkEZXrtfe7cUXdxoHieoT7Nx0F43FP4g4viqd8T8pWrBOOzX5siH7WdLIXQEeRCnbaKm+W
+   H9uc1e08Yr7ZXxItuv8=;
+Delivered-To: me@gmail.com
+Received: from efianalytics.com (efianalytics.com. 216.244.76.116)
+Subject: Someone tried to log into your account, user ID:92230-74283
+From: @FB <smblpwv@olxj.ireduxvucpu.us>
+To: me@aol.com
+MIME-Version: 1.0
+Precedence: bulk
+Content-Length:672
+Content-Length:127257
+Envelope-To: <blackpapermoon42@gmail.com>
+X-Originating-IP: 193.233.203.173
+X-Original-Sender: <blackpapermoon42@gmail.com>
+X-Google-Sender-Delegation: blackpapermoon42@gmail.com Trusted Sender
+X-Google-Original-Message-ID: <-@vevida.net>
+Message-Id: <empqqxyiijugoxaguquwjhnnmmwooj@h72wzdy4ybrvfp81lr>
+List-Unsubscribe: <http://ginamber.com/LEAVE=To>
+Content-Type: multipart/encrypted; boundary="----=_Part_5CVDULO5QO4NF27.5CVDULO5QO4NF27"
+Date: Thu, 20 Jun 2024 02:18:30 +0000
+Sender: zjknygpagzbmdrvyejotz@dss.thafdrteeli.com
+
+------=_Part_5CVDULO5QO4NF27.5CVDULO5QO4NF27
+Content-Type: text/html; charset=us-ascii
+content-transfer-encoding: 100000000000000000257bit
+
+
+
+
+
+<object>
+
+----ZDXOW;JEKHJ;DLDGN 
+----LJKWX;XXUHY;RSDTN  
+----ESARP;QSYKJ;XIFQU  ----VMMMK;VNLXT;TWMZZ  
+----VXTWQ;BZTSX;SBYHM  ----GGHAR;AJZMY;NHTNU  
+
+
+
+
+
+
+</object>
+
+
+
+
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You have message on Facebook!</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  .header {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .header h1 {
+    color: #1877f2;
+  }
+  .content {
+    padding: 20px;
+    background-color: #f9fafb;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1877f2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .button:hover {
+    background-color: #1659a4;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>You have message on Facebook!</h1>
+  </div>
+  <div class="content">
+    <p>Hii blackpapermoon42</p>
+    <p>A user just logged into your account from a new device <strong>iphone 11 pro</strong>.</p>
+    <p>We are sending you this email to verify it's really you .</p>
+    <a href="mailto:sack@mascusettsins.com;tsack@settsins.com;trsck@nameins.net;track@mesins.net;trsack@studentadvsices.org.uk;refor@ceremonsyideas.org;noste@storagemsodels.org.uk;law@nsobleess.co.in;note@elecstion.me.uk;vagus@aeroscpacevitro.us.com;releas@baconanxiety.co.uk;reforms@bacosanxiety.com;impres@litesaryselection.com;ibsistence@unisersity.de.com;encourag@unisersity.com.se;professo@univsersity.eu.com;revok@ubiverxity.cn.com;depor@dergree.com.de;counta@nsbleess.co.in;staircasb@elbction.me.uk;architecture@nourcoches.de;rocs@massachusettsins.co.uk;before@e-irosky.me;value@newlifeinearth.co.uk;kantonkostin94@ya.ru;kantonkostin94@yandex.by;kantonkostin94@yandex.com;kantonkostin94@yandex.kz;kantonkostin94@yandex.ru;LuisGYeager-lgy@hotmail.com;AnneF-Lamb201@hotmail.com;tionwayne980@outlook.com;noah.noah7561@yahoo.com;byassinee@aol.com;jackvauhan@hotmail.com;sophieeans85532@googlemail.com;valentinrojo368@googlemail.com;b36097189@googlemail.com;petermontgomery992@googlemail.com;Agniya.Orlova.8060@bk.ru;Sofya.Eliseeva.3433@list.ru;Artur.Kolobov.5731@inbox.ru;Stepan.Panfilov.9954@mail.ru;jamesbaick@yandex.com;byassinee2021@yandex.com;tionwayne980@outlook.com;jamesber12@yandex.kz;hichameelm@163.com;medjames@126.com;jasd147me@126.com;byainer321@yandex.com;razulkarim4643@gmail.com;rahad.dk.bd@gmail.com;bissojithaldar1111@gmail.com;mdlitonliton977@gmail.com;akazadazad53561@gmail.com;sidwellcheryl10@gmail.com;business.yassine2021@gmail.com;valveeder@gmail.com;bmwm5dyali1@gmail.com;zilget34564@gmail.com;alisapietila340@gmail.com;erkanhaimerl28@gmail.com;marijanadubois13@gmail.com;clarencefreeman949@gmail.com;monishabal66@gmail.com;gabrielmarn4141@gmail.com;crystallamb433@gmail.com;reneauajamel688@gmail.com;osterbergadeangelo3@gmail.com;badrnor862@gmail.com;adelnwara1955@gmail.com;hk01222723982@gmail.com;hazemelsaysez@gmail.com;fa056758@gmail.com;wagdygamal578@gmail.com;gouriabsaam.5568@gmail.com;konafasama@gmail.com;hhh512804@gmail.com;123456amrass@gmail.com;hesham22maher@gmail.com;sameerhassan707@gmail.com;tarakatata0@gmail.com;antar5058@gmail.com;shryfmhmwd301@gmail.com;mn519342@gmail.com;?subject=Report+this+user" style="color:white" class="button">Report the user</a>
+	<a href="mailto:sack@mascusettsins.com;tsack@settsins.com;trsck@nameins.net;track@mesins.net;trsack@studentadvsices.org.uk;refor@ceremonsyideas.org;noste@storagemsodels.org.uk;law@nsobleess.co.in;note@elecstion.me.uk;vagus@aeroscpacevitro.us.com;releas@baconanxiety.co.uk;reforms@bacosanxiety.com;impres@litesaryselection.com;ibsistence@unisersity.de.com;encourag@unisersity.com.se;professo@univsersity.eu.com;revok@ubiverxity.cn.com;depor@dergree.com.de;counta@nsbleess.co.in;staircasb@elbction.me.uk;architecture@nourcoches.de;rocs@massachusettsins.co.uk;before@e-irosky.me;value@newlifeinearth.co.uk;kantonkostin94@ya.ru;kantonkostin94@yandex.by;kantonkostin94@yandex.com;kantonkostin94@yandex.kz;kantonkostin94@yandex.ru;LuisGYeager-lgy@hotmail.com;AnneF-Lamb201@hotmail.com;tionwayne980@outlook.com;noah.noah7561@yahoo.com;byassinee@aol.com;jackvauhan@hotmail.com;sophieeans85532@googlemail.com;valentinrojo368@googlemail.com;b36097189@googlemail.com;petermontgomery992@googlemail.com;Agniya.Orlova.8060@bk.ru;Sofya.Eliseeva.3433@list.ru;Artur.Kolobov.5731@inbox.ru;Stepan.Panfilov.9954@mail.ru;jamesbaick@yandex.com;byassinee2021@yandex.com;tionwayne980@outlook.com;jamesber12@yandex.kz;hichameelm@163.com;medjames@126.com;jasd147me@126.com;byainer321@yandex.com;razulkarim4643@gmail.com;rahad.dk.bd@gmail.com;bissojithaldar1111@gmail.com;mdlitonliton977@gmail.com;akazadazad53561@gmail.com;sidwellcheryl10@gmail.com;business.yassine2021@gmail.com;valveeder@gmail.com;bmwm5dyali1@gmail.com;zilget34564@gmail.com;alisapietila340@gmail.com;erkanhaimerl28@gmail.com;marijanadubois13@gmail.com;clarencefreeman949@gmail.com;monishabal66@gmail.com;gabrielmarn4141@gmail.com;crystallamb433@gmail.com;reneauajamel688@gmail.com;osterbergadeangelo3@gmail.com;badrnor862@gmail.com;adelnwara1955@gmail.com;hk01222723982@gmail.com;hazemelsaysez@gmail.com;fa056758@gmail.com;wagdygamal578@gmail.com;gouriabsaam.5568@gmail.com;konafasama@gmail.com;hhh512804@gmail.com;123456amrass@gmail.com;hesham22maher@gmail.com;sameerhassan707@gmail.com;tarakatata0@gmail.com;antar5058@gmail.com;shryfmhmwd301@gmail.com;mn519342@gmail.com;?subject=yes+,me" style="color:white" class="button">Yes, me</a>
+  </div>
+</div>
+</body>
+</html><img src="https://tinyurl.com/frtrvdm5/track/3PkVtB4884IjqZ42muatoworky672AGNWXEVMIITWSMD127257ONTB1908519S9"width='1' height='1'>
+</html>
+
+
+
+
+
+<ObjecT>
+
+----YQBJA;ZVKPD;CPKIA 
+----LCQUK;XWYZY;DQIOS  
+----WACVU;ESGXQ;ODASO  ----ADRXN;XVOTH;LRVBQ  
+----BXFUD;YYBOF;DZJAH  ----CPYJY;BJEXE;GWVTY  
+----KMDVO;OOEWQ;UXUDE 
+----ZRCLW;WVCZD;JZQIY 
+
+
+----ckdhu;7f9ai;u8zwn 
+/HDIMTUBWWMWHNV.html?od={An10}.INBSXFSVEF.UGQCBZSESS.PZQBBVKIUP" >
+
+------=_Part_5CVDULO5QO4NF27.5CVDULO5QO4NF27--

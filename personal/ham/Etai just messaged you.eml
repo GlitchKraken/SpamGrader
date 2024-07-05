@@ -1,0 +1,3324 @@
+Delivered-To: chadefry@gmail.com
+Received: by 2002:a05:7000:c299:b0:595:f4e9:2ec7 with SMTP id jp25csp715238mab;
+        Thu, 27 Jun 2024 13:05:05 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IH0jDnytWkFD+xk3V69I3s9+8NOst7pk8G0CmoL4DZVwbIkT7UR0uLJwCQ23rJkspBVo2UK
+X-Received: by 2002:a05:620a:2697:b0:79b:bad3:f2f7 with SMTP id af79cd13be357-79be6eddcaamr1702185485a.22.1719518704771;
+        Thu, 27 Jun 2024 13:05:04 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719518704; cv=none;
+        d=google.com; s=arc-20160816;
+        b=BHA894n3DHmCw+r1BmSbwyVCh2tquDzyQ1CpQFLugpo/DzrETjFvgadeDFYeY2YGcn
+         wyf8j2ZlkGAmYdK9XcZDUYLMdn51mbt6tbQdSDvps2HoYtS0JfkYdZlpZPZfk9wmlh6H
+         fhnbCcp8lttf5By0OVbeTaCy72hyUqD4TUFm1oFjs3sn+mHTk2kZy3Ul3isfWHA3nP3S
+         VLgDrpGPlUNIFqI9rpRv9rAodHbkdQheqfOrW93q8+vB1AXEbZGTKNa+MibFwU5OaPTg
+         4zX1UBokNlO4H8bu4eb8Qk8cgznzkMKOz4l2sur2IOT/YMNSNpMQQY21PaPFixeGpMFh
+         0M1g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=require-recipient-valid-since:feedback-id:list-unsubscribe-post
+         :list-unsubscribe:date:to:mime-version:subject:message-id:from
+         :dkim-signature:dkim-signature;
+        bh=hVzbIxTkF/eKLO7JkQS6GspKFTgp7VCbKiIGQd3NS4o=;
+        fh=2Gy6tWuA4y3hd+fUD6orgCaXDQlGRAqyvFPEDudpRI8=;
+        b=zjr2Pn0uS4XQbrpz+1J0EB+07hg2scmdGAwzy/a+ZNOPnaafRQYQA1PTTpReP+/n9h
+         Qzdv1Zwz0VovE94ZTWj6QfA4rO2zkp03kJlspa6v6sF9k7jVBm/CCqBhg5NqIkvucMT0
+         nIHYcZXPgvDxO6eEEtNdpfuzgqzbdTUGe3tyN6a9RIBZEiH56E6bM7uytC5Uwns9/OfO
+         +HIGe//BlYcpm5wojdLe3iodnY8R70qUV+Zvh2HX7+SdcLLSvCrGjC7mTgD3KIqk0OOk
+         gUC2QrAAG5sQsCVw2R8htdsp/aXvJpkjRA/H0ix3jDmfxgRECjA+OclmumROycO2QZww
+         4gsw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@maile.linkedin.com header.s=d2048-202308-0e header.b=cTqWWaLK;
+       dkim=pass header.i=@linkedin.com header.s=d2048-202308-00 header.b=VTPGx78R;
+       spf=pass (google.com: domain of m-yrh0nwzpozb8xnun62thg6a2twwfih39tm3lq3vg6iqtg7e82nrcphm42@bounce.linkedin.com designates 108.174.3.194 as permitted sender) smtp.mailfrom=m-yrh0nwzpozb8xnun62thg6a2twwfih39tm3lq3vg6iqtg7e82nrcphm42@bounce.linkedin.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=linkedin.com
+Return-Path: <m-yrh0nwzpozb8xnun62thg6a2twwfih39tm3lq3vg6iqtg7e82nrcphm42@bounce.linkedin.com>
+Received: from maile-ab.linkedin.com (maile-ab.linkedin.com. [108.174.3.194])
+        by mx.google.com with ESMTPS id af79cd13be357-79d692f041dsi23296185a.288.2024.06.27.13.05.04
+        for <chadefry@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 27 Jun 2024 13:05:04 -0700 (PDT)
+Received-SPF: pass (google.com: domain of m-yrh0nwzpozb8xnun62thg6a2twwfih39tm3lq3vg6iqtg7e82nrcphm42@bounce.linkedin.com designates 108.174.3.194 as permitted sender) client-ip=108.174.3.194;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@maile.linkedin.com header.s=d2048-202308-0e header.b=cTqWWaLK;
+       dkim=pass header.i=@linkedin.com header.s=d2048-202308-00 header.b=VTPGx78R;
+       spf=pass (google.com: domain of m-yrh0nwzpozb8xnun62thg6a2twwfih39tm3lq3vg6iqtg7e82nrcphm42@bounce.linkedin.com designates 108.174.3.194 as permitted sender) smtp.mailfrom=m-yrh0nwzpozb8xnun62thg6a2twwfih39tm3lq3vg6iqtg7e82nrcphm42@bounce.linkedin.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=linkedin.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=maile.linkedin.com;
+	s=d2048-202308-0e; t=1719518702;
+	bh=hVzbIxTkF/eKLO7JkQS6GspKFTgp7VCbKiIGQd3NS4o=;
+	h=From:Subject:MIME-Version:Content-Type:To:Date:X-LinkedIn-Class:
+	 X-LinkedIn-Template:X-LinkedIn-fbl;
+	b=cTqWWaLK0Zvf3khZiUm0FuNDYlPIkW12NmDFD2cYCVQXkNB/pHb2hV3a/vf1yM1JL
+	 5tiVKwXTxZZn75NgTbacVhB/gNq9xMwzFVX8Pyw3Y02ToKzOQp46WtbtkfMPEzRFMJ
+	 U0PbuILM3qaXRqkHtGAqbYbj6OVZJWtqfuwm8Nb5LftpG0WSoyvQ3SizkCwRixcLSU
+	 Z9cfKt8aZSvGSVt3ckJA7J15asyPSBpVNEIaAowoC+LND8jV8dpKvBql3usWIbmPE/
+	 kjGdHrcdWIdlbUlqlHYVhj30nveSDU6NMWYX3tQvHGcI2YeNWaleCJMh3QeWFRqxOG
+	 D5mcslQ+xB9Aw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linkedin.com;
+	s=d2048-202308-00; t=1719518702;
+	bh=hVzbIxTkF/eKLO7JkQS6GspKFTgp7VCbKiIGQd3NS4o=;
+	h=From:Subject:MIME-Version:Content-Type:To:Date:X-LinkedIn-Class:
+	 X-LinkedIn-Template:X-LinkedIn-fbl;
+	b=VTPGx78RRqExdyH9LrAv1U2aYY1W7O5JaPuqDDl4GgUZ7YUTRGifLEGxWEDAUj3K8
+	 6NgIfg4WzESAVrVY77+QRkEmqHDmc35Wn9QzntDWXuq0FHDsRrlFoT7xVKYBPWdXz7
+	 KRQVk4VevF2ReGLB9k7i05E6xHWvZMZ9z58doZbZMvhHhrRswjwUFPu/LJWI983SnM
+	 7BhFzYL28YmelHKqtuYd44kYKpqh645p52bB6fCFr8eOLNFTQVaZ9MBFU4qfRuSDRi
+	 b9LjSpbKd8Elgi/qJGWSOGF/y82ZOqro11DWGwFC5yAQ2aR8hPIynEQcpyRlZDioPM
+	 4jEwrNvCaLNiQ==
+From: Etai Stein via LinkedIn <messaging-digest-noreply@linkedin.com>
+Message-ID: <542875184.13779750.1719518702680@lva1-app84007.prod.linkedin.com>
+Subject: Etai just messaged you
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_13779748_890323080.1719518702677"
+To: Chad Fry <chadefry@gmail.com>
+Date: Thu, 27 Jun 2024 20:05:02 +0000 (UTC)
+X-LinkedIn-Class: EMAIL-DEFAULT
+X-LinkedIn-Template: email_member_message_v2
+X-LinkedIn-fbl: m2-aszqizbb8cuxn8bsqfyxkibfmi6pao068am24svbscgyjymwafh2gkesdwojshh05jnyb3eqqlhnxec5frfifrzzrq7y2rcec1if6z
+X-LinkedIn-Id: 8lbzb8-lxxozzyi-c2
+List-Unsubscribe: <https://www.linkedin.com/comm/psettings/email-unsubscribe?lipi=urn%3Ali%3Apage%3Aemail_email_member_message_v2%3Bl%2B2v0BZjSXGiwz0HpCH4jA%3D%3D&midToken=AQF5ZQB6LmPjtQ&midSig=3mt_wiBk7liXk1&trk=eml-email_member_message_v2-unsub-0-unsub&trkEmail=eml-email_member_message_v2-unsub-0-unsub-null-8lbzb8~lxxozzyi~c2-null-null&eid=8lbzb8-lxxozzyi-c2&loid=AQHfjAStN8NZMwAAAZBbTSfMhIExzZL7g33nj0iF_B3FVvT8LrTlD8zlu-eRU2lVZIWtwSxzxGaV8J-RsZpmu_Aker3K5Q>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: email_member_message_v2:linkedin
+Require-Recipient-Valid-Since: chadefry@gmail.com; Wed, 27 Feb 2019 22:34:33 +0000
+
+------=_Part_13779748_890323080.1719518702677
+Content-Type: text/plain;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-ID: text-body
+
+You have 1 new message
+
+.....................................
+
+Etai Stein (Application Security Specialist @Backslash Security |=E2=80=A6)
+(https://il.linkedin.com/in/etai-stein)
+
+View message: https://www.linkedin.com/comm/messaging/thread/2-ZDYxY2M3Mzct=
+NzdmMC00ZTExLThlNDktOGQ3ZDM1MDNmNGY3XzAxMA=3D=3D?lipi=3Durn%3Ali%3Apage%3Ae=
+mail_email_member_message_v2%3Bl%2B2v0BZjSXGiwz0HpCH4jA%3D%3D&midToken=3DAQ=
+F5ZQB6LmPjtQ&midSig=3D3mt_wiBk7liXk1&trk=3Deml-email_member_message_v2-one_=
+to_one_single_thread_text-0-reply_to_sender&trkEmail=3Deml-email_member_mes=
+sage_v2-one_to_one_single_thread_text-0-reply_to_sender-null-8lbzb8~lxxozzy=
+i~c2-null-null&eid=3D8lbzb8-lxxozzyi-c2&otpToken=3DMTcwNDE3ZTUxNDJlY2FjNmIw=
+MjQwNGVkNDcxN2UyYjU4N2M5ZDA0MDljYWI4ZTYxNzZjMTAwNmQ0YTVmNThmYmYwZDJkZmJkNjB=
+jNGYwZjc2MDg0ZTA0YjkzNmU5Mjg1YTdmYzJjNjNiZWIzZWU3NGM0YWFhNiwxLDE%3D
+ =20
+ =20
+
+.....................................
+}
+     =20
+
+----------------------------------------
+
+This email was intended for Chad Fry (Information Security Sr Analyst AVP @=
+ Citi  | Splunk | Ghidra | Linux | Malware Analysis)
+Learn why we included this: https://www.linkedin.com/help/linkedin/answer/4=
+788?lang=3Den&lipi=3Durn%3Ali%3Apage%3Aemail_email_member_message_v2%3Bl%2B=
+2v0BZjSXGiwz0HpCH4jA%3D%3D&midToken=3DAQF5ZQB6LmPjtQ&midSig=3D3mt_wiBk7liXk=
+1&trk=3Deml-email_member_message_v2-SecurityHelp-0-textfooterglimmer&trkEma=
+il=3Deml-email_member_message_v2-SecurityHelp-0-textfooterglimmer-null-8lbz=
+b8~lxxozzyi~c2-null-null&eid=3D8lbzb8-lxxozzyi-c2&otpToken=3DMTcwNDE3ZTUxND=
+JlY2FjNmIwMjQwNGVkNDcxN2UyYjU4N2M5ZDA0MDljYWI4ZTYxNzZjMTAwNmQ0YTVmNThmYmYwZ=
+DJkZmJkNjBjNGYwZjc2MDg0ZTA0YjkzNmU5Mjg1YTdmYzJjNjNiZWIzZWU3NGM0YWFhNiwxLDE%=
+3D
+You are receiving Messages digest emails.
+
+Unsubscribe: https://www.linkedin.com/comm/psettings/email-unsubscribe?lipi=
+=3Durn%3Ali%3Apage%3Aemail_email_member_message_v2%3Bl%2B2v0BZjSXGiwz0HpCH4=
+jA%3D%3D&midToken=3DAQF5ZQB6LmPjtQ&midSig=3D3mt_wiBk7liXk1&trk=3Deml-email_=
+member_message_v2-unsubscribe-0-textfooterglimmer&trkEmail=3Deml-email_memb=
+er_message_v2-unsubscribe-0-textfooterglimmer-null-8lbzb8~lxxozzyi~c2-null-=
+null&eid=3D8lbzb8-lxxozzyi-c2&loid=3DAQHfjAStN8NZMwAAAZBbTSfMhIExzZL7g33nj0=
+iF_B3FVvT8LrTlD8zlu-eRU2lVZIWtwSxzxGaV8J-RsZpmu_Aker3K5Q
+Help: https://www.linkedin.com/help/linkedin/answer/67?lang=3Den&lipi=3Durn=
+%3Ali%3Apage%3Aemail_email_member_message_v2%3Bl%2B2v0BZjSXGiwz0HpCH4jA%3D%=
+3D&midToken=3DAQF5ZQB6LmPjtQ&midSig=3D3mt_wiBk7liXk1&trk=3Deml-email_member=
+_message_v2-help-0-textfooterglimmer&trkEmail=3Deml-email_member_message_v2=
+-help-0-textfooterglimmer-null-8lbzb8~lxxozzyi~c2-null-null&eid=3D8lbzb8-lx=
+xozzyi-c2&otpToken=3DMTcwNDE3ZTUxNDJlY2FjNmIwMjQwNGVkNDcxN2UyYjU4N2M5ZDA0MD=
+ljYWI4ZTYxNzZjMTAwNmQ0YTVmNThmYmYwZDJkZmJkNjBjNGYwZjc2MDg0ZTA0YjkzNmU5Mjg1Y=
+TdmYzJjNjNiZWIzZWU3NGM0YWFhNiwxLDE%3D
+
+=C2=A9 2024 LinkedIn Corporation, 1zwnj000 West Maude Avenue, Sunnyvale, CA=
+ 94085.
+LinkedIn and the LinkedIn logo are registered trademarks of LinkedIn.
+------=_Part_13779748_890323080.1719518702677
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-ID: html-body
+
+<html xmlns=3D"http://www.w3.org/1999/xhtml" lang=3D"en" xml:lang=3D"en"> <=
+head> <meta http-equiv=3D"Content-Type" content=3D"text/html;charset=3Dutf-=
+8"> <meta name=3D"HandheldFriendly" content=3D"true"> <meta name=3D"viewpor=
+t" content=3D"width=3Ddevice-width; initial-scale=3D0.666667; user-scalable=
+=3D0"> <meta name=3D"viewport" content=3D"width=3Ddevice-width"> <title></t=
+itle> <style>
+            @media (max-width: 512px) { .mercado-container { width: 100% !i=
+mportant; } }
+          </style> <style>
+            @media (max-width: 480px) { .inline-button, .inline-button tabl=
+e { display: none !important; }
+            .full-width-button, .full-width-button table { display: table !=
+important; } }
+          </style> <style>body {font-family: -apple-system, system-ui, Blin=
+kMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+            'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid S=
+ans', 'Apple Color Emoji', 'Segoe UI Emoji',
+            'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica=
+, Arial, sans-serif;}</style> <!--[if mso]><style type=3D"text/css"> </styl=
+e><![endif]--> <!--[if IE]><style type=3D"text/css"> </style><![endif]--> <=
+style>
+@media (max-width: 480px) {
+  .inline-button,
+.inline-button table {
+    display: none !important;
+  }
+
+  .full-width-button,
+.full-width-button table {
+    display: table !important;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 576px;
+  }
+
+  .\!container {
+    max-width: 576px !important;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .\!container {
+    max-width: 768px !important;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+
+  .\!container {
+    max-width: 992px !important;
+  }
+}
+@media (min-width: 1128px) {
+  .container {
+    max-width: 1128px;
+  }
+
+  .\!container {
+    max-width: 1128px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .\!container {
+    max-width: 1200px !important;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+
+  .\!container {
+    max-width: 1440px !important;
+  }
+}
+@media (min-width: 1680px) {
+  .container {
+    max-width: 1680px;
+  }
+
+  .\!container {
+    max-width: 1680px !important;
+  }
+}
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1920px;
+  }
+
+  .\!container {
+    max-width: 1920px !important;
+  }
+}
+@media (min-width: 992px) {
+  .tab-selected:not(.tab-vertical):after {
+    content: "";
+  }
+}
+@media (min-width: 992px) {
+  .base-detail-page__header .nav {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .base-detail-page__header .nav {
+    width: 1128px;
+  }
+}
+@media (max-width: 767px) {
+  .embedded-social-share .modal__outlet {
+    flex-direction: row;
+  }
+
+  .embedded-social-share .modal__outlet {
+    font-size: 14px;
+  }
+
+  .embedded-social-share .modal__outlet {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+@media (max-width: 991px) {
+  .nav .search-bar {
+    order: 4;
+  }
+}
+@media (max-width: 767px) {
+  .nav .sign-in-card {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .nav--minified-mobile .nav__cta-container > *:not(.nav__link-person) {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .nav .search-bar--minified-mobile {  }
+
+  .nav .search-bar--minified-mobile {
+    margin-bottom: 0px;
+  }
+
+  .nav .search-bar--minified-mobile {
+    height: 100%;
+  }
+
+  .nav .search-bar--minified-mobile {
+    flex-grow: 1;
+  }
+
+  .nav .search-bar--minified-mobile {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .nav .search-bar--minified-mobile {
+    order: initial;
+  }
+
+  .nav .search-bar--minified-mobile .search-bar__placeholder {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .tw-link-column-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .tw-link-column-item {
+    margin-bottom: 8px;
+  }
+
+  .tw-linkster .tw-link-column-item {
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .member-nav-menu .collapsible-dropdown__button {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .member-nav-menu .collapsible-dropdown__button {
+    margin-left: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .member-nav-menu .collapsible-dropdown__list {
+    right: 0px;
+  }
+
+  .member-nav-menu .collapsible-dropdown__list {
+    max-height: calc(100vh - 52px);
+  }
+
+  .member-nav-menu .collapsible-dropdown__list {
+    overflow-y: auto;
+  }
+}
+@media (max-width: 991px) {
+  .base-search-bar .typeahead-input,
+.base-search-bar .search-input {
+    margin-bottom: 8px;
+  }
+
+  .base-search-bar .typeahead-input,
+.base-search-bar .search-input {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .recent-searches.recent-searches--show {
+    position: fixed;
+  }
+
+  .recent-searches.recent-searches--show {
+    top: 168px;
+  }
+
+  .recent-searches.recent-searches--show {
+    left: 0px;
+  }
+
+  .recent-searches.recent-searches--show {
+    width: 100vw;
+  }
+
+  .recent-searches.recent-searches--show {
+    min-width: 100vw;
+  }
+
+  .recent-searches.recent-searches--show {
+    border-width: 0;
+  }
+}
+@media (max-width: 991px) {
+  .search-bar .dismissable-input {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0.75);
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  .search-bar .dismissable-input {
+    border-radius: 4px;
+  }
+
+  .search-bar .dismissable-input {
+    border-width: 1px;
+  }
+
+  .search-bar .dismissable-input {
+    border-style: solid;
+  }
+
+  .search-bar .dismissable-input {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .search-bar .dismissable-input {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .search-bar .dismissable-input {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', =
+Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Canta=
+rell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji'=
+, 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
+  }
+
+  .search-bar .dismissable-input {
+    font-size: 16px;
+  }
+
+  .search-bar .dismissable-input:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.9);
+  }
+
+  .search-bar .dismissable-input:hover {
+    cursor: pointer;
+  }
+
+  .search-bar .dismissable-input:hover {
+    border-width: 1px;
+  }
+
+  .search-bar .dismissable-input:active {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .search-bar .dismissable-input:active {
+    cursor: pointer;
+  }
+
+  .search-bar .dismissable-input:active {
+    border-width: 1px;
+  }
+
+  .search-bar .dismissable-input:disabled {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .search-bar .dismissable-input:disabled {
+    cursor: not-allowed;
+  }
+
+  .search-bar .dismissable-input:disabled {
+    border-width: 1px;
+  }
+
+  .search-bar .dismissable-input:disabled {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .search-bar .dismissable-input:disabled {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .search-bar .dismissable-input:disabled {
+    cursor: not-allowed;
+  }
+
+  .search-bar .dismissable-input:disabled {
+    border-width: 1px;
+  }
+
+  .search-bar .dismissable-input:disabled {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .search-bar .dismissable-input:disabled {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .search-bar .dismissable-input:disabled {
+    cursor: not-allowed;
+  }
+
+  .search-bar .dismissable-input:disabled {
+    border-width: 1px;
+  }
+
+  .search-bar .dismissable-input:disabled {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .search-bar .dismissable-input:disabled {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .search-bar .dismissable-input:disabled {
+    cursor: not-allowed;
+  }
+
+  .search-bar .dismissable-input:disabled {
+    border-width: 1px;
+  }
+
+  .search-bar .dismissable-input:disabled {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .base-search-bar .input-error .typeahead-input.search-bar .dismissable-in=
+put {
+    border-style: solid;
+  }
+
+  .base-search-bar .input-error .typeahead-input.search-bar .dismissable-in=
+put {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .base-search-bar .input-error .typeahead-input.search-bar .dismissable-in=
+put {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .base-search-bar .input-error .typeahead-input.search-bar .dismissable-in=
+put {
+    border-style: solid;
+  }
+
+  .base-search-bar .input-error .typeahead-input.search-bar .dismissable-in=
+put {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .base-search-bar .input-error .typeahead-input.search-bar .dismissable-in=
+put {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .base-search-bar .input-error .typeahead-input.search-bar .dismissable-in=
+put {
+    border-style: solid;
+  }
+
+  .base-search-bar .input-error .typeahead-input.search-bar .dismissable-in=
+put {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .base-search-bar .input-error .typeahead-input.search-bar .dismissable-in=
+put {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #cf0007;
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  .input-error .search-bar .dismissable-input {
+    border-radius: 4px;
+  }
+
+  .input-error .search-bar .dismissable-input {
+    border-width: 1px;
+  }
+
+  .input-error .search-bar .dismissable-input {
+    border-style: solid;
+  }
+
+  .input-error .search-bar .dismissable-input {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .input-error .search-bar .dismissable-input {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .input-error .search-bar .dismissable-input {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', =
+Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Canta=
+rell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji'=
+, 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
+  }
+
+  .input-error .search-bar .dismissable-input {
+    font-size: 16px;
+  }
+
+  .input-error .search-bar .dismissable-input:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    border-color: #8a0005;
+    box-shadow: 0 0 0 1px #8a0005;
+  }
+
+  .input-error .search-bar .dismissable-input:hover {
+    cursor: pointer;
+  }
+
+  .input-error .search-bar .dismissable-input:hover {
+    border-width: 1px;
+  }
+
+  .input-error .search-bar .dismissable-input:active {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: #8a0005;
+  }
+
+  .input-error .search-bar .dismissable-input:active {
+    cursor: pointer;
+  }
+
+  .input-error .search-bar .dismissable-input:active {
+    border-width: 1px;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:focus {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:active {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .input-error .search-bar .dismissable-input:disabled,
+.input-error .search-bar .dismissable-input:disabled:hover,
+.input-error .search-bar .dismissable-input:disabled:focus,
+.input-error .search-bar .dismissable-input:disabled:active {
+    cursor: not-allowed;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled,
+.input-error .search-bar .dismissable-input:disabled:hover,
+.input-error .search-bar .dismissable-input:disabled:focus,
+.input-error .search-bar .dismissable-input:disabled:active {
+    border-width: 1px;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:hover {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:focus {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:active {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:focus {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:active {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .input-error .search-bar .dismissable-input:disabled,
+.input-error .search-bar .dismissable-input:disabled:hover,
+.input-error .search-bar .dismissable-input:disabled:focus,
+.input-error .search-bar .dismissable-input:disabled:active {
+    cursor: not-allowed;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled,
+.input-error .search-bar .dismissable-input:disabled:hover,
+.input-error .search-bar .dismissable-input:disabled:focus,
+.input-error .search-bar .dismissable-input:disabled:active {
+    border-width: 1px;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:hover {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:focus {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:active {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:focus {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:active {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .input-error .search-bar .dismissable-input:disabled,
+.input-error .search-bar .dismissable-input:disabled:hover,
+.input-error .search-bar .dismissable-input:disabled:focus,
+.input-error .search-bar .dismissable-input:disabled:active {
+    cursor: not-allowed;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled,
+.input-error .search-bar .dismissable-input:disabled:hover,
+.input-error .search-bar .dismissable-input:disabled:focus,
+.input-error .search-bar .dismissable-input:disabled:active {
+    border-width: 1px;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:hover {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:focus {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:active {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:focus {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:active {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .input-error .search-bar .dismissable-input:disabled,
+.input-error .search-bar .dismissable-input:disabled:hover,
+.input-error .search-bar .dismissable-input:disabled:focus,
+.input-error .search-bar .dismissable-input:disabled:active {
+    cursor: not-allowed;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled,
+.input-error .search-bar .dismissable-input:disabled:hover,
+.input-error .search-bar .dismissable-input:disabled:focus,
+.input-error .search-bar .dismissable-input:disabled:active {
+    border-width: 1px;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:hover {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:focus {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:active {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+}
+@media (min-width: 992px) {
+  .search-bar .dismissable-input {
+    width: 0px;
+  }
+
+  .search-bar .dismissable-input {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .search-bar .dismissable-input {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .search-bar .dismissable-input:hover {
+    border-right-color: rgba(0, 0, 0, 0.08);
+  }
+}
+@media (max-width: 991px) {
+  .search-bar:not(.isExpanded) .base-search-bar {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  @media (max-width: 991px) {
+    .search-bar.isExpanded .search-bar__placeholder {
+      display: none;
+    }
+
+    @media (max-width: 991px) {
+      .search-bar.isExpanded .base-search-bar__form {
+        display: flex;
+      }
+
+      position: fixed;
+    .search-bar.isExpanded {
+        top: 0px;
+      }
+
+      .search-bar.isExpanded {
+        bottom: 0px;
+      }
+
+      .search-bar.isExpanded {
+        left: 0px;
+      }
+
+      .search-bar.isExpanded {
+        right: 0px;
+      }
+
+      .search-bar.isExpanded {
+        z-index: 1000;
+      }
+
+      .search-bar.isExpanded {
+        margin-bottom: 0px;
+      }
+
+      .search-bar.isExpanded {
+        height: 100%;
+      }
+
+      .search-bar.isExpanded {
+        background-color: #ffffff;
+      }
+
+      .search-bar.isExpanded .switcher-tabs__cancel-btn,
+.search-bar.isExpanded .switcher-tabs {
+        display: inherit;
+      }
+
+    }
+
+  }
+}
+@media screen and (min-width: 992px) {
+  .switcher-tabs .switcher-tabs__button:after {
+    border-bottom: none;
+  }
+}
+@media (max-width: 767px) {
+  .tabs__list {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .typeahead-input__dropdown.typeahead-input__dropdown--show {
+    position: fixed;
+  }
+
+  .typeahead-input__dropdown.typeahead-input__dropdown--show {
+    top: 158px;
+  }
+
+  .typeahead-input__dropdown.typeahead-input__dropdown--show {
+    left: 0px;
+  }
+
+  .typeahead-input__dropdown.typeahead-input__dropdown--show {
+    width: 100vw;
+  }
+
+  .typeahead-input__dropdown.typeahead-input__dropdown--show {
+    min-width: 100vw;
+  }
+}
+@media (max-width: 991px) {
+  .base-search-bar .dismissable-input {
+    max-height: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .base-main-card__media ~ .base-main-card__info {
+    margin-left: 0px;
+  }
+
+  .base-main-card__media ~ .base-main-card__info {
+    margin-top: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .series-article-body .publishing-entity-embed__cta-button--screen-size-sm=
+all {
+    display: block !important;
+  }
+}
+@media (max-width: 767px) {
+  .series-article-body .publishing-entity-embed__cta-button {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .mx-main-feed-card-no-gutter {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .mx-main-feed-card-no-gutter {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+}
+@media (max-width: 767px) {
+  .px-main-feed-card-no-gutter {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .px-main-feed-card-no-gutter {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  .px-main-feed-card-no-gutter {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .main-feed-activity-card__header {
+    padding-right: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .filter .collapsible-dropdown__list {
+    max-height: 400px;
+  }
+}
+@media (forced-colors: active) {
+  .filter-button--selected {
+    border-width: 4px;
+  }
+}
+@media (max-width: 767px) {
+  .base-card .duration {
+    font-size: 12px;
+  }
+
+  .base-card .duration {
+    font-weight: 400;
+  }
+}
+@media (max-width: 767px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .social-action-bar__button {
+    flex-direction: row;
+  }
+
+  .social-action-bar__button {
+    font-size: 14px;
+  }
+
+  .social-action-bar__button {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+@media (max-width: 767px) {
+  .social-action-bar__icon--svg {
+    margin: 0px;
+  }
+
+  .social-action-bar__icon--svg {
+    height: 24px;
+  }
+
+  .social-action-bar__icon--svg {
+    width: 24px;
+  }
+
+  .social-action-bar__button-text {
+    padding-left: 4px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .social-action-bar .social-action-bar__button--transcript {
+    flex-direction: column;
+  }
+
+  .social-action-bar .social-action-bar__button--transcript {
+    padding-top: 4px;
+  }
+
+  .social-action-bar .social-action-bar__button--transcript {
+    padding-bottom: 4px;
+  }
+
+  .social-action-bar .social-action-bar__button--transcript {
+    font-size: 12px;
+  }
+
+  .social-action-bar .social-action-bar__icon--transcript {
+    margin-right: 0px !important;
+  }
+
+  .social-action-bar .social-action-bar__icon--transcript {
+    margin-bottom: 4px !important;
+  }
+
+  .social-action-bar__button-text--transcript {
+    padding-left: 0px !important;
+  }
+}
+@media only screen and (min-width: 30.06em) {
+  .card-cta-container-mobile {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    visibility: hidden !important;
+  }
+
+  .card-cta-container-desktop {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    visibility: visible !important;
+    overflow: visible !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .dark\:bg-color-surface-accent-4 {
+    background-color: #dde7f1;
+  }
+}
+@media (min-width: 576px) {
+  .xs\:order-3 {
+    order: 3;
+  }
+
+  .xs\:mx-1 {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .xs\:w-max {
+    width: max-content;
+  }
+
+  .xs\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .xs\:border-r-1 {
+    border-right-width: 1px;
+  }
+
+  .xs\:pt-0 {
+    padding-top: 0px;
+  }
+
+  .xs\:after\:\!h-\[37px\]::after {
+    content: undefined;
+    height: 37px !important;
+  }
+
+  @media (min-width: 576px) {
+    .xs\:after\:\!h-\[37px\]::after {
+      content: "";
+    }
+
+    @media content: undefined;
+   (min-width: 576px) {
+      .xs\:after\:up-down-divider::after {
+        content: "";
+      }
+
+      display: flex;
+    .xs\:after\:up-down-divider::after {
+        height: 100%;
+      }
+
+      .xs\:after\:up-down-divider::after {
+        width: 1px;
+      }
+
+      .xs\:after\:up-down-divider::after {
+        align-items: center;
+      }
+
+      .xs\:after\:up-down-divider::after {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      .xs\:after\:up-down-divider::after {
+        text-align: center;
+      }
+
+      .xs\:after\:up-down-divider::after {
+        content: undefined;
+      }
+
+      @media (min-width: 576px) {
+        .xs\:after\:up-down-divider::after {
+          content: "";
+        }
+
+        @media (min-width: 992px) {
+          .md\:overflow-x-hidden {
+            overflow-x: hidden;
+          }
+
+          @media (max-width: 767px) {
+            .babybear\:btn-sm {
+              height: min-content;
+            }
+
+            .babybear\:btn-sm {
+              min-height: 32px;
+            }
+
+            .babybear\:btn-sm {
+              border-radius: 24px;
+            }
+
+            .babybear\:btn-sm {
+              padding-top: 7px;
+              padding-bottom: 7px;
+            }
+
+            .babybear\:btn-sm {
+              padding-left: 16px;
+              padding-right: 16px;
+            }
+
+            .babybear\:btn-sm {
+              text-align: center;
+            }
+
+            .babybear\:btn-sm {
+              font-size: 14px;
+            }
+
+            .babybear\:btn-sm {
+              font-weight: 600;
+            }
+
+            .babybear\:btn-sm {
+              line-height: 1.25;
+            }
+
+            .babybear\:btn-sm,
+.btn-sm:visited,
+.btn-sm:focus {
+              cursor: pointer;
+            }
+
+            .babybear\:btn-sm,
+.btn-sm:visited,
+.btn-sm:focus {
+              text-decoration-line: none;
+            }
+
+            .babybear\:btn-sm,
+.btn-sm:visited,
+.btn-sm:focus {
+              cursor: pointer;
+            }
+
+            .babybear\:btn-sm,
+.btn-sm:visited,
+.btn-sm:focus {
+              text-decoration-line: none;
+            }
+
+            .babybear\:btn-sm,
+.btn-sm:visited,
+.btn-sm:focus {
+              cursor: pointer;
+            }
+
+            .babybear\:btn-sm,
+.btn-sm:visited,
+.btn-sm:focus {
+              text-decoration-line: none;
+            }
+
+            .babybear\:btn-sm:hover,
+.btn-sm:visited:hover {
+              text-decoration-line: none;
+            }
+
+            .babybear\:btn-sm:hover,
+.btn-sm:visited:hover {
+              text-decoration-line: none;
+            }
+
+            .babybear\:btn-sm:disabled {
+              cursor: not-allowed;
+            }
+
+            .babybear\:btn-secondary-emphasis {
+              box-shadow: 0 0 0 1px #0a66c2;
+              background-color: rgba(0, 0, 0, 0);
+              color: #0a66c2;
+            }
+
+            .btn-secondary-emphasis:visited {
+              box-shadow: 0 0 0 1px #0a66c2;
+              background-color: rgba(0, 0, 0, 0);
+              color: #0a66c2;
+            }
+
+            .btn-secondary-emphasis:focus {
+              box-shadow: 0 0 0 1px #0a66c2;
+              background-color: rgba(0, 0, 0, 0);
+              color: #0a66c2;
+            }
+
+            .babybear\:btn-secondary-emphasis {
+              box-shadow: 0 0 0 1px #0a66c2;
+              background-color: rgba(0, 0, 0, 0);
+              color: #0a66c2;
+            }
+
+            .btn-secondary-emphasis:visited {
+              box-shadow: 0 0 0 1px #0a66c2;
+              background-color: rgba(0, 0, 0, 0);
+              color: #0a66c2;
+            }
+
+            .btn-secondary-emphasis:focus {
+              box-shadow: 0 0 0 1px #0a66c2;
+              background-color: rgba(0, 0, 0, 0);
+              color: #0a66c2;
+            }
+
+            .babybear\:btn-secondary-emphasis {
+              box-shadow: 0 0 0 1px #0a66c2;
+              background-color: rgba(0, 0, 0, 0);
+              color: #0a66c2;
+            }
+
+            .btn-secondary-emphasis:visited {
+              box-shadow: 0 0 0 1px #0a66c2;
+              background-color: rgba(0, 0, 0, 0);
+              color: #0a66c2;
+            }
+
+            .btn-secondary-emphasis:focus {
+              box-shadow: 0 0 0 1px #0a66c2;
+              background-color: rgba(0, 0, 0, 0);
+              color: #0a66c2;
+            }
+
+            .babybear\:btn-secondary-emphasis:hover {
+              box-shadow: 0 0 0 1px #0a66c2;
+              background-color: rgba(112, 181, 249, 0.1);
+              color: #004182;
+            }
+
+            .btn-secondary-emphasis:visited:hover {
+              box-shadow: 0 0 0 1px #0a66c2;
+              background-color: rgba(112, 181, 249, 0.1);
+              color: #004182;
+            }
+
+            .babybear\:btn-secondary-emphasis:hover {
+              box-shadow: 0 0 0 1px #0a66c2;
+              background-color: rgba(112, 181, 249, 0.1);
+              color: #004182;
+            }
+
+            .btn-secondary-emphasis:visited:hover {
+              box-shadow: 0 0 0 1px #0a66c2;
+              background-color: rgba(112, 181, 249, 0.1);
+              color: #004182;
+            }
+
+            .babybear\:btn-secondary-emphasis:active {
+              box-shadow: 0 0 0 1px #004182;
+              background-color: rgba(112, 181, 249, 0.2);
+              color: #004182;
+            }
+
+            .babybear\:btn-secondary-emphasis:disabled {
+              box-shadow: 0 0 0 1px rgba(0, 0, 0, 0);
+              background-color: rgba(0, 0, 0, 0.08);
+              color: rgba(0, 0, 0, 0.3);
+            }
+
+            .babybear\:container-lined {
+              border-radius: 8px;
+            }
+
+            .babybear\:container-lined {
+              border-width: 1px;
+            }
+
+            .babybear\:container-lined {
+              border-style: solid;
+            }
+
+            .babybear\:container-lined {
+              border-color: rgba(0, 0, 0, 0.08);
+            }
+
+            .babybear\:container-lined {
+              background-color: #ffffff;
+            }
+
+            .babybear\:\!-top-0\.5 {
+              top: -4px !important;
+            }
+
+            .babybear\:\!-top-0 {
+              top: -0px !important;
+            }
+
+            .babybear\:right-4 {
+              right: 32px;
+            }
+
+            .babybear\:bottom-0 {
+              bottom: 0px;
+            }
+
+            .babybear\:top-0\.5 {
+              top: 4px;
+            }
+
+            .babybear\:top-0 {
+              top: 0px;
+            }
+
+            .babybear\:bottom-\[120\%\] {
+              bottom: 120%;
+            }
+
+            .babybear\:left-3 {
+              left: 24px;
+            }
+
+            .babybear\:-top-1 {
+              top: -8px;
+            }
+
+            .babybear\:z-0 {
+              z-index: 0;
+            }
+
+            .babybear\:m-0 {
+              margin: 0px;
+            }
+
+            .babybear\:my-2 {
+              margin-top: 16px;
+              margin-bottom: 16px;
+            }
+
+            .babybear\:mx-0 {
+              margin-left: 0px;
+              margin-right: 0px;
+            }
+
+            .babybear\:mt-0\.5 {
+              margin-top: 4px;
+            }
+
+            .babybear\:mt-0 {
+              margin-top: 0px;
+            }
+
+            .babybear\:ml-0 {
+              margin-left: 0px;
+            }
+
+            .babybear\:mr-0 {
+              margin-right: 0px;
+            }
+
+            .babybear\:mb-2 {
+              margin-bottom: 16px;
+            }
+
+            .babybear\:mb-0\.5 {
+              margin-bottom: 4px;
+            }
+
+            .babybear\:mb-0 {
+              margin-bottom: 0px;
+            }
+
+            .babybear\:mb-1 {
+              margin-bottom: 8px;
+            }
+
+            .babybear\:mt-\[6px\] {
+              margin-top: 6px;
+            }
+
+            .babybear\:ml-1 {
+              margin-left: 8px;
+            }
+
+            .babybear\:hidden {
+              display: none;
+            }
+
+            .babybear\:h-\[360px\] {
+              height: 360px;
+            }
+
+            .babybear\:h-6 {
+              height: 48px;
+            }
+
+            .babybear\:h-\[72px\] {
+              height: 72px;
+            }
+
+            .babybear\:h-4 {
+              height: 32px;
+            }
+
+            .babybear\:h-\[26px\] {
+              height: 26px;
+            }
+
+            .babybear\:h-auto {
+              height: auto;
+            }
+
+            .babybear\:h-\[180px\] {
+              height: 180px;
+            }
+
+            .babybear\:max-h-\[225px\] {
+              max-height: 225px;
+            }
+
+            .babybear\:max-h-\[400px\] {
+              max-height: 400px;
+            }
+
+            .babybear\:max-h-4 {
+              max-height: 32px;
+            }
+
+            .babybear\:max-h-\[250px\] {
+              max-height: 250px;
+            }
+
+            .babybear\:min-h-\[134px\] {
+              min-height: 134px;
+            }
+
+            .babybear\:w-\[360px\] {
+              width: 360px;
+            }
+
+            .babybear\:w-full {
+              width: 100%;
+            }
+
+            .babybear\:w-11\/12 {
+              width: 91.666667%;
+            }
+
+            .babybear\:w-\[199px\] {
+              width: 199px;
+            }
+
+            .babybear\:w-6 {
+              width: 48px;
+            }
+
+            .babybear\:w-\[26px\] {
+              width: 26px;
+            }
+
+            .babybear\:w-\[calc\(100\%-68px\)\] {
+              width: calc(100% - 68px);
+            }
+
+            .babybear\:min-w-full {
+              min-width: 100%;
+            }
+
+            .babybear\:max-w-\[790px\] {
+              max-width: 790px;
+            }
+
+            .babybear\:max-w-\[32px\] {
+              max-width: 32px;
+            }
+
+            .babybear\:flex-none {
+              flex: none;
+            }
+
+            .babybear\:flex-auto {
+              flex: 1 1 auto;
+            }
+
+            .babybear\:basis-0 {
+              flex-basis: 0px;
+            }
+
+            .babybear\:-translate-x-50\% {
+              transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX=
+(1) scaleY(1);
+            }
+
+            @media (max-width: 767px) {
+              .babybear\:-translate-x-50\% {
+                transform: translate(-50%, 0) rotate(90deg) skewX(0) skewY(=
+0) scaleX(1) scaleY(1);
+              }
+
+              @media (max-width: 767px) {
+                .babybear\:-translate-x-50\% {
+                  transform: translate(-50%, 0) rotate(90deg) skewX(0) skew=
+Y(0) scaleX(1) scaleY(1);
+                }
+
+                @media (max-width: 767px) {
+                  .babybear\:-translate-x-50\% {
+                    transform: translate(-50%, 0) rotate(90deg) skewX(0) sk=
+ewY(0) scaleX(1) scaleY(1);
+                  }
+
+                  @media (max-width: 767px) {
+                    .babybear\:-translate-x-50\% {
+                      transform: translate(-50%, 0) rotate(90deg) skewX(0) =
+skewY(0) scaleX(1) scaleY(1);
+                    }
+
+                    @media (max-width: 767px) {
+                      .babybear\:-translate-x-50\% {
+                        transform: translate(-50%, 0) rotate(90deg) skewX(0=
+) skewY(0) scaleX(1) scaleY(1);
+                      }
+
+                      @media (max-width: 767px) {
+                        .babybear\:-translate-x-50\% {
+                          transform: translate(-50%, 0) rotate(90deg) skewX=
+(0) skewY(0) scaleX(1) scaleY(1);
+                        }
+
+                        @media (max-width: 767px) {
+                          .babybear\:-translate-x-50\% {
+                            transform: translate(-50%, 0) rotate(90deg) ske=
+wX(0) skewY(0) scaleX(1) scaleY(1);
+                          }
+
+                          @media (max-width: 767px) {
+                            .babybear\:-translate-x-50\% {
+                              transform: translate(-50%, 0) rotate(90deg) s=
+kewX(0) skewY(0) scaleX(1) scaleY(1);
+                            }
+
+                            @media (max-width: 767px) {
+                              .babybear\:-translate-x-50\% {
+                                transform: translate(-50%, 0) rotate(90deg)=
+ skewX(0) skewY(0) scaleX(1) scaleY(1);
+                              }
+
+                              @media (max-width: 767px) {
+                                .babybear\:-translate-x-50\% {
+                                  transform: translate(-50%, 0) rotate(90de=
+g) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                }
+
+                                @media (max-width: 767px) {
+                                  .babybear\:-translate-x-50\% {
+                                    transform: translate(-50%, 0) rotate(90=
+deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                  }
+
+                                  @media (max-width: 767px) {
+                                    .babybear\:-translate-x-50\% {
+                                      transform: translate(-50%, 0) rotate(=
+90deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                    }
+
+                                    @media (max-width: 767px) {
+                                      .babybear\:-translate-x-50\% {
+                                        transform: translate(-50%, 0) rotat=
+e(90deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                      }
+
+                                      @media (max-width: 767px) {
+                                        .babybear\:-translate-x-50\% {
+                                          transform: translate(-50%, 0) rot=
+ate(90deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                        }
+
+                                        @media transform: translate(0, 0) r=
+otate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+     (max-width: 767px) {
+                                          .babybear\:rotate-90 {
+                                            transform: translate(-50%, 0) r=
+otate(90deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                          }
+
+                                          @media (max-width: 767px) {
+                                            .babybear\:rotate-90 {
+                                              transform: translate(-50%, 0)=
+ rotate(90deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                            }
+
+                                            @media (max-width: 767px) {
+                                              .babybear\:rotate-90 {
+                                                transform: translate(-50%, =
+0) rotate(90deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                              }
+
+                                              @media (max-width: 767px) {
+                                                .babybear\:rotate-90 {
+                                                  transform: translate(-50%=
+, 0) rotate(90deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                                }
+
+                                                @media (max-width: 767px) {
+                                                  .babybear\:rotate-90 {
+                                                    transform: translate(-5=
+0%, 0) rotate(90deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                                  }
+
+                                                  @media (max-width: 767px)=
+ {
+                                                    .babybear\:rotate-90 {
+                                                      transform: translate(=
+-50%, 0) rotate(90deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                                    }
+
+                                                    @media (max-width: 767p=
+x) {
+                                                      .babybear\:rotate-90 =
+{
+                                                        transform: translat=
+e(-50%, 0) rotate(90deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                                      }
+
+                                                      @media (max-width: 76=
+7px) {
+                                                        .babybear\:rotate-9=
+0 {
+                                                          transform: transl=
+ate(-50%, 0) rotate(90deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                                        }
+
+                                                        @media (max-width: =
+767px) {
+                                                          .babybear\:rotate=
+-90 {
+                                                            transform: tran=
+slate(-50%, 0) rotate(90deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                                          }
+
+                                                          @media (max-width=
+: 767px) {
+                                                            .babybear\:rota=
+te-90 {
+                                                              transform: tr=
+anslate(-50%, 0) rotate(90deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                                            }
+
+                                                            @media (max-wid=
+th: 767px) {
+                                                              .babybear\:ro=
+tate-90 {
+                                                                transform: =
+translate(-50%, 0) rotate(90deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                                              }
+
+                                                              @media (max-w=
+idth: 767px) {
+                                                                .babybear\:=
+rotate-90 {
+                                                                  transform=
+: translate(-50%, 0) rotate(90deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                                                }
+
+                                                                @media (max=
+-width: 767px) {
+                                                                  .babybear=
+\:rotate-90 {
+                                                                    transfo=
+rm: translate(-50%, 0) rotate(90deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+                                                                  }
+
+                                                                  @media (m=
+ax-width: 767px) {
+                                                                    .babybe=
+ar\:rotate-90 {
+                                                                      trans=
+form: translate(-50%, 0) rotate(90deg) skewX(0) skewY(0) scaleX(1) scaleY(1=
+);
+                                                                    }
+
+                                                                    flex-di=
+rection: row;
+    .babybear\:flex-col {
+                                                                      flex-=
+direction: column;
+                                                                    }
+
+                                                                    .babybe=
+ar\:flex-wrap {
+                                                                      flex-=
+wrap: wrap;
+                                                                    }
+
+                                                                    .babybe=
+ar\:items-start {
+                                                                      align=
+-items: flex-start;
+                                                                    }
+
+                                                                    .babybe=
+ar\:items-center {
+                                                                      align=
+-items: center;
+                                                                    }
+
+                                                                    .babybe=
+ar\:justify-start {
+                                                                      justi=
+fy-content: flex-start;
+                                                                    }
+
+                                                                    .babybe=
+ar\:justify-end {
+                                                                      justi=
+fy-content: flex-end;
+                                                                    }
+
+                                                                    .babybe=
+ar\:justify-center {
+                                                                      justi=
+fy-content: center;
+                                                                    }
+
+                                                                    .babybe=
+ar\:justify-around {
+                                                                      justi=
+fy-content: space-around;
+                                                                    }
+
+                                                                    .babybe=
+ar\:self-start {
+                                                                      align=
+-self: flex-start;
+                                                                    }
+
+                                                                    .babybe=
+ar\:self-center {
+                                                                      align=
+-self: center;
+                                                                    }
+
+                                                                    .babybe=
+ar\:overflow-y-auto {
+                                                                      overf=
+low-y: auto;
+                                                                    }
+
+                                                                    .babybe=
+ar\:rounded-\[0px\] {
+                                                                      borde=
+r-radius: 0px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:border-b-1 {
+                                                                      borde=
+r-bottom-width: 1px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:border-solid {
+                                                                      borde=
+r-style: solid;
+                                                                    }
+
+                                                                    .babybe=
+ar\:border-color-border-low-emphasis {
+                                                                      borde=
+r-color: rgba(0, 0, 0, 0.3);
+                                                                    }
+
+                                                                    .babybe=
+ar\:bg-color-brand {
+                                                                      backg=
+round-color: #0a66c2;
+                                                                    }
+
+                                                                    .babybe=
+ar\:p-2 {
+                                                                      paddi=
+ng: 16px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:py-1 {
+                                                                      paddi=
+ng-top: 8px;
+                                                                      paddi=
+ng-bottom: 8px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:px-2 {
+                                                                      paddi=
+ng-left: 16px;
+                                                                      paddi=
+ng-right: 16px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:px-0 {
+                                                                      paddi=
+ng-left: 0px;
+                                                                      paddi=
+ng-right: 0px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:px-mobile-container-padding {
+                                                                      paddi=
+ng-left: 16px;
+                                                                      paddi=
+ng-right: 16px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:py-3 {
+                                                                      paddi=
+ng-top: 24px;
+                                                                      paddi=
+ng-bottom: 24px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:pr-0\.5 {
+                                                                      paddi=
+ng-right: 4px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:pr-0 {
+                                                                      paddi=
+ng-right: 0px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:pl-0\.5 {
+                                                                      paddi=
+ng-left: 4px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:pl-0 {
+                                                                      paddi=
+ng-left: 0px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:pt-0\.5 {
+                                                                      paddi=
+ng-top: 4px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:pb-0 {
+                                                                      paddi=
+ng-bottom: 0px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:pt-0 {
+                                                                      paddi=
+ng-top: 0px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:pb-2 {
+                                                                      paddi=
+ng-bottom: 16px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:text-xs {
+                                                                      font-=
+size: 12px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:text-sm {
+                                                                      font-=
+size: 14px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:font-bold {
+                                                                      font-=
+weight: 600;
+                                                                    }
+
+                                                                    .babybe=
+ar\:leading-\[150px\] {
+                                                                      line-=
+height: 150px;
+                                                                    }
+
+                                                                    .babybe=
+ar\:last\:border-b-0:last-child {
+                                                                      borde=
+r-bottom-width: 0;
+                                                                    }
+
+                                                                    @media =
+(max-width: 991px) {
+                                                                      .baby=
+mamabear\:invisible {
+                                                                        vis=
+ibility: hidden;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:static {
+                                                                        pos=
+ition: static;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:mx-mobile-container-padding {
+                                                                        mar=
+gin-left: 16px;
+                                                                        mar=
+gin-right: 16px;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:mx-0 {
+                                                                        mar=
+gin-left: 0px;
+                                                                        mar=
+gin-right: 0px;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:mr-3 {
+                                                                        mar=
+gin-right: 24px;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:ml-\[-9999px\] {
+                                                                        mar=
+gin-left: -9999px;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:mb-1\.5 {
+                                                                        mar=
+gin-bottom: 12px;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:mb-1 {
+                                                                        mar=
+gin-bottom: 8px;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:flex {
+                                                                        dis=
+play: flex;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:hidden {
+                                                                        dis=
+play: none;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:h-\[1px\] {
+                                                                        hei=
+ght: 1px;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:h-\[48px\] {
+                                                                        hei=
+ght: 48px;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:w-\[1px\] {
+                                                                        wid=
+th: 1px;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:w-full {
+                                                                        wid=
+th: 100%;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:w-\[100vw\] {
+                                                                        wid=
+th: 100vw;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:min-w-\[50px\] {
+                                                                        min=
+-width: 50px;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:basis-1\/2 {
+                                                                        fle=
+x-basis: 50%;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:flex-col {
+                                                                        fle=
+x-direction: column;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:flex-wrap {
+                                                                        fle=
+x-wrap: wrap;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:bg-color-transparent {
+                                                                        bac=
+kground-color: rgba(0, 0, 0, 0);
+                                                                      }
+
+                                                                      .baby=
+mamabear\:p-0 {
+                                                                        pad=
+ding: 0px;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:px-mobile-container-padding {
+                                                                        pad=
+ding-left: 16px;
+                                                                        pad=
+ding-right: 16px;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:py-1\.5 {
+                                                                        pad=
+ding-top: 12px;
+                                                                        pad=
+ding-bottom: 12px;
+                                                                      }
+
+                                                                      .baby=
+mamabear\:py-1 {
+                                                                        pad=
+ding-top: 8px;
+                                                                        pad=
+ding-bottom: 8px;
+                                                                      }
+
+                                                                      @medi=
+a (min-width: 768px) and (max-width: 991px) {
+                                                                        .ma=
+mabear\:container-lined {
+                                                                          b=
+order-radius: 8px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:container-lined {
+                                                                          b=
+order-width: 1px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:container-lined {
+                                                                          b=
+order-style: solid;
+                                                                        }
+
+                                                                        .ma=
+mabear\:container-lined {
+                                                                          b=
+order-color: rgba(0, 0, 0, 0.08);
+                                                                        }
+
+                                                                        .ma=
+mabear\:container-lined {
+                                                                          b=
+ackground-color: #ffffff;
+                                                                        }
+
+                                                                        .ma=
+mabear\:container-raised {
+                                                                          b=
+order-radius: 8px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:container-raised {
+                                                                          b=
+ackground-color: #ffffff;
+                                                                        }
+
+                                                                        .ma=
+mabear\:container-raised {
+                                                                          b=
+ox-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+                                                                        }
+
+                                                                        .ma=
+mabear\:absolute {
+                                                                          p=
+osition: absolute;
+                                                                        }
+
+                                                                        .ma=
+mabear\:right-4 {
+                                                                          r=
+ight: 32px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:-top-0\.5 {
+                                                                          t=
+op: -4px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:-top-0 {
+                                                                          t=
+op: -0px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:top-\[58px\] {
+                                                                          t=
+op: 58px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:-top-1 {
+                                                                          t=
+op: -8px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:mr-3 {
+                                                                          m=
+argin-right: 24px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:hidden {
+                                                                          d=
+isplay: none;
+                                                                        }
+
+                                                                        .ma=
+mabear\:\!h-4 {
+                                                                          h=
+eight: 32px !important;
+                                                                        }
+
+                                                                        .ma=
+mabear\:h-\[100\%\] {
+                                                                          h=
+eight: 100%;
+                                                                        }
+
+                                                                        .ma=
+mabear\:\!min-h-\[32px\] {
+                                                                          m=
+in-height: 32px !important;
+                                                                        }
+
+                                                                        .ma=
+mabear\:w-\[744px\] {
+                                                                          w=
+idth: 744px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:w-full {
+                                                                          w=
+idth: 100%;
+                                                                        }
+
+                                                                        .ma=
+mabear\:w-\[calc\(100\%-97px\)\] {
+                                                                          w=
+idth: calc(100% - 97px);
+                                                                        }
+
+                                                                        .ma=
+mabear\:min-w-0 {
+                                                                          m=
+in-width: 0px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:max-w-\[790px\] {
+                                                                          m=
+ax-width: 790px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:flex-shrink-0 {
+                                                                          f=
+lex-shrink: 0;
+                                                                        }
+
+                                                                        .ma=
+mabear\:flex-row {
+                                                                          f=
+lex-direction: row;
+                                                                        }
+
+                                                                        .ma=
+mabear\:items-start {
+                                                                          a=
+lign-items: flex-start;
+                                                                        }
+
+                                                                        .ma=
+mabear\:items-center {
+                                                                          a=
+lign-items: center;
+                                                                        }
+
+                                                                        .ma=
+mabear\:self-center {
+                                                                          a=
+lign-self: center;
+                                                                        }
+
+                                                                        .ma=
+mabear\:rounded-tr-none {
+                                                                          b=
+order-top-right-radius: 0px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:px-3 {
+                                                                          p=
+adding-left: 24px;
+                                                                          p=
+adding-right: 24px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:px-mobile-container-padding {
+                                                                          p=
+adding-left: 16px;
+                                                                          p=
+adding-right: 16px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:py-3 {
+                                                                          p=
+adding-top: 24px;
+                                                                          p=
+adding-bottom: 24px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:px-2 {
+                                                                          p=
+adding-left: 16px;
+                                                                          p=
+adding-right: 16px;
+                                                                        }
+
+                                                                        .ma=
+mabear\:pt-desktop-content-top-margin {
+                                                                          p=
+adding-top: 16px;
+                                                                        }
+
+                                                                        @me=
+dia (min-width: 768px) {
+                                                                          .=
+papamamabear\:pt-desktop-content-top-margin {
+                                                                           =
+ padding-top: 16px;
+                                                                          }
+
+                                                                          @=
+media (min-width: 992px) {
+                                                                           =
+ .papabear\:container-lined {
+                                                                           =
+   border-radius: 8px;
+                                                                           =
+ }
+
+                                                                           =
+ .papabear\:container-lined {
+                                                                           =
+   border-width: 1px;
+                                                                           =
+ }
+
+                                                                           =
+ .papabear\:container-lined {
+                                                                           =
+   border-style: solid;
+                                                                           =
+ }
+
+                                                                           =
+ .papabear\:container-lined {
+                                                                           =
+   border-color: rgba(0, 0, 0, 0.08);
+                                                                           =
+ }
+
+                                                                           =
+ .papabear\:container-lined {
+                                                                           =
+   background-color: #ffffff;
+                                                                           =
+ }
+
+                                                                           =
+ .papabear\:container-raised {
+                                                                           =
+   border-radius: 8px;
+                                                                           =
+ }
+
+                                                                           =
+ .papabear\:container-raised {
+                                                                           =
+   background-color: #ffffff;
+                                                                           =
+ }
+
+                                                                           =
+ .papabear\:container-raised {
+                                                                           =
+   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+                                                                           =
+ }
+
+                                                                           =
+ .tab-sm.papabear\:tab-vertical,
+.tab-md.tab-vertical,
+.tab-lg.tab-vertical {
+                                                                           =
+   justify-content: flex-start;
+                                                                           =
+ }
+
+                                                                           =
+ .tab-sm.papabear\:tab-vertical,
+.tab-md.tab-vertical,
+.tab-lg.tab-vertical {
+                                                                           =
+   justify-content: flex-start;
+                                                                           =
+ }
+
+                                                                           =
+ .tab-sm.papabear\:tab-vertical,
+.tab-md.tab-vertical,
+.tab-lg.tab-vertical {
+                                                                           =
+   justify-content: flex-start;
+                                                                           =
+ }
+
+                                                                           =
+ .tab-selected:not(.papabear\:tab-vertical):after {
+                                                                           =
+   position: absolute;
+                                                                           =
+ }
+
+                                                                           =
+ .tab-selected:not(.papabear\:tab-vertical):after {
+                                                                           =
+   bottom: 0px;
+                                                                           =
+ }
+
+                                                                           =
+ .tab-selected:not(.papabear\:tab-vertical):after {
+                                                                           =
+   width: 100%;
+                                                                           =
+ }
+
+                                                                           =
+ .tab-selected:not(.papabear\:tab-vertical):after {
+                                                                           =
+   content: undefined;
+                                                                           =
+ }
+
+                                                                           =
+ @media (min-width: 992px) {
+                                                                           =
+   .tab-selected:not(.papabear\:tab-vertical):after {
+                                                                           =
+     content: "";
+                                                                           =
+   }
+
+                                                                           =
+   content: "".tab-selected:not(.papabear\:tab-vertical):after {
+                                                                           =
+     border-bottom: 4px solid rgba(0, 0, 0, 0.9);
+                                                                           =
+   }
+
+                                                                           =
+   .tab-selected.papabear\:tab-vertical:after {
+                                                                           =
+     position: absolute;
+                                                                           =
+   }
+
+                                                                           =
+   .tab-selected.papabear\:tab-vertical:after {
+                                                                           =
+     left: 0px;
+                                                                           =
+   }
+
+                                                                           =
+   .tab-selected.papabear\:tab-vertical:after {
+                                                                           =
+     height: 100%;
+                                                                           =
+   }
+
+                                                                           =
+   .tab-selected.papabear\:tab-vertical:after {
+                                                                           =
+     content: undefined;
+                                                                           =
+   }
+
+                                                                           =
+   @media (min-width: 992px) {
+                                                                           =
+     .tab-selected.papabear\:tab-vertical:after {
+                                                                           =
+       content: "";
+                                                                           =
+     }
+
+                                                                           =
+     border-left: 4px solid rgba(0,
+0,
+0,
+0.9);
+    .papabear\:absolute {
+                                                                           =
+       position: absolute;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:top-\[58px\] {
+                                                                           =
+       top: 58px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:-top-1 {
+                                                                           =
+       top: -8px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:mx-auto {
+                                                                           =
+       margin-left: auto;
+                                                                           =
+       margin-right: auto;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:\!mx-2 {
+                                                                           =
+       margin-left: 16px !important;
+                                                                           =
+       margin-right: 16px !important;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:mt-\[-100px\] {
+                                                                           =
+       margin-top: -100px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:mb-\[18px\] {
+                                                                           =
+       margin-bottom: 18px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:mt-0 {
+                                                                           =
+       margin-top: 0px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:mt-0\.5 {
+                                                                           =
+       margin-top: 4px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:mr-2 {
+                                                                           =
+       margin-right: 16px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:mr-3 {
+                                                                           =
+       margin-right: 24px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:ml-column-gutter {
+                                                                           =
+       margin-left: 24px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:inline-block {
+                                                                           =
+       display: inline-block;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:flex {
+                                                                           =
+       display: flex;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:hidden {
+                                                                           =
+       display: none;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:\!h-4 {
+                                                                           =
+       height: 32px !important;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:h-6 {
+                                                                           =
+       height: 48px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:h-\[100\%\] {
+                                                                           =
+       height: 100%;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:\!min-h-\[32px\] {
+                                                                           =
+       min-height: 32px !important;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:min-h-\[96px\] {
+                                                                           =
+       min-height: 96px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:w-\[400px\] {
+                                                                           =
+       width: 400px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:w-content-max-w {
+                                                                           =
+       width: 1128px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:w-core-rail-width {
+                                                                           =
+       width: 784px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:w-right-rail-width {
+                                                                           =
+       width: calc(1128px - 24px - 784px);
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:w-auto {
+                                                                           =
+       width: auto;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:w-\[1128px\] {
+                                                                           =
+       width: 1128px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:w-\[calc\(100\%-97px\)\] {
+                                                                           =
+       width: calc(100% - 97px);
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:min-w-0 {
+                                                                           =
+       min-width: 0px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:max-w-\[550px\] {
+                                                                           =
+       max-width: 550px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:flex-shrink-0 {
+                                                                           =
+       flex-shrink: 0;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:flex-col {
+                                                                           =
+       flex-direction: column;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:flex-nowrap {
+                                                                           =
+       flex-wrap: nowrap;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:items-start {
+                                                                           =
+       align-items: flex-start;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:justify-start {
+                                                                           =
+       justify-content: flex-start;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:justify-center {
+                                                                           =
+       justify-content: center;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:self-start {
+                                                                           =
+       align-self: flex-start;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:rounded-tr-none {
+                                                                           =
+       border-top-right-radius: 0px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:border-4 {
+                                                                           =
+       border-width: 4px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:p-details-container-padding {
+                                                                           =
+       padding: 24px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:p-0 {
+                                                                           =
+       padding: 0px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:py-2 {
+                                                                           =
+       padding-top: 16px;
+                                                                           =
+       padding-bottom: 16px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:pt-desktop-content-top-margin {
+                                                                           =
+       padding-top: 16px;
+                                                                           =
+     }
+
+                                                                           =
+     .papabear\:text-xl {
+                                                                           =
+       font-size: 24px;
+                                                                           =
+     }
+
+                                                                           =
+   }
+
+                                                                           =
+ }
+
+                                                                          }
+
+                                                                        }
+
+                                                                      }
+
+                                                                    }
+
+                                                                  }
+
+                                                                }
+
+                                                              }
+
+                                                            }
+
+                                                          }
+
+                                                        }
+
+                                                      }
+
+                                                    }
+
+                                                  }
+
+                                                }
+
+                                              }
+
+                                            }
+
+                                          }
+
+                                        }
+
+                                      }
+
+                                    }
+
+                                  }
+
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+}
+</style></head> <body dir=3D"ltr" class=3D"font-sans bg-color-background-ca=
+nvas w-full m-0 p-0 pt-1" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%; margin: 0px; width: 100%; background-color: #f3f2f0; pa=
+dding: 0px; padding-top: 8px; font-family: -apple-system, system-ui, BlinkM=
+acSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Ox=
+ygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe U=
+I Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, =
+Arial, sans-serif;"> <div class=3D"h-0 opacity-0 text-transparent invisible=
+ overflow-hidden w-0 max-h-[0]" style=3D"visibility: hidden; height: 0px; m=
+ax-height: 0; width: 0px; overflow: hidden; opacity: 0; mso-hide: all;" dat=
+a-email-preheader=3D"true">1 new message awaits your response</div> <div cl=
+ass=3D"h-0 opacity-0 text-transparent invisible overflow-hidden w-0 max-h-[=
+0]" style=3D"visibility: hidden; height: 0px; max-height: 0; width: 0px; ov=
+erflow: hidden; opacity: 0; mso-hide: all;"> =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=
+=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=
+=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=
+=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=
+=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=
+=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=
+=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=
+=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=
+=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=
+=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=
+=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=
+=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=
+=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=
+=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=
+=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=
+=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=
+=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =
+=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=
+=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=
+=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=
+=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=
+=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=
+=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=
+=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=
+=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=
+=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=
+=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 </div> <table =
+role=3D"presentation" valign=3D"top" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" width=3D"512" align=3D"center" class=3D"mercado-container w-[512=
+px] max-w-[512px] mx-auto my-0 p-0 bg-color-background-container" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt; margin-left: auto; margin-right: auto; margi=
+n-top: 0px; margin-bottom: 0px; width: 512px; max-width: 512px; background-=
+color: #ffffff; padding: 0px;"> <tbody> <tr> <td class=3D"text-center p-3" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; padding: 24px; text-align: center;"=
+> <table role=3D"presentation" valign=3D"top" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0" width=3D"100%" class=3D"min-w-full" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; ms=
+o-table-rspace: 0pt; min-width: 100%;"> <tbody> <tr> <td align=3D"left" val=
+ign=3D"middle" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> <a href=3D"https:/=
+/www.linkedin.com/comm/feed/?lipi=3Durn%3Ali%3Apage%3Aemail_email_member_me=
+ssage_v2%3Bl%2B2v0BZjSXGiwz0HpCH4jA%3D%3D&amp;midToken=3DAQF5ZQB6LmPjtQ&amp=
+;midSig=3D3mt_wiBk7liXk1&amp;trk=3Deml-email_member_message_v2-header-0-hom=
+e_glimmer&amp;trkEmail=3Deml-email_member_message_v2-header-0-home_glimmer-=
+null-8lbzb8~lxxozzyi~c2-null-null&amp;eid=3D8lbzb8-lxxozzyi-c2&amp;otpToken=
+=3DMTcwNDE3ZTUxNDJlY2FjNmIwMjQwNGVkNDcxN2UyYjU4N2M5ZDA0MDljYWI4ZTYxNzZjMTAw=
+NmQ0YTVmNThmYmYwZDJkZmJkNjBjNGYwZjc2MDg0ZTA0YjkzNmU5Mjg1YTdmYzJjNjNiZWIzZWU=
+3NGM0YWFhNiwxLDE%3D" target=3D"_blank" class=3D"w-[84px]" style=3D"color: #=
+0a66c2; cursor: pointer; display: inline-block; text-decoration: none; -web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; width: 84px;"> <img=
+ class=3D"block" alt=3D"LinkedIn" src=3D"https://www.linkedin.com/comm/dms/=
+logo?badgeTheme=3Dmercado&amp;lipi=3Durn%3Ali%3Apage%3Aemail_email_member_m=
+essage_v2%3Bl%2B2v0BZjSXGiwz0HpCH4jA%3D%3D&amp;midSig=3D3mt_wiBk7liXk1&amp;=
+midToken=3DAQF5ZQB6LmPjtQ&amp;trkEmail=3Deml-email_member_message_v2-null-0=
+-comms%7Ebadging%7Edynamic%7Eglimmer-null-8lbzb8%7Elxxozzyi%7Ec2-null-null&=
+amp;trk=3Deml-email_member_message_v2-null-0-comms%7Ebadging%7Edynamic%7Egl=
+immer&amp;_sig=3D2O14UnbkDliXk1" data-test-header-dynamic-badging-img style=
+=3D"outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; =
+display: block;"> </a> </td> <td valign=3D"middle" align=3D"right" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspa=
+ce: 0pt; mso-table-rspace: 0pt;"> <table role=3D"presentation" valign=3D"to=
+p" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" data-tes=
+t-header-profile style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> <tbody> <tr> <td=
+ align=3D"right" valign=3D"middle" class=3D"w-[32px]" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-=
+table-rspace: 0pt; width: 32px;" width=3D"32"> <a href=3D"https://www.linke=
+din.com/comm/in/-chad-fry?lipi=3Durn%3Ali%3Apage%3Aemail_email_member_messa=
+ge_v2%3Bl%2B2v0BZjSXGiwz0HpCH4jA%3D%3D&amp;midToken=3DAQF5ZQB6LmPjtQ&amp;mi=
+dSig=3D3mt_wiBk7liXk1&amp;trk=3Deml-email_member_message_v2-header-0-profil=
+e_glimmer&amp;trkEmail=3Deml-email_member_message_v2-header-0-profile_glimm=
+er-null-8lbzb8~lxxozzyi~c2-null-null&amp;eid=3D8lbzb8-lxxozzyi-c2&amp;otpTo=
+ken=3DMTcwNDE3ZTUxNDJlY2FjNmIwMjQwNGVkNDcxN2UyYjU4N2M5ZDA0MDljYWI4ZTYxNzZjM=
+TAwNmQ0YTVmNThmYmYwZDJkZmJkNjBjNGYwZjc2MDg0ZTA0YjkzNmU5Mjg1YTdmYzJjNjNiZWIz=
+ZWU3NGM0YWFhNiwxLDE%3D" target=3D"_blank" style=3D"color: #0a66c2; cursor: =
+pointer; display: inline-block; text-decoration: none; -webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%;"> <img alt=3D"Chad Fry" src=3D"http=
+s://media.licdn.com/dms/image/C4E03AQHoH2pNQNDgyg/profile-displayphoto-shri=
+nk_200_200/0/1641508699993?e=3D2147483647&amp;v=3Dbeta&amp;t=3DDrCXFpuXmpJW=
+ggKtsHxIFH3ns1eBtsYCi-TRb8zRsS8" class=3D"rounded-[100%] w-[32px] h-[32px]"=
+ style=3D"outline: none; text-decoration: none; -ms-interpolation-mode: bic=
+ubic; height: 32px; width: 32px; border-radius: 100%;" width=3D"32" height=
+=3D"32"> </a> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <=
+/td> </tr> <tr> <td class=3D"px-3 pb-3" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: =
+0pt; padding-left: 24px; padding-right: 24px; padding-bottom: 24px;"> <div>=
+ <table role=3D"presentation" valign=3D"top" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0" width=3D"100%" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">=
+ <tbody> <tr> <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> <table role=3D"=
+presentation" valign=3D"top" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> <tbody> <tr> <t=
+d style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-=
+table-lspace: 0pt; mso-table-rspace: 0pt;"> <h2 class=3D"font-semibold lead=
+ing-regular text-center" data-test-id=3D"threads-summary" style=3D"margin: =
+0; text-align: center; font-weight: 600; line-height: 1.25;"> 1 new message=
+ awaits your response </h2> </td> </tr> <tr data-test-id=3D"threads-content=
+"> <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> <table role=3D"presentatio=
+n" valign=3D"top" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D=
+"100%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> <tbody> <tr data-test-id=
+=3D"messaging-thread"> <td class=3D"pt-2" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace=
+: 0pt; padding-top: 16px;"> <table role=3D"presentation" valign=3D"top" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" data-test-id=
+=3D"one-to-one-single-thread" style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> <tb=
+ody> <tr> <td class=3D"text-center" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;=
+ text-align: center;"> <a href=3D"https://il.linkedin.com/comm/in/etai-stei=
+n?lipi=3Durn%3Ali%3Apage%3Aemail_email_member_message_v2%3Bl%2B2v0BZjSXGiwz=
+0HpCH4jA%3D%3D&amp;midToken=3DAQF5ZQB6LmPjtQ&amp;midSig=3D3mt_wiBk7liXk1&am=
+p;trk=3Deml-email_member_message_v2-one_to_one_single_thread-0-null&amp;trk=
+Email=3Deml-email_member_message_v2-one_to_one_single_thread-0-null-null-8l=
+bzb8~lxxozzyi~c2-null-null&amp;eid=3D8lbzb8-lxxozzyi-c2&amp;otpToken=3DMTcw=
+NDE3ZTUxNDJlY2FjNmIwMjQwNGVkNDcxN2UyYjU4N2M5ZDA0MDljYWI4ZTYxNzZjMTAwNmQ0YTV=
+mNThmYmYwZDJkZmJkNjBjNGYwZjc2MDg0ZTA0YjkzNmU5Mjg1YTdmYzJjNjNiZWIzZWU3NGM0YW=
+FhNiwxLDE%3D" target=3D"_blank" style=3D"color: #0a66c2; cursor: pointer; d=
+isplay: inline-block; text-decoration: none; -webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%;"> <img class=3D"inline-block relative bg-colo=
+r-entity-ghost-background clip-path-circle-50 rounded-full w-12 h-12 align-=
+top !w-[80px] !h-[80px]" src=3D"https://media.licdn.com/dms/image/C4D03AQGT=
+Hm5hkeX5Ng/profile-displayphoto-shrink_200_200/0/1657202491041?e=3D21474836=
+47&amp;v=3Dbeta&amp;t=3DHWfrtS4ZLWXRu0cfRRKiSnfUigXtU5qG85376c83Jz0" alt=3D=
+"Etai Stein, Application Security Specialist @Backslash Security | Electric=
+al Engineering and Physics" style=3D"outline: none; text-decoration: none; =
+-ms-interpolation-mode: bicubic; position: relative; display: inline-block;=
+ border-radius: 9999px; background-color: #eae6df; vertical-align: top; cli=
+p-path: circle(50%); height: 80px !important; width: 80px !important;" widt=
+h=3D"80" height=3D"80"> </a> </td> </tr> <tr class=3D"text-center" style=3D=
+"text-align: center;"> <td class=3D"pt-1 text-center" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-=
+table-rspace: 0pt; padding-top: 8px; text-align: center;"> <a href=3D"https=
+://il.linkedin.com/comm/in/etai-stein?lipi=3Durn%3Ali%3Apage%3Aemail_email_=
+member_message_v2%3Bl%2B2v0BZjSXGiwz0HpCH4jA%3D%3D&amp;midToken=3DAQF5ZQB6L=
+mPjtQ&amp;midSig=3D3mt_wiBk7liXk1&amp;trk=3Deml-email_member_message_v2-one=
+_to_one_single_thread-0-null&amp;trkEmail=3Deml-email_member_message_v2-one=
+_to_one_single_thread-0-null-null-8lbzb8~lxxozzyi~c2-null-null&amp;eid=3D8l=
+bzb8-lxxozzyi-c2&amp;otpToken=3DMTcwNDE3ZTUxNDJlY2FjNmIwMjQwNGVkNDcxN2UyYjU=
+4N2M5ZDA0MDljYWI4ZTYxNzZjMTAwNmQ0YTVmNThmYmYwZDJkZmJkNjBjNGYwZjc2MDg0ZTA0Yj=
+kzNmU5Mjg1YTdmYzJjNjNiZWIzZWU3NGM0YWFhNiwxLDE%3D" target=3D"_blank" title=
+=3D"Etai Stein, Application Security Specialist @Backslash Security | Elect=
+rical Engineering and Physics" class=3D"text-md font-semibold leading-regul=
+ar tracking-tight no-underline text-system-gray-90 line-clamp-1 text-ellips=
+is" style=3D"cursor: pointer; text-decoration: none; -webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%; text-overflow: ellipsis; font-size: 1=
+6px; font-weight: 600; line-height: 1.25; letter-spacing: -0.025em; color: =
+#282828; text-decoration-line: none; overflow: hidden; display: -webkit-box=
+; -webkit-box-orient: vertical; -webkit-line-clamp: 1;"> Etai Stein </a> </=
+td> </tr> <tr data-test-id=3D"sender-headline"> <td class=3D"pt-0.5 text-ce=
+nter" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; =
+mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding-top: 4px; text-align:=
+ center;"> <p class=3D"text-sm leading-regular text-system-gray-90 line-cla=
+mp-2 text-ellipsis" style=3D"margin: 0; font-weight: 400; text-overflow: el=
+lipsis; font-size: 14px; line-height: 1.25; color: #282828; overflow: hidde=
+n; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: =
+2;">Application Security Specialist @Backslash Security | Electrical Engine=
+ering and Physics</p> </td> </tr> <tr> <td class=3D"pt-1.5" style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt=
+; mso-table-rspace: 0pt; padding-top: 12px;"> <table role=3D"presentation" =
+valign=3D"top" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"10=
+0%" class=3D"email-button " data-test-id=3D"email-button" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; =
+mso-table-rspace: 0pt;"> <tbody> <tr> <td valign=3D"middle" align=3D"middle=
+" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-=
+table-lspace: 0pt; mso-table-rspace: 0pt;"> <a href=3D"https://www.linkedin=
+.com/comm/messaging/thread/2-ZDYxY2M3MzctNzdmMC00ZTExLThlNDktOGQ3ZDM1MDNmNG=
+Y3XzAxMA=3D=3D?lipi=3Durn%3Ali%3Apage%3Aemail_email_member_message_v2%3Bl%2=
+B2v0BZjSXGiwz0HpCH4jA%3D%3D&amp;midToken=3DAQF5ZQB6LmPjtQ&amp;midSig=3D3mt_=
+wiBk7liXk1&amp;trk=3Deml-email_member_message_v2-one_to_one_single_thread-0=
+-view_message_button&amp;trkEmail=3Deml-email_member_message_v2-one_to_one_=
+single_thread-0-view_message_button-null-8lbzb8~lxxozzyi~c2-null-null&amp;e=
+id=3D8lbzb8-lxxozzyi-c2&amp;otpToken=3DMTcwNDE3ZTUxNDJlY2FjNmIwMjQwNGVkNDcx=
+N2UyYjU4N2M5ZDA0MDljYWI4ZTYxNzZjMTAwNmQ0YTVmNThmYmYwZDJkZmJkNjBjNGYwZjc2MDg=
+0ZTA0YjkzNmU5Mjg1YTdmYzJjNjNiZWIzZWU3NGM0YWFhNiwxLDE%3D" target=3D"_blank" =
+aria-label=3D"View message from Etai" class=3D"align-top no-underline" styl=
+e=3D"color: #0a66c2; cursor: pointer; display: inline-block; text-decoratio=
+n: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; vertic=
+al-align: top; text-decoration-line: none;"> <table role=3D"presentation" v=
+align=3D"top" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"aut=
+o" class=3D"border-separate" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border=
+-collapse: separate;"> <tbody> <tr> <td class=3D"btn-md btn-primary border-=
+color-brand button-link leading-regular !min-h-[auto] !shadow-none border-1=
+ border-solid" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; height: min-content;=
+ border-radius: 24px; padding-top: 12px; padding-bottom: 12px; padding-left=
+: 24px; padding-right: 24px; text-align: center; font-size: 16px; font-weig=
+ht: 600; cursor: pointer; text-decoration-line: none; background-color: #0a=
+66c2; color: #ffffff; border-width: 1px; border-style: solid; border-color:=
+ #0a66c2; line-height: 1.25; min-height: auto !important; box-shadow: 0 0 #=
+0000, 0 0 #0000, 0 0 #0000 !important;"> <a href=3D"https://www.linkedin.co=
+m/comm/messaging/thread/2-ZDYxY2M3MzctNzdmMC00ZTExLThlNDktOGQ3ZDM1MDNmNGY3X=
+zAxMA=3D=3D?lipi=3Durn%3Ali%3Apage%3Aemail_email_member_message_v2%3Bl%2B2v=
+0BZjSXGiwz0HpCH4jA%3D%3D&amp;midToken=3DAQF5ZQB6LmPjtQ&amp;midSig=3D3mt_wiB=
+k7liXk1&amp;trk=3Deml-email_member_message_v2-one_to_one_single_thread-0-vi=
+ew_message_button&amp;trkEmail=3Deml-email_member_message_v2-one_to_one_sin=
+gle_thread-0-view_message_button-null-8lbzb8~lxxozzyi~c2-null-null&amp;eid=
+=3D8lbzb8-lxxozzyi-c2&amp;otpToken=3DMTcwNDE3ZTUxNDJlY2FjNmIwMjQwNGVkNDcxN2=
+UyYjU4N2M5ZDA0MDljYWI4ZTYxNzZjMTAwNmQ0YTVmNThmYmYwZDJkZmJkNjBjNGYwZjc2MDg0Z=
+TA0YjkzNmU5Mjg1YTdmYzJjNjNiZWIzZWU3NGM0YWFhNiwxLDE%3D" target=3D"_blank" ta=
+bindex=3D"-1" aria-hidden=3D"true" class=3D"no-underline" style=3D"color: #=
+0a66c2; cursor: pointer; display: inline-block; text-decoration: none; -web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-decoration-lin=
+e: none;"> <span class=3D"no-underline text-white" style=3D"color: #ffffff;=
+ text-decoration-line: none;"> View message </span> </a> </td> </tr> </tbod=
+y> </table> </a> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table=
+> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> <=
+/tbody> </table> </div> </td> </tr> <tr> <td class=3D"bg-color-background-c=
+anvas p-3" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #f3f2f=
+0; padding: 24px;"> <table role=3D"presentation" valign=3D"top" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-t=
+able-rspace: 0pt;"> <tbody> <tr> <td class=3D"text-center pb-2" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace:=
+ 0pt; mso-table-rspace: 0pt; padding-bottom: 16px; text-align: center;"> <h=
+2 class=3D"text-lg text-teal-80" style=3D"margin: 0; font-weight: 500; font=
+-size: 20px; color: #114951;"> Get the new LinkedIn desktop app </h2> </td>=
+ </tr> <tr> <td class=3D"text-center pb-2" data-test-id=3D"footer-app-store=
+-icon" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding-bottom: 16px; text-a=
+lign: center;"> <a href=3D"https://apps.microsoft.com/store/detail/9WZDNCRF=
+J4Q7?launch=3Dtrue&amp;cid=3Dlinkedin_email_upsell&amp;mode=3Dfull" target=
+=3D"_blank" rel=3D"noopener noreferrer" style=3D"color: #0a66c2; cursor: po=
+inter; display: inline-block; text-decoration: none; -webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%;"> <img alt=3D"Get it from Microsoft" =
+src=3D"https://static.licdn.com/aero-v1/sc/h/ejpkkpwvqks31a3cjqokb7fbm" cla=
+ss=3D"h-[40px] w-[112px]" style=3D"outline: none; text-decoration: none; -m=
+s-interpolation-mode: bicubic; height: 40px; width: 112px;" width=3D"112" h=
+eight=3D"40"> </a> </td> </tr> <tr> <td class=3D"text-center pb-2" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspa=
+ce: 0pt; mso-table-rspace: 0pt; padding-bottom: 16px; text-align: center;">=
+ <h2 class=3D"text-md text-teal-80" style=3D"margin: 0; font-weight: 500; f=
+ont-size: 16px; color: #114951;"> Also available on mobile </h2> </td> </tr=
+> <tr> <td class=3D"text-center" data-test-id=3D"footer-app-store-icon" sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt; text-align: center;"> <a href=3D"https=
+://itunes.apple.com/us/app/linkedin/id288429040?pt=3D10746&amp;ct=3Dst_apps=
+ite_flagship&amp;mt=3D8" target=3D"_blank" rel=3D"noopener noreferrer" styl=
+e=3D"color: #0a66c2; cursor: pointer; display: inline-block; text-decoratio=
+n: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"> <img=
+ alt=3D"Download on the App Store" src=3D"https://static.licdn.com/aero-v1/=
+sc/h/76yzkd0h5kiv27lrd4yaenylk" class=3D"h-[40px] w-[120px] pr-1" style=3D"=
+outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; heig=
+ht: 40px; width: 120px; padding-right: 8px;" width=3D"120" height=3D"40"> <=
+/a> <a href=3D"https://play.google.com/store/apps/details?id=3Dcom.linkedin=
+.android&amp;referrer=3Dst_appsite_flagship" target=3D"_blank" rel=3D"noope=
+ner noreferrer" style=3D"color: #0a66c2; cursor: pointer; display: inline-b=
+lock; text-decoration: none; -webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%;"> <img alt=3D"Get it on Google Play" src=3D"https://static.li=
+cdn.com/aero-v1/sc/h/142qudwblp58zwmc9vkqfplug" class=3D"h-[40px] w-[134px]=
+" style=3D"outline: none; text-decoration: none; -ms-interpolation-mode: bi=
+cubic; height: 40px; width: 134px;" width=3D"134" height=3D"40"> </a> </td>=
+ </tr> <tr> <td class=3D"py-2" style=3D"-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padd=
+ing-top: 16px; padding-bottom: 16px;"><hr class=3D"border-none bg-[#e0dfdd]=
+ h-[1px]" style=3D"height: 1px; border-style: none; background-color: #e0df=
+dd;"></td> </tr> </tbody> </table> <table role=3D"presentation" valign=3D"t=
+op" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" class=
+=3D"text-xs" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-size: 12px;"> <tb=
+ody> <tr> <td class=3D"pb-1 m-0" style=3D"-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; ma=
+rgin: 0px; padding-bottom: 8px;"> This email was intended for Chad Fry (Inf=
+ormation Security Sr Analyst AVP @ Citi | Splunk | Ghidra | Linux | Malware=
+ Analysis) </td> </tr> <tr> <td class=3D"pb-1 m-0" style=3D"-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-tab=
+le-rspace: 0pt; margin: 0px; padding-bottom: 8px;"> <a href=3D"https://www.=
+linkedin.com/help/linkedin/answer/4788?lang=3Den&amp;lipi=3Durn%3Ali%3Apage=
+%3Aemail_email_member_message_v2%3Bl%2B2v0BZjSXGiwz0HpCH4jA%3D%3D&amp;midTo=
+ken=3DAQF5ZQB6LmPjtQ&amp;midSig=3D3mt_wiBk7liXk1&amp;trk=3Deml-email_member=
+_message_v2-SecurityHelp-0-footerglimmer&amp;trkEmail=3Deml-email_member_me=
+ssage_v2-SecurityHelp-0-footerglimmer-null-8lbzb8~lxxozzyi~c2-null-null&amp=
+;eid=3D8lbzb8-lxxozzyi-c2&amp;otpToken=3DMTcwNDE3ZTUxNDJlY2FjNmIwMjQwNGVkND=
+cxN2UyYjU4N2M5ZDA0MDljYWI4ZTYxNzZjMTAwNmQ0YTVmNThmYmYwZDJkZmJkNjBjNGYwZjc2M=
+Dg0ZTA0YjkzNmU5Mjg1YTdmYzJjNjNiZWIzZWU3NGM0YWFhNiwxLDE%3D" target=3D"_blank=
+" class=3D"text-inherit underline" style=3D"cursor: pointer; display: inlin=
+e-block; text-decoration: none; -webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%; color: inherit; text-decoration-line: underline;">Learn wh=
+y we included this.</a> </td> </tr> <tr> <td class=3D"pb-1 m-0" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace:=
+ 0pt; mso-table-rspace: 0pt; margin: 0px; padding-bottom: 8px;">You are rec=
+eiving Messages digest emails.</td> </tr> <tr> <td class=3D"pb-1 m-0" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-l=
+space: 0pt; mso-table-rspace: 0pt; margin: 0px; padding-bottom: 8px;"> <a h=
+ref=3D"https://www.linkedin.com/comm/psettings/email-unsubscribe?lipi=3Durn=
+%3Ali%3Apage%3Aemail_email_member_message_v2%3Bl%2B2v0BZjSXGiwz0HpCH4jA%3D%=
+3D&amp;midToken=3DAQF5ZQB6LmPjtQ&amp;midSig=3D3mt_wiBk7liXk1&amp;trk=3Deml-=
+email_member_message_v2-unsubscribe-0-footerGlimmer&amp;trkEmail=3Deml-emai=
+l_member_message_v2-unsubscribe-0-footerGlimmer-null-8lbzb8~lxxozzyi~c2-nul=
+l-null&amp;eid=3D8lbzb8-lxxozzyi-c2&amp;loid=3DAQHfjAStN8NZMwAAAZBbTSfMhIEx=
+zZL7g33nj0iF_B3FVvT8LrTlD8zlu-eRU2lVZIWtwSxzxGaV8J-RsZpmu_Aker3K5Q" target=
+=3D"_blank" class=3D"text-inherit underline" style=3D"cursor: pointer; disp=
+lay: inline-block; text-decoration: none; -webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%; color: inherit; text-decoration-line: underline;=
+">Unsubscribe</a> =C2=A0=C2=A0=C2=B7=C2=A0=C2=A0 <a href=3D"https://www.lin=
+kedin.com/help/linkedin/answer/67?lang=3Den&amp;lipi=3Durn%3Ali%3Apage%3Aem=
+ail_email_member_message_v2%3Bl%2B2v0BZjSXGiwz0HpCH4jA%3D%3D&amp;midToken=
+=3DAQF5ZQB6LmPjtQ&amp;midSig=3D3mt_wiBk7liXk1&amp;trk=3Deml-email_member_me=
+ssage_v2-help-0-footerglimmer&amp;trkEmail=3Deml-email_member_message_v2-he=
+lp-0-footerglimmer-null-8lbzb8~lxxozzyi~c2-null-null&amp;eid=3D8lbzb8-lxxoz=
+zyi-c2&amp;otpToken=3DMTcwNDE3ZTUxNDJlY2FjNmIwMjQwNGVkNDcxN2UyYjU4N2M5ZDA0M=
+DljYWI4ZTYxNzZjMTAwNmQ0YTVmNThmYmYwZDJkZmJkNjBjNGYwZjc2MDg0ZTA0YjkzNmU5Mjg1=
+YTdmYzJjNjNiZWIzZWU3NGM0YWFhNiwxLDE%3D" target=3D"_blank" class=3D"text-inh=
+erit underline" style=3D"cursor: pointer; display: inline-block; text-decor=
+ation: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; co=
+lor: inherit; text-decoration-line: underline;">Help</a> </td> </tr> <tr> <=
+td class=3D"pb-1" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding-bottom: 8=
+px;"> <a href=3D"https://www.linkedin.com/comm/feed/?lipi=3Durn%3Ali%3Apage=
+%3Aemail_email_member_message_v2%3Bl%2B2v0BZjSXGiwz0HpCH4jA%3D%3D&amp;midTo=
+ken=3DAQF5ZQB6LmPjtQ&amp;midSig=3D3mt_wiBk7liXk1&amp;trk=3Deml-email_member=
+_message_v2-footer-0-logoGlimmer&amp;trkEmail=3Deml-email_member_message_v2=
+-footer-0-logoGlimmer-null-8lbzb8~lxxozzyi~c2-null-null&amp;eid=3D8lbzb8-lx=
+xozzyi-c2&amp;otpToken=3DMTcwNDE3ZTUxNDJlY2FjNmIwMjQwNGVkNDcxN2UyYjU4N2M5ZD=
+A0MDljYWI4ZTYxNzZjMTAwNmQ0YTVmNThmYmYwZDJkZmJkNjBjNGYwZjc2MDg0ZTA0YjkzNmU5M=
+jg1YTdmYzJjNjNiZWIzZWU3NGM0YWFhNiwxLDE%3D" target=3D"_blank" style=3D"color=
+: #0a66c2; cursor: pointer; display: inline-block; text-decoration: none; -=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"> <img src=3D"ht=
+tps://static.licdn.com/aero-v1/sc/h/9ehe6n39fa07dc5edzv0rla4e" alt=3D"Linke=
+dIn" class=3D"block h-[14px] w-[56px] image-rendering-crisp" style=3D"outli=
+ne: none; text-decoration: none; image-rendering: -moz-crisp-edges; image-r=
+endering: -o-crisp-edges; image-rendering: -webkit-optimize-contrast; image=
+-rendering: crisp-edges; -ms-interpolation-mode: nearest-neighbor; display:=
+ block; height: 14px; width: 56px;" width=3D"56" height=3D"14"> </a> </td> =
+</tr> <tr> <td data-test-copyright-text style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: =
+0pt;"> =C2=A9 2024 LinkedIn Corporation, 1&zwnj;000 West Maude Avenue, Sunn=
+yvale, CA 94085. <span data-test-trademarks-text> LinkedIn and the LinkedIn=
+ logo are registered trademarks of LinkedIn. </span> </td> </tr> </tbody> <=
+/table> </td> </tr> </tbody> </table> <img alt role=3D"presentation" src=3D=
+"https://www.linkedin.com/emimp/ip_T0d4aWVtSTRMV3g0ZUc5NmVubHBMV015OlpXMWhh=
+V3hmYldWdFltVnlYMjFsYzNOaFoyVmZkakk9Og=3D=3D.gif" style=3D"outline: none; t=
+ext-decoration: none; -ms-interpolation-mode: bicubic; width: 1px; height: =
+1px;" width=3D"1" height=3D"1"> </body> </html>
+------=_Part_13779748_890323080.1719518702677--
+

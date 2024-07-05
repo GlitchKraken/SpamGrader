@@ -1,0 +1,1373 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:6695:b0:1a6:aa79:77cb with SMTP id so21csp1338406rwb;
+        Tue, 2 Jul 2024 03:07:09 -0700 (PDT)
+X-Received: by 2002:a5d:9a8e:0:b0:7f3:d2d5:f068 with SMTP id ca18e2360f4ac-7f62ee8e775mr858850939f.16.1719914829049;
+        Tue, 02 Jul 2024 03:07:09 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719914829; cv=none;
+        d=google.com; s=arc-20160816;
+        b=VUS9NUBtpiV+JLGCKHIDcTq9B9JFI8KmFBAMolb8k5DkSyAyuuCV+tvUEPnDiqvH5O
+         IGulmyJLjhAYPFqyTcojgNx6WfnhxsHSHwVs7UZA0yCy96WPitODc/+cp5JjuXZtIJtQ
+         veangXUzD7kpzjirVHAger2PpYdXl8FnTCYpWqq8VPQM7Qr/5B1DePwX4Meh7lxNCWq3
+         nuq/zo0YWG32emwNarFm8XXCnFmdhFwTi1/jyfgkUvhX+iw0lhM42Vji0TskgKOrRUXz
+         fXtskv7RPi+HrvaK1TrKRRsx9V6LPV3BGBfKdJZurYCLD1TK88li2V2ypE37wjgFX8Kk
+         MjbQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:message-id:list-id:feedback-id:precedence
+         :list-unsubscribe:reply-to:date:mime-version:dkim-signature;
+        bh=APFkjbJxNwbMKMTh1PSHnq4cmCpEJA7LZi6mB/M1i7o=;
+        fh=c9Ng5lX/PRNTyWkn1/XM/+Hal06rmDX0OaSwLyM6lZA=;
+        b=WWd9TQpVNiAcQWVdwcyJLHIaC37BjJtd13349Sh9VRbzGuQFDTBOAfHO1/K1GNeZmr
+         CbYiKENTCeZz6hMr4kWwsKnQBPds4UVp5tGfFteVclmdLjz1cD3TOaSERS97HFWWcQ2E
+         DamtvxpqwBSIxZ0xDlOtZgnwJTZ+NYxA1VBY26ulDQyoC4tDqnXj48cXqc43abenxU2B
+         GbqvJhVvHsEnKkbG+0DrskSRkmVK6A1gY7w8sz4aVXZNWObfSneoPoHNMyGsd7NPUebT
+         BHK7Mj1aAE6WdRFZ8Ez7Hq7lafECI9gVZROOUjAzcRqOdcTY0dC18ssWTEAReXVwr9Qa
+         bdLg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=ofuDK3PI;
+       spf=pass (google.com: domain of 3tngdzhmkadkbjjbgz-hvkn-ijmzkgtbjjbgz.xjh@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3TNGDZhMKADkbjjbgZ-hVkn-ijmZkgtbjjbgZ.Xjh@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+Return-Path: <3TNGDZhMKADkbjjbgZ-hVkn-ijmZkgtbjjbgZ.Xjh@scoutcamp.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id 8926c6da1cb9f-4bb742ec47dsor2366062173.14.2024.07.02.03.07.08
+        for <Blackpapermoon42@gmail.com>
+        (Google Transport Security);
+        Tue, 02 Jul 2024 03:07:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3tngdzhmkadkbjjbgz-hvkn-ijmzkgtbjjbgz.xjh@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=ofuDK3PI;
+       spf=pass (google.com: domain of 3tngdzhmkadkbjjbgz-hvkn-ijmzkgtbjjbgz.xjh@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3TNGDZhMKADkbjjbgZ-hVkn-ijmZkgtbjjbgZ.Xjh@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20230601; t=1719914828; x=1720519628; dara=google.com;
+        h=to:from:subject:message-id:list-id:feedback-id:precedence
+         :list-unsubscribe:reply-to:date:mime-version:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=APFkjbJxNwbMKMTh1PSHnq4cmCpEJA7LZi6mB/M1i7o=;
+        b=ofuDK3PIcJIOredDSQ9wLqFz3G9POLRYPLeoUr74k5UGl2GjtPtqyMeQjt9H2zV1rQ
+         3erJZqu+RpjqrVpCWWXk8HZcz850uJl6vIsnmzUWlmSVCIzEeQKWNGBy3vtl0L4K7TxP
+         2/13K2qnFD+gxZn+YUwOhah5vToyPPapu++mZ3D5205wLt5DvrvWSvw3sUCSTHCmwSdx
+         tLkyEambFRlbk1wwBMFwnikR4ozo+Zx/b0wgyyWiZVbLm0rfiY7r4y2QDZW+k1XSD3+I
+         6uPSibz71v2pL/z6fjyBh/BdLlA47y8XVJT3uPhK9cSmav9ChlUCKhGFK3tsTDm8odSk
+         puaQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1719914828; x=1720519628;
+        h=to:from:subject:message-id:list-id:feedback-id:precedence
+         :list-unsubscribe:reply-to:date:mime-version:x-gm-message-state:from
+         :to:cc:subject:date:message-id:reply-to;
+        bh=APFkjbJxNwbMKMTh1PSHnq4cmCpEJA7LZi6mB/M1i7o=;
+        b=XxmwEd4HUB+dE/M/wjQiFDE03Di7ZGX91woFzkZP9i5SZ7t20rlRRx3PDpQ3wGYwJR
+         90+7RQPy32w+MJomZyTXnchRzwfUJH3Oh0Ij6Bhnrr+0r4xPKx4pNtKJ0+0lvUjEHl8a
+         rR10W0VPpCI4TbUVY+khBcxtQ37CmOMOXxVAmtSJBIYfL9uRjgc+/Lb40pH4Yq/9+LhB
+         XM8JKVqJXZJTdR3GEyxuy6P2Te2bGeEwlwcSapqXFKT2arQpHGCFfNlY1Kerpz1agHKZ
+         2ctZNXXClomyqH9uXYTThF1z58eLBjBbPVigk45k980zl/bCw6g6kI/8NtaB3tkVeLxo
+         Cb0Q==
+X-Gm-Message-State: AOJu0YxDwE+EK0GVloH8HspjxrmijjYLlcN1v3NFdruq1w4FC3akP5MA
+	OuhQDU68X0r4S2wk8IJjfewDDPrMXOnCpxI4nJdgDjir+xFpkbCNe/ml
+X-Google-Smtp-Source: AGHT+IHSEfQ36AVfjPfB9h9PpAwQb3XiODXARbmjWOoZGvRprCQojqx2I0+mryfdMco2kAqiya6r45Q=
+MIME-Version: 1.0
+X-Received: by 2002:a6b:6106:0:b0:7f6:2e72:e81b with SMTP id
+ ca18e2360f4ac-7f62ee168f6mr901572139f.4.1719914828582; Tue, 02 Jul 2024
+ 03:07:08 -0700 (PDT)
+Date: Tue, 02 Jul 2024 03:07:08 -0700
+Reply-To: Google Maps <google-maps-noreply@google.com>
+X-Google-Id: 4090229
+List-Unsubscribe: <https://notifications.google.com/g/optout/ANiao5qHZ1KaGkEZlcHml-yZeljifH65kJIYAow1ciZpgn0couojHbPHAYbQY62LSTjG9caj7Lyd_DgsQZ9LCHfNybLxsnkhbq3rZWyru-SoascgLsgPjtWFAH-l2C51-q1y_0_P9PTdv3LajdxKrOSgk8thBm2Hpd0gFVGUX7q42muaF4wFH8cgqaNBTcmmTeI_sIuJ41zJou8nsvY8hKDYlHCcJIU8LFQrmC5H5c-fqFrEKFICY-xA-h5yhLahdgG_EE2Z_5u6NXF0MyzMchIPb2TyCdSwDZA3JvFOSQZZDQ?hl=en>
+Precedence: bulk
+Feedback-ID: P-48-3401:C864000:M110480161-en:gamma
+List-Id: <96db5942fbf2d0c471f822472093ad3974514c05.google.com>
+X-Notifications: 7a97c2d64fdc0000
+X-Notifications-Bounce-Info: AU8pKH11TD8wgBrUAnEV6AxVwu3S-s-3DhKYRahx-iFKElxA4oFK57nlnfLwXhitLQZgBYJgGWfooLZGb62fbv93nwEh6VR5wQovt8UJzW56oxw70BE8kO8hX6Cs7QH4lat-rSvPBfcrDikZ3SSIWbm3MSddBvnpFbStmOUbgvp7qBzFep34WstzmG0Vfn60YDMu5gxh3AsE135Xicu1idjoJzYOBiLYA596VIs7xMAgoythZCDwg9CxtVWcLjjivZN_0a9DNkHmqdmd0TVMFf0FkwRxrdwJON7fHxdWM3ru3UXUHcvVndhKs9JE0uI4D8OtKebzKPJaS41dnEuAX77W4-xe6WVndy7TUANK8Fn54BgTFfRfTt_F4wIR6jQzOyN6IZlMuvE-Y7T9OqjldcXIvzM6kopfrMQhI9_Z1pHUnI5g20hTrOodzB7De7NFRFvbQWwAgDG9zf9tXuqvtN7xYt07igJw8GFJdMcIOfSMM536JtmyoNqIl1HpyOY9Xs3IgGmJQn6Cbw86lks8c5pibo57GZ_KUyq9dNhnAxr6hgNjAwNjA0MDQxNTM1NTk2OTMzMg
+Message-ID: <e341bf9e34de0b8c7aa26d38193ab4d3ca224cb1-864000-111513892@google.com>
+Subject: =?UTF-8?Q?Your_review_reached_1=2C000_views_=F0=9F=93=9D?=
+From: Google Maps <google-maps-noreply@google.com>
+To: Blackpapermoon42@gmail.com
+Content-Type: multipart/alternative; boundary="00000000000066d095061c40e0c6"
+
+--00000000000066d095061c40e0c6
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+MSwwMDANCg0KcmV2aWV3IHZpZXdzDQoNCkNhZmUgSGFuYSAgDQo8aHR0cHM6Ly9ub3RpZmljYXRp
+b25zLmdvb2dsZS5jb20vZy9wL0FOaWFvNXBUNFBneUo3U2owMjZiSGlydUdhSVNNcmZHQzc0V011
+cURKQ2J6bFNjRTFOeFBicVdJVVdrbFY4dk5HM2ZWS2xVV0lhc01iUElfWkxNWTJIN19VZlpsbmdQ
+dVZKSEhTM2gzbFYzNVVJVWVqTXNkVmJCOHUwd3B4UTZJU2tFSGtEQV81ci0xMXpWMmpWZENBOHNX
+MTFHOXZGUldiNWxBSGpZRy1qTXktdVZHb1Fiazg3RDU5U1Z5YmJiMW45bzAyLS03ZW03dDZvaEh2
+N1dJOVpMQzVSY3kwZ05tZG9DMVN5TXAwMEVnakVsU01NOFNablMxeWFCU0R5UFlxSEtzRXJUVjVN
+bU5vbjJGX3hGQW55bmlWSFNLZWJoVVBxWXI5OEFLcG1uQnczSWRyTHBvdUZQNndkOFJHa0V5X2V6
+YkF3X1g4azVkNUExdlJHaWNvTkhHaklrSDZtVHJuU1VhcW5rYTRiU3FETmtOT0NYTGlnPg0KDQoy
+LzI0LzI0DQoNCmEgcmF0aGVyIHNtYWxsIGNhZmUsIHdpdGggYSBzdXJwcmlzaW5nbHkgd2lkZSBt
+ZW51ISAgVGhlaXIgQ2FmZSBNb2NoYSB3YXMgIA0KY3JlYW15IGFuZCBkZWxpY2lvdXMuIGFsc28g
+cXVpdGUgcHJldHR5ISAgdGhlIGNoaWNrZW4ga2F0c3UgY3Vycnkgd2FzIGFsc28gIA0KcXVpdGUg
+bmljZQ0KDQpTZWUgeW91ciByZXZpZXdzICAgDQo8aHR0cHM6Ly9tYXBzLmFwcC5nb28uZ2wvP2li
+aT1jb20uZ29vZ2xlLk1hcHMmaXVzPWNvbWdvb2dsZW1hcHN1cmwmbGluaz1odHRwczovL3d3dy5n
+b29nbGUuY29tL21hcHMvY29udHJpYi8xMTMyNzc5NzcyOTk5Nzc5Mjk0OTIvcmV2aWV3cz9hdCUz
+RGducF9kbCpybH5TSU5HTEVfUkVWSUVXX1ZJRVdTX0NPTkdSQVRTX01PRFVMRV9TRUVfWU9VUl9S
+RVZJRVdTKm1pcH40NzUwMDE0NDMxMzM1MDYyNTk0Km1pc340MDQwNTk4MzM3MjAyOTk3Mjg5KnNj
+Zn5DUkVBVElWRV9GT1JNQVRfVU5TUEVDSUZJRUQqc21pfiUyNTNDZTM0MWJmOWUzNGRlMGI4Yzdh
+YTI2ZDM4MTkzYWI0ZDNjYTIyNGNiMS04NjQwMDAtMTExNTEzODkyQGdvb2dsZS5jb20lMjUzRSpy
+cWl+MTcxOTkxMzM5NTU1MTY1MSp3dWV+ZmFsc2UmYW12PTcwMzAwMDAwMCZhcG49Y29tLmdvb2ds
+ZS5hbmRyb2lkLmFwcHMubWFwcyZpc2k9NTg1MDI3MzU0JnV0bV9zb3VyY2U9cGhvdG9faW1wYWN0
+X2VtYWlsPg0KDQpZb3VyIHJldmlldyBpcyBoZWxwaW5nIGluIGEgYmlnIHdheQ0KDQpDb25ncmF0
+cyEgWW91ciBwb3N0IGp1c3QgcmVhY2hlZCBhIG5ldyBtaWxlc3RvbmUuIEl04oCZcyBub3cgYmVl
+biB2aWV3ZWQgb3ZlciAgDQoxLDAwMCB0aW1lcywgaGVscGluZyBsb3RzIG9mIHBlb3BsZSBnZXQg
+dGhlIGluZm9ybWF0aW9uIHRoZXkgbmVlZC4NCg0KQ29udHJpYnV0ZSBtb3JlICANCjxodHRwczov
+L21hcHMuYXBwLmdvby5nbC8/aWJpPWNvbS5nb29nbGUuTWFwcyZpdXM9Y29tZ29vZ2xlbWFwc3Vy
+bCZsaW5rPWh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vbWFwcy9jb250cmliLzExMzI3Nzk3NzI5OTk3
+NzkyOTQ5Mi90b2RvbGlzdC9kYXRhJTNEITRtNCE4bTEhMWU1ITE5bTEhMWUwP2VudHJ5JTNEZXVp
+JTI2ZG9fbG9nX2luJTNEdHJ1ZSUyNmF0JTNEZ25wX2RsKnJsflNJTkdMRV9SRVZJRVdfVklFV1Nf
+Q09OR1JBVFNfTU9EVUxFX0NPTlRSSUJVVEVfTU9SRSptaXB+NDc1MDAxNDQzMTMzNTA2MjU5NCpt
+aXN+NDA0MDU5ODMzNzIwMjk5NzI4OSpzY2Z+Q1JFQVRJVkVfRk9STUFUX1VOU1BFQ0lGSUVEKnNt
+aX4lMjUzQ2UzNDFiZjllMzRkZTBiOGM3YWEyNmQzODE5M2FiNGQzY2EyMjRjYjEtODY0MDAwLTEx
+MTUxMzg5MkBnb29nbGUuY29tJTI1M0UqcnFpfjE3MTk5MTMzOTU1NTE2NTEqd3VlfmZhbHNlJmFt
+dj03MDMwMDAwMDAmYXBuPWNvbS5nb29nbGUuYW5kcm9pZC5hcHBzLm1hcHMmaXNpPTU4NTAyNzM1
+NCZ1dG1fc291cmNlPXBob3RvX2ltcGFjdF9lbWFpbD4NCg0KDQoNCg0KWW91IHJlY2VpdmVkIHRo
+aXMgZW1haWwgYmVjYXVzZSB5b3UgY29udHJpYnV0ZWQgdXNlciBjb250ZW50IHRvIEdvb2dsZS4g
+SWYgIA0KeW91IGRvbuKAmXQgd2FudCB0aGVzZSB1cGRhdGVzIGFueW1vcmUsIHlvdSBjYW4gdW5z
+dWJzY3JpYmUgIA0KPGh0dHBzOi8vbm90aWZpY2F0aW9ucy5nb29nbGUuY29tL2cvb3B0b3V0L0FO
+aWFvNXJxSVpBMXhMVVZJWk1XTUNaa3AzMFhaYWtmQnNrTDZsdko5NDFiNFdGVGdyUVljdVhlSmJX
+M0pwUTFGRUxtZHB1Zzk4OGo3dXFLa1RhajUwV084OGRjWGZlVWVlY3p2Uml3NGJ1ZmRDdGxpWUtJ
+Yk1SUDl4UHJNRlhLT2xJZk1CYkRaWnp2bVN3Vkt3V2pGU1dNWUZWdkllVlFyeThkRzBDV2tpRzlE
+UG8yVE5GOFBkczBlZ3RUWTB5M0Q5ZElEdDBNZ2gyZlZ6ZUJhRFpIZ1FicnIyZ2Nmb2FydDJ5ZnBT
+MGNRZkVtZ0x6YmhMY1VMdnNzOGlhNE9LMFFKVkI4WmhRenNMRHl4Nk1BTTR3Wl9RWWtoU2lwNlUw
+cWdQZzY4dU9hR1k4P2hsPWVuPiAgDQpoZXJlLg0KDQooYykgMjAyNCBHb29nbGUgTExDIDE2MDAg
+QW1waGl0aGVhdHJlIFBhcmt3YXksIE1vdW50YWluIFZpZXcsIENBIDk0MDQzDQo=
+--00000000000066d095061c40e0c6
+Content-Type: text/x-amp-html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html lang=3Den =E2=9A=A14email data-css-strict>
+<head>
+<meta charset=3Dutf-8>
+<script async src=3Dhttps://cdn.ampproject.org/v0.js></script>
+<script async custom-element=3Damp-bind src=3Dhttps://cdn.ampproject.org/v0=
+/amp-bind-0.1.js></script>
+<style amp4email-boilerplate>body{visibility:hidden}</style>
+<style amp-custom>
+* {
+outline: none;
+}
+div {
+display: flex;
+flex-direction: column;
+}
+#carousel-with-preview > div {
+flex-direction: row;
+}
+p, a {
+margin: 0;
+text-align: center;
+font-family: Google Sans, Roboto, Helvetica Neue, Helvetica, Arial, sans-se=
+rif;
+}
+.amp-carousel-button:focus {
+outline: none;
+border: none;
+}
+.current {
+background-color: #858585;
+}
+.old {
+background-color: #E2E2E2;
+}
+@media (min-width: 721px) {
+.showonmobile{display:none;}
+.hideonmobile{display:block;}
+.amp-carousel-button-next {
+background-image: url('https://www.gstatic.com/gumdrop/files/local-guides-n=
+av-right-transparent-w100px-h100px-2x.png');
+background-size: 50px 50px;
+right: 20px;
+outline: none;
+}
+.amp-carousel-button-prev {
+background-image: url('https://www.gstatic.com/gumdrop/files/local-guides-n=
+av-left-transparent-w100px-h100px-2x.png');
+background-size: 50px 50px;
+left: 20px;
+outline: none;
+}
+.amp-carousel-button {
+background-color: transparent;
+top: 45%;
+height: 50px;
+width: 50px;
+box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+border-radius: 50%;
+cursor: pointer;
+}
+.flex-d-r {
+flex-direction: row;
+}
+.w-360 {
+width: 720px;
+}
+.hero-bg {
+background-image: url('https://www.gstatic.com/gumdrop/files/local-guides-i=
+mpact-header-background-transparent-w1440px-h760px-2x.png');
+min-height: 400px;
+}
+.hero-heading {
+font-size: 72px;
+line-height: 72px;
+}
+.hero-subheading {
+font-size: 24px;
+line-height: 36px;
+}
+.hero-container {
+width: 350px;
+margin: 15px 0 4px;
+}
+.hero-container-inner {
+padding: 11px 20px 11px;
+}
+.profile-icon {
+width: 35px;
+height: 35px;
+}
+.profile-name {
+font-size: 16px;
+line-height: 30px;
+padding: 7px 0 0 9px;
+}
+.post-date {
+font-size: 14px;
+line-height: 30px;
+padding: 7px 0 0;
+}
+.sec1-container {
+width: 540px;
+}
+.cta1-pad {
+padding: 17px 0 0;
+}
+.sec1-para1 {
+padding: 19px 0 0;
+font-size: 24px;
+line-height: 36px;
+}
+.w-296 {
+width: 618px;
+}
+.sec2-para1 {
+padding: 41px 0 0;
+}
+.car-container {
+background-image: url('https://www.gstatic.com/gumdrop/files/local-guides-a=
+mp-background-transparent-w1440px-h1146px-2x.png');
+min-height: 573px;
+}
+.flex-col {
+flex-direction: row;
+width: 618px;
+}
+.sec3-icon {
+padding: 71px 0 0;
+}
+.sec3-para1 {
+padding: 11px 40px 0;
+}
+.w-294 {
+width: 256px;
+}
+.sec3-para2 {
+padding: 4px 10px 0;
+}
+.sec3-card {
+margin: 40px 0 4px;
+}
+.sec4-container {
+width: 572px;
+}
+.sec4-img {
+padding: 28px 0 0;
+}
+.sec4-para3 {
+padding: 6px 0 0;
+}
+.w-308 {
+width: 636px;
+}
+.smiley-space {
+width: 4px;
+}
+.w-330 {
+width: 636px;
+}
+.text-pref {
+padding: 5px 0 62px;
+}
+.w-292 {
+width: 636px;
+}
+.text-address {
+padding: 20px 0 90px;
+}
+.car-wid {
+width: 720px;
+height: 357px;
+}
+.car-spa {
+width: 43px;
+}
+.car-main-cont {
+width: 560px;
+padding: 34px 0 39px;
+}
+.inc-para {
+padding: 4px 10px 0
+}
+.card-spacer {
+width: 1px;
+}
+.card-rev {
+padding: 19px 34px 0;
+}
+.card-cta {
+padding: 30px 0 0;
+}
+.card-post {
+padding: 17px 0 0;
+}
+.post-dim {
+width: 249px;
+height: 143px;
+}
+.review-main {
+padding: 8px 20px 30px;
+min-height: 88px;
+}
+.review-rate {
+padding: 0 20px;
+}
+.review-imp-card {
+width: 278px;
+}
+.mobile {
+display: none;
+}
+}
+@media (max-width: 720px) {
+.mob-padd{padding: 0px 8px}
+.amp-carousel-button-next {
+background-image: url('https://www.gstatic.com/gumdrop/files/local-guides-n=
+av-right-transparent-w100px-h100px-2x.png');
+background-size: 50px 50px;
+right: 4px;
+outline: none;
+}
+.amp-carousel-button-prev {
+background-image: url('https://www.gstatic.com/gumdrop/files/local-guides-n=
+av-left-transparent-w100px-h100px-2x.png');
+background-size: 50px 50px;
+left: 4px;
+outline: none;
+}
+.amp-carousel-button {
+background-color: transparent;
+top: 45%;
+height: 50px;
+width: 50px;
+box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+border-radius: 50%;
+cursor: pointer;
+}
+.flex-d-r {
+flex-direction: column;
+align-items: center;
+}
+.w-360 {
+width: 360px;
+}
+.hero-bg {
+background-image: url('https://www.gstatic.com/gumdrop/files/local-guides-i=
+mpact-header-background-transparent-w720px-h798px-2x.png');
+min-height: 370px;
+}
+.hero-heading {
+font-size: 62px;
+line-height: 62px;
+}
+.hero-subheading {
+font-size: 20px;
+line-height: 28px;
+}
+.hero-container {
+width: 252px;
+margin: 23px 0 4px;
+}
+.hero-container-inner {
+padding: 8px 15px 9px;
+}
+.profile-icon {
+width: 25px;
+height: 25px;
+}
+.profile-name {
+font-size: 13px;
+line-height: 21px;
+padding: 4px 0 0 8px;
+}
+.post-date {
+font-size: 13px;
+line-height: 21px;
+padding: 4px 0 0;
+}
+.sec1-container {
+width: 282px;
+}
+.cta1-pad {
+padding: 14px 0 0;
+}
+.sec1-para1 {
+padding: 24px 22px 0;
+font-size: 24px;
+line-height: 32px;
+}
+.w-296 {
+width: 296px;
+}
+.sec2-para1 {
+padding: 31px 0 0;
+}
+.car-container {
+background-image: url('https://www.gstatic.com/gumdrop/files/local-guides-a=
+mp-background-transparent-w720px-h1586px-2x.png');
+min-height: 793px;
+}
+.flex-col {
+flex-direction: column;
+align-items: center;
+width: 320px;
+}
+.sec3-icon {
+padding: 31px 0 0;
+}
+.sec3-para1 {
+padding: 8px 0 0;
+}
+.w-294 {
+width: 294px;
+}
+.sec3-para2 {
+padding: 4px 0 0;
+}
+.sec3-card {
+margin: 30px 0 4px;
+}
+.sec4-container {
+width: 296px;
+}
+.sec4-img {
+padding: 24px 0 0;
+}
+.sec4-para3 {
+padding: 3px 0 0;
+}
+.w-308 {
+width: 308px;
+}
+.smiley-space {
+width: 14px;
+}
+.w-330 {
+width: 330px;
+}
+.text-pref {
+padding: 5px 0 30px;
+}
+.w-292 {
+width: 292px;
+}
+.text-address {
+padding: 20px 0 36px;
+}
+.car-wid {
+width: 360px;
+height: 586px;
+}
+.car-spa {
+width: 17px;
+}
+.car-main-cont {
+width: 294px;
+padding: 20px 0 0;
+min-height: 544px;
+}
+.inc-para {
+padding: 0 10px 0
+}
+.card-spacer {
+width: 234px;
+height: 1px;
+margin: 17px 0 9px;
+}
+.card-rev {
+padding: 19px 27px 0;
+}
+.card-cta {
+padding: 20px 0 0;
+}
+.card-post {
+padding: 10px 0 0;
+}
+.post-dim {
+width: 249px;
+height: 143px;
+}
+.review-main {
+padding: 8px 15px 24px;
+min-height: 100px;
+}
+.review-rate {
+padding: 0 15px;
+}
+.review-imp-card {
+width: 100%;
+}
+.desktop {
+display: none;
+}
+.keep-space{height: 40px; width: 1px;}
+.dnone{display: none;}
+.dblock {display: block;}
+.bottom-fix{background-position: top;}
+.bottom-space{padding-bottom: 53px}
+.bottom-fix{background-position: bottom;}
+.pd-l-r10{padding-left: 10px; padding-right: 10px;}
+.width330{width: 320px}
+.showonmobile{display:block;}
+.hideonmobile{display:none;}
+.wid-294{width: 294px}
+.wid-100-per{width: 100%}
+.textcenter{text-align: center;}
+.mauto{margin: 0 auto;}
+}
+</style>
+</head>
+<body style=3D"text-align: center; padding: 10px 0; background-color: #f5f5=
+f5;">
+<!-- Manual Tracking Start -->
+<amp-img alt=3D"" height=3D1 src=3Dhttps://notifications.google.com/g/img/A=
+Niao5oU3pYtsYyt0xaakStGSYB-RXAg93ZOiWfxMl6jK7h3T1MifopWnDHSiKWb0Yr1ixmLVFmQ=
+A6qNhfgb78DZj1HHgqu1FD3oyt-4WzuOMUw_yfd3LerbkAiBWQQW7kefv3xqhHCHNF72cySRCSY=
+zcoCIXjGg0e7p.gif width=3D3></amp-img>
+<!-- Manual Tracking Start-->
+<amp-state id=3Dselected>
+<script type=3Dapplication/json> {"slide": 0} </script>
+</amp-state>
+<div class=3Dw-360 style=3D"margin: 0 auto; background-color: #ffffff;">
+<!-- Header Starts -->
+<div style=3D"align-items: center; padding: 12px 0;">
+<amp-img src=3Dhttps://www.gstatic.com/gumdrop/files/local-guides-google-ma=
+ps-logo-transparent-w314px-h62px-2x.png alt=3D"" width=3D155 height=3D30 la=
+yout=3Dresponsive style=3D"width: 155px; height: 30px;"></amp-img>
+</div>
+<!-- Header Ends -->
+<!-- Body Starts -->
+<div>
+<div class=3Dhero-bg style=3D"background-repeat: no-repeat; background-size=
+: 100%; align-items: center;">
+<div>
+<p class=3Dhero-heading style=3D"font-weight: 500; color: #1A73E8; letter-s=
+pacing: -3.6px; padding: 36px 0 0;">1,000</p>
+<p class=3Dhero-subheading style=3D"font-weight: bold; color: #666666; lett=
+er-spacing: -0.3px">review views</p>
+</div>
+<div class=3Dhero-container style=3D"border: 1px solid #EAE8ED; box-shadow:=
+ 0 2px 4px 0 rgba(0,0,0,0.1); border-radius: 5px;">
+<div class=3Dhero-container-inner style=3D"flex-direction: row; background-=
+color: #ffffff; justify-content: space-between; border-top-left-radius: 4px=
+; border-top-right-radius: 4px;">
+<div style=3D"flex-direction: row;">
+<div>
+<amp-img class=3Dprofile-icon src=3Dhttps://lh3.googleusercontent.com/a/ACg=
+8ocIyvy3tvTSeSb0CMd7tp-tZUKouRstHHlxT2fx5PV_kieBXaE99 alt=3D"" width=3D35 h=
+eight=3D35 layout=3Dresponsive style=3D"border-radius: 50px;"></amp-img>
+</div>
+<div>
+<p class=3Dprofile-name style=3D"font-weight: bold; color: #666666; text-al=
+ign: left;"><a href=3Dhttps://notifications.google.com/g/p/ANiao5qKom-366GX=
+kbUro44M_ufBzpwUKK_I-p2-tOqoWYi66Ix8TefOruP8Gb6RNivmCEduBORIq16aR32Fcj8_Low=
+Fc0PyiBktam8kWowyrIpMu5CBSFOj6xCnwqJf3Rn0dqsCJwp1CtckINVRIIGxa2JcxrhBjn6Nxl=
+KqDCDa-l0llgQG4CB8DaJq1WNM9CoxxZSQPSMI1HSX3SdKsTiSnea5MlI0Lc1Gp9gFnSAaANFg3=
+7B9LMMk7m-QqJd-n2BYoKU3yPfZvONPEAJImPVlJ7dSWQb5u563OJjRE6s16FI36X6BcoU1JfN_=
+aW0_AB8cLQjpJQBh8KNGn78EqrZCwtLFJ9gylVS9gGxc0yCssaaVBgomLpuw target=3D_blan=
+k style=3D"text-decoration: none; color: #666666;"><span class=3Ddesktop>Ca=
+fe Hana</span><span class=3Dmobile>Cafe Hana</span></a></p>
+</div>
+</div>
+<div>
+<p class=3Dpost-date style=3D"color: #666666;">2/24/24</p>
+</div>
+</div>
+<div style=3D"background-color: #ffffff; border-radius: 5px;">
+<div class=3Dreview-rate>
+<amp-img src=3Dhttps://www.gstatic.com/gumdrop/files/local-guides-impact-5-=
+star-transparent-w168px-h32px-2x.png alt=3D"" width=3D84 height=3D16 layout=
+=3Dresponsive style=3D"width: 84px; height: 16px;"></amp-img>
+</div>
+<div class=3Dreview-main style=3D"border-radius: 5px;">
+<p style=3D"color: #666666; font-size: 14px; line-height: 22px; text-align:=
+ left;">a rather small cafe, with a surprisingly wide menu! Their Cafe Moch=
+a was creamy and delicious. also quite pretty! the chicken katsu curry was =
+also quite nice</p>
+</div>
+</div>
+</div>
+</div>
+<div style=3D"align-items: center;">
+<div class=3Dsec1-container>
+<div style=3D"align-items: center;">
+<div>
+<p class=3Dcta1-pad style=3D"font-size: 15px; line-height: 22px; font-weigh=
+t: bold;">
+<a aria-label=3D"Visit your review contributions to see your impact" href=
+=3Dhttps://maps.app.goo.gl/?ibi=3Dcom.google.Maps&amp;ius=3Dcomgooglemapsur=
+l&amp;link=3Dhttps://www.google.com/maps/contrib/113277977299977929492/revi=
+ews?at%3Dgnp_dl*rl~SINGLE_REVIEW_VIEWS_CONGRATS_MODULE_SEE_YOUR_REVIEWS*mip=
+~4750014431335062594*mis~4040598337202997289*scf~AMP*smi~%253Ce341bf9e34de0=
+b8c7aa26d38193ab4d3ca224cb1-864000-111513892@google.com%253E*rqi~1719913395=
+551651*wue~false&amp;amv=3D703000000&amp;apn=3Dcom.google.android.apps.maps=
+&amp;isi=3D585027354&amp;utm_source=3Dphoto_impact_email style=3D"text-deco=
+ration: none; color: #1A73E8;" target=3D_blank>See your reviews&nbsp;&nbsp;=
+<amp-img src=3Dhttps://www.gstatic.com/gumdrop/files/local-guides-arrow-blu=
+e-transparent-w12px-h20px-2x.png alt=3D"" width=3D8 height=3D12 layout=3Dre=
+sponsive style=3D"display: inline-block; width: 8px; height: 12px; vertical=
+-align: middle;"></amp-img></a>
+</p>
+<p class=3Dsec1-para1 style=3D"font-weight: bold; color: #666666;">Your rev=
+iew is helping in a big way</p>
+<p style=3D"color: #666666; font-size: 14px; line-height: 22px; padding: 8p=
+x 0 0px;">Congrats! Your post just reached a new milestone. It=E2=80=99s no=
+w been viewed over 1,000 times, helping lots of people get the information =
+they need.</p>
+</div>
+<div style=3D"padding: 30px 0 40px;">
+<a aria-label=3D"Visit Google Maps to contribute" href=3Dhttps://maps.app.g=
+oo.gl/?ibi=3Dcom.google.Maps&amp;ius=3Dcomgooglemapsurl&amp;link=3Dhttps://=
+www.google.com/maps/contrib/113277977299977929492/todolist/data%3D!4m4!8m1!=
+1e5!19m1!1e0?entry%3Deui%26do_log_in%3Dtrue%26at%3Dgnp_dl*rl~SINGLE_REVIEW_=
+VIEWS_CONGRATS_MODULE_CONTRIBUTE_MORE*mip~4750014431335062594*mis~404059833=
+7202997289*scf~AMP*smi~%253Ce341bf9e34de0b8c7aa26d38193ab4d3ca224cb1-864000=
+-111513892@google.com%253E*rqi~1719913395551651*wue~false&amp;amv=3D7030000=
+00&amp;apn=3Dcom.google.android.apps.maps&amp;isi=3D585027354&amp;utm_sourc=
+e=3Dphoto_impact_email target=3D_blank style=3D"border-radius: 4px; text-de=
+coration:none; background-color: #1A73E8; color: #ffffff; font-weight:500; =
+text-align: center; padding: 13px 20px 13px; font-size: 16px; line-height: =
+22px;">Contribute more</a>
+</div>
+<!-- <p style=3D"font-weight: bold; color: #666666; font-size: 14px; line-h=
+eight: 22px; padding: 20px 0 0;">Share your achievement</p> -->
+</div>
+<!-- <div style=3D"flex-direction: row; justify-content: center; padding: 1=
+4px 0 38px;">
+<div>
+<a href=3D"https://www.google.com" style=3D"text-decoration: none; border-r=
+adius: 50%">
+<amp-img src=3D"https://services.google.com/fh/files/emails/local_guides_im=
+pact_twitter_share.png" alt=3D"" width=3D"50" height=3D"50" layout=3D"respo=
+nsive" style=3D"width: 50px; height: 50px; border-radius: 50%;"></amp-img>
+</a>
+</div>
+<div style=3D"width: 14px;"></div>
+<div>
+<a href=3D"https://www.google.com" style=3D"text-decoration: none; border-r=
+adius: 50%">
+<amp-img src=3D"https://services.google.com/fh/files/emails/local_guides_im=
+pact_instagram_share.png" alt=3D"" width=3D"50" height=3D"50" layout=3D"res=
+ponsive" style=3D"width: 50px; height: 50px; border-radius: 50%;"></amp-img=
+>
+</a>
+</div>
+<div style=3D"width: 14px;"></div>
+<div>
+<a href=3D"https://www.google.com" style=3D"text-decoration: none; border-r=
+adius: 50%">
+<amp-img src=3D"https://services.google.com/fh/files/emails/local_guides_im=
+pact_facebook_share.png" alt=3D"" width=3D"50" height=3D"50" layout=3D"resp=
+onsive" style=3D"width: 50px; height: 50px; border-radius: 50%;"></amp-img>
+</a>
+</div>
+<div style=3D"width: 14px;"></div>
+<div>
+<a href=3D"https://www.google.com" style=3D"text-decoration: none; border-r=
+adius: 50%">
+<amp-img src=3D"https://services.google.com/fh/files/emails/local_guides_im=
+pact_email_share.png" alt=3D"" width=3D"50" height=3D"50" layout=3D"respons=
+ive" style=3D"width: 50px; height: 50px; border-radius: 50%;"></amp-img>
+</a>
+</div>
+</div> -->
+</div>
+</div>
+<!--Optin Module start here-->
+<!--Optin Module end here-->
+<div style=3D"align-items: center;">
+<div class=3Dw-330>
+<div>
+<p style=3D"font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-ser=
+if; color: #5F6368; font-size: 12px; line-height: 16px; letter-spacing: 0.3=
+px; padding: 20px 0;">You received this email because you contributed user =
+content to Google. If you don=E2=80=99t want these updates anymore, you can=
+ <a href=3Dhttps://notifications.google.com/g/optout/ANiao5qNvataKiOsFYSrxE=
+rotHryGLYav2IivrABjvrSx2S73fQ0nU_qG6HqAa0uZDhIhfj4dvkis2nNUzX3hquy_SDgO3U76=
+btAaAOJ9wR4GVVp-Avb4WTely9W86zdzgP66VWgrXVMf_96r18l5fAbG0amDvwKHc8FdAmzE2R9=
+GwwsvZt7IWz2JvAfFH19f-N-zWt251VJoHNIyFgY44WTL9F9fP5OXPwzPgw_SajK4VBk7Nnz3t2=
+6Uud2NsAOteaq3D51R1ztkm1sAuFrSOsERjX_jDRpxuJl-fqTzNBT7A?hl=3Den style=3D"te=
+xt-decoration: none; color: #1A73E8;" target=3D_blank>unsubscribe</a> here.=
+</p>
+</div>
+</div>
+</div>
+<div style=3D"align-items: center;">
+<div class=3Dw-308 style=3D"height: 1px; background-color: #DADCE0;"></div>
+</div>
+<div style=3D"align-items: center;">
+<div class=3Dw-292>
+<div style=3D"padding: 20px 0 0; align-items: center;">
+<amp-img src=3Dhttps://www.gstatic.com/gumdrop/files/adwords-partners-googl=
+e-transparent-w158px-h52px-2x.png alt=3D"" width=3D80 height=3D26 layout=3D=
+responsive style=3D"width: 80px; height: 26px;"></amp-img>
+</div>
+<div>
+<p class=3Dtext-address style=3D"font-family: Roboto, Helvetica Neue, Helve=
+tica, Arial, sans-serif; color: #202124; font-size: 10px; line-height: 16px=
+; letter-spacing: 0.17px;">&copy; 2024 Google LLC 1600 Amphitheatre Parkway=
+, Mountain View, CA 94043</p>
+</div>
+</div>
+</div>
+<!-- Body Ends -->
+<!-- Footer Starts -->
+<!-- Footer Ends -->
+</div>
+</body>
+</html>
+--00000000000066d095061c40e0c6
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3Dhttps://www.w3.org/1999/xhtml lang=3Den>
+<head>
+<title>Get a snapshot of your impact</title>
+<meta http-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8" />
+<!--[if !mso]><!-->
+<meta http-equiv=3DX-UA-Compatible content=3DIE=3Dedge />
+<!--<![endif]-->
+<meta name=3Dviewport content=3D"width=3Ddevice-width, initial-scale=3D1.0"=
+ />
+<meta name=3Drobots content=3D"no index">
+<!--[if mso | ie]>
+<style>
+.outborcta{
+border-top: 13px solid #1A73E8 !important;
+border-right: 20px solid #1A73E8 !important;
+border-bottom: 13px solid #1A73E8 !important;
+border-left: 20px solid #1A73E8 !important;
+padding: 0px !important;
+}
+.out-prof {
+padding: 0px 0px 10px 9px !important;
+}
+.out-date {
+padding: 0px 0px 10px !important;
+}
+.out_bot{border-bottom: 2px solid #DADCE0 !important;}
+.out_bor{border-top: 1px solid #DADCE0 !important;}
+</style>
+<![endif]-->
+<style>
+body{
+font-family:Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+font-size:12px;
+color:#000000;
+-webkit-text-size-adjust: none !important;
+-webkit-font-smoothing: antialiased !important;
+-ms-text-size-adjust: none !important;
+}
+table, tr, td {
+mso-table-lspace:0pt;
+mso-table-rspace:0pt;
+}
+a:link, a:visited, a:hover, a:active {
+color: #4285f4;
+text-decoration: none;
+}
+strong {
+font-weight: bold !important;
+}
+em {
+font-style: italic !important;
+}
+html {
+-webkit-text-size-adjust: none;
+-ms-text-size-adjust: 100%;
+}
+td {
+-webkit-text-size-adjust: none;
+}
+a[href^=3Dtel] {
+color: inherit;
+text-decoration: none;
+}
+div, p, a, li, td {
+-webkit-text-size-adjust:none;
+}
+td {
+text-decoration:none !important;
+}
+a[x-apple-data-detectors] {
+color: inherit !important;
+text-decoration: none !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+}
+@media screen and (max-width: 720px) {
+.width330{width: 320px !important;}
+.mob-padd{padding: 0px 8px !important}
+.hide {
+display: none !important;
+}
+.show {
+display: block !important;
+}
+.wid-100-per {
+width: 100% !important;
+}
+.wid-360 {
+width: 360px !important;
+}
+.wid-324 {
+width: 324px !important;
+}
+.wid-308 {
+width: 308px !important;
+}
+.wid-294 {
+width: 294px !important;
+}
+.wid-284 {
+width: 284px !important;
+}
+.mar-0-auto {
+margin: 0 auto !important;
+}
+.pad-l-r-0 {
+padding-right: 0px !important;
+padding-left: 0px !important;
+}
+.pad-l-r-18 {
+padding-right: 18px !important;
+padding-left: 18px !important;
+}
+.pad-l-r-22 {
+padding-right: 22px !important;
+padding-left: 22px !important;
+}
+.pad-l-r-24 {
+padding-right: 24px !important;
+padding-left: 24px !important;
+}
+.pad-t-3 {
+padding-top: 3px !important;
+}
+.pad-t-24 {
+padding-top: 24px !important;
+}
+.pad-t-27 {
+padding-top: 27px !important;
+}
+.pad-t-30 {
+padding-top: 30px !important;
+}
+.pad-b-6 {
+padding-bottom: 6px !important;
+}
+.pad-b-30 {
+padding-bottom: 30px !important;
+}
+.ht40{height: 40px !important;}
+.dnone{display: none !important;}
+.dblock {display: block !important;}.textcenter{text-align: center !importa=
+nt;}
+.mauto{margin: 0 auto !important;}
+.wid-294{width: 294px !important;}
+}
+</style>
+</head>
+<body style=3D"margin: 0 auto; padding:10px 0;" bgcolor=3D#f5f5f5>
+<!-- Manual Tracking Start -->
+<img alt=3D"" height=3D1 src=3Dhttps://notifications.google.com/g/img/ANiao=
+5oO32iLx-n3GsDkJkUICpn4yKlQXwh2Wd8kuJTqrw5iyS1pF4H5qHnh0Qu4oFv0m6Jn1Kbynxzq=
+A_wOfw64LpV3FSkKloGZm8WW7S6eWe90zTJ59ZfxGfdUMClmN03z5wK2jTXipXAxWneEdoKrSIo=
+1obxnbeaI.gif width=3D3>
+<!-- Manual Tracking End -->
+<!--Hidden snippet start-->
+<!--[if !mso]><!-->
+<p style=3D"padding-top:0; font-size:0px; line-height:0px; display: none;">=
+Let=E2=80=99s celebrate your impact&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&n=
+bsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;=
+&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zw=
+j;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&=
+zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp=
+;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nb=
+sp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&=
+nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj=
+;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&z=
+wj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;=
+&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbs=
+p;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&n=
+bsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;=
+&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zw=
+j;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;&zwj;&nbsp;</p>
+<!--<![endif]-->
+<!--Hidden snippet end-->
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<table class=3Dwid-360 role=3Dpresentation border=3D0 cellpadding=3D0 cells=
+pacing=3D0 width=3D720 align=3Dcenter bgcolor=3D#ffffff>
+<!-- logo starts -->
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td aria-hidden=3Dtrue align=3Dcenter valign=3Dtop style=3D"padding: 12px 0=
+;">
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/local-guides-google-maps-l=
+ogo-transparent-w314px-h62px-2x.png alt=3D"" title=3D"" width=3D155 height=
+=3Dauto style=3D"display: block;" />
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- logo ends -->
+<!-- body starts -->
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td class=3Dhide align=3Dcenter valign=3Dtop background=3Dhttps://www.gstat=
+ic.com/gumdrop/files/local-guides-impact-header-background-transparent-w144=
+0px-h760px-2x.png style=3D"background-image:url(https://www.gstatic.com/gum=
+drop/files/local-guides-impact-header-background-transparent-w1440px-h760px=
+-2x.png); background-position:top left; background-repeat: no-repeat; backg=
+round-size:100%; height: 400px;" height=3D468>
+<!--[if gte mso 9]>
+<v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" stroke=3D"f=
+alse" style=3D"width:720px; height:464px; background-size:cover;">
+<v:fill type=3D"tile" src=3D"https://www.gstatic.com/gumdrop/files/local-gu=
+ides-impact-header-background-transparent-w720px-h510px-1x.png" color=3D"#f=
+fffff" />
+<v:textbox inset=3D"0,0,0,0">
+<![endif]-->
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td aria-hidden=3Dtrue width=3D1 height=3D36 align=3Dleft valign=3Dtop styl=
+e=3Dborder-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-=
+line-height-rule:exactly;line-height:36px;>
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/spacer-11.gif width=3D100%=
+ height=3D1 border=3D0 alt=3D"" style=3D"display: block;" />
+</td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"font-family: Google Sans, Roboto, =
+Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 72px; line-height:=
+ 72px; font-weight: 500; color: #1A73E8; letter-spacing: -3.6px;">1,000</td=
+>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"font-family: Google Sans, Roboto, =
+Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 24px; line-height:=
+ 36px; font-weight: bold; color: #666666; letter-spacing: -0.3px;">review v=
+iews</td>
+</tr>
+<tr>
+<td aria-hidden=3Dtrue width=3D1 height=3D14 align=3Dleft valign=3Dtop styl=
+e=3Dborder-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-=
+line-height-rule:exactly;line-height:14px;>
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/spacer-11.gif width=3D100%=
+ height=3D1 border=3D0 alt=3D"" style=3D"display: block;" />
+</td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D350 align=3Dcenter>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"border: 1px solid #EAE8ED; border-=
+radius: 5px; background-color: #ffffff;">
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"padding: 11px 20px;">
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td align=3Dleft valign=3Dtop>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0>
+<tr>
+<td align=3Dleft valign=3Dtop>
+<img src=3Dhttps://lh3.googleusercontent.com/a/ACg8ocIyvy3tvTSeSb0CMd7tp-tZ=
+UKouRstHHlxT2fx5PV_kieBXaE99 width=3D35 alt=3D"" height=3D35 title=3D"" sty=
+le=3D"display: block; border-radius: 50px;">
+</td>
+<td align=3Dleft valign=3Dtop>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0>
+<tr>
+<td class=3Dout-prof align=3Dleft valign=3Dtop style=3D"font-family: Google=
+ Sans, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 16p=
+x; line-height: 30px; font-weight: bold; color: #666666; padding: 7px 0 0 9=
+px;"><a href=3Dhttps://notifications.google.com/g/p/ANiao5pyaEIUcmXWdpZU1I1=
+zCdHB20FzCi8glT1wnIMhUZtfD4f41t_mw7YCueih-Crsv7aX4zPUPDC7uV-90oVJ9wWCGbR8jN=
+er2dnsXj_9HgciDuST1RtCXYBDVDBepML2GtBvz3cQwvvs6FK5E1ilcAVYWq_M58PHvHyIX80Ft=
+bN2uS16NYUOYeNurbWzzDwivkIMMfmEP3CZKhvErucLepQ35wgXKtNy0lNB_NX4AD7kM6Czp4qW=
+TMc79kbWsOg4MG3NpRoSIc0WufWU6wLz6aRBcl8gllgA-D0DMp8vUp8vD3-z8Ot6PiFqucT5Lua=
+2y56AyqvWkqIIfLv7y6hv1Gmc1ntYzV3C31eiuB2-YbhcH1uGfsrC target=3D_blank style=
+=3D"text-decoration: none; color: #666666;">Cafe Hana</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td align=3Dright valign=3Dtop>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0>
+<tr>
+<td class=3Dout-date align=3Dright valign=3Dtop style=3D"font-family: Googl=
+e Sans, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 14=
+px; line-height: 30px; color: #666666; padding: 7px 0 0;">2/24/24</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3Dleft valign=3Dtop style=3D"padding: 0 20px;">
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/local-guides-impact-5-star=
+-transparent-w168px-h32px-2x.png width=3D84 height=3Dauto alt=3D"" style=3D=
+"display: block;" />
+</td>
+</tr>
+<tr>
+<td align=3Dleft valign=3Dtop style=3D"font-family: Google Sans, Roboto, He=
+lvetica Neue, Helvetica, Arial, sans-serif; color: #666666; font-size: 14px=
+; line-height: 22px; padding: 8px 20px 30px; height: 88px;">a rather small =
+cafe, with a surprisingly wide menu! Their Cafe Mocha was creamy and delici=
+ous. also quite pretty! the chicken katsu curry was also quite nice</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td aria-hidden=3Dtrue width=3D1 height=3D4 align=3Dleft valign=3Dtop style=
+=3Dborder-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-l=
+ine-height-rule:exactly;line-height:4px;>
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/spacer-11.gif width=3D100%=
+ height=3D1 border=3D0 alt=3D"" style=3D"display: block;" />
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!--[if gte mso 9]>
+</v:textbox>
+</v:rect>
+<![endif]-->
+</td>
+<!--[if !mso]><!-->
+<td class=3Dshow align=3Dcenter valign=3Dtop background=3Dhttps://www.gstat=
+ic.com/gumdrop/files/local-guides-impact-header-background-transparent-w720=
+px-h798px-2x.png style=3D"background-image:url(https://www.gstatic.com/gumd=
+rop/files/local-guides-impact-header-background-transparent-w720px-h798px-2=
+x.png); background-position:top left; background-repeat: no-repeat; backgro=
+und-size:100%; display: none;">
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td aria-hidden=3Dtrue width=3D1 height=3D36 align=3Dleft valign=3Dtop styl=
+e=3Dborder-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-=
+line-height-rule:exactly;line-height:36px;>
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/spacer-11.gif width=3D100%=
+ height=3D1 border=3D0 alt=3D"" style=3D"display: block;" />
+</td>
+</tr>
+<tr>
+<td class=3Dfontadjust align=3Dcenter valign=3Dtop style=3D"font-family: Go=
+ogle Sans, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif; font-size:=
+ 62px; line-height: 62px; font-weight: 500; color: #1A73E8; letter-spacing:=
+ -3.6px;">1,000</td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"font-family: Google Sans, Roboto, =
+Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 20px; line-height:=
+ 28px; font-weight: bold; color: #666666; letter-spacing: -0.3px;">review v=
+iews</td>
+</tr>
+<tr>
+<td aria-hidden=3Dtrue width=3D1 height=3D22 align=3Dleft valign=3Dtop styl=
+e=3Dborder-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-=
+line-height-rule:exactly;line-height:22px;>
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/spacer-11.gif width=3D100%=
+ height=3D1 border=3D0 alt=3D"" style=3D"display: block;" />
+</td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D252 align=3Dcenter>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"border: 1px solid #EAE8ED; border-=
+radius: 5px; background-color: #ffffff;">
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"padding: 8px 15px 9px;">
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td align=3Dleft valign=3Dtop>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0>
+<tr>
+<td align=3Dleft valign=3Dtop>
+<img src=3Dhttps://lh3.googleusercontent.com/a/ACg8ocIyvy3tvTSeSb0CMd7tp-tZ=
+UKouRstHHlxT2fx5PV_kieBXaE99 width=3D25 height=3D25 alt=3D"" title=3D"" sty=
+le=3D"display: block; border-radius: 50px;">
+</td>
+<td align=3Dleft valign=3Dtop>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0>
+<tr>
+<td align=3Dleft valign=3Dtop style=3D"font-family: Google Sans, Roboto, He=
+lvetica Neue, Helvetica, Arial, sans-serif; font-size: 13px; line-height: 2=
+1px; font-weight: bold; color: #666666; padding: 4px 0 0 8px;"><a href=3Dht=
+tps://notifications.google.com/g/p/ANiao5pyaEIUcmXWdpZU1I1zCdHB20FzCi8glT1w=
+nIMhUZtfD4f41t_mw7YCueih-Crsv7aX4zPUPDC7uV-90oVJ9wWCGbR8jNer2dnsXj_9HgciDuS=
+T1RtCXYBDVDBepML2GtBvz3cQwvvs6FK5E1ilcAVYWq_M58PHvHyIX80FtbN2uS16NYUOYeNurb=
+WzzDwivkIMMfmEP3CZKhvErucLepQ35wgXKtNy0lNB_NX4AD7kM6Czp4qWTMc79kbWsOg4MG3Np=
+RoSIc0WufWU6wLz6aRBcl8gllgA-D0DMp8vUp8vD3-z8Ot6PiFqucT5Lua2y56AyqvWkqIIfLv7=
+y6hv1Gmc1ntYzV3C31eiuB2-YbhcH1uGfsrC target=3D_blank style=3D"text-decorati=
+on: none; color: #666666;">Cafe Hana</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td align=3Dright valign=3Dtop>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0>
+<tr>
+<td align=3Dright valign=3Dtop style=3D"font-family: Google Sans, Roboto, H=
+elvetica Neue, Helvetica, Arial, sans-serif; font-size: 13px; line-height: =
+21px; color: #666666; padding: 4px 0 0;">2/24/24</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3Dleft valign=3Dtop style=3D"padding: 0 15px">
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/local-guides-impact-5-star=
+-transparent-w168px-h32px-2x.png width=3D84 height=3Dauto alt=3D"" style=3D=
+"display: block;" />
+</td>
+</tr>
+<tr>
+<td align=3Dleft valign=3Dtop style=3D"font-family: Google Sans, Roboto, He=
+lvetica Neue, Helvetica, Arial, sans-serif; color: #666666; font-size: 14px=
+; line-height: 22px; padding: 8px 15px 24px; height: 100px;">a rather small=
+ cafe, with a surprisingly wide menu! Their Cafe Mocha was creamy and delic=
+ious. also quite pretty! the chicken katsu curry was also quite nice</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td aria-hidden=3Dtrue width=3D1 height=3D2 align=3Dleft valign=3Dtop style=
+=3Dborder-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-l=
+ine-height-rule:exactly;line-height:2px;>
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/spacer-11.gif width=3D100%=
+ height=3D1 border=3D0 alt=3D"" style=3D"display: block;" />
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<!--<![endif]-->
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<table class=3Dwid-284 role=3Dpresentation border=3D0 cellpadding=3D0 cells=
+pacing=3D0 width=3D540 align=3Dcenter>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"font-family: Google Sans, Roboto, =
+Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 15px; line-height:=
+ 22px; font-weight: bold; color: #1A73E8; padding: 17px 0 0;">
+<a aria-label=3D"Visit your review contributions to see your impact" href=
+=3Dhttps://maps.app.goo.gl/?ibi=3Dcom.google.Maps&amp;ius=3Dcomgooglemapsur=
+l&amp;link=3Dhttps://www.google.com/maps/contrib/113277977299977929492/revi=
+ews?at%3Dgnp_dl*rl~SINGLE_REVIEW_VIEWS_CONGRATS_MODULE_SEE_YOUR_REVIEWS*mip=
+~4750014431335062594*mis~4040598337202997289*scf~HTML*smi~%253Ce341bf9e34de=
+0b8c7aa26d38193ab4d3ca224cb1-864000-111513892@google.com%253E*rqi~171991339=
+5551651*wue~false&amp;amv=3D703000000&amp;apn=3Dcom.google.android.apps.map=
+s&amp;isi=3D585027354&amp;utm_source=3Dphoto_impact_email target=3D_blank s=
+tyle=3D"text-decoration: none; color: #1A73E8;">See your reviews&nbsp;&nbsp=
+;<img src=3Dhttps://www.gstatic.com/gumdrop/files/local-guides-arrow-blue-t=
+ransparent-w12px-h20px-2x.png alt=3D"" width=3D8 height=3D12 style=3D"displ=
+ay: inline-block; width: 8px; height: 12px; vertical-align: middle;" /></a>
+</td>
+</tr>
+<tr>
+<td class=3Dpad-l-r-22 align=3Dcenter valign=3Dtop style=3D"font-family: Go=
+ogle Sans, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif; padding: 1=
+9px 0 0; font-size: 24px; line-height: 36px; font-weight: bold; color: #666=
+666;">Your review is helping in a big way</td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"font-family: Google Sans, Roboto, =
+Helvetica Neue, Helvetica, Arial, sans-serif; color: #666666; font-size: 14=
+px; line-height: 22px; padding: 8px 0 0;">Congrats! Your post just reached =
+a new milestone. It=E2=80=99s now been viewed over 1,000 times, helping lot=
+s of people get the information they need.</td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"padding: 30px 0 40px;">
+<table role=3Dpresentation align=3Dcenter border=3D0 cellpadding=3D0 cellsp=
+acing=3D0>
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<a aria-label=3D"Visit Google Maps to contribute" href=3Dhttps://maps.app.g=
+oo.gl/?ibi=3Dcom.google.Maps&amp;ius=3Dcomgooglemapsurl&amp;link=3Dhttps://=
+www.google.com/maps/contrib/113277977299977929492/todolist/data%3D!4m4!8m1!=
+1e5!19m1!1e0?entry%3Deui%26do_log_in%3Dtrue%26at%3Dgnp_dl*rl~SINGLE_REVIEW_=
+VIEWS_CONGRATS_MODULE_CONTRIBUTE_MORE*mip~4750014431335062594*mis~404059833=
+7202997289*scf~HTML*smi~%253Ce341bf9e34de0b8c7aa26d38193ab4d3ca224cb1-86400=
+0-111513892@google.com%253E*rqi~1719913395551651*wue~false&amp;amv=3D703000=
+000&amp;apn=3Dcom.google.android.apps.maps&amp;isi=3D585027354&amp;utm_sour=
+ce=3Dphoto_impact_email target=3D_blank style=3D"-moz-border-radius:4px; -w=
+ebkit-border-radius:4px; background:#1A73E8; border-radius:4px; color:#ffff=
+ff; display:block; font-family: Google Sans, Roboto, Helvetica Neue, Helvet=
+ica, Arial, sans-serif; font-size:16px;line-height: 22px; font-weight:500; =
+padding: 13px 20px 13px; text-decoration:none" class=3Doutborcta><!--[if ms=
+o]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->Contribute more<!--[if mso]>&nbsp;&n=
+bsp;&nbsp;&nbsp;<![endif]--></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!--Optin Module start here-->
+<!--Optin Module end here-->
+</table>
+</td>
+</tr>
+<!-- body ends -->
+<!-- footer starts -->
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<table class=3Dwid-360 align=3Dcenter border=3D0 cellpadding=3D0 cellspacin=
+g=3D0 style=3D"margin:0 auto; width:720px;" role=3Dpresentation>
+<tbody>
+<tr>
+<td class=3Dpad-l-r-18 align=3Dcenter bgcolor=3D#ffffff style=3Dpadding-lef=
+t:42px;padding-right:42px;>
+<table border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation width=
+=3D100%>
+<tbody>
+<!-- footer opt-out -->
+<tr>
+<td align=3Dcenter bgcolor=3D#ffffff style=3D"border-bottom:1px solid #DADC=
+E0;padding:20px 0px;font-family: Roboto, Helvetica Neue, Helvetica, Arial, =
+sans-serif; font-size:12px; font-weight:normal;color:#202124;line-height: 1=
+6px; letter-spacing: 0.3px;">You received this email because you contribute=
+d user content to Google. If you don=E2=80=99t want these updates anymore, =
+you can <a href=3Dhttps://notifications.google.com/g/optout/ANiao5qHZ1KaGkE=
+ZlcHml-yZeljifH65kJIYAow1ciZpgn0couojHbPHAYbQY62LSTjG9caj7Lyd_DgsQZ9LCHfNyb=
+Lxsnkhbq3rZWyru-SoascgLsgPjtWFAH-l2C51-q1y_0_P9PTdv3LajdxKrOSgk8thBm2Hpd0gF=
+VGUX7q42muaF4wFH8cgqaNBTcmmTeI_sIuJ41zJou8nsvY8hKDYlHCcJIU8LFQrmC5H5c-fqFrE=
+KFICY-xA-h5yhLahdgG_EE2Z_5u6NXF0MyzMchIPb2TyCdSwDZA3JvFOSQZZDQ?hl=3Den styl=
+e=3D"text-decoration: none; color: #1A73E8;" target=3D_blank>unsubscribe</a=
+> here.</td>
+</tr>
+<!-- footer opt-out -->
+<tr>
+<td align=3Dcenter bgcolor=3D#ffffff style=3D"padding:20px 12px;font-family=
+:Roboto, Helvetica Neue, Helvetica, Arial, sans-serif; font-size:9px; line-=
+height:12px;font-weight:normal;color:#202124;"><img height=3Dauto src=3Dhtt=
+ps://www.gstatic.com/gumdrop/files/adwords-partners-google-transparent-w158=
+px-h52px-2x.png width=3D80 alt=3D"" /></td>
+</tr>
+<tr>
+<td align=3Dcenter bgcolor=3D#ffffff style=3D"padding-left:20px; padding-ri=
+ght: 20px; padding-bottom: 90px; padding-top: 0; font-family:Roboto, Helvet=
+ica Neue, Helvetica, Arial, sans-serif; font-size:10px; line-height:16px;fo=
+nt-weight:normal;color:#202124;"><a href=3D# style=3D"text-decoration:none;=
+ color:#202124; cursor: default; pointer-events:none;" target=3D_blank>&cop=
+y; 2024 Google LLC 1600 Amphitheatre Parkway, Mountain View, CA 94043</a></=
+td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- footer ends -->
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+--00000000000066d095061c40e0c6--

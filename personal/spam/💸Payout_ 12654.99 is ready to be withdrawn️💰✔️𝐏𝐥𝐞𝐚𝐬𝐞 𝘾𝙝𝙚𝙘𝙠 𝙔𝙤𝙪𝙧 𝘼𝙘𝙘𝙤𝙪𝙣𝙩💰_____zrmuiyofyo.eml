@@ -1,0 +1,717 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6358:9f8f:b0:19c:9809:9239 with SMTP id fy15csp1507051rwb;
+        Sat, 8 Jun 2024 11:18:25 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGrcFNolPNWFVDFbVrPxxEfF4tWu/UyzQ1SrAeWBUwhUoliZd9DMIAq3qRvc33dg1an5EtO
+X-Received: by 2002:a05:6a00:194f:b0:6f4:1799:c714 with SMTP id d2e1a72fcca58-7040c630b3cmr6748458b3a.12.1717870705682;
+        Sat, 08 Jun 2024 11:18:25 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1717870705; cv=none;
+        d=google.com; s=arc-20160816;
+        b=lLnf1cm35Lq4p/oW40wCKS+P9wIkwC9h7zUENiiZU4/Vj1WDMJihBUvNDSwVz1zRbO
+         TfT6ZNSvC9pReO/Gka68KkmL/gYvxT+d5ZR4nhV9W2vA9L8hlPUzyuLvgc55ScYSmIDX
+         BZVhCjSgwqC4RMXYbKUwQ80XkyMr5cXJNgiLqOGYpi3RwBCNH8T+/QBfkxUar9SZzfIW
+         9lTl9jy9zWh1HIujm/1GoSK8Ibsv9v0oVGgMmVmiGXcleLGWjoCCzzHsiTWgRl9ZkTyX
+         TVQqEwp6AJv5TPtkanPP8lpVSFRti/8/T0Z9uLV7z9j2qqbeCd2uzaMc5wOdK3NbukTs
+         D24A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:message-id:to:from:date;
+        bh=IkuHlG2T+rH6Y4CY/TG7PW1xOdTzF37TVb9SLlp4gQk=;
+        fh=BfH3tuO4vWcZZHlWy5SVIaCbaMAJl+146y7dupIPkPQ=;
+        b=get+WzqgzG6+u4xgZo4dgefB7eZFX72qV1W/W870x47DW9eQ5Se9lOgaRvivQYdfHI
+         SVf7BfU0elgcXhZcrYU7ojKANqj38KC1flFBbkOD25mBZ9DGiXtQRpf+BRm0tTigY+Ur
+         sbCEraX5dLNIYMYb9aOm7oGKMxP9eET6k4uq8ouPjrL5rSstRwU3ZbNMUsCezDJEgTIu
+         kuMcojIPnslJydpVotdOfUxF72lKv8P3iLh6YUqANPC8XCUrSAiiAFEokG5UjWuOdr3R
+         iu/JuatOh6yuUh1OsXeorwqNJFimuVBbQmqfH6Y5MV2jgXWXZ0DdwYygZKjDUER3JgX5
+         bF6A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of blackpapermoon42+xenndjmvla@belagro5.polishingles.com designates 209.58.130.8 as permitted sender) smtp.mailfrom=blackpapermoon42+xenndjmvla@belagro5.polishingles.com
+Return-Path: <blackpapermoon42+xenndjmvla@belagro5.polishingles.com>
+Received: from gravitself.com (gravitself.com. [209.58.130.8])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-7041c33acc0si1236252b3a.54.2024.06.08.11.18.25
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 08 Jun 2024 11:18:25 -0700 (PDT)
+Received-SPF: pass (google.com: domain of blackpapermoon42+xenndjmvla@belagro5.polishingles.com designates 209.58.130.8 as permitted sender) client-ip=209.58.130.8;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of blackpapermoon42+xenndjmvla@belagro5.polishingles.com designates 209.58.130.8 as permitted sender) smtp.mailfrom=blackpapermoon42+xenndjmvla@belagro5.polishingles.com
+Received: from njmta-53.sailthru.com (173.228.155.53) by dailybeast-a.sailthru.com id h1t86m1qqbs3 for <blackpapermoon42@gmail.com>; Sat, 08 Jun 2024 14:18:25 -0400 (envelope-from <delivery@mx.sailthru.com>)
+Received: from nj1-madbrick.flt (172.18.20.7) by njmta-53.sailthru.com id h1t7vc1qqbsf for <blackpapermoon42@gmail.com>; Sat, 08 Jun 2024 14:18:25 -0400 (envelope-from <delivery@mx.sailthru.com>)
+Date: Sat, 08 Jun 2024 14:18:25 -0400
+From: "Lucky.Creek.Casino™🔔" <mpkjaqjfpkddzq.96469720231423@hkn6hw.ujwlk2.728adl.us>
+To: blackpapermoon42@gmail.com
+Message-ID: <65df7a8d.050a0220.6dfba.bad1SMTPIN_ADDED_BROKEN@mx.google.com>
+Subject: 💸Payout: 12654.99 is ready to be withdrawn️💰✔️𝐏𝐥𝐞𝐚𝐬𝐞 𝘾𝙝𝙚𝙘𝙠 𝙔𝙤𝙪𝙧 𝘼𝙘𝙘𝙤𝙪𝙣𝙩💰_____zrmuiyofyo
+MIME-Version: 1.0
+X-Google-Sender-Delegation: LuckyCreek
+Content-Type: multipart/report; boundary="000000000000S20930b4f4ca23ccf3510e0eaf710e003"; report-type=delivery-status
+
+Content-Type: multipart/related; boundary="000000000000B20930b4f4ca23ccf3510e0eaf710e003"
+
+--000000000000B20930b4f4ca23ccf3510e0eaf710e003
+Content-Type: multipart/alternative; boundary="000000000000C20930b4f4ca23ccf3510e0eaf710e003"
+
+--000000000000C20930b4f4ca23ccf3510e0eaf710e003
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Top Stories of the Day: Sep 0, 2019
+
+103882302891885308
+-----
+
+If you believe this has been sent to you in error, please safely unsubscrib=
+e
+--000000000000C20930b4f4ca23ccf3510e0eaf710e003
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit+
+
+
+<!------------ START SOCIAL MEDIA ------------>
+<!------------ END SOCIAL MEDIA ------------>
+
+
+<!------------ START SOCIAL MEDIA ------------>
+
+
+<!------------ START SOCIAL MEDIA ------------>
+<title>tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw</title>
+    
+    <!------------ START SOCIAL MEDIA ------------>
+<!------------ END SOCIAL MEDIA ------------>
+<!------------ END SOCIAL MEDIA ------------>
+
+
+
+<!------------ START SOCIAL MEDIA ------------>
+<!------------ END SOCIAL MEDIA ------------>
+
+
+
+
+
+
+<!------------ END SOCIAL MEDIA ------------>
+
+<!------------ END SOCIAL MEDIA ------------>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="margin:0px;padding:0px;"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><center>
+            <table style="border-collapse:collapse!important" width="100%" height="100%" cellspacing="0" cellpadding="0" align="center">
+                <tbody>
+                    <tr>
+                        <td style="font-family:Helvetica,Arial,sans-serif;font-weight:400;font-size:13px;line-height:19px;text-align:left" width="100%">
+                            <center>
+                                <a href="https://t.co/kyaCS81KNJ" style="text-decoration: none;color: #000;">
+
+
+
+<body>                                <a href="https://t.co/kyaCS81KNJ" style="text-decoration: none;color: #000;">
+<center><table width="100%" bgcolor="#CEA04F" cellpadding="0" cellspacing="0" border="0" style="font-family: "Times New Roman"; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; border: 3px solid rgb(231, 233, 235); max-width: 800px;">
+	<tr>
+		<td align="center" valign="top">
+		<table width="800" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" class="mainsetwidth">
+			<tr>
+				<td align="left" valign="top">
+				<table width="800" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" class="setWidth100">
+					<tr>
+						<td align="left" valign="top" bgcolor="#E9D6B1">
+						<p align="center">
+						<a href="https://t.co/kyaCS81KNJ"style="text-decoration: none;color: #000;">
+						<b>
+						<font size="7" face="Berlin Sans FB Demi" color="#663300">
+						<span style="text-decoration: none">🐃 Lucky Creek 
+						CASINO 🐃</span></font></b></a></td>
+					</tr>
+					<tr>
+						<td valign="top" style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 22px; color: rgb(0, 0, 0); padding-bottom: 20px; padding-top: 20px;" bgcolor="#E9D6B1">
+						<p align="center">
+						<font color="#A77701">
+						<br>
+						</font>
+						<font size="5">
+						<b>Congratulations blackpapermoon42!</b></font></p>
+						<p align="center">
+						<font size="5">
+						<b>You've Struck Gold: Claim Your Prize Now!</b></font></p>
+						<p align="center"><font color="#FF3300" size="5">
+						<b>⚠️WE NEED TO CONFIRMYOUR INFOS...⚠️</b></td>
+					</tr>
+					<tr>
+						<td valign="top" style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 22px; color: rgb(0, 0, 0); padding-bottom: 20px;" bgcolor="#E9D6B1">
+					<font color="#CC0000">(1) LATEST NOTICE:</font><p> Consider 
+					yourself warned. This is not a joke.
+					<p> balance of <b>$12654.99</b> is available for your <b>Lucky 
+					Creek Account</b></td>
+					</tr>
+					<tr>
+						<td valign="top" style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 22px; color: rgb(0, 0, 0); padding-bottom: 20px;" bgcolor="#E9D6B1">
+						This transaction appear on your account after validate 
+						your info.</td>
+					</tr>
+				</table>
+				<table align="center" class="primary" border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+						<td valign="top" width="100%">
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tr>
+								<td align="center" height="22" width="100%" style="font-family: "Trebuchet MS", Geneva, sans-serif; font-size: 12px; text-align: center; color: rgb(49, 157, 164); padding-bottom: 10px;" bgcolor="#000000">
+								<br>
+ </td>
+							</tr>
+						</table>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; background-color: rgb(230, 230, 230); border: 1px solid rgb(0, 31, 87); margin-top: 0px; margin-bottom: 0px;">
+							<tr>
+								<td align="left" class="left-section" width="60%">
+								<h1 class="primary-headline" style="font-size: 22px; line-height: 28px; font-family: sans-serif; color: rgb(0, 0, 0); margin: 25px 25px 10px;">
+								Sat, 08 Jun 2024 14:18:25 -0400</h1>
+								<p class="subheadline" style="font-family: arial, sans-serif; color: rgb(68, 68, 68); font-size: 14px; font-weight: 400; line-height: 20px; display: inline-block; margin-top: 0px; margin-bottom: 10px; margin-left: 25px">
+								Funding For: <span style="font-weight: 400; border-bottom: 1px solid grey;">blackpapermoon42</span></p>
+								 <p class="subheadline" style="font-family: arial, sans-serif; color: rgb(68, 68, 68); font-size: 14px; font-weight: 400; line-height: 20px; display: inline-block; margin-top: 0px; margin-bottom: 10px; margin-left: 25px">
+								Email: <span style="font-weight: 400; border-bottom: 1px solid grey;">blackpapermoon42@gmail.com</span></p>
+								 <p class="subheadline" style="font-family: arial, sans-serif; color: rgb(68, 68, 68); font-size: 14px; font-weight: bold; line-height: 20px; display: inline-block; margin-top: 0px; margin-bottom: 10px; margin-left: 25px">
+								Balance Amount: <span style="font-weight: bold; border-bottom: 1px solid grey"><font color="#000000">$12654.99</font></span></p>
+								 <p class="subheadline subhead-end" style="font-family: arial, sans-serif; color: rgb(0, 53, 67); text-decoration: none; font-size: 13px; line-height: 18px; display: inline-block; margin: 5px 35px 35px 25px;">
+								 </td>
+								<td align="center" class="right-section" width="40%">
+								<h3 class="box-text" style="font-family: arial, sans-serif; font-weight: lighter; font-size: 16px; line-height: 22px; color: rgb(0, 0, 0); margin-top: 0px; margin-bottom: 0px; margin-right: 0px;">
+								Payout:</h3>
+								<h3 class="headline" style="font-family: arial, sans-serif; font-weight: lighter; margin-top: 0px; margin-bottom: 5px;">
+								<span class="chosen-amount" style="display: block; font-size: 45px; line-height: 45px; font-weight: bold; padding: 0px; margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:10px">
+								$12654.99</span><a target="_blank" class="main-button" style="font-family: Arial; font-weight: bold; font-size: 20px; text-decoration: none; width: 180px; height: 50px; line-height: 50px; display: block; border: 2px solid rgb(255, 204, 0); margin-right: 0px; margin-top: 0px; margin-bottom: 20px; background: #CEA04F; " href="https://t.co/kyaCS81KNJ"><font color="#000000">Confirm 
+								Here</font></a></h3>
+								</td>
+							</tr>
+						</table>
+						<table width="100%" height="40" border="0" cellspacing="0" cellpadding="0" style="border: 1px solid grey; border-collapse: collapse; background-color: rgb(255, 255, 255); height: 50px; font-size: 14px; font-family: arial, sans-serif; margin-top: 0px; margin-bottom: 20px;">
+							<tr>
+								<td class="supporting_points" align="center" width="213">
+								Memo <span style="border-bottom: 1px solid grey; margin-left: 20px; display: inline-block; width: 140px;"><i>Payout</i></span></td>
+								<td class="supporting_points" align="center" width="213">
+								Signature <span style="border-bottom: 1px solid grey; margin-left: 20px; display: inline-block; width: 140px;"><i>blackpapermoon42</i></span></td>
+							</tr>
+						</table>
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+							<tr>
+								<td align="center" width="100%"> </td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td align valign="top" style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 22px; color: rgb(0, 0, 0); padding-bottom: 20px;">
+						<p align="center">
+						<br>
+						<br>
+						<a target="_blank" class="main-button" style="font-family: Arial; font-weight: bold; font-size: 20px; text-decoration: none; width: 350px; height: 50px; line-height: 50px; display: block; border: 2px solid rgb(255, 204, 0); margin-right: 0px; margin-top: 0px; margin-bottom: 20px; background: #FF9400; " href="https://t.co/kyaCS81KNJ">
+						<font color="#000000">CONFIRM YOUR INFOS</font></a></p>
+						<p> </td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
+    <object zidsxllckjwmiyhxtfeivtvfrwjxlwbeyxwsldeexqhaqoijdmzezqmvwcyq>
+Dear ycpmyxxfnrgdgabmcfxpx TKHDFGAFDPNHWNCUGEREDU,
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is XXRGFLHPSZROYRKDYSDCVYXHMZQG.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+
+</title>
+<!--
+                 _                                 _     
+                /                                /     
+   _    __         __    _  ___     _   _    
+ /'__`/'  `  /'_`   / _`/`'__/',__  /'__` /'_`   
+/  _// / / L / L   /_, `/  __// L  
+ ___   __, ___/ /____/ ___ __,
+ /____//_//_//__, //___/  /_//___/  /____//__, /
+                                                           
+                                                           
+
+-->
+<emd 
+added
+to
+newsletterGet
+and
+ask
+childrenShare
+this
+ExperimentSegregation
+Americaxs
+report
+United
+May
+ETPerhaps
+going
+wants
+In
+federal
+that
+says
+plan
+boasted
+unemployment
+lowest
+everSo
+rightWhile
+down
+remained
+last
+this
+does
+communities
+to
+land
+opportunityOne
+Americans
+suffer
+opposed
+white
+inequality
+in
+while
+step
+inequality
+will
+that
+looks
+housing
+disparities
+on
+For
+more
+of
+on
+resources
+their
+childrens
+care
+going
+on
+cities
+on
+nation
+Shortly
+still
+have
+evidence
+doesnt
+decades
+expanding
+emerged
+of
+failed
+laws
+about
+and
+people
+housewives
+at
+Franz
+in
+New
+Orleans
+poverty
+public
+which
+to
+of
+we
+has
+failed
+chronicled
+deregulation
+Who
+children
+has
+work
+direct
+former
+have
+has
+of
+And
+as
+Professor
+documented
+more
+than
+problem
+Commission
+commission
+there
+with
+this
+was
+urban
+ideology
+without
+policy
+resulted
+be
+has
+hard
+students
+provides
+model
+graders
+salute
+flag
+of
+school
+atrisk
+will
+to
+of
+creates
+race
+to
+Brookings
+or
+integrate
+government
+to
+for
+potential
+enforcement
+The
+privatesector
+effect
+intentional
+with
+racial
+and
+make
+housing
+will
+access
+housing
+access
+Act
+making
+and
+integration
+poor
+developers
+lowincome
+lower
+half
+and
+by
+University
+college
+than
+children
+had
+and
+We
+need
+that
+but
+living
+Robert
+observed
+Bernard
+Why
+never
+ask
+and
+America
+Eisenhower
+Foundation
+Kerner
+Commission
+Violence
+senator
+at
+Healing
+America
+Years
+After
+newsletterSUBSCRIBEMORE>
+<html>
+<body>
+<center>
+
+
+
+
+<table style="display:none;"><HEaD >
+
+ Hi XLTXZFQOVPLPDRIIMK,
+
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+
+If not, just let me know and we'll find something else.
+
+
+--
+Dylan Basile
+
+
+
+*Book a demo with me here:*
+
+Hi IGYQSJABTHPXGCUJBQULMUTH,
+
+Thanks for signing up, and congratulations
+on your new mis fgybgmsiqvuqdhrcid account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+
+=== Account Information ===
+ Username: JMKFMCBHYMZHKKXLJNMZSBNFJV
+ Site ID: HBJFYOFMLXTGQDHWOJUCRWLHI
+
+=== Your Account Console ===
+
+
+Thanks again!
+Team ckveqnwsrxarlyglrpzohs
+
+Powered by ycpmyxxfnrgdgabmcfxpx 
+
+</title>
+
+ Dear JMKFMCBHYMZHKKXLJNMZSBNFJV HBJFYOFMLXTGQDHWOJUCRWLHI,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is BJUUAPXQIJRMXSEUKGTBSLYKR.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+== You need a budget, and your email needs confirmation. ==
+
+ Hello! Quick note to let you know that your email needs to be confirmed
+before all sorts of great things happen. Like your being able to use YNAB
+all along your road to budgeting glory. Please confirm by clicking the link
+below:
+
+ Confirm your email
+
+
+ Thank you!
+
+ And we're serious about budgeting glory. It's a real thing, and you will
+bask in it.
+
+ Regards,
+
+ The YNAB Team
+
+
+<
+
+ Dear Dalewoowood miswzpsbbtlvolllbuuth,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is RMLMWSFYLQWWITWXL.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+
+>
+
+
+SFYHOYENDCWDOBHFOOGSANIPZTRONWFIORNGJVLQALRUMZZXGCKCXVKRPSTESPNWCROWPLQQKAGOZULZCDYDXUROMTJFAKSKOCAQCVPCLGSVWGREBMYVHELBAOTHUFTUEPEAGLEASXOIXNQFPKHJGKZTDAHDPWESAHKRQTUPCLLTDSKEDDNCWABNASLYTSSXGWGNQSYK
+
+
+ Hi misxzfjvtvhexczqjrdvd,
+
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+
+If not, just let me know and we'll find something else.
+
+RIOCORSEIWKNSBVYQCWLVFPFVJTXSCXEGAZMWSTVKENDWIJLRKSXQOLIZBHDWNRHFUUIOOJVKMEZVSCYIZGBGXYFHPHQMWJKGXJXDQPEBQFECGKIGDBJADWFVWCMMNHEPJVRWNPMUQNMDQXAEDLRKDZQAFQKUALTHARYNMCVSKCJUWLBZRXGXXNUWYVIDQCGQEXNPLVJ
+--
+Dylan Basile
+
+
+
+*Book a demo with me here:*
+
+Hi AOJYZZUWIOSFZQFFZAYUIDRKD,
+
+Thanks for signing up, and congratulations
+on your new misiuumqymehkehfaptsv account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+
+=== Account Information ===
+ Username: ktrt
+ Site ID: bmfn
+
+=== Your Account Console ===
+
+
+Thanks again!
+Team missiayibxdkbvuedpyqf
+
+Powered by misxcjemnlroakgwdpxby
+<table height=4125>
+<table height=4125>
+<table height=4125>
+
+Login Name: miszybjzwedatcqyzshef
+Password: misvpwkqgqnkgklejkftj
+
+How do I become a tester for the XT 808 flashlight?
+
+
+
+Login Name: vrvv
+Password: miscxndqquoqmwusskoca
+
+More than a quarter of Europeans surveyed believe Jews have too much influence in business and finance. One in five say they have too much influence in media and politics. In individual
+1. Download Parsec for your device
+
+2. Set up Parsec on your PC to invite friends to game with you or to play from anywhere
+
+3. Connect with your friends on Parsec
+
+4. If you don't have a gaming PC to co-op with friends, build one on Parsec
+
+5. Join our Discord for support, updates, and finding friends to game with
+
+       Less than 10% of EU aid money reaches the countries where it is most needed, according to a study that found levels of assistance had dropped for the second year running.
+
+The EU and its member states remain the biggest development donor group in the world ? investing ?71.9bn ($61bn) in 2018, more than half of global aid ? but its contribution was 5.8% lower than in 2017, the European NGO network, Concord, found in its AidWatch report.
+
+Progress on meeting the UN target of spending 0.7% of gross national income on aid, laid down in 1970, has gone into reverse, said the group. Their research showed that aid decreased to 0.47% of the EU?s combined GNI last year, compared with 0.49% in 2017 and 0.51% in 2016.
+
+Advertisement
+
+Only Sweden, Luxembourg, Denmark and the UK met the 0.7% commitment.
+
+The UK?s three main political parties have committed to retaining the aid target.
+
+Aid from five countries ? Italy, Greece, Finland, Austria and Lithuania ? decreased by 10%.
+
+?We are moving further away from the 2030 Agenda [for sustainable development],? said Luca De Fraia of ActionAid Italy. ?Not only are we missing the target in terms of quantity, but also the quality of aid is lagging behind.?
+
+Despite a marginal rise in aid going to the least developed countries (from 0.11% in 2017 to 0.12% in 2018), 16 countries, among the poorest in the world, currently receive only 8% of EU funding, AidWatch found.
+
+
+Guardian Today: the headlines, the analysis, the debate - sent direct to you
+ Read more
+?sa Thomasson, from Concord Sweden, called on EU leaders to provide more aid and ensure it is used effectively to ?make the biggest difference to people who are most marginalised, excluded or discriminated against and the poorest and most financially challenged countries?.
+
+The report noted progress on what can legitimately be recorded as aid. Some countries had included domestic spending on students, refugees or security in official figures. But such costs ? like debt relief, interest repayments on loans, or assistance ?tied? to the donor country ? are categorised as ?inflated aid?, since they do not necessarily contribute to development and are often funds that never leave the EU.
+
+This year?s report shows a 25% reduction in inflated aid, while refugee costs decreased by approximately 35% and the use of aid for debt relief dropped by 66%.
+
+Jan van de Poel, policy and advocacy manager at the European Network on Debt and Development, said he was concerned that the commission is overestimating the potential for ?blended finance? (linking aid with loans from publicly-owned institutions or commercial lenders) to help achieve the sustainable development goals.
+
+He pointed out that, as recently as 2016, more than half of all reported contracts were still awarded to firms in the donor country. ?Donors not only need to untie all aid, but also make sure that their procurement practices are tailored towards the private sector in developing countries,? he said.
+
+Claire Godfrey, interim director of policy, advocacy and research at Bond, the UK development network, praised the Department for International Development (DfID) for maintaining the 0.7% pledge and ensuring that the majority of its aid reached the people who need it the most. She added that other EU countries needed to ?step up to the plate?.
+YEXZAWJAFVDGQIQXOJJNXRPFNLUTZSDKIZUYTACDCBPCUAOOLDGCCVYXAHCXWPQBPHVTCNBREVDQPELBKWDRGIAIHVBDENCLWZGVQJJJONIUHPIHNHUXGSVDLJHEUVQEKXIWXARLARTQMEYIXKMZVOYWEMWOQNXNXBUZTNQMTKTOXOIQDMKPKXPUTDFTKCNCNLDTKMJHK
+Godfrey said DfID would ideally have oversight of all UK aid, rather than multiple departments, since this would ?ensure not a single penny is diverted away from the poorest, most vulnerable and most marginalised?.
+
+With a general election looming, Labour, the Conservatives and the Liberal Democrats have all stated their commitment to retaining the 0.7% aid target, equating to roughly ?14bn, while the Green party said they would raise it to 1% ? in line with Sweden.
+
+
+Two-thirds of British people see overseas aid as 'a major priority'
+ Read more
+At a joint hustings event on women?s rights and sustainable development held by ActionAid UK and the Overseas Development Institute on Monday, Lord Ray Collins pledged that Labour would triple funding to TUHBXKZSDLYIDGZPIIKIXHTWYYSXGKJIENKFTOVRSWTRRORLYKOWSTIUZQEHDULFLEXNWWFQEXJGLCFCKMZCZQPLJJMYFUSDMNPGOXDOIDZFLIWDJSICCWWLPGEOYLMNROMNFNACETEIYSSCZQULKZAXNRQDEWBADPJXDBMXEQVTYLUXSXKPNWVPRDCWYQHJHRSMHOYL roots women?s groups in the global south.
+
+Elizabeth Babade, candidate for the Brexit party in Warrington North, said her party would cut the foreign aid budget but declined to say by how much.
+
+The Conservative party did not put forward a candidate for the event, but restated its commitment to the 0.7% target in the House of Commons earlier this month. It stopped short, however, of committing to the retention of DfID as a separate department VWMROFWFEYXZXMSYRJSXCNUJPYZAYALDXZSLNMRZSQKAULVGBXDJVJGNFYZHETSECOGFITOPUBUXZHXEIROWYYNSITPPOKOKNSYJDKDJZZTJCLRSSVPRLOZRNBXHVGRISYMNFYZTGYZXPGSHQIODVPZRDLRWEBBYIEMMBZFGCULTTUUQROKJUVIYKHKEQCTQHTLMCVHM to the Foreign and Commonwealth Office.
+
+The UN Conference on Trade and Development?s Least developed countries report, also published this week, called on the world?s poorest nations to ensure external finance from all sources is ?directed to nation BRNXUMRZRKASARSAYRHCMNMLGGRLZVDWZTRCOELTFJWEZRMPVRFDLTAPCTYGWNAHGEWGAAGDCKBQKRIDMWSGUGIFDCSZHOBQFMZPLKCHWPMNALQMVLOEAVUAVFDVYABDHJYAGEZQMRJVMPRHEWZKNCFDDLJOHJBLWRJXJSIMDPOMZFHGPMNNELZVETNWJBYPWOPODWCY development priorities? as the best way to ?manage their aid dependency and eventually escape it?.
+
+Since you?re here?
+? we have a small favour to ask. More people, like you, are reading and supporting the Guardian?s independent, investigative journalism than ever before. And unlike many news organisations, we made the choice to keep our reporting open for all, regardless of where they live or what they can afford to pay.
+
+The Guardian will ADTJTUMRTXVYTSJJTLYOWGNMAPISZOTJFQCHILUYLDYRHENVNWSTSKZGCKMENASKJAPOXQATWOYEPCEUBLKCFXURNNIUDWXUPZHXNGDBLSEKRAGEXEHQUCGPPJXYCSAEXFHIGUGGBKNDUNUFKBIFGLYZBVIUQWGUKYRNKLSRZBAKHIYTANZDMJRYYDZGCMEQDNDVHQGQTHWWIARSBLSTEIXJVEQSYWOTHMBSFEDWRIRKXRDAQGMCOAOSGCNKLKCCQRAVYGJLBELBPFKFHZPAIBMZOHBSNSWWPXBWHOUPSKNKXOXTEMCJWMWVCPRNZKKEKAQXIVBJXMPOFXRHHXKYPDPUBLSDYRENNFSPCMCKLUPSPWCJAJTYCYRAWSZTTBEEYPJPVFNAZHUJXZAI  ? 
+from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.
+
+Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.
+
+We hope you will consider supporting us today. We need your support ZCLLWWCSUCQFDXVQSXQQKDGFRGREXSSROGSHRUGGCRSGKTMRRRXGRHMTLUSYJWTJLGYQRGXGJSTXZHTHXWTZUBWSBGRJZCTUTZZWYIVYRFTGNQUCYGSWTWOFRSTFISSZOQMRZBPPFNMLEZTZYFPENQRTBDKEMQLANXCFWDZPCFHPUCJTHQGDAPKDJVILQLJVVRVYIZVU  to keep delivering quality journalism that?s open and independent. Every reader contribution, however big or small, is so valuable. Support The Guardian from as little as $1 ? and it only takes a minute. Thank you.       
+
+Parsec Cloud, Inc. 
+115 Broadway, Fifth Floor, New York, NY 10006, USA
+
+</object>
+
+--000000000000C20930b4f4ca23ccf3510e0eaf710e003--
+--000000000000B20930b4f4ca23ccf3510e0eaf710e003--
+--000000000000S20930b4f4ca23ccf3510e0eaf710e003--

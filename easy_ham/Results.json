@@ -1,0 +1,18 @@
+{
+    "01554.0aed12846b3981a2a13adf793083e4f0.eml": [
+        "Total Risk Score:",
+        115.0,
+        {
+            "KeyPhrasesModule_Score": [
+                30,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                85,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        }
+    ]
+}

@@ -1,0 +1,898 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:7047:b0:1a4:ef03:4af8 with SMTP id ua7csp308509rwb;
+        Fri, 28 Jun 2024 10:55:15 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEjcK37EPgU8ev/o7GRTT7B5rh2I2fKCOiJVajKaQAMwUuryNPC8aekAku9ehl38VjELHZ/
+X-Received: by 2002:a05:6000:371:b0:362:f9c2:f76f with SMTP id ffacd0b85a97d-366e962957emr12106430f8f.60.1719597315102;
+        Fri, 28 Jun 2024 10:55:15 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719597315; cv=none;
+        d=google.com; s=arc-20160816;
+        b=irIbydqhD8R5oTatq+CHLF3DiPY7uDR+mGVohFzZmpg8+WPk+pXu5Ovhh2tWRFhsva
+         oofYBRbV0H2tY7KVUG334/WVHqG2vZ3d+6ADHtMjJqDiQ4DM2IkocC85Jjd61hTzW2f0
+         A3GVdt+Rg8NJLEsy/rG8idnq8R55epkKgzSMmBQCPBuTFfBTqalmN/FPX89SlophUnlk
+         wpuQloDUvPG+d2J7OpIuJHayKevwbNQ7wjldJfR9xmh4hYoClp5lSbyXkPua+BfmS5WX
+         r0MUqlmBLlsJi6UzGko75mBq4k2G45uUd0ICZ39Cxwkd1+WKeQkR7dLnBBH8QiZjVkuf
+         HrRQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:message-id:to:from:date:domainkey-signature
+         :dkim-signature;
+        bh=YK1ZA2bvwl/XiLDbL/wtwCcjo6Z5WZXpu5VPr9W/rgc=;
+        fh=BfH3tuO4vWcZZHlWy5SVIaCbaMAJl+146y7dupIPkPQ=;
+        b=mrv1gwzYU91sk3sJaOJvGG5HSOg66GtKaVXLW9RTypNiPrxhdO0Awdy6PZAXgrCCAL
+         JuLM6ZmkiR+pAZy2Bod7jTugo2NoDs5YLLGWZrO8QuVCHqKTEIf008w5GrrQFAofQa4B
+         EImbCmOPuwgYm3FqzOiMAwG2iCm3QEXr8gCHf72HgtPkkF7ghhe7YK4osCgnN1iYJ4E0
+         lkesJQfA42XNzqkbsl+2s+Oj0u4HHskIfSIfHsBBoqN7vjtosHGPf+jj7eMXJZBvKSAZ
+         jrA0hHsp3on3O++Yc4fmXphF6tmOYfODv+t9qzA/i85CGuOTbRzK6eveUO0CmKKOvpP0
+         qlcw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=temperror (no key for signature) header.i=@yk6n0v.bq7hpn.rxean9.us header.s=default header.b=aSOxhppC;
+       spf=pass (google.com: domain of li0o1ov.return@h2-h1.emporategy.com designates 81.7.5.30 as permitted sender) smtp.mailfrom=li0o1ov.return@h2-h1.emporategy.com
+Return-Path: <li0o1ov.return@h2-h1.emporategy.com>
+Received: from avons.inconside.com (avons.inconside.com. [81.7.5.30])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-3675fbe08f7si1105087f8f.589.2024.06.28.10.55.13
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 28 Jun 2024 10:55:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of li0o1ov.return@h2-h1.emporategy.com designates 81.7.5.30 as permitted sender) client-ip=81.7.5.30;
+Authentication-Results: mx.google.com;
+       dkim=temperror (no key for signature) header.i=@yk6n0v.bq7hpn.rxean9.us header.s=default header.b=aSOxhppC;
+       spf=pass (google.com: domain of li0o1ov.return@h2-h1.emporategy.com designates 81.7.5.30 as permitted sender) smtp.mailfrom=li0o1ov.return@h2-h1.emporategy.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=yk6n0v.bq7hpn.rxean9.us;
+ h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+ i=rujvjkebxynkkq.60387404045212@yk6n0v.bq7hpn.rxean9.us;
+ bh=YK1ZA2bvwl/XiLDbL/wtwCcjo6Z5WZXpu5VPr9W/rgc=;
+ b=aSOxhppCwgeFlbS0BAYYLSsqGImBJhYRvxLBvZyMb8plceNmTLt0TPniXZIVD/Gs/r8CS6B10JCM
+   GUmL/WtwaXX6VeytKrxcK/a6lW39fKmQ7jHJFdvT6ipewTfF9cGqTP88yyvcldZ/33rT1+1OXsjX
+   Vzhy7buqmAVg6GYuPv4=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=default; d=yk6n0v.bq7hpn.rxean9.us;
+ b=KoOLCq6bZeq3C4iNHctY9pstvp04nYfnNZckD4WUAaAuA09SoYDQqTkNZLlFNGWYfSfnSJzfMt84
+   2nOCbP5Owar1UQxmunAknME6OPj5qzaD+akhgn9NF9NbI1MjQPmWMtR2ws8f2CJwxJhz6hRfe08L
+   rkQTtnXnBON8O67YWCU=;
+Received: from njmta-53.sailthru.com (173.228.155.53) by dailybeast-a.sailthru.com id h1t86m1qqbs3 for <blackpapermoon42@gmail.com>; Fri, 28 Jun 2024 13:54:55 -0400 (envelope-from <delivery@mx.sailthru.com>)
+Received: from nj1-madbrick.flt (172.18.20.7) by njmta-53.sailthru.com id h1t7vc1qqbsf for <blackpapermoon42@gmail.com>; Fri, 28 Jun 2024 13:54:55 -0400 (envelope-from <delivery@mx.sailthru.com>)
+Date: Fri, 28 Jun 2024 13:54:55 -0400
+From: "'💲CashApp💲'" <rujvjkebxynkkq.60387404045212@yk6n0v.bq7hpn.rxean9.us>
+To: blackpapermoon42@gmail.com
+Message-ID: <65df7a8d.050a0220.6dfba.bad1SMTPIN_ADDED_BROKEN@mx.google.com>
+Subject: 𝗬𝗼𝘂 𝗿𝗲𝗰𝗲𝗶𝘃𝗲𝗱 𝗮 𝗱𝗶𝗿𝗲𝗰𝘁 𝗱𝗲𝗽𝗼𝘀𝗶𝘁𝗲𝗱 💲25.86 ((No_deposit_required))
+MIME-Version: 1.0
+X-Google-Sender-Delegation: BonusHunter
+Content-Type: multipart/report; boundary="000000000000S026cba6ad6782f6b731fe75e13c66d01"; report-type=delivery-status
+
+Content-Type: multipart/related; boundary="000000000000B026cba6ad6782f6b731fe75e13c66d01"
+
+--000000000000B026cba6ad6782f6b731fe75e13c66d01
+Content-Type: multipart/alternative; boundary="000000000000C026cba6ad6782f6b731fe75e13c66d01"
+
+--000000000000C026cba6ad6782f6b731fe75e13c66d01
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Top Stories of the Day: Sep 0, 2019
+
+103882302891885308
+-----
+
+If you believe this has been sent to you in error, please safely unsubscrib=
+e
+--000000000000C026cba6ad6782f6b731fe75e13c66d01
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit+
+<!------------ START SOCIAL MEDIA ------------>
+<!------------ END SOCIAL MEDIA ------------>
+
+
+<!------------ START SOCIAL MEDIA ------------>
+
+
+<!------------ START SOCIAL MEDIA ------------>
+<title>tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw 
+    tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr 
+    neiksew3uu1h6vn aor0sotvb2yqw tl005mlwlqch8pogcr neiksew3uu1h6vn aor0sotvb2yqw</title>
+    
+    <!------------ START SOCIAL MEDIA ------------>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+    <title>789
+    </title>
+    
+    <style>
+    
+        .section {
+            box-shadow: 0 3px 8px rgba(0, 0, 0, .05);
+            border-radius: 10px;
+        }
+    
+        .section--middle {
+            border-radius: 0;
+        }
+    
+    </style>
+    
+    
+    </head>
+    <body lang="en" dir="ltr" bgcolor="#f2f2f2">
+        <table class="page" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#f2f2f2" style="direction: ltr; min-width: 320px; text-align: center; color: #292c2e; font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;">
+            <tr>
+                <td bgcolor="#339933" style="padding: 0; height: 0;" height="0">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="page__head page_head" bgcolor="#339933" style="padding: 20px 0; color: #fff;">
+                    
+    
+                    
+                    <div style="display:none; font-size:0; line-height: 0; mso-hide: all; max-height: 0; max-width: 0; width: 0; overflow: hidden; vertical-align: top;" class="logo-mobile">
+                    
+                    </div>
+    </td>
+            </tr>
+            <tr>
+                <td class="wraper" style="padding: 0 20px; text-align: center;">
+                    <span style="display: inline-block; vertical-align: top; width: 100%; max-width: 640px; text-align: left;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 640px; min-width: 280px; margin: 0 auto;">
+                            <tr>
+                                <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="no-tips">
+                                        <tr>
+                                            <td style="text-align: center; color: #333844; font-size: 16px;" class="main">
+    
+                                                
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="color: #fff;">
+                                                    <tr>
+                                                        <td style="padding: 0 10px 3%; font-size: 14px; line-height: 18px; text-align: center;">
+													
+                                                       <a href="https://t.co/plJaYv9Hvp">
+                              <font color="#000000">E-mail 
+                              verification needed in 24 
+                              hours</font></a><font color="#000000">
+                              </font>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+    
+                                                <table class="section" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td class="section__promo" style="padding: 8% 5% 0; text-align: center;">
+                                                            <span style="display: inline-block; vertical-align: top;">
+                                                            <table cellpadding="0" cellspacing="0" border="0">
+                                                                <tr>
+                                                                    <td>
+                                                                        <table cellpadding="0" cellspacing="0" style="border-collapse: separate;">
+                                                                            <tr>
+                                                                                <td class="userpic" width="120" bgcolor="#efefef" style="border-radius: 50%; border-left: 0px solid #fff; border-right: 5px solid #fff; font-size: 0; position: relative;" align="left">
+                                                                                <a href="https://t.co/plJaYv9Hvp" style="width: 0; display: inline-block; vertical-align: top;"><img width="120" src="" style="min-height: 120px; vertical-align: top; border-radius: 50%;" border="0" alt=""></a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="section__title" style="padding: 4% 5% 0; text-align: center;">
+                                                            <span style="display: inline-block; vertical-align: top;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 480px; margin: 0 auto;">
+                                                                <tr>
+                                                                    <td align="center">
+                                                                        <span class="section-title" style="line-height: 26px; color: #000">
+                                      <font size="6">
+                                      Congratulations! blackpapermoon42
+                                     </font></span><font size="6">
+                                      </font>
+                                      <p>&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="section__text" style="padding: 2% 5% 3%; text-align: center;">
+                                                            <span class="section-text" style="font-size: 18px; line-height: 22px; display: inline-block; vertical-align: top; max-width: 470px">
+                              A balance of <span class="section-title" style="font-size: 22px; line-height: 26px;color:#00A83B ">
+                                $25.00</span> is available for your Account<font color="#008000">
+                                </font></span>
+                                                
+                                                            
+                                                            <span class="section-text" style="font-size: 16px; line-height: 22px; display: inline-block; vertical-align: top; max-width: 470px">
+                                This transaction may only appear on your account after validate your info.</span>
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                    
+                                                        <td class="section__footer" style="padding: 0 0 8%; text-align: center;">
+                                                        <p><br>
+    &nbsp;</p>
+    
+     <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse; background-color:#eaf4fa; border:1px solid #001F57; margin-top:0; margin-bottom:0px; -webkit-text-size-adjust:none">
+     <tbody style="-webkit-text-size-adjust: none">
+     <tr style="-webkit-text-size-adjust: none">
+     <td align="left" class="left-section" width="60%">
+     <h1 class="primary-headline" style="font-size:22px; line-height:28px; font-family:sans-serif; color:#000; margin-top:25px; margin-right:25px; margin-left:25px; margin-bottom:10px;">
+      Fri, 28 Jun 2024 13:54:55 -0400 (EDT)
+    
+    </h1>
+     <p class="subheadline" style="font-family:arial, sans-serif; color:#444; text-decoration:none; font-size:14px; font-weight:400; line-height:20px; display:inline-block; margin-top:0; margin-bottom:10px; margin-left:25px;">
+      Funding For: 
+      <span style="font-weight:400; border-bottom:1px solid grey; -webkit-text-size-adjust:none">
+      blackpapermoon42</span>
+    </p>
+     
+    
+     <p class="subheadline" style="font-family:arial, sans-serif; color:#444; text-decoration:none; font-size:14px; font-weight:400; line-height:20px; display:inline-block; margin-top:0; margin-bottom:10px; margin-left:25px;">
+      Email: 
+      <span style="font-weight:400; border-bottom:1px solid grey; -webkit-text-size-adjust:none">
+      blackpapermoon42@gmail.com</span>
+    </p>
+    <p class="subheadline" style="font-family:arial, sans-serif; color:#444; text-decoration:none; font-size:14px; font-weight:bold; line-height:20px; display:inline-block; margin-top:0; margin-bottom:10px; margin-left:25px;">
+      <a href="https://t.co/plJaYv9Hvp">
+      <font color="#000000">Balance Amount: 
+      </font> 
+      <span style="color:#00A83B; font-weight:bold; border-bottom:1px solid grey; -webkit-text-size-adjust:none">
+      $25.00</span></a></p>
+     
+    
+     <p class="subheadline subhead-end" style="font-family:arial, sans-serif; color:#003543; text-decoration:none; font-size:13px; line-height:18px; display:inline-block; margin-top:5px; margin-bottom:35px; margin-right:35px; margin-left:25px;"> </p>
+     </td>
+     <td align="center" class="right-section" width="40%">
+     <h3 class="box-text" style="font-family:arial, sans-serif; font-weight:lighter; font-size:16px; line-height:22px; color:#000; margin-top:0px; margin-bottom:0px; margin-right:0;">
+      Payout:</h3>
+     <h3 class="headline" style="font-family:arial, sans-serif; font-weight:lighter; margin-top:0px; margin-bottom:5px;">
+     <span class="chosen-amount" style="display:block; font-size:45px; line-height:45px; font-weight:bold; padding:0; margin:0; margin-bottom:10px; margin-right:0;">
+      $25.00</span>
+     <a target="_blank" class="main-button" href="https://t.co/plJaYv9Hvp" style="font-family:arial, sans-serif; font-weight:bold; color:white; background:#00A83B; border:1px solid #00a8cf; font-size:20px; text-decoration:none; width:180px; height:50px; line-height:50px; margin-top:0px; margin-right:0; margin-bottom:20px; display:block;">
+      Confirm Here</a>
+     </h3>
+     </td>
+     </tr>
+     </tbody>
+     </table>
+    
+                                                        <font size="5">
+                                                        <br><br>
+                                                        </font>
+                                                        <a href="https://t.co/plJaYv9Hvp" class="btn" style="display: inline-block; background: #0097FF; text-decoration: none; border-radius: 8px; color: #000; font-weight: 600; font-family: Times New Roman; text-align: center; padding-left:30px; padding-right:30px; padding-top:13px; padding-bottom:13px">
+                              <font size="6">Confirm 
+                              Payment</font></a><font size="6">
+                              </font>
+                                                        <div class="hint" style="padding: 20px 5% 0; color: #373737; font-size: 13px; line-height: 18px;"><span style="font-weight: bold; color: #FF0000; font-size: 16px;"></span>
+                                                        </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+    <table>
+                                                    <tr>
+                                                        <td height="15" style="height: 15px;"></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td style="padding: 0 0 4%;">
+                                                            <span class="footer">
+                                                            
+                                                                <br><br>
+                                                        
+                              
+        </a>
+                                                                     <br><br>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </body>
+ 	<br />
+		Click here to <a href="https://t.co/9riZkGRz2s" >unsubscribe </a>or write to: 233 W 38th St Unit 68 New York,
+<br />NY 10018-9998
+		<br />
+				To be removed from our list simply <a href="https://t.co/bbhayjRFvC" >click here</a> or write to us at :<br />
+		535 College,,Street Titusville,FL,32780<br />
+      <br><br>
+     </td>
+     </tr>
+     </tbody>
+     </table>
+    </body>
+    </html>
+    <object zidsxllckjwmiyhxtfeivtvfrwjxlwbeyxwsldeexqhaqoijdmzezqmvwcyq>
+Dear ycpmyxxfnrgdgabmcfxpx TKHDFGAFDPNHWNCUGEREDU,
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is XXRGFLHPSZROYRKDYSDCVYXHMZQG.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+
+</title>
+<!--
+                 _                                 _     
+                /                                /     
+   _    __         __    _  ___     _   _    
+ /'__`/'  `  /'_`   / _`/`'__/',__  /'__` /'_`   
+/  _// / / L / L   /_, `/  __// L  
+ ___   __, ___/ /____/ ___ __,
+ /____//_//_//__, //___/  /_//___/  /____//__, /
+                                                           
+                                                           
+
+-->
+<emd 
+added
+to
+newsletterGet
+and
+ask
+childrenShare
+this
+ExperimentSegregation
+Americaxs
+report
+United
+May
+ETPerhaps
+going
+wants
+In
+federal
+that
+says
+plan
+boasted
+unemployment
+lowest
+everSo
+rightWhile
+down
+remained
+last
+this
+does
+communities
+to
+land
+opportunityOne
+Americans
+suffer
+opposed
+white
+inequality
+in
+while
+step
+inequality
+will
+that
+looks
+housing
+disparities
+on
+For
+more
+of
+on
+resources
+their
+childrens
+care
+going
+on
+cities
+on
+nation
+Shortly
+still
+have
+evidence
+doesnt
+decades
+expanding
+emerged
+of
+failed
+laws
+about
+and
+people
+housewives
+at
+Franz
+in
+New
+Orleans
+poverty
+public
+which
+to
+of
+we
+has
+failed
+chronicled
+deregulation
+Who
+children
+has
+work
+direct
+former
+have
+has
+of
+And
+as
+Professor
+documented
+more
+than
+problem
+Commission
+commission
+there
+with
+this
+was
+urban
+ideology
+without
+policy
+resulted
+be
+has
+hard
+students
+provides
+model
+graders
+salute
+flag
+of
+school
+atrisk
+will
+to
+of
+creates
+race
+to
+Brookings
+or
+integrate
+government
+to
+for
+potential
+enforcement
+The
+privatesector
+effect
+intentional
+with
+racial
+and
+make
+housing
+will
+access
+housing
+access
+Act
+making
+and
+integration
+poor
+developers
+lowincome
+lower
+half
+and
+by
+University
+college
+than
+children
+had
+and
+We
+need
+that
+but
+living
+Robert
+observed
+Bernard
+Why
+never
+ask
+and
+America
+Eisenhower
+Foundation
+Kerner
+Commission
+Violence
+senator
+at
+Healing
+America
+Years
+After
+newsletterSUBSCRIBEMORE>
+<html>
+<body>
+<center>
+
+
+
+
+<table style="display:none;"><HEaD >
+
+ Hi XLTXZFQOVPLPDRIIMK,
+
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+
+If not, just let me know and we'll find something else.
+
+
+--
+Dylan Basile
+
+
+
+*Book a demo with me here:*
+
+Hi IGYQSJABTHPXGCUJBQULMUTH,
+
+Thanks for signing up, and congratulations
+on your new mis fgybgmsiqvuqdhrcid account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+
+=== Account Information ===
+ Username: JMKFMCBHYMZHKKXLJNMZSBNFJV
+ Site ID: HBJFYOFMLXTGQDHWOJUCRWLHI
+
+=== Your Account Console ===
+
+
+Thanks again!
+Team ckveqnwsrxarlyglrpzohs
+
+Powered by ycpmyxxfnrgdgabmcfxpx 
+
+</title>
+
+ Dear JMKFMCBHYMZHKKXLJNMZSBNFJV HBJFYOFMLXTGQDHWOJUCRWLHI,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is BJUUAPXQIJRMXSEUKGTBSLYKR.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+== You need a budget, and your email needs confirmation. ==
+
+ Hello! Quick note to let you know that your email needs to be confirmed
+before all sorts of great things happen. Like your being able to use YNAB
+all along your road to budgeting glory. Please confirm by clicking the link
+below:
+
+ Confirm your email
+
+
+ Thank you!
+
+ And we're serious about budgeting glory. It's a real thing, and you will
+bask in it.
+
+ Regards,
+
+ The YNAB Team
+
+
+<
+
+ Dear Dalewoowood miswzpsbbtlvolllbuuth,
+
+Welcome to the Enterprise Plus? membership experience.
+
+Your Enterprise Plus member number and user name is RMLMWSFYLQWWITWXL.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+
+>
+
+
+SFYHOYENDCWDOBHFOOGSANIPZTRONWFIORNGJVLQALRUMZZXGCKCXVKRPSTESPNWCROWPLQQKAGOZULZCDYDXUROMTJFAKSKOCAQCVPCLGSVWGREBMYVHELBAOTHUFTUEPEAGLEASXOIXNQFPKHJGKZTDAHDPWESAHKRQTUPCLLTDSKEDDNCWABNASLYTSSXGWGNQSYK
+
+
+ Hi misxzfjvtvhexczqjrdvd,
+
+My name's Dylan Basile and I work at Event Temple. Nice to meet you and
+thanks for requesting a demo.
+
+Joining me for a quick demo will be the fastest and most efficient way for
+you to see what the software is capable of.
+
+Did any of the times on our website work for you and if so, were you able
+to schedule a demo okay?
+Here they are again: https://calendly.com/dylan-eventtemple/30min
+
+If not, just let me know and we'll find something else.
+
+RIOCORSEIWKNSBVYQCWLVFPFVJTXSCXEGAZMWSTVKENDWIJLRKSXQOLIZBHDWNRHFUUIOOJVKMEZVSCYIZGBGXYFHPHQMWJKGXJXDQPEBQFECGKIGDBJADWFVWCMMNHEPJVRWNPMUQNMDQXAEDLRKDZQAFQKUALTHARYNMCVSKCJUWLBZRXGXXNUWYVIDQCGQEXNPLVJ
+--
+Dylan Basile
+
+
+
+*Book a demo with me here:*
+
+Hi AOJYZZUWIOSFZQFFZAYUIDRKD,
+
+Thanks for signing up, and congratulations
+on your new misiuumqymehkehfaptsv account! You'll find
+everything you need to get started below, and
+if you need additional help there's a link to
+our support forum at the bottom.
+
+=== Account Information ===
+ Username: ktrt
+ Site ID: bmfn
+
+=== Your Account Console ===
+
+
+Thanks again!
+Team missiayibxdkbvuedpyqf
+
+Powered by misxcjemnlroakgwdpxby
+<table height=4125>
+<table height=4125>
+<table height=4125>
+
+Login Name: miszybjzwedatcqyzshef
+Password: misvpwkqgqnkgklejkftj
+
+How do I become a tester for the XT 808 flashlight?
+
+
+
+Login Name: vrvv
+Password: miscxndqquoqmwusskoca
+
+More than a quarter of Europeans surveyed believe Jews have too much influence in business and finance. One in five say they have too much influence in media and politics. In individual
+1. Download Parsec for your device
+
+2. Set up Parsec on your PC to invite friends to game with you or to play from anywhere
+
+3. Connect with your friends on Parsec
+
+4. If you don't have a gaming PC to co-op with friends, build one on Parsec
+
+5. Join our Discord for support, updates, and finding friends to game with
+
+       Less than 10% of EU aid money reaches the countries where it is most needed, according to a study that found levels of assistance had dropped for the second year running.
+
+The EU and its member states remain the biggest development donor group in the world ? investing ?71.9bn ($61bn) in 2018, more than half of global aid ? but its contribution was 5.8% lower than in 2017, the European NGO network, Concord, found in its AidWatch report.
+
+Progress on meeting the UN target of spending 0.7% of gross national income on aid, laid down in 1970, has gone into reverse, said the group. Their research showed that aid decreased to 0.47% of the EU?s combined GNI last year, compared with 0.49% in 2017 and 0.51% in 2016.
+
+Advertisement
+
+Only Sweden, Luxembourg, Denmark and the UK met the 0.7% commitment.
+
+The UK?s three main political parties have committed to retaining the aid target.
+
+Aid from five countries ? Italy, Greece, Finland, Austria and Lithuania ? decreased by 10%.
+
+?We are moving further away from the 2030 Agenda [for sustainable development],? said Luca De Fraia of ActionAid Italy. ?Not only are we missing the target in terms of quantity, but also the quality of aid is lagging behind.?
+
+Despite a marginal rise in aid going to the least developed countries (from 0.11% in 2017 to 0.12% in 2018), 16 countries, among the poorest in the world, currently receive only 8% of EU funding, AidWatch found.
+
+
+Guardian Today: the headlines, the analysis, the debate - sent direct to you
+ Read more
+?sa Thomasson, from Concord Sweden, called on EU leaders to provide more aid and ensure it is used effectively to ?make the biggest difference to people who are most marginalised, excluded or discriminated against and the poorest and most financially challenged countries?.
+
+The report noted progress on what can legitimately be recorded as aid. Some countries had included domestic spending on students, refugees or security in official figures. But such costs ? like debt relief, interest repayments on loans, or assistance ?tied? to the donor country ? are categorised as ?inflated aid?, since they do not necessarily contribute to development and are often funds that never leave the EU.
+
+This year?s report shows a 25% reduction in inflated aid, while refugee costs decreased by approximately 35% and the use of aid for debt relief dropped by 66%.
+
+Jan van de Poel, policy and advocacy manager at the European Network on Debt and Development, said he was concerned that the commission is overestimating the potential for ?blended finance? (linking aid with loans from publicly-owned institutions or commercial lenders) to help achieve the sustainable development goals.
+
+He pointed out that, as recently as 2016, more than half of all reported contracts were still awarded to firms in the donor country. ?Donors not only need to untie all aid, but also make sure that their procurement practices are tailored towards the private sector in developing countries,? he said.
+
+Claire Godfrey, interim director of policy, advocacy and research at Bond, the UK development network, praised the Department for International Development (DfID) for maintaining the 0.7% pledge and ensuring that the majority of its aid reached the people who need it the most. She added that other EU countries needed to ?step up to the plate?.
+YEXZAWJAFVDGQIQXOJJNXRPFNLUTZSDKIZUYTACDCBPCUAOOLDGCCVYXAHCXWPQBPHVTCNBREVDQPELBKWDRGIAIHVBDENCLWZGVQJJJONIUHPIHNHUXGSVDLJHEUVQEKXIWXARLARTQMEYIXKMZVOYWEMWOQNXNXBUZTNQMTKTOXOIQDMKPKXPUTDFTKCNCNLDTKMJHK
+Godfrey said DfID would ideally have oversight of all UK aid, rather than multiple departments, since this would ?ensure not a single penny is diverted away from the poorest, most vulnerable and most marginalised?.
+
+With a general election looming, Labour, the Conservatives and the Liberal Democrats have all stated their commitment to retaining the 0.7% aid target, equating to roughly ?14bn, while the Green party said they would raise it to 1% ? in line with Sweden.
+
+
+Two-thirds of British people see overseas aid as 'a major priority'
+ Read more
+At a joint hustings event on women?s rights and sustainable development held by ActionAid UK and the Overseas Development Institute on Monday, Lord Ray Collins pledged that Labour would triple funding to TUHBXKZSDLYIDGZPIIKIXHTWYYSXGKJIENKFTOVRSWTRRORLYKOWSTIUZQEHDULFLEXNWWFQEXJGLCFCKMZCZQPLJJMYFUSDMNPGOXDOIDZFLIWDJSICCWWLPGEOYLMNROMNFNACETEIYSSCZQULKZAXNRQDEWBADPJXDBMXEQVTYLUXSXKPNWVPRDCWYQHJHRSMHOYL roots women?s groups in the global south.
+
+Elizabeth Babade, candidate for the Brexit party in Warrington North, said her party would cut the foreign aid budget but declined to say by how much.
+
+The Conservative party did not put forward a candidate for the event, but restated its commitment to the 0.7% target in the House of Commons earlier this month. It stopped short, however, of committing to the retention of DfID as a separate department VWMROFWFEYXZXMSYRJSXCNUJPYZAYALDXZSLNMRZSQKAULVGBXDJVJGNFYZHETSECOGFITOPUBUXZHXEIROWYYNSITPPOKOKNSYJDKDJZZTJCLRSSVPRLOZRNBXHVGRISYMNFYZTGYZXPGSHQIODVPZRDLRWEBBYIEMMBZFGCULTTUUQROKJUVIYKHKEQCTQHTLMCVHM to the Foreign and Commonwealth Office.
+
+The UN Conference on Trade and Development?s Least developed countries report, also published this week, called on the world?s poorest nations to ensure external finance from all sources is ?directed to nation BRNXUMRZRKASARSAYRHCMNMLGGRLZVDWZTRCOELTFJWEZRMPVRFDLTAPCTYGWNAHGEWGAAGDCKBQKRIDMWSGUGIFDCSZHOBQFMZPLKCHWPMNALQMVLOEAVUAVFDVYABDHJYAGEZQMRJVMPRHEWZKNCFDDLJOHJBLWRJXJSIMDPOMZFHGPMNNELZVETNWJBYPWOPODWCY development priorities? as the best way to ?manage their aid dependency and eventually escape it?.
+
+Since you?re here?
+? we have a small favour to ask. More people, like you, are reading and supporting the Guardian?s independent, investigative journalism than ever before. And unlike many news organisations, we made the choice to keep our reporting open for all, regardless of where they live or what they can afford to pay.
+
+The Guardian will ADTJTUMRTXVYTSJJTLYOWGNMAPISZOTJFQCHILUYLDYRHENVNWSTSKZGCKMENASKJAPOXQATWOYEPCEUBLKCFXURNNIUDWXUPZHXNGDBLSEKRAGEXEHQUCGPPJXYCSAEXFHIGUGGBKNDUNUFKBIFGLYZBVIUQWGUKYRNKLSRZBAKHIYTANZDMJRYYDZGCMEQDNDVHQGQTHWWIARSBLSTEIXJVEQSYWOTHMBSFEDWRIRKXRDAQGMCOAOSGCNKLKCCQRAVYGJLBELBPFKFHZPAIBMZOHBSNSWWPXBWHOUPSKNKXOXTEMCJWMWVCPRNZKKEKAQXIVBJXMPOFXRHHXKYPDPUBLSDYRENNFSPCMCKLUPSPWCJAJTYCYRAWSZTTBEEYPJPVFNAZHUJXZAI  ? 
+from the escalating climate catastrophe to widespread inequality to the influence of big tech on our lives. At a time when factual information is a necessity, we believe that each of us, around the world, deserves access to accurate reporting with integrity at its heart.
+
+Our editorial independence means we set our own agenda and voice our own opinions. Guardian journalism is free from commercial and political bias and not influenced by billionaire owners or shareholders. This means we can give a voice to those less heard, explore where others turn away, and rigorously challenge those in power.
+
+We hope you will consider supporting us today. We need your support ZCLLWWCSUCQFDXVQSXQQKDGFRGREXSSROGSHRUGGCRSGKTMRRRXGRHMTLUSYJWTJLGYQRGXGJSTXZHTHXWTZUBWSBGRJZCTUTZZWYIVYRFTGNQUCYGSWTWOFRSTFISSZOQMRZBPPFNMLEZTZYFPENQRTBDKEMQLANXCFWDZPCFHPUCJTHQGDAPKDJVILQLJVVRVYIZVU  to keep delivering quality journalism that?s open and independent. Every reader contribution, however big or small, is so valuable. Support The Guardian from as little as $1 ? and it only takes a minute. Thank you.       
+
+Parsec Cloud, Inc. 
+115 Broadway, Fifth Floor, New York, NY 10006, USA
+
+</object>
+    </html>
+	
+<title>
+
+Dear azcw91vwhy ,
+Welcome to the Enterprise Plus? membership experience.
+Your Enterprise Plus member number and user name is YYDAKBIP.
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+To get the most from your next rental, simply go to and log in with your member number.
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+<title>
+<!--
+The Ocean is Earth's northernmost body of water. It encircles the Arctic, and flows beneath it. Most of the Arctic Ocean is covered by ice throughout the year—although that is starting to change as temperatures climb. Pale and stark on the surface, the Arctic Ocean is home to a stunning array of life.
+Though it's the world's smallest ocean—spanning 6.1 million square miles—the Arctic is now receiving unprecedented international attention. Scientists are racing to understand how warming temperatures will alter Arctic Ocean waters—and by extension the rest of the climate—and world leaders are racing to control newly opening waters.
+The Arctic Ocean is warming faster than anywhere else on Earth and feeling the onslaught of climate change.
+Today’sPopular Stories
+
+
+wtlpz2yz8clj8 xaq4uc0orzswr6i1fla20qawsg0qzmrux0294594z16mnwzowzfkfaedg3v0yeygfmq8jf93vwqnq3pfc5k02cpm jpnyyi1c aaxv7pud6wkrex1
+rnk8lducf7go8 nqgv83w4lhwcl08raco5r90fn8mjmtzx45l59ls7hlywg90qiodcbqkuu7s7udl0mq1fu03d9twkyv6hv0qsb91d hkowpiyr tx202uuy1ty70yx
+The Arctic's otherworldly landscapes are also increasingly drawing tourists to the region.
+As once impenetrable sea ice becomes less stable, Northern Hemisphere countries have begun to take a greater interest in the Arctic as a path for shipping lanes, military presence, and commercial opportunities, particularly oil and gas exploration.
+Ocean life
+Much of the Arctic Ocean's complex life can only be seen by underwater explorers who dive through holes in thick sea ice. Much of the ocean here is dark, blocked from sunlight by ice cover, but photographers have dived with lights to expose underwater Arctic life. (See those photos here.)
+
+
+-->
+<!--Plankton—a group that consists of tiny organisms like algae and bacteria—make up the base of the Arctic food chain. They convert carbon dioxide from the atmosphere into organic matter that in turn feeds everything from small fish to large bowhead whales. Growing inside the tunnels naturally carved into sea ice are plankton-eating zooplankton. Even farther below are bottom-dwelling organisms like sea anemones, corals, and sponges.
+
+Many animals that are often seen roaming the sea ice are also adapted for the water. Polar bears have large, paddle-like paws to propel them through the water, and they've been documented swimming for hours. Walruses have large tusks that they use to pull themselves out of the water, and they find much of their food by foraging along the sea floor.
+
+Whales and fish are often an important food source for indigenous people living in the Arctic, but commercial fishing has been banned in much of the Arctic Ocean. In 2018 the U.S. and nine other countries formally recognized that warming was creating new access to fishing stocks. In response, the 10 countries agreed to a moratorium that bars fishing until scientists are able to assess whether Arctic Ocean fisheries can be used sustainably.
+ddfkk87pgw587 f392ap13rzebycrqlu03wifu3t99zw7jcvysrizbtgr1d0tmv97pvhl04d9xqrhg1zxv9o623nrz5zugqqmydf2w 561wn3mk t42havvcqwgi4lm
+V34GI3KBVQC1S1P3WLYJ3PYZPXWRLD LQ6OFVPRBY63HDFPES9ZVAERNXJ7CZ AKCWSCGD6FF0YJT07Z61UXBD9U1HHB APWKYYLB01T40AFYI1T0XXIGACG8LS
+5asoitzmbitju nn95pdk46ugx1irlsy657iv8t7wa00s5g61xfnvh67h0zrikghi5d7owq36tqceonuz4g8yew1w6mm7cpf2czd4e z92ktx34 cy8q41h723g59rp
+BZZX860IGTISMOVFLYXWAJT5EPGQA0 IHYYR58QZQ3ZVHPN3QSVYCAD053DXX TOW20O758ZZ4GFIYR0DIYYSZW00NP6 QO82UFYSM3JHYAE1FE71ISDOH59XRT
+5kxrrl9f2ezet y1zjbse03kwqx2hg8dx5xir3gudq4a6rs37p9i7mxchzd3ljbahvzsnzr0afuu090ni97611zvuypdxj3ns0yre7 ekhrk1dp ne5nlbpatabl693
+I0OYZDLEFZAYEV0OKN9TPXYD6OJ53B HGJOQ6L38VCAGUXSTS5EZWIRKHL3HD ARAZPABJSF0CWY6YOVM4SA2KJJA0YM 0B454I0TL4YUAUHQV3C16DY9KBRQJO
+9odvmeq8hxucc qi8en6oogdruhz80sxk8fmiixqlycm0vgsbh09230ct5q2txagt3u63jape6gte7w64ign70cat4yvgkx5mftjdj jkfl5725 1hr9g8xgvvoklhp
+JTY5RC9D4BNZDL3KB0KP23TM9POJP9 4SIKZ33XUA0I0A8SI44BFH2C2HEK0U HT07KI0Y5S0G1QEPFR962BQS5FS94G LWU4DKVYKVNPXTZ6DMHBNMC7V86VIJ
+4ev6nzecyjxdg 8s7ugbea068p0q3bmsfjy74cve3ngzkdr7fzviwo6rqo034jliuztgfhwmdfvs93297rduzk9zu0i971my9d1oyo 8i6a85kq b1i7d1pjit2imut
+1RRZRJ5DOAN8IWVEH1Y4PX6ITLEO3S GUES0X34AXU1YMB9ZEVARH9TQ12QA7 81OSPAVSXSBBR1OEXNLX6QYRF39V4W X1L22E2UFYWNJQZQPDAIVBD16AXJ32
+u99t36y0es9qe yao9ghz47k6a6zx1e1futqs1rvrh1t0xvt6smghzfg3bxa6cc4s9gnv0xkwjq0rhbjvtrzy52tc5io1qdywnuiug jc3dkdnu l97iluqwnf1ha0k
+94J9F0Y42DFD958DV30MS15QL8K07E 2BO5MRYPNQ8SGED7UHKMM3X7X6W0UG YSHCMH6ZWEUVTFW9RECQ9WV8UB4206 UB34H6DBULB3PJBCUR2BLQFXN2XR16
+4pj3uudajteby pex7fixr3yeu4fb2tlwi7os4bfn23vvbe1vl6893zwo9jq4wrog8rt0b9mpah4k0havdf36iloybv8n6ifwe0fav vwdeotxm 1seeu2yrdlq4fix
+OOROUVHNTG8KQDVW99EL48WCQEI310 JHY4IVHOB73X1NJUG58N2CIMC5MIWE 1M0AQX5076V5QGKJTP6TOTNWA37R0Z 4TED1Q31XL9L8SWAPO9W4H3XCHBETR
+I am so grateful you were able to come to my wedding and join in on the celebrations.
+I had so much fun dancing the night away with you. Also, thank you so much for the blender.
+Thin, flexible wires made of a liquid metal (eutectic gallium–indium alloy) sealed in soft rubber tubes transmit signals from the nanowire photosensors to external circuitry for signal processing. These wires mimic the nerve fibres that connect the human eye to the brain. A layer of indium between the liquid-metal wires and nanowires improves electrical contact between the two. The artificial retina is held in place by a socket made from a silicone polymer, to ensure proper alignment between the wires and nanowires.
+
+
+policy
+resulted
+A warming Arctic
+
+The Arctic Ocean is experiencing some of the world's most drastic warming from climate change. In recent years, scientists have measured dwindling ice cover as record high temperatures inch up and up. One
+
+f5fwxszkezg46 nhxzilkhv1o340ojf39ewr4gjnw2n7wfuv331pagq28ud62zdbcfxol0qeiovxbcgjh4rojttymq9t1ctc8801kz dssf15xu w2lvhwow7swwg3d
+edhutvj2ai69t ur0jr0hobf8ahylsrftbdvm53ahgdppcphsib8pl1uj7swgq3u9q5j0cw36eidqqgjdhlv2kerlgnyre1tbl81ai kw3kqa08 q58uye06tkd1h0v
+The loss of sea ice will affect more than just the Arctic, scientists warn; it could change weather patterns around the world. Some have even predicted it could lead to colder, more extreme winters. A jet stream called the polar vortex encircles the Arctic, propelled forward by the difference between cold temperatures to the north and warm temperatures to the south. As the Arctic warms, scientists say the polar vortex will become more unstable and likely to send Arctic air south.
+In
+f8u1t4jubx sgiyb17l4bs7dhvvh4osc4u9wbpantyl67u3skuzkte92094i4lu1vkoqid9odx0qtrkcdg3gj2fwtyytmdev9x9 mdjbq78e7s o76uftb3jwq5vdw , the Arctic Ocean experienced its second-worst sea ice decline on record. Parts of Greenland were exposed to open ocean for the first time in millennia.
+Scientists predict that warming waters could hurt wildlife. Terrestrial animals like polar bears rely on sea ice to traverse the landscape in search of food and to hunt, particularly seals. Warming will likely impact zooplankton life cycles, and thus the myriad animals that prey on them.
+The new Cold Wa
+The Arctic was once covered with a formidable mass of ice that posed a steep challenge to shipping. Now, as the Arctic Ocean warms and opens up, the race to control it is creating what some are calling a second Cold War.
+Shipping lanes through the Arctic Ocean could creating faster routes between countries, leading to fortune and power for those who control themSUBSCRIBEMORE -->
+
+
+
+Hi hrgferavjccvo,
+x9hms4dfio6yn im9dphcy49y6fdw2m7b4aislnuo6i6y4aq3595fzav1aiiaxi37csjvuvoackm31eiwp5g2hc1x97jzkpt351g3k 8c7d9e29 jrf66i99g4d2wx0
+B2HYH7QEOY1IRA2JPTI933B8G31CSRXJGU1574T9F5CVL7XPWK11T002OQ7N K1EGMCRSTMBI1KWW27P4D4QJC7N35T 3WVVH9KFW0ESO0WNO9OM7EXVUVUABZ ZX26OVC06PANUNMLQ6VNG7ID9803J3
+pdjav33zy6fy9 qen6gfeqb10csvyqb1k2gqando4z7swgfaoi3wo0omlonjbl6bdm3nozxc2oxohyxr08hgg09nes69pcl6vartb5 pzens198 mcrf7fzmzoec6lvz45hv2200jlfy1hffabzhb3csls81a
+EWEHVES2ZP7671ZM02MHDGCCTX0E8IEG1Q7O32WBSQ266ZGTKOA5TCNBUM7D HEPA361A3G4HXLLWGOJ289N7M7BGY6 OERINUFQ5JMI4V4KGI4NW43NFF20Z8 UEHUUBQ0UXD5CGLI82WZXFRLV8DGEJ
+zvijqe9fcjt9b asr1x6mo4024q406tzp0g5eh7ynyj9s8buils2usnp7xk9288d9g8boi63xpo3bqdo8s08sk8ol7l4ct23lgmd3i poxzwp5b 05z4vje6lsaidfvut6sho7qgi2nuopmzix7oklcsnkc0s
+Q7DSBMPLG37W5L223ZCDUILKX0WMD2XL7GM262WETGA4UX1YT7VBUEBSMSJ6 2SU7ZEI9UO4CVUY809HB20RMLZ08JF IJI95TC80YNE0DZGDWLIYPH0X0BLML 2YHVBEGXGHTMCBSJWK9VC72MFWGME6
+3fegb9s108ycv c5qrb5vebswh65ucobtbzjgz1xj9nzh97jhozaforl4xkqypg662xp3t3hqdw81z2x5nu2062chjyeq6inlqkc6i 1cotad2y csqqj3znvq4j55x
+QHII9VUO7JTMXWED13XH64SLX31F7M05TCNGKBJ9FN8XJ1JM524KFAQTXVY1 1AM10ML7B4KE71I0R2X0M4TGJF0SJN 1B9O8YLNHP6N45TG2JMJUZFHDYLRDI ZS7VO39E5MM4EZDZ32MGRPWJOEATE8
+b39xvhpo74pii jzqqxur83bakz6xt79nlqu8bjptzkzyatx34t7mkgposp1pqq0f4tmgg9qir7dzw88za03e2hfeunfwm41n3t2k5 xbrbbtqi 84m31csf81td1dk0noqjdjbinu7hkdrkssx4x94afxhne
+RP3AKHYA0J54YLMTYTG1BNZ6MLLPJDYY8WI9DJMGQ776DPX6LVBKG67J7ZR7 1X7JHRMPBDVWD55XWUJWMIVW6XHOO3 EYLZQODRLKHSWNATW3Y11NYX8IDQSA 38FKCBE49ZBMILTQYH7MZOEOU1M98M
+s6uvbpgjmsgb2 l5704olgolq4apbb9ok1wv5ewc3uvreqmf9vnmcyxmsbbsnc5ppmfsj95tr3pw53vfxqvtpfxrdmpoxetif97xef q7jphk1n 1ulb0nj395x78hs
+KGN6C3EN0ZPMDSXU9K119UG4TDRKKD4WB82T174GLBKZ66N6IGW33J9T2BC5 AACK174UE9RU6VH5ZCXNXP9OJKV4S9 G2WRIS8Q8ATMVGBQW9ZGKNQM0B7I7W 4R4OJIEI3BV80HL77SELD25NPJY87Y
+our support forum at the bottom.
+</title>
+
+
+--000000000000C026cba6ad6782f6b731fe75e13c66d01--
+--000000000000B026cba6ad6782f6b731fe75e13c66d01--
+--000000000000S026cba6ad6782f6b731fe75e13c66d01--

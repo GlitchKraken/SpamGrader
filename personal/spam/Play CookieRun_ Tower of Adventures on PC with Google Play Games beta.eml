@@ -1,0 +1,982 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:7047:b0:1a4:ef03:4af8 with SMTP id ua7csp218145rwb;
+        Fri, 28 Jun 2024 07:42:21 -0700 (PDT)
+X-Received: by 2002:a67:ffd7:0:b0:48f:450e:58a with SMTP id ada2fe7eead31-48f52b6f374mr15734848137.30.1719585741567;
+        Fri, 28 Jun 2024 07:42:21 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719585741; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Wz9Gnb/hGT2gYjwRVgcy7hsjF+dJSC5AGtC5yMVQSCHmt0B2e4pE5lYw7ekYZWHcKL
+         5lIloW6BJbiQtW6yTWZMaNfj4gNIipiDTL3+GLYYjU2vv4VzdArgQmFYiD9+IYeonVJR
+         Tzdh5GjceYG9y8sFLNWvVCbD/g0vUMdcXn9WNi5YgU0GmwFC60LCMnNobvmoyz49WhgA
+         KMCIg+1mnx4DeoPkL6f4Wyoo9V9SbJ/1giQLfhpgi6q1rQaH4qXkGa9NcC9esdGjf3QP
+         LpLjQ7OHu9nRqja2I36xwWIpV/zUz4501cJQNGzaEN7+PhmpZ3FNv+85gQa966PzO1KQ
+         kn/w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:message-id:list-id:feedback-id:precedence
+         :list-unsubscribe:reply-to:date:mime-version:dkim-signature;
+        bh=EFqjgB2jJrgofCvADIfiy2U2K3u+jyvIcnF1B82Fqyw=;
+        fh=c9Ng5lX/PRNTyWkn1/XM/+Hal06rmDX0OaSwLyM6lZA=;
+        b=Tr50wlPRUAdKjMMXVDcHbp8znajFLex5d/pgn9DZQZAht/a+bGVVruExKfZg+W3wc3
+         HgJhOy1DBNzdS1bwKk+Mk3R8C+CL2N3hNF/79sJaeO5gwlsMI42bA3bMwAfRCs92NUN1
+         tCqS/UmSeOSIIUsHXAi9RRZ8lEowXWzHuO8/BYUAtdZ49ZTVzOdpOCugvU8sETzHmrPQ
+         chhTTivsmWsHfM7fR1isiwIQhAaoWHyQMBS4OYmeE7crmrehmeJos+6DIT9P++PTTzX7
+         YbgJ+pH9DVMJMVCl0+h0y6NilDUTDJLtJO5ucs8BU2fG/zgXtjYwuRz1IC4gaXdlsjVM
+         ovWQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=a0ecVPp5;
+       spf=pass (google.com: domain of 3zmt-zg8kejkg7pl-9hh9e7ie3r9hh9e7.5hfee35di3i7kfhhgxv9f3be.5hf@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3zMt-Zg8KEJkG7PL-9HH9E7IE3R9HH9E7.5HFeE35DI3I7KFHHGXV9F3BE.5HF@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+Return-Path: <3zMt-Zg8KEJkG7PL-9HH9E7IE3R9HH9E7.5HFeE35DI3I7KFHHGXV9F3BE.5HF@scoutcamp.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id af79cd13be357-79d5c7b8e7csor236592885a.7.2024.06.28.07.42.21
+        for <Blackpapermoon42@gmail.com>
+        (Google Transport Security);
+        Fri, 28 Jun 2024 07:42:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3zmt-zg8kejkg7pl-9hh9e7ie3r9hh9e7.5hfee35di3i7kfhhgxv9f3be.5hf@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=a0ecVPp5;
+       spf=pass (google.com: domain of 3zmt-zg8kejkg7pl-9hh9e7ie3r9hh9e7.5hfee35di3i7kfhhgxv9f3be.5hf@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3zMt-Zg8KEJkG7PL-9HH9E7IE3R9HH9E7.5HFeE35DI3I7KFHHGXV9F3BE.5HF@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20230601; t=1719585741; x=1720190541; dara=google.com;
+        h=to:from:subject:message-id:list-id:feedback-id:precedence
+         :list-unsubscribe:reply-to:date:mime-version:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=EFqjgB2jJrgofCvADIfiy2U2K3u+jyvIcnF1B82Fqyw=;
+        b=a0ecVPp5J31rUL9XLmOIncIl0Uazh15S638EozEqbbwBzu+JRH3anPDmabb0V5xGUg
+         8e6Lp7TDe6w//DvdHZSrzZayoTudEBwHo2007PRGWoNsJmygeqMgh4mdGa2uOm9mRrYs
+         HblCZyZ2oKuLUAYboWNIfbqvXSlH0dudxbzaY+1zG/7UfF0vPQ7gs+WFNzudD7NbKLa8
+         UQM7p7k7DL2BAXLQPZZ+vvId274aefarIjFpyAlka6GVKqHyyrx4K4pYrm2aqfHzhwyv
+         M6T5ddcPIehmhLgsWDHJAPq5KD+pPRCQkr9KA8rA6BmhVaHu0qPhmX0KaDZCfAA9s5+S
+         g2Jg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1719585741; x=1720190541;
+        h=to:from:subject:message-id:list-id:feedback-id:precedence
+         :list-unsubscribe:reply-to:date:mime-version:x-gm-message-state:from
+         :to:cc:subject:date:message-id:reply-to;
+        bh=EFqjgB2jJrgofCvADIfiy2U2K3u+jyvIcnF1B82Fqyw=;
+        b=WHhOGp+NMw/jrrKhgbJN/md9Yoa5+Cf23TawiGLOD4z72e0q+8yq9fBx+jAfonnWOa
+         a1SFNeiNlOwm7BK3YI1nqlSzlYx1Wo1IGhpkIZ0WEHQu9kebzHRhl6ojjm+p7luODbaO
+         AiwerWOeNR1f87hddz3fy7QIUzq8chmvDmt9IJvgHusPVfU3YBGNd0yFBPVBkEpaSeyJ
+         7YmKWNM/X8/xtX503cREmWWxYk5iFt+pwzeW8/H6Lygj7O5nJQQ4BOxpMEtCsdP3iRXA
+         TI/8SftDPM1A6P7FjAhkny7XK5B/0VjaHZ18fgkcd2lzOtHbylu+kKOj5wFlInYgZM0p
+         rEhA==
+X-Gm-Message-State: AOJu0Yxa1zS0Ay/PsPsItaXeYpWx+pe/L7wAoGsir8fJStmN/xdQ0sov
+	bvCnOsnzpeO9s0WxMpnIouUauTDQaBqvpfICkz+/Iq1/0735X93NA1/f
+X-Google-Smtp-Source: AGHT+IEb/sNLK5REh+mZdWSP7wkyp6D6Et7Ga4mw8UjqFdRHvDgldeg4uo88HBCcK5OrFu5E0a7wz2k=
+MIME-Version: 1.0
+X-Received: by 2002:a05:620a:e02:b0:79d:5b21:804a with SMTP id
+ af79cd13be357-79d5b218155mr588331085a.14.1719585740992; Fri, 28 Jun 2024
+ 07:42:20 -0700 (PDT)
+Date: Fri, 28 Jun 2024 07:42:20 -0700
+Reply-To: Google Play <news-googleplay@google.com>
+X-Google-Id: 4277184
+List-Unsubscribe: <mailto:list-unsubscribe@google.com?subject=optout-ANiao5q5E3nCiuL1o39TRJJK0D1a09i9_EMDQrOt-HxK90RemOIJFATZfZtOigeZR6_g0w6-XxkTaIq2RhrDDq6n8KCx0IHqiCORtDP4ncHAHgMZmPG3D12HCfMqQUcccIo6k-ARWCP9WXHFmIANG02Fq3upKQWcFzdm0LbyBqYGAvlTCAYU0VzQAfeOGnVrqmvuRPxJA7zYN2FK9ffVB_YhMyoEuQBhM1CXIkUuNItyMgXUf9YPUBb4qOYsszTgxASXEKpx77smogKExp81X3Y3pUFgnp16CfUkRy6d-token&body=optout-ANiao5q5E3nCiuL1o39TRJJK0D1a09i9_EMDQrOt-HxK90RemOIJFATZfZtOigeZR6_g0w6-XxkTaIq2RhrDDq6n8KCx0IHqiCORtDP4ncHAHgMZmPG3D12HCfMqQUcccIo6k-ARWCP9WXHFmIANG02Fq3upKQWcFzdm0LbyBqYGAvlTCAYU0VzQAfeOGnVrqmvuRPxJA7zYN2FK9ffVB_YhMyoEuQBhM1CXIkUuNItyMgXUf9YPUBb4qOYsszTgxASXEKpx77smogKExp81X3Y3pUFgnp16CfUkRy6d-token>,
+ <https://notifications.google.com/g/optout/ANiao5q5E3nCiuL1o39TRJJK0D1a09i9_EMDQrOt-HxK90RemOIJFATZfZtOigeZR6_g0w6-XxkTaIq2RhrDDq6n8KCx0IHqiCORtDP4ncHAHgMZmPG3D12HCfMqQUcccIo6k-ARWCP9WXHFmIANG02Fq3upKQWcFzdm0LbyBqYGAvlTCAYU0VzQAfeOGnVrqmvuRPxJA7zYN2FK9ffVB_YhMyoEuQBhM1CXIkUuNItyMgXUf9YPUBb4qOYsszTgxASXEKpx77smogKExp81X3Y3pUFgnp16CfUkRy6d?hl=en-US>
+Precedence: bulk
+Feedback-ID: P-21-1701:C20274650:M110819477-en-US:gamma
+List-Id: <2c9178e7e55f22d31b5c1045ec37267e17ce8d34.google.com>
+X-Notifications: 81db1329323c0000
+X-Notifications-Bounce-Info: AU8pKH031l58dVevTU9cnJ5WSc-3prI-v-VHjNPhLLAXaHdbvp8LF37ha3MWarncJk6DgHcyCuvXYHTtSs1W64wr3_Br6jfCC1mC99x2-Suiru-BxrVAdKxw6vsR5QB_PuxBNI2sB6mD6RLj_gKibMiOhx0peznTQmH3FuoiP2_ZAhaZv5Yv9kR2oeWB-DzR0NOAYrn1E1qcDkXfEzHH7xVlw269-BhyIEBSEHxL0zMjV3TkfobmZfVazURo1zULP8FcwqrO5z3ruj6hNvyXCa-mv-qp41RKE22L2Mpvj619Ml1vTu6BGDgP_tugzRHsZcVNea9BTgagt27wU9JlZhGyr6x42bsqm-Z2yVM9ET0L48E6gmVpNGFutB6jm1sm1lN71NjT9zC60evvecBOyrNiAQGUzzZEQwXoZ__JLxfO6BolsT6MswrfYTVFrErauB_mF5Th83L5jHEtC0Eykizvu7Y9lcfSGPNg80-ZqvQBFuQT9cKzVc-dDPJmHDaczgwxj5tSDLbMCUT1y7PYbkbAdHptC5ElQUfYbS0NjAwNjA0MDQxNTM1NTk2OTMzMg
+Message-ID: <939eae2dd37bffee57201791b3dccf08c7eda613-20274650-111510744@google.com>
+Subject: Play CookieRun: Tower of Adventures on PC with Google Play Games beta
+From: Google Play <news-googleplay@google.com>
+To: Blackpapermoon42@gmail.com
+Content-Type: multipart/alternative; boundary="00000000000040b341061bf441df"
+
+--00000000000040b341061bf441df
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+DQoNCiAgIA0KPGh0dHBzOi8vbm90aWZpY2F0aW9ucy5nb29nbGUuY29tL2cvcC9BTmlhbzVxQ3hp
+c0R4UXNjMkFKUXlZQ2RfUkxOX012VTVBLVVnRGUtUmxqZS0xc1dtU0FkQjRDVVRmczJ5Y0VrSkgz
+NmI4a1R5eHVuOWsxa25zaFNpQlJrSnpOWE0xeDA1ZGM0Mk1oWDdUcERaQ3FKUDE1bERiRzZzbGRz
+QkhIWkI4c1JTZDFRbWdyZHRTU0FnNnJCVkdYZk55Ym1qcm9vYmh1SklZai12enhKRkVmT3RHMWtL
+Rl9yc2lkSnN1Z1pmWHRNbjFhRzlpQ0JEa3BpcVZTWTYyMmhpZVVHUklTVDlJZ25uZ2M2NVJLTnA4
+M0hSRUFxbXNWTUJUb2d3a1JiZ3pIdTZPMkdSUGh4UVpsNXBWMDNjOFBLb3dXVmxRaWN3MjVwMURK
+WlpBSW5BYnJYZ3RpSW91N0hfUG55ZnBQTjlTejUtNk05V0JtU1JJSldsRFhsbVVTdi1pb0VJTkZl
+R2dEYWR2R1VnZzRHNWNiME0xeEk3Ui1YT0R4c1A2YUdQdFpPb0xZSFphSDhaMEtZbTFfdDBDbFpH
+ZFdXeVhqM25tM1RBWVNmTG8wPg0KDQpQbGF5IENvb2tpZVJ1bjogVG93ZXIgb2YgQWR2ZW50dXJl
+cyBvbiBQQyAgDQo8aHR0cHM6Ly9ub3RpZmljYXRpb25zLmdvb2dsZS5jb20vZy9wL0FOaWFvNXFD
+eGlzRHhRc2MyQUpReVlDZF9STE5fTXZVNUEtVWdEZS1SbGplLTFzV21TQWRCNENVVGZzMnljRWtK
+SDM2YjhrVHl4dW45azFrbnNoU2lCUmtKek5YTTF4MDVkYzQyTWhYN1RwRFpDcUpQMTVsRGJHNnNs
+ZHNCSEhaQjhzUlNkMVFtZ3JkdFNTQWc2ckJWR1hmTnlibWpyb29iaHVKSVlqLXZ6eEpGRWZPdEcx
+a0tGX3JzaWRKc3VnWmZYdE1uMWFHOWlDQkRrcGlxVlNZNjIyaGllVUdSSVNUOUlnbm5nYzY1UktO
+cDgzSFJFQXFtc1ZNQlRvZ3drUmJnekh1Nk8yR1JQaHhRWmw1cFYwM2M4UEtvd1dWbFFpY3cyNXAx
+REpaWkFJbkFiclhndGlJb3U3SF9QbnlmcFBOOVN6NS02TTlXQm1TUklKV2xEWGxtVVN2LWlvRUlO
+RmVHZ0RhZHZHVWdnNEc1Y2IwTTF4STdSLVhPRHhzUDZhR1B0Wk9vTFlIWmFIOFowS1ltMV90MENs
+WkdkV1d5WGozbm0zVEFZU2ZMbzA+DQoNCkludHJvZHVjaW5nIEdvb2dsZSBQbGF5IEdhbWVzLCB0
+aGUgbmV3IGdvLXRvIGRlc3RpbmF0aW9uIGZvciBtb2JpbGUgZ2FtaW5nICANCm9uIFBDLiBFeHBl
+cmllbmNlIGhpZ2gtcGVyZm9ybWFuY2UgZ2FtaW5nIHJpZ2h0IGZyb20geW91ciBkZXNrdG9wLg0K
+DQpEb3dubG9hZCAgDQo8aHR0cHM6Ly9ub3RpZmljYXRpb25zLmdvb2dsZS5jb20vZy9wL0FOaWFv
+NXFDeGlzRHhRc2MyQUpReVlDZF9STE5fTXZVNUEtVWdEZS1SbGplLTFzV21TQWRCNENVVGZzMnlj
+RWtKSDM2YjhrVHl4dW45azFrbnNoU2lCUmtKek5YTTF4MDVkYzQyTWhYN1RwRFpDcUpQMTVsRGJH
+NnNsZHNCSEhaQjhzUlNkMVFtZ3JkdFNTQWc2ckJWR1hmTnlibWpyb29iaHVKSVlqLXZ6eEpGRWZP
+dEcxa0tGX3JzaWRKc3VnWmZYdE1uMWFHOWlDQkRrcGlxVlNZNjIyaGllVUdSSVNUOUlnbm5nYzY1
+UktOcDgzSFJFQXFtc1ZNQlRvZ3drUmJnekh1Nk8yR1JQaHhRWmw1cFYwM2M4UEtvd1dWbFFpY3cy
+NXAxREpaWkFJbkFiclhndGlJb3U3SF9QbnlmcFBOOVN6NS02TTlXQm1TUklKV2xEWGxtVVN2LWlv
+RUlORmVHZ0RhZHZHVWdnNEc1Y2IwTTF4STdSLVhPRHhzUDZhR1B0Wk9vTFlIWmFIOFowS1ltMV90
+MENsWkdkV1d5WGozbm0zVEFZU2ZMbzA+DQoNCg0KV2l0aCBHb29nbGUgUGxheSBHYW1lcywgeW91
+IGdldDoNCg0K4oCiIEFjY2VzcyB0byBzZWxlY3QgQW5kcm9pZCBnYW1lcyBvbiBXaW5kb3dzDQoN
+CuKAoiBLZXlib2FyZCBhbmQgbW91c2Ugc3VwcG9ydA0KDQrigKIgQmV0dGVyIHJlc29sdXRpb24g
+b24gYSBiaWdnZXIgc2NyZWVuDQoNCuKAoiBQcml2YWN5IGFuZCBzZWN1cml0eSBlbmdpbmVlcmVk
+IGJ5IEdvb2dsZQ0KDQoNCllvdeKAmXJlIGdvaW5nIHRvIGxvdmUgdGhlIHZpZXcNCg0KSGVyZSBh
+cmUgc29tZSBnYW1lcyB0byBleHBsb3JlIHdpdGggR29vZ2xlIFBsYXkgR2FtZXMgb24gUEM6DQoN
+CiAgIA0KPGh0dHBzOi8vbm90aWZpY2F0aW9ucy5nb29nbGUuY29tL2cvcC9BTmlhbzVvdXl2ZHRW
+LW5Dc3ZSdzRyVEFIYVExVUxqaVlPa2E3eVJXMGFkdXhtSEVzakl2ZlJXMGRuZ19VVmJpZTZxZ1h6
+UlVYSlJOOEY5eEJBMmtMc0pudG1XQU9HRGVENGhHQ0xOa1JKLWtxNTBLVmQtSDZ1SEIxbDN4OWpz
+WHR2eFBUZ3hzSTl4QVhhdTAyYjRuS3ZQeGhDV1dJUWVMaGlvTjVtT1ZqNDIxYklfQ2NTNXNmV01M
+SHhEakJTby05aXVHOWlLb05WWFR5ZU41RGdIaTlyaHZWdWZ5aXFfYlhOV2FFU3BzMjB0WDRvckZU
+azYwNHJ0TTNVaUtYRkh0ZEE2S3Z4VnlHMlY3ZDdjTVJKOHkyUkpuMk14OFRTbVUtR0xHN2pDQkFX
+MzNfQjBxWHRqLUoyS1FqdE9XUi05WHFLZWtQLXFvczI2RWNxS0NxazRrYWgtYzdsRmdraUdOc0M4
+MXhRc3JZOXVuZHVWQTZMa2ZFMjRjU1JyTXZGZlBQN0RwYld3TDB5RU5EUWVIZmdPV2t5QzVVZ2pt
+TTBOcVdIeF9ncFlkPg0KDQpDb29raWVSdW46IEtpbmdkb20NCg0KICAgDQo8aHR0cHM6Ly9ub3Rp
+ZmljYXRpb25zLmdvb2dsZS5jb20vZy9wL0FOaWFvNW9oMmRGdFZsTUR5RnNCdzAwUTRmdXdtMVdl
+SFYzSlVUblh4R0FESnNvcXdZVy0wSGNWU2NrUWxrSjZfWkZfUHRpbHpqR0RZRnpHd3Q5OHNUMHBS
+MnZQQXFSQ1MzbmpaSW44eFNWNUM5YTJpcVp5emlSOXdFMFI0VzB0ZFozNkFIT1E0X2xvUXZWaHhv
+ZFZHVHNXbkFGeTZLNGlUSU5xb2JSa2tHaDJhdGJSRTAyeHNMeGhQZFUtWHBGbi1OYlJ1bDNuQldI
+cmwwcXpqX1NYeVcwMDNPVkViYjN2QXBpRnJ0SlhFVVdGZE1BZ2NTbkNsY3NXLWg1bGl2dVhEd184
+dDF2YTNOR3lBTmJuOS1ISnFmd3NGLU10NGItay0zV0l3V2c4ZFBhNkRCUmI1bjJUQjlMWHN6Y3lL
+YTdGcXVLemx1VmoyV2F2bGlIOE54dUpGamFsbDk2Qnh2NkVpTmxqcUdnWmE3d0E1TjFDWFNzN0NY
+UV9UbURDWkkzNUc4Zi1DNmgxZDdNMXB3aFRTaXhncjlMcm1wYWZPd0g0NzdIRVRyems3WGFDMnho
+aC1tVktVdz4NCg0KRXBpYyBTZXZlbg0KDQogICANCjxodHRwczovL25vdGlmaWNhdGlvbnMuZ29v
+Z2xlLmNvbS9nL3AvQU5pYW81clFkOFRsRi1tOTJKVWxiV3JoWTRBNVBkTUZ2eWtGWEpVWUppQnNW
+MDhrMTdIWVBnSklMZVBoaWZKVU5NQ2xBbllzR1dzeVBaRVhOMHBWZ05uX2VEcURrTzZ5c0Fuekpo
+RUppd2I3QS1aQ3doVl9oT2dvZl9zcTIwdDNQZ1R1dk1DLXlBb2s4TklRQ0YzYVdabGFxVHJHZlJH
+UVBtLUdZa0tDVmVwdjcxYkZEMnVIakhQNTc1bDZCYWpZMDg0QjI1SDI3RFVBdm8xc2VrZXZtM1JU
+TlBwQ29jRF8yV2V0dWktN1dNclB6YWZVZUxDOUc0ZXRrSnhfZmI3cGExWHZQUHBGN2JsUGtOM1d0
+N2VER2hxaXhlWDUtSDc5S2J6NHZlc0dyM1JSSUoxb29YT1NVaWlxdHhMdlNHeWh5TXRBaVNRSzc2
+bzZUekNhSVMyZmVkMVlyaFJucmp5cm5nYmlPSFRMVm56bHdYS2o1a19fbV9WU0VCdlotTzJLc0JW
+cnlwdW5FalliYTQ0UkU1VGFvdlpOLWd4T3NUeXJzSWd6T0cyaFdVSzhoZ0FobnotckppQ3JwZ0hK
+dEhxLT4NCg0KQ2xhc2ggb2YgQ2xhbnMNCg0KDQoNCiAgIA0KPGh0dHBzOi8vbm90aWZpY2F0aW9u
+cy5nb29nbGUuY29tL2cvcC9BTmlhbzVxcWh1eldCa2cwMS14bWZ4MkoyZVZRc2doVXg0VlNEdnR3
+b21HWkgyMGozNnJIRDJWZ3BjeGR1NFhLYXp1d0lhZ2hLR1NVVXFheVdkZk9LQ01rQ1FlVUx6Umdq
+M2syU2ZGYUkySGtkMENhMTZQYkZ0R1pvby1LUXluY1JfYnNFSkk4VmRnV3FoMDJ0aE1sOFVJV3dP
+VXBpSGxhdUFuRXQ2aDFmY2Fpa3hXLWk4YkEwZnNFa0JqTW1YSDl1UXlZRlhiOWJ2alJUR2h1akky
+VE5oWjFTc3pObzVIYkcwSVZjd2wtbE5IcjZiSS1Sbk5adloxWnFrckdJYUpHWEduZVZQN0ZfbEE+
+DQoNCkdvb2dsZSBQbGF5IFByb3RlY3QgIA0KPGh0dHBzOi8vbm90aWZpY2F0aW9ucy5nb29nbGUu
+Y29tL2cvcC9BTmlhbzVxcWh1eldCa2cwMS14bWZ4MkoyZVZRc2doVXg0VlNEdnR3b21HWkgyMGoz
+NnJIRDJWZ3BjeGR1NFhLYXp1d0lhZ2hLR1NVVXFheVdkZk9LQ01rQ1FlVUx6UmdqM2syU2ZGYUky
+SGtkMENhMTZQYkZ0R1pvby1LUXluY1JfYnNFSkk4VmRnV3FoMDJ0aE1sOFVJV3dPVXBpSGxhdUFu
+RXQ2aDFmY2Fpa3hXLWk4YkEwZnNFa0JqTW1YSDl1UXlZRlhiOWJ2alJUR2h1akkyVE5oWjFTc3pO
+bzVIYkcwSVZjd2wtbE5IcjZiSS1Sbk5adloxWnFrckdJYUpHWEduZVZQN0ZfbEE+ICANCmhhcyB5
+b3UgY292ZXJlZC4NCg0KICAgDQo8aHR0cHM6Ly9ub3RpZmljYXRpb25zLmdvb2dsZS5jb20vZy9w
+L0FOaWFvNXJ6dXVwOGItOFlwbWRoMmEzeWIyUmpoSmNDNUNKTHd2LUN2QkQxR0lPc2x1VDUtT0ln
+SW1fNVZaa1BrMm92cENiSHd2N3B1ZzFsZVhQS1VkdlZFVnNHZVJISGhna2VDQm00WHhBNnI5REFw
+MmRzOGQ2UjBmU3ZoRm9jTGNDeE51SkViX2VuemRQUDBGYmlGV0xfQVRKa0lCMTBnckFtelB0aW8x
+YktlR0d5aU1YWEtydFNkdHQ4dTd3TS1rcHAxYkFzbFM3QXFyVXVkWVFMTGlWbC1uR0lwMmdSMzFJ
+eldNWWVHNm5BelI1MVVTSUlSbzhrdXYtemJ4ckc2MG55eEtXVFdfQnh2dkZ2Pg0KDQpRdWVzdGlv
+bnM/IFdl4oCZcmUgaGVyZSB0byBoZWxwLiAgDQo8aHR0cHM6Ly9ub3RpZmljYXRpb25zLmdvb2ds
+ZS5jb20vZy9wL0FOaWFvNXJ6dXVwOGItOFlwbWRoMmEzeWIyUmpoSmNDNUNKTHd2LUN2QkQxR0lP
+c2x1VDUtT0lnSW1fNVZaa1BrMm92cENiSHd2N3B1ZzFsZVhQS1VkdlZFVnNHZVJISGhna2VDQm00
+WHhBNnI5REFwMmRzOGQ2UjBmU3ZoRm9jTGNDeE51SkViX2VuemRQUDBGYmlGV0xfQVRKa0lCMTBn
+ckFtelB0aW8xYktlR0d5aU1YWEtydFNkdHQ4dTd3TS1rcHAxYkFzbFM3QXFyVXVkWVFMTGlWbC1u
+R0lwMmdSMzFJeldNWWVHNm5BelI1MVVTSUlSbzhrdXYtemJ4ckc2MG55eEtXVFdfQnh2dkZ2Pg0K
+DQogICANCjxodHRwczovL25vdGlmaWNhdGlvbnMuZ29vZ2xlLmNvbS9nL3AvQU5pYW81cE1ITVQ0
+UjM1YVhGdGZrMU1tVTNEaGtVWUJmT3h2Vi1ZSGdlV29zVTJZa3dWV09LM2ZOckxFMFQyNVF1eVV5
+LVczSW4wOWZnVTktaTVYUUJfbFZnNXcyQVMyYmw0SjdBUVNCZ3NUVUY2OVk5Tm16bWJIN051cnRn
+b0ZUd0pwVWxqcXB4X0F5X2pBVGhHdTF5ZWlMcW5jU0pLYlRNc05zbWxmU3c3ZG41N0M0N0Vhem9H
+cGdZUzgxZDdEblRSZFplQzd5YXp4SG9ra3ZZLWIxZ3lvcjJMYW5DZEtYTTEtekJQLWtXZ0hEQU9q
+dEZscUt4Q2dETHVYTWt1Wnk0OVpZdVFiNVZNOGxGTC1nZERxd3dPSGI3NnE3cldkb1BoRFJfT3pJ
+R3ctTTFkbjJCQT4NCg0KTmVlZCBhIGdpZnQ/IEdldCBhIEdvb2dsZSBQbGF5IGdpZnQgY2FyZC4g
+IA0KPGh0dHBzOi8vbm90aWZpY2F0aW9ucy5nb29nbGUuY29tL2cvcC9BTmlhbzVwTUhNVDRSMzVh
+WEZ0ZmsxTW1VM0Roa1VZQmZPeHZWLVlIZ2VXb3NVMllrd1ZXT0szZk5yTEUwVDI1UXV5VXktVzNJ
+bjA5ZmdVOS1pNVhRQl9sVmc1dzJBUzJibDRKN0FRU0Jnc1RVRjY5WTlObXptYkg3TnVydGdvRlR3
+SnBVbGpxcHhfQXlfakFUaEd1MXllaUxxbmNTSktiVE1zTnNtbGZTdzdkbjU3QzQ3RWF6b0dwZ1lT
+ODFkN0RuVFJkWmVDN3lhenhIb2trdlktYjFneW9yMkxhbkNkS1hNMS16QlAta1dnSERBT2p0Rmxx
+S3hDZ0RMdVhNa3VaeTQ5Wll1UWI1Vk04bEZMLWdkRHF3d09IYjc2cTdyV2RvUGhEUl9PeklHdy1N
+MWRuMkJBPg0KDQoNCg0KV2FzIHRoaXMgZW1haWwgaGVscGZ1bD8gSWYgeWVzLCB0ZWxsIHVzIHdo
+eTogIA0KPGh0dHBzOi8vbm90aWZpY2F0aW9ucy5nb29nbGUuY29tL2cvcC9BTmlhbzVvaHIwR05M
+ZnFYX1RkZTZqeUp5MDhXM1JnWFdoa0I1QkppdERWc1Bvd3JQZnhSbU9iYWF3WTdZeFhZTXd4R2x2
+RVFaLUtrc2R2WU1tUjNnNmdoWUhKUGF5Uld6QTQ5NlZYWTFpYzNXcEIyeWNmc2lCR2pWZ0lCLXhV
+bUJBdUp5WkttX1prcjE1Y1pNdml1UFNCcVUySU9OS2VSR2tsZ194d1dlWk5kNXdocnZ6Y0hBc0lu
+cklfYWJIbTBVc011RHl0NmkzSGl1d1J3cmQtTHJoZ18yWVBhRVZGUF9qelZmelVuUnd5azVYNGtS
+Z0hBYzdzNVhCRko4d20zbUhKeng2c3hEd3k5cVV4cU8tR05tb2tjMmduUU5BS3o1Z19vWXp4VXls
+QTFVZUpSaDRNSVVBenVqTmdSbUgwZVMwOXVfZWRRVW1nNExPdUJOVWxlQnJ1MUExcmhRSHdNOHUy
+ZFVLZERnYVprNW93NFRJWVRoX2JZbjVKRjU0b0hoSWRrbEE3eW1jbWJVRmNHNk5jcHUtd0ZONlNG
+amlUUldhcDVMSlNJUmZMa2xtbWtqWjVwaWh3bGVDRGQtMDhQbnlxSTFUYkctSmtwbjlIb2d0cktZ
+WGdIbVpJOUh4cFc1aUFrMEZyLVZMZHFNWkw2VlNHS2hrcnh0eFRERm5FbWMwQzhrNDZUUkxRVmJE
+dmZ0NzlOcnp5UHRFNGtmR25icnkyZGFJWjhOQk1td3VpWG5aU2ZzZz4uICANCklmIG5vLCB0ZWxs
+IHVzIHdoeTogIA0KPGh0dHBzOi8vbm90aWZpY2F0aW9ucy5nb29nbGUuY29tL2cvcC9BTmlhbzVy
+eGktRDd4YnpPb2w4QVh2WlRQZkJJdHFDNm9xQzAybk1WaVR0Z0p1UEh4V1E5VmJhbkhjaF9pMUpo
+a2RoM01VcnFqUkJjZk5RUTRBVWFUU1RNYzFvVXpNMG4zbDRoVmxrSERMLVRleVJRWWI0a2VEMTV1
+eWNhN3hZaENRY2lGdzdSd0JQQXVMbUlReHZPR1ZNX1haWnc0a0lIRE94LWV4YkUyYl9GclUwdm9s
+Z0NhUFJXeHVwNkdZMjdYcks3U0ViRWFUWU5vSGlkNWdVNHluZzEzOEZEdHVXYXhiaWFXVlNmU3ZG
+NE1OcWt1Zkxtdzl2YktSYTNJVGlSbDlZdHZTZzQtczJ0OFJrTG41UVNIbWE3VGNvV0dPMEJRR0dC
+c2paWlRVZkVrUkE4U28tX21EVV9ZeTROY2dVOVhwVGdwTHBXdHhQNnVIR2N5ZHFhV1N4MjZyUXZL
+a2hET2tIT05LZFVxOXNaUWt3ckZ6YVpVWXc4QUpCREJzQjRoQTVCYTd3bWxGYU11X1BDMGxjRzJj
+ZDB3b3VHMXhXR2VXa0wzREtnT2ppXzBabTFhVFNYYkZQd01yVjIwd3oxV3lVLUlwY25KSW9DVGlL
+amdGWVM0MlpYQVZ2ald6RVUyLWhJenFyRnd6LW05cHZoNlhEeGl6ZmFyR1g0S3N5MEFFTzRHZEwy
+cUl3azZsVjVhVThrWjY0bmhoc3hRMUNnNzVZLUtWeHlVM05zQllveUFjRnY+DQoNCihjKSAyMDI0
+IEdvb2dsZSBMTEMsIDE2MDAgQW1waGl0aGVhdHJlIFBhcmt3YXksIE1vdW50YWluIFZpZXcsIENB
+IDk0MDQzLCBVU0ENCg0KVGhpcyBtZXNzYWdlIHdhcyBzZW50IHRvIEJsYWNrcGFwZXJtb29uNDJA
+Z21haWwuY29tIGJlY2F1c2UgeW91IGFza2VkIHVzIHRvICANCmtlZXAgeW91IHVwIHRvIGRhdGUg
+d2l0aCB0aGUgbGF0ZXN0IG5ld3MgYW5kIG9mZmVycyBmcm9tIEdvb2dsZSBQbGF5LiBJZiAgDQp5
+b3UgZG8gbm90IHdpc2ggdG8gcmVjZWl2ZSB0aGVzZSBlbWFpbHMsIHBsZWFzZSB1bnN1YnNjcmli
+ZSBoZXJlICANCjxodHRwczovL25vdGlmaWNhdGlvbnMuZ29vZ2xlLmNvbS9nL29wdG91dC9BTmlh
+bzVwamI2aGVDd3ZabGo2RTM1MDNsMnh0aXNBbXlxcW16bjZ5a0hjTXpvVnRnUS1tLTZMUTR4Ukk1
+OVNGUjVERkZ4a3NGTUdmaHFWMnluZ1U0VVN6bS1Jc05XbVNJcjUwWFdnWWlSRDdEOFhOd0lqdmJ0
+Y0NqcnlHQzI0ZGZtU3FsbVRYUVF4WmNKWTR5aEs4LU56WVYyUmdEbTlNcWY2VUlZR19MVU0yREI4
+czJNVXNUX3dCVnFlQTJLMzJHTzUwSm4xY20wa2VtMExpZGpCcnFzRGpVZkxXSUl5WlhEbThqdXhm
+d1FqUk9ORXUtVlZZQnpWYWx5ZlhsRkFpQ3V6NWxBS3F3QkNRTXc5UUktcEk3aXZfa3hnX0k4RXds
+YkEtZWc/aGw9ZW4tVVM+LiAgDQpZb3UgY2FuIGFsc28gY2hhbmdlIHlvdXIgZW1haWwgcHJlZmVy
+ZW5jZXMgb24gR29vZ2xlIFBsYXkgYnkgbG9nZ2luZyBpbiBhdCAgDQpodHRwczovL3BsYXkuZ29v
+Z2xlLmNvbS9zZXR0aW5ncyA8aHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc2V0dGluZ3M+LiBQbGVh
+c2UgIA0KZG8gbm90IHJlcGx5IHRvIHRoaXMgZW1haWwsIGFzIHdlIGFyZSB1bmFibGUgdG8gcmVz
+cG9uZCBmcm9tIHRoaXMgZW1haWwgIA0KYWRkcmVzcy4gSWYgeW91IG5lZWQgc3VwcG9ydCwgcGxl
+YXNlIHZpc2l0IHRoZSBHb29nbGUgUGxheSBIZWxwIENlbnRlci4gIA0KPGh0dHBzOi8vc3VwcG9y
+dC5nb29nbGUuY29tL2dvb2dsZXBsYXk+DQo=
+--00000000000040b341061bf441df
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html public "- / /w3c / /dtd xhtml 1.0 transitional / /en" "https=
+: / /www.w3.org /tr /xhtml1 /dtd /xhtml1-transitional.dtd">
+<html xmlns=3Dhttps://www.w3.org/1999/xhtml lang=3Den>
+<!--Redwood for Language attribute-->
+<head>
+<title>Google Play Games on PC</title>
+<meta http-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8">
+<!--[if !mso]><!-->
+<meta http-equiv=3DX-UA-Compatible content=3DIE=3Dedge>
+<!--<![endif]-->
+<meta name=3Dviewport content=3D"width=3Ddevice-width, initial-scale=3D1.0"=
+>
+<meta name=3Drobots content=3D"no index">
+<!--[if mso | ie]>
+<style>
+.sup {
+vertical-align: 1px !important;
+font-size: 100% !important;
+}
+</style>
+<![endif]-->
+<!--[if ie]>
+<style>
+.sup {
+vertical-align: 6px !important;
+font-size: 80% !important;
+}
+</style>
+<![endif]-->
+<style>
+body{
+font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+font-size:12px;
+color:#000000;
+-webkit-text-size-adjust: none !important;
+-webkit-font-smoothing: antialiased !important;
+-ms-text-size-adjust: none !important;
+}
+.gmail-app-fix{
+width: 480px !important;
+max-width: 480px !important;
+min-width: 480px !important;
+}
+@media all and (max-width: 480px) {
+.table-main-gmail { /* Forces Gmail to display Desktop view */
+width: 100% !important;
+min-width:100% !important;
+}
+.pad0{
+padding: 0 !important;
+}
+.color_mob{
+background-color: #FFFFFF !important;
+}
+.pad_lr_28{
+padding-left: 20px !important;
+padding-right: 20px !important;
+}
+}
+</style>
+</head>
+<body class=3Dcolor_mob style=3D"margin: 0 auto; padding:0px;" bgcolor=3D#F=
+8F9FA>
+<div style=3D"color:#333; display:none; font-size:1px; line-height:1px; max=
+-height:0; max-width:0; opacity:0; overflow:hidden">Take mobile gaming to y=
+our PC.</div>
+<!--Font-family-->
+<!--Font-family-->
+<!-- Tracking
+-->
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td align=3Dcenter valign=3Dtop bgcolor=3D#F8F9FA style=3D"padding: 10px 0;=
+" class=3D"pad0 color_mob">
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D480 align=3Dcenter>
+<tr>
+<td align=3Dcenter valign=3Dtop bgcolor=3D#ffffff>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<!-- Logo part starts -->
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 align=
+=3Dcenter>
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<a aria-hidden=3Dtrue href=3D# style=3D"text-decoration: none; pointer-even=
+ts: none; display: block;" target=3D_blank><img aria-hidden=3Dtrue src=3Dht=
+tps://www.gstatic.com/gumdrop/files/google-play-crm-gpg-logo-dark-fill-w960=
+px-h160px-2x.png width=3D480 height=3Dauto alt=3D"" title=3D"Google Play Ga=
+mes beta" style=3D"width: 100%; max-width: 480px; height: auto; display: bl=
+ock;"></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- Logo part ends -->
+<!--hero module start-->
+<!-- -->
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<a aria-hidden=3Dtrue href=3Dhttps://notifications.google.com/g/p/ANiao5pg5=
+9KTF62qQK8qiIw3mrNMg26J7y0ip8mQC4ITio82z4jag8AuSMig8fixhw-dvSjuRA3Vd7tZ7nep=
+c2pyQCw1phaJ4H0CbqY-svCx50F6gl3Nhoq9qBGnA8w_hTDcsIl-4Z9cI37ztPv_hpwCWHv2ngb=
+e3Ks79c1ePyEq6c6Z-ZvO0VqTe--7tP2Bn2tCwSOD7KwVYg1ESkyFmyikwUsrQ0OvHSA_GDt-JD=
+Nw1xLFRKww2M3zgDP1QdbVIHjZkT7vkg5yV80F5a7A7LNTYfnkuT6XgMj7F6Q0B3jn_1QH4iMOd=
+RdyVLA4az6lUihPyijHXpmNL6xwdkw_IcqMth3OCasr0fCnw5qAtXE5wojl6UJuKq1Oj9brtUQM=
+LzAKQv6qyQR2j_NTjLlHJKmSgbObn9HoaLAJycI4RIovWA style=3D"text-decoration: no=
+ne; display: inline-block;" target=3D_blank>
+<!--[if !mso]><!--><img src=3Dhttps://www.gstatic.com/gumdrop/files/google-=
+play-crm-cookie-run-hero-fill-w3360px-h1884px-2x.png width=3D480 height=3Da=
+uto alt=3D"" title=3D"Play CookieRun: Tower of Adventures on PC" style=3D"w=
+idth: 100%; max-width: 480px; height: auto; display: block;"><!--<![endif]-=
+-><!--[if (gte mso 9)|(IE)]><img src=3D"https://www.gstatic.com/gumdrop/fil=
+es/google-play-crm-cookie-run-hero-fill-w3360px-h1884px-2x.png" width=3D"48=
+0" height=3D"auto" alt=3D"" title=3D"Play CookieRun: Tower of Adventures on=
+ PC" style=3D"width: 100%; max-width: 480px; height: auto; display: block;"=
+><![endif]-->
+</a>
+</td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"padding:16px 32px 0px; font-size: =
+32px; line-height: 40px; color: #202124; font-family: Google Sans, Roboto, =
+Arial, Helvetica, sans-serif;">
+<a href=3Dhttps://notifications.google.com/g/p/ANiao5pg59KTF62qQK8qiIw3mrNM=
+g26J7y0ip8mQC4ITio82z4jag8AuSMig8fixhw-dvSjuRA3Vd7tZ7nepc2pyQCw1phaJ4H0CbqY=
+-svCx50F6gl3Nhoq9qBGnA8w_hTDcsIl-4Z9cI37ztPv_hpwCWHv2ngbe3Ks79c1ePyEq6c6Z-Z=
+vO0VqTe--7tP2Bn2tCwSOD7KwVYg1ESkyFmyikwUsrQ0OvHSA_GDt-JDNw1xLFRKww2M3zgDP1Q=
+dbVIHjZkT7vkg5yV80F5a7A7LNTYfnkuT6XgMj7F6Q0B3jn_1QH4iMOdRdyVLA4az6lUihPyijH=
+XpmNL6xwdkw_IcqMth3OCasr0fCnw5qAtXE5wojl6UJuKq1Oj9brtUQMLzAKQv6qyQR2j_NTjLl=
+HJKmSgbObn9HoaLAJycI4RIovWA style=3D"text-decoration: none; color: #202124;=
+ border-bottom: 5px solid transparent; border-top: 5px solid transparent;" =
+target=3D_blank>Play CookieRun: Tower of Adventures on PC</a>
+</td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"padding: 9px 32px 0px; font-size: =
+16px; line-height: 24px; color: #606368; font-family: Roboto, Arial, Helvet=
+ica, sans-serif; letter-spacing:0.1px;">
+Introducing Google Play Games, the new go-to destination for mobile gaming =
+on PC. Experience high-performance gaming right from your desktop.
+</td>
+</tr>
+<tr>
+<td class=3Dol_cta1 align=3Dcenter valign=3Dmiddle style=3D"padding: 23px 3=
+2px 26px;">
+<table role=3Dpresentation cellpadding=3D0 cellspacing=3D0 border=3D0>
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<a role=3Dtext aria-label=3DDownload href=3Dhttps://notifications.google.co=
+m/g/p/ANiao5pg59KTF62qQK8qiIw3mrNMg26J7y0ip8mQC4ITio82z4jag8AuSMig8fixhw-dv=
+SjuRA3Vd7tZ7nepc2pyQCw1phaJ4H0CbqY-svCx50F6gl3Nhoq9qBGnA8w_hTDcsIl-4Z9cI37z=
+tPv_hpwCWHv2ngbe3Ks79c1ePyEq6c6Z-ZvO0VqTe--7tP2Bn2tCwSOD7KwVYg1ESkyFmyikwUs=
+rQ0OvHSA_GDt-JDNw1xLFRKww2M3zgDP1QdbVIHjZkT7vkg5yV80F5a7A7LNTYfnkuT6XgMj7F6=
+Q0B3jn_1QH4iMOdRdyVLA4az6lUihPyijHXpmNL6xwdkw_IcqMth3OCasr0fCnw5qAtXE5wojl6=
+UJuKq1Oj9brtUQMLzAKQv6qyQR2j_NTjLlHJKmSgbObn9HoaLAJycI4RIovWA target=3D_bla=
+nk style=3D"border-top: 6px solid transparent; border-bottom:6px solid tran=
+sparent; display: block;"><img src=3Dhttps://gstatic.com/growthlab/api/UcTU=
+M8krC6NxOhlSpqm5tnYhO1FSPyIQtWk9BSVK.png width=3D129 height=3Dauto style=3D=
+"display: block;"></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!--hero module ends-->
+<!--Info Card module 2 starts-->
+<!-- -->
+<tr>
+<td class=3Dpad_lr_28 align=3Dcenter valign=3Dtop style=3D"padding:0 32px;"=
+>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td align=3Dcenter valign=3Dtop bgcolor=3D#DADCE0 height=3D1 style=3D"line-=
+height:1px; mso-line-height-rule:exactly;">
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/spacer-11.gif width=3D1 bo=
+rder=3D0 alt=3D"" style=3D"display: block;">
+</td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop height=3D23 style=3D"line-height:23px; mso-=
+line-height-rule:exactly;">
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/spacer-11.gif width=3D1 he=
+ight=3D1 border=3D0 alt=3D"" style=3D"display: block;">
+</td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"padding: 0px 0px 13px; font-size: =
+24px; line-height: 36px; color: #202124; font-family: Google Sans, Roboto, =
+Arial, Helvetica, sans-serif;">
+With Google Play Games, you get:
+</td>
+</tr>
+<tr>
+<td align=3Dleft valign=3Dtop style=3D"padding-bottom: 12px;">
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100%>
+<tr>
+<td aria-hidden=3Dtrue align=3Dleft valign=3Dtop width=3D20 style=3D"font-f=
+amily: Roboto, Arial, Helvetica, sans-serif; font-size: 16px; color:#606368=
+; line-height:24px; mso-line-height-rule: exactly; padding:0px 5px 0 11px;"=
+>
+=E2=80=A2
+</td>
+<td align=3Dleft valign=3Dtop style=3D"font-family: Roboto, Arial, Helvetic=
+a, sans-serif; font-size: 16px; color:#606368; line-height:24px; letter-spa=
+cing: 0.1px; mso-line-height-rule: exactly; padding:0px 0px 0;">
+Access to select Android games on Windows
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3Dleft valign=3Dtop style=3D"padding-bottom: 12px;">
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100%>
+<tr>
+<td aria-hidden=3Dtrue align=3Dleft valign=3Dtop width=3D20 style=3D"font-f=
+amily: Roboto, Arial, Helvetica, sans-serif; font-size: 16px; color:#606368=
+; line-height:24px; mso-line-height-rule: exactly; padding:0px 5px 0 11px;"=
+>
+=E2=80=A2
+</td>
+<td align=3Dleft valign=3Dtop style=3D"font-family: Roboto, Arial, Helvetic=
+a, sans-serif; font-size: 16px; color:#606368; line-height:24px; letter-spa=
+cing: 0.1px; mso-line-height-rule: exactly; padding:0px 0px 0;">
+Keyboard and mouse support
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3Dleft valign=3Dtop style=3D"padding-bottom: 12px;">
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100%>
+<tr>
+<td aria-hidden=3Dtrue align=3Dleft valign=3Dtop width=3D20 style=3D"font-f=
+amily: Roboto, Arial, Helvetica, sans-serif; font-size: 16px; color:#606368=
+; line-height:24px; mso-line-height-rule: exactly; padding:0px 5px 0 11px;"=
+>
+=E2=80=A2
+</td>
+<td align=3Dleft valign=3Dtop style=3D"font-family: Roboto, Arial, Helvetic=
+a, sans-serif; font-size: 16px; color:#606368; line-height:24px; letter-spa=
+cing: 0.1px; mso-line-height-rule: exactly; padding:0px 0px 0;">
+Better resolution on a bigger screen
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3Dleft valign=3Dtop style=3D"padding-bottom: 29px;">
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100%>
+<tr>
+<td aria-hidden=3Dtrue align=3Dleft valign=3Dtop width=3D20 style=3D"font-f=
+amily: Roboto, Arial, Helvetica, sans-serif; font-size: 16px; color:#606368=
+; line-height:24px; mso-line-height-rule: exactly; padding:0px 5px 0 11px;"=
+>
+=E2=80=A2
+</td>
+<td align=3Dleft valign=3Dtop style=3D"font-family: Roboto, Arial, Helvetic=
+a, sans-serif; font-size: 16px; color:#606368; line-height:24px; letter-spa=
+cing: 0.1px; mso-line-height-rule: exactly; padding:0px 0px 0;">
+Privacy and security engineered by Google
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop bgcolor=3D#DADCE0 height=3D1 style=3D"line-=
+height:1px; mso-line-height-rule:exactly;">
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/spacer-11.gif width=3D1 bo=
+rder=3D0 alt=3D"" style=3D"display: block;">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!--Info Card module 2 ends-->
+<!-- Cluster module 3 starts-->
+<!-- -->
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"padding: 23px 30px 0;">
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 border=3D0 width=
+=3D100%>
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 border=3D0 width=
+=3D100%>
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 border=3D0 width=
+=3D100%>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"font-size: 24px; line-height: 36px=
+; font-family: Google Sans, Roboto, Arial, Helvetica, sans-serif; color: #2=
+02124;">
+You=E2=80=99re going to love the view
+</td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"font-family: Roboto, Arial, Helvet=
+ica, sans-serif; font-size: 16px; color:#606368; line-height:24px; letter-s=
+pacing: 0.1px; padding-top: 13px;">
+Here are some games to explore with<br aria-hidden=3Dtrue> Google Play Game=
+s on PC:
+</td>
+</tr>
+<tr>
+<td class=3Dpad_top_24_otlk align=3Dcenter valign=3Dtop style=3D"padding-to=
+p: 15px;">
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 border=3D0 width=
+=3D100%>
+<tr>
+<td align=3Dcenter valign=3Dtop width=3D160>
+<table role=3Dpresentation cellpadding=3D0 cellpadding=3D0 border=3D0>
+<tr>
+<td aria-hidden=3Dtrue align=3Dcenter valign=3Dtop> <a href=3Dhttps://notif=
+ications.google.com/g/p/ANiao5qBciQvrcOe1JuH0iQ3BhkqjS3xVqa8coyPAa-6Ka-T0t6=
+UfFb2LNL6eeJUZBp6msnjtd11Ad5JICUC6R_56_Avfb82iK-VtrWHOfhmPwbJfjJKm5Mclr4xhG=
+QdI_dlzQ9Aw30NYbQ8f1RFZyDzFt9ZXkmr-YAZ5ZVe3eYY8DCmE0tHyVaHx44yYrNYVdYMN-iwp=
+Lmlgl8NOlNKOcuNzzJzyJ1dyrisvInHnZ8EKRP0QScoPystSdBS2KTfpT8xoYJIKudmEzamWZVL=
+lHClJDF-IT7A4sfHkT0pfqLZc_IUpWGS9v3JAlXdxBHGOky3gNk_h3GBRGxJpqioYQbuomBS6eE=
+qVoYRyaNPX9tdi7xQqIgEmkV3zVtJgEWhSY2HaNAK57MeP2qZAxrAhJiF2zBazf-t6zbhX6GcyH=
+8 style=3D"text-decoration: none; display: inline-block;" target=3D_blank><=
+img src=3Dhttps://www.gstatic.com/gumdrop/files/google-play-crm-cookie-run-=
+fill-w512px-h512px-2x.png alt=3D"CookieRun: Kingdom" title=3D"CookieRun: Ki=
+ngdom" height=3Dauto width=3D128 style=3D"display: block; border-radius: 20=
+px;"></a></td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"padding-top: 16px; font-size: 16px=
+; line-height: 24px; font-family: Roboto, Arial, Helvetica, sans-serif; col=
+or: #606368; font-weight: bold;">CookieRun: Kingdom</td>
+</tr>
+</table>
+</td>
+<td align=3Dcenter valign=3Dtop width=3D160>
+<table role=3Dpresentation cellpadding=3D0 cellpadding=3D0 border=3D0 width=
+=3D100%>
+<tr>
+<td aria-hidden=3Dtrue align=3Dcenter valign=3Dtop> <a href=3Dhttps://notif=
+ications.google.com/g/p/ANiao5o5YOuH-8gN8rDSndenqY7NO_nR7BLVJAeGg2gpO011eCx=
+7bID7M_LrsrI_Gc5FHiKr6OQe3sW6lSQVSQuKJFTkfowM_VXWhWkTU79-LsHWJPB4e3InooMOqU=
+-ZOIVehTNxXMsDLsA5X9XvQdag4QZnSfoyIib1ApJphix3pfZawKZrrT2jEaDCBy--GdvMEugT6=
+bf2hkYaPEEKaC4bCFagQCtwd_lncJ6OA_-0tWVnqJ-2fD-2OWjuFEAa1upw01y5yzT3iMyWaT-D=
+itQlRlzWtywM9B0npxC-EdQXZ94oPi_UvFd0Bn2gVyLqT7vcdQXkGkNMt_HkA9HoW_S0VZceBEQ=
+TfftrSKWoGnOYBWC3vfyC4sFsTiy7ZqgiL1h0NouXPLH1dkHZc5xRiwDbb8hYFx9i7C-y8PBgHb=
+SUHgZWKz1UvaBV style=3D"text-decoration: none; display: inline-block;" targ=
+et=3D_blank><img src=3Dhttps://www.gstatic.com/gumdrop/files/google-play-cr=
+m-epic-seven-thumbnail-fill-w512px-h512px-2x.png alt=3D"Epic Seven" title=
+=3D"Epic Seven" height=3Dauto width=3D128 style=3D"display: block; border-r=
+adius: 20px;"></a></td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"padding-top: 16px; font-size: 16px=
+; line-height: 24px; font-family: Roboto, Arial, Helvetica, sans-serif; col=
+or: #606368; font-weight: bold;">Epic Seven</td>
+</tr>
+</table>
+</td>
+<td align=3Dcenter valign=3Dtop width=3D160>
+<table role=3Dpresentation cellpadding=3D0 cellpadding=3D0 border=3D0 width=
+=3D100%>
+<tr>
+<td aria-hidden=3Dtrue align=3Dcenter valign=3Dtop> <a href=3Dhttps://notif=
+ications.google.com/g/p/ANiao5qniw4g4UH-_Av88MmisR8I7EFbLKQxk2r9uez52ikHf0x=
+xkE-0y2YRRS1pwHSB-zWz0Kth8YxR7cZBOJ1WGIOaetyqJahJcCdjfoPZuXbVXFqt8mrRsiJaCp=
+TBahGh8rcCEmnUl67_vF8-RLro5kKuRGs0TgdNTf9V0wB43soMa-nrH7LNTa8c3Ggab3Kl7eBin=
+tUz-iNmtAhrzRKMo_NK6ymNXiusEfaky4W1J6C6nUgGRcferW9G3oUOfK7-3sN0uo-qwCdlzBDo=
+Elskh2sNHdjwwkEJI1I2hvzVA6GXNjJBNSPo6LSFujZSDMFmUczcwUFtaOZr7uc6GTcvZw0Q2Io=
+FPLYTM83vFucP5adMkE-iddqfH3yZ9u2bU8j_vpx1hNKvCYMMPCNZ1vntPU23V3P7BKsnUwgFkd=
+J7pQeygeDzKHfsNno3YzNq6RY style=3D"text-decoration: none; display: inline-b=
+lock;" target=3D_blank><img src=3Dhttps://www.gstatic.com/gumdrop/files/goo=
+gle-play-crm-clash-of-clans-transparent-w512px-h512px-2x.png alt=3D"Clash o=
+f Clans" title=3D"Clash of Clans" height=3Dauto width=3D128 style=3D"displa=
+y: block; border-radius: 20px;"></a></td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"padding-top: 16px; font-size: 16px=
+; line-height: 24px; font-family: Roboto, Arial, Helvetica, sans-serif; col=
+or: #606368; font-weight: bold;">Clash of Clans</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- Cluster module 3 ends-->
+<!--Info Card module ends-->
+<tr>
+<td align=3Dcenter valign=3Dtop height=3D34 style=3D"line-height:34px; mso-=
+line-height-rule:exactly;">
+<img src=3Dhttps://www.gstatic.com/gumdrop/files/spacer-11.gif width=3D1 he=
+ight=3D1 border=3D0 alt=3D"" style=3D"display: block;">
+</td>
+</tr>
+<!-- footer part starts -->
+<tr>
+<td align=3Dcenter valign=3Dtop bgcolor=3D#F1F3F4>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<!-- -->
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"padding: 10px 22px 0px;">
+<table role=3Dpresentation border=3D0 cellspacing=3D0 cellpadding=3D0 width=
+=3D100%>
+<tbody>
+<tr>
+<td class=3Dwidth130 align=3Dleft valign=3Dtop width=3D125 style=3D"padding=
+-right: 15px;">
+<table role=3Dpresentation class=3Dwidth130 width=3D125 border=3D0 cellspac=
+ing=3D0 cellpadding=3D0>
+<tbody>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"padding-left: 0px;">
+<a aria-hidden=3Dtrue href=3Dhttps://notifications.google.com/g/p/ANiao5qkL=
+bGH3OwsO9l0Hp9fsTau6PlsCwNawNVZ-2Py6URFrbaMZz9bPJALKZAC0z0oJTH_MANLs2GMAvIs=
+z6gnup0g9qK3o4ZQ2qHKoMjKo2oi7gtEFxpykLS74TiZzkees94CMXK108LOgpOeXx-qB8LDO9H=
+uj8bd_Ta0neqfftU46vLHb4bff1_xPPwTV93fScFUu6OpGLQmetW6sMLgn8Az9FwTXC68wkMmJ-=
+EnxILKx_X_MtOItBYAO9eWJ2Mrz2721CkntA style=3D"text-decoration: none; displa=
+y: block; border-top: 14px solid transparent; border-bottom: 14px solid tra=
+nsparent; max-width: 48px;" target=3D_blank><!--[if mso | ie]><br /><![endi=
+f]--><img src=3Dhttps://www.gstatic.com/gumdrop/files/ic-shield-gray-500-20=
+132805.png width=3D20 height=3Dauto border=3D0 style=3Ddisplay:block; alt=
+=3D"Google Play Protect" title=3D"Google Play Protect"><!--[if mso | ie]><b=
+r /><![endif]--><!--[if mso | ie]><br /><![endif]--></a>
+</td>
+</tr>
+<tr>
+<td role=3Dnone align=3Dcenter valign=3Dtop style=3D"padding-top: 2px; font=
+-family: Roboto, Arial, Helvetica, sans-serif; font-size: 12px; color:#6063=
+68; line-height:18px; mso-line-height-rule: exactly; letter-spacing:0.21px;=
+"><a href=3Dhttps://notifications.google.com/g/p/ANiao5qkLbGH3OwsO9l0Hp9fsT=
+au6PlsCwNawNVZ-2Py6URFrbaMZz9bPJALKZAC0z0oJTH_MANLs2GMAvIsz6gnup0g9qK3o4ZQ2=
+qHKoMjKo2oi7gtEFxpykLS74TiZzkees94CMXK108LOgpOeXx-qB8LDO9Huj8bd_Ta0neqfftU4=
+6vLHb4bff1_xPPwTV93fScFUu6OpGLQmetW6sMLgn8Az9FwTXC68wkMmJ-EnxILKx_X_MtOItBY=
+AO9eWJ2Mrz2721CkntA style=3D"text-decoration: none; color: #1565C0; font-we=
+ight: 400;" target=3D_blank>Google Play Protect</a> has you covered.</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td align=3Dleft valign=3Dbottom width=3D1>
+<table role=3Dpresentation width=3D100% border=3D0 cellspacing=3D0 cellpadd=
+ing=3D0>
+<tbody>
+<tr>
+<td align=3Dleft valign=3Dbottom bgcolor=3D#DADCE0 width=3D1 height=3D75><i=
+mg src=3Dhttps://www.gstatic.com/gumdrop/files/spacer-11.gif width=3D1 heig=
+ht=3D80 border=3D0 alt=3D"" style=3D"display: block;"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td align=3Dleft valign=3Dtop width=3D115 style=3D"padding-left: 15px; padd=
+ing-right: 15px;">
+<table role=3Dpresentation width=3D115 border=3D0 cellspacing=3D0 cellpaddi=
+ng=3D0>
+<tbody>
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<a aria-hidden=3Dtrue href=3Dhttps://notifications.google.com/g/p/ANiao5oqp=
+41IcKBzIL2sl8bGBbGSQig4dA6jPDU1Yk4Wctw2qIEgi07uIPaH4iblVH_gozCnC4yxUqDG0syz=
+nj06bb2kYB8TPHK-xjN8CYppZetd-uJtKeTzVm6X6zzX1p7WSOoabBPslWps8TGBGcyQFzfuGjw=
+uO-sKvw71TFkU6KkOrxojG07J-UJMMHtuE5JNSu9kHl-anPbkknm-pUPH7Q_fE8aznQatOcE59Q=
+NV7qjdcUrZwuVzGE3k6iwFrrjV6NgxJ0MSIPyE93Y style=3D"text-decoration: none; d=
+isplay: block; border-top: 14px solid transparent; border-bottom: 14px soli=
+d transparent; max-width: 48px;" target=3D_blank><!--[if mso | ie]><br /><!=
+[endif]--><img src=3Dhttps://www.gstatic.com/gumdrop/files/ic-question-gray=
+-20132805.png width=3D22 height=3Dauto border=3D0 style=3Ddisplay:block; al=
+t=3DQuestions? title=3DQuestions?><!--[if mso | ie]><br /><![endif]--><!--[=
+if mso | ie]><br /><![endif]--></a>
+</td>
+</tr>
+<tr>
+<td role=3Dnone align=3Dcenter valign=3Dtop style=3D"padding-top: 0px; font=
+-family: Roboto, Arial, Helvetica, sans-serif; font-size: 12px; color:#6063=
+68; line-height:18px; mso-line-height-rule: exactly; letter-spacing:0.21px;=
+">Questions?<br><a href=3Dhttps://notifications.google.com/g/p/ANiao5oqp41I=
+cKBzIL2sl8bGBbGSQig4dA6jPDU1Yk4Wctw2qIEgi07uIPaH4iblVH_gozCnC4yxUqDG0syznj0=
+6bb2kYB8TPHK-xjN8CYppZetd-uJtKeTzVm6X6zzX1p7WSOoabBPslWps8TGBGcyQFzfuGjwuO-=
+sKvw71TFkU6KkOrxojG07J-UJMMHtuE5JNSu9kHl-anPbkknm-pUPH7Q_fE8aznQatOcE59QNV7=
+qjdcUrZwuVzGE3k6iwFrrjV6NgxJ0MSIPyE93Y style=3D"text-decoration: none; colo=
+r: #1565C0; font-weight: 400;" target=3D_blank>We=E2=80=99re here to help.<=
+/a></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td align=3Dleft valign=3Dbottom width=3D1>
+<table role=3Dpresentation width=3D100% border=3D0 cellspacing=3D0 cellpadd=
+ing=3D0>
+<tbody>
+<tr>
+<td align=3Dleft valign=3Dbottom bgcolor=3D#DADCE0 width=3D1 height=3D75><i=
+mg src=3Dhttps://www.gstatic.com/gumdrop/files/spacer-11.gif width=3D1 heig=
+ht=3D80 border=3D0 alt=3D"" style=3D"display: block;"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class=3Dwidth130 align=3Dleft valign=3Dtop width=3D130 style=3D"padding=
+-left: 10px;">
+<table role=3Dpresentation class=3Dwidth130 width=3D130 border=3D0 cellspac=
+ing=3D0 cellpadding=3D0>
+<tbody>
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<a aria-hidden=3Dtrue href=3Dhttps://notifications.google.com/g/p/ANiao5rBr=
+yFG5kYkmGfPvT-fs32H3yiBhOJXFArf903cS0LyV1qHiodbi23B5izmBtylep3v1LyE3BzYsY8X=
+F0e4WA7l4l5xS-jb8MDEPXBx_JAqJH92gyfWVGo0YvlGO6KqkQaU4XmovtdBucXqn2hVQhh0SeQ=
+tSJdS2PGTZ6tfwCXWF3TcNSg-83dNWHplPUEf1zWgHM3Ejgn1PHMBNHvclAMdCi1fBc2FmMnd-Z=
+00q8oPLbqO8HCk0gY0zcLBRErdlj_zRwIcZ2EhkjUoAZjFVGdJXm37hkfWu-w72zdhO9PFBJGrq=
+g style=3D"text-decoration: none; display: block; border-top: 14px solid tr=
+ansparent; border-bottom: 14px solid transparent; max-width: 48px;" target=
+=3D_blank><!--[if mso | ie]><br /><![endif]--><img src=3Dhttps://www.gstati=
+c.com/gumdrop/files/ic-gray-gift-20132805.png width=3D22 height=3Dauto bord=
+er=3D0 style=3Ddisplay:block; alt=3D"Gift Card" title=3D"Gift Card"><!--[if=
+ mso | ie]><br /><![endif]--><!--[if mso | ie]><br /><![endif]--></a>
+</td>
+</tr>
+<tr>
+<td role=3Dnone align=3Dcenter valign=3Dtop style=3D"padding-top: 4px; font=
+-family: Roboto, Arial, Helvetica, sans-serif; font-size: 12px; color:#6063=
+68; line-height:18px; mso-line-height-rule: exactly; letter-spacing:0.21px;=
+">
+Need a gift? <a href=3Dhttps://notifications.google.com/g/p/ANiao5rBryFG5kY=
+kmGfPvT-fs32H3yiBhOJXFArf903cS0LyV1qHiodbi23B5izmBtylep3v1LyE3BzYsY8XF0e4WA=
+7l4l5xS-jb8MDEPXBx_JAqJH92gyfWVGo0YvlGO6KqkQaU4XmovtdBucXqn2hVQhh0SeQtSJdS2=
+PGTZ6tfwCXWF3TcNSg-83dNWHplPUEf1zWgHM3Ejgn1PHMBNHvclAMdCi1fBc2FmMnd-Z00q8oP=
+LbqO8HCk0gY0zcLBRErdlj_zRwIcZ2EhkjUoAZjFVGdJXm37hkfWu-w72zdhO9PFBJGrqg styl=
+e=3D"text-decoration: none; color: #1565C0; font-weight: 400;" target=3D_bl=
+ank>Get a Google Play gift card.</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"padding: 25px 0px 0px;">
+<table role=3Dpresentation width=3D416 border=3D0 cellspacing=3D0 cellpaddi=
+ng=3D0>
+<tbody>
+<tr>
+<td style=3Dborder-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:=
+0pt;mso-line-height-rule:exactly;line-height:1px; valign=3Dtop bgcolor=3D#D=
+ADCE0 align=3Dcenter height=3D1>
+<!--[if gte mso 15]>&nbsp;<![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- -->
+<tr>
+<td align=3Dcenter valign=3Dtop>
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 border=3D0 width=
+=3D100%>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"padding: 30px 0px 0px;">
+<table role=3Dpresentation align=3Dcenter border=3D0 cellpadding=3D0 cellsp=
+acing=3D0 style=3D"border-collapse:collapse; margin:0 auto; mso-table-lspac=
+e:0; mso-table-rspace:0; padding:0">
+<tbody>
+<tr>
+<th colspan=3D3 style=3D"border-collapse:collapse; color:#606368; font-fami=
+ly: Roboto, Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold;=
+ line-height:16px; margin:0; mso-table-lspace:0; mso-table-rspace:0; paddin=
+g-bottom: 19px;" width=3D100%>Was this email helpful?</th>
+</tr>
+<tr>
+<td>
+<table role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 width=
+=3D100% align=3Dcenter>
+<tr>
+<td align=3Dright valign=3Dtop>
+<a href=3Dhttps://notifications.google.com/g/p/ANiao5p_Ukz3cY1eXPJwQM3i2E4u=
+db6W5vLXbYoKNbQ0LxDblhF3kMurMzGFL40KxALJ2Xeg54ACsBzFT1gYwkFV8xkIhYMzFcpvbMZ=
+Bk_SPpK8-4wyne0j6eNZoMYre82xLPIs0jbd5jLgmN4OMBiItewp-0AmnoOgPTBaWVmh1pZnm-i=
+p0ypJVX4jFOumT8_z_YYRRRO5z-1WnOKG8vIebqd6WIAuToHPwauO29VgVB3YPyMLEGrvqSSSgn=
+rssnI_DaPvRtdlBXpy065yvkQVmVfeAMQS0-L-UXdVYdN_K5nsVYrdgEhZMWmBNumesFBIJpLYM=
+4KcV7tVWU19DFLr1Ce7Etz-_CI5DfvqRIDg6xMj5a_9gjwlcwxATvUoOcgaR_Ap5Ih8tVTdoKjV=
+oFNmNEGyJXxS6Irgg8VjtsBjV9sVjTBE34wqmkL7bd4hFalwLNemR5HSC0vtF_6ignXREoUBxvr=
+AJTWz2vuf0cEhuAbY5Sd3Wyl4nhTMUXKDtzmdy4k_0Br2aTt-IDSviLgsECSlDE0KTDNLJ3__Y4=
+FLSa-Rscpt9Y3A target=3D_blank>
+<!--[if mso | ie]><br style=3D"font-size: 8px; line-height: 8px; mso-line-h=
+eight-rule:exactly;"><![endif]--><img alt=3D"Not helpful" title=3D"Not help=
+ful" src=3Dhttps://www.gstatic.com/gumdrop/files/sad-20132805.png style=3D"=
+border:none; display:inline-block; max-width:32px; padding: 8px;" width=3D3=
+2 height=3D32><!--[if mso | ie]><br /><![endif]--><!--[if mso | ie]><br sty=
+le=3D"font-size: 8px; line-height: 8px; mso-line-height-rule:exactly;"><![e=
+ndif]--></a>
+</td>
+<!--[if !mso]><!--><td align=3Dcenter valign=3Dtop width=3D6></td><!--<![en=
+dif]--><!--[if mso | ie]><td align=3D"center" valign=3D"top" width=3D"22"><=
+/td><![endif]-->
+<td align=3Dleft valign=3Dtop>
+<a href=3Dhttps://notifications.google.com/g/p/ANiao5paIOANCwf2dBPYsljTU-CH=
+Qr6D4rFike1XYffHC8_0PNJM8U9ZnDWkDvbW4KBHzAToZWh3lIBddXjihaO27wswpU1p1S_rqLL=
+8BQFvhbm2nfVfOZDqgvgo6f2lk3P33xiSfu70NXOSXZPcAWvPZXAHttAqLkEvxKT__mjrj9hnt6=
+fFb5o7iLmULIfSybwIiYEMICpTCE4kwFpetvfWuBUgWvtl5qhw6S8eWrQuaifWHh8Lme3AwKYJw=
+5MxJF23ACGaIxuceB1I9_uLqV0Sw1iJskjulzzRQCuPJlPwfZL3d_gbDd8AA5Kn-EnOY6W_NuM8=
+ugJ4oqMZ34VHgyfRDfsLG1mHgSbXBu6ZWr51awY0pSa90723ylbufLnFd0rslEAEWNu-U8Y7iZP=
+h5NoVuZLSgqARMwjfSxIEOQkykouioM-L7C_tFDFJjltoMYOyAeCNjeMcaxZCMbbitDk_ypEPlV=
+pI6F4_W885GoDIZ4JgtMiSq9NUF8zGkPh2iu5Kd5BkefHxfSey_U3ZIlsHLxn5mFIZC2CJ1RifT=
+7-VULQocKxGgJyI target=3D_blank>
+<!--[if mso | ie]><br style=3D"font-size: 8px; line-height: 8px; mso-line-h=
+eight-rule:exactly;"><![endif]--><img alt=3DHelpful title=3DHelpful src=3Dh=
+ttps://www.gstatic.com/gumdrop/files/happy-20132805.png style=3D"border:non=
+e; display:inline-block; max-width:32px; padding: 8px;" width=3D32 height=
+=3D32><!--[if mso | ie]><br /><![endif]--><!--[if mso | ie]><br style=3D"fo=
+nt-size: 8px; line-height: 8px; mso-line-height-rule:exactly;"><![endif]-->=
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table><!--Hats Helpful Redwood-->
+</td>
+</tr>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"padding: 10px 32px 15px;">
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 border=3D0 width=
+=3D100%>
+<tr>
+<td role=3Dtext align=3Dcenter valign=3Dtop style=3D"font-family: Roboto, A=
+rial, Helvetica, sans-serif; font-size: 12px; line-height: 18px; letter-spa=
+cing: 0.21px; color: #606368;">
+<a href=3D# style=3D"text-decoration: none; color: #606368; pointer-events:=
+ none;">
+=C2=A9 2024 Google LLC,<br aria-hidden=3Dtrue>1600 Amphitheatre Parkway, Mo=
+untain View, CA 94043, USA
+</a><!--Emmett Footer Address Redwood-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class=3D"" align=3Dcenter valign=3Dtop style=3D"padding: 0px 32px 30px;=
+">
+<table role=3Dpresentation cellspacing=3D0 cellpadding=3D0 border=3D0 width=
+=3D100%>
+<tr>
+<td align=3Dcenter valign=3Dtop style=3D"font-family: Roboto, Arial, Helvet=
+ica, sans-serif; font-size: 12px; line-height: 18px; letter-spacing: 0.21px=
+; color: #606368;">
+This message was sent to <a role=3Dtext href=3D# style=3D"text-decoration: =
+none; color: #606368; pointer-events: none;">Blackpapermoon42@gmail.com</a>=
+ because you asked us to keep you up to date with the latest news and offer=
+s from Google Play. If you do not wish to receive these emails, please unsu=
+bscribe <a href=3Dhttps://notifications.google.com/g/optout/ANiao5q5E3nCiuL=
+1o39TRJJK0D1a09i9_EMDQrOt-HxK90RemOIJFATZfZtOigeZR6_g0w6-XxkTaIq2RhrDDq6n8K=
+Cx0IHqiCORtDP4ncHAHgMZmPG3D12HCfMqQUcccIo6k-ARWCP9WXHFmIANG02Fq3upKQWcFzdm0=
+LbyBqYGAvlTCAYU0VzQAfeOGnVrqmvuRPxJA7zYN2FK9ffVB_YhMyoEuQBhM1CXIkUuNItyMgXU=
+f9YPUBb4qOYsszTgxASXEKpx77smogKExp81X3Y3pUFgnp16CfUkRy6d?hl=3Den-US target=
+=3D_blank style=3D"color: #1565C0; font-weight: 400; text-decoration:none">=
+here</a>. You can also change your email preferences on Google Play by logg=
+ing in at <a href=3Dhttps://notifications.google.com/g/p/ANiao5rhTt3mYJXkC_=
+nLfOoYS2x3ILr0IWFeMWjDQ-XT0W-2mv5FGuoGHx6N-6L0F3GIG5YtR8oaXqrkXVGSL2qavQE5B=
+3RJG7iM6L6MEkEMrQN5BxZhbJkPmrKyDfmqPzYC7gLwQPEw0kwOrItz0xLWsH2mLZRROgD-Jq16=
+_NrMcHOkGdsYqAzYgyae4K2HVkjtUV4bty9btpu25lzd6A target=3D_blank style=3D"col=
+or: #1565C0; font-weight: 400; text-decoration:none">https://play.google.co=
+m/settings</a>. Please do not reply to this email, as we are unable to resp=
+ond from this email address. If you need support, please visit the <a href=
+=3Dhttps://notifications.google.com/g/p/ANiao5pGfAQukAmpLVujrak85UKDygVpHsu=
+ZW3ADUUaSLGNq7vPIn4Iy39DtTbzoTKf2vlDOuyvSbciW-HWm8rn9Ej8j481brk81bUIN1erZ2-=
+e7e-DAwmdS2mCovmNJO5jIbCzpRefBfz9Btd2xRhPHIylBsfplTaLvLCufXW-1mZdTuVtSwAdFf=
+6-H3JPf5gLLns5959SoTz4PzH6oBAIBqr7g target=3D_blank style=3D"color: #1565C0=
+; font-weight: 400; text-decoration:none">Google Play Help Center.</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- footer part ends -->
+</table>
+<!--Main content end-->
+</td>
+</tr>
+</table>
+<table role=3Dpresentation class=3Dgmail-app-fix>
+<tr>
+<td>
+<table role=3Dpresentation cellpadding=3D0 cellspacing=3D0 border=3D0 align=
+=3Dcenter width=3D480>
+<tr>
+<td cellpadding=3D0 cellspacing=3D0 border=3D0 height=3D1 ; style=3D"line-h=
+eight: 1px; min-width: 160px;"><img src=3Dhttps://www.gstatic.com/gumdrop/f=
+iles/spacer-11.gif width=3D160 height=3D1 alt=3D"" style=3D"display: block;=
+ max-height: 1px; min-height: 1px; min-width: 160px; width: 160px;"></td>
+<td cellpadding=3D0 cellspacing=3D0 border=3D0 height=3D1 ; style=3D"line-h=
+eight: 1px; min-width: 160px;"><img src=3Dhttps://www.gstatic.com/gumdrop/f=
+iles/spacer-11.gif width=3D160 height=3D1 alt=3D"" style=3D"display: block;=
+ max-height: 1px; min-height: 1px; min-width: 160px; width: 160px;"></td>
+<td cellpadding=3D0 cellspacing=3D0 border=3D0 height=3D1 ; style=3D"line-h=
+eight: 1px; min-width: 160px;"><img src=3Dhttps://www.gstatic.com/gumdrop/f=
+iles/spacer-11.gif width=3D160 height=3D1 alt=3D"" style=3D"display: block;=
+ max-height: 1px; min-height: 1px; min-width: 160px; width: 160px;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+--00000000000040b341061bf441df--

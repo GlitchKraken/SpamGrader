@@ -1,0 +1,376 @@
+Delivered-To: chadefry@gmail.com
+Received: by 2002:a2e:8e7c:0:0:0:0:0 with SMTP id t28csp304137ljk;
+        Fri, 22 Oct 2021 20:36:53 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwKkD9ZgUDAt+1G7tHb7MgwPzVqnkFxtvH/Je7quncoIVfV03ycyBMvwv8Eht+q0crIR71i
+X-Received: by 2002:ac8:7f42:: with SMTP id g2mr4069829qtk.286.1634960213044;
+        Fri, 22 Oct 2021 20:36:53 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1634960213; cv=none;
+        d=google.com; s=arc-20160816;
+        b=XOyqlF+o9J46nHKpRD+xuql6BgpNpmKqyYDapWMkkqAd1xqW0Nd6rC3xH7pjhOh9nv
+         q5sBin/d786FK322KpoCbxV1rdhmZC1BtdX4I4lNzAX04x1zYvpmLXIVBQZ1zuhbSn6m
+         lMT1S3ctJr2owesizr3DNyaRbxT7h8X85H9IarUA5vcWpMM22S4hiEVBXGTOq4rT+RCh
+         0TmLaxuCo/FntAgrPXs/Tns3CyY6DyXRB15nGcgX9L932KQh4QDSFZcEI6Mgo3LwK14Z
+         aIIu00QWh7kV5tRX16tyE7+GFz+m3x5VttU0SzE0thuRNnyyx/bPNOBLgntasBpVu3pO
+         iCmA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:mime-version:to:from:subject:date:message-id
+         :dkim-signature:dkim-signature;
+        bh=LFVa3acFBZ8bdOoPdfXaGVDRFfHd5+Kp0OXwoUzRm9E=;
+        b=s3oXJG9IewzS2wtxkoC4suqOgWbj1qbP3wDBKF+Lia1HPd3uGjBeoZSOyd3NyGk0RC
+         96KxMWWABUQi7vbSbGrNn9OaCjgXJyyFxsjNmK7ERcMAhdJnE7gQR/+C6FxlTyM0FXWP
+         jrg5XfbHDJwByKJpsYLG0/y/D9hG37dMgFhC4PGyYNqR5IliQcxh46x7PhgNle2RJYuM
+         LiiwWLTeelZKu9s7+I31wIt1nwlDzmoJu+b++6UIoIeIqOi1Nu1klitVgM8OW6z+QpBZ
+         b1LNdw/3doKtNT7Z6lS8JV7H6cfm0dVlhVJxjHgJ82f7VyiiwOK5wJ1nzTSpz4Aq0QBP
+         Albw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@dmsguild.com header.s=h2shskpl2fv2cv7wrk2mwgr4sdy3gzsi header.b=Q9iM8roS;
+       dkim=pass header.i=@amazonses.com header.s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug header.b=L9Ei3XvS;
+       spf=pass (google.com: domain of 0100017cab390216-4a5312d3-911f-4a4e-ac91-6140670be595-000000@amazonses.com designates 54.240.32.167 as permitted sender) smtp.mailfrom=0100017cab390216-4a5312d3-911f-4a4e-ac91-6140670be595-000000@amazonses.com
+Return-Path: <0100017cab390216-4a5312d3-911f-4a4e-ac91-6140670be595-000000@amazonses.com>
+Received: from a32-167.smtp-out.amazonses.com (a32-167.smtp-out.amazonses.com. [54.240.32.167])
+        by mx.google.com with ESMTPS id w12si9446794qtc.52.2021.10.22.20.36.52
+        for <chadefry@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Fri, 22 Oct 2021 20:36:53 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0100017cab390216-4a5312d3-911f-4a4e-ac91-6140670be595-000000@amazonses.com designates 54.240.32.167 as permitted sender) client-ip=54.240.32.167;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@dmsguild.com header.s=h2shskpl2fv2cv7wrk2mwgr4sdy3gzsi header.b=Q9iM8roS;
+       dkim=pass header.i=@amazonses.com header.s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug header.b=L9Ei3XvS;
+       spf=pass (google.com: domain of 0100017cab390216-4a5312d3-911f-4a4e-ac91-6140670be595-000000@amazonses.com designates 54.240.32.167 as permitted sender) smtp.mailfrom=0100017cab390216-4a5312d3-911f-4a4e-ac91-6140670be595-000000@amazonses.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=h2shskpl2fv2cv7wrk2mwgr4sdy3gzsi; d=dmsguild.com; t=1634960212;
+	h=Message-ID:Date:Subject:From:To:MIME-Version:Content-Type;
+	bh=rl+Zzk4nVMNcelwwhCTcSnGI6uzKDdO4m3atUn10vOk=;
+	b=Q9iM8roSjJmVqzOVAyhxTKRPVgJgk3OSej1vjjbOwh+xjZHodSH7+Vyl92aCJZai
+	SKp1p3kzRzP0+zZaYNpCN5A6SqO3ZwaEyHlUdskOjvOuE7dNCLXNhjkoegRuYykAmjy
+	DXVk5Sy9zV1k0CcXKltmiLJDX7c01n8liHNcrFiE=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1634960212;
+	h=Message-ID:Date:Subject:From:To:MIME-Version:Content-Type:Feedback-ID;
+	bh=rl+Zzk4nVMNcelwwhCTcSnGI6uzKDdO4m3atUn10vOk=;
+	b=L9Ei3XvSMEGM4gytMEl6u/tcER5aJL/DbMpwdmoSTWUnyrjxqSsPboygTZKk4evP
+	NbHNvt4wmFyveZqXn0LqfnJKdYcCe1sBNn8Id+ecTMCne/5iG6K1AD/BQRDg/HTY5lp
+	ugZaas1w9JGPNckSssa2VBL8HMMRXmPTsjXUNhKw=
+Message-ID: <0100017cab390216-4a5312d3-911f-4a4e-ac91-6140670be595-000000@email.amazonses.com>
+Date: Sat, 23 Oct 2021 03:36:52 +0000
+Subject: Thank you for your Dungeon Masters Guild order
+From: Dungeon Masters Guild <no-reply@dmsguild.com>
+To: Chad Fry <chadefry@gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1634960212_e4fdcf637c04b0df96e930a03622faed_=_"
+Feedback-ID: 1.us-east-1.dSYYjqJkaGjx8ycxugHmaxT7I8dEkwxM8tFvzy9Dkfo=:AmazonSES
+X-SES-Outgoing: 2021.10.23-54.240.32.167
+
+
+--_=_swift_v4_1634960212_e4fdcf637c04b0df96e930a03622faed_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+a:link, a:visited {=09text-decoration: none;}
+
+
+
+
+Thank you for shopping at Dungeon Masters Guild!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Account&nbsp;|&nbsp;My Library&nbsp;|&nbsp;Dungeon Masters Guild
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dear Chad Fry,
+
+
+Thank you for shopping at Dungeon Masters Guild!
+
+Your OrderCurse of St=
+rahd - Death House - TaleSpire Editionx1$0.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+Download Format: PDF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DownloadOrder Contents:$0=
+.00Total:$0.00Detailed Invoice\n
+\n
+Download problems?&nbsp;&nbsp;&nbsp=
+;&nbsp;Frequently Asked Questions\n
+Your Order Number is  31952285&nbsp;&=
+nbsp;&nbsp;Contact Us\n\n
+You Might Also Like&nbsp;      \nCurse of Strah=
+d - Village of Barovia - TaleSpire Edition    \nCurse of Strahd - Church of=
+ Barovia - TaleSpire Edition    \nCurse of Strahd - Old Bonegrinder - TaleS=
+pire Edition        \nInto Wonderland: A Feywild Setting Book    \nCurse of=
+ Strahd: Props &amp; Handouts    \nForge of Fury - The Mountain Door - Tale=
+Spire Edition        \nMordenkainen in Barovia    \nDarklords &amp; Domains=
+: The Lady of Ravens    \nThe Interactive Tome of Strahd        \nA Guide t=
+o Curse of Strahd    \nCastle Ravenloft Player Maps (Fantasy Grounds &amp; =
+Source Maps)    \nCurse of Strahd: Escaping Death House Skill Challenge  =
+
+
+&nbsp;
+
+Regards,\nDungeon Masters Guild
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--_=_swift_v4_1634960212_e4fdcf637c04b0df96e930a03622faed_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<body style=3D"margin: 0; padding: 0; border: 0; width: 100% !important;">
+<style type=3D"text/css">a:link, a:visited {=09text-decoration: none;}</sty=
+le><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"650px">
+<tr>
+<td bgcolor=3D"#FFFFFF">
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"650px">
+<tr>
+<td bgcolor=3D"#FFFFFF" width=3D"10px"></td><td align=3D"center" valign=3D"=
+top" bgcolor=3D"#FFFFFF" style=3D"padding-bottom: 15px;">Thank you for shop=
+ping at Dungeon Masters Guild!</td>
+<td bgcolor=3D"#FFFFFF" width=3D"10px"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td bgcolor=3D"#FFFFFF">
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"650px">
+<tr>
+<td align=3D"left" valign=3D"top" bgcolor=3D"#FFFFFF" style=3D"padding-bott=
+om: 15px;">
+<a href=3D"https://www.dmsguild.com/index.php" style=3D"text-decoration: no=
+ne; font-size: 1px;"><img style=3D"display: block;" src=3D"https://www.dmsg=
+uild.com/themes/dmg/images/email_header_01.png" /></a>
+</td>
+<td align=3D"right" valign=3D"top" bgcolor=3D"#FFFFFF" style=3D"padding-bot=
+tom: 15px;">
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">
+<tr>
+<td align=3D"right" valign=3D"top" bgcolor=3D"#FFFFFF" style=3D"padding-bot=
+tom: 15px;">
+<b><a href=3D"https://www.dmsguild.com/account.php" style=3D"text-decoratio=
+n: none; color: #0000CC;">Account</a>&nbsp;|&nbsp;<a href=3D"https://www.dm=
+sguild.com/my_library.php" style=3D"text-decoration: none; color: #0000CC;"=
+>My Library</a>&nbsp;|&nbsp;<a href=3D"https://www.dmsguild.com/index.php" =
+style=3D"text-decoration: none; color: #0000CC;">Dungeon Masters Guild</a>
+</b>
+</td>
+</tr>
+<tr>
+<td align=3D"right" valign=3D"top" bgcolor=3D"#FFFFFF">
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td bgcolor=3D"#FFFFFF">
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"650px"><tr=
+>
+<td bgcolor=3D"#FFFFFF" width=3D"10px"></td><td align=3D"left" valign=3D"to=
+p" bgcolor=3D"#FFFFFF">
+<h2>Dear Chad Fry,</h2>
+</td>
+<td bgcolor=3D"#FFFFFF" width=3D"10px"></td></tr>
+<tr><td bgcolor=3D"#FFFFFF" width=3D"10px"></td><td bgcolor=3D"#FFFFFF" wid=
+th=3D"630px">Thank you for shopping at Dungeon Masters Guild!
+
+<h2>Your=
+ Order</h2><table width=3D"500px"><tr><td style=3D"border-top: 1px solid #6=
+66666;" width=3D"65%" valign=3D"top">Curse of Strahd - Death House - TaleSp=
+ire Edition<td style=3D"border-top: 1px solid #666666;" width=3D"5%" valign=
+=3D"top">x1</td><td style=3D"border-top: 1px solid #666666;" width=3D"20%">=
+</td><td style=3D"border-top: 1px solid #666666;" width=3D"10%" align=3D"ri=
+ght" valign=3D"top">$0.00</td></tr><tr><td colspan=3D"4">&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;Download Format: PDF</td></tr><tr><td colspan=3D"4">&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;<a href=3D'https://www.dmsguild.com/my_library.php?show_=
+all=3D1&showMe=3DCurse+of+Strahd+-+Death+House+-+TaleSpire+Edition'>Downloa=
+d</a></td></tr></table><table width=3D"500px"><tr><td width=3D"60%"></td><t=
+d width=3D"5%"></td><td width=3D"20%">Order Contents:</td><td width=3D"10%"=
+ align=3D"right">$0.00</td></tr><tr><td width=3D"60%"></td><td width=3D"5%"=
+></td><td width=3D"20%">Total:</td><td width=3D"10%" align=3D"right">$0.00<=
+/td></tr><tr><td></td><td></td><td colspan=3D"2"><a href=3D"https://www.dms=
+guild.com/account_history_info.php?order_id=3D31952285">Detailed Invoice</a=
+></td></tr></table><br />
+<br />
+Download problems?&nbsp;&nbsp;&nbsp;&n=
+bsp;<a href=3D"https://www.dmsguild.com/faq.php">Frequently Asked Questions=
+</a><br />
+Your Order Number is  <a href=3D"https://www.dmsguild.com/acco=
+unt_history_info.php?order_id=3D31952285" target=3D"_blank">31952285</a>&nb=
+sp;&nbsp;&nbsp;<a href=3D"https://www.dmsguild.com/contact_us.php">Contact =
+Us</a><br /><br />
+<h2>You Might Also Like</h2><!-- begin suggestive_sell=
+ing printAlsoPurchasedContentBox --><div style=3D"width: 100%;;min-height:1=
+8px;"  height=3D"14" class=3D"infoBoxHeading" width=3D"100%">&nbsp;</div><d=
+iv style=3D"width: 100%;;min-height:18px;"  class=3D"infoBox"><table border=
+=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" class=3D"standard=
+Text standardContent">  <tr>    <td align=3D"center" class=3D"smallText" wi=
+dth=3D"33%" valign=3D"top"><a href=3D"https://www.dmsguild.com/product/3527=
+87/Curse-of-Strahd--Village-of-Barovia--TaleSpire-Edition?src=3Demail_also_=
+purchased"><img class=3D"onestart" src=3D"https://d1vzi28wh99zvq.cloudfront=
+.net/images/8957/352787-thumb140.jpg" border=3D"0" alt=3D"Curse of Strahd -=
+ Village of Barovia - TaleSpire Edition" width=3D"80" ></a><br><a href=3D"h=
+ttps://www.dmsguild.com/product/352787/Curse-of-Strahd--Village-of-Barovia-=
+-TaleSpire-Edition?src=3Demail_also_purchased">Curse of Strahd - Village of=
+ Barovia - TaleSpire Edition</a></td>    <td align=3D"center" class=3D"smal=
+lText" width=3D"33%" valign=3D"top"><a href=3D"https://www.dmsguild.com/pro=
+duct/352156/Curse-of-Strahd--Church-of-Barovia--TaleSpire-Edition?src=3Dema=
+il_also_purchased"><img class=3D"onestart" src=3D"https://d1vzi28wh99zvq.cl=
+oudfront.net/images/8957/352156-thumb140.jpg" border=3D"0" alt=3D"Curse of =
+Strahd - Church of Barovia - TaleSpire Edition" width=3D"80" ></a><br><a hr=
+ef=3D"https://www.dmsguild.com/product/352156/Curse-of-Strahd--Church-of-Ba=
+rovia--TaleSpire-Edition?src=3Demail_also_purchased">Curse of Strahd - Chur=
+ch of Barovia - TaleSpire Edition</a></td>    <td align=3D"center" class=3D=
+"smallText" width=3D"33%" valign=3D"top"><a href=3D"https://www.dmsguild.co=
+m/product/353075/Curse-of-Strahd--Old-Bonegrinder--TaleSpire-Edition?src=3D=
+email_also_purchased"><img class=3D"onestart" src=3D"https://d1vzi28wh99zvq=
+.cloudfront.net/images/8957/353075-thumb140.png" border=3D"0" alt=3D"Curse =
+of Strahd - Old Bonegrinder - TaleSpire Edition" width=3D"80" ></a><br><a h=
+ref=3D"https://www.dmsguild.com/product/353075/Curse-of-Strahd--Old-Bonegri=
+nder--TaleSpire-Edition?src=3Demail_also_purchased">Curse of Strahd - Old B=
+onegrinder - TaleSpire Edition</a></td>  </tr>  <tr>    <td align=3D"center=
+" class=3D"smallText" width=3D"33%" valign=3D"top"><a href=3D"https://www.d=
+msguild.com/product/352628/Into-Wonderland-A-Feywild-Setting-Book?src=3Dema=
+il_also_purchased"><img class=3D"onestart" src=3D"https://d1vzi28wh99zvq.cl=
+oudfront.net/images/8957/352628-thumb140.png" border=3D"0" alt=3D"Into Wond=
+erland: A Feywild Setting Book" width=3D"80" ></a><br><a href=3D"https://ww=
+w.dmsguild.com/product/352628/Into-Wonderland-A-Feywild-Setting-Book?src=3D=
+email_also_purchased">Into Wonderland: A Feywild Setting Book</a></td>    <=
+td align=3D"center" class=3D"smallText" width=3D"33%" valign=3D"top"><a hre=
+f=3D"https://www.dmsguild.com/product/354932/Curse-of-Strahd-Props--Handout=
+s?src=3Demail_also_purchased"><img class=3D"onestart" src=3D"https://d1vzi2=
+8wh99zvq.cloudfront.net/images/8957/354932-thumb140.jpg" border=3D"0" alt=
+=3D"Curse of Strahd: Props &amp; Handouts" width=3D"80" ></a><br><a href=3D=
+"https://www.dmsguild.com/product/354932/Curse-of-Strahd-Props--Handouts?sr=
+c=3Demail_also_purchased">Curse of Strahd: Props &amp; Handouts</a></td>   =
+ <td align=3D"center" class=3D"smallText" width=3D"33%" valign=3D"top"><a h=
+ref=3D"https://www.dmsguild.com/product/353663/Forge-of-Fury--The-Mountain-=
+Door--TaleSpire-Edition?src=3Demail_also_purchased"><img class=3D"onestart"=
+ src=3D"https://d1vzi28wh99zvq.cloudfront.net/images/8957/353663-thumb140.j=
+pg" border=3D"0" alt=3D"Forge of Fury - The Mountain Door - TaleSpire Editi=
+on" width=3D"80" ></a><br><a href=3D"https://www.dmsguild.com/product/35366=
+3/Forge-of-Fury--The-Mountain-Door--TaleSpire-Edition?src=3Demail_also_purc=
+hased">Forge of Fury - The Mountain Door - TaleSpire Edition</a></td>  </tr=
+>  <tr>    <td align=3D"center" class=3D"smallText" width=3D"33%" valign=3D=
+"top"><a href=3D"https://www.dmsguild.com/product/352670/Mordenkainen-in-Ba=
+rovia?src=3Demail_also_purchased"><img class=3D"onestart" src=3D"https://d1=
+vzi28wh99zvq.cloudfront.net/images/8957/352670-thumb140.jpg" border=3D"0" a=
+lt=3D"Mordenkainen in Barovia" width=3D"80" ></a><br><a href=3D"https://www=
+.dmsguild.com/product/352670/Mordenkainen-in-Barovia?src=3Demail_also_purch=
+ased">Mordenkainen in Barovia</a></td>    <td align=3D"center" class=3D"sma=
+llText" width=3D"33%" valign=3D"top"><a href=3D"https://www.dmsguild.com/pr=
+oduct/352714/Darklords--Domains-The-Lady-of-Ravens?src=3Demail_also_purchas=
+ed"><img class=3D"onestart" src=3D"https://d1vzi28wh99zvq.cloudfront.net/im=
+ages/8957/352714-thumb140.jpg" border=3D"0" alt=3D"Darklords &amp; Domains:=
+ The Lady of Ravens" width=3D"80" ></a><br><a href=3D"https://www.dmsguild.=
+com/product/352714/Darklords--Domains-The-Lady-of-Ravens?src=3Demail_also_p=
+urchased">Darklords &amp; Domains: The Lady of Ravens</a></td>    <td align=
+=3D"center" class=3D"smallText" width=3D"33%" valign=3D"top"><a href=3D"htt=
+ps://www.dmsguild.com/product/301867/The-Interactive-Tome-of-Strahd?src=3De=
+mail_also_purchased"><img class=3D"onestart" src=3D"https://d1vzi28wh99zvq.=
+cloudfront.net/images/8957/301867-thumb140.jpg" border=3D"0" alt=3D"The Int=
+eractive Tome of Strahd" width=3D"80" ></a><br><a href=3D"https://www.dmsgu=
+ild.com/product/301867/The-Interactive-Tome-of-Strahd?src=3Demail_also_purc=
+hased">The Interactive Tome of Strahd</a></td>  </tr>  <tr>    <td align=3D=
+"center" class=3D"smallText" width=3D"33%" valign=3D"top"><a href=3D"https:=
+//www.dmsguild.com/product/189372/A-Guide-to-Curse-of-Strahd?src=3Demail_al=
+so_purchased"><img class=3D"onestart" src=3D"https://d1vzi28wh99zvq.cloudfr=
+ont.net/images/8957/189372-thumb140.jpg" border=3D"0" alt=3D"A Guide to Cur=
+se of Strahd" width=3D"80" ></a><br><a href=3D"https://www.dmsguild.com/pro=
+duct/189372/A-Guide-to-Curse-of-Strahd?src=3Demail_also_purchased">A Guide =
+to Curse of Strahd</a></td>    <td align=3D"center" class=3D"smallText" wid=
+th=3D"33%" valign=3D"top"><a href=3D"https://www.dmsguild.com/product/23676=
+1/Castle-Ravenloft-Player-Maps-Fantasy-Grounds--Source-Maps?src=3Demail_als=
+o_purchased"><img class=3D"onestart" src=3D"https://d1vzi28wh99zvq.cloudfro=
+nt.net/images/8957/236761-thumb140.jpg" border=3D"0" alt=3D"Castle Ravenlof=
+t Player Maps (Fantasy Grounds &amp; Source Maps)" width=3D"80" ></a><br><a=
+ href=3D"https://www.dmsguild.com/product/236761/Castle-Ravenloft-Player-Ma=
+ps-Fantasy-Grounds--Source-Maps?src=3Demail_also_purchased">Castle Ravenlof=
+t Player Maps (Fantasy Grounds &amp; Source Maps)</a></td>    <td align=3D"=
+center" class=3D"smallText" width=3D"33%" valign=3D"top"><a href=3D"https:/=
+/www.dmsguild.com/product/248157/Curse-of-Strahd-Escaping-Death-House-Skill=
+-Challenge?src=3Demail_also_purchased"><img class=3D"onestart" src=3D"https=
+://d1vzi28wh99zvq.cloudfront.net/images/8957/248157-thumb140.jpg" border=3D=
+"0" alt=3D"Curse of Strahd: Escaping Death House Skill Challenge" width=3D"=
+80" ></a><br><a href=3D"https://www.dmsguild.com/product/248157/Curse-of-St=
+rahd-Escaping-Death-House-Skill-Challenge?src=3Demail_also_purchased">Curse=
+ of Strahd: Escaping Death House Skill Challenge</a></td>  </tr></table></d=
+iv><!-- end suggestive_selling printAlsoPurchasedContentBox --><!-- suggest=
+ive selling printAlsoPurchasedContentBox load time: 0.23970890045166 -->
+=
+</td><td bgcolor=3D"#FFFFFF" width=3D"10px"></td></tr><tr>
+<td bgcolor=3D"#FFFFFF" width=3D"10px"></td><td bgcolor=3D"#FFFFFF">&nbsp;<=
+/td><td bgcolor=3D"#FFFFFF" width=3D"10px"></td></tr>
+<tr>
+<td bgcolor=3D"#FFFFFF" width=3D"10px"></td><td align=3D"left" valign=3D"to=
+p" bgcolor=3D"#FFFFFF" style=3D"padding-bottom: 15px;">Regards,<br />Dungeo=
+n Masters Guild</td>
+<td bgcolor=3D"#FFFFFF" width=3D"10px"></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td bgcolor=3D"#FFFFFF">
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"650px">
+<tr>
+<td align=3D"center" valign=3D"top" bgcolor=3D"#FFFFFF">
+<img src=3D"https://www.dmsguild.com/themes/dmg/images/email_footer_01.png"=
+ alt=3D"Thanks for shopping at Dungeon Masters Guild, " width=3D"650px" hei=
+ght=3D"30" style=3D"margin: 0; padding: 0; border: 0;" />
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+
+--_=_swift_v4_1634960212_e4fdcf637c04b0df96e930a03622faed_=_--
+
