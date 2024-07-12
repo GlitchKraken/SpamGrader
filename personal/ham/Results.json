@@ -1,106 +1,178 @@
 {
     "Our lowest price of the year_ Save up to $215 on NFL Sunday Ticket and YouTube TV.eml": [
         {
-            "Total Risk Score:": 70
+            "Total Risk Score:": 170
         },
         {
             "KeyPhrasesModule_Score": [
                 70,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
             ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
         }
     ],
     "Citi \u2013 Congratulations! You are Cleared to Start .eml": [
         {
-            "Total Risk Score:": 60
+            "Total Risk Score:": 160
         },
         {
             "KeyPhrasesModule_Score": [
                 60,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
             ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
         }
     ],
     "Your Cloudflare Invoice is Available.eml": [
         {
-            "Total Risk Score:": 40
+            "Total Risk Score:": 140
         },
         {
             "KeyPhrasesModule_Score": [
                 40,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
             ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
         }
     ],
     "BioShock Infinite from your Steam wishlist is now on sale!.eml": [
         {
-            "Total Risk Score:": 30
+            "Total Risk Score:": 130
         },
         {
             "KeyPhrasesModule_Score": [
                 30,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
             ]
         }
     ],
     "Phoenix Wright_ Ace Attorney Trilogy and one other item from your Steam wishlist is now on sale!.eml": [
         {
-            "Total Risk Score:": 30
+            "Total Risk Score:": 130
         },
         {
             "KeyPhrasesModule_Score": [
                 30,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
             ]
         }
     ],
     "Planet Coaster and 4 other items from your Steam wishlist are now on sale!.eml": [
         {
-            "Total Risk Score:": 30
+            "Total Risk Score:": 130
         },
         {
             "KeyPhrasesModule_Score": [
                 30,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
             ]
         }
     ],
     "Putting together a CTF team or taking it easy_ \ud83e\udd18.eml": [
         {
-            "Total Risk Score:": 30
+            "Total Risk Score:": 130
         },
         {
             "KeyPhrasesModule_Score": [
                 30,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
             ]
         }
     ],
     "Thank you for your Steam purchase!.eml": [
         {
-            "Total Risk Score:": 30
+            "Total Risk Score:": 130
         },
         {
             "KeyPhrasesModule_Score": [
                 30,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
             ]
         }
     ],
     "Updates to Discord\u2019s Developer Terms of Service and Policy .eml": [
         {
-            "Total Risk Score:": 30
+            "Total Risk Score:": 130
         },
         {
             "KeyPhrasesModule_Score": [
                 30,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
             ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
         }
     ],
     "Etai just messaged you.eml": [
         {
-            "Total Risk Score:": 29
+            "Total Risk Score:": 129
         },
         {
             "KeyPhrasesModule_Score": [
@@ -113,11 +185,19 @@
                 19,
                 "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
         }
     ],
     "\u201cnetwork specialist\u201d_ K\u00f6rber Supply Chain - Join the K\u00f6rber Talent Network! and more.eml": [
         {
-            "Total Risk Score:": 28
+            "Total Risk Score:": 128
         },
         {
             "KeyPhrasesModule_Score": [
@@ -130,11 +210,19 @@
                 18,
                 "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
         }
     ],
     "Your review reached 1,000 views \ud83d\udcdd.eml": [
         {
-            "Total Risk Score:": 27
+            "Total Risk Score:": 127
         },
         {
             "KeyPhrasesModule_Score": [
@@ -147,11 +235,19 @@
                 17,
                 "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
         }
     ],
     "Action required_ Pending Pre-Day 1 Onboarding Task for Chad Fry (CF22940).eml": [
         {
-            "Total Risk Score:": 26
+            "Total Risk Score:": 126
         },
         {
             "KeyPhrasesModule_Score": [
@@ -164,104 +260,337 @@
                 16,
                 "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
         }
     ],
     "Get the Best Deal on Gigantic_ Rampage Edition.eml": [
         {
-            "Total Risk Score:": 20
+            "Total Risk Score:": 120
         },
         {
             "KeyPhrasesModule_Score": [
                 20,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
             ]
         }
     ],
     "Your Twitch Account - Successful Log-in.eml": [
         {
-            "Total Risk Score:": 20
+            "Total Risk Score:": 120
         },
         {
             "KeyPhrasesModule_Score": [
                 20,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
             ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
         }
     ],
     "Seth just messaged you.eml": [
         {
-            "Total Risk Score:": 19
+            "Total Risk Score:": 119
         },
         {
             "EntropyModule_SenderNameRandom_Score": [
                 19,
                 "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
         }
     ],
     "You were gifted a channel membership. Welcome to Hakos Baelz Ch. hololive-EN\u2019s community. .eml": [
         {
-            "Total Risk Score:": 18
+            "Total Risk Score:": 118
         },
         {
             "EntropyModule_SenderNameRandom_Score": [
                 18,
                 "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
         }
     ],
     "4 Steps to Create SEO Optimized Articles That Rank _ Ferdian Arif.eml": [
         {
-            "Total Risk Score:": 10
+            "Total Risk Score:": 110
         },
         {
             "KeyPhrasesModule_Score": [
                 10,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
             ]
         }
     ],
     "Action required_ You are over your storage limit(1).eml": [
         {
-            "Total Risk Score:": 10
+            "Total Risk Score:": 110
         },
         {
             "KeyPhrasesModule_Score": [
                 10,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
             ]
         }
     ],
     "Confirm your upcoming dental appointment at Ultra Smiles.eml": [
         {
-            "Total Risk Score:": 10
+            "Total Risk Score:": 110
         },
         {
             "KeyPhrasesModule_Score": [
                 10,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
             ]
         }
     ],
     "ICYMI_ Summer Games Fest Trailer \ud83d\udc40.eml": [
         {
-            "Total Risk Score:": 10
+            "Total Risk Score:": 110
         },
         {
             "KeyPhrasesModule_Score": [
                 10,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
             ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
         }
     ],
     "Important notice regarding your data.eml": [
         {
-            "Total Risk Score:": 10
+            "Total Risk Score:": 110
         },
         {
             "KeyPhrasesModule_Score": [
                 10,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Storm Debris Cleanup.eml": [
+        {
+            "Total Risk Score:": 110
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                10,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Thank you for your Dungeon Masters Guild order.eml": [
+        {
+            "Total Risk Score:": 110
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                10,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Thanks for shopping with us!.eml": [
+        {
+            "Total Risk Score:": 110
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                10,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Version 2.3 Information Update! 300 Stellar Jades Await!.eml": [
+        {
+            "Total Risk Score:": 110
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                10,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "[#ULK-418-11620]_ Website Advertises _hacking Services_ on youtube, other public sites..eml": [
+        {
+            "Total Risk Score:": 110
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                10,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "\u23f0 Modern Horizons 3 Preorder ends soon! \u23f0.eml": [
+        {
+            "Total Risk Score:": 110
+        },
+        {
+            "KeyPhrasesModule_Score": [
+                10,
+                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "ApplicantServices.com Fingerprint Appointment Confirmation_ 3_7_2022 6_04 AM CST with The UPS Store 4207 (TX_SRSU4207).eml": [
+        {
+            "Total Risk Score:": 100
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "Application Received.eml": [
+        {
+            "Total Risk Score:": 100
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
+            ]
+        }
+    ],
+    "CI-R51_ PDF Transcript Notification Part 1 - 1JA7914151.eml": [
+        {
+            "Total Risk Score:": 100
+        },
+        {
+            "AI_Module_Score": [
+                100,
+                "This email was given a higher score because a series of AI voted to consider it as spam.",
+                "        === Naive Bayes ===        ---Random Forest ---     === SVM ===            ---Logistic Regression ---   === XGBoost ===",
+                "Votes: ['Spam (Weight: 0.1822)', 'Spam (Weight: 0.2047)', 'Spam (Weight: 0.2052)', 'Spam (Weight: 0.2039)', 'Ham (Weight: 0.2039)'], Weighted Spam Score: 0.7961, Classified as: Spam\n"
             ]
         }
     ],
@@ -274,87 +603,6 @@
                 10,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
             ]
-        }
-    ],
-    "Storm Debris Cleanup.eml": [
-        {
-            "Total Risk Score:": 10
-        },
-        {
-            "KeyPhrasesModule_Score": [
-                10,
-                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
-            ]
-        }
-    ],
-    "Thank you for your Dungeon Masters Guild order.eml": [
-        {
-            "Total Risk Score:": 10
-        },
-        {
-            "KeyPhrasesModule_Score": [
-                10,
-                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
-            ]
-        }
-    ],
-    "Thanks for shopping with us!.eml": [
-        {
-            "Total Risk Score:": 10
-        },
-        {
-            "KeyPhrasesModule_Score": [
-                10,
-                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
-            ]
-        }
-    ],
-    "Version 2.3 Information Update! 300 Stellar Jades Await!.eml": [
-        {
-            "Total Risk Score:": 10
-        },
-        {
-            "KeyPhrasesModule_Score": [
-                10,
-                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
-            ]
-        }
-    ],
-    "[#ULK-418-11620]_ Website Advertises _hacking Services_ on youtube, other public sites..eml": [
-        {
-            "Total Risk Score:": 10
-        },
-        {
-            "KeyPhrasesModule_Score": [
-                10,
-                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
-            ]
-        }
-    ],
-    "\u23f0 Modern Horizons 3 Preorder ends soon! \u23f0.eml": [
-        {
-            "Total Risk Score:": 10
-        },
-        {
-            "KeyPhrasesModule_Score": [
-                10,
-                "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
-            ]
-        }
-    ],
-    "ApplicantServices.com Fingerprint Appointment Confirmation_ 3_7_2022 6_04 AM CST with The UPS Store 4207 (TX_SRSU4207).eml": [
-        {
-            "Total Risk Score:": 0
-        }
-    ],
-    "Application Received.eml": [
-        {
-            "Total Risk Score:": 0
-        }
-    ],
-    "CI-R51_ PDF Transcript Notification Part 1 - 1JA7914151.eml": [
-        {
-            "Total Risk Score:": 0
         }
     ]
 }

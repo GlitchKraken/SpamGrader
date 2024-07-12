@@ -38,11 +38,10 @@ def main():
     epilog="2024 - By Chad Fry"
     )
     parser.add_argument("-f", help="Choose a single file to examine.", required=False, metavar="Filename")
-    parser.add_argument("-d", help="Scan all email files in the current directory (supports .eml and .msg files)", required=False, action="store_true")
+    parser.add_argument("-d", help="Scan all email files in the provided directory (supports .eml and .msg files)", required=False, metavar="DirectoryToScan")
     parser.add_argument("-V", help="Use VirusTotal for analysis (Requires API Key) ((I've included one of my own for the projects sake))", required=False, action="store_true")
     parser.add_argument("-vv", help="set verbose mode (extra debugging text)", required=False, action="store_true")
     parser.add_argument("-ai", help="Several AI will parse the email-body's content, and vote on wether each consider the message to be spam or not", required=False, action="store_true")
-    parser.add_argument("-W", help="Weighted scores. By Default, each module will only ", required=False, action="store_true")
     parser.add_argument("-e", help="Evaluation results. Will calculate and display effectiveness of each module, given a directory.", required=False, action="store_true")
     # below line of code basically just prints the help option if no args were supplied.
     #Source: https://stackoverflow.com/questions/8259001/python-argparse-command-line-flags-without-arguments
@@ -118,19 +117,34 @@ def main():
     elif args.f == "":
         print("Please provide an email to scan, or specify Directory Mode with -d")
     elif args.d:
+        
+        if args.d != "":
+            try:
+                absolutePath = os.path.abspath(args.d)
+                contentsOfDir = os.listdir(absolutePath)
+            except Exception as DirectoryOpenException:
+                print("[-] Error while trying to open directory: " + str(DirectoryOpenException))
+                exit(0)
+        
         # this module is responsible for opening every .eml and .msg file in the current directory and
         # parsing them one-by-one. oh joy!
         print("=======================")
         print("Entering Directory Mode")
         print("=======================")
         emailList = []
-        for files in os.listdir(os.getcwd()):
+        #for files in os.listdir(os.getcwd()):
+        for files in contentsOfDir:
             if files.endswith(('msg', 'eml')):
                 #print("file:")
                 #print(files)
                 emailList.append(files)
             else:
                 continue
+            
+        # leave if no emails were found.
+        if len(emailList) <= 0:
+            print("[!] No emails were found in the provided directory! Exiting.")
+            exit(0)
         
         # we will need this for doing evaluation...
         totalNumEmails = 0
@@ -149,7 +163,7 @@ def main():
             # basic error handling
             try:
                 #try to create an entry in the emails dict, with the email itself 
-                email = mailparser.parse_from_file(mail)
+                email = mailparser.parse_from_file(args.d + "/" +mail)
             except Exception as emailReadError:
                 print("[-] Error while trying to open a given email file in Dir Mode: " + str(emailReadError))
                 exit(0)
