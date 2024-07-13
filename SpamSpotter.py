@@ -86,7 +86,7 @@ def main():
         riskKeyWords(email)
         riskEntropy(email)
         if args.ai:
-            riskSVM(email)
+            riskAI(email)
         if args.V:
             riskVirusTotal(email)
         
@@ -174,7 +174,7 @@ def main():
             riskKeyWords(email)
             riskEntropy(email)
             if args.ai:
-                riskSVM(email)
+                riskAI(email)
             # all modules have been run on the email, add it do the big list.
             
             
@@ -408,7 +408,7 @@ def riskEntropy(email):
         if SenderNameEntropy < 0.9:
             # if the name is mostly one character, eg, aaaaaaa@gmail.com, this is also spam-like,
             # and should be marked as such.
-            RiskScore += 50
+            RiskScore += 100
             email_score_breakdown.append({"EntropyModule_SenderNameLow_Score" : (RiskScore, "This email was given a higher risk-score because the sender's  name was too repetetive, when compared to the alexa top 1 million.")})
 
 
@@ -430,7 +430,7 @@ def riskEntropy(email):
         #print("[!] Warning While running Risk Entropy: No From User or Domain was found!")
         fromAddr = "Error"
         return
-def riskSVM(email):
+def riskAI(email):
     #we CAN use an API... but lets try using our own first, to test performance.
     #jsonMail = {'text': email.message_as_string
     #            }
