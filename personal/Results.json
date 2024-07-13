@@ -1,11 +1,23 @@
 {
-    "Someone tried to log into your account, user ID_40726-16204-66925.eml": [
+    "./spam/\ud835\uddec\ud835\uddfc\ud835\ude02 \ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\uddf2\ud835\uddf6\ud835\ude03\ud835\uddf2\ud835\uddf1 \ud835\uddee \ud835\uddf1\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddf0\ud835\ude01 \ud835\uddf1\ud835\uddf2\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf2\ud835\uddf1 $7000.00((No_deposit_required))__4WSG.eml": [
         "Total Risk Score:",
-        20.0,
+        169.0,
         {
             "KeyPhrasesModule_Score": [
-                20,
+                50,
                 "This email was given a higher risk-score because certain phrases/words were found in this email that are commonly found in spam."
+            ]
+        },
+        {
+            "EntropyModule_SenderNameRandom_Score": [
+                20,
+                "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million."
+            ]
+        },
+        {
+            "EntropyModule_SenderDomain_Score": [
+                99,
+                "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million."
             ]
         }
     ]
