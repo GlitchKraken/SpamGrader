@@ -13,6 +13,18 @@
 
 ---
 
+<h2>Installation: </h2>
+
+- Note: Project will probably only work on linux or WSL. 
+
+```
+pip install -r requirements.txt
+```
+
+
+---
+
+
 <h2>Usage:</h2>
 
 
