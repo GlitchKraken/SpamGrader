@@ -40,8 +40,8 @@ def main():
     parser.add_argument("-f", help="Choose a single file to examine.", required=False, metavar="Filename")
     parser.add_argument("-d", help="Scan all email files in the provided directory (supports .eml and .msg files)", required=False, metavar="DirectoryToScan")
     parser.add_argument("-V", help="Use VirusTotal for analysis (Requires API Key) ((I've included one of my own for the projects sake))", required=False, action="store_true")
-    parser.add_argument("-vv", help="set verbose mode (extra debugging text)", required=False, action="store_true")
-    parser.add_argument("-ai", help="Several AI will parse the email-body's content, and vote on wether each consider the message to be spam or not", required=False, action="store_true")
+    parser.add_argument("-vv", help="Set verbose mode (extra debugging text)", required=False, action="store_true")
+    parser.add_argument("-ai", help="Several AI will parse the email-body's content, and vote on whether each consider the message to be spam or not", required=False, action="store_true")
     #parser.add_argument("-e", help="Evaluation results. Will calculate and display effectiveness of each module, given a directory.", required=False, action="store_true")
     # below line of code basically just prints the help option if no args were supplied.
     #Source: https://stackoverflow.com/questions/8259001/python-argparse-command-line-flags-without-arguments
