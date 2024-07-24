@@ -1,0 +1,961 @@
+Delivered-To: blackpapermoon42@gmail.com
+Received: by 2002:a05:6359:708b:b0:1a4:ef03:4af8 with SMTP id ub11csp576771rwb;
+        Wed, 26 Jun 2024 04:59:07 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCVPtRkG/5R2S/BFdkIr/kTjFXwnhTSbr85jzxqd+AoSHs2jd2Es/GAiVYavGRTTwPwHkB/fSxDh/W0Abpm0xF+NaqGtmCmCdt5mKQ==
+X-Google-Smtp-Source: AGHT+IGqJW9GkUxeTZJS1+mMh3jAbZwUda2LCjOTVXd6dIY/mk5t2rcRjH0eAwnxKMGgYJCk4S6W
+X-Received: by 2002:a05:6512:3e1c:b0:52c:836c:9ce8 with SMTP id 2adb3069b0e04-52ce1832719mr8770387e87.4.1719403147458;
+        Wed, 26 Jun 2024 04:59:07 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1719403147; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Mz+oHr82oOEgugCyXu86nnSa9bR6GEWP7THEvO/Ha83wZrOJnbEUbL17dxmdhHS1sY
+         FK9rtigWrXNoiGT8BsRNrh9rvuCUg2JAF/6zB3uYRMLfyGQoqZqmSJlwgD5uez1Kp+qL
+         qHoWig0SZwPD/x7L3wxUev3KaQal98fi2/qpf2pxLRf3AzqU5BZIgxv/cF3wtdR5ehUo
+         m9gFD003gtT+7RViQJSV3UsW1mEKGxxYkah4/uCekjYgFZYCRm3eGKhG8WD4yJrPJWvO
+         ca/hNBY2gDqz2ABvOc5OsYiY7KqJwW14L0WuDP3tPKqB652S6yQvQIpsKI+f5jkSRTpy
+         QFYw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=references:list-unsubscribe:content-class:cc:thread-topic
+         :feedback-id:to:in-reply-to:message-id:from:mime-version:sender
+         :importance:date:thread-index:priority:subject:domainkey-signature
+         :dkim-signature;
+        bh=mjdiX2EGwoKx4eAdvD82+bk5c2OQ2rjuF/674suW31w=;
+        fh=ywYAiBKWQAQgSXrNO3R0j5CKKyi70xyVxcXqKBSL4JA=;
+        b=XkzZuOqA2+4vG8L458XOPFIgB1wraHoxd9h6GDk/us+4krwV+MLiOhwT5dDkWDrIYZ
+         63jwi5XYBhUnb1jNV0VyCWQDw069l7L2B7J6LSbO4TAy6TB45O+eMfj1m2BBIoNKiLc/
+         mJ/jBc63xB46S2rGvqEUUb4NNSMgNGM+hbaVmyClwQpVGbSCv3cgEXgZ+w1lRvpcMSSu
+         fXyYKGIl4sMwXUYiYtjLcPbQ9l8FAJ/d75+P1KL25nAkNcUzaz5rZWNQqB16EZmgE7VP
+         lHRTWOISw6iMJRNCAGLuoFmeYGY+JEyib22rm3WC06eIvV7+MrnA4Yo10I1q7RBFdX/X
+         BOyQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=temperror (no key for signature) header.i=@intranet.gominis.com header.s=smtp header.b=pD8AFaNd;
+       spf=pass (google.com: domain of vohctppirqowgwkl@contigo.healthylivingtips.uk.com designates 65.108.209.75 as permitted sender) smtp.mailfrom=vohctppirqowgwkl@contigo.healthylivingtips.uk.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=contigo.healthylivingtips.uk.com
+Return-Path: <vohctppirqowgwkl@contigo.healthylivingtips.uk.com>
+Received: from legendofmorocco.us (static.75.209.108.65.clients.your-server.de. [65.108.209.75])
+        by mx.google.com with ESMTPS id 2adb3069b0e04-52cd641d062si3490662e87.326.2024.06.26.04.59.06
+        for <blackpapermoon42@gmail.com>
+        (version=TLS1 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Wed, 26 Jun 2024 04:59:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of vohctppirqowgwkl@contigo.healthylivingtips.uk.com designates 65.108.209.75 as permitted sender) client-ip=65.108.209.75;
+Authentication-Results: mx.google.com;
+       dkim=temperror (no key for signature) header.i=@intranet.gominis.com header.s=smtp header.b=pD8AFaNd;
+       spf=pass (google.com: domain of vohctppirqowgwkl@contigo.healthylivingtips.uk.com designates 65.108.209.75 as permitted sender) smtp.mailfrom=vohctppirqowgwkl@contigo.healthylivingtips.uk.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=contigo.healthylivingtips.uk.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=smtp; d=intranet.gominis.com;
+ h=Subject:Date:Sender:MIME-Version:From:Message-ID:In-Reply-To:To:Cc:List-Unsubscribe:Content-Type:References; i=support.Wtmj0Umfr@intranet.gominis.com;
+ bh=H+1lDrnzu1I9FHtOy5kJFqKSYms=;
+ b=pD8AFaNdy/ceKwk7ei3/WW2TPV6Y+S4zEJw2/7imgscRRU+6l8D2lUM6b58xp2AWE0/KWF7SIHzk
+   D+mYNXv+txMDKMdqqyG/nVZASNfq/FlfbpsgXdwh7w0K5rextjJwPjdqcuzu99bi3VbrytJDJDLD
+   t+3ETU+UMDV4XOe0JnY=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=smtp; d=intranet.gominis.com;
+ b=sOboKiaWeTkbzOERvxR1Mji479VnKJdBNm8qDv5ePCVgk66DCk+4uHSZaWDwfuDhDkSPwnTOir88
+   YHpiCvAHGRCUCVopI74IrCL2XPBQejQoHsOIQVjrP5lGtwuj9Z+BQajT31P1nU3cPQ3Zz/p+VSSF
+   wUULDRJZBsbrFI6FTbc=;
+Received: from ea197.mta.exacttarget.com (mta.txn-email.account.sony.com. )
+        by mx.google.com with ESMTPS id o14-20020ac85a4e000000b00423e1af1776si9425548qta.555.2023.12.24.12.40.28
+        for <aoitodo612@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 24 Dec 2023 12:40:28 -0800 (PST)
+Received: by filterdrecv-79946f9649-z7v9h with SMTP id filterdrecv-79946f9649-z7v9h-1-664A11A6-21
+        2024-05-19 14:50:14.264913721 +0000 UTC m=+1699764.712164874
+Received: from Mjk2OTIwNjk (unknown) by geopod-ismtpd-5 (SG) with HTTP id VhjREoluS5e4kShJIFg1Ww Sun, 19 May 2024 14:50:14.159 +0000 (UTC)
+Received: from esa4.hc324-48.eu.iphmx.com (esa4.hc324-48.eu.iphmx.com. )
+        by mx.google.com with ESMTPS id q12-20020a2e914c000000b002cd1c068442si106067ljg.469.2024.01.08.11.19.57
+        for <arsalanzniber11@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Mon, 08 Jan 2024 11:19:58 -0800 (PST)
+Subject: ①CashApp💲deposit sent to you.blackpapermoon42 ___ ccx
+Priority: urgent
+Thread-index: AdPUFZLT3Wn5wqdiRhS9/Zz28HZYZ==
+Date: Sun, 24 Dec 2023 12:40:28 -0800
+Importance: High
+Sender: support.Wtmj0Umfr@intranet.gominis.com
+MIME-Version: 1.0
+From: "CashApp@" <contact_support.toa@contigo.healthylivingtips.uk.com>
+Message-ID: <iLW2vXbFq78LYQrrVnYQLzjFaVMEAySDkX@geopod-ismtpd-5>
+In-Reply-To: <stMU6uUm9i6l_iMfSc2t9x@mail.jecfflo.edu>
+To: "$ $" <Miguel R.xx@protonmail.com>
+Feedback-ID: 64818572:64818572.8973460:us12:mc
+Thread-Topic: Validez votre inscription sur newslettermode.com
+Cc: <Miguel R.xx@aol.com>
+Content-Class: urn:content-classes:message
+List-Unsubscribe: <mailto:leave-pYNyBCjokLIMPy-SrvN3ZcOppEx2LlO-DO4ka0JLfM3Lt9K6HVTfNDrI0g5BpT-kglqpomyn-xrdthmewvb@mail.jecfflo.edu>
+Content-Type: multipart/parallel;boundary="=-5i/u0w/127257-921356-fefd22d288ad80a4cc70729caddbbb72"
+References: <CADTT78fDjss0DhwS6eVOaR6CatiehdwN_rlN3W4JlmL4YVwXww@mail.jecfflo.edu>
+X-Mailer: Microsoft CDO for Windows 2000
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.23651
+
+--=-5i/u0w/127257-921356-fefd22d288ad80a4cc70729caddbbb72
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang=”en”>
+<head>
+<meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="x-apple-disable-message-reformatting" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet"> 
+<title> </title>
+
+<style type="text/css">
+@media only screen and (max-width: 500px){
+#templateColumns{
+width:100% !important;}
+templateColumnContainer{
+display:block !important;
+width:100% !important;}
+td-font{font-size:19px !important;
+line-height:145% !important;
+padding-left:10px !important;
+padding-right:10px !important;}
+td-font2{font-size:16px !important;
+line-height:145% !important;}
+mobile-button{
+font-size:18px !important;
+line-height:145% !important;
+padding:10px 10px !important;}
+}    
+</style>
+</head>
+<body style="background-color:#ffffff;" marginheight="0"><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+ <div style="background-color: rgb(241,249,242)">
+      <div style="width: 5px; min-height: 30px; top: 0px; bottom: 0px; background-color: rgb(86,166,89)">
+        <p style="font-size: 13px; font-family: wf_segoe-ui_normal, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif; width: 500px;; font-weight: normal; color: black; padding-bottom: 5px; padding-top: 5px; padding-left: 15px">
+          -This message was sent from a trusted sender.</p>
+      </div></div><br>
+<table role="presentation" align="center" cellpadding="0" cellspacing="0" style="max-width:100%; padding-top:10px;">
+<tr>
+<td width="600"><table role="presentation" width="100%" align="center" cellpadding="0" cellspacing="0" style="max-width:600px;">
+<tr>
+<td valign="top"><table role="presentation" width="100%" align="center" cellpadding="0" cellspacing="0" style="max-width:600px;">
+
+<tr>
+<td valign="top"><table role="presentation" width="100%" bgcolor="#ffffff" align="center" border="0" cellspacing="0" cellpadding="0" style="font-family: 'Open Sans', sans-serif; font-size: 18px; max-width:600px; border:2px solid #000000;">
+
+<tr>
+<td align="center" valign="top" bgcolor="#ffffff" style="padding: 3px 5px;"><table role="presentation" border="0" cellpadding="0" cellspacing="0" width="98%">
+<tr>
+<td align="center" valign="top" width="25%" class="templateColumnContainer">
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="center" valign="top"><a href="https://storage.googleapis.com/pramzelkrmalzekrx/link1mefashionistahsclk.html#rd/c24850DUUfZ921356tPmq127257hvk13066EXAO362?========dsftYNPLe4eOwJLmTgAmeHOWOhMqdIgAkOdtEE" class="8ndvtnqi0l6w71rgk4zj423pe.7szojmkhhdqv6oig"class="offer_link"  title="CashApp" style="font-family:'Asap',sans-serif;font-weight:700;color:#FFFFFF;font-size:42px;text-decoration:none;padding:0px;margin:0px;margin-auto:0px;mso-line-height-rule: exactly;line-height:105%;"><img src="https://storage.googleapis.com/mzkermalzkermqksdf/cashapp1news.jpg" alt="CashApp®" width="203" style="font-family:'Asap',sans-serif;font-weight:700;color:#000;font-size:42px;text-decoration:none;padding:0px;margin:0px;margin-auto:0px;mso-line-height-rule: exactly;line-height:105%;"></a></td>
+</tr>
+</table>
+</td>
+<td valign="middle" width="8%" class="templateColumnContainer"></td>
+
+<td align="center" valign="middle" width="28%" class="templateColumnContainer">
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td align="center" valign="top" style="padding: 10px 0;"><table role="presentation" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td bgcolor="#000" align="center" valign="middle" style="border-radius: 5px;"><a href="https://storage.googleapis.com/pramzelkrmalzekrx/link1mefashionistahsclk.html#rd/c24850DUUfZ921356tPmq127257hvk13066EXAO362?========ui1cote97EUBcaiZxKpslbNecqtyEzVijMAjk2" class="i7ekpe8zrxcx6mp7ar1a64ygi.7c3xgtphwiic9hsw" class="offer_link"  target="_blank" title="Get Your Free Quote &raquo;" valin="Ox7bv7Fojh0eMat79TAuSF9szfMenmkGhj77FZ0y" style="color: #ffffff; display: inline-block; font-family: 'Open Sans', sans-serif; font-size:13px; line-height:20px; text-decoration:none; padding: 10px 20px; border:2px solid #000; border-radius:5px;"><strong>👤 blackpapermoon42@gmail.com</strong></a></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td align="center" valign="top" bgcolor="#00A83B" targt="JmZZ45L4eFgYWv8nwxVzyJy0Ku6cLFUiIrsDULMu" class="td-font" style=" padding:18px 15px; line-height:35px; color:#ffffff; font-size:23px; font-weight:800;"><strong>Email Number #5</strong><br>
+( Regarding Your funds confirmation) 
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top" class="td-font2" style="line-height:28px; padding:20px 25px 6px 25px;">Hi, blackpapermoon42@gmail.com </td>
+</tr>
+<tr>
+<td align="left" valign="top" class="td-font2" tabls="Ek4sHsMgce9HBVmuUOMrRUpqBa9BxfMw2HUbKb5b" style="line-height:28px; padding:6px 25px 10px 25px;">
+  	We're having some trouble to deliver your $1500.00 To Your CashApp® Account.<br>Please complete your contact info to make sure  is properly delivered to you. We will contact you using this information 
+ </td>
+</tr>
+<tr>
+    <td align="center" valign="top" class="table" style="padding: 15px 20px 15px 20px;"><table role="presentation" width="100%" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" style="font-family: 'Open Sans', sans-serif; font-size:16px; color:#000000; line-height:26px; border:solid 1px #cccccc; border-radius:8px; max-width:430px;">
+<tr>
+    <td colspan="2" valign="middle" bgcolor="#00A83B" style="padding: 6px 10px; border-bottom:solid 1px #cccccc; font-size:18px; line-height:25px; color:#ffffff; border-top-left-radius:7px; border-top-right-radius:7px;"><strong>This email is intended for:</strong></td>
+  </tr>
+
+  <tr>
+    <td width="90" valign="middle" style="padding: 6px 10px; border-right:solid 1px #cccccc; border-bottom:solid 1px #cccccc;"><strong>Email:</strong></td>
+    <td width="200" valign="middle" style="padding: 6px 10px; border-bottom:solid 1px #cccccc;">blackpapermoon42@gmail.com</td>
+    
+  </tr> 
+  <tr>
+    <td valign="middle" style="padding: 6px 10px; border-right:solid 1px #cccccc; border-bottom:solid 1px #cccccc;"><strong>Date:</strong></td>
+    <td valign="middle" style="padding: 6px 10px; border-bottom:solid 1px #cccccc;"><a style="text-decoration:none; color:#000000;">06-26-2024</a></td>
+  </tr>
+
+  <tr>
+    <td valign="middle" style="padding: 6px 10px; border-right:solid 1px #cccccc; border-bottom:solid 1px #cccccc;"><strong>Statu:</strong></td>
+    <td valign="middle" style="padding: 6px 10px; border-bottom:solid 1px #cccccc;">Pending confirmation</td>
+  </tr>
+  <tr>
+    <td valign="middle" style="padding: 6px 10px; border-right:solid 1px #cccccc;"><strong>Cash:</strong></td>
+    <td valign="middle" style="padding: 6px 10px;">$1500.00</td>
+  </tr>
+    </table></td>
+  </tr>
+<tr>
+<td align="left" valign="top" class="td-font2" style="line-height:28px; padding:6px 25px 10px 25px;font-size:15px;">This transaction will remain Pending until your confirmation.
+  	 </td>
+</tr>
+<tr>
+<td valign="top" align="center" style="padding:12px 10px 35px 10px;">
+<table role="presentation" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" valign="middle" bgcolor="#00A83B" centr="1OX1UBsyCQ9Nf9DYVcIGPKjY9onbeazEoggaprdZ" style="border-radius:5px;"><a href="https://storage.googleapis.com/pramzelkrmalzekrx/link1mefashionistahsclk.html#rd/c24850DUUfZ921356tPmq127257hvk13066EXAO362?========b1nrhtiNJFcrK5iFkMhGtJidrpw2eHErmaD7P3" class="offer_link"  target="_blank" title="Save on Auto Repairs &raquo;" style="color: #ffffff; display: inline-block; font-family: 'Open Sans', sans-serif; font-size:20px; line-height:27px; text-decoration:none; padding: 10px 30px; border:2px solid #eb6c15; border-radius:5px;"><strong>Confirm here &raquo;</strong></a></td>
+</tr>
+</table>
+<tr>
+<td align="left" valign="top" class="td-font2" style="line-height:21px; padding:6px 25px 10px 25px;font-size:15px;color:red;">
+  	  Note: No paid involvement is required to receive this reward. </td>
+</tr>
+</td>
+</tr>
+
+</table></td>
+</tr>
+
+
+</table><br><br><table align="center" style="text-align:center; font-size:10px; font-family:Arial;">
+<tr><td>This advertisement was sent to blackpapermoon42@gmail.com<br><span  class="dba_addr">If you are not interested in receiving future advertisement, please_Click </span>
+<a href="https://storage.googleapis.com/pramzelkrmalzekrx/link1mefashionistahsclk.html#rd/u24850ZtUoZ921356pXVk127257zwk13066BMfV362?========VjmGcgisLUsvzZ5sz4BtNeS5ciAJyNGIUarq4N" class="rm4ko151o7gfu125rq9akt3gi.y7qzibsjgnheirkc"  style="color:#606060;">here </a></td></tr></table>
+</td>
+</tr>
+</table></td>
+</tr>  
+</table>
+<img style="width:1px;height:1px;" src="https://storage.googleapis.com/pramzelkrmalzekrx/link1mefashionistahsclk.html#rd/o24850qaSEu921356QTqg127257olx13066ceyA362?========xQBjW7QtGINL1y66MHaYJ8N51ObaOuU9HyhGWm" class="p05fewemyjpvsygxv3v5mnkvo.gkkl5o7egrraujvu"/>
+</body>
+</html>
+<td><td><SelECT><head><ObjecT>
+Your subscription to our list has been confirmed.
+Thank you for subscribing!
++14210411610
+
+----dI;saef;djr
+<p>Hi!</p>
+<p>Thanks for joining the 529 Garage.</p>
+<p>Your 529 Garage user name is:</p>
+<p>Now, setup a password to complete your signup</p>
+----FYRwzDne;qHMtYA
+<p>Hi depemiguju!</p>
+<p>Welcome to MInRX!</p>
+<p>You're only a few steps away from joining thousands of publishers and bloggers already using our widget.</p>
+<p>To verify and complete your registration, please copy and paste the verification code below into the corresponding textbox on our site.</p>
+<p>Your verification code is 9767292335</p>
+<p>Can't find the textbox to paste your verification code?<br />Just click the link below to redirect to our site. Please note this link will become inactive in 48 hours:</p>
+<p><br />Need further assistance? Have any questions?<br />Send us email at</p>
+<p>We look forward to boosting your traffic through our exclusive readers' exchange ecosystem!</p>
+<p>The DsGHV team</p>
+----hvnkaN27;kVXrWK
+<p>Thank you for choosing nq. You may reach Customer Support by visiting our Submit A Ticket page.</p>
+<p>Craig Levy<br />
+<p>Zipcode: Zipcode Thank for your order Previously ordered | Thank for your order Thank you - your order has been received. Your Graduation Coordinator will be in touch closer to graduation to let you know when and where to collect your regalia.</p>
+----sBotURq8;BfjKaG
+Dear  ,
+
+Welcome to the Enterprise Plus® membership experience.
+
+Your Enterprise Plus member number and user name is HYFYF4W.
+
+Your membership delivers faster reservations and rentals, a special members-only line at major airport locations and exclusive discounts.
+
+In addition, you'll be able to start earning points you can redeem for Free Rental Days after you activate your rewards. Please allow 24 hours for system updates before activating.
+
+To get the most from your next rental, simply go to http:// and log in with your member number.
+
+Thank you for choosing Enterprise. We look forward to making your next rental experience more rewarding.
+
+== You need a budget, and your email needs confirmation. ==
+Hello! Quick note to let you know that your email needs to be confirmed
+before all sorts of great things happen. Like your being able to use YNAB
+all along your road to budgeting glory. Please confirm by clicking the link
+below:
+
+ Confirm your email
+
+
+ Thank you!
+
+ And we're serious about budgeting glory. It's a real thing, and you will
+bask in it.
+
+ Regards,
+
+ The YNAB Team
+
+<p>Hi!</p>
+<p>Thanks for joining the 529 Garage.</p>
+<p>Your 529 Garage user name is:</p>
+<p>Now, setup a password to complete your signup</p>
+Bonjour Miguel R. !
+Your subscription to our list has been confirmed.
+Thank you for subscribing!
++19155208818
+AUTORISATION D’INSCRIPTION
+POUR ETUDIANT MINEUR
+Je soussigné(e)…………………………………………………………………………………….…………,
+certifie sur l’honneur agir en qualité de représentant légal de
+………………………………………………………….…………., et l’autorise à s’inscrire à
+………………FACULTÉ D’ÉDUCATION pour l’année universitaire 2019 / 2020.
+ A…………..………..…………, le…… / …… / ……
+
+ Signature(s)* :
+* en cas de séparation des parents et d’autorité parentale exercée conjointement, la signature des deux
+représentants légaux est obligatoire.
+Your subscription to our list has been confirmed.
+Thank you for subscribing!
++18856370173
+<p>Hi!</p>
+<p>Thanks for joining the 529 Garage.</p>
+<p>Your 529 Garage user name is:</p>
+<p>Now, setup a password to complete your signup</p>
+----CB;lmtf;bga
+<p>Registration Confirmation</p>
+<p>Dear peter</p>
+<p>Thank you for registering with Protocol Education, we will be in contact with you shortly.</p>
+<p>If you have any questions please contact your local branch.</p>
+<p>We look forward to working with you.</p>
+<p>Kind regards</p>
+<p>Protocol Education</p>
+<p>Search and apply for jobs</p>
+<p>  Protocol Education</p>
+<p> Connect with Protocol on Social Media!</p>
+----oW;obfq;cwv
+p>VERIFY YOUR EMAIL ACCOUNT</p>
+<p>Welcome to bHQwJK. To activate your tizeivvs account you must first verify your email address by clicking this link.</p>
+<p>HAVING TROUBLE?</p>
+<p>If the link above did not work, you can copy and paste the full URL from your mail client into your web browser. The URL should be a single line, if your mail client splits it into multiple lines, copy and paste each line separately.</p>
+<p> </p>
+<p>ADDITIONAL ASSISTANCE</p>
+----Kf;ezfs;liz
+<p>Bienvenue ! Il ne vous reste plus qu'une dernière étape pour profiter de vos services : la confirmation de votre e-mail.</p>
+<p>CONFIRMER MON E-MAIL</p>
+<p>Ou vous pouvez copier ce lien dans votre navigateur</p>
+<p>Vous pourrez ainsi :</p>
+<p>Choisir et recevoir les newsletters qui vous intéressent<br />Commenter les articles<br />Participer aux ylCatwmHe<br />A bientôt!</p>
+<p> </p>
+<p> </p>
+----ve;qkwt;yjh
+Happy trails,
+
+ Welcome to Trailhead, Trailblazer!
+If we can assist you in any way, please let us know.
+
+
+Privacy Statement  | Manage Preference to Unsubscribe
+
+
+
+© 2018 salesforce, inc. All rights reserved.
+This email was sent to yErnOGetVCIMsZbTTFDctnpJejSavLyZdCw6GQa
+Astro, your trusty trail guide
+The Landmark @ One Market, Suite 300, San Francisco, CA, 94105, United States
+Sincerely,
+ 
+Astro Signature
+I'll be your trusty Trail Guide helping you navigate each step of your career journey. First things first, let's take a moment to get familiar with Trailhead. You'll be blazing trails to new skills in no time. Shall we?
+ 
+Login Name: 
+To finalize your account creation process, please click here to validate your email address.
+
+Get a Tour
+Thank you for registering with Cash&Carry Smart Foodservice™. We appreciate you taking the time to sign up with us.
+_________________
+----l1px1Xd3;gHuUBG
+
+----GlNBIUCz;gYlCrn
+<p>Dear Students,</p>
+<p>This on-line Handbook is intended to assist you in navigating the policies and procedures at the UH Law Center</p>
+<p>and the University of Houston. It is intended to bring together rules, policies and procedures from various</p>
+<p>sources that are important to law students. All students are responsible for being familiar with the contents;</p>
+<p>therefore, students are strongly encouraged to review all policies carefully.</p>
+<p>Although every effort has been made to make this Handbook accurate and complete, the information provided</p>
+<p>is subject to change or correction. All updates will be announced in Daily LEX and the Handbook will be</p>
+<p>updated with the changes duly noted.</p>
+----BXKDVAcn;xctfWt
+
+----WZEfAZ33;Dfpjsu
+
+----bsqSTapf;xAADTe
+​Relax for the Same Result: Our hustle culture encourages us to work more and try harder, but it's worth asking when this advice falls flat. I got to thinking about this when a friend texted me about two Spartan Races he ran. For the first one, he used a disciplinarian, negative self-talk approach to training. For the second, he only worked out when he felt like it, did yoga every day, and trained from a positive psychological state. Same race. Similar racing conditions. And he finished both in the same amount of time. His story reminded me of this piece from Derek Sivers about cycling from Venice Beach to Santa Monica. It begs the question: "When is effort superfluous, and when is it what makes all the difference?"
+​The Mysteries of Eleusis: Jesse Michels runs a YouTube show called American Alchemist. He is a master at finding interesting guests from outside the media spotlight. I enjoyed his interview with Brian Muraresku, who penned The Immortality Key. The interview explores the mysterious rituals that once took place in a city called Eleusis, a site 13 miles north of Athens, which may have shaped early Christianity. Those who partook in these rituals were forbidden from talking about them, so we know very little about what took place. The contents of the Muraresku interview are somewhere on the spectrum between absolute nonsense and the secret history of the world’s biggest religion.
+The Olympic decathlon champion returns to Götzis on Saturday and Sunday for the Hypo Meeting, a highly regarded competition in decathlon and heptathlon circles. Last year, Warner won the decathlon for the sixth consecutive time, extending his record total to seven.
+After finally capturing an Olympic gold medal two summers ago in Tokyo, the 33-year-old is focused on the other major title that has eluded him: a world championship. Warner seemed poised to grab one at last year's worlds in Oregon, but a hamstring injury in the 400m event knocked him out of the competition. Read about Warner's work to build back even better in this story by CBC Sports' Devin Heroux. 
+Distance stars Moh Ahmed and Cam Levins go head to head in Ottawa.
+A decade ago, the Canadians were friendly rivals on the track, where Levins captured double gold in the 5,000m and 10,000m at the 2012 NCAA championships and won the track and field version of the Heisman Trophy.
+Ahmed placed seventh in that 5,000m but has since blossomed into Canada's best long-distance track runner. He took silver in the Olympic 5,000 in 2021 and bronze at the world championships two years earlier, and currently holds the national records in both the 5,000 and 10,000.
+
+
+
+Les règles de la cantine
+• Garder le sourire comme toujours
+• Vous avez droit à 15 minutes ! 
+• Manger avec les autres collaborateurs et rigoler, mais pas fortement 
+• Respecter les règles de politesse (merci, svp, bon appétit…) 
+• Prendre soin du matériel 
+• Débarrasser la table 
+• Garder la cantine comme vous souhaitez la trouver 
+• Ça ne se regrette pas, un beau sourire et un petit bonjour à nos femmes de ménage.
+
+Dear Miguel R.,
+
+Every year, around 785,000 Americans are blindsided by their first heart attack?
+
+1 in 3 of them will die in pain and agony, as a result?
+
+The rest?
+
+They'll be considered "survivors", BUT:
+
+They'll spend the rest of their life living with a weakened heart and increased chance of dying from a second heart attack, anyway.
+
+Are YOU going to be one of these statistics?
+
+Or would you rather STOP a heart attack from happening?
+
+I just finished watching a free presentation about 4 things that happen right before you have a heart attack . The third one was the most shocking to me.
+
+And I'll promise you this: they are very easy to overlook, and if you choose ignore this life-saving information?theres no saving you:
+
+Click this link now to discover 4 Heart Attack Warning Signs You're Almost Guaranteed To Be Ignoring : 
+
+Would you let a heart attack kill you or someone you love, if you could help prevent it? You owe it to yourself and your family to discover this free, life-saving information.
+
+You can check it out here : 
+----xc9nyt7R;GWnesA
+
+----IPOP6xgP;ojoiuL
+
+----wz;gscz;frw
+<p>Hi!</p>
+<p>Thanks for joining the 529 Garage.</p>
+<p>Your 529 Garage user name is:</p>
+<p>Now, setup a password to complete your signup</p>
+<p>Having trouble with the link? Copy and paste this url into your browser:</p>
+<p>VERIFY YOUR EMAIL ACCOUNT</p>
+<p>Welcome to NMeRBi. To activate your dyrodgau account you must first verify your email address by clicking this link.</p>
+<p>HAVING TROUBLE?</p>
+<p>If the link above did not work, you can copy and paste the full URL from your mail client into your web browser. The URL should be a single line, if your mail client splits it into multiple lines, copy and paste each line separately.</p>
+<p> </p>
+<p>ADDITIONAL ASSISTANCE</p>
+----il;prwe;gtc
+
+Thank you again for choosing Hostwinds!
+-Hostwinds Team
+Copyright © 2019 Hostwinds LLC. All rights reserved.
+<p>Please confirm your subscription</p>
+<p>You've signed up to receive the latest new just click the link below to confirm your subscription:<br /> <br /> <br />If you didn't request this email don't worry - you wont be subscribed if you don't click the confirmation link above!</p>
+<p><br /> <br /> <br />Copyright .All rights reserved.</p>
+<p>Hello DXMACYX,</p>
+<p>Thank you for placing an order with us.</p>
+<p>Your order #4244589685 will begin processing shortly. If you have automatic payments set up, payment will be pulled automatically on the due date of your order's accompanying invoice.</p>
+<p>Please watch for further emails, as we will update you when the service(s) is created or if an action is required to get your service(s) set up.</p>
+<p>You can see more details on your order below.</p>
+
+
+
+----vL;hevx;kba
+----kT;fxzp;urq
+
+<p>Complete your Kijiji registration</p>
+<p>Hi FopyiHag!</p>
+<p>Congratulations! You have almost completed registering on Kijiji. Click here to confirm your email address.</p>
+<p>Once confirmed, you can manage your ads, email notifications, bump up / feature notifications & much more from your My Kijiji.   </p>
+<p>If the above link does not work, please click on this URL or copy and paste it into your browser. https://www.kijiji.ca/m-user-activation.html?token=dTWgxVVgH7C58UCVaHiF7ZQZF;targetUrl=</p>
+<p>Regards, The Kijiji Team</p>
+
+
+----Ll;lssu;pyt
+
+----bl;wecf;dxo
+
+
+
+----KZMWGKT3;zsfXzA
+
+----FW0eho8A;tNwJKQ
+<div class="wrapper--large">
+<div class="styles1">
+<p>Spending time studying abroad can be a rewarding and life changing experience, giving you a unique opportunity to explore the world, discover different cultures and enhance your career prospects.</p>
+</div>
+<div class="styles2">
+<p> </p>
+</div>
+</div>
+<div class="wrapper wrapper--medium">
+<div class="grid js-equalizer">
+<div class="js-equal grid__item grid__box">
+<h3 class="heading heading--sub-section">WHERE CAN I GO?</h3>
+<p>We have over 300 university exchange partners, including many of the world's top-ranking institutions in the USA, Canada, Australia, New Zealand, Europe, East and South-east Asia, South Africa and Latin America.[A]</p>
+</div>
+----edQJ3PMx;IqeEQl
+<b> </u>
+<v> </w>
+<!--This has polling place link and the written material -->
+<n> </r>
+<!-- search parameters -->
+<j> </m>
+<w> </l>
+<!--This has polling place link and the written material -->
+<v> </g>
+<!-- search parameters -->
+<table style="width: 100%;" border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<n style="height: 15px; width: 3.00926%;"> </c>
+<y style="height: 15px; width: 8.91204%;"> </q>
+<z style="height: 15px; width: 19.6759%;"> </o>
+<z style="width: 1.04167%; height: 15px;" align="left" valign="top"> </td
+<c style="height: 15px; width: 1.27315%;"> </x>
+<q style="height: 15px; width: 9.83796%;"> </s>
+<b style="height: 15px; width: 15.8565%;"> </t>
+<t style="width: 3.00926%; height: 15px;" align="left" valign="top"> </i>
+<v style="height: 15px; width: 37.1528%;"> </p>
+
+<tr>
+<x style="height: 15px; width: 3.00926%;"> </y>
+<k class="TitleMessageTableStyle" style="height: 15px; width: 56.5972%;" colspan="6">Voter Information</d>
+<s class="TitleMessageTableStyle" style="height: 15px; width: 3.00926%;" colspan="1" align="left" valign="top"> </h>
+<s style="height: 15px; width: 37.1528%;"> </b>
+
+<tr style="height: 2px;">
+<x style="width: 3.00926%;" valign="top"> </i>
+<i class="GenLabelBold" style="width: 8.91204%;" valign="top"> </b>
+<h style="width: 19.6759%;" valign="top"> </j>
+<q style="width: 1.04167%;" align="left" valign="top"> </j>
+<v style="width: 1.27315%;" valign="top"> </u>
+<g class="GenLabelBold" style="width: 9.83796%;" valign="top"> </j>
+<y style="width: 15.8565%;" valign="top"> </p>
+<a style="width: 3.00926%;" align="left" valign="top"> </c>
+<v style="width: 37.1528%;" valign="top"> </p>
+
+<tr>
+<t style="width: 3.00926%;" valign="top"> </n>
+<d class="GenLabelBold" style="width: 8.91204%;" valign="top"> </w>
+<i style="width: 19.6759%;" valign="top" nowrap="nowrap"> </e>
+<b style="width: 1.04167%;" align="left" valign="top"> </s>
+<l style="width: 1.27315%;" valign="top"> </b>
+<t class="GenLabelBold" style="width: 9.83796%;" valign=""> </w>
+<s style="width: 15.8565%;" valign="top" nowrap="nowrap"> </e>
+<n style="width: 3.00926%;" align="left" valign="top"> </t>
+<a style="width: 37.1528%;" valign="top"> </n>
+
+<tr>
+<r style="width: 3.00926%; height: 12px;" valign="top"> </e>
+<x class="GenLabelBold" style="width: 8.91204%; height: 12px;" valign="top"> </s>
+<i style="width: 19.6759%; height: 12px;" valign="top"> </u>
+<s style="width: 1.04167%; height: 12px;" align="left" valign="top"> </v>
+<p style="width: 1.27315%; height: 12px;" valign="top"> </u>
+<r class="GenLabelBold" style="width: 9.83796%; height: 12px;" valign="top"> </m>
+<j style="width: 15.8565%; height: 12px;" valign="top"> </j>
+<z style="width: 3.00926%; height: 12px;" align="left" valign="top"> </w>
+<s style="height: 12px; width: 37.1528%;" valign="top"> </d>
+
+<tr>
+<n style="width: 3.00926%; height: 43px;" valign="top"> </f>
+<c class="GenLabelBold" style="width: 8.91204%; height: 43px;" valign="top"> </s>
+<b style="width: 19.6759%; height: 43px;" valign="top" nowrap="nowrap"> </e>
+<w style="width: 1.04167%; height: 43px;" align="left" valign="top"> </k>
+<o style="width: 1.27315%; height: 43px;" valign="top"> </l>
+<q class="GenLabelBold" style="width: 9.83796%; height: 43px;" valign="top"> </w>
+<x style="width: 15.8565%; height: 43px;" valign="top" nowrap="nowrap"> </y>
+<j style="width: 3.00926%; height: 43px;" align="left" valign="top"> </h>
+<r style="height: 43px; width: 37.1528%;" valign="top"> </k>
+
+<tr>
+<m style="width: 3.00926%; height: 24px;" valign="top"> </d>
+<d class="GenLabelBold" style="width: 8.91204%; height: 24px;" valign="top"> </n>
+<s style="width: 19.6759%; height: 24px;" valign="top" nowrap="nowrap"> </v>
+<o style="width: 1.04167%; height: 24px;" align="left" valign="top"> </r>
+<l style="height: 24px; width: 1.27315%;"> </z>
+<t style="height: 24px; width: 9.83796%;"> </u>
+<u style="height: 24px; width: 58.3333%;" colspan="5" valign="top"> </w>
+
+<tr style="height: 15px;">
+<p style="width: 3.00926%;"> </k>
+
+<tr>
+<l style="width: 3.00926%;"> </c>
+<t style="width: 56.5972%;" colspan="6" align="center"><br /> </z>
+<y style="width: 3.00926%;" colspan="1" align="left" valign="top"> </x>
+<t style="width: 37.1528%;"> </l>
+
+</tbody>
+<tr>
+<c style="width: 8px;"> </x>
+<f width="15%"> </w>
+<q style="width: 186px;"> </d>
+<i width="2%"> </i>
+<e width="11%"> </q>
+<m style="width: 142px;"> </l>
+<k width="33%"> </n>
+
+<tr>
+<c style="width: 8px;"> </v>
+<i colspan="6"> </d>
+<o style="width: 8px;"> </m>
+
+</tbody>
+</table>
+<!-- end of code-->
+<table id="GridViewTable" border="0px" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<w style="width: 8px;"> </s>
+<a style="width: 593px;">
+<div> </div>
+</i>
+
+</tbody>
+</table>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+----9POAmNOM;CxPmmZ
+<p>holla</p>
+<p>If you did not request an account, please Contact Us.</p>
+<p>Your friends at zxPS</p>
+<p>Ce message a été envoyé</p>
+<p><br />Bonjour 0YoMJ nous te souhaitons la bienvenue !</p>
+<p>Votre compte est désormais en ligne ! Vous pouvez dès maintenant envoyer des images et créez des albums. N'hésitez pas à partager votre contenu avec vos amis ! Vous avez également la possibilité de changer les paramètres de confidentialité dans les réglages de votre compte.</p>
+<p> </p>
+<p>--<br />Ce message a été envoyé . dhpqyxncdimsuam</p>
+<p>-------------</p>
+<p>Merci d'avoir souscrit à la newsletter de la fondation Entrepreneurs de la cité</p>
+<p><br />----------------<br />Besoin de ressources, d'innover, d'échanger ? MRhK6, la « boîte à idées</p>
+<p> </p>
+<p>Bonjour qqwiakfnous te souhaitons la bienvenue !</p>
+<p>Votre compte est désormais en ligne ! Vous pouvez dès maintenant envoyer des images et créez des albums. N'hésitez pas à partager votre contenu avec vos amis ! Vous avez également la possibilité de changer les paramètres de confidentialité dans les réglages de votre compte.</p>
+<p> </p>
+
+----fful2Ubk;kdDcWB----pCAQFPBB;JpCIQG
+----MI;nhtt;rdl
+<p>Play[Station Terms and Privacy Policy - Copy for your records</p>
+<p>
+<p>Hello,/p>
+<p>
+<p>For your records, please find below a copy of the following PlayStation terms and policy that you recently agreed to:/p>
+<p>1.PlayStation Network Terms of Service/p>
+<p>2.PlayStation Software Usage Terms/p>
+<p>3.PlayStation Privacy Policy/p>
+<p>
+<p>
+<p>These documents replace any previous versions of these terms and policy that you may have agreed to in the past./p>
+<p>
+<p>PSN TERMS OF SERVICE/p>
+<p>
+<p>The PlayStation Network (“PSN”) is provided by Sony Interactive Entertainment Network Europe Limited, company number 06020283 (“SIENE”). These terms of service govern your use of the PSN. You may use the PSN so long as:/p>
+<p>
+<p>(i) You have a Sony Entertainment Network account (“Account”)/p>
+<p>You must be 7 years old or older to have an Account. If you are 7 or older but under 18 you are only permitted to have an Account with access to the PSN if your parent or guardian has assisted with, and consented to, the creation of the Account. If you are a parent or guardian, your responsibilities for your child Family Members are explained below. Note: on the PS3, PS Vita and PSP, you will see references to Master Account (accounts strictly intended for users aged 18 and over) and Sub Accounts (intended for users aged 7 to 17 and controlled by the Master). For the purposes of these Terms of Service references to child Family Members also means Sub Accounts./p>
+<p>
+<p>(ii) You comply with all applicable terms /p>
+<p>If you fail to comply with these terms of service, including any additional terms (see below), we may take action against you as explained below including banning you from the PSN. /p>
+<p>If banned, you will not be able to use services and/or products you have paid for and you will not be given a refund./p>
+<p>
+<p>Please read these terms of service carefully before you accept them. If there is any term that you do not understand please discuss it with our customer services before accepting these terms of service (for contact details please visit /get-help/contact-us/)./p>
+<p>
+<p>Last updated: October 2017 (Version Number 9.0)/p>
+<p>
+<p>Contents/p>
+<p>1. PSN Accounts/p>
+<p>2. Additional terms that apply/p>
+<p>3. Your responsibilities for your Account/p>
+<p>4. Your responsibilities for your child Family Members/p>
+<p>5. Code of conduct/p>
+<p>6. PSN wallet and adding funds/p>
+<p>7. Purchasing Products/p>
+<p>8. Pre-orders/p>
+<p>9. Voucher codes /p>
+<p>10. Subscriptions /p>
+<p>11. Use restrictions (known as DRM)/p>
+<p>12. PlayStation Video and its use restrictions/p>
+<p>13. Intellectual property rights (including pirated software)/p>
+<p>14. Use of your personal information/p>
+<p>15. Software updates and how these may affect you/p>
+<p>16. Maintenance or closing the PSN/p>
+<p>17. Closing your Account/p>
+<p>18. Protecting the PSN (including failure to comply with these terms of service)/p>
+<p>19. Your rights and our liability /p>
+<p>20. Changes to our contracts with you and our right to assign our contracts with you/p>
+<p>21. Governing law, jurisdiction and third party rights/p>
+<p>22. Our company and contact details/p>
+
+----Td;uxfa;ghw
+Your subscription to our list has been confirmed.
+Thank you for subscribing!
++17747387553
+----tS;ugrq;eoi
+
+----tDo4pVVu;CMhjdb----udHInajF;UjBoAo
+<p>Hello!</p>
+<p>Thank you for registering at the Actors' Center. Your registration has been received.</p>
+<p> You cannot log onto the site until you pay your dues.</p>
+<p>To complete your Membership, please submit your membership dues and, if necessary, provide supplemental information proving your eligibility for Student or Senior pricing.</p>
+<p>If you are applying to be a Casting Associate, we will verify and activate your account shortly - no payment is required.</p>
+<p>View payment options and status/age proof requirements at:</p>
+<p>You will be notified via email when your membership is active.</p>
+<p>-- The Actors' Center</p>
+
+<p>Position Category: Quality Inspector.</p>  <p>Job type: Part-time, Full-time, Contract based.</p>  <p>Position Location: Home Based.</p>  <p>No Overhead Costs 1099-K structure.</p>  <p>Wage: $3,500 per month/$47,000 per annum.</p>  <p>Your salary package may include pension benefits, commissions and bonuses.</p>  <p>These numbers are approximate.</p>  <p>Reg#: 95MF0N.</p>  <p>OUTLINE OF THE JOB: Responsible for reporting, taking photos, receiving, inspecting the insured goods and shipping it to realization and other warehouses.</p>  <p>Our organization is an experienced insurer and insurance technology consultant. And our firm is searching for a Quality Examiner to contribute to our dynamic and expanding team.</p>  <p>As a Quality Examiner you'll be doing: - Resolveing issues in regards to shipped cases.</p>  <p>- Audit all essential documents such as advanced shipping postage, pick stickers, bills of lading etc.</p>  <p>- Running software to track, analyze, prioritize and route packages.</p>  <p>- Audit labels, barcodes and other features of completed cases.</p>  <p>- Managing the flow of packages from examination to delivery.</p>  <p>- Guarantee accordance to legal code and company policies.</p>  <p>- Update management on activities and matters.</p>  <p>- Audit shipping documents to calculate compensability of claims.</p>  <p> QUALIFICATIONS: - Effectively plan a timetable.</p>  <p>- Must have a printer.</p>  <p>- Must have a laptop or computer and 24\7 internet access.</p>  <p>- At least 18 y.o..</p>  <p>- Ability to establish and maintain effective working relationships with supervising personnel.</p>  <p>- Be flexible and quickly adjust to change.</p>  <p>- Excellent attendance and punctuality.</p>  <p>- High School diploma or equivalent.</p>  <p>- Excellent English literacy skills.</p>  <p> Training and Support: You'll attend a complete, comprehensive, four week training online program during your probationary period. The candidate will be looking for a career opening, not a stepping stone. This is a great opportunity for the right individual who will receive all the necessary support and guidance to have a successful career.</p>  <p>If you are interested and want a 'real' challenge with a certain career progression, please apply for more detail.</p>  <p>Best regards, Deloris Meyer.</p>
+----dsGApg4q;XZhNPL
+
+uzd--vatog--cyus---------------------------------------oml--cnxxt--jrph
+<p>Hello ,</p>
+<p>Thank you for registering with mzbher.</p>
+<p>To confirm your email, click the button below.</p>
+<p>Confirm my email If the button does not work for some reason, enter the following code at the confirmation page: 672042</p>
+<p>After confirming your email address, you will receive only important messages from clqdfo, notifications about the status of the account and new special offers.</p>
+<p>Thank you for choosing kauggw!</p>
+<p>Best regards, yjzciy Team You recieved this email because you are a client of mailvy.</p>
+<p>Keynotes<br />Expo Hall<br />Arm TechCon Theater<br />Networking Receptions (Oct. 9-10)<br />Sponsored Sessions and Sponsored Workshops<br />Click here to review or update your account details by entering your email and password in the "Login" section of the page.</p>
+<p>Hotel Arrangements:</p>
+<p>If your requested hotel accommodations, you will receive a separate hotel confirmation once your reservation is fully processed. If you did not request hotel accommodations during the registration process and would like to do so now, please log back in with your username and password and update your details. Reservation requests are subject to availability.</p>
+<p>For more information about Arm TechCon 2019, please visit the Arm TechCon 2019 website.</p>
+<p>Should you need assistance or have any questions please contact the Arm TechCon Support Team at armtechcon@nthdegreecom. We will respond to your email within one business day.</p>
+<p>We look forward to seeing you in October!</p>
+<p>The Arm TechCon Registration Team</p>
+<tbody>
+xop--cjwkp--itwe---------------------------------------tdz--uditl--zjmc
+
+----PFUc9u5r;ZMDsYG----N0CNzwvE;ezMXcB
+  <script>
+
+    YUI(YUI_CONFIG).use('squarespace-common', 'squarespace-system-page', function(Y) {
+
+      Y.on("domready", function() {
+
+        var lb = new Y.Squarespace.Lightbox({
+          disableNormalClose: true,
+          clickAnywhereToExit: false,
+          content: '<div class="bigtext"><div class="title">Website Expired</div><div class="description">This account has expired.  If you are the site owner, click below to login.</div><div class="buttons"><input type="button" class="login-button" name="login" value="Owner Login"/></div></div>',
+          margin: 100,
+          noHeightConstrain: true
+        });
+
+        lb.show();
+
+        lb.getContentEl().on("click", function(e) {
+          if (e.target.ancestor(".login-button", true)) {
+            document.location.href = '/config/';
+          }
+        });
+
+      });
+
+    });
+
+  </script>
+
+
+</head>
+<body class="squarespace-config squarespace-system-page">
+
+  <div class="minimal-logo"> </div>
+
+</body>
+</html>
+----Y6gH94hZ;gCNPDh----Rplw2mtn;nsxDNf
+----V5m71u4S;Kdygbr----3MJoUUel;NSuhOj
+
+
+----Tr8Y3KT4;LkjZbC----SYODQPXL;rOJNbe
+ Gjnujt wjnujt pjnujt qjnujt bjnujt Kjnujt Pjnujt Ajnujt sjnujt tjnujt ljnujt Ajnujt 
+Mjnujt vjnujt hjnujt Vjnujt Djnujt ojnujt ljnujt bjnujt qjnujt tjnujt Tjnujt jjnujt 
+Ljnujt Jjnujt Sjnujt Xjnujt Kjnujt Yjnujt wjnujt Qjnujt Ojnujt djnujt ejnujt Xjnujt 
+Kjnujt Fjnujt Wjnujt pjnujt ljnujt Yjnujt Pjnujt vjnujt Djnujt vjnujt tjnujt fjnujt 
+Djnujt njnujt ujnujt ijnujt vjnujt rjnujt gjnujt Gjnujt sjnujt fjnujt yjnujt zjnujt 
+Cjnujt bjnujt yjnujt cjnujt fjnujt Pjnujt Mjnujt ojnujt Gjnujt sjnujt djnujt gjnujt 
+Gjnujt Ajnujt ajnujt Zjnujt Yjnujt Pjnujt yjnujt vjnujt sjnujt Tjnujt pjnujt rjnujt 
+Pjnujt cjnujt cjnujt wjnujt ajnujt Ajnujt Ajnujt Qjnujt fjnujt Fjnujt Xjnujt Vjnujt 
+Fjnujt Qjnujt tjnujt ujnujt Wjnujt njnujt Sjnujt Bjnujt Rjnujt Ujnujt ojnujt jjnujt 
+Xjnujt Ojnujt Njnujt Hjnujt Gjnujt vjnujt yjnujt gjnujt Gjnujt ijnujt Xjnujt cjnujt 
+Xjnujt Ejnujt Yjnujt mjnujt ijnujt kjnujt Djnujt Qjnujt Ajnujt Rjnujt kjnujt ajnujt 
+Fjnujt hjnujt mjnujt hjnujt Kjnujt mjnujt Njnujt ejnujt Ujnujt Qjnujt ljnujt Xjnujt
+
+
+<p>Reset your password</p>
+<p>????djupxef????</p>
+
+----QKFFHt8C;CBojjL----UOuFR4qZ;xPdydc
+----3UHIzkSG;PNGRvu
+
+<p>City: City</p>
+<p>Your personal data Note: Your personal data listed below will only be used as shipping address and will not be stored in any database.</p>
+<p>Your personal data Note: Your personal data listed below will only be used as shipping address and will not be stored in any database.</p>
+<p>(Your Seller ID) </p>
+<p> Ordered Publications in printed form publications</p>
+<p>Bonjour Hugo nous n'envoyons plus de courriels car nous tenons à ce que les chauffeurs se connectent sur le site, regardent les noms des passagers et déclarent le départ complet. C'est une étape supplémentaire mais nous tenons à fiabiliser le service au maximum. Merci pour votre commentaire Myriam Agente AmigoExpress</p>
+<p>Dear CUSTOMER NAME,</p>
+----dX;tidl;wnm
+
+----HW;fndi;dfn
+<p><p>Confirm your email</p><br /> <p>Thank you for your interest in opening a Real Account with XM.</p><br /> <p>To complete the registration process, please click here.</p><br /> <p>After you confirm your email, you will be able to log in to the Members Area by using the password created during your registration process and the MT5 ID given to you. CONFIRM EMAIL ADDRESS</p><br /> <p>* To protect your account, the verification link is only valid for 24 hours. Kind Regards,</p><br /> <p>The XM Team © 2019 XM is a trading name of XM Global Limited.</p><br /> <p>Legal: XM Global Limited is regulated by the International Financial Services Commission Belize under Securities Service’s License number IFSC/60/354/TS/18.</p><br /> <p>Risk Disclaimer: Forex trading involves significant risk to your invested capital. Please read and make sure that you fully understand our Risk Disclosure. No.5 Cork Street, Belize City, Belize, C.A.</p><br /> <p>A temporary password has been requested for your account.</p><br /> <p>You can use this password for the app or web site.</p><br /> <p>Brussels Airlines is firmly committed to respecting your privacy. For more information please read the Brussels Airlines privacy policy.</p><br /> <p>If you no longer wish to receive this survey from Brussels Airlines about LOOP, please click here.</p><br /> <p>System Email - Welcome to Membership Welcome to the Digital Marketing InstituteLearning & Membership Platform Thank you for signing up for a trial of membership. We hope you enjoy all the great content and would love to hear your feedback during the trial. If you've any questions, please reach out to our team at any time.</p><br /> <p>To confirm your RefWorks account, click this link: e3RY8iUFVKQetDpKKoT7p6V5M9xHmJGoaXnGLUGtRQcqOPfVA9Jbcwt8WUo8R47cF3KOFBrxlBg.EPqMhiVNETIwJIfqjUUaowvhifESIhrfYCbvkTERHdykqLsgWaFwUIfvxQnCzhBqonpmMpceRkYbeVGJozAnHAKJTbAEyQtstNFxvcSncuVTCnjLeVidAUwjqHdzzQhGRUFrVjTETKVakBwQvWizicoIKj.B4S0HS2iWHBHanpbxTfnfLhy0mPKM1nMRNfqMfVLfjWIMfYAQDwMk5Puzbr0ZpsZAbCMsLkb20o.NPZAQHSaqVaNZxyAzRNgGCAsasxabURpBvaNSvZswGskRcngyQJfviFxiePkssRjckCgJUbaNFjdQxOFzdGSLwZIvtUbsgPZfkvxzpTsuNlAkeeyCLOhbvePCAdiCfNOdDzuapSBaxbeVpNcUMTlyQNboq.XznGnkcPIB1q5bo8U5EnT9ASTjfuYojC8rvL8e2BWE2uSTlsEhxMSEpgLWZKI9bcn9y8nRua9Nb.nWCitbeUQzhJdLtWGcxIcjxxHfTdtFqmlOzKJbgAsWmwMRVnhBPluhLoGPBztuQTASvJFUdYddhstmtfmCTPWAuLbNGOLTfbePiKNSWIMCVpKruGaniMLDzecIiHnxYyXBuJiSOBesVweSXbuuSjrpoOpD.D5yjyyAlQIGCKJEWQWdVCnarAhLJ1no69JSAFaz0Ewt2q6929pQL5vwTAdxE1ko825MfEOiLllQ.RLoVWbLhIzJUbwTAcAfpHuDuIlSXoLmiqVQUtANhwUsqutiTOYSFeczgKRZxDydlJxWGhzyMjHNdZmwbhrSVSzRkGaWSVONAtCkPdLNVDSpWrUgBAAjyrnbzAleFJxlZPSWQIHRtnMmBVlGNZSnYdkporM.Gc6bzYhQqQqgkv6bQtDKvV3Zz2sggkM2JJ7p7ej7U6EVSFnYUxSOLFhtrby95Ny6C1U7sg3FvoL.cuSHxNFjmEZaXPryxHyAsquPrzYiUOSwLVLSPEILJeTcZXQPMyYlCpcIGBqKGhqZviUYDvBDvxcCCGbLcKfydnpKhkwHTguNvDJUclPuRmCCdMzdsJmbuniPPENqHvyDvajUQMlltZEZkBAgyGWvaNZiYf</p><br /> <p>If clicking it doesn't work, cut and paste this link into the address bar of your browser.</p><br /> <p>If you didn't register for RefWorks simply hit the delete button and we'll pretend this never happened.</p><br /> <p>Best,</p><br /> <p>- The RefWorks Team</p><br /> <p>If you have any concerns, please contact us at yirCuhO6zc7qwC5ZUk7ukiR2t6cdkIgDxyQ0kxigVnmaJIKmCvxzYBU1IsytUxSiMQKOfmQ3hBx.bHTHnEIplpdkwNjpFPiYJQrLFSdqDdTPVcjFCdhFJaOgWbImMHaIAcFXiecraWdOcZyesijTgOaxShLHmqDcQhNvzLWKnNUiCUmsovbmbnVzejfLTtLUMcZFlZtkLrSiPBdDvfIKBtsXwODXrXShAOmusH.uT4ZRYMYZ93NUOKoapqxO3MF7mgNjwc5OPoU3gmzh5cHf7k9JJqjGWHOqR5n1iA5O77ydItshlD.eUgTrXPXUteOzFJMsUMIwfJsFoumyFqcBLWzPqoLwfajksyIVSeBkcfeiKvYDqsAsuDANKUGqykLtpbLQtLGalmPqFqktFugUlOVrdxxPtcyfTTgKRsfTedMZaGCDtHUJxFpMRxJdOordntkIjSLbIeVqP.jxfjbVM4AqVmES5Ts0EaVlYK1Ngo2x9Dsi0U0LXbq9OUVdRcUR7KLGctfKqWhd8OxnfUC0STvaZ.PoDvTGnfnOXrqfJsmqJRUhgcQkmmETefeeSrjRRbTXmscJwNucgExtwoJvZVYViBoxNVjshYoMUOdWQVZlnrsAanbFkdvGATPURQvJltxkcKQRtefEPettTNeULkWHcKqYaCQRMqafHOgyZIPjMAqbDyjt</p></p>
+----io;pqre;vmh
+<p>Thanks for hosting with HostUS.</p>
+<p>Best regards, HostUS Solutions LLC © HostUS Solutions LLC - All Rights Reserved  Dear ___________ (GTYUKCNYSF),</p>
+<p>This is confirmation that a full refund has been processed for Invoice #55983</p>
+<p>The refund has been returned via the payment method you originally paid with.</p>
+<p>KVM 2GB (NJ) -  (10/06/2019 - 11/05/2019) $8.00USD Operating System: CentOS 7.2</p>
+<p>Thank you for registering for an NYC MySchools account. You may now log in by clicking this link or copying and pasting it into your browser: 
+<p>Account Activation Dear Customer, To complete your activation, please click the activation button below Activate Account   or   Copy the email confirmation code given below and paste it in signup page security code textbox. Email Confirmation Code: Qnkfja7</p>
+----jatJhkSz;CHnMHw----6lgCkswy;yKzVuH
+----tRGtMPQZ;QIsTCP----cThzGwk5;EMEOzp
+<p><p>Confirm your email</p><br /> <p>Thank you for your interest in opening a Real Account with XM.</p><br /> <p>To complete the registration process, please click here.</p><br /> <p>After you confirm your email, you will be able to log in to the Members Area by using the password created during your registration process and the MT5 ID given to you. CONFIRM EMAIL ADDRESS</p><br /> <p>* To protect your account, the verification link is only valid for 24 hours. Kind Regards,</p><br /> <p>The XM Team © 2019 XM is a trading name of XM Global Limited.</p><br /> <p>Legal: XM Global Limited is regulated by the International Financial Services Commission Belize under Securities Service’s License number IFSC/60/354/TS/18.</p><br /> <p>Risk Disclaimer: Forex trading involves significant risk to your invested capital. Please read and make sure that you fully understand our Risk Disclosure. No.5 Cork Street, Belize City, Belize, C.A.</p><br /> <p>A temporary password has been requested for your account.</p><br /> <p>You can use this password for the app or web site.</p><br /> <p>Brussels Airlines is firmly committed to respecting your privacy. For more information please read the Brussels Airlines privacy policy.</p><br /> <p>If you no longer wish to receive this survey from Brussels Airlines about LOOP, please click here.</p><br /> <p>System Email - Welcome to Membership Welcome to the Digital Marketing InstituteLearning & Membership Platform Thank you for signing up for a trial of membership. We hope you enjoy all the great content and would love to hear your feedback during the trial. If you've any questions, please reach out to our team at any time.</p><br /> <p>To confirm your RefWorks account, click this link: 6ZVPB6o8vM1cJaDiUMiY0MbDn3BPdtWooAVUGOFwqcj6A99j4TjTjXHQWd1mvBYwPFU3f3iysa2.EgPJDMPlinTjLtQeeaPOjdfBtlhAncmmIOWGTpOMCEuiDODKWbXcIxLJLGpqcRZFIFywYeMFjJFuLfMTxSUTTEFNeLBNecIeekvvwTOqusFsfoEZkcxlAuSoZQiAhPGFCfuCuhvAPBVzKFWIxyTHpiCLzC.wmNl2tw7KRnzoHbCExfe8rSzySLdpT3YuXVio434eF1pePLVnwZQ8VEi1vPtrdcV0Bzu93jCfoO.YmicGCLDqWPzppyXIsMVlvnkakTktKtMbqRjTQvSPktVNBMqvadRoZvhVIUIgoebvlVXzWGjGnYLzbSqZBVsAfwKdlHgxCxJuKceFpDpIeLHLzAmZCMmXFIiEZXEmmDlsWCxioeOFXvWdGdjBgPsZWZIxV.UZLCp47YfkagNdsODwd5b7xBlP3m4VPvU4GQ6mLoCGJbpNfyPRUJdntrqrvVfGpmwtsp8f12NBb.dwLNSXsxgSehNEoDHYnyTmCLLaCYWLBLVoWyTRFFyEfXTqHqqVHfMplmFYfFkoSdGMNKMihcLkTpNpvPCILdMsEFgjqCsEgUmKSMGlXiklSrjzvhyXfJiZJEeUBGwkPjpBaqRhCxozRVYZuXLNbDGoPtdd.qEuxxaujf1nbObGsJPVFWr0CRozk9c13mZZ9Tve5W3v8pKLQroRI54QZId2q20vHLrGfNPTQ0VO.bZmwUalnQMTiRIhiEjDrzuSheoAJslAtWNGfVVkapPiWgczYCRCYeGWUGcXiZKckWjunENYUUpeALrhRfZYscLapVndLnozYsQDZCavfDcBlgjCvchOqQdSPYfhpqqMbenikAcCuSoNKzaVYpvIJPqzlmN.Yhkdiw3qkNWkInaRwaGFRlCb0KWG2dw3sEDkR21Jzx92WySCQJvLuqKUdujUwJzlmdJQe6oHMRS.DGmmdpGVbUUUJbieCQRdsFlvPgvmzyoxFzqXmbnEqTUISlMEXztyhGTohvUIRLWpkRdLddwnKrJBrxFPvOeWXvrIYoobRlEdfYEALEmFhOrBgncUdxAnoyJTOLPJpmSguZuFGuiOowzCwqiigRsePApSWX</p><br /> <p>If clicking it doesn't work, cut and paste this link into the address bar of your browser.</p><br /> <p>If you didn't register for RefWorks simply hit the delete button and we'll pretend this never happened.</p><br /> <p>Best,</p><br /> <p>- The RefWorks Team</p><br /> <p>If you have any concerns, please contact us at iAKvMHjRBwljPoMzQYXYs5zIELtbbb1djna8FhaAgF7S5uQt9NRNTIopqIzjEjDsMlkrnNMUlLp.SBJpyEbVDIgpJbwSqiySzFROJLaLeQnVeznKMMNlomxLVhRHisDiXQEEWvCoZsmLjAEjegvnxuLIarCdviOoHNzEEivfzlzYDhBnDXFsHwqEErmnRuniSKoxogXGfIZwrrcrdUpDhiteXRXGhgtafAGolL.h8SGAQn4JfEJuYQoIUm1F5dD9yxMbZ2KkEG462uJLp24aps4FsZEIuzkie4Z4c6G7vuWzMDyD5F.iaEJNxNmPsSmUqGhmlXhEWBnGXFiSooWzaCVaGaMppUPHpRZQlVHbxjOQbhuvdGfIfLPcPrKECseiLiPwcymzWjftKxPDlXsaJiuhEvZBSCOWaIowlhfatcUetcRyVZuuatevTfAzHLKsaZcsUeppEjvrb.Kp7YwlWCr7s75dnJNiLiarKpOTRmPqA8iGogPaOyF5eelD1eLpWsGnhG0rOAFCMfIL0uwiUHqJM.pPaxuuwtYqpVfCWKrklHGBLDWIUKNOVnQNGBFQTiqCpLtHgSTJTLuOxjsvnSzbPTfxgAuncOEFzwEjzTVgJEOHPzeIPjCilVWyWTxItooVsMDmvFxFSESjDpgxpnCrtTqkAlMCItIzrymJfqbGhMtvUmrv</p></p>
+----Nn;uznt;tgv
+----qM;sddh;noi
+<p>Madame, Monsieur,</p>
+<p>Please remember to drop your regalia back to the regalia room at Claudelands.</p>
+<p>Xfinity Forum Archive...</p>
+<p>Also, make sure to bookmark (Your Seller ID) as a favorite seller.</p>
+<p>Thank you again, it has been a pleasure doing business with you. If you have any questions, please contact me directly at (your email address).</p>
+
+<p>This is an archived section of the community.</p>
+
+<p>City: City</p>
+<p>Your personal data Note: Your personal data listed below will only be used as shipping address and will not be stored in any database.</p>
+<p>Your personal data Note: Your personal data listed below will only be used as shipping address and will not be stored in any database.</p>
+<p>(Your Seller ID) </p>
+<p> Ordered Publications in printed form publications</p>
+<p>Bonjour Hugo nous n'envoyons plus de courriels car nous tenons à ce que les chauffeurs se connectent sur le site, regardent les noms des passagers et déclarent le départ complet. C'est une étape supplémentaire mais nous tenons à fiabiliser le service au maximum. Merci pour votre commentaire Myriam Agente AmigoExpress</p>
+<p>Dear CUSTOMER NAME,</p>
+
+----qa;qgpz;yic
+----Kt;lxsh;sdg
+
+<p>Bus</p>
+<p>NJ Transit #52 and #26 between Elizabeth and Springfield pass the Campus on Morris Avenue. NJ Transit #113 between Plainfield and Port Authority Bus Terminal, New York, stops at Salem Road and Morris Avenue.</p>
+<p>For further information about fares and schedules for buses and trains, visit.</p>
+----ea;jusg;mcl
+<p>We at UNU appreciate your feedback and will try to respond to every information request promptly.</p>
+<p>Please send your question or comment via the form below.</p>
+<p>Please note that the United Nations University is not a funding agency; we will not respond to requests for financial support.</p>
+----xd;ztnc;hwk
+<p>UNU will use information in accordance with the privacy policy under which the information was collected. If UNU decides to change its privacy policy, we will post those changes to this page so that our users are always aware of what information we collect and how we use it. If at any point we decide to use personally identifiable information in a manner different from that stated at the time it was collected, we will notify users by e-mail. Users will be given the choice as to whether or not to allow us to use their information in this different manner.</p>
+----ID;nlhk;oeu
+
+----oS;jpvt;huy
+<p>A un paso de Busplus</p>
+<p>Ya sólo queda que cliques en "Completa tu registro" para que validemos tu email y puedas completar tu registro en Busplus.</p>
+<p>Recuerda que Busplus es el Club de viajeros de ALSA con el que podrás acumular puntos canjeables por viajes,</p>
+<p>acceder a descuentos especiales y aprovechar ofertas personalizadas.</p>
+<p>Completa tu registro</p>
+<p>Si no te funciona el enlace, prueba a copiar esta dirección directamente en tu navegador:</p>
+<p>Club Busplus.</p>
+----pP;aoeb;nid
+Dear Friend
+I’m not going to insult your intelligence by saying that I understand exactly what you’re going
+through, nobody can. I can only imagine the pain and anguish you must be in to have
+reached this point. I don’t know you, so I won’t patronise you by saying I’ve been in the same
+place. That being said, I have been in an extremely dark place. I have felt sheer pain and
+desperation. I have believed that I was completely out of options and that there was no other
+way out. Does this sound familiar
+----eq;hgth;oln
+--=-5i/u0w/162p1GQ4y2u5
+Content-Type: image/jpg
+Content-Transfer-Encoding: base64
+Content-ID: <postalblog@usps.com>
+Content-Disposition: inline
+
+
+--=-5i/u0w/162p1GQ4y2u5
+Content-Type: image/jpg
+Content-Transfer-Encoding: base64
+Content-ID: <postalblog@google.com>
+Content-Disposition: inline
+
+
+--=-5i/u0w/162p1GQ4y2u5
+Content-Type: image/jpg
+Content-Transfer-Encoding: base64
+Content-ID: <postalblog@facebook.com>
+Content-Disposition: inline
+
+
+--=-5i/u0w/162p1GQ4y2u5
+Content-Type: image/jpg
+Content-Transfer-Encoding: base64
+Content-ID: <postalblog@facebook.com>
+Content-Disposition: inline
+
+
+--=-5i/u0w/162p1GQ4y2u5
+Content-Type: image/jpg
+Content-Transfer-Encoding: base64
+Content-ID: <postalblog@apple.com>
+Content-Disposition: inline
+
+
+--=-5i/u0w/162p1GQ4y2u5
+Content-Type: image/jpg
+Content-Transfer-Encoding: base64
+Content-ID: <postalblog@microsoft.com>
+Content-Disposition: inline
+
+
+--=-5i/u0w/162p1GQ4y2u5
+Content-Type: text/xml
+Content-Transfer-Encoding: base64
+Content-ID: <postalblog@bitly.com>
+Content-Disposition: inline
+
+PFNlbEVDVD48aGVhZD48T2JqZWNUPg0KDQo=
+
+<table border="1">
+<thead>
+<tr><th>Comment 1: In Discussion section</th><th> authors described the results from several </th></tr>
+</thead>
+<tbody>
+<tr><td>studies regarding the effects of curcumin on MS; however</td><td> there are few </td></tr>
+<tr><td>discussions about the included eleven clinical trials. What are the main outcomes </td></tr>
+<tr><td>that the authors concerned? Are there agreements or disagreements among the</td></tr>
+<tr><td>results of the included eleven RCT studies? In Figure 2</td><td> the authors presented </td></tr>
+<tr><td>there were 11 studies included in quantitative synthesis; however</td><td> they did not </td></tr>
+<tr><td>describe the results of the quantitative analysis in the manuscript. I would suggest </td></tr>
+<tr><td>further meta-analysis of the included 11 clinical trials to get a solid conclusion of </td></tr>
+<tr><td>this review.</td></tr>
+<tr><td>Reply 1: Dear doctor</td><td> thank you very much for your comment; however</td><td> our </td></tr>
+<tr><td>intention was not to build a meta-analysis. We included the comments about the </td></tr>
+<tr><td>included RCT.</td></tr>
+<tr><td>Changes in the text: please</td><td> see lines 197-208 / 212-215.</td></tr>
+<tr><td>Comment 2: Only one meta-analysis regarding the effects of curcumin on </td></tr>
+<tr><td>metabolic syndrome was discussed in the manuscript. The discussion part can be </td></tr>
+<tr><td>improved by adding more discussion on the difference between the results of the </td></tr>
+<tr><td>present study and previous systemic review and meta-analysis; for example</td><td> a </td></tr>
+<tr><td>recent meta-analysis revealed that curcumin is effective on glycemic control and </td></tr>
+<tr><td>lipid profile in woman with polycystic ovary syndrome who have high risk of </td></tr>
+<tr><td>metabolic syndrome.</td></tr>
+<tr><td>Reply 2: Dear doctor</td><td> thank you very much for your suggestion. We included it.</td></tr>
+<tr><td>Changes in the text: Please</td><td> see lines 172-176.</td></tr>
+<tr><td>Comment 3: The journal titles of many listed references are missing</td><td> such as </td></tr>
+<tr><td>references #21-25.</td></tr>
+<tr><td>Reply 3: Dear doctor</td><td> thank you very much for your suggestion. We used the </td></tr>
+<tr><td>endnote to include the references. Maybe some mistake has occurred. We </td></tr>
+<tr><td>corrected the mistake.</td></tr>
+<tr><td>Minor issues</td></tr>
+<tr><td>Comment 4: Line 61 “Curcuma longa</td><td> popularly known as saffron or turmeric</td><td> </td></tr>
+<tr><td>belongs to the family Zingiberaceae.” As I know</td><td> saffron is a spice from the Crocus </td></tr>
+<tr><td>sativus flower. Please double check if your statement is correct or not.</td></tr>
+<tr><td>Reply 4: Dear doctor</td><td> thank you for your comment. We corrected the mistake. </td></tr>
+<tr><td>Please</td><td> see line 37.</td></tr>
+<tr><td>Comment 5: Line 146 The acronym “IDF” was not defined.</td></tr>
+<tr><td>Reply 5: Dear doctor</td><td> thank you for your comment. We included the definition.</td></tr>
+<tr><td>Comment 6: Line 227 Grammar error was noted. I would recommend </td></tr>
+<tr><td>professional English editing to improve the flow of the manuscript. </td></tr>
+<tr><td>Reply 6: Dear doctor</td><td> thank you for your comment. We corrected the mistake and </td></tr>
+<tr><td>a native corrected the MS.</td></tr>
+</tbody>
+</table>
+--=-5i/u0w/162p1GQ4y2u5--
+

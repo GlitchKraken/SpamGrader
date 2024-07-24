@@ -156,9 +156,12 @@ def main():
         AICount = 0
         OverallCount = 0
         #
+        sumForAverage= 0
+        
+        AverageRiskScore = 0
         
         print("Emails parsed: " + str(totalNumEmails))
-            
+        
         for mail in emailList:
             # basic error handling
             try:
@@ -200,6 +203,10 @@ def main():
                         
                     TotalScore += riskScoreBreakdown[test][0]
         
+        
+            # add the total score to the sum we will calc for average
+            sumForAverage += TotalScore
+        
             # if the current email had a risk score, it was "discovered".
             # mark it as such.
             if TotalScore > 0:
@@ -214,7 +221,9 @@ def main():
             emails[mail] = email_score_breakdown
             # clear out the list for the next email.
             email_score_breakdown = []
-            
+        
+        
+        AverageRiskScore = round( (sumForAverage / totalNumEmails), 2)
     
             
         # now, sort the results by the highest risk-score. Emails with a higher score should be shown first.
@@ -235,6 +244,7 @@ def main():
         print("Entropy Results: " + str(EntropyCount) + " / " + str(totalNumEmails)   + "   " + str(round((EntropyCount/totalNumEmails) * 100, 2)) + "%") 
         print("AI Results:      " + str(AICount) + " / " + str(totalNumEmails) + "  " + str(round((AICount/totalNumEmails) * 100, 2)) + "%")
         print("\nOverall Results: " + str(OverallCount) + " / " + str(totalNumEmails) + "  " + str(round((OverallCount/totalNumEmails) * 100 , 2)) + "%")
+        print("\n\n Average Risk Score for this Dir: " + str(AverageRiskScore))
         print("\n===============================================================================")
         
 #############################################################################################################
@@ -265,11 +275,11 @@ def riskKeyWords(email):
         if phrase in email.body:
             if args.vv:
                 print("Risky Phrase Found in email Body: " + phrase)
-            RiskScore += 10
+            RiskScore += 5
         if phrase in email.subject:
             if args.vv:
                 print("Risky Phrase Found in email Subject: " + phrase)
-            RiskScore += 10
+            RiskScore += 5
     
     # only append the score if something bad was found.
     if RiskScore > 0:
@@ -401,7 +411,7 @@ def riskEntropy(email):
             # a random-name IS somewhat sus, but people often have to put numbers in their names
             # because their username is taken. we will use a smaller score here.
             # the reason for the multiplication is: the more random an email
-            RiskScore += round((5 * SenderNameEntropy) )
+            RiskScore += round((30 * SenderNameEntropy) )
             email_score_breakdown.append({"EntropyModule_SenderNameRandom_Score" : (RiskScore, "This email was given a higher risk-score because the sender's  name looked suspiciously randomized, when compared to the alexa top 1 million.")})
             
     
@@ -419,7 +429,7 @@ def riskEntropy(email):
             # we will consider this random enough to be a "sus" domain and flag it with higher risk. 
             # since this domain is really random looking, we will consider it a significant risk, and give a bigger score.
             
-            RiskScore += round((20 * senderDomainEntropy))
+            RiskScore += round((30 * senderDomainEntropy))
             
             email_score_breakdown.append({"EntropyModule_SenderDomain_Score" : (RiskScore, "This email was given a higher risk-score because the sender's domain name looked suspiciously randomized, when compared to the alexa top 1 million.")})
         
