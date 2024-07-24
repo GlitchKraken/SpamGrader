@@ -5,6 +5,8 @@
 <br />
 
 <h2>Usage:</h2>
+
+
 ```
 usage: SpamSpotter v 0.1 [-h] [-f Filename] [-d DirectoryToScan] [-V] [-vv] [-ai]
 
@@ -19,5 +21,4 @@ options:
   -ai                 Several AI will parse the email-body's content, and vote on wether each consider the message to be spam or not
 
 2024 - By Chad Fry
-
 ```
