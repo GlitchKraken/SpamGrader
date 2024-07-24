@@ -33,8 +33,8 @@ VirusTotalFileURL_Headers = {"accept": "application/json",
 def main():
     # Parse and add Arguments....
     parser = argparse.ArgumentParser(
-    prog="SpamSpotter v 0.1",
-    description="SpamSpotter is an email Threat-Hunting Tool. Given a list of emails, it will parse each one and give it a potential-risk score and a human-readable risk-breakdown based on the findings of its individual risk-modules.",
+    prog="SpamGrader v 0.1",
+    description="SpamGrader is an email Threat-Hunting Tool. Given a list of emails, it will parse each one and give it a potential-risk score and a human-readable risk-breakdown based on the findings of its individual risk-modules.",
     epilog="2024 - By Chad Fry"
     )
     parser.add_argument("-f", help="Choose a single file to examine.", required=False, metavar="Filename")
